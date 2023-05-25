@@ -1,0 +1,2219 @@
+{% assign vendorslist  = settings.vendorslist_ncod | split: "|" %}
+
+
+{% assign totalThreshold = settings.cod_price_limit %}
+
+<!DOCTYPE html>
+<html
+  lang="{{ locale }}"
+  dir="{{ direction }}"
+  class="{{ checkout_html_classes }}"
+>
+  <head>
+    {% include 'webengage-script' %}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0"
+    />
+    <meta name="referrer" content="origin" />
+
+    <title>{{ page_title }}</title>
+
+    {{ 
+      content_for_header
+    }}
+
+    {{
+      checkout_stylesheets
+    }}
+    {{
+      checkout_scripts
+    }}
+    <script src="{{'jquery-3.6.0.min.js' | asset_url }}" ></script>
+
+    <script>
+       window.theme = {
+        apiUrl:{{ settings.api_url | json }}
+      };
+    </script>
+
+    <style>
+      .section--shipping-method .radio__label span {
+        font-weight: 600;
+      }
+      .order-summary__sections {
+        height: auto;
+      }
+      .oxi_social_wrapper {
+        position: relative;
+        padding-top: 54px;
+      }
+      .oxi-social-login:before,
+      .oxi_social_wrapper:before {
+        content: "or login using";
+        display: inline-block;
+        /* margin-top: 10px; */
+        background: #fff;
+        z-index: 1;
+        position: absolute;
+        padding: 0 8px;
+        left: 50%;
+        top: 0px;
+        transform: translateX(-50%);
+      }
+      .oxi-social-login:after,
+      .oxi_social_wrapper:after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: #ddd;
+      }
+      .sl-vertical {
+        justify-content: space-between;
+        flex-direction: row;
+      }
+      .sl-vertical a.social_login {
+        width: 49%;
+      }
+      #social_login_frame {
+        height: 112px !important;
+      }
+
+      *,
+      :after,
+      :before {
+        box-sizing: border-box !important;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .login-option {
+        margin-bottom: 30px;
+      }
+      .form__input-wrapper {
+        position: relative;
+        width: 100%;
+        margin-bottom: 12px;
+      }
+      .form__input-wrapper--labelled .form__field {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      .form__field {
+        display: block;
+        padding: 12px 12px;
+        border-radius: 10px;
+        border: 1px solid #999696;
+        width: 100%;
+        line-height: normal;
+        height: 40px;
+        color: #000000;
+        background: #ffffff;
+        -webkit-appearance: none;
+        resize: none;
+        font-size: 1rem;
+        font-size: max(1rem, 16px);
+        box-shadow: 0 1px rgba(226,226,226),.25) inset;
+        transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
+          color 0.2s ease-in-out;
+      }
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input[type="number"]{
+        -moz-appearance: textfield;
+      }
+      .overlay__content .spinner_overlay_container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+      }
+      .account_otp_loader_text{
+        width: auto;
+        height: auto;
+        display: inline-block;
+        border-style: solid;
+        border: transparent;
+        color: white;
+        text-align: center;
+        min-width: 315px;
+      }
+      .button {
+        position: relative;
+        display: block;
+        width: 100%;
+        padding: 0 30px;
+        line-height: 48px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.25s ease-in-out, color 0.25s ease-in-out,
+          box-shadow 0.25s ease-in-out;
+        background: #b89c7d;
+        color: #fff;
+        font-weight: 500;
+      }
+      .login-with-otp-link {
+        margin-top: 10px;
+      }
+      .link,
+      .login-with-password-link,
+      .register-link,
+      .login-link {
+        cursor: pointer;
+        display: inline-block;
+        color: #b89c7d;
+        margin-top: 14px;
+        font-weight: 500;
+      }
+      .register-link {
+        float: right;
+      }
+      .hide {
+        display: none !important;
+      }
+      .invalid-feedback {
+        width: 100%;
+        margin-top: 0.25rem;
+        font-size: 0.875em;
+        color: #dc3545;
+      }
+      .resend-otp-text {
+        float: right;
+        margin: 0 5px 10px 0;
+      }
+      .otp-err-msg {
+        color: red;
+        margin-bottom: 0.9em;
+      }
+      [data-custom-title] {
+        position: relative;
+        cursor: pointer;
+      }
+      [data-custom-title]:hover::before {
+        content: attr(data-custom-title);
+        position: absolute;
+        bottom: -46px;
+        padding: 10px;
+        background: #000;
+        color: #fff;
+        font-size: 14px;
+        white-space: nowrap;
+      }
+      [data-custom-title]:hover::after {
+        content: "";
+        position: absolute;
+        bottom: -12px;
+        left: 8px;
+        border: 8px solid transparent;
+        border-bottom: 8px solid #000;
+      }
+      .customtextr a {
+        /*display: inline-block;
+            	text-align: center;
+            	width: 2.5ex;
+            	height: 2.5ex;
+            	font-size: 1.8ex;
+            	line-height: 2.3ex;
+            	border-radius: 1.5ex;
+            	padding: 1.5px;
+            	color: white;
+            	background: black;
+            	text-decoration: none;*/
+        font-weight: normal;
+        display: inline-block;
+        text-align: center;
+        width: 2.2ex;
+        height: 2ex;
+        font-size: 1.8ex;
+        line-height: 2ex;
+        border-radius: 1.5ex;
+        padding: 1px;
+        color: white;
+        background: #898989;
+        text-decoration: none;
+      }
+      .section--contact-information p.layout-flex__item {
+        display: none;
+      }
+
+      .step__sections .section--contact-information{
+        display: none;
+      }
+
+      .content-for-Information .breadcrumb, .content-for-Shipping .breadcrumb{
+        padding-bottom: 0em;
+      }
+
+      .custom-overlay {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background: #000;
+        opacity: 0.8;
+        z-index: 1111;
+      }
+
+      .custom-overlay .overlay__inner {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
+
+      .custom-overlay .overlay__content {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .custom-overlay .spinner {
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        border-width: 2px;
+        border-color: rgba(255, 255, 255, 0.05);
+        border-top-color: #fff;
+        animation: spin 1s infinite linear;
+        border-radius: 100%;
+        border-style: solid;
+      }
+
+      @keyframes spin {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .d-none {
+        display: none !important;
+      }
+      .checkout-img {
+        margin-top: -40%;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .checkout-img {
+          display: none;
+        }
+      }
+      @media only screen and (min-width: 1120px) {
+        .checkout-img {
+          margin-top: auto;
+        }
+      }
+      .cart-recap__notices {
+        margin: 10px 0;
+        background: #fef4d2;
+        border: 1px solid #d4a662;
+        color: #975840;
+        padding: 4px 10px;
+        font-size: 12px;
+        line-height: 18px;
+        border-radius: 4px;
+        text-align: center;
+        cursor: pointer;
+        display: block;
+      }
+      .cart-recap__notices .alert span {
+        font-weight: bold;
+      }
+      .cart-recap__notices .alert linked {
+        color: #007ed2;
+      }
+      .display-table .radio__label__accessory {
+        vertical-align: bottom;
+      }
+      .radio__label__primary.disabled {
+        color: #949494;
+      }
+      .address-fields {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        flex-wrap: wrap;
+      }
+      .address-fields .field {
+        align-self: stretch;
+        width: 100%;
+        float: none;
+      }
+      .address-fields [data-address-field|="first_name"] {
+        order: 1;
+        width: 50%;
+      }
+      .address-fields [data-address-field|="last_name"] {
+        order: 2;
+        width: 50%;
+      }
+      .address-fields [data-address-field|="address1"] {
+        order: 3;
+      }
+      .address-fields [data-address-field|="address2"] {
+        order: 4;
+      }
+      .address-fields [data-address-field|="zip"] {
+        order: 5;
+        width: 50%;
+      }
+      .address-fields [data-address-field|="city"] {
+        order: 6;
+        width: 50%;
+      }
+      .address-fields [data-address-field|="province"] {
+        order: 7;
+        width: 50%;
+      }
+      .address-fields [data-address-field|="country"] {
+        order: 8;
+        width: 50%;
+      }
+      .address-fields [data-address-field|="phone"] {
+        order: 9;
+      }
+      .form-container {
+        background: #FFFFFF;
+        border: 1px solid #DDDDDD;
+        padding: 25px 18px;
+        border-radius: 8px;
+      }
+      .login-register-step{
+        background: #F6F6F6;
+        padding: 10px;
+      }
+      .guest-login-btn {
+        margin-top: 53px;
+      }
+      .section--payment-method .content-box__row--secondary{
+        display: none;
+      }
+      .step .content-box .content-box__row--tight-spacing-vertical.content-box__row{
+        display: none;
+      }
+      .guest-login-btn:before {
+        content: "or";
+        display: inline-block;
+        /* margin-top: 10px; */
+        background: #fff;
+        z-index: 1;
+        position: absolute;
+        padding: 0 5px;
+        left: 50%;
+        color: #545454;;
+        top: -52px;
+        transform: translateX(-50%);
+        font-size: 14px;
+      }
+      .guest-login-btn:after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: -28px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: #ddd;
+      }
+      .form__input-wrapper.field--half {
+        width: 49%;
+        display: inline-block;
+      }
+      .loader {
+        position: absolute;
+        top: calc(50% - 10px);
+        right: 15px;
+        border: 3px solid #d8c7c7;
+        border-top: 3px solid #323333;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        animation: spin 2s linear infinite;
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      p.disclaimer-text {
+          font-size: 12px;
+          margin: 15px 0;
+      }
+      .disclaimer-text span {
+        color: #b89c7d;
+        font-weight: 500;
+      }
+      .address-link{
+        display: block;
+        text-align: right;
+        margin-bottom: 10px;
+      }
+      p.flood-msg {
+          background: #f9f99fa6;
+          padding: 10px;
+          margin: 20px 0px 0px 0px;
+          font-size: 14px;
+          font-weight: 600;
+      }
+
+      .section--shipping-address .section__header{
+        display: inline-block;
+      }
+      .section--shipping-address .address-link{
+        display: inline-block;
+        margin-top: 0px;
+        float: right;
+      }
+      
+      @media only screen and (max-width: 1000px) {
+        .show-lap-and-up {
+          display: none!important;
+        }
+      }
+      @media only screen and (min-width: 1000px) {
+        .hidden-lap-and-up {
+            display: none!important;
+        }
+      }
+      @media only screen and (max-width: 999px) {
+        .content-for-Payment .sidebar .order-summary--is-collapsed {
+          height: auto;
+          visibility: visible;
+        }
+        .content-for-Payment .section--reductions {
+          display: none;
+        }
+      }
+      .breadcrumb-header {
+        margin-top: 15px;
+      }
+      @media only screen and (max-width: 749px) {
+        .content-for-Payment .step__footer .step__footer__continue-btn {
+          position: fixed;
+          bottom: 0 !important;
+          left: 0;
+          width: 100%;
+          padding: 1.2em 1.7em;
+          border-radius: 0px;
+          z-index: 9999999;
+          font-size: 18px;
+        }
+
+        .content-for-Payment .main__footer {
+          padding-bottom: 5.5em;
+        }
+
+        .main{
+          padding-top: 0px;
+        }
+      }
+      .page--banner .banner {
+        background: #b89c7d;
+      }
+      .phone_input_wrap{
+        position: relative;
+      }
+      .phone_input_wrap.active_edit #customer-phonenumber,
+      .phone_input_wrap.active_edit #customer-phone{
+        pointer-events: none;
+        background-color: #e5e5e5;
+      }
+      #editPhone,
+      #registerEditPhone{
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #b89c7d;
+        color: #fff;
+        border-radius: 10px;
+        padding: 0 20px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+        z-index: 2;
+        cursor: pointer;
+      }
+      .terms_privacy_link{
+        margin-top: 15px;
+      }
+      .input-prepend {
+        position: absolute;
+        border-right: 1px solid gray;
+        padding: 2px 8px;
+        margin: 9px 0;
+        top:0;
+        left:0;
+      }
+      .customer-phonenumber {
+        padding-left: 52px;
+      }
+      .order-summary__section--discount h3.visually-hidden{
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        width: 100%;
+        height: auto;
+        position: unset;
+        color: #945539;
+        cursor: pointer;
+        padding-left: 2px;
+      }
+      .order-summary__section--discount form{display:none;}
+      .otp-warning-message{
+        background: #ffd1d1;
+        padding: 6px;
+        border-radius: 2px;
+        margin-bottom: 12px;
+      }
+      .otp-warning-message svg{
+        width: 18px;
+        height: 18px;
+        position: relative;
+        top: 3px;
+      }
+      .otp-warning-message p{
+        display: inline;
+      }
+      .step .section.section--tip {
+        display: none;
+      }
+      .themeDisBanner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        padding: 5px 10px;
+        color: #368b48;
+        background-color: #d1f1d9;
+        line-height: 1.2;
+      }
+      .themeDisBanner .icon{
+        width: 13px;
+        margin-right: 3px;
+      }
+      .content.content-for-Payment .themeDisBanner {
+        display: none;
+      }
+      #stamped-rewards-slider-range [data-widget-type="rewards-redeem-variable-slider"] button{
+        background: #b89c7d;
+        font-size: 14px;
+        padding: 10px 15px;
+      }
+      .content-for-Information .total-line.total-line--tips,.content-for-Shipping .total-line.total-line--tips{display:none;}
+      @media (min-width:1000px){
+        .themeDisBanner.mobi_themeDisBanner{
+          display:none;
+        }
+      }
+      @media (max-width: 999px){
+        .themeDisBanner {
+          order: 1;
+          margin: 0 -14px;
+        }
+        .order-summary__section--discount .field__input-wrapper{
+          display: flex;
+          align-items: center;
+        }
+        .order-summary__section--discount .field__input-wrapper .field__label{
+          opacity: 1;
+          position: unset;
+          width: 170px;
+          margin: 0 0 5px;
+          font-size: 14px;
+          padding-left: 0;
+        }
+        .order-summary__section--discount .field__input-wrapper .field__input{
+          padding: 0.6285714286em 0.7857142857em;
+        }
+      }
+      @media (max-width: 370px){
+        .order-summary__section--discount .field__input-wrapper .field__label{
+          padding-right: 5px;
+          font-size: 13px;
+        }
+        .order-summary__section--discount .field__input-btn-wrapper .field__input-btn{
+          padding: 0 1.3em;
+          margin-left: 0.4em;
+        }
+        .order-summary__section--discount .field__input-wrapper .field__input {
+          padding: 0.6285714286em 0.5em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    
+    {{ skip_to_content_link }}
+
+    <header class="banner" data-header role="banner">
+      <div class="wrap">
+        <a class="logo logo--center" href="https://amala.earth/"><img alt="Amala Earth" class="logo__image logo__image--medium" src="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/Amala_Header.svg?v=1620292254"></a>
+      </div>
+    </header>
+    
+    <div class="content content-for-{{ page_title | split: '-' | first | lstrip -}}" data-content>
+      <div class="wrap">
+        <div class="main">
+          <header class="main__header" role="banner">
+            <a class="logo logo--center" href="https://amala.earth/"><img alt="Amala Earth" class="logo__image logo__image--medium" src="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/Amala_Header.svg?v=1620292254"></a>
+            <div class="show-lap-and-up">{{ breadcrumb }}</div>
+            {{ alternative_payment_methods }}
+          </header>
+          
+          {% if customer %} {% else %}
+            <div class="login-register-step hide">
+              <h1 style="margin-bottom: 15px">Welcome</h1>
+              <div class="form-container">
+                <div class="Login-user-form-wrapper">
+                  <form
+                    method="post"
+                    action="/account/login"
+                    id="customer_login"
+                    accept-charset="UTF-8"
+                    name="login"
+                    class="d-none form form--main"
+                    style="display: block"
+                    onsubmit='window.Shopify.recaptchaV3.addToken(this, "customer_login"); return false;'
+                  >
+                    <input type="hidden" name="form_type" value="customer_login" />
+                    <input type="hidden" name="checkout_url" value="/checkout/" />
+                    <div class="login-option">
+                      <h4 style="font-size: 18px; margin-bottom: 25px">Login</h4>
+                      <div class="otp-err-msg"></div>
+                      <div class="login-with-otp" id="login-with-otp">
+                        <div class="form__input-wrapper form__input-wrapper--labelled phone_input_wrap">
+                          <div id="editPhone" class="hide">Edit</div>
+                          <span class="input-prepend">+91</span>
+                          <input
+                            type="number"
+                            id="customer-phonenumber"
+                            class="form__field form__field--text customer-phonenumber"
+                            name="customer-phonenumber"
+                            placeholder="Enter phone number"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            maxlength="10"
+                            autoFocus={true}
+                          />
+                        </div>
+                        {% if settings.otp_warning_msg_enable and settings.otp_warning_msg != blank %}
+                          <div class="otp-warning-message"><svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 533 482" width="533" height="482"><defs><linearGradient id="P" gradientUnits="userSpaceOnUse"/><linearGradient id="g1" x1="2.1" y1="474.3" x2="2.1" y2="4.9" href="#P"><stop stop-color="#f5bf00"/><stop offset=".5" stop-color="#ffd028"/><stop offset="1" stop-color="#fff3c4"/></linearGradient></defs><style>.a{fill:url(#g1)}.b{fill:#8c7100}</style><path class="a" d="m77 474.3c-29 0-52.2-11.3-63.6-31-11.4-19.7-9.6-45.4 5-70.6l189.5-328.3c14.5-25.1 35.9-39.5 58.6-39.5 22.8 0 44.1 14.4 58.6 39.5l189.6 328.3c14.5 25.2 16.3 50.9 4.9 70.6-11.3 19.7-34.5 31-63.6 31z"/><path fill-rule="evenodd" class="b" d="m325.1 44.4l189.6 328.3c14.5 25.2 16.3 50.9 4.9 70.6-11.3 19.7-34.5 31-63.6 31h-379c-29 0-52.2-11.3-63.6-31-11.4-19.7-9.6-45.4 5-70.6l189.5-328.3c14.5-25.1 35.9-39.5 58.6-39.5 22.8 0 44.1 14.4 58.6 39.5zm-115.5 1l-189.5 328.3c-14.2 24.5-16 49.5-5 68.6 11 19 33.6 30 61.9 30h379c28.3 0 50.9-11 61.9-30 11-19.1 9.2-44.1-5-68.6l-189.5-328.3c-14.1-24.5-34.9-38.5-56.9-38.5-22 0-42.7 14-56.9 38.5z"/><path fill-rule="evenodd" d="m307.3 54.7l189.6 328.3c22.5 39 4.2 70.7-40.9 70.7h-379c-45.1 0-63.4-31.7-40.8-70.7l94.7-164.1 94.8-164.2c11.3-19.5 26-29.2 40.8-29.2 14.8 0 29.6 9.7 40.8 29.2zm-71.2 6l-189.5 328.3c-8.7 15-10.5 28.5-5 38 5.5 9.5 18.1 14.7 35.4 14.7h379c17.4 0 29.9-5.2 35.4-14.7 5.5-9.5 3.7-23-4.9-38l-189.6-328.3c-8.6-15-19.4-23.2-30.4-23.2-10.9 0-21.7 8.2-30.4 23.2z"/><path  d="m265.9 400.7c-13.1 0-21.9-9.3-21.9-23.2 0-14 8.9-23.1 22.7-23.1 13.7 0 22.1 8.7 22.4 23.3 0 13.9-8.8 23-22.4 23zm-13.2-74l-8.4-173.3c-0.3-6.9 3.9-15.5 10.2-17.5q5.8-1.9 11.7-1.9 6 0 12.2 2c6.6 2.1 11.1 10.8 10.8 17.7l-8.4 173c-0.4 6.9-6.3 12.6-13.2 12.6h-1.7c-7 0-12.9-5.7-13.2-12.6z"/></svg>
+                          {{settings.otp_warning_msg}}</div>
+                        {% endif %}
+                        <div
+                          class="form__input-wrapper form__input-wrapper--labelled otpinput hide"
+                        >
+                          <input
+                            type="number"
+                            id="customer-otp"
+                            class="form__field form__field--text customer-otp"
+                            name="customerOTP"
+                            placeholder="OTP"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            maxlength="{{ settings.login_otp_length }}"
+                          />
+                        </div>
+                        <span class="resend-otp-text hide"
+                          >Didn't get the OTP? Resend in 30 seconds</span
+                        >
+                        <button
+                          type="submit"
+                          class="form__submit button button--primary button--full otpbutton"
+                          onclick="sendotp('login_user');"
+                        >
+                          Get OTP
+                        </button>
+                        <button
+                          type="submit"
+                          class="form__submit button button--primary button--full loginbutton hide"
+                          onclick="getlogintoken('login_user');"
+                        >
+                          Login
+                        </button>
+                        <span class="login-with-password-link hide"
+                          >Login with Email</span
+                        >
+                        <span class="register-link hide"
+                          >Create new account</span
+                        >
+                        <p class="terms_privacy_link">By continuing, you agree to Amala Earth's <a href="/pages/terms-and-conditions">Terms of Use</a> and <a href="/pages/privacy">Privacy Policy.</a></p>
+                      </div>
+                      <div class="login-with-password hide">
+                        <div class="form__input-wrapper form__input-wrapper--labelled">
+                          <input
+                            type="email"
+                            id="customer-email"
+                            class="form__field form__field--text"
+                            name="customer[email]"
+                            placeholder="Email"
+                            required="required"
+                          />
+                        </div>
+                        <div class="form__input-wrapper form__input-wrapper--labelled">
+                          <input
+                            type="password"
+                            id="customer-Password"
+                            class="form__field form__field--text"
+                            name="customer[password]"
+                            placeholder="Password"
+                            required="required"
+                          />
+                        </div>
+                        <button
+                          type="submit"
+                          class="form__submit button button--primary button--full"
+                        >
+                          Login
+                        </button>
+                        
+                        <span class="link login-with-otp-link">Login with OTP</span>
+                        <span class="register-link">Create new account</span>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="register-user-form-wrapper hide">
+                  <h4
+                    style="font-size: 18px; margin-bottom: 25px"
+                  >
+                    Register
+                  </h4>
+                  <div class="otp-err-msg"></div>
+                  {% form 'create_customer' %}
+                    {{ form.errors | default_errors }}
+                    <div class="form__input-wrapper form__input-wrapper--labelled field--half">
+                      <input
+                        type="text"
+                        id="customer-first_name"
+                        class="form__field form__field--text"
+                        name="customer[first_name]"
+                        placeholder="First Name"
+                        required="required"
+                      />
+                    </div>
+                    <div class="form__input-wrapper form__input-wrapper--labelled field--half">
+                      <input
+                        type="text"
+                        id="customer-last_name"
+                        class="form__field form__field--text"
+                        name="customer[last_name]"
+                        placeholder="Last Name"
+                        required="required"
+                      />
+                    </div>
+                    <div class="form__input-wrapper form__input-wrapper--labelled">
+                      <input
+                        type="email"
+                        id="customer-email"
+                        class="form__field form__field--text"
+                        name="customer[email]"
+                        placeholder="Email"
+                        required="required"
+                      />
+                    </div>
+                    <div class="form__input-wrapper form__input-wrapper--labelled phone_input_wrap">
+                      <div id="registerEditPhone" class="hide">Edit</div>
+                      <span class="input-prepend">+91</span>
+                      <input
+                        type="text"
+                        id="customer-phone"
+                        class="form__field form__field--text customer-phonenumber"
+                        name="customer[phone]"
+                        placeholder="Phone Number"
+                        required="required"
+                      />
+                    </div>
+                    <div class="otp-err-msg"></div>
+                    <div
+                    class="form__input-wrapper form__input-wrapper--labelled otpinput hide"
+                  >
+                      <input
+                        type="number"
+                        id="customer-otp"
+                        class="form__field form__field--text customer-otp"
+                        name="customerOTP"
+                        placeholder="OTP"
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                        maxlength="{{ settings.login_otp_length }}"
+                      />
+                    </div>
+                    <span class="resend-otp-text hide"
+                      >Didn't get the OTP? Resend in 30 seconds</span
+                    >
+                    <div class="fieldset-description" data-buyer-accepts-marketing="">
+                      <div class="section__content">
+                        <div class="checkbox-wrapper">
+                          <div class="checkbox__input">
+                            <input name="customer[accepts_marketing]" type="hidden" value="0" autocomplete="off">
+                            <input class="input-checkbox" data-email-marketing="true" type="checkbox" value="1" checked="checked" name="customer[accepts_marketing]" id="customer_accepts_marketing">
+                          </div>
+                          <label class="checkbox__label" for="customer_accepts_marketing">
+                            Email me with news and offers
+                        </label></div>
+                      </div>
+                    </div>
+                    <p class="disclaimer-text">By continuing, you agree to Amala Earth's <span>Terms of Service</span> and <span>Privacy Policy</span></p>
+                    
+                    
+                    <button
+                      type="button"
+                      class="form__submit button button--primary button--full otpbutton"
+                      onclick="sendotp('register_user');"
+                    >
+                      Get OTP
+                    </button>
+                    <button
+                      type="submit"
+                      class="form__submit button button--primary button--full loginbutton hide"
+                      onclick="getlogintoken('register_user');"
+                    >
+                    Register
+                    </button>
+                    
+                    <span class="login-link"
+                    >Login with password</span>
+                  {% endform %}
+                </div>
+              </div>
+            </div>
+          {% endif %}
+
+          <main class="main__content" role="main">
+            {{ content_for_layout }}
+
+            <div class="custom-content-block hide">
+              {%- if settings.cart_show_free_shipping_threshold -%} {%- assign
+              threshold_in_cents = settings.cart_free_shipping_threshold |
+              times: 100 -%} {%- if checkout.line_items_subtotal_price <
+              threshold_in_cents -%}
+              <a
+                href="{{ shop.url }}/cart"
+                class="cart-recap__notices cart-vs-popup-trigger"
+              >
+                {%- capture remaining_amount -%}<span>{{
+                  checkout.line_items_subtotal_price | minus: threshold_in_cents | abs | money
+                }}</span
+                >{%- endcapture -%}
+                <p class="page__description alert alert--info">
+                  {{
+                    "cart.general.free_shipping_remaining_html"
+                      | t: remaining_amount:remaining_amount
+                  }}
+                </p>
+              </a>
+              {%- endif -%} {%- endif -%}
+            </div>
+            {% assign productsToRemove = '' %} {% assign total_item_count = 0 %}
+            {% for attribute in checkout.line_items %} {% assign
+            total_item_count = total_item_count | plus: 1 %} {% assign
+            productvendor = attribute.product.vendor | strip %} {% if
+            vendorslist contains productvendor %} {% if productsToRemove == ''
+            %} {% assign productsToRemove = attribute.variant_id %} {% else %}
+            {% assign productsToRemove = productsToRemove | append: ',' |
+            append:attribute.variant_id %} {% endif %} {% endif %} {% endfor %}
+            {%- if productsToRemove != '' -%}
+            <div class="custom-popup-block hide">
+              {% render 'checkout-remove-product-popup', RemoveList:
+              productsToRemove,vendorslist:vendorslist,total_item_count:total_item_count
+              %}
+            </div>
+            {% endif %} {% assign cartValue = checkout.line_items_subtotal_price | divided_by:
+            100 %} {%- if cartValue > {{ totalThreshold }} -%}
+            <div class="custom-message-block hide">
+              <a href="{{ shop.url }}/cart" class="cart-recap__notices">
+                <span class="page__description alert alert--info"
+                  >COD is only available below purchase value of Rs.{{ totalThreshold }}.<br />Kindly
+                  <linked>modify your cart</linked> to enable COD.</span
+                >
+              </a>
+            </div>
+            {% endif %}
+          </main>
+          <footer class="main__footer" role="contentinfo">
+            {{ content_for_footer }}
+          </footer>
+        </div>
+        <aside class="sidebar" role="complementary">
+          <div class="sidebar__header">
+            <a class="logo logo--center" href="https://amala.earth/"><img alt="Amala Earth" class="logo__image logo__image--medium" src="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/Amala_Header.svg?v=1620292254"></a>
+          </div>
+          <div class="sidebar__content">
+            {{ content_for_order_summary }}
+            {% section 'donation-product' %}
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="checkout-img">
+                <img
+                  src="{{ 'checkout-image.png' | asset_img_url: 'master' }}"
+                />
+              </div>
+            </div>
+          </div>
+        </aside>
+        <div class="themeDisBanner hide mobi_themeDisBanner"{% unless customer %} style="display:none;"{% endunless %}>
+          {% render 'icon', icon:'check' %}{{settings.custom_banner_dis_message}}
+        </div>
+        <header class="main__header breadcrumb-header hidden-lap-and-up" role="banner">
+          {{ breadcrumb }}
+        </header>
+      </div>
+    </div>
+
+    {{ tracking_code }}
+
+    <script>
+      let customer = "{{ customer.email }}";
+      if(customer == '') {
+        if(Shopify.Checkout.step == 'shipping_method' || Shopify.Checkout.step == 'payment_method'){
+          window.location.href = "/checkout?step=contact_information";
+        }
+      }
+      $(document).ready(function(){
+        if(Shopify.Checkout.page === 'thank_you' || $('.main__content .step').attr('data-step') == 'thank_you') {
+          $(".os-header__heading .os-order-number").wrap("<a href='{{order.customer_url}}' style='color: black'></a>");
+        }
+        if (Shopify.Checkout.step == 'contact_information') {
+          $('[name="checkout[shipping_address][zip]"],[name="checkout[shipping_address][phone]"]').inputFilter(function(value) {
+            return /^\d*$/.test(value);    // Allow digits only, using a RegExp
+          });
+        }
+      });
+
+      (function($) {
+          
+        if(Shopify.Checkout.step == 'contact_information') {
+          //Hide contact_information form when customer is not loged in
+          let customer = "{{ customer.email }}";
+          if(customer == '') {
+            $('[data-step="contact_information"]').hide();
+            $('.login-register-step').removeClass('hide');
+            setTimeout(function() {   //calls click event after a certain time
+              $('#customer-phonenumber').focus().select();
+            }, 1000);
+          } 
+          $('<p class="link address-link">Add new address</p>').insertBefore($('[name="checkout[shipping_address][id]"]').parents('.section__content'));
+          $('.address-link').click(function(){
+            let phone = $('[name="checkout[shipping_address][phone]"]:not([tabindex="-1"])').val();
+            $('[name="checkout[shipping_address][id]"]').val('').trigger('change');
+            $('[name="checkout[shipping_address][phone]"]:not([tabindex="-1"])').val(phone);
+            $('[name="checkout[shipping_address][city]"]:not([tabindex="-1"])').prop('disabled', true);
+            $('[name="checkout[shipping_address][province]"]:not([tabindex="-1"])').prop('disabled', true);
+          });
+          //Show login and registration form when customer is not loged in
+          (function() {
+            var scriptNames = [
+                "//social-login.oxiapps.com/api/init?shop=amala-earth.myshopify.com"
+              ];
+              for (var i = 0; i < scriptNames.length; i++) {
+                var script = document.createElement('script');
+                script.src = scriptNames[i];
+                script.async = false; // This is required for synchronous execution
+                document.head.appendChild(script);
+              }
+              // jquery.min.js and example.js will be run in order and synchronously
+          })();
+         	$('.form--main').removeClass('d-none');
+        }
+        window.PhoneNumberInputFormatter = function() {
+            return false;
+        };
+
+        var continue_button = document.querySelector('#continue_button'), 
+            error_check = {
+              pin: false,
+              phone: false
+            }
+
+        function continue_check() {
+          if (error_check.pin && error_check.phone) {
+            continue_button.style.pointerEvents = 'all'
+            continue_button.style.opacity = 1
+          } else {
+            continue_button.style.pointerEvents = 'none'
+            continue_button.style.opacity = 0.5
+          }
+        }
+
+        var pattern = new RegExp("^[0-9]{10}$");
+        function checkPhone(el, value = null) {
+          var parent = el.closest('.field'),
+          error = document.querySelector('#error-for-phone'),
+          val = value.split(' ').join('');
+          if (pattern.test(val) && !isNaN(val)) {
+            error_check.phone = true;
+            continue_check();
+            parent.classList.remove('field--error');
+            if (error) {
+              error.style.display = 'none'
+            }
+          } else {
+            error_check.phone = false;
+            continue_check();
+            if (!error) {
+              var errorEl = document.createElement('p')
+              errorEl.classList.add('field__message', 'field__message--error')
+              errorEl.id = 'error-for-phone'
+              errorEl.innerText = 'Please enter 10 digit phone number without +91';
+              if (parent) {
+                parent.append(errorEl);
+              }
+            } else {
+              error.style.display = 'block'
+            }
+            parent.classList.add('field--error');
+          }
+        }
+
+        function donationOverlayRemove(){
+          let myInterval = setInterval(function(){
+            var istips= $('.order-summary__section--total-lines .total-line--tips');
+            if(istips.length == 0) {
+              removeoverlay();
+              clearInterval(myInterval);
+            }
+          },500);
+        }
+
+        $(document).on('page:load page:change', function() {
+          let tags_list =  $('.order-summary__section--discount').find('.tags-list');
+          let error_code =  $('#error-for-reduction_code').length;
+          let error_code2 =  $('.order-summary__section--discount .notice').length;
+          if(tags_list.length == 0 && error_code == 0){
+            $('.order-summary__section--discount').find('form').hide();
+            $('.order-summary__section--discount h3.visually-hidden').show();
+          }else{
+            $('.order-summary__section--discount').find('form').show();
+            $('.order-summary__section--discount h3.visually-hidden').hide();
+          }
+
+          if(tags_list.length != 0 && error_code == 0 && error_code2 == 0 && (localStorage.getItem('themeDisBanner') == 'true' || localStorage.getItem('cartDisBanner') == 'true')){
+            $('.themeDisBanner').removeClass('hide');
+          }else{
+            $('.themeDisBanner').addClass('hide');
+          }
+          $(document).on('click','.order-summary__section--discount h3.visually-hidden',function(){
+            $(this).siblings('form').show();
+            $(this).hide();
+          });
+          {%- for item in checkout.line_items -%}
+            {% liquid
+              assign variant_count = 0
+              assign isSinglevariant = false
+              assign productId = item.product.id
+              for variant in item.product.variants
+              assign variant_count = variant_count | plus: 1
+              endfor
+              unless variant_count > 1
+              assign isSinglevariant = true
+              endunless
+            %}
+            {%- if isSinglevariant -%}
+              $('.product[data-product-id="{{productId}}"] .product__description__variant').hide();
+            {%- endif -%}
+          {%- endfor -%}
+
+            if(Shopify.Checkout.step == 'payment_method') {
+              let dPrice = $('#donation-product').attr('data-donation-price');
+              let istips= $('.order-summary__section--total-lines .total-line--tips');
+              if($('.order-summary__section--total-lines').siblings(".donation-product--wrapper").length == 0 && $('.section.section--tip').length != 0) {
+                $('.donation-product--wrapper').clone().removeClass('hide').insertBefore($('.order-summary__section--total-lines'));
+              }
+              if(istips.length > 0) {
+                $('#donation-product').prop('checked',true);
+                localStorage.setItem('DonationAdded','true');
+              }
+              if("{{ settings.custom_checkout_message }}" != "") {
+                $('<p class="flood-msg">{{ settings.custom_checkout_message }}</p>').insertAfter('div.section--billing-address');
+              }
+              var pay_details = $('.section--payment-method .section__header .section__text');
+              var append_text = $('.section--payment-method .content-box__row--secondary .blank-slate p');
+              if(append_text.length > 1) {
+                  append_text = $('.section--payment-method .content-box__row--secondary .blank-slate p.shown-if-js').text();
+                  if(istips.length == 0 && localStorage.getItem('DonationAdded') != 'true') {
+                    addoverlay();
+                    $('#donation-product').prop('checked',true);
+                    $('.section--tip[data-tip-amount] #section--tip--custom-amount').val(dPrice);
+                    $('.section--tip[data-tip-amount] #section--tip--custom-amount').closest('form').submit();
+                    donationOverlayRemove();
+                    localStorage.setItem('DonationAdded','true');
+                  }
+              } else if(append_text.length == 1) {
+                  append_text = $('.section--payment-method .content-box__row--secondary .blank-slate p').text();
+                  $('.section--payment-method .section__content').addClass('hide');
+                  $('.order-summary__section+.donation-product--wrapper').addClass('hide');
+                  var ischecked= $('#donation-product').is(':checked');
+                  if(ischecked) {
+                    $('#donation-product').prop('checked',false);
+                    $('.section--tip[data-tip-amount] #section--tip--custom-amount').val('0');
+                    $('.section--tip[data-tip-amount] #section--tip--custom-amount').closest('form').submit();
+                    addoverlay();
+                    donationOverlayRemove();
+                    localStorage.removeItem('DonationAdded');
+                  }
+              }
+              pay_details.text(pay_details.text() + append_text );
+              $('.section--payment-method').insertAfter($('.step__footer'));
+              $(document).on('change', '#donation-product', function() {
+                var ischecked= $(this).is(':checked');
+                let dPrice = $('#donation-product').attr('data-donation-price');
+                addoverlay();
+                if(ischecked) {
+                  $('.section--tip[data-tip-amount] #section--tip--custom-amount').val(dPrice);
+                  $('.section--tip[data-tip-amount] #section--tip--custom-amount').closest('form').submit();
+                } else {
+                  $('.section--tip[data-tip-amount] #section--tip--custom-amount').val('0');
+                  $('.section--tip[data-tip-amount] #section--tip--custom-amount').closest('form').submit();
+                  donationOverlayRemove();
+                }
+              });
+            }else{
+              let donationInterval = setInterval(function () {
+              let subTotal = $('.total-line-table__footer .total-line__price [data-checkout-payment-due-target]').attr('data-checkout-payment-due-target'),
+              donation = $('.total-line--tips .order-summary__emphasis[data-checkout-total-tip-target]').attr('data-checkout-total-tip-target'),
+              finalTotal = subTotal - donation;
+              if(donation != '' && donation != undefined){
+              $('.total-line-table__footer .total-line__price [data-checkout-payment-due-target]').attr('data-checkout-payment-due-target',finalTotal);
+              $('.total-line-table__footer .total-line__price [data-checkout-payment-due-target]').text(`₹${(finalTotal / 100).toFixed(2)}`);
+              clearInterval(donationInterval);
+              }
+              }, 10);
+              setTimeout(function(){clearInterval(donationInterval);},2000);
+            }
+            pincode = localStorage.getItem('pincode');
+            if(pincode) {
+            	data =  {'pincode':pincode};
+                      $.ajax({
+                          type: 'POST',
+                          url: theme.apiUrl+"/checkpincode.php",
+                          dataType: 'json',
+                          data: data,
+                          success: function(data, textStatus, xhr) {
+                            if(xhr.status == 200) {
+                              if(data['hascod'] == false ) {
+                                // hide COD
+      	document.getElementsByClassName('content-box__row')[2].classList.add('hidden');
+                           }
+                            }
+                          }
+                    });
+      		}
+
+              if(Shopify.Checkout.step === 'contact_information') {
+                $('input[name="checkout[shipping_address][address1]"]').attr('maxlength', 190);
+                {%- if settings.first_name_length != blank -%}$('input[name="checkout[shipping_address][first_name]"]:not([tabindex="-1"])').attr('maxlength', {{settings.first_name_length}});{%- endif -%}
+                {%- if settings.last_name_length != blank -%}$('input[name="checkout[shipping_address][last_name]"]:not([tabindex="-1"])').attr('maxlength', {{settings.last_name_length}});{%- endif -%}
+                {%- if settings.address2_length != blank -%}$('input[name="checkout[shipping_address][address2]"]:not([tabindex="-1"])').attr('maxlength', {{settings.address2_length}});{%- endif -%}
+                $(document).find('[name="checkout[shipping_address][zip]"]').attr("maxlength","6").attr('type','tel');        
+                $(document).find('[name="checkout[shipping_address][phone]"]').attr("maxlength","10");
+
+                var $pincodeField = $('#checkout_shipping_address_zip'),
+                    pinCodeFormatValidated = false,
+                    cityInput = $('[name="checkout[shipping_address][city]"]:not([tabindex="-1"])'),
+                    stateInput = $('[name="checkout[shipping_address][province]"]:not([tabindex="-1"])');
+
+                cityInput.prop('tabindex', "-1").css('pointer-events','none');
+                stateInput.prop('disabled', true);
+                
+                if($('.breadcrumb li').eq(2).hasClass('breadcrumb__item--completed') || $('.breadcrumb li').eq(2).hasClass('breadcrumb__item--blank')) {
+                  setTimeout(function () {
+                    $('#continue_button').removeAttr('style');
+                  }, 100);
+                }
+
+                function pinCodeValidation() {
+                    pinCodeFormatValidated = false;
+                    var pinCodeFieldVal = $pincodeField.val(),
+                        parent = $pincodeField.closest('.field'),
+                        zipError = document.querySelector('#error-for-zip');
+
+                    // Strip out any non-numeric characters
+                    var formattedpincodeValue = pinCodeFieldVal.replace(/[^0-9]/g, '');
+                    $pincodeField.val(formattedpincodeValue);
+
+                    pinCodeFormatValidated = true;
+                    length = pinCodeFieldVal.length;
+                    if(length != 6) {
+                      error_check.pin = false;
+                      continue_check();
+                      pinCodeFormatValidated = false;
+                      // alert('please enter 6 digit Pin code');
+                      parent.addClass('field--error');
+                      if (!zipError) {
+                        var errorEl = document.createElement('p')
+                        errorEl.classList.add('field__message', 'field__message--error')
+                        errorEl.id = 'error-for-zip'
+                        errorEl.innerText = length == 0 ? 'PIN Code is required' : 'Please enter a valid PIN Code'
+                        if (parent) {
+                          parent.append(errorEl)
+                        }
+                      } else {
+                        zipError.style.display = 'block';
+                        zipError.innerText = length == 0 ? 'PIN Code is required' : 'Please enter a valid PIN Code'
+                      }
+                    }else{
+                      error_check.pin = true;
+                      continue_check();
+                      parent.removeClass('field--error');
+                      if (zipError) {
+                        zipError.style.display = 'none';
+                      }
+                      cityInput.val('');
+                      stateInput.val('');
+                      getCityStatefromPin(pinCodeFieldVal);
+                    }
+                };
+
+                $(document).on('change', '#checkout_shipping_address_id', function() {
+                  setTimeout(function(){
+                    if ($pincodeField.val() != '') {
+                      pinCodeValidation(); 
+                    }
+                  },500);
+                });
+
+                if($pincodeField.val() != "") {
+                  pinCodeValidation();
+                };
+
+                $('#checkout_shipping_address_zip').bind("keypress keyup keydown input", function(el) {
+                  if($pincodeField.val() != "") {
+                    pinCodeValidation();
+                  }
+                });
+                $('#checkout_shipping_address_zip').bind("blur", function(el) {
+                  if($pincodeField.val() == "") {
+                    pinCodeValidation();
+                  }
+                });
+                // For getting city and state from entered pincode
+                function getCityStatefromPin(pincode) {
+                  cityInput.after('<div class="loader"></div>');
+                  stateInput.after('<div class="loader"></div>');
+                  var parent = $pincodeField.closest('.field'),
+                      zipError = document.querySelector('#error-for-zip');
+                  $.ajax({
+                    url: 'https://api.postalpincode.in/pincode/'+pincode,
+                    type: 'GET',
+                    dataType: 'JSON',
+                    success: function(response) {
+                      if(response[0].Status !== "Error") {
+                        if(zipError) {
+                          zipError.style.display = 'none';
+                        }
+                        cityInput.prop('disabled', false).css('pointer-events','none');
+                        stateInput.prop('disabled', false).css('pointer-events','none');
+                        cityInput.val(response[0].PostOffice[0].District);
+                        $('[name="checkout[shipping_address][province]"] option').each(function( index ) {
+                          let values = String($(this).attr('data-alternate-values'));
+                          if(values.includes(response[0].PostOffice[0].State)) {
+                            $(this).attr('selected', 'selected');
+                            stateInput.val($(this).val());
+                          }
+                        })
+                        cityInput.siblings('.loader').remove();
+                        stateInput.siblings('.loader').remove();
+                      } else {
+                        parent.addClass('field--error');
+                        zipError.style.display = 'block';
+                        zipError.innerText = length == 0 ? 'PIN Code is required' : 'Please enter a valid PIN Code'
+                      }
+                    }, 
+                    error: function(xhr) {
+                      parent.addClass('field--error');
+                      zipError.style.display = 'block';
+                      zipError.innerText = length == 0 ? 'PIN Code is required' : 'Please enter a valid PIN Code'
+                    }
+                  });
+                };
+               
+                $(document).on('change', '#checkout_shipping_address_phone', function(){
+                  if($pincodeField.val() != "") {
+                    var val = this.value.replace('+91', '').replace(/ /g,'');
+                    checkPhone(document.getElementById('checkout_shipping_address_phone'), val);
+                  }
+                });
+                $('#checkout_shipping_address_phone').bind("keypress keyup keydown input", function(el) {
+                  if (!$(this).hasClass('visually-hidden')) {
+                    var val = $(this).val().replace('+91', '').replace(/ /g,'');
+                    checkPhone(this, val)
+                  }
+                });
+                if(document.getElementById('checkout_shipping_address_phone').value != "") {
+                  var val = document.getElementById('checkout_shipping_address_phone').value.replace('+91', '').replace(/ /g,'')
+                  checkPhone(document.getElementById('checkout_shipping_address_phone'), val);
+                };
+
+                $("label[for='checkout_shipping_address_phone']").text('Phone, enter 10 digit number without +91');
+
+                // Run the function when the continue button is clicked or the enter key is pressed
+                $('[data-step] form [type="submit"]').on('click', function(e) {
+                  var val = document.getElementById('checkout_shipping_address_phone').value.replace('+91', '').replace(/ /g,'')
+                  document.getElementById('checkout_shipping_address_phone').value = val;
+                });
+
+                $('[data-step] form').on('keypress', function(e) {
+                    if(e.keyCode === 13) {
+                        e.preventDefault();
+                        $('[data-step] form [type="submit"]').trigger('click');
+                    }
+                });
+                webengage.track('Page Visited_N', {
+                  'pagetype': 'Shipping page'
+                });
+              }
+              
+              if (Shopify.Checkout.step == 'shipping_method'){
+                $('body').on('click', '.cart-vs-popup-trigger', function() {
+                  document.cookie = "cart-vs-popup-open=true;path=/";
+                });
+
+                $('.step__sections .section:not(.section--shipping-method)').hide();
+                var total_price = {{ checkout.line_items_subtotal_price }} / 100;
+                var content_box = $('.section--shipping-method .content-box__row');
+                if(total_price < {{ totalThreshold }} ) {
+                  console.log("total_price < {{ totalThreshold }}");
+                  $(content_box).find('[data-shipping-method-label-title="Standard"]').html('Online Payment <br/><span class="small-text">Delivery Charges</span>');
+
+                  if($(content_box).find('[data-shipping-method-label-title="Cash on Delivery (Standard Shipping)"]').siblings('.radio__label__accessory').find('.content-box__emphasis').text().trim() == '₹105.00') {
+                    console.log("COD = 105rs");
+                    $(content_box).find('[data-shipping-method-label-title="Cash on Delivery (Standard Shipping)"]').siblings('.radio__label__accessory').hide();
+                    $(content_box).find('[data-shipping-method-label-title="Cash on Delivery (Standard Shipping)"]').html('COD (Cash on Delivery) <br/><span class="small-text">Delivery Charges</span><br/><span class="small-text">COD Charges </span>').after('<span class="radio__label__accessory"><span class="content-box__emphasis">₹70.00</span><br/><span class="content-box__emphasis">₹35.00</span></span>');
+                    //This is for Add product functionality for getting free shiping
+                    var elem = $('div.custom-content-block').clone();
+                    elem.insertBefore($('div.step__footer'));
+                    elem.removeClass('hide');
+
+                  } else if($(content_box).find('[data-shipping-method-label-title="Cash on Delivery (Standard Shipping)"]').siblings('.radio__label__accessory').find('.content-box__emphasis').text().trim() == '₹35.00') {
+                      console.log("COD = 35rs");
+                      {%- if productsToRemove != '' -%}
+                          console.log("NCOD products = true");
+                          $(content_box).find('[data-shipping-method-label-title="Cash on Delivery (Standard Shipping)"]').html('<span>COD(Shipping Charges) </span>');
+                      {% else %}
+                          console.log("NCOD products = fals");
+                          $(content_box).find('[data-shipping-method-label-title="Cash on Delivery (Standard Shipping)"]').siblings('.radio__label__accessory').hide();
+                          $(content_box).find('[data-shipping-method-label-title="Cash on Delivery (Standard Shipping)"]').html('COD (Cash on Delivery) <br/><span class="small-text">Delivery Charges</span><br/><span class="small-text">COD Charges </span>').after('<span class="radio__label__accessory"><span class="content-box__emphasis">Free</span><br/><span class="content-box__emphasis">₹35.00</span></span>');
+                     {% endif %}
+                  } else {
+                    console.log("COD != 35rs");
+                  }
+
+                  {%- if productsToRemove != '' -%}
+                      console.log("productsToRemove != blank;{{productsToRemove}}");
+                      var items = "{{ productsToRemove }}";
+                      var itemsArray = items.split(',');
+                      if (itemsArray.length < {{ total_item_count }}) {
+                        console.log("productsToRemove < total");
+                        $('div.custom-popup-block').removeClass('hide');
+                        $('#checkout_shipping_rate_id_cash_on_delivery_app-advanced_cash_on_delivery_256325-35_00').click(function(){
+                            if(this.checked) {
+                                console.log("productsToRemove < total_item_count");
+                                $("body").addClass("modal-open");
+                                $('#checkout-remove-product-model').addClass("show-pop-up");
+                                window.history.pushState('forward', null, '');
+                             }
+                        });
+                        $('#checkout_shipping_rate_id_cash_on_delivery_app-advanced_cash_on_delivery_256324-105_00').click(function(){
+                            if(this.checked) {
+                                console.log("productsToRemove < total_item_count");
+                                $("body").addClass("modal-open");
+                                $('#checkout-remove-product-model').addClass("show-pop-up");
+                                window.history.pushState('forward', null, '');
+                             }
+                        });
+                      } else {
+                        console.log("productsToRemove = total_item_count");
+
+                        $(content_box).find('[data-shipping-method-label-title="Cash on Delivery (Standard Shipping)"]').html('<span>COD</span><br/><span class="small-text">COD is not applicable on the products in Cart</span>').css("color", "#bbb");
+                        $(content_box).find('[data-shipping-method-label-title="Cash on Delivery (Standard Shipping)"]').siblings('.radio__label__accessory').hide();
+                        $(content_box).find('[data-shipping-method-label-title="Cash on Delivery (Standard Shipping)"]').css("color", "#bbb");
+                        $(content_box).find('#checkout_shipping_rate_id_cash_on_delivery_app-advanced_cash_on_delivery_256325-35_00').attr("disabled",true);
+                        $(content_box).find('#checkout_shipping_rate_id_cash_on_delivery_app-advanced_cash_on_delivery_256324-105_00').attr("disabled",true);
+                      }
+
+                  {% endif %}
+
+                } else {
+                  $(content_box).find('[data-shipping-method-label-title="Standard"]').html('Online Payment');
+                  $(content_box).find('[data-shipping-method-label-title="Cash on Delivery (Standard Shipping)"]').html('COD <br/><span class="small-text">COD is only available below purchase value of Rs.{{ totalThreshold }}.<br/>Kindly <linked>modify your cart</linked> to enable COD.</span>');
+                  $(content_box).find('[data-shipping-method-label-title="Cash on Delivery (Standard Shipping)"]').siblings('.radio__label__accessory').hide();
+                  $(content_box).find('#checkout_shipping_rate_id_cash_on_delivery_app-256325-35_00').attr("disabled",true);
+                  var elem = $('div.custom-message-block');
+                  elem.insertBefore($('div.step__footer'));
+                  elem.removeClass('hide');
+                }
+          	}
+          });
+      })(Checkout.$);
+    </script>
+
+    <script>
+         	function addoverlay() {
+               $('<div class="custom-overlay"><div class="overlay__inner"><div class="overlay__content"><span class="spinner"></span></div></div></div>').appendTo(document.body);
+           };
+
+           function removeoverlay() {
+               $('.custom-overlay').remove();
+           };
+            var showUpdatedLoader = false;
+            var devicetype = navigator.userAgent.toLowerCase();
+            var isAndroid = devicetype.indexOf("android") > -1;
+            let userAgent = navigator.userAgent;
+            let browserName;
+            if(userAgent.match(/chrome|chromium|crios/i)){
+                browserName = "chrome";
+                } else {
+                browserName=null;
+            }
+            if(browserName == 'chrome' && window.innerWidth < 480 && isAndroid){
+              showUpdatedLoader = true;
+            }
+            function addoverlayAccountLogin() {
+              history.pushState(null, null, location.href);
+              window.onpopstate = function(event) {
+                history.go(1);
+              };
+              $('<div class="custom-overlay"><div class="overlay__inner"><div class="overlay__content"><div class="spinner_overlay_container"><span class="spinner"></span></div><div><p class="account_otp_loader_text">This may take a moment, please wait while we fetch your OTP</p></div></div></div></div>').appendTo(document.body);
+            };
+
+           var countdownTimer = '';
+           function startcountdown(activeForm) {
+               let timeleft = 30;
+               countdownTimer = setInterval(function() {
+                   if(timeleft <= 0 || $(activeForm).find('.resend-otp-text.active').length == 0) {
+                       clearInterval(countdownTimer);
+                       $(activeForm).find('.resend-otp-text').html('Didn\'t get the OTP? <a href="javascript: void(0);" onclick="resendotp(\''+activeForm.attr('id')+'\');">Resend now.</a>');
+                   } else {
+                       $(activeForm).find('.resend-otp-text').html('Didn\'t get the OTP? Resend in '+timeleft+' seconds');
+                   }
+                   timeleft -= 1;
+               }, 1000);
+           }
+
+           function resendotp(activeFormId) {
+               event.preventDefault();
+               $('.otp-err-msg').html('');
+               if(activeFormId == 'login-with-otp') {
+                var activeForm = $('#login-with-otp');
+                var phonenumberInput = $('.login-with-otp input[name="customer-phonenumber"]');
+                var phonenumberlength = $('.login-with-otp input[name="customer-phonenumber"]').val().length;
+               } else if(activeFormId == 'create_customer') {
+                var activeForm = $('#create_customer');
+                var phonenumberInput = $('#create_customer input[name="customer[phone]"]');
+                var phonenumberlength = $('#create_customer input[name="customer[phone]"]').val().length;
+               }
+               if(phonenumberlength < 10 || phonenumberlength > 10) {
+                   phonenumberInput.next().remove('div');
+                   $('<div class="is-invalid invalid-feedback">Please enter a 10 digit mobile number without any special characters.</div>').insertAfter(phonenumberInput);
+                   return false;
+               }
+                if(showUpdatedLoader){
+                  addoverlayAccountLogin();
+                } else {
+                    addoverlay();
+                }
+               $.ajax({
+                   url: theme.apiUrl,
+                   type: 'POST',
+                   dataType: 'JSON',
+                   data: {
+                       phone_number: '+91'+phonenumberInput.val(),
+                       form_type: 'login_user',
+                       app_key: '1152360221919110',
+                       isresend: true
+                   },
+                   success: function(response) {
+                    // Verify a phone number WebOTP API
+                      if ('OTPCredential' in window) {
+                          var ac = new AbortController();
+                          navigator.credentials.get({
+                            otp: { transport:['sms'] },
+                            signal: ac.signal
+                          }).then(otp => {
+                            var otpInput = document.getElementById('customer-otp');
+                            otpInput.value = otp.code;
+                            if(showUpdatedLoader == true){
+                              $('.custom-overlay').remove();
+                            }
+                            document.querySelectorAll('.loginbutton')[0].click();
+                            $('.custom-overlay').remove();
+                            addoverlay();
+                          }).catch(err => { });
+                       }
+                     	if(showUpdatedLoader != true){
+                        removeoverlay();
+                      }
+                       startcountdown(activeForm);
+                       setTimeout(() => {
+                        $('.custom-overlay').remove();
+                        }, 30000);
+                   }, error: function(xhr) {
+                     	removeoverlay();
+                       if(xhr.status == 429) {
+                           activeForm.find('.otp-err-msg').html('Too many requests, try again later.');
+                       }
+                       if(xhr.status == 403) {
+                           activeForm.find('.otp-err-msg').html('Access denied, try again later.');
+                       }
+                       if(xhr.status == 500) {
+                           activeForm.find('.otp-err-msg').html('Something went wrong, try again later.');
+                       }
+                       if(xhr.status == 400) {
+                           activeForm.find('.otp-err-msg').html('OTP didn\'t sent, try again later.');
+                       }
+                       if(xhr.status == 404) {
+                           activeForm.find('.otp-err-msg').html('Account not found, please create an account.');
+                       }
+                       if(xhr.status != 404) {
+                           startcountdown(activeForm);
+                       }
+                       setTimeout(function() {
+                           activeForm.find('.otp-err-msg').html('');
+                       }, 5000);
+                   }
+               });
+           }
+
+           function sendotp(form_label) {
+               event.preventDefault();
+               $('.otp-err-msg').html('');
+               if(form_label == 'login_user') {
+                var activeForm = $('.login-with-otp');
+
+                var phonenumberInput = $('.login-with-otp input[name="customer-phonenumber"]');
+                var phonenumberlength = $('.login-with-otp input[name="customer-phonenumber"]').val().length;
+               } else if(form_label == 'register_user') {
+                var form_label = 'login_user';
+                var activeForm = $('#create_customer');
+                var phonenumberInput = $('#create_customer input[name="customer[phone]"]');
+                var phonenumberlength = $('#create_customer input[name="customer[phone]"]').val().length;
+               }
+
+               if(phonenumberlength < 10 || phonenumberlength > 10) {
+                   phonenumberInput.next().remove('div');
+                   $('<div class="is-invalid invalid-feedback">Please enter a 10 digit mobile number without any special characters.</div>').insertAfter(phonenumberInput);
+                   return false;
+               }
+                if(showUpdatedLoader){
+                  addoverlayAccountLogin();
+                } else {
+                    addoverlay();
+                }
+               $.ajax({
+                   url: theme.apiUrl,
+                   type: 'POST',
+                   dataType: 'JSON',
+                   data: {
+                       phone_number: '+91'+phonenumberInput.val(),
+                       form_type: form_label,
+                       app_key: '1152360221919110'
+                   },
+                   success: function(response) {
+                    // Verify a phone number WebOTP API
+                      if ('OTPCredential' in window) {
+                          var ac = new AbortController();
+                          navigator.credentials.get({
+                            otp: { transport:['sms'] },
+                            signal: ac.signal
+                          }).then(otp => {
+                            var otpInput = document.getElementById('customer-otp');
+                            otpInput.value = otp.code;
+                            if(showUpdatedLoader == true){
+                              $('.custom-overlay').remove();
+                            }
+                            document.querySelectorAll('.loginbutton')[0].click();
+                            $('.custom-overlay').remove();
+                            addoverlay();
+                          }).catch(err => { });
+                       }
+
+                     	if(showUpdatedLoader != true){
+                        removeoverlay();
+                      }
+                       activeForm.find('.otpinput').removeClass('hide');
+                       activeForm.find('#editPhone').removeClass('hide');
+                       activeForm.find('#registerEditPhone').removeClass('hide');
+                       activeForm.find('.phone_input_wrap').addClass('active_edit');
+                       activeForm.find('.resend-otp-text').addClass('active').removeClass('hide');
+                       activeForm.find('.otpbutton').addClass('hide');
+                       activeForm.find('.loginbutton').removeClass('hide');
+                       activeForm.find('.login-with-password-link').removeClass('hide');
+                       activeForm.find('.register-link').removeClass('hide');
+                       activeForm.find('.terms_privacy_link').addClass('hide');
+                       startcountdown(activeForm);
+                       setTimeout(() => {
+                        $('.custom-overlay').remove();
+                    }, 30000);
+
+                   }, error: function(xhr) {
+                     	removeoverlay();
+                       console.log(xhr);
+                       if(xhr.status == 429) {
+                           activeForm.find('.otp-err-msg').html('Too many requests, try again later.');
+                       }
+                       if(xhr.status == 403) {
+                           activeForm.find('.otp-err-msg').html('Access denied, try again later.');
+                       }
+                       if(xhr.status == 500) {
+                           activeForm.find('.otp-err-msg').html('Something went wrong, try again later.');
+                       }
+                       if(xhr.status == 400) {
+                           activeForm.find('.otp-err-msg').html('OTP didn\'t sent, try again later.');
+                       }
+                       if(xhr.status == 409) {
+                           activeForm.find('.otp-err-msg').html('This email or phone number is already registered.');
+                       }
+                       if(xhr.status == 404) {
+                          $('.Login-user-form-wrapper').removeClass('hide').addClass('hide');
+                          $('.register-user-form-wrapper').removeClass('hide');
+                          $('#create_customer input[name="customer[phone]"]').val($('.login-with-otp input[name="customer-phonenumber"]').val())
+                          //$('.otp-err-msg').html('Account not found, please create an account.');
+                       }
+                       if(xhr.status != 404) {
+                           startcountdown(activeForm);
+                       }
+                       setTimeout(function() {
+                        activeForm.find('.otp-err-msg').html('');
+                       }, 5000);
+                   }
+               });
+           }
+
+           function getlogintoken(form_label) {
+               event.preventDefault();
+               var phoneflag = true; var otpflag = true;
+               if(form_label == 'login_user') {
+                var activeForm = $('.login-with-otp');
+                
+                var phonenumberInput = $('.login-with-otp input[name="customer-phonenumber"]');
+                var phonenumberlength = $('.login-with-otp input[name="customer-phonenumber"]').val().length;
+                var otpInput = $('.login-with-otp input[name="customerOTP"]');
+                var otplength = $('.login-with-otp input[name="customerOTP"]').val().length;
+               } else if(form_label == 'register_user') {
+                var activeForm = $('#create_customer');
+                var customerData = $('#create_customer');
+                var phonenumberInput = $('#create_customer input[name="customer[phone]"]');
+                var phonenumberlength = $('#create_customer input[name="customer[phone]"]').val().length;
+                var otpInput = $('#create_customer input[name="customerOTP"]');
+                var otplength = $('#create_customer input[name="customerOTP"]').val().length;
+               }
+               var activeForm = otpInput.closest('form');
+               if(phonenumberlength < 10 || phonenumberlength > 10) {
+                   phoneflag = false;
+                   phonenumberInput.siblings('div.is-invalid').remove();
+                   $('<div class="is-invalid invalid-feedback">Please enter a 10 digit mobile number without any special characters.</div>').insertAfter(phonenumberInput);
+               }
+               
+               if(otplength < parseInt(theme.otpLength) || otplength > parseInt(theme.otpLength)) {
+                   otpflag = false;
+                   otpInput.siblings('div.is-invalid').remove();
+                   $('<div class="is-invalid invalid-feedback">Please enter 6 digit OTP.</div>').insertAfter(otpInput);
+               }
+               if(!phoneflag || !otpflag) {
+                   return false;
+               }
+
+             	if(showUpdatedLoader){
+                addoverlayAccountLogin();
+              } else {
+                  addoverlay();
+              }
+              var data = {
+                  phone_number: '+91'+phonenumberInput.val(),
+                  token: otpInput.val(),
+                  form_type: form_label,
+                  app_key: '1152360221919110'
+              };
+              if(customerData) {
+                data.customer_data = customerData.serialize();
+              }
+              
+                $.ajax({
+                   url: theme.apiUrl,
+                   type: 'POST',
+                   dataType: 'JSON',
+                   data: data,
+                   success: function(response) {
+                      console.log('response',response);
+                      if(response.status == 'success'){
+                        $('.Login-user-form-wrapper').removeClass('hide').addClass('hide');
+                        $('.register-user-form-wrapper').removeClass('hide');
+                        $('#customer-phone').val($('#customer-phonenumber').val()).parent('.form__input-wrapper').addClass('hide');
+                        $('.register-user-form-wrapper #customer-otp').val($('.Login-user-form-wrapper #customer-otp').val()).addClass('hide');
+                        $('.register-user-form-wrapper .otpbutton').addClass('hide');
+                        $('.register-user-form-wrapper .loginbutton').removeClass('hide');
+
+                        var eventData = getCartDataForWebengage();
+                        eventData.phone = '+91'+ $('#customer-phonenumber').val();
+                        eventData.url = window.location.href
+                        webengage.track('Checkout OTP_Verified', eventData);
+                      }else{
+                       window.location.href = 'https://amala.earth/account/login/multipass/'+response.token+'/?return_to=checkout';
+                      }
+                     	setTimeout(function() {
+                        removeoverlay();
+                     	}, 2000);
+                   }, error: function(xhr) {
+                     	removeoverlay();
+                      var responseText = JSON.parse(xhr.responseText);
+                       activeForm.find('.otp-err-msg').html(responseText.message);
+                       setTimeout(function() {
+                           activeForm.find('.otp-err-msg').html('');
+                       }, 5000);
+                   }
+               });
+           }
+
+           $(document).on('click','#editPhone',function(){
+            var activeForm = $(this).closest('#customer_login');
+            activeForm.find('.otpinput').addClass('hide');
+            activeForm.find('#editPhone').addClass('hide');
+            activeForm.find('.phone_input_wrap').removeClass('active_edit');
+            activeForm.find('.resend-otp-text').addClass('hide').removeClass('active');
+            activeForm.find('.otpbutton').removeClass('hide');
+            activeForm.find('.loginbutton').addClass('hide');
+            activeForm.find('.login-with-password-link').addClass('hide');
+            activeForm.find('.register-link').addClass('hide');
+            activeForm.find('.terms_privacy_link').removeClass('hide');
+            $('#customer-otp').val('');
+           });
+
+          $(document).on('click','#registerEditPhone',function(){
+            var activeForm = $(this).closest('#create_customer');
+            activeForm.find('#registerEditPhone').addClass('hide');
+            activeForm.find('.phone_input_wrap').removeClass('active_edit');
+            activeForm.find('.otpinput').addClass('hide');
+            activeForm.find('.resend-otp-text').addClass('hide');
+            activeForm.find('.otpbutton').removeClass('hide');
+            activeForm.find('.loginbutton').addClass('hide');
+           });
+
+           $('.customer-phonenumber').on('keyup', function() {
+               var phonenumberlength = $(this).val().length;
+               $(this).next().remove('div');
+               if(phonenumberlength < 10 || phonenumberlength > 10) {
+                   $('<div class="is-invalid invalid-feedback">Please enter a 10 digit mobile number without any special characters.</div>').insertAfter(this);
+               }
+           });
+
+           $('.customer-otp').on('keyup', function() {
+               var otplength = $(this).val().length;
+               $(this).next().remove('div');
+               if(otplength < parseInt(theme.otpLength) || otplength > parseInt(theme.otpLength)) {
+                   $('<div class="is-invalid invalid-feedback">Please enter 6 digit OTP received.</div>').insertAfter(this);
+               }
+           });
+
+           $('.customer-phonenumber').on('keydown', function(e) {
+               if(!((e.keyCode > 95 && e.keyCode < 106)
+                 || (e.keyCode > 47 && e.keyCode < 58)
+                 || e.keyCode == 8)) {
+                   return false;
+               }
+           });
+
+           $('.customer-otp').on('keydown', function(e) {
+               if(!((e.keyCode > 95 && e.keyCode < 106)
+                 || (e.keyCode > 47 && e.keyCode < 58)
+                 || e.keyCode == 8)) {
+                   return false;
+               }
+           });
+
+           $(document).ready(function(){
+               $('.login-with-password-link').click(function(){
+                   $('.Login-user-form-wrapper').removeClass('hide')
+                   $('.login-with-otp').removeClass('hide').addClass('hide');
+                   $('.loginbutton').removeClass('hide').addClass('hide');
+                   $('.login-with-password').removeClass('hide');
+                   $('.login-with-otp').find('input').val('');
+                   $('.login-with-password').find('input').val('');
+                   clearInterval(countdownTimer);
+               });
+               $('.login-with-otp-link').click(function(){
+                   $('.Login-user-form-wrapper').removeClass('hide')
+                   $('.login-with-password').removeClass('hide').addClass('hide');
+                   $('.login-with-otp').removeClass('hide');
+                   $('.login-with-otp').find('input').val('');
+                   $('.otpinput').removeClass('hide').addClass('hide');
+                   $('.resend-otp-text').removeClass('hide').addClass('hide');
+                   $('.otpbutton').removeClass('hide');
+                   $('.loginbutton').removeClass('hide').addClass('hide');
+                   $('.login-with-password').find('input').val('');
+                   $('.Login-user-form-wrapper .phone_input_wrap').removeClass('active_edit');
+                   $('#editPhone').addClass('hide');
+               });
+               $('.register-link').click(function(){
+                  $('.Login-user-form-wrapper').removeClass('hide').addClass('hide');
+                  $('.register-user-form-wrapper').removeClass('hide');
+                  $('#customer-phone').val($('#customer-phonenumber').val()).parent('.form__input-wrapper').removeClass('hide');
+                  $('.register-user-form-wrapper #customer-otp').val('').removeClass('hide');
+                  $('.register-user-form-wrapper .otpbutton').removeClass('hide');
+                  $('.register-user-form-wrapper .loginbutton').addClass('hide');
+                  $('#create_customer')[0].reset();
+                  $('.phone_input_wrap').removeClass('active_edit');
+                  $('#registerEditPhone').addClass('hide');
+               });
+               $('.login-link').click(function(){
+                  $('.register-user-form-wrapper').removeClass('hide').addClass('hide');
+                  $('.Login-user-form-wrapper').removeClass('hide');
+                  var activeForm = $('#customer_login');
+                  activeForm.find('.otpinput').addClass('hide');
+                  activeForm.find('#editPhone').addClass('hide');
+                  activeForm.find('.phone_input_wrap').removeClass('active_edit');
+                  activeForm.find('.resend-otp-text').addClass('hide').removeClass('active');
+                  activeForm.find('.otpbutton').removeClass('hide');
+                  activeForm.find('.loginbutton').addClass('hide');
+                  activeForm.find('.login-with-password-link').addClass('hide');
+                  activeForm.find('.register-link').addClass('hide');
+                  activeForm.find('.terms_privacy_link').removeClass('hide');
+                  $('#customer-otp').val('');
+                  $('#customer_login')[0].reset();
+               });
+           });
+
+
+        	  $(document).ready(function(){
+                 	$('tr.total-line--shipping th span').next('span').remove();
+                 	var shippinmethod = '{{ checkout.shipping_method.title }}';
+                   if(shippinmethod) {
+                 		if(shippinmethod.includes('Cash on Delivery')) {
+                   		$('<span class="customtextr" style="font-size: 0.9em; font-weight: 600;"> (SAVE ₹ 35 <a href="javascript: void(0);" data-custom-title="Switch to Prepaid and Save ₹ 35">?</a>)</span>').insertAfter('tr.total-line--shipping th span:first');
+                 		}
+                   }
+               });
+
+             	$('.section--shipping-method').on('change', function() {
+                 	$('tr.total-line--shipping th span').next('span').remove();
+                   if($('input[type="radio"]:checked').val().includes('Cash on Delivery')) {
+                     	$('<span class="customtextr" style="font-size: 0.9em; font-weight: 600;"> (SAVE ₹ 35 <a href="javascript: void(0);" data-custom-title="Switch to Prepaid and Save ₹ 35">?</a>)</span>').insertAfter('tr.total-line--shipping th span:first');
+                   }
+      });
+
+         	if(Shopify.Checkout.page === 'processing') {
+             	var productsOBJ = [];
+               var totalCount = 0;
+               {% for item in checkout.line_items %}
+                   var productsDATA = {};
+                   productsDATA['id'] = "{{ item.product.id }}";
+                   productsDATA['title'] = "{{ item.product.title }}";
+                   productsDATA['image'] = "{{ item.product.featured_image | image_url }}".replace('//', 'https://');
+                   productsDATA['url'] = "https://amala.earth{{ item.product.url }}";
+                   productsDATA['brand'] = "{{ item.product.vendor }}";
+                   productsDATA['quantity'] = parseInt("{{ item.quantity }}");
+                   var tagsOBJ = [];
+                   {% for tag in item.product.tags %}
+                       var tagsDATA = {};
+                       tagsDATA = "{{ tag }}";
+                       tagsOBJ.push(tagsDATA);
+                   {% endfor %}
+                   productsDATA['tags'] = tagsOBJ;
+                   var collectionsOBJ = [];
+                   {% for collection in item.product.collections %}
+                       var collectionsDATA = {};
+                       collectionsDATA = "{{ collection.title }}";
+                       collectionsOBJ.push(collectionsDATA);
+                   {% endfor %}
+                   productsDATA['collections'] = collectionsOBJ;
+                   productsOBJ.push(productsDATA);
+                   totalCount = totalCount + parseInt("{{ item.quantity }}");
+               {% endfor %}
+
+               $(document).ready(function() {
+                   var wechtotalprice = '{{ checkout.total_price | divided_by: 100 }}';
+                   var wechtotaldiscount = '{{ checkout.discounts_amount | divided_by: 100 }}';
+                   var webiladdress1 = '{{ checkout.billing_address.address1 }}';
+                   var webiladdress2 = '{{ checkout.billing_address.address2 }}';
+                   var webilname = '{{ checkout.billing_address.name }}';
+                   var webilphone = '{{ checkout.billing_address.phone }}';
+                   var webilstreet = '{{ checkout.billing_address.street }}';
+                   var webilcity = '{{ checkout.billing_address.city }}';
+                   var webilprovince = '{{ checkout.billing_address.province }}';
+                   var webilcountry = '{{ checkout.billing_address.country }}';
+                   var webilzip = '{{ checkout.billing_address.zip }}';
+
+                   webengage.track('Checkout Step 2_N', {
+                       'totalPrice': parseFloat(wechtotalprice),
+                       'totalDiscount': parseFloat(wechtotaldiscount),
+                       'totalItems': parseInt(totalCount),
+                       'products': productsOBJ,
+                       'address1': webiladdress1,
+                       'address2': webiladdress2,
+                       'name': webilname,
+                       'phone': '+91'+webilphone,
+                       'street': webilstreet,
+                       'city': webilcity,
+                       'province': webilprovince,
+                       'country': webilcountry,
+                       'zip': webilzip
+                   });
+               });
+           }
+
+         	if(Shopify.Checkout.page === 'thank_you') {
+             	var productsOBJ = [];
+
+             	var onlyproductsIDS = [];
+               var onlyproductsTitles = [];
+               var onlyproductsImages = [];
+               var onlyproductsURLs = [];
+               var onlyproductsBrands = [];
+               var onlyproductsQTY = [];
+               var onlyproductsCLT = [];
+               var onlyproductsTGS = [];
+               var onlyproductsCLTid = [];
+
+               var totalCount = 0;
+               {% for item in order.line_items %}
+                   var productsDATA = {};
+                   productsDATA['id'] = "{{ item.product.id }}";
+                   productsDATA['title'] = "{{ item.product.title }}";
+                   productsDATA['image'] = "{{ item.product.featured_image | image_url }}".replace('//', 'https://');
+                   productsDATA['url'] = "https://amala.earth{{ item.product.url }}";
+                   productsDATA['brand'] = "{{ item.product.vendor }}";
+                   productsDATA['quantity'] = parseInt("{{ item.quantity }}");
+
+                   onlyproductsIDS.push("{{ item.product.id }}");
+                   onlyproductsTitles.push("{{ item.product.title }}");
+                   onlyproductsImages.push("{{ item.product.featured_image | image_url }}".replace('//', 'https://'));
+                   onlyproductsURLs.push("https://amala.earth{{ item.product.url }}");
+                   onlyproductsBrands.push("{{ item.product.vendor }}");
+                   onlyproductsQTY.push(parseInt("{{ item.quantity }}"));
+
+                   var tagsOBJ = [];
+                   var tagsPR = [];
+                   {% for tag in item.product.tags %}
+                       var tagsDATA = {};
+                       tagsDATA = "{{ tag }}";
+                       tagsOBJ.push(tagsDATA);
+             			tagsPR.push("{{ tag }}");
+                   {% endfor %}
+                   tagsPR.join(',');
+       			onlyproductsTGS.push(tagsPR);
+                   productsDATA['tags'] = tagsOBJ;
+
+                   var collectionsOBJ = [];
+             		var collectionsPR = [];
+      var collectionsPRid = [];
+                   {% for collection in item.product.collections %}
+                       var collectionsDATA = {};
+                       collectionsDATA = "{{ collection.title }}";
+                       collectionsOBJ.push(collectionsDATA);
+             			collectionsPR.push("{{ collection.title }}");
+           			collectionsPRid.push(parseInt("{{ collection.id }}"));
+                   {% endfor %}
+                   collectionsPR.join(',');
+                   collectionsPRid.join(',');
+                   onlyproductsCLT.push(collectionsPR);
+                   onlyproductsCLTid.push(collectionsPRid);
+                   productsDATA['collections'] = collectionsOBJ;
+
+                   productsOBJ.push(productsDATA);
+                   totalCount = totalCount + parseInt("{{ item.quantity }}");
+               {% endfor %}
+
+               $(document).ready(function() {
+                   var wechtotalprice = '{{ order.total_price | divided_by: 100 }}';
+                   var wechtotaldiscount = '{{ order.total_discounts | divided_by: 100 }}';
+                   var webiladdress1 = '{{ order.billing_address.address1 }}';
+                   var webiladdress2 = '{{ order.billing_address.address2 }}';
+                   var webilname = '{{ order.billing_address.name }}';
+                   var webilphone = '{{ order.billing_address.phone }}';
+                   var webilstreet = '{{ order.billing_address.street }}';
+                   var webilcity = '{{ order.billing_address.city }}';
+                   var webilprovince = '{{ order.billing_address.province }}';
+                   var webilcountry = '{{ order.billing_address.country }}';
+                   var webilzip = '{{ order.billing_address.zip }}';
+                   var weorderid = '{{ checkout.order_id }}';
+                   var weordername = '{{ checkout.order_name }}';
+                   var weordernumber = '{{ checkout.order_number }}';
+
+                   webengage.track('Checkout Completed_N', {
+                       'totalPrice': parseFloat(wechtotalprice),
+                       'totalDiscount': parseFloat(wechtotaldiscount),
+                       'totalItems': parseInt(totalCount),
+                       'products': productsOBJ,
+                       'address1': webiladdress1,
+                       'address2': webiladdress2,
+                       'name': webilname,
+                       'phone': '+91'+webilphone,
+                       'street': webilstreet,
+                       'city': webilcity,
+                       'province': webilprovince,
+                       'country': webilcountry,
+                       'zip': webilzip,
+                     	'orderid': weorderid,
+                     	'ordernumber': weordernumber,
+                     	'ordername': weordername
+                   });
+
+                   $.ajax({
+                       url: theme.apiUrl+'/peritemetd.php',
+                       type: 'POST',
+                       dataType: 'JSON',
+                       data: {
+                           order_id: weorderid,
+                           code: 'D0A8M2A1L5A*'
+                       },
+                       success: function(response) {
+                         	if(response.status == true) {
+                               console.log(productsOBJ);
+                               productsOBJ.forEach(function (item, index) {
+                                       productsOBJ[index].ETD = response.nextetd[index];
+                               });
+
+                             	webengage.track('Checkout Completed_N4', {
+                                   'totalPrice': parseFloat(wechtotalprice),
+                                   'totalDiscount': parseFloat(wechtotaldiscount),
+                                   'totalItems': parseInt(totalCount),
+                                   'products': productsOBJ,
+                                 	'productsETD': response.nextetd,
+                                   'address1': webiladdress1,
+                                   'address2': webiladdress2,
+                                   'name': webilname,
+                                   'phone': '+91'+webilphone,
+                                   'street': webilstreet,
+                                   'city': webilcity,
+                                   'province': webilprovince,
+                                   'country': webilcountry,
+                                   'zip': webilzip,
+                                   'orderid': weorderid,
+                                   'ordernumber': weordernumber,
+                                   'ordername': weordername
+                               });
+
+                           	webengage.track('Charged_N', {
+                                   'totalPrice': parseFloat(wechtotalprice),
+                                   'totalDiscount': parseFloat(wechtotaldiscount),
+                                   'totalItems': parseInt(totalCount),
+                                   'productIDS': onlyproductsIDS.join('::'),
+                                   'productTitles': onlyproductsTitles.join('::'),
+                                   'productImages': onlyproductsImages.join('::'),
+                                   'productURLs': onlyproductsURLs.join('::'),
+                                   'productBrands': onlyproductsBrands.join('::'),
+                                   'productQTYs': onlyproductsQTY.join('::'),
+                                   'productCLTids': onlyproductsCLTid.join('::'),
+                                   'productCLTs': onlyproductsCLT.join('::'),
+                                   'productTGS': onlyproductsTGS.join('::'),
+                                   'productETDs': response.message,
+                                   'address1': webiladdress1,
+                                   'address2': webiladdress2,
+                                   'name': webilname,
+                                   'phone': '+91'+webilphone,
+                                   'street': webilstreet,
+                                   'city': webilcity,
+                                   'province': webilprovince,
+                                   'country': webilcountry,
+                                   'zip': webilzip,
+                                   'orderid': weorderid,
+                                   'ordernumber': weordernumber,
+                                 	'ordername': weordername
+                               });
+                         	}
+                       }, error: function(xhr) {
+                           console.log('error');
+                       }
+                   });
+
+                   webengage.track('Page Visited_N', {
+             			'pagetype': 'Thank you page'
+         			});
+               });
+           }
+
+      if (Shopify.Checkout.step == 'contact_information') {
+        (function ($) {
+        // Restricts input for the set of matched elements to the given inputFilter function.
+          $.fn.inputFilter = function(inputFilter) {
+            return this.on("input keydown keyup mousedown mouseup select contextmenu drop", function() {
+              if (inputFilter(this.value)) {
+                this.oldValue = this.value;
+                this.oldSelectionStart = this.selectionStart;
+                this.oldSelectionEnd = this.selectionEnd;
+              } else if (this.hasOwnProperty("oldValue")) {
+                this.value = this.oldValue;
+                this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+              } else {
+                this.value = this.value.replace(/ /g,'');
+              }
+            });
+          };
+        })(jQuery);
+      }
+
+      function getCartDataForWebengage() {
+        var productsOBJ = [];
+        var totalCount = 0;
+        {% for item in checkout.line_items %}
+           var productsDATA = {};
+           productsDATA['id'] = "{{ item.product.id }}";
+           productsDATA['title'] = "{{ item.product.title }}";
+           productsDATA['image'] = "{{ item.product.featured_image | image_url }}".replace('//', 'https://');
+           productsDATA['url'] = "https://amala.earth{{ item.product.url }}";
+           productsDATA['brand'] = "{{ item.product.vendor }}";
+           productsDATA['quantity'] = parseInt("{{ item.quantity }}");
+           var tagsOBJ = [];
+           {% for tag in item.product.tags %}
+               var tagsDATA = {};
+               tagsDATA = "{{ tag }}";
+               tagsOBJ.push(tagsDATA);
+           {% endfor %}
+           productsDATA['tags'] = tagsOBJ;
+           var collectionsOBJ = [];
+           {% for collection in item.product.collections %}
+               var collectionsDATA = {};
+               collectionsDATA = "{{ collection.title }}";
+               collectionsOBJ.push(collectionsDATA);
+           {% endfor %}
+           productsDATA['collections'] = collectionsOBJ;
+           productsOBJ.push(productsDATA);
+           totalCount = totalCount + parseInt("{{ item.quantity }}");
+        {% endfor %}
+        
+        var wechtotalprice = '{{ checkout.total_price | divided_by: 100 }}';
+        var wechtotaldiscount = '{{ checkout.discounts_amount | divided_by: 100 }}';
+
+        var cartData =  {
+                      'totalPrice': parseFloat(wechtotalprice),
+                      'totalDiscount': parseFloat(wechtotaldiscount),
+                      'totalItems': parseInt(totalCount),
+                      'products': productsOBJ
+                    };
+
+        return cartData;
+      }
+    </script>
+    <script>
+      // only for shopify
+      document.addEventListener("DOMContentLoaded", () => {
+        const discount_section_element = document.querySelector('.order-summary__section.order-summary__section--discount');
+        if (!discount_section_element) return;
+  
+        const container = document.createElement("div");
+        container.innerHTML = `
+          <div 
+            id="nector-checkoutpageslider-container"
+            data-api_key="200f5223c07fa071a7668dc0f62067b3a469753d67d0926ace0140ecd91c253b"
+            data-customer_id="{{ customer.id }}"
+            data-platform="shopify"
+                      data-applydiscount_strategy="click"
+          ></div>
+        `;
+  
+        discount_section_element.parentElement.insertBefore(container, discount_section_element);
+      });
+      $(".step__sections .content-box__row--tight-spacing-vertical").parent().css("display","none");
+    </script>
+    <script type="module" src="https://cdn.nector.io/nector-static/no-cache/reward-widget/package/checkoutpageslider.min.js"></script>
+  </body>
+</html>

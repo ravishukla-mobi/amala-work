@@ -1,0 +1,1680 @@
+{
+  "sections": {
+    "ebe6cca1-af55-47e7-a2fc-a03ef1f5ad12": {
+      "type": "page-navigation",
+      "settings": {}
+    },
+    "99de4870-e829-41e6-a032-1ee322dd74c8": {
+      "type": "slideshow",
+      "blocks": {
+        "8983c392-7ec4-418d-98ec-ec8f0c69a258": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Banner_1920x600_food.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/food_8f851243-7393-4249-906e-4f71d79eb181.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/mindful-eating",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "template--16605322805492__99de4870-e829-41e6-a032-1ee322dd74c8-16794694453349be82-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/food_banner_microsite_desktop_op_2_39b63365-e9c7-4956-862d-073194b012f0.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/food_banner_microsite_mobile_1b5d0731-f9cd-44b0-b1c0-976d60c8feb2.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/mindful-eating",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "6d479aaf-687a-4a9a-9643-61ef7df18760": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/food_drinks_web_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/food_drinks_mobile_1.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#fff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/summer-food",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "template--16605322805492__99de4870-e829-41e6-a032-1ee322dd74c8-16794694453349be82-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/express-delivery-desktop-fo0d_e6f49944-cef3-491f-8934-a2db7b3c7d29.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/express-delivery-mobile-food_a29cd317-752e-4070-836b-516c75d33bd1.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/warehouse-inventory?f_Category=mindful+eating",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "8983c392-7ec4-418d-98ec-ec8f0c69a258",
+        "template--16605322805492__99de4870-e829-41e6-a032-1ee322dd74c8-16794694453349be82-0",
+        "6d479aaf-687a-4a9a-9643-61ef7df18760",
+        "template--16605322805492__99de4870-e829-41e6-a032-1ee322dd74c8-16794694453349be82-1"
+      ],
+      "settings": {
+        "edge_to_edge": true,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "5b69cb13-e53f-4340-86a7-41e13b3e36e6": {
+      "type": "slider-show",
+      "disabled": true,
+      "blocks": {
+        "template--16605322805492__5b69cb13-e53f-4340-86a7-41e13b3e36e6-16781055791a091e1e-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/food_banner_microsite_desktop_op_2_3d5f2853-8092-4e74-90ca-4d97ae262410.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/food_banner_microsite_mobile_dd2c6c80-4d51-4127-a502-3984b7f4fa3b.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/mindful-eating"
+          }
+        },
+        "template--16605322805492__5b69cb13-e53f-4340-86a7-41e13b3e36e6-16781055791a091e1e-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/express-delivery-desktop-fo0d.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/express-delivery-mobile-food.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/warehouse-inventory?f_Category=mindful+eating"
+          }
+        }
+      },
+      "block_order": [
+        "template--16605322805492__5b69cb13-e53f-4340-86a7-41e13b3e36e6-16781055791a091e1e-0",
+        "template--16605322805492__5b69cb13-e53f-4340-86a7-41e13b3e36e6-16781055791a091e1e-1"
+      ],
+      "settings": {
+        "edge_to_edge": true,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 4
+      }
+    },
+    "b86ec9e4-efe0-4fe3-a2a6-ea79193ac260": {
+      "type": "custom-grid",
+      "blocks": {
+        "7b318e3a-7039-48b0-a50f-ba068b3bc93b": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/vegan.png",
+            "title": "Vegan\/Plant-based",
+            "block_button_url": "https:\/\/amala.earth\/pages\/vegan"
+          }
+        },
+        "f28fdb54-a36c-4647-8107-45480929a481": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/gluten_free_28e12d30-b6fb-4d05-b3f7-382ca1516fc3.png",
+            "title": "Gluten-free",
+            "block_button_url": "https:\/\/amala.earth\/pages\/gluten-free"
+          }
+        },
+        "cf25765e-9709-4449-a67d-b1620f47b435": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/diabetic_friendly_1_b7dacefc-7d2f-4990-8082-fb825fd58b84.png",
+            "title": "Diabetic-friendly",
+            "block_button_url": "https:\/\/amala.earth\/collections\/diabetic-friendly"
+          }
+        },
+        "1429cd0b-0f6e-4329-b1cf-501323002101": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/immunity_boosters_7cb9fbfd-8971-4b56-bb50-6f73ca6e9fbe.png",
+            "title": "Immunity boosters",
+            "block_button_url": "https:\/\/amala.earth\/collections\/immunity-essentials"
+          }
+        },
+        "e9d9c3a6-9158-4cc0-aca3-c68638d52239": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/heart_friendly_5bd68e7b-e4c8-49ba-88cb-6f101b2e2c18.png",
+            "title": "Heart-friendly",
+            "block_button_url": "https:\/\/amala.earth\/collections\/heart-friendly"
+          }
+        },
+        "8f1d7e29-7252-4145-a566-9bdbb56bf9e6": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/ayurvedic_4323bfff-d1cc-432d-acc7-b5f0f660de87.png",
+            "title": "Ayurvedic",
+            "block_button_url": "https:\/\/amala.earth\/collections\/ayurvedic-food"
+          }
+        }
+      },
+      "block_order": [
+        "7b318e3a-7039-48b0-a50f-ba068b3bc93b",
+        "f28fdb54-a36c-4647-8107-45480929a481",
+        "cf25765e-9709-4449-a67d-b1620f47b435",
+        "1429cd0b-0f6e-4329-b1cf-501323002101",
+        "e9d9c3a6-9158-4cc0-aca3-c68638d52239",
+        "8f1d7e29-7252-4145-a566-9bdbb56bf9e6"
+      ],
+      "settings": {
+        "subtitle": "",
+        "title": ""
+      }
+    },
+    "d8cec910-958f-4eb5-99b6-706dcb81d80a": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "249e3002-2a18-4295-aa04-f3be22f781ae": {
+          "type": "Product",
+          "settings": {
+            "product": "cookies-lemon-jaggery-organic-150-g"
+          }
+        },
+        "b22c003b-a187-402c-b141-fdfac68161fd": {
+          "type": "Product",
+          "settings": {
+            "product": "choco-almond-cranberry-protein-muesli-350gm"
+          }
+        },
+        "85b13763-8982-4d9a-a9fe-b31f7f66abfd": {
+          "type": "Product",
+          "settings": {
+            "product": "vegan-chocolate-coconut-cookies"
+          }
+        },
+        "fd2866b2-6933-4cb3-beef-724fed87ec36": {
+          "type": "Product",
+          "settings": {
+            "product": "unsweetened-almond-butter-265gm"
+          }
+        },
+        "22c4bea4-d397-485d-bf85-88e56119bb91": {
+          "type": "Product",
+          "settings": {
+            "product": "handmade-indian-spices-and-raw-mango-pickle-300gm"
+          }
+        },
+        "ff5a13f3-969e-4f26-9ac3-bfa1cefda77d": {
+          "type": "Product",
+          "settings": {
+            "product": "dark-chocolate-peanut-butter-crunchy-gluten-free-325-g-pack-of-2"
+          }
+        },
+        "2de6efb4-d83c-4020-9d82-8070e23c357e": {
+          "type": "Product",
+          "settings": {
+            "product": "vegan-energy-bar-gluten-free-50-g-pack-of-3"
+          }
+        },
+        "51ffc336-9ecc-4b16-9e58-675df9a6d4e3": {
+          "type": "Product",
+          "settings": {
+            "product": "multigrain-flakes-with-raisins-and-roasted-almonds-400gm"
+          }
+        },
+        "27e9b00f-a1c8-4914-97a4-dde8ae12893b": {
+          "type": "Product",
+          "settings": {
+            "product": "vegan-sunshine-premium-filled-dates-gift-box-16-pcs"
+          }
+        },
+        "04b552f0-3405-4a31-8d8a-d451fb0362c3": {
+          "type": "Product",
+          "settings": {
+            "product": "gluten-free-artisanal-dark-chocolate-pack-of-2"
+          }
+        },
+        "a7075088-5cd0-4492-bd33-7ffbb5619583": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "100-pure-a2-cow-ghee-500ml"
+          }
+        }
+      },
+      "block_order": [
+        "249e3002-2a18-4295-aa04-f3be22f781ae",
+        "b22c003b-a187-402c-b141-fdfac68161fd",
+        "85b13763-8982-4d9a-a9fe-b31f7f66abfd",
+        "fd2866b2-6933-4cb3-beef-724fed87ec36",
+        "22c4bea4-d397-485d-bf85-88e56119bb91",
+        "ff5a13f3-969e-4f26-9ac3-bfa1cefda77d",
+        "2de6efb4-d83c-4020-9d82-8070e23c357e",
+        "51ffc336-9ecc-4b16-9e58-675df9a6d4e3",
+        "27e9b00f-a1c8-4914-97a4-dde8ae12893b",
+        "04b552f0-3405-4a31-8d8a-d451fb0362c3",
+        "a7075088-5cd0-4492-bd33-7ffbb5619583"
+      ],
+      "settings": {
+        "title1": "",
+        "title2": "Vegan\/Plant-based",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/vegan-plant-based-products",
+        "button_position": "top"
+      }
+    },
+    "fb713530-1140-47bd-8d39-ff046598378e": {
+      "type": "amala-earth-curation",
+      "blocks": {
+        "37d62564-e2e4-476b-b7dd-7231ec6d6a86": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/food_breakfast.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/food_breakfast_mobile.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/baking-premixes"
+          }
+        }
+      },
+      "block_order": [
+        "37d62564-e2e4-476b-b7dd-7231ec6d6a86"
+      ],
+      "settings": {
+        "curation_heading1": "",
+        "curation_sub_heading2": ""
+      }
+    },
+    "733ba065-3d71-4a8c-9bf3-4d6dd9749f9b": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "7823198f-43b6-4eb9-8176-efdb0236c694": {
+          "type": "Product",
+          "settings": {
+            "product": "gluten-free-fig-amaranth-cookies"
+          }
+        },
+        "34680b93-4729-4b7f-b910-a071547e9070": {
+          "type": "Product",
+          "settings": {
+            "product": "veggies-masala-oats-1kg"
+          }
+        },
+        "a36755d4-abaf-4aa8-b4f7-f9b9f7ed706d": {
+          "type": "Product",
+          "settings": {
+            "product": "100-pure-cultured-cow-ghee-500ml"
+          }
+        },
+        "a4163939-c87f-43d8-b6c4-0b6254a343b9": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-chakrata-rajma-500-g-pack-of-2"
+          }
+        },
+        "0540375b-2ad4-421c-8d73-03821cd4bab4": {
+          "type": "Product",
+          "settings": {
+            "product": "natural-purple-sweet-potato-chips-with-pani-puri-masala-90gm-pack-of-3"
+          }
+        },
+        "43ebbe69-8f8b-45b9-bc65-45d86501b476": {
+          "type": "Product",
+          "settings": {
+            "product": "gluten-free-oats-cranberry-cookies"
+          }
+        },
+        "bc1a3293-fa23-41b8-9c31-785091ffb4ed": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-quinoa-atta-500g"
+          }
+        },
+        "daf9d5dd-b226-428f-8d29-0c3b8a5daf04": {
+          "type": "Product",
+          "settings": {
+            "product": "gluten-free-himalayan-navrangi-dal-500-gm"
+          }
+        },
+        "bda75410-46ad-4250-9602-e14674a86c58": {
+          "type": "Product",
+          "settings": {
+            "product": "roasted-heing-chana-200-gm"
+          }
+        },
+        "b67cf9b1-6673-4be6-8092-1585680fcea6": {
+          "type": "Product",
+          "settings": {
+            "product": "gluten-free-multi-grain-pasta-200g"
+          }
+        },
+        "831f07ac-0acf-477c-9897-4b059a7dc4c1": {
+          "type": "Product",
+          "settings": {
+            "product": "ragi-cookies-vegan-150-g"
+          }
+        }
+      },
+      "block_order": [
+        "7823198f-43b6-4eb9-8176-efdb0236c694",
+        "34680b93-4729-4b7f-b910-a071547e9070",
+        "a36755d4-abaf-4aa8-b4f7-f9b9f7ed706d",
+        "a4163939-c87f-43d8-b6c4-0b6254a343b9",
+        "0540375b-2ad4-421c-8d73-03821cd4bab4",
+        "43ebbe69-8f8b-45b9-bc65-45d86501b476",
+        "bc1a3293-fa23-41b8-9c31-785091ffb4ed",
+        "daf9d5dd-b226-428f-8d29-0c3b8a5daf04",
+        "bda75410-46ad-4250-9602-e14674a86c58",
+        "b67cf9b1-6673-4be6-8092-1585680fcea6",
+        "831f07ac-0acf-477c-9897-4b059a7dc4c1"
+      ],
+      "settings": {
+        "title1": "",
+        "title2": "Gluten-free",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/gluten-free",
+        "button_position": "top"
+      }
+    },
+    "6abd2943-e3d9-43a9-91de-d931853fb29a": {
+      "type": "offer-circle",
+      "blocks": {
+        "ab925b1b-dbb6-4e4d-a085-667183fcb174": {
+          "type": "combo",
+          "settings": {
+            "combo_image_desktop": "shopify:\/\/shop_images\/99_web.png",
+            "combo_image_mobile": "shopify:\/\/shop_images\/99_mobile.png",
+            "combo_link": "https:\/\/amala.earth\/collections\/99-store",
+            "title": ""
+          }
+        },
+        "0e517e33-7ae5-4055-bd77-4dd110ec5f6f": {
+          "type": "combo",
+          "settings": {
+            "combo_image_desktop": "shopify:\/\/shop_images\/199_web.png",
+            "combo_image_mobile": "shopify:\/\/shop_images\/199_web.png",
+            "combo_link": "https:\/\/amala.earth\/collections\/199-store",
+            "title": ""
+          }
+        },
+        "bb24af02-1020-4e2f-9679-b040ca402ca9": {
+          "type": "combo",
+          "settings": {
+            "combo_image_desktop": "shopify:\/\/shop_images\/299_web.png",
+            "combo_image_mobile": "shopify:\/\/shop_images\/299_mobile_4475774f-a438-4ffb-b90a-b02adc0d568e.png",
+            "combo_link": "https:\/\/amala.earth\/collections\/299-store",
+            "title": ""
+          }
+        },
+        "0dbc189b-7eb4-4a44-ac70-0c4998df21a6": {
+          "type": "combo",
+          "settings": {
+            "combo_image_desktop": "shopify:\/\/shop_images\/399_web.png",
+            "combo_image_mobile": "shopify:\/\/shop_images\/399_mobile.png",
+            "combo_link": "https:\/\/amala.earth\/collections\/399-store",
+            "title": ""
+          }
+        },
+        "32ed2766-63d7-413d-8e28-d51de088f79d": {
+          "type": "combo",
+          "settings": {
+            "combo_image_desktop": "shopify:\/\/shop_images\/499_web.png",
+            "combo_image_mobile": "shopify:\/\/shop_images\/499_mobile.png",
+            "combo_link": "https:\/\/amala.earth\/collections\/499-store",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "ab925b1b-dbb6-4e4d-a085-667183fcb174",
+        "0e517e33-7ae5-4055-bd77-4dd110ec5f6f",
+        "bb24af02-1020-4e2f-9679-b040ca402ca9",
+        "0dbc189b-7eb4-4a44-ac70-0c4998df21a6",
+        "32ed2766-63d7-413d-8e28-d51de088f79d"
+      ],
+      "settings": {
+        "heading_one": "Curated",
+        "heading_two": "stores",
+        "btn_text": "",
+        "url_link": ""
+      }
+    },
+    "2202213b-d65b-4f1a-b6d5-f60466f698cd": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "cdaa4c33-fb78-4897-ac95-61814d28a0a7": {
+          "type": "Product",
+          "settings": {
+            "product": "cold-brew-coffee-can-light-250-ml"
+          }
+        },
+        "533ad149-8829-49c8-b8bf-eeb01182dd79": {
+          "type": "Product",
+          "settings": {
+            "product": "mint-ginger-lemon-squash"
+          }
+        },
+        "4c195f69-90c1-4d8a-aece-78aa077bddfb": {
+          "type": "Product",
+          "settings": {
+            "product": "nubralife-calming-lavender-kombucha-digestive-enzymes-250-ml-pack-of-6-8904387420258-90323"
+          }
+        },
+        "ebadf21d-5536-426b-89a9-794047dfb2aa": {
+          "type": "Product",
+          "settings": {
+            "product": "cold-brew-coffee-can-bold-250-ml"
+          }
+        },
+        "55862e00-a973-44a2-93f9-41c66c51d62e": {
+          "type": "Product",
+          "settings": {
+            "product": "jivika-naturals-natural-amla-juice-500ml-pack-of-2-230822"
+          }
+        },
+        "f761e2b0-6acb-4c7a-995c-fdf46a89db99": {
+          "type": "Product",
+          "settings": {
+            "product": "i-say-organic-masala-nimbu-pani-500-mliso-am_75-26722"
+          }
+        },
+        "f3d90531-9e6d-4307-b46e-31b7f7ecf6db": {
+          "type": "Product",
+          "settings": {
+            "product": "healthy-because-cold-coffee-milkshake-premix-high-protein-36-g-pack-of-6-hb-ms0013-161222"
+          }
+        },
+        "54fd131c-afec-41c5-abb3-62b01ebc8c5b": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-golden-milk-masala-100gm"
+          }
+        },
+        "f6051d2a-1149-4e03-b9fb-113635cafad4": {
+          "type": "Product",
+          "settings": {
+            "product": "aamra-badam-thandai-mix-95-g-42944233354129-240223"
+          }
+        }
+      },
+      "block_order": [
+        "cdaa4c33-fb78-4897-ac95-61814d28a0a7",
+        "533ad149-8829-49c8-b8bf-eeb01182dd79",
+        "4c195f69-90c1-4d8a-aece-78aa077bddfb",
+        "ebadf21d-5536-426b-89a9-794047dfb2aa",
+        "55862e00-a973-44a2-93f9-41c66c51d62e",
+        "f761e2b0-6acb-4c7a-995c-fdf46a89db99",
+        "f3d90531-9e6d-4307-b46e-31b7f7ecf6db",
+        "54fd131c-afec-41c5-abb3-62b01ebc8c5b",
+        "f6051d2a-1149-4e03-b9fb-113635cafad4"
+      ],
+      "settings": {
+        "title1": "",
+        "title2": "Summer Drinks",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/summer-drinks",
+        "button_position": "top"
+      }
+    },
+    "c787c79b-66cd-4150-94e7-bac687e13217": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "10ca00e6-1e90-4c81-bcd9-2acc843debf2": {
+          "type": "Product",
+          "settings": {
+            "product": "jungly-delights-diwali-gift-hamper-superfood-bars-candle-pack-of-2-jd-candle-01-121022"
+          }
+        },
+        "41c73778-4f7a-4fe3-9a77-9f301c68d43f": {
+          "type": "Product",
+          "settings": {
+            "product": "tassyam-organics-luxury-gift-set-mamra-chilgoza-roasted-munakka-tea-chocolates-pack-of-7-g-f-gift-lux-mmr-pin-bhmk-121022"
+          }
+        },
+        "43b317d1-50c9-43d7-ba4e-8e590bc8bb16": {
+          "type": "Product",
+          "settings": {
+            "product": "handmade-luscious-chocolate-coated-almonds-filled-dates-box-25-pcs"
+          }
+        },
+        "f74845fe-4866-4f82-8c62-b978c46be6d0": {
+          "type": "Product",
+          "settings": {
+            "product": "satmya-artisanal-tisanes-collection50822"
+          }
+        },
+        "5f46347b-b681-45fa-be40-6805842c131d": {
+          "type": "Product",
+          "settings": {
+            "product": "yogabar-healthy-gift-hamper-pack-of-5gift_hamper_899-31022"
+          }
+        },
+        "2fa586e7-b59b-4689-bdfa-b113a4a86bc3": {
+          "type": "Product",
+          "settings": {
+            "product": "100-natural-chirping-forest-hamper"
+          }
+        },
+        "802f959d-0013-4f61-9be0-cbae6b773bd7": {
+          "type": "Product",
+          "settings": {
+            "product": "rage-coffee-instant-coffee-gift-box-100-arabica-beans-50-g-pack-of-4-220822"
+          }
+        },
+        "45e977d7-49eb-42b1-855d-b27c27d9e4c9": {
+          "type": "Product",
+          "settings": {
+            "product": "the-tea-shelfchestnut-tea-gift-box-pack-of-6-gb10a19-181022"
+          }
+        },
+        "760f79a6-73b3-42e3-bcb1-fac871b88635": {
+          "type": "Product",
+          "settings": {
+            "product": "natural-festive-hamper-sunshine-yellow-chocolate-dates-chocolates-12-pcs"
+          }
+        },
+        "ec5dbd89-7ec8-4415-b35f-366727303f25": {
+          "type": "Product",
+          "settings": {
+            "product": "isvara-herb-basket-tea-box-with-tea-filter-honey-40-g-gb03-25722"
+          }
+        }
+      },
+      "block_order": [
+        "10ca00e6-1e90-4c81-bcd9-2acc843debf2",
+        "41c73778-4f7a-4fe3-9a77-9f301c68d43f",
+        "43b317d1-50c9-43d7-ba4e-8e590bc8bb16",
+        "f74845fe-4866-4f82-8c62-b978c46be6d0",
+        "5f46347b-b681-45fa-be40-6805842c131d",
+        "2fa586e7-b59b-4689-bdfa-b113a4a86bc3",
+        "802f959d-0013-4f61-9be0-cbae6b773bd7",
+        "45e977d7-49eb-42b1-855d-b27c27d9e4c9",
+        "760f79a6-73b3-42e3-bcb1-fac871b88635",
+        "ec5dbd89-7ec8-4415-b35f-366727303f25"
+      ],
+      "settings": {
+        "title1": "Gift",
+        "title2": "Hampers",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "",
+        "button_position": "top"
+      }
+    },
+    "c57e5772-8b99-46d8-a8fe-f87eef360dd8": {
+      "type": "circular-image-grid",
+      "blocks": {
+        "e4ae0c34-4bad-4be0-9736-ebae77f8c4b2": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/spices.png",
+            "block_two_subtitle": "Organic",
+            "title": "Spices",
+            "second_block_url": "https:\/\/amala.earth\/collections\/natural-salts-and-spices?f_Type=Spices+and+Herbs"
+          }
+        },
+        "3f6c503e-492a-47b2-b0f7-f575bb07cf8a": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Pasta.png",
+            "block_two_subtitle": "Protein-rich",
+            "title": "Pasta",
+            "second_block_url": "https:\/\/amala.earth\/collections\/pasta"
+          }
+        },
+        "76e06d43-9e0f-43eb-ad73-ffe14a4009e2": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Pickle.png",
+            "block_two_subtitle": "Handmade",
+            "title": "Pickles",
+            "second_block_url": "https:\/\/amala.earth\/search?q=pickle&f_Type=Pickles"
+          }
+        },
+        "53ef0291-3084-4775-8e2e-a6e5430ce36d": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/coffee_1.png",
+            "block_two_subtitle": "Homegrown",
+            "title": "Coffee",
+            "second_block_url": "https:\/\/amala.earth\/collections\/tea-and-beverages?f_Type=Coffee"
+          }
+        },
+        "a4ac25e1-192b-438d-8492-b081c4e61464": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Honey.png",
+            "block_two_subtitle": "Pure",
+            "title": "Honey",
+            "second_block_url": "https:\/\/amala.earth\/collections\/honey-jaggery-and-natural-sugars?f_Type=Honey"
+          }
+        },
+        "9504f5ce-24a8-458e-95f6-45c6de6c8e9e": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Snacks_1.png",
+            "block_two_subtitle": "Healthy",
+            "title": "Snacks",
+            "second_block_url": "https:\/\/amala.earth\/collections\/healthy-snacks"
+          }
+        },
+        "80b83f8c-8ac8-448a-b372-764f1ce1e742": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/seeds.png",
+            "block_two_subtitle": "Power-packed",
+            "title": "Seeds",
+            "second_block_url": "https:\/\/amala.earth\/collections\/superfoods-and-nuts?f_Type=Nuts+%26+Dryfruits,Seeds"
+          }
+        },
+        "543d78c0-f18e-462f-84cb-68d023c67546": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/teas.png",
+            "block_two_subtitle": "Natural",
+            "title": "Teas",
+            "second_block_url": "https:\/\/amala.earth\/collections\/tea-and-beverages?f_Type=Tea"
+          }
+        },
+        "d5905f2b-b1ca-4bb2-bd80-e7e43498c374": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Oil.png",
+            "block_two_subtitle": "Cold-pressed",
+            "title": "Oils",
+            "second_block_url": "https:\/\/amala.earth\/collections\/cold-pressed"
+          }
+        }
+      },
+      "block_order": [
+        "e4ae0c34-4bad-4be0-9736-ebae77f8c4b2",
+        "3f6c503e-492a-47b2-b0f7-f575bb07cf8a",
+        "76e06d43-9e0f-43eb-ad73-ffe14a4009e2",
+        "53ef0291-3084-4775-8e2e-a6e5430ce36d",
+        "a4ac25e1-192b-438d-8492-b081c4e61464",
+        "9504f5ce-24a8-458e-95f6-45c6de6c8e9e",
+        "80b83f8c-8ac8-448a-b372-764f1ce1e742",
+        "543d78c0-f18e-462f-84cb-68d023c67546",
+        "d5905f2b-b1ca-4bb2-bd80-e7e43498c374"
+      ],
+      "settings": {
+        "subtitle": "",
+        "title": ""
+      }
+    },
+    "04215422-7d61-4769-b449-8798e723b193": {
+      "type": "custom-square-carousel",
+      "blocks": {
+        "0f4292cf-2499-4388-a9ca-aa6f7da41aaa": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/green_tea.png",
+            "title": "Green Tea",
+            "url_link": "https:\/\/amala.earth\/collections\/Green-Tea"
+          }
+        },
+        "f64d845c-a12d-47c8-8a51-92434060645e": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Chamomile_tea.png",
+            "title": "Chamomile Tea",
+            "url_link": "https:\/\/amala.earth\/collections\/Chamomile-Tea"
+          }
+        },
+        "5c774c7b-4f75-4e0b-9d43-75d82362cac9": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Herbal_tea.png",
+            "title": "Herbal Tea",
+            "url_link": "https:\/\/amala.earth\/collections\/Herbal-Tea"
+          }
+        },
+        "639b7033-9978-4ce8-b9a4-3903897fff92": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/detox_tea.png",
+            "title": "Detox Tea",
+            "url_link": "https:\/\/amala.earth\/collections\/Detox-Tea"
+          }
+        },
+        "7c5c9b2b-00a9-43b4-ab30-5301da6ddde8": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/black_tea.png",
+            "title": "Black Tea",
+            "url_link": "https:\/\/amala.earth\/collections\/Black-Tea"
+          }
+        },
+        "d8cbe480-e481-4f9e-8127-1ed52e6f765b": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/OOLONG_TEA.png",
+            "title": "Oolong Tea",
+            "url_link": "https:\/\/amala.earth\/collections\/Oolong-Tea"
+          }
+        }
+      },
+      "block_order": [
+        "0f4292cf-2499-4388-a9ca-aa6f7da41aaa",
+        "f64d845c-a12d-47c8-8a51-92434060645e",
+        "5c774c7b-4f75-4e0b-9d43-75d82362cac9",
+        "639b7033-9978-4ce8-b9a4-3903897fff92",
+        "7c5c9b2b-00a9-43b4-ab30-5301da6ddde8",
+        "d8cbe480-e481-4f9e-8127-1ed52e6f765b"
+      ],
+      "settings": {
+        "heading_one": "Natural",
+        "heading_two": "teas"
+      }
+    },
+    "bb178774-d75f-4f3b-a76b-ac3b87ab6f04": {
+      "type": "custom-square-carousel",
+      "blocks": {
+        "966b52ef-f6b3-4ea3-9c9e-99e16209f6a3": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Mustard_Oil.png",
+            "title": "Mustard oil",
+            "url_link": "https:\/\/amala.earth\/collections\/mustard-oil"
+          }
+        },
+        "b4e16b23-e99e-49b2-a698-329353ddd338": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Coconut_Oil.png",
+            "title": "Coconut oil",
+            "url_link": "https:\/\/amala.earth\/collections\/coconut-oil"
+          }
+        },
+        "642b3702-76f4-4389-a734-1eb211fd6818": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Sunflower_Oil.png",
+            "title": "Sunflower oil",
+            "url_link": "https:\/\/amala.earth\/collections\/sunflower-oil"
+          }
+        },
+        "48c04fd2-d508-4c30-b82b-26541ce570d0": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Almond_Oil.png",
+            "title": "Almond oil",
+            "url_link": "https:\/\/amala.earth\/collections\/almond-oil"
+          }
+        },
+        "580132d8-fa96-4b18-bb82-b85a69770bbb": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Sesame_Oil.png",
+            "title": "Sesame oil",
+            "url_link": "https:\/\/amala.earth\/collections\/sesame-oil"
+          }
+        },
+        "23534755-0802-497f-ad67-880b1717ca3b": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Groundnut_Oil.png",
+            "title": "Groundnut oil",
+            "url_link": "https:\/\/amala.earth\/collections\/groundnut-oil"
+          }
+        },
+        "3de9b005-f7c5-496d-9abe-f8290dfe6053": {
+          "type": "block-3",
+          "disabled": true,
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_140_7.png",
+            "title": "Spices 7",
+            "url_link": ""
+          }
+        },
+        "b41c8ee5-be6f-43a0-b30c-56d9965b69e7": {
+          "type": "block-3",
+          "disabled": true,
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_140_3.png",
+            "title": "Spices 8",
+            "url_link": ""
+          }
+        },
+        "e703fde7-6483-41f8-854c-c20e8d0fd61f": {
+          "type": "block-3",
+          "disabled": true,
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_140.png",
+            "title": "Spices 9",
+            "url_link": ""
+          }
+        },
+        "1599838c-f14e-4c64-80f2-82ed7ed6f391": {
+          "type": "block-3",
+          "disabled": true,
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_140.png",
+            "title": "Spices 10",
+            "url_link": ""
+          }
+        },
+        "e20c932a-172f-41e6-8d55-11e239e71fbb": {
+          "type": "block-3",
+          "disabled": true,
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_140.png",
+            "title": "Spices 11",
+            "url_link": ""
+          }
+        },
+        "14f9002e-add2-4fb9-b54f-fd58f121f02e": {
+          "type": "block-3",
+          "disabled": true,
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_140_5.png",
+            "title": "Spices 12",
+            "url_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "966b52ef-f6b3-4ea3-9c9e-99e16209f6a3",
+        "b4e16b23-e99e-49b2-a698-329353ddd338",
+        "642b3702-76f4-4389-a734-1eb211fd6818",
+        "48c04fd2-d508-4c30-b82b-26541ce570d0",
+        "580132d8-fa96-4b18-bb82-b85a69770bbb",
+        "23534755-0802-497f-ad67-880b1717ca3b",
+        "3de9b005-f7c5-496d-9abe-f8290dfe6053",
+        "b41c8ee5-be6f-43a0-b30c-56d9965b69e7",
+        "e703fde7-6483-41f8-854c-c20e8d0fd61f",
+        "1599838c-f14e-4c64-80f2-82ed7ed6f391",
+        "e20c932a-172f-41e6-8d55-11e239e71fbb",
+        "14f9002e-add2-4fb9-b54f-fd58f121f02e"
+      ],
+      "settings": {
+        "heading_one": "Cold-pressed",
+        "heading_two": "Oils"
+      }
+    },
+    "ca28398c-51b4-4f9f-8492-853c3acb38a7": {
+      "type": "custom-square-carousel",
+      "blocks": {
+        "a5702506-2ab2-42bf-bed4-72aa5234441f": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Multi-floral_Honey.png",
+            "title": "Multi-floral Honey",
+            "url_link": "https:\/\/amala.earth\/collections\/multi-floral-honey"
+          }
+        },
+        "87f15f8b-550a-4e4e-a321-162d0e119bdc": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Tulsi_Honey.png",
+            "title": "Tulsi Honey",
+            "url_link": "https:\/\/amala.earth\/collections\/tulsi-honey"
+          }
+        },
+        "bce9681e-e01a-46c5-9494-ac40f01b02d9": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Jamun_Honey.png",
+            "title": "Jamun Honey",
+            "url_link": "https:\/\/amala.earth\/collections\/jamun-honey"
+          }
+        },
+        "1e1d4a52-2aba-44de-8bda-4870a14d183b": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Wild_Forest_Honey.png",
+            "title": "Wild Forest Honey",
+            "url_link": "https:\/\/amala.earth\/collections\/wild-forest"
+          }
+        },
+        "31613267-0524-48a0-8f26-08eaad7299e3": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Turmeric_Honey_1.png",
+            "title": "Tumeric Honey",
+            "url_link": "https:\/\/amala.earth\/collections\/turmeric-honey"
+          }
+        },
+        "f8ca1040-b0ae-4f1c-83e1-b13b54de46b9": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Acacia_Honey_1.png",
+            "title": "Acacia Honey",
+            "url_link": "https:\/\/amala.earth\/collections\/acacia-honey"
+          }
+        },
+        "356926fb-bf20-4933-94ba-28fe9456f8bc": {
+          "type": "block-3",
+          "disabled": true,
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_140_1.png",
+            "title": "Seeds 6",
+            "url_link": ""
+          }
+        },
+        "bb881461-5dfe-42c6-8b81-ec96222f8e6e": {
+          "type": "block-3",
+          "disabled": true,
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_140_6.png",
+            "title": "Seeds 7",
+            "url_link": ""
+          }
+        },
+        "b908db2d-11d6-413c-8e1c-c306dd513d1c": {
+          "type": "block-3",
+          "disabled": true,
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_140_5.png",
+            "title": "Seeds 8",
+            "url_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "a5702506-2ab2-42bf-bed4-72aa5234441f",
+        "87f15f8b-550a-4e4e-a321-162d0e119bdc",
+        "bce9681e-e01a-46c5-9494-ac40f01b02d9",
+        "1e1d4a52-2aba-44de-8bda-4870a14d183b",
+        "31613267-0524-48a0-8f26-08eaad7299e3",
+        "f8ca1040-b0ae-4f1c-83e1-b13b54de46b9",
+        "356926fb-bf20-4933-94ba-28fe9456f8bc",
+        "bb881461-5dfe-42c6-8b81-ec96222f8e6e",
+        "b908db2d-11d6-413c-8e1c-c306dd513d1c"
+      ],
+      "settings": {
+        "heading_one": "Preservative-free",
+        "heading_two": "Honey"
+      }
+    },
+    "071fba99-bd04-4f4a-bf37-3182af26db1b": {
+      "type": "custom-square-carousel",
+      "blocks": {
+        "086502e5-0310-4b12-9419-8d55b0a64358": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Ashwagandha.png",
+            "title": "Ashwagandha",
+            "url_link": "https:\/\/amala.earth\/collections\/ashwagandha"
+          }
+        },
+        "16c6145d-56c0-4364-be79-10a78b94a603": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Triphala_133424ef-cf53-41c1-adcf-353554e85a83.png",
+            "title": "Triphala",
+            "url_link": "https:\/\/amala.earth\/collections\/triphala"
+          }
+        },
+        "78b81c3d-043a-4fda-8110-39bceea534dc": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Hemp.png",
+            "title": "Hemp",
+            "url_link": "https:\/\/amala.earth\/collections\/hemp"
+          }
+        },
+        "e559e6d7-cb7c-409a-b0ce-9346438373c2": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Moringa.png",
+            "title": "Moringa",
+            "url_link": "https:\/\/amala.earth\/collections\/moringa"
+          }
+        },
+        "15b50173-2373-4efb-bb9d-939205a89073": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/GILOY.png",
+            "title": "Giloy",
+            "url_link": "https:\/\/amala.earth\/collections\/giloy"
+          }
+        },
+        "5fe8adf3-b79d-4e54-810a-d9bae4fe7357": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Brahmi.png",
+            "title": "Brahmi",
+            "url_link": "https:\/\/amala.earth\/collections\/brahmi"
+          }
+        },
+        "aacc84c9-496e-4722-88e1-583f2075628b": {
+          "type": "block-3",
+          "disabled": true,
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_140_1.png",
+            "title": "Coffee 7",
+            "url_link": ""
+          }
+        },
+        "b689d2c5-84a7-4cee-b843-162b8bb90066": {
+          "type": "block-3",
+          "disabled": true,
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_140_6.png",
+            "title": "Coffee 8",
+            "url_link": ""
+          }
+        },
+        "4cd68f9d-7306-4820-8e97-6ab4f865635e": {
+          "type": "block-3",
+          "disabled": true,
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_140_1.png",
+            "title": "Coffee 9",
+            "url_link": ""
+          }
+        },
+        "0b986d23-d1f7-4dc3-a9eb-26e1af848706": {
+          "type": "block-3",
+          "disabled": true,
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Rectangle_140_3.png",
+            "title": "Coffee 10",
+            "url_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "086502e5-0310-4b12-9419-8d55b0a64358",
+        "16c6145d-56c0-4364-be79-10a78b94a603",
+        "78b81c3d-043a-4fda-8110-39bceea534dc",
+        "e559e6d7-cb7c-409a-b0ce-9346438373c2",
+        "15b50173-2373-4efb-bb9d-939205a89073",
+        "5fe8adf3-b79d-4e54-810a-d9bae4fe7357",
+        "aacc84c9-496e-4722-88e1-583f2075628b",
+        "b689d2c5-84a7-4cee-b843-162b8bb90066",
+        "4cd68f9d-7306-4820-8e97-6ab4f865635e",
+        "0b986d23-d1f7-4dc3-a9eb-26e1af848706"
+      ],
+      "settings": {
+        "heading_one": "Plant-based",
+        "heading_two": "Supplements"
+      }
+    },
+    "77aa137e-5ed1-4c74-af25-76c25caa6a86": {
+      "type": "highlighted-brands",
+      "settings": {
+        "select_your_heading1": "Highlighted",
+        "select_your_heading2": "Brand",
+        "highlighted_brands_desktop": "shopify:\/\/shop_images\/food_widget_1260x642_1_94951fda-5e6b-4a23-b4cf-8ed2d834ce7c.png",
+        "highlighted_brands": "shopify:\/\/shop_images\/food_widget_1260x642_mobile_2b09a1f3-09c2-4866-9e95-1e854ffc04a6.png",
+        "title": "Organic India",
+        "anchor_text": "Explore The Brand",
+        "url_link": "https:\/\/amala.earth\/collections\/ORGANIC-INDIA"
+      }
+    },
+    "21c635d4-1632-4a89-80d7-babd6ca9bc6f": {
+      "type": "blog-posts-carousel",
+      "blocks": {
+        "93312869-7595-44d9-a677-efa8069aed99": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/gluten_free_flour_700x_a7841251-6e5f-431f-ba0f-6c9d1d3efa91.jpg",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/benefits-of-gluten-free-flour-you-didnt-know-about",
+            "title": "Benefits of Gluten-free Flour You Didn't Know About!"
+          }
+        },
+        "86ce0512-9e0f-4f2e-b2e1-7b88d964a66e": {
+          "type": "blog",
+          "disabled": true,
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Rectangle_196.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/make-quinoa-a-part-of-your-diet-for-these-5-reasons",
+            "title": "Make Quinoa A Part Of Your Diet For These 5 Reasons!"
+          }
+        },
+        "97b1dfa9-19f8-44f9-ac97-0fcc7f535172": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/flour.jpg",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/5-grains-you-can-use-for-vrat-ka-khana",
+            "title": "5 Grains You Can Use for Vrat Ka Khana"
+          }
+        },
+        "d020a965-3ab5-467b-9daa-05f9240916c8": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Rectangle_197.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/healthy-dessert-recipes-for-navratri-2022",
+            "title": "Healthy Dessert Recipes for Navratri 2022"
+          }
+        },
+        "3318ffd1-3510-4767-8fa9-20783e652f03": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Rectangle_195.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/why-choosing-a2-cow-ghee-is-the-best-decision-you-will-make",
+            "title": "Why Choosing A2 Cow Ghee Is The Best Decision You Will Make"
+          }
+        },
+        "b088e4b5-8c4f-4669-a65f-087b256c39ad": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Rectangle_61_1_e2d4384e-2481-458f-b183-02e5df77e45a.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/the-best-pickles-and-chutneys-from-india",
+            "title": "The Best Pickles And Chutneys From India"
+          }
+        },
+        "35eb2fc4-bc48-4175-9898-cb5f76840b04": {
+          "type": "blog",
+          "disabled": true,
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/IMG_7103_1.jpg",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/navratri-food-healthy-snacks-you-can-make-at-home",
+            "title": "Navratri Food – Healthy Snacks You Can Make At Home"
+          }
+        },
+        "9934880e-02b4-4603-9a57-70c3202afe60": {
+          "type": "blog",
+          "disabled": true,
+          "settings": {
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/the-most-effective-ayurvedic-products-for-gut-health",
+            "title": "The Most Effective Ayurvedic Products For Gut Health"
+          }
+        }
+      },
+      "block_order": [
+        "93312869-7595-44d9-a677-efa8069aed99",
+        "86ce0512-9e0f-4f2e-b2e1-7b88d964a66e",
+        "97b1dfa9-19f8-44f9-ac97-0fcc7f535172",
+        "d020a965-3ab5-467b-9daa-05f9240916c8",
+        "3318ffd1-3510-4767-8fa9-20783e652f03",
+        "b088e4b5-8c4f-4669-a65f-087b256c39ad",
+        "35eb2fc4-bc48-4175-9898-cb5f76840b04",
+        "9934880e-02b4-4603-9a57-70c3202afe60"
+      ],
+      "settings": {
+        "heading_one": "Recent",
+        "heading_two": "Blogposts",
+        "view_text": "View All",
+        "url_link": ""
+      }
+    },
+    "fb35853f-3527-469e-b05f-b5da1be09522": {
+      "type": "testimonial-carousel",
+      "blocks": {
+        "d64fbee0-5b67-4798-a7b9-d2d0647d1b4f": {
+          "type": "block-5",
+          "settings": {
+            "fiveth_block_slider": "shopify:\/\/shop_images\/WhatsApp_Image_2022-10-20_at_5.01.09_PM.jpg",
+            "expert_yours": "Bring mindful eating into your way of conscious living.Veganism is the food of the future. If you care for animals,  your health and the health of the planet you could try some of Amala Earth’s specially curated vegan products.",
+            "title": "Mala Barua",
+            "expert_desc": "<p>Meditation teacher; Author; Brand Mentor<\/p>",
+            "anchor_text": "Explore More",
+            "url_link": "https:\/\/amala.earth\/collections\/mala-recommends"
+          }
+        },
+        "0f36691b-ec6f-42bd-b195-fbe71c1e6802": {
+          "type": "block-5",
+          "disabled": true,
+          "settings": {
+            "fiveth_block_slider": "shopify:\/\/shop_images\/Ellipse_22_1.png",
+            "expert_yours": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            "title": "-Title 2",
+            "expert_desc": "<p>Lorem Ipsum is simply dummy text of the printing <\/p><p>and typesetting industry.<\/p>",
+            "anchor_text": "Expert",
+            "url_link": ""
+          }
+        },
+        "a9136050-00d9-4ed4-bd11-e7d21148a9eb": {
+          "type": "block-5",
+          "disabled": true,
+          "settings": {
+            "fiveth_block_slider": "shopify:\/\/shop_images\/Ellipse_22_1.png",
+            "expert_yours": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            "title": "-Title 3",
+            "expert_desc": "<p>Lorem Ipsum is simply dummy text of the printing <\/p><p>and typesetting industry.<\/p>",
+            "anchor_text": "Expert",
+            "url_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "d64fbee0-5b67-4798-a7b9-d2d0647d1b4f",
+        "0f36691b-ec6f-42bd-b195-fbe71c1e6802",
+        "a9136050-00d9-4ed4-bd11-e7d21148a9eb"
+      ],
+      "settings": {
+        "sub_heading": "Expert",
+        "heading": "Speaks",
+        "btn_text": "",
+        "url_link": "https:\/\/amala.earth\/collections\/mala-recommends"
+      }
+    },
+    "e9d09505-4355-4370-ad2a-74046f1547da": {
+      "type": "brands-we-love",
+      "blocks": {
+        "d1379b56-678c-48d3-a0f8-f7b503304ece": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_679.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Aadwik.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/aadvik"
+          }
+        },
+        "9527809f-746c-4970-ac19-35218c55b0db": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_689.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Prakritik.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/praakritik"
+          }
+        },
+        "9170c3e4-979a-4092-a465-e73c90f7b1ea": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_690.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/organic_india.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/organic-india"
+          }
+        },
+        "f1a3e3c8-2b92-48dc-9574-852901abeba4": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_692.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Two_brothers.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/two-brothers"
+          }
+        },
+        "b7be1a0a-b18a-419f-a851-f0bef716e696": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Barosi-desktop.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Barosi-mobile_7cfb902a-33db-4266-a374-a710284da5a5.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/Barosi"
+          }
+        },
+        "cac1a4f7-fcae-4a94-9888-9245a5d258f6": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_693.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/The_whole_truth_805362a7-3d8a-44c4-85f6-79ce4e1a002a.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/the-whole-truth"
+          }
+        },
+        "fa70345c-4b20-4320-a71a-0433994d2bae": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_680.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Blue_Tokai.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/blue-tokai"
+          }
+        },
+        "78cec494-e1f6-4dd3-8045-f10a7799e48c": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_691.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/brand3.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/yoga-bar"
+          }
+        },
+        "82dbf1aa-0db5-4263-91c3-faf42022180e": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_681.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Graminway.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/graminway"
+          }
+        },
+        "73bfc9d5-76a6-4fa4-99cc-735a24c8458e": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_694.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/The_date_house.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/the-date-house"
+          }
+        }
+      },
+      "block_order": [
+        "d1379b56-678c-48d3-a0f8-f7b503304ece",
+        "9527809f-746c-4970-ac19-35218c55b0db",
+        "9170c3e4-979a-4092-a465-e73c90f7b1ea",
+        "f1a3e3c8-2b92-48dc-9574-852901abeba4",
+        "b7be1a0a-b18a-419f-a851-f0bef716e696",
+        "cac1a4f7-fcae-4a94-9888-9245a5d258f6",
+        "fa70345c-4b20-4320-a71a-0433994d2bae",
+        "78cec494-e1f6-4dd3-8045-f10a7799e48c",
+        "82dbf1aa-0db5-4263-91c3-faf42022180e",
+        "73bfc9d5-76a6-4fa4-99cc-735a24c8458e"
+      ],
+      "settings": {
+        "background_image_desktop": "shopify:\/\/shop_images\/butterfly-bg-1440x330.png",
+        "background_image_mobile": "shopify:\/\/shop_images\/butterfly-480x258.png",
+        "heading_one": "Brands",
+        "heading_two": "we love",
+        "btn_text": "",
+        "url_link": ""
+      }
+    },
+    "492b2402-ce78-45e2-9a1a-63617e8859ba": {
+      "type": "product-carousel",
+      "blocks": {
+        "50810691-89b0-44a9-b6e6-a696672ed3c2": {
+          "type": "combo",
+          "settings": {
+            "combo_image_desktop": "shopify:\/\/shop_images\/Group_669.png",
+            "combo_image_mobile": "shopify:\/\/shop_images\/Group_650.png",
+            "combo_link": "https:\/\/amala.earth\/collections\/mindful-eating\/products\/mo-s-bakery-cookies-apple-cinnamon-oatmeal-vegan-200-g-pack-of-2-170822",
+            "title": "Pack of 2<br> Vegan Cookies"
+          }
+        },
+        "6c6884e6-6ce4-4ccf-bc6a-b204fa77234e": {
+          "type": "combo",
+          "settings": {
+            "combo_image_desktop": "shopify:\/\/shop_images\/Group_670.png",
+            "combo_image_mobile": "shopify:\/\/shop_images\/Group_651_1.png",
+            "combo_link": "https:\/\/amala.earth\/products\/the-whole-truth-assorted-milk-chocolates-pack-of-6-bars-milk-chocolate_2c-2q-2f-130922",
+            "title": "Pack of 6 <br> Milk chocolates"
+          }
+        },
+        "97e2a7f3-c88a-4b1d-a2f7-98173ba1a476": {
+          "type": "combo",
+          "settings": {
+            "combo_image_desktop": "shopify:\/\/shop_images\/Group_671.png",
+            "combo_image_mobile": "shopify:\/\/shop_images\/Group_653.png",
+            "combo_link": "https:\/\/amala.earth\/products\/100-natural-seeds-nuts-berries-mix-pack-of-11",
+            "title": "Pack of 11  Seeds, Nuts  & berries"
+          }
+        },
+        "9cbbda59-00d3-44aa-9bdf-6625c241b234": {
+          "type": "combo",
+          "settings": {
+            "combo_image_desktop": "shopify:\/\/shop_images\/Group_672.png",
+            "combo_image_mobile": "shopify:\/\/shop_images\/Group_654.png",
+            "combo_link": "https:\/\/amala.earth\/collections\/tassyam-organics\/products\/tassyam-organics-tea-dry-fruit-set-combo-pack-of-4-g-f-gift-box-brwn-aprt-121022",
+            "title": "Tea & Dry Fruit Combo"
+          }
+        },
+        "cdfd0f58-8fa3-477c-bea1-1a281062543e": {
+          "type": "combo",
+          "settings": {
+            "combo_image_desktop": "shopify:\/\/shop_images\/Group_673.png",
+            "combo_image_mobile": "shopify:\/\/shop_images\/Group_652.png",
+            "combo_link": "https:\/\/amala.earth\/collections\/mindful-eating\/products\/rage-coffee-butterscotch-delight-vanilla-punch-instant-crystal-coffee-50-g-pack-of-2-220822",
+            "title": "Pack of 2  Coffee"
+          }
+        },
+        "202576a5-903c-4461-be00-1e016c533fed": {
+          "type": "combo",
+          "settings": {
+            "combo_image_desktop": "shopify:\/\/shop_images\/Group_674.png",
+            "combo_image_mobile": "shopify:\/\/shop_images\/Group_655.png",
+            "combo_link": "https:\/\/amala.earth\/products\/i-say-organic-nutritious-nibbles-combo-pack-of-4-iso-am_116-140922",
+            "title": "Pack of 4  Healthy  Snacks"
+          }
+        },
+        "fda91316-fb80-4480-8587-0b4de8181169": {
+          "type": "combo",
+          "settings": {
+            "combo_image_desktop": "shopify:\/\/shop_images\/Group_675.png",
+            "combo_image_mobile": "shopify:\/\/shop_images\/Group_659_36a230ca-8c9e-4b4f-b343-f6f9dea4e7d8.png",
+            "combo_link": "https:\/\/amala.earth\/collections\/mindful-eating\/products\/dark-chocolate-peanut-butter-breakfast-bar-variety-pack-400-g",
+            "title": "Peanut butter + Protein bars combo"
+          }
+        },
+        "9a7e05fe-9c26-4e07-8e66-fd7375400ce5": {
+          "type": "combo",
+          "settings": {
+            "combo_image_desktop": "shopify:\/\/shop_images\/Group_676.png",
+            "combo_image_mobile": "shopify:\/\/shop_images\/Group_657.png",
+            "combo_link": "https:\/\/amala.earth\/products\/sprouts-combo-pack-of-4",
+            "title": "Pack of 4 <br> Sprouts Combo"
+          }
+        },
+        "d3bebc56-7874-4de4-9650-6efdd3296592": {
+          "type": "combo",
+          "settings": {
+            "combo_image_desktop": "shopify:\/\/shop_images\/Group_677.png",
+            "combo_image_mobile": "shopify:\/\/shop_images\/Group_658_1.png",
+            "combo_link": "https:\/\/amala.earth\/products\/barbeque-almonds-thai-chilli-blend-pepper-cashews-combo-200-g-each-set-of-3",
+            "title": "Set of 3<br>Coated Dry Fruits Combo"
+          }
+        },
+        "68a6f55c-ce0d-4e3f-b8d9-ba6569a24d0d": {
+          "type": "combo",
+          "settings": {
+            "combo_image_desktop": "shopify:\/\/shop_images\/Group_678.png",
+            "combo_image_mobile": "shopify:\/\/shop_images\/Group_656_1.png",
+            "combo_link": "https:\/\/amala.earth\/collections\/naturally-yours\/products\/gluten-free-quinoa-pasta-200g-pack-of-2",
+            "title": "Pack of 2 <br>Quinoa Pasta"
+          }
+        }
+      },
+      "block_order": [
+        "50810691-89b0-44a9-b6e6-a696672ed3c2",
+        "6c6884e6-6ce4-4ccf-bc6a-b204fa77234e",
+        "97e2a7f3-c88a-4b1d-a2f7-98173ba1a476",
+        "9cbbda59-00d3-44aa-9bdf-6625c241b234",
+        "cdfd0f58-8fa3-477c-bea1-1a281062543e",
+        "202576a5-903c-4461-be00-1e016c533fed",
+        "fda91316-fb80-4480-8587-0b4de8181169",
+        "9a7e05fe-9c26-4e07-8e66-fd7375400ce5",
+        "d3bebc56-7874-4de4-9650-6efdd3296592",
+        "68a6f55c-ce0d-4e3f-b8d9-ba6569a24d0d"
+      ],
+      "settings": {
+        "heading_one": "Curated",
+        "heading_two": "Combos",
+        "btn_text": "",
+        "url_link": ""
+      }
+    },
+    "6792e978-21e5-4895-acd3-781b8b189179": {
+      "type": "landing-page-video",
+      "blocks": {
+        "985136d4-110c-42f2-905e-184ff2ed839e": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtube.com\/watch?v=xhk9ZDLUtHc",
+            "image": "shopify:\/\/shop_images\/imgs_2.jpg",
+            "title": "Guilt-free Amaranth Almond Date Ladoos",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "ca4aefed-b86f-4b1c-8272-5c522457e0c4": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtube.com\/watch?v=82yXqjyLd88",
+            "image": "shopify:\/\/shop_images\/imgs1.jpg",
+            "title": "Handmade Natural Chywanprash to Boost Your Immunity | Amala Earth",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "9ff2cbe0-eb1c-4576-a045-b8ba7321985a": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtube.com\/watch?v=b8YNeKox1F8",
+            "image": "shopify:\/\/shop_images\/imgs.jpg",
+            "title": "Vegan Rose Cake Recipe!",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "f4bad3ea-310e-408b-8c93-25a9d7ae507b": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtube.com\/watch?v=m1PSF-GrSmM",
+            "image": "shopify:\/\/shop_images\/imgs3.jpg",
+            "title": "Ashwagandha Milk Recipe",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "2ed375d8-044c-49ac-b323-38f017eb8414": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtube.com\/watch?v=4H2-vThxl0M",
+            "image": "shopify:\/\/shop_images\/imgs_4.jpg",
+            "title": "Organic Amaranth, Honey, and Nuts & Seeds Porridge Recipe",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        }
+      },
+      "block_order": [
+        "985136d4-110c-42f2-905e-184ff2ed839e",
+        "ca4aefed-b86f-4b1c-8272-5c522457e0c4",
+        "9ff2cbe0-eb1c-4576-a045-b8ba7321985a",
+        "f4bad3ea-310e-408b-8c93-25a9d7ae507b",
+        "2ed375d8-044c-49ac-b323-38f017eb8414"
+      ],
+      "settings": {
+        "video_title1": "Video",
+        "video_title2": "blogs",
+        "btn_text": "",
+        "url_link": ""
+      }
+    },
+    "be8e8de9-2e1e-40bb-a609-691f17555bd6": {
+      "type": "subscription-widget",
+      "settings": {
+        "hide_widget": false,
+        "title": "Get 10% OFF",
+        "content": "<p>on your first purchase. Subscribe now and start your earth-friendly journey today!<\/p>",
+        "button_text": "Get 10% OFF",
+        "thank_you_title": "Thank You!",
+        "thank_you_content": "<p>Use coupon code <strong>WELCOME10<\/strong> and <strong>get 10% discount<\/strong>.<\/p>"
+      }
+    },
+    "7f6b04f9-ee42-4b27-82d0-f7302b1ccba8": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "bestselling-products",
+        "title": "Bestselling Products",
+        "subtitle": "Products",
+        "logged_in": false,
+        "products_count": 10,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "",
+        "button_position": "top",
+        "old_section_id": ""
+      }
+    },
+    "735e9797-e48e-4e2f-ab53-e68a5a25f38c": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "title": "Recently viewed",
+        "subtitle": "",
+        "products_count": 10,
+        "show_quick_buy": false
+      }
+    }
+  },
+  "order": [
+    "ebe6cca1-af55-47e7-a2fc-a03ef1f5ad12",
+    "99de4870-e829-41e6-a032-1ee322dd74c8",
+    "5b69cb13-e53f-4340-86a7-41e13b3e36e6",
+    "b86ec9e4-efe0-4fe3-a2a6-ea79193ac260",
+    "d8cec910-958f-4eb5-99b6-706dcb81d80a",
+    "fb713530-1140-47bd-8d39-ff046598378e",
+    "733ba065-3d71-4a8c-9bf3-4d6dd9749f9b",
+    "6abd2943-e3d9-43a9-91de-d931853fb29a",
+    "2202213b-d65b-4f1a-b6d5-f60466f698cd",
+    "c787c79b-66cd-4150-94e7-bac687e13217",
+    "c57e5772-8b99-46d8-a8fe-f87eef360dd8",
+    "04215422-7d61-4769-b449-8798e723b193",
+    "bb178774-d75f-4f3b-a76b-ac3b87ab6f04",
+    "ca28398c-51b4-4f9f-8492-853c3acb38a7",
+    "071fba99-bd04-4f4a-bf37-3182af26db1b",
+    "77aa137e-5ed1-4c74-af25-76c25caa6a86",
+    "21c635d4-1632-4a89-80d7-babd6ca9bc6f",
+    "fb35853f-3527-469e-b05f-b5da1be09522",
+    "e9d09505-4355-4370-ad2a-74046f1547da",
+    "492b2402-ce78-45e2-9a1a-63617e8859ba",
+    "6792e978-21e5-4895-acd3-781b8b189179",
+    "be8e8de9-2e1e-40bb-a609-691f17555bd6",
+    "7f6b04f9-ee42-4b27-82d0-f7302b1ccba8",
+    "735e9797-e48e-4e2f-ab53-e68a5a25f38c"
+  ]
+}

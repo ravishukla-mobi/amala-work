@@ -1,0 +1,105 @@
+<div class="ethos-wrappper">
+  <div class="ethos-banner">
+  	{%- assign imageURL = section.settings.banner_image | img_url:"master" -%}
+    <img src="{{ imageURL }}" alt="{{section.settings.page_heading}}">
+    <h2>{{section.settings.page_heading}}</h2>
+  </div>
+  <div class="container ethos-container">
+    	<div class="">{{section.settings.content}}</div>	
+    <div class="ethos-details-blocks">
+    	 {% for block in section.blocks %}
+      <div class="d-flex">
+        <div class="ethos-details-image">
+        {%- assign imageURL = block.settings.d_image | img_url:"400x400", crop:"center" -%}
+   		 <img src="{{ imageURL }}" alt="{{block.settings.d_heading}}">
+        </div>
+        <div class="ethos-details-text">
+          <h3>{{block.settings.d_heading}}</h3>
+          <p>{{block.settings.d_details}}</p>
+        </div>
+      </div>
+      	 {%endfor%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Ethos Pages",
+    "settings": [
+	{
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Page Banner"
+    },
+		{
+          "type": "text",
+          "id": "page_heading",
+          "label": "Page Heading"
+        },
+		  {
+            "type": "richtext",
+            "id": "content",
+            "label": "Description"
+          }
+	],
+	"blocks": [
+      {
+        "type": "text",
+        "name": "Add block",
+        "settings": [
+			
+          {
+            "type": "image_picker",
+            "id": "d_image",
+            "label": "Image"
+          },
+		  {
+            "type": "text",
+            "id": "d_heading",
+            "label": "Heading"
+          },
+		  
+          
+{
+            "type": "text",
+            "id": "d_details",
+            "label": "Detail Text"
+          }
+        ]
+      }
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+<style>
+  .ethos-wrappper{font-family:"Libre Baskerville", serif;}
+  .ethos-banner{position:relative;margin-bottom:20px;}
+  .ethos-banner img{width:100%;}
+  .ethos-banner h2{font-size:2.5rem;color:#fff;position:absolute;width:100%;text-align:center;top:50%;left:0;transform:translateY(-50%);}
+  .ethos-container{max-width:1000px;}
+  .ethos-details-blocks .d-flex{
+  	display:flex;flex-wrap:wrap;
+    margin:35px 0;
+    justify-content:space-between;
+    align-items:center;
+  }
+  .ethos-details-blocks .d-flex .ethos-details-image{width:250px;}
+  .ethos-details-blocks .d-flex .ethos-details-image img{width:100%;}
+  .ethos-details-blocks .d-flex .ethos-details-text{width:calc(100% - 350px);text-align:center;}
+  .ethos-details-blocks .d-flex .ethos-details-text h3{font-size:22px; color:#b89c7d;margin-bottom:15px;font-weight:bold;}
+  @media(max-width:991px){
+    .ethos-details-blocks .d-flex{display:block;}
+    .ethos-details-blocks .d-flex .ethos-details-image,.ethos-details-blocks .d-flex .ethos-details-text{margin:0 auto 20px auto;}
+  
+  }
+  @media(max-width:768px){
+    .ethos-details-blocks .d-flex .ethos-details-text{width:100%;margin:0 auto 20px auto;}
+    .ethos-banner h2{font-size:1.3rem;}
+  }
+</style>

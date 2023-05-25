@@ -1,0 +1,93 @@
+<div class="pop-up-modal size-chart__popup-modal">
+  <div class="pop-up-content">
+    <div class="cus_close_btn">&times;</div>
+    <span class="size-chart-content">
+    {% for image in product.images %}
+    	{% if image.src contains 'sizechart' %}  
+		   <img src="{{ image.src | product_img_url: '500x' }}">
+      	{% endif %}
+    {% endfor %}</span>
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+  $(document).on("click", ".trigger-pop-up.btn", function(){
+    let img = $(this).attr('data-image');
+    $('.size-chart__popup-modal .size-chart-content').html(`<img src="${img}">`);
+    $('.size-chart__popup-modal').addClass('show-pop-up');
+  });
+  $('.cus_close_btn').on('click', function(e){
+  	$('.size-chart__popup-modal').removeClass('show-pop-up');
+  })
+});
+</script>
+<style>
+  .size-chart__popup-modal.pop-up-modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    display: none;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  }
+  .size-chart__popup-modal .pop-up-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: auto;
+    border-radius: 0.5rem;
+  }
+  .size-chart__popup-modal .pop-up-content table {table-layout: auto;}
+  .cus_close_btn {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+  }
+  .cus_close_btn:hover {background-color: darkgray;}
+  .size-chart__popup-modal.pop-up-modal.show-pop-up {
+    z-index: 120;
+    opacity: 1;
+    display: block;
+    transform: scale(1);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  }
+  .trigger-pop-up {
+    margin: 10px 0 10px 0;
+    width: 100%;
+  }
+  .product-form__option_chart {
+    margin: auto 30px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .size-chart__popup-modal .pop-up-content {
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    padding: 1rem 1.5rem;
+  }
+}
+  @media only screen and (max-width: 749px) {
+    .pop-up-content,
+    .size-chart-content table {
+      width: 100%;
+    }
+    .size-chart-content th,
+    .size-chart-content td {
+      padding: 10px;
+    }
+  }
+</style>

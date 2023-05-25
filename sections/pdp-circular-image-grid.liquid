@@ -1,0 +1,300 @@
+{%- liquid
+
+    assign show_mindful_eating = false
+    assign list_mindful_eating_collections = settings.global_mindful_eating-list
+    assign mindful_eating_collections = list_mindful_eating_collections | split: ','
+    for collection in product.collections
+        for mindful_eating_col in mindful_eating_collections
+            if collection.handle == mindful_eating_col
+                assign show_mindful_eating = true
+                break
+            else
+                continue
+            endif
+        endfor
+    endfor 
+
+-%}
+
+<section>
+    {% if show_mindful_eating %}
+    <div class="container mindful_ingredients_section">
+
+      {% if section.settings.title != blank or section.settings.subtitle != blank %}
+        <header class="section__header">
+            {% if section.settings.title != blank %}
+                <h2 class="section__title ingredients_heading">{{section.settings.title}}</h2>
+            {% endif %}
+        </header>
+      {% endif %}
+        <div class="second-block-container ingredient_section_slider_{{section.id}}">
+            {% for block in section.blocks %}
+                <a href="{{ block.settings.second_block_url }}">
+                    <div class="circular_image">
+                        {% if block.settings.product_slider != blank %}
+                            <img src="{{ block.settings.product_slider | img_url: 'master' }}">
+                        {% endif %}
+                    </div>
+                    {% if block.settings.block_two_subtitle != blank %}
+                        <h2>{{ block.settings.block_two_subtitle }}</h2>
+                    {% endif %}
+                    {% if block.settings.title != blank %}
+                        <h3>{{ block.settings.title }}</h3>
+                    {% endif %}
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}
+</section>
+    
+<style>
+    .mindful_ingredients_section .section__header .section__title.ingredients_heading{
+        font-size: 1.97em;
+        line-height: 1.5;
+        font-weight: 500;
+    }
+    .mindful_ingredients_section .slick-arrow{
+        opacity: 1;
+        color: transparent;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 4;
+        transition: all 0.3s ease;
+        {% comment %} background-color: #D9D9D9; {% endcomment %}
+    }
+    .mindful_ingredients_section .slick-arrow:before{
+        content: '';
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        background: var(--accent-color);;
+        border-radius: 50%;
+    }
+    .mindful_ingredients_section .slick-arrow:after {
+        content: '';
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border-left: 3px solid #fff;
+        border-bottom: 3px solid #fff;
+        top: 50%;
+        transform: rotate(45deg) translateY(-50%);
+    }
+    .mindful_ingredients_section .slick-arrow.slick-next:after{
+        right: 15px;
+        top: 10px;
+        transform: rotate(225deg) translateY(0%);
+    }
+    .mindful_ingredients_section .slick-arrow.slick-prev{
+        left: 0px;
+    }
+    .mindful_ingredients_section .slick-arrow.slick-prev:after{
+        left: 8px;
+    }
+    .mindful_ingredients_section button.slick-next.slick-arrow{
+        right: 0;
+    }
+
+    .circular-image-grid-section .mindful_ingredients_section .second-block-container{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        {% comment %} flex-wrap: wrap; {% endcomment %}
+    }
+    .circular-image-grid-section .second-block-container h2{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11.337px;
+        line-height: 17px;
+        letter-spacing: 0.11em;
+        color: #222222;
+        margin: 0;
+        padding-top: 10px;
+        text-align: center;
+    }
+    .circular-image-grid-section .second-block-container h3{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 28px;
+        color: #222222;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .mindful_ingredients_section .circular-image-grid-section .circular_image{
+        max-width:224px;
+        margin: auto;
+    }
+    .circular-image-grid-section .second-block-container a:hover{
+        transform: translate3D(0,-1px,0) scale(1.02); /* move up slightly and zoom in */
+        transition: all .4s ease; /* zoom in */
+    }
+    .circular-image-grid-section .landing_section_header + .second-block-container{
+        margin-top: 0;
+    }
+    .mindful_ingredients_section .slick-initialized .slick-slide{
+        padding: 0 15px;
+    }
+
+    .mindful_ingredients_section .circular_image{
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .mindful_ingredients_section button[aria-disabled="true"]{
+        opacity: 0;
+    }
+
+    @media only screen and (max-width: 1440px){
+        .circular-image-grid-section .second-block-container h3{
+            font-size: 1.05em;
+        }
+    }
+
+    @media only screen and (max-width: 1110px){
+        .mindful_ingredients_section .slick-initialized .slick-slide{
+            padding: 0 10px;
+        }
+    }
+    @media only screen and (max-width: 1024px){
+        .mindful_ingredients_section .section__header .section__title.ingredients_heading{
+            font-size: 1.5em;
+        }
+        .mindful_ingredients_section .slick-initialized .slick-slide {
+            padding: 0 8px;
+        }
+    }
+    @media only screen and (max-width: 990px){
+        .circular-image-grid-section .second-block-container h3{
+            font-size: 0.9em;
+        }
+    }
+    @media only screen and (max-width: 650px){
+        .mindful_ingredients_section .slick-arrow.slick-next:after{
+            right: 12px;
+        }
+        .circular-image-grid-section .second-block-container h3{
+            font-size: 11px;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+        
+    }
+    @media only screen and (max-width: 560px){
+        .mindful_ingredients_section .section__header .section__title.ingredients_heading{
+            font-size: 1.1em;
+        }
+        .slick-list{
+            margin: 0 -8px;
+        }
+        .mindful_ingredients_section .slick-arrow:after{
+            width: 8px;
+            height: 8px;
+        }
+        .mindful_ingredients_section .slick-arrow:before{
+            width: 25px;
+            height: 25px;
+        }
+        .mindful_ingredients_section .slick-arrow.slick-prev:after{
+            top: 42%;
+        }
+        .mindful_ingredients_section .slick-arrow.slick-next:after{
+            right: 17px;
+            top: 9px;
+        }
+    }
+    @media only screen and (max-width:400px) {
+        .circular-image-grid-section .circular_image{
+        max-width: 100px;
+        margin: auto;
+        }
+    }
+</style>
+    <script>
+        $(document).ready(function(){
+          $('.ingredient_section_slider_{{section.id}}').slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            arrows:true,
+            dots:false,
+            infinite:false,
+            lazyLoad: 'ondemand',
+            adaptiveHeight: true,
+            responsive: [
+              {
+                breakpoint: 1110,
+                settings: {
+                  slidesToShow: 5,
+                  slidesToScroll: 1
+                }
+              },
+              {
+                breakpoint:800,
+                settings: {
+                  slidesToShow: 4,
+                  slidesToScroll: 1
+                }
+              },
+              {
+                breakpoint:560,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 1
+                }
+              }
+            ]
+          });
+        });
+      </script>
+{% schema %}
+{
+    "name": "Circular Image Grid",
+    "class": "circular-image-grid-section",
+    "settings": [
+        {
+            "type":"text",
+            "id":"title",
+            "label":"Heading"
+        }
+    ],
+    "blocks":[
+        {
+            "type": "block-2",
+            "name": "Circular Image Grid",
+            "settings": [
+                {
+                    "type":"image_picker",
+                    "id":"product_slider",
+                    "label":"Image"
+                },
+                {
+                    "type":"text",
+                    "id":"block_two_subtitle",
+                    "label":"Subtitle"
+                },
+                {
+                    "type":"text",
+                    "id":"title",
+                    "label":"Title"
+                },
+                {
+                    "type":"url",
+                    "id":"second_block_url",
+                    "label":"Link"
+                }
+                
+            ]
+        }
+    ],
+    "presets": [
+        {
+        "name": "Circular Image Grid",
+        "category": "Custom"
+        }
+    ]
+}
+{% endschema %}
+    

@@ -1,0 +1,92 @@
+{%- if section.settings.enable_donation and section.settings.donation_price != blank -%}
+  <div class="donation-product--wrapper hide">
+    <input type="checkbox" name="donation-product" id="donation-product" data-donation-price="{{section.settings.donation_price}}"/>
+    <label for="donation-product">{{ section.settings.title }}</label>
+    <label class="donation-product--content" for="donation-product">
+      <div class="donation-product--image-wrapper">
+        <img src="{{  section.settings.product_icon | img_url: '50x' }}" alt="{{ section.settings.product_icon.alt | escape }}">
+      </div>
+      <div class="donation-product--text-wrapper">
+        {{ section.settings.product_title }}
+      </div>
+    </label>
+    <p>Note: {{ section.settings.note_text }}</p>
+  </div>
+
+  <style type="text/css">
+    .donation-product--wrapper {
+      padding: 15px 0;
+      border-top: 1px solid rgba(169,169,169,0.34);
+    }
+    .donation-product--content {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      background: #dceef5;
+      margin: 5px 0;
+    }
+    .donation-product--image-wrapper {
+      margin-right: 10px;
+    }
+    .donation-product--wrapper label {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 5px;
+      line-height: 15px;
+      vertical-align: middle;
+      cursor: pointer.;
+    }
+    #donation-product {
+      height: 15px;
+      width: 15px;
+      margin-right: 5px;
+      -webkit-appearance: auto;
+      -moz-appearance: auto;
+      appearance: auto;
+      vertical-align: middle;
+    }
+  </style>
+{%- endif -%}
+
+{% schema %}
+  {
+    "name": "Donation Product",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_donation",
+        "label": "Enable Donation",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "donation_price",
+        "label": "Donation price",
+        "default": "10"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Checkbox label",
+        "default": "Contribute rs10 for the COVID-19 fundraiser"
+      },
+      {
+        "type":"image_picker",
+        "id":"product_icon",
+        "label":"Icon Image"
+      },
+      {
+        "type": "text",
+        "id": "product_title",
+        "label": "Product label",
+        "default": "Support Give India's COVID-19 relief work"
+      },
+      {
+        "type": "text",
+        "id": "note_text",
+        "label": "Note",
+        "default": "GST Invoice and No-Cost EMI offres are not applicable"
+      }
+    ]
+  }
+{% endschema %}

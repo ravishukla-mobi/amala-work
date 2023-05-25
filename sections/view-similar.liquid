@@ -1,0 +1,159 @@
+
+{%- if section.settings.enabled -%}
+  {%- capture section_settings -%}
+  {
+    "stackable": false,
+    "layout": "vertical",
+    "productId": {{ product.id | json }},
+    "recommendationsCount": 10,
+    "similarPopup": true
+  }
+  {%- endcapture -%}
+  <span class="cus-view-smilar vs-overlay"></span>
+  <div class="cus-view-smilar view-similar-product-wrapper hide-for-desktop position-relative" id="view-similar-product-wrapper" data-section-id="{{ section.id }}" data-section-type="product-viewsimilar-section" data-section-settings='{{ section_settings }}'>
+
+    <span class="close-vs">&#10006;</span>
+      <div class="view-similar-product-wrapper__inner">
+       	<div class="vs-header">
+           <h3>{{section.settings.title}}</h3>
+        </div>
+        <div class="product-list scrollable product-related" id="similar-products">
+        </div>
+      </div>
+  </div>
+
+<style>
+  .vs-overlay{
+    display:none;
+  	position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(0,0,0,0.7);
+    z-index:9
+  }
+  .vs-overlay.show{display:block;}
+   .view-similar-product-wrapper{
+   position:fixed;
+   bottom:calc(-80vh - 100px);
+   height:80vh;
+   left:0;
+   right:0;
+   background:#fff;
+   border-radius:15px 15px 0 0;
+   z-index:99;
+   padding:15px;
+   box-shadow:0 0 5px #ccc;
+   transition:all 0.3s ease;
+   }
+   .view-similar-product-wrapper.show{
+   bottom:0;
+   }
+   .view-similar-product-wrapper .product-list{
+   display:flex;
+   flex-wrap:wrap;
+   justify-content:space-between;
+   border:0;
+   overflow-y:auto;
+   height: auto;
+   max-height: calc(80vh - 50px);
+   }
+   .close-vs{
+   position:absolute;
+   display:inline-block;
+   width:35px;
+   height:35px;
+   text-align:center;
+   line-height:35px;
+   border-radius:50%;
+   box-shadow:0 0 5px #ccc;
+   background:#fff;
+   top:-45px;
+   left:calc(50% - 17px);
+   font-size:22px;
+  cursor: pointer;
+   }
+  .overflow-hidden{
+  	overflow:hidden;
+    height:100vh;
+  }
+</style>
+<script>
+  $(document).ready(function(){
+    var openViewSimilarPopup = function() {
+      $(".view-similar-product-wrapper").addClass("show");
+      $("body").addClass('overflow-hidden');
+      $(".vs-overlay").addClass("show");
+      if(navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)) {
+        if(newStatePopup.length == 0) {
+          newStatePopup.push('new-state-exist');
+          window.history.pushState('new-popup-state', null, '');
+        }
+      }
+    }
+    {% comment %} var autoPopinList = "{{ autoPopinList }}";
+    var autoPopinListArray = autoPopinList.split(',');
+    if(jQuery.inArray("{{ current_product.handle }}", autoPopinListArray) >= 0) {
+      if (window.matchMedia('(max-width: 639px)').matches) {
+        setTimeout(openViewSimilarPopup, 10000);
+      }
+    } {% endcomment %}
+    $(document.body).on('click','.size-view',openViewSimilarPopup);
+    $(document.body).on('click','.close-vs', function(e) {
+      $(".view-similar-product-wrapper").removeClass("show");
+      $("body").removeClass('overflow-hidden');
+      $(".vs-overlay").removeClass("show");
+    })
+  })
+</script>
+{% endif %}
+
+{% schema %}
+    {
+        "name": "Shopify Similar Products",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Heading",
+                "default": "Featured Products"
+            },
+	        {
+                "type": "checkbox",
+                "id": "enabled",
+                "label": "Enable product recommendations",
+                "default": true
+            },
+            {
+                "type": "range",
+                "id": "products_count",
+                "label": "Products to show",
+                "min": 2,
+                "max": 10,
+                "step": 1,
+                "default": 10
+            },
+            {
+                "type": "select",
+                "id": "layout",
+                "label": "Layout",
+                "options": [
+                    {
+                        "value": "vertical",
+                        "label": "Vertical"
+                    },
+                    {
+                        "value": "horizontal",
+                        "label": "Horizontal"
+                    },
+                    {
+                        "value": "collage",
+                        "label": "Collage"
+                    }
+                ],
+                "default": "vertical"
+            }
+        ]
+    }
+{% endschema %}

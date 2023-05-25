@@ -1,0 +1,23 @@
+{%- capture section_settings -%}
+{
+  "stackable": false,
+  "layout": "vertical",
+  "productId": {{ product.id | json }},
+  "recommendationsCount": 10
+}
+{%- endcapture -%}
+
+  <span class="close-vs">&#10006;</span>
+   <div class="">
+      <div class="vs-header">
+         <h3>View Similar Products</h3>
+      </div>
+      <div class="product-list" id="similar-products">
+      
+       {% for product in recommendations.products %}
+                	{% if product.available %}
+                        {%- render 'product-item-similar', product: product, show_add_to_cart:true -%}
+                	{% endif %}
+                  {%- endfor -%}
+      </div>
+   </div>

@@ -1,0 +1,43 @@
+{% if product.metafields.custom.why_product != blank %}
+<section class="reccomend-section">
+  <div class="row-bx">
+    <div class="reccomend-bx">
+      <div class="recommend-inner">
+         <div class="heading-bx">
+          <h3 class="section__title">{% if product.metafields.custom.why_amala_heading != blank %}{{ product.metafields.custom.why_amala_heading }}{% else %}Why Amala Earth Recommends This Product{% endif %}<span class="line-heading"></span></h3>
+        </div>
+        <div class="reccomend-content">
+          {% for listitem in product.metafields.custom.why_product.value %}
+            <p>{{ listitem }}</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="reccomend-bx reccomend-bx2">
+      <div class="recommend-inner">
+         <div class="heading-bx">
+          <h3 class="section__title">{% if product.metafields.custom.why_amala_heading_2 != blank %}{{ product.metafields.custom.why_amala_heading_2 }}{% else %}Why Amala Earth Chose This Brand{% endif %} <span class="line-heading"></span></h3>
+        </div>
+        <div class="reccomend-content">
+          {% for listitem2 in product.metafields.custom.why_this_brand.value %}
+            <p>{{ listitem2 }}</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Recommendation Product",
+    "settings": []
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

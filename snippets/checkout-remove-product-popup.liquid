@@ -1,0 +1,223 @@
+{% assign productsToRemove = RemoveList %}
+{% assign vendorslist = vendorslist %}
+
+<div id="checkout-remove-product-model" class="pop-up-modal">
+  <div class="pop-up__container">
+    <span class="close-button popup-close"><img src="{{ 'close-icon.svg' | asset_url }}" alt="X"></span>
+    <div class="pop-up__content-wrapper">
+      <div class="checkout__pop-up-header">
+        <h2 class="heading">COD Unavailable</h2>
+        <p>COD is not available on the following products, remove them to proceed.</p>
+      </div>
+      <div class="order-summary__section order-summary__section--product-list">
+        {% for attribute in checkout.line_items %}
+          {% assign productvendor = attribute.product.vendor | strip %}
+          {% if vendorslist contains productvendor %}
+              <div class="product product-list-item" data-product-id="{{ attribute.product.id }}" data-variant-id="{{ attribute.variant_id }}" data-product-type="{{ attribute.product.type }}" data-customer-ready-visible="">
+                  <div class="product__image">
+                      <div class="product-thumbnail ">
+                          <div class="product-thumbnail__wrapper">
+                              <img alt="{{ attribute.image.alt | default:attribute.title }}" class="product-thumbnail__image" src="{{ attribute.image.src | img_url }}">
+                          </div>
+                          <span class="product-thumbnail__quantity" aria-hidden="true">{{ attribute.quantity }}</span>
+                      </div>
+                  </div>
+                  <div class="product__description" scope="row">
+                      <span class="product__description__name order-summary__emphasis">{{ attribute.product.title }}</span>
+                      <span class="product__description__variant order-summary__small-text">{{ attribute.variant.title }}</span>
+                      <span class="order-summary__emphasis skeleton-while-loading">{{ attribute.price | money_with_currency }}</span>
+                  </div>
+              </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="order-summary__section order-summary__section--discount">
+        <button type="button" class="btn popup_continue-btn" id="move-to-vishlist-btn">Remove products from cart</button>
+        <button type="button" class="btn popup_previous-link-btn popup-close" >
+          <svg focusable="false" aria-hidden="true" class="icon-svg icon-svg--color-accent icon-svg--size-10 previous-link__icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><path d="M8 1L7 0 3 4 2 5l1 1 4 4 1-1-4-4"></path></svg>
+          Return to shipping</button>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /*Styles for pop ups in my account section*/
+body.modal-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+.pop-up-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: rgba(0,0,0,0.4);
+  margin-top: 0;
+  padding: 20px 15px;
+}
+.pop-up-modal.show-pop-up {
+  display: block;
+}
+.pop-up__container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 20px rgb(0 0 0 / 10%);
+  border-radius: 8px;
+  padding: 15px;
+  max-height: 100%;
+  overflow: auto;
+}
+@media (min-width: 576px) {
+  .pop-up__container {
+    max-width: 500px;
+  }
+}
+.pop-up__container .close-button {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  cursor: pointer;
+}
+.checkout__pop-up-header {
+  text-align: left;
+  padding: 10px;
+}
+.checkout__pop-up-header .heading {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #333333;
+  margin-bottom: 10px;
+}
+.checkout__pop-up-header p {
+  font-size: 16px;
+  line-height: 19px;
+  color: #3D3C3C;
+}
+.pop-up__content-wrapper .product-list-item {
+  padding: 12px;
+  background: #F1F1F1;
+  border: 1px solid #B89C7D;
+  border-radius: 8px;
+  display: flex;
+    align-items: center;
+  margin-bottom: 10px;
+  width:100%;
+}
+.pop-up__content-wrapper .product__description {
+  padding-left: 10px;
+}
+.pop-up__content-wrapper .btn {
+  background: #b89c7d;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+  padding: 15px;
+  color: #FFFFFF;
+  width:100%;
+  display: block;
+}
+pop-up__content-wrapper .btn:hover {
+  background: #a6835c;
+    color: white;
+}
+.pop-up__content-wrapper .btn svg {
+  margin-right: 0.25em
+}
+.pop-up__content-wrapper .btn.popup_previous-link-btn {
+  color: #b89c7d;
+  background: #FFFFFF;
+}
+.pop-up__content-wrapper .btn.popup_previous-link-btn:hover {
+  color: #a6835c;;
+  background: #FFFFFF;
+}
+#checkout-remove-product-model .order-summary__section--product-list {
+  display: block;
+}
+</style>
+
+<script>
+  function close_popup(e){
+    e.preventDefault();
+    $("#continue_button").prop('disabled', false);
+    $('#checkout-remove-product-model').removeClass("show-pop-up");
+    $("body").removeClass("modal-open");
+    $("#checkout_shipping_rate_id_shopify-standard-0_00").prop('checked',true);
+    $('#checkout_shipping_rate_id_cash_on_delivery_app-advanced_cash_on_delivery_256325-35_00').prop('checked',false);
+    $('#checkout_shipping_rate_id_cash_on_delivery_app-advanced_cash_on_delivery_256324-105_00').prop('checked',false);
+    
+  }
+  $( document ).ready(function() {
+    $(".popup-trigger").click(function(e) {
+      e.preventDefault();
+      var target = $(this).attr('traget');
+      $("body").addClass("modal-open");
+      $('#'+target).addClass("show-pop-up");
+      window.history.pushState('forward', null, '');
+    });
+    $(".popup-close").click(function(e){close_popup(e)});
+    $(window).on('popstate', function(e){close_popup(e)});
+    
+    $("#move-to-vishlist-btn").click(function(e) {
+        e.preventDefault();
+        var arr = [];
+        var items = "{{ productsToRemove }}";
+        var itemsArray = items.split(',');
+        
+        var runRequests = function(itemIndex) {
+          if (itemsArray.length == itemIndex) {
+            console.log("runRequests Success", arr);
+            $("body").removeClass("modal-open");
+            $(this).closest(".pop-up-modal").removeClass("show-pop-up");
+            window.location.href = "{{ shop.url }}/cart";
+          }
+        
+          var item = itemsArray[itemIndex];
+        
+          $.ajax({
+            type: 'POST',
+            url: '/cart/change.js',
+            dataType: 'json',
+            data: {
+              'id': parseFloat(itemsArray[itemIndex]),
+              'quantity': 0
+            },
+            success: function(data) {
+              document.cookie = "cart-auto-checkout=true;path=/";
+              arr.push(data);
+            },
+            error: function() {
+              arr.push({});
+              console.error("runRequests Error", "Item", arguments);
+            },
+            complete: function() {
+              
+              runRequests(++itemIndex);
+            }
+          });
+        };
+        if(itemsArray.length < {{ total_item_count }}) {
+          runRequests(0);
+        } else {
+          alert("Your cart has all Non COD products");
+        }
+        
+    });
+  });
+  
+</script>

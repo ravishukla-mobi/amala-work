@@ -1,0 +1,23 @@
+<div id="st-trending-search" style="display: none" v-cloak>
+        <div class="autocomplete-body" v-show="!mobile_loader">
+            <div class="autocomplete-head">
+                <div id="trend_left">
+                    <span>Trending Searches</span>
+                </div>
+            </div>
+            <div class="st-autocomplete-content">
+                <ul class="st-trending-elements">
+                    <li v-for="item in trending_results" :key="item.id">
+                      	<svg viewBox="0 0 500 500" width="18" height="18" fill="#b89c7d" class="st-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="500" viewBox="0 0 48 48" width="500">
+                                <path d="M32 12l4.59 4.59-9.76 9.75-8-8-14.83 14.83 2.83 2.83 12-12 8 8 12.58-12.59 4.59 4.59v-12z"></path>
+                            </svg>
+                        </svg>
+                        <a class="st-element" :href="redirectPage(item)">
+                            <span>${ item.displayLabel }$</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,149 @@
+<div class="container container--narrow">
+  <header class="page__header page__header--centered">
+    <h1 class="page__title heading h1">Welcome to Amala Earth</h1>
+    <p class="form__legend">
+      <span>Hi! We would love to have you sell with us. To register, please fill the form below.</span><br/>
+      <span>We will get in touch with you soon.</span>
+    </p>
+  </header>
+</div>
+    
+<div class="container container--medium">
+  <div class="layout">
+    <div class="layout__section">
+      <form name="VendorForm" class="form" action="https://api.shipturtle.com/api/v1/vendor/registration" method="POST" enctype="multipart/form-data">
+        <div class="form__input-row">
+          <div class="form__input-wrapper form__input-wrapper--labelled">
+            <input type="text" id="company" name="company_name" class="form__field form__field--text" required>
+            <label for="company" class="form__floating-label">Company name <span aria-hidden="true">*</span></label>
+          </div>
+          <div class="form__input-wrapper form__input-wrapper--labelled">
+            <input type="text" id="brand_name" name="brand_name" class="form__field form__field--text">
+            <label for="brand_name" class="form__floating-label">Brand name</label>
+          </div>
+        </div>
+        <div class="form__input-row">
+          <div class="form__input-wrapper form__input-wrapper--labelled">
+            <input type="text" id="website" name="website" class="form__field form__field--text">
+            <label for="website" class="form__floating-label">Website</label>
+          </div>
+          <div class="form__input-wrapper form__input-wrapper--labelled">
+            <input type="text" id="contact" name="contact_name" required class="form__field form__field--text">
+            <label for="contact" class="form__floating-label">Contact name <span aria-hidden="true">*</span></label>
+          </div>
+        </div>
+        <div class="form__input-row">
+          <div class="form__input-wrapper form__input-wrapper--labelled">
+            <div style="display:inline-flex">
+              <select style="width: 20%; display: inline-block;padding-top: 6px;margin-right: 4px" name="mobile_code" id="country_code" class="form__field form__field--text">
+                <option value="">Dial code</option>
+              </select>
+              <input style="width:78%; display:inline-block" type="number" id="phone" name="phone_number" class="form__field form__field--text">
+            </div>
+          </div>
+          <div class="form__input-wrapper form__input-wrapper--labelled">
+            <input
+                   required
+                   type="email"
+                   id="email"
+                   name="email"
+                   autocorrect="off"
+                   autocapitalize="off"
+                   aria-required="true"
+                   class="form__field form__field--text"
+                   >
+          	<label for="email" class="form__floating-label">Email <span aria-hidden="true">*</span> </label>
+          </div>
+        </div>
+        <div class="form__input-row">
+          <div class="form__input-wrapper form__input-wrapper--labelled">
+            <input type="text" id="address_line_1" name="address_line_1" class="form__field form__field--text">
+            <label for="address_line_1" class="form__floating-label">Address line 1</label>
+          </div>
+          <div class="form__input-wrapper form__input-wrapper--labelled">
+            <input type="text" id="address_line_2" name="address_line_2" class="form__field form__field--text">
+            <label for="address_line_2" class="form__floating-label">Address line 2</label>
+          </div>
+        </div>
+        <div class="form__input-row">
+          <div class="form__input-wrapper form__input-wrapper--labelled"> 
+            <select name="country" id="country" onchange="updateCountry(this);" class="form__field form__field--text" style="padding-top: 6px">
+              <option value="">Select Country</option> 
+            </select>
+          </div> 
+          <div class="form__input-wrapper form__input-wrapper--labelled"> 
+            <select name="state_code" id="state_province" class="form__field form__field--text" style="padding-top: 6px">
+              <option value="">Select State/Province</option>
+            </select>
+          </div>
+        </div>
+        <div class="form__input-row">
+          <div class="form__input-wrapper form__input-wrapper--labelled">
+            <input type="text" id="city" name="city" class="form__field form__field--text">
+            <label for="city" class="form__floating-label">City</label>
+          </div>
+          <div class="form__input-wrapper form__input-wrapper--labelled">
+            <input type="text" id="pin_code" name="pin_code" class="form__field form__field--text">
+            <label for="pin_code" class="form__floating-label">Zip code/Pin code</label>
+          </div>
+        </div>
+        <div class="form__input-wrapper form__input-wrapper--labelled">
+          <textarea name="notes" id="notes" class="form__field form__field--textarea" rows="3"></textarea>
+          <label for="notes" class="form__floating-label">Notes</label>
+        </div>
+        <div class="form__input-wrapper form__input-wrapper--labelled">
+          <input type="file" id="logo" name="logo[]" multiple class="form__field form__field--text" style="padding-top: 6px; padding-bottom: 30px">
+        </div>
+
+        <input type="hidden" name="company_id" value="132119">
+        <input type="hidden" name="shop_id" value="2044">
+
+        <button type="submit" class="form__submit form__submit--centered button button--primary button--min-width">Join now</button>
+      </form>
+      <div class="form__secondary-action" style="text-align:center">
+        <p><a href="https://app.shipturtle.com/user/login" class="link link--accented" target="_blank">Already a seller? Click here to login</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  window.onload = function () {
+    var sc = document.createElement("script");
+    sc.src = "https://api.shipturtle.com/api/v1/countries?callback=callbackmethod";
+    document.body.appendChild(sc);
+  };
+  updateCountry = function (country) {
+    document.getElementById("state_province").innerHTML = null;
+    var sc = document.createElement("script");
+    sc.src = "https://api.shipturtle.com/api/v1/states?country_code="+country.value+"&callback=callbackmethodstate";
+    document.body.appendChild(sc);
+  };
+  function callbackmethod (data) {
+    if (data && data.countries) {
+      let country = document.getElementById('country');
+      let countryCode = document.getElementById('country_code');
+      data.countries.forEach( function (value, index) {
+        let option = document.createElement("option");
+        option.value = value.code;
+        option.text = value.name;
+        country.appendChild(option);
+
+        let countryCodeoption = document.createElement("option");
+        countryCodeoption.value = value.dial_code;
+        countryCodeoption.text = value.dial_code + " - (" + value.name + ")";
+        countryCode.appendChild(countryCodeoption);
+      });
+    }    
+  }
+  function callbackmethodstate (data) {
+    let stateProvince = document.getElementById('state_province');
+    if (data && data.states) {
+      data.states.forEach( function (value, index) {
+        let stateoption = document.createElement("option");
+        stateoption.value = value.code;
+        stateoption.text = value.title;
+        stateProvince.appendChild(stateoption);        
+      });
+    }    
+  }
+</script>

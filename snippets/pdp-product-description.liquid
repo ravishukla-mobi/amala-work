@@ -1,0 +1,167 @@
+<div class="container your-question product-descrip product_main_description">
+
+  {%- liquid 
+    assign manufacturer = product.metafields.AE_PROD_DTLS['Manufacturer Details'] 
+    if manufacturer == blank 
+      assign manufacturer = product.metafields.custom.manufacturer_name 
+    endif 
+    assign country_of_origin = product.metafields.AE_PROD_DTLS['Country Of Origin'] 
+    assign packer_details = product.metafields.AE_PROD_DTLS['Packer Details'] 
+  -%}
+
+  <div class="tab product_description_tabs">
+    <button class="tablinks tab_selected" data-Id="tab-product-details">Product Details</button>
+    {% if product.description or product.metafields.custom.product_description %}
+    <button class="tablinks" data-Id="tab-product-description">Product Description</button>
+    {% endif %}
+    {% if product.metafields.AE_PROD_DTLS['Benefits'] or product.metafields.custom.product_benefits %}
+    <button class="tablinks" data-Id="tab-benefits">Benefits</button>
+    {% endif %}
+    {% if manufacturer != blank or country_of_origin != blank or packer_details != blank %}
+    <button class="tablinks" data-Id="tab-name-of-manufacturer">Name of Manufacturer</button>
+    {% endif %}
+  </div>
+
+  {% comment %} accordion 1 - Product details {% endcomment %}
+  <div id="tab-product-details" class="set-tab2 collpse-accoridian tabcontent" style="display: block;">
+    <h3 class="hdng-t active">Product Details</h3>
+    <div class="content-collepse2" style="display: block;">
+        {% render 'product-details-table' %}
+    </div>
+  </div>
+
+  {% comment %} accordion 2 - product Description {% endcomment %}
+  {% assign desc = product.description %}
+  {% if desc == blank %}
+    {% assign desc = product.metafields.custom.product_description %}
+  {% endif %}
+  {% if desc != blank %}
+    <div id="tab-product-description" class="set-tab2 collpse-accoridian tabcontent">
+      <h3 class="hdng-t">Product Description</h3>
+      <div class="content-collepse2" >
+        {{ desc }}
+      </div>
+    </div>
+  {% endif %}
+
+  {% comment %} accrodion 3 - Benefits {% endcomment %}
+  {% assign benefits = product.metafields.AE_PROD_DTLS['Benefits'] %}
+  {% if benefits != blank %}
+    <div id="tab-benefits" class="set-tab2 collpse-accoridian tabcontent">
+      <h3 class="hdng-t">Benefits</h3>
+      <div class="content-collepse2">
+          <ul>
+            {% for item in product.metafields.AE_PROD_DTLS['Benefits'] %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+      </div>
+    </div>
+  {% else %}
+    {% assign benefits = product.metafields.custom.product_benefits %}
+    {% if benefits != blank %}
+      <div id="tab-benefits" class="set-tab2 collpse-accoridian tabcontent">
+        <h3 class="hdng-t">Benefits</h3>
+        <div class="content-collepse2">
+            <ul>
+              {% for benefit in benefits.value %}
+              <li>{{ benefit }}</li>
+              {% endfor %}
+            </ul>
+        </div>
+      </div>
+    {% endif %}
+  {% endif %}
+
+  {% comment %} accordion 4 - Manufacturer name {% endcomment %}
+  
+  {% if manufacturer != blank or country_of_origin != blank or packer_details != blank %}
+    <div id="tab-name-of-manufacturer" class="set-tab2 collpse-accoridian manufacturer-tab tabcontent">
+      <h3 class="hdng-t">Name of Manufacturer</h3>
+      <div class="content-collepse2">
+          <table class="manufacturer_table product-ups__col table table-sm small">
+            <tbody>
+            {% if manufacturer != blank %}
+            <tr>
+              <th>Manufacturer Details</th>
+              <td>{{ manufacturer }}</td>
+            </tr>
+            {% endif %}
+            {% if packer_details != blank %}
+            <tr>
+              <th>Packer Details</th>
+              <td>{{ packer_details }}</td>
+            </tr>
+            {% endif %}
+            {% if country_of_origin != blank %}
+            <tr>
+              <th>Country Of Origin</th>
+              <td>{{ country_of_origin }}</td>
+            </tr>
+            {% endif %}
+            </tbody>
+          </table>
+      </div>
+    </div>
+  {% endif %}
+
+  {% comment %} Accordion 5 - Policy {% endcomment %}
+    <div id="tab-policy" class="set-tab2 collpse-accoridian hide-for-desktop tabcontent">
+      <h3 class="hdng-t">Policy</h3>
+      <div class="content-collepse2">
+          {% render 'product-policy'%}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .product-descrip .hdng-t{
+    display: none;
+  }
+  @media screen and (max-width: 767px){
+    .product-descrip .hdng-t{
+      display: block;
+    }
+  }
+</style>
+<script>
+  function tabliknksPDP(attrd){
+    let selectorDiv = $('.product_main_description.your-question');
+    selectorDiv.find('.tablinks').removeClass("tab_selected");
+    selectorDiv.find('.tablinks[data-Id="'+attrd+'"]').addClass("tab_selected");
+    selectorDiv.find('.tabcontent').hide();
+    selectorDiv.find('#'+attrd+'').show();
+    selectorDiv.find('.tabcontent .content-collepse2').hide();
+    selectorDiv.find('#'+attrd+' .content-collepse2').show();
+  }
+  function tabfunctionPDP(){
+    if(screen.width >= 768){
+      $('.tablinks').click(function(){
+        let attrd =  $(this).attr('data-Id');
+        tabliknksPDP(attrd);
+      })
+      tabliknksPDP('tab-product-details');
+    } else {
+      $('body').find('.product_main_description.your-question .tabcontent').show();
+      $(".set-tab .hdng-t").on("click", function() {
+        if ($(this).hasClass("active")) {
+          $(this).removeClass("active");
+          $(this)
+            .siblings(".content-collepse")
+            .slideUp(100);
+        } else {
+          $(".set-tab .hdng-t").removeClass("active");
+          $(this).addClass("active");
+          $(".content-collepse").slideUp(200);
+          $(this)
+            .siblings(".content-collepse")
+            .slideDown(100);
+        }
+      });
+    }
+  }
+  tabfunctionPDP();
+  window.addEventListener("resize", tabfunctionPDP );
+  
+</script>

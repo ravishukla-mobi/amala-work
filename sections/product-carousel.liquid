@@ -1,0 +1,330 @@
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<section class="container container-combo">
+  <div class="container-combo-text">
+      {% if section.settings.heading_one != blank or section.settings.heading_two != blank %}
+        <div class="landing_section_header">
+          {% if section.settings.heading_one != blank %}
+              <h3 class="landing_subheading">{{ section.settings.heading_one }}</h3>
+          {% endif %}
+          {% if section.settings.heading_two != blank %}
+              <h2 class="landing_heading">{{ section.settings.heading_two }}</h2>
+          {% endif %}
+        </div>
+      {% endif %}
+      <div class="container-combo-anchor">
+          {% if section.settings.bvtn_text != blank %}
+              <a href="{{ section.settings.url_link }}">{{ section.settings.bvtn_text }}</a>
+          {% endif %}
+      </div>
+  </div>
+  <div class="combo-container">
+      {% for block in section.blocks %}
+          {% if block.type == 'combo' %}
+              <div class="combo-container-section">
+                  <a href="{{ block.settings.combo_link }}">
+                      {% if block.settings.combo_image_desktop != blank %}
+                          <div class="combo_image_desktop">
+                              <img src="{{ block.settings.combo_image_desktop| img_url: 'master' }}"></div>
+                          {% endif %}
+                          <div class="combo_image_mobile">
+                              {% if block.settings.combo_image_mobile != blank %}
+                                  <img src="{{ block.settings.combo_image_mobile| img_url: 'master' }}">
+                                  {% endif %}
+                              </div>
+                              {% if block.settings.title != blank %}
+                                  <h2>{{ block.settings.title }}</h2>
+                              {% endif %}
+                          </a>
+                      </div>
+                  {% endif %}
+              {% endfor %}
+          </div>
+      </section>
+
+
+
+  <script>
+    $(document).ready(function(){
+        $('.combo-container').slick({
+            slidesToShow:5,
+            slidesToScroll:5,
+            arrows:true,
+            dots:false,
+            infinite: true,
+            responsive: [
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow:5,
+              slidesToScroll:5
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow:4,
+              slidesToScroll: 4
+            }
+          },
+          {
+            breakpoint:592,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll:3
+            }
+          }
+        ]
+          });
+    });
+</script>
+
+<style>
+  .combo-container-section:nth-child(even) {
+    margin-top: 50px;
+}
+    .combo_image_mobile{
+        display: none;
+      }
+      .combo-container-section a{
+        text-align: -webkit-center;
+      }
+      .container-combo{
+        margin-top:100px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.29) 1.04%, rgba(154, 111, 87, 0.29) 48.44%, rgba(245, 240, 233, 0.29) 83.85%, rgba(255, 255, 254, 0.29) 100%);
+      }
+      .container-combo-text{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 11px;
+      }
+      .container-combo-anchor a{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight:500;
+        font-size:15px;
+        line-height: 27px;
+        letter-spacing: 0.03em;
+        color: #946C56;
+        text-decoration: underline;
+      }
+      .container-combo-text p{
+        margin: 0px;
+      }
+      .combo-container-section h2{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12.73px;
+        line-height: 13px;
+        text-align: center;
+        color: #222222;
+        margin-top: 17px;
+      }
+      .combo-container-section h2 p{
+        margin: 0px;
+      }
+
+      {%- comment -%} .combo-container-section a:hover{
+        transform: translate3D(0,-1px,0) scale(1.02); /* move up slightly and zoom in */
+        transition: all .4s ease; /* zoom in */
+      } {%- endcomment -%}
+
+      .combo_image_desktop img:hover{
+        transform: translate3D(0,-1px,0) scale(1.02); /* move up slightly and zoom in */
+        transition: all .4s ease; /* zoom in */
+      }
+
+      .combo-container  .slick-arrow,.explore-collection-section .slick-arrow{opacity:0;color:transparent; position:absolute;top:50%; transform:translateY(-50%);z-index:99;transition:all 0.3s ease;}
+  .combo-container:hover  .slick-arrow,.explore-collection-section:hover  .slick-arrow{
+  	opacity:1;
+  }
+  .combo-container  .slick-arrow:before,.explore-collection-section .slick-arrow:before{
+  	content:'';
+    position:absolute;
+    width:32px;
+    height:32px;
+    background-color:#cab49e;
+    border-radius: 6.88689px;
+  }
+  .combo-container  .slick-arrow:after,.explore-collection-section .slick-arrow:after{
+  	content:'';
+    position:absolute;
+    width:8px;
+    height:8px;
+    border-left:3px solid #fff;
+    border-bottom:3px solid #fff;
+    top:50%;
+    transform:rotate(45deg) translateY(-50%);
+  }
+  .combo-container  .slick-arrow.slick-prev,.explore-collection-section  .slick-arrow.slick-prev{
+  	left:0;
+  }
+  .combo-container  .slick-arrow.slick-prev:after,.explore-collection-section  .slick-arrow.slick-prev:after{
+  	left:10px;
+  }
+  .combo-container  .slick-arrow.slick-next,.explore-collection-section  .slick-arrow.slick-next{
+  	right:5px;
+  }
+  .combo-container  .slick-arrow.slick-next:after,.explore-collection-section  .slick-arrow.slick-next:after{
+  	right:14px;
+    top:12px;
+    transform:rotate(225deg) translateY(0%);
+  }
+  .brands-slider-box{
+    margin:15px;
+    overflow:hidden;
+    border-radius:10px;
+    position:relative;
+  }
+  .slick-dots{list-style:none;text-align:center;}
+  .slick-dots  button{display:none;}
+  .slick-dots li{display:inline-block;margin:5px;width:8px;height:8px;border-radius:50%;border:1px solid #b89c7d;}
+  .slick-dots li.slick-active{background-color:#b89c7d;}
+
+
+
+
+  @media only screen and (max-width:768px) {
+    .combo_image_mobile{
+        display:block;
+      }
+      .combo_image_desktop{
+        display: none;
+      }
+      .combo-container-section h2{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12.73px;
+        line-height: 13px;
+        text-align: center;
+        color: #222222;
+        margin-top: 17px;
+      }
+      .combo-container-section h2 p{
+        margin: 0px;
+      }
+      .combo-container-section:nth-child(even) {
+        margin-top: 50px;
+    }
+    .container-combo{
+      margin-top: 50px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.29) 1.04%, rgba(154, 111, 87, 0.29) 48.44%, rgba(245, 240, 233, 0.29) 83.85%, rgba(255, 255, 254, 0.29) 100%);
+    }
+    .container-combo-text{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 11px;
+    }
+    .container-combo-text h2{
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      letter-spacing: 0.11em;
+      color: #946C56;
+      margin: 0;
+    }
+    .container-combo-text h3{
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 36px;
+      color: #946C56;
+    }
+    .container-combo-anchor a{
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      letter-spacing: 0.03em;
+      color: #946C56;
+      text-decoration: underline;
+    }
+  }
+  @media only screen and (max-width:592px) {
+    .brands-container{
+      gap: 0;
+    }
+    .brands-section-container{
+      padding: 0px;
+    }
+    .brands_text{
+      padding: 0 10px;
+    }
+    .combo_image_mobile img:hover{
+      transform: translate3D(0,-1px,0) scale(1.02); /* move up slightly and zoom in */
+      transition: all .4s ease; /* zoom in */
+    }
+  }
+
+</style>
+  {% schema %}
+  {
+    "name": "Product Carousel",
+    "class": "product-carousel-section",
+    "settings": [
+      {
+        "type":"text",
+        "id":"heading_one",
+        "label":"Heading"
+      },
+      {
+        "type":"text",
+        "id":"heading_two",
+        "label":"Sub Heading"
+      },
+      {
+        "type":"text",
+        "id":"btn_text",
+        "label":"View Text"
+      },
+      {
+        "type":"url",
+        "id":"url_link",
+        "label":"Link"
+      }
+    ],
+    "name": "Product Carousel",
+    "blocks":[
+        {
+        "type": "combo",
+        "name": "Product Carousel",
+        "settings": [
+          {
+        "type":"image_picker",
+        "id":"combo_image_desktop",
+        "label":"Desktop Image"
+          },
+          {
+        "type":"image_picker",
+        "id":"combo_image_mobile",
+        "label":"Mobile Image"
+          },
+      {
+        "type":"url",
+        "id":"combo_link",
+        "label":"Link"
+      },
+      {
+            "type": "text",
+            "id": "title",
+            "label": "Heading"
+          }
+        ]
+      }
+    ],
+    "presets": [
+{
+"name": "Product Carousel",
+"category": "Custom"
+}
+]
+  }
+{% endschema %}

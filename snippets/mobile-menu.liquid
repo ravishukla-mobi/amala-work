@@ -1,0 +1,505 @@
+{%- assign mega_menus = section.blocks | map: 'settings' | map: 'menu_item' -%}
+
+<div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+  {%- render 'icon', icon: 'nav-triangle-borderless' -%}
+
+  <div class="mobile-menu__inner">
+    <div class="mobile-menu__panel">
+    {%- if customer -%}
+       <span class="mobile_welcome_msg">{{ 'header.general.welcome' | t: first_name: customer.first_name | truncate: 20 }}</span>
+    {% endif %}
+      <div class="mobile-menu__section">
+        <span><a href="/collections" class="mobile-menu__cat">Categories</a></span>
+        <ul class="mobile-menu__nav" data-type="menu" role="list">
+          {%- for link in menu.links -%}
+            <li class="padding-8-tb" data-id="{{collections[link.handle].id}}" data-attr="{{link.handle}}">
+              {%- if link.links.size == 0 -%}
+              	<a href="{{ link.url }}" class="nav-dropdown__link link" data-type="menuitem">{{ link.title }}</a>
+              {%- else -%}
+                {%- capture index_nested -%}{{ link.title | handle }}-{% increment nav_dropdown %}{%- endcapture -%}
+              	{% assign link_img_src = link.handle | prepend: 'nav-' | append: '.png' | file_img_url: '30x30' %}
+              	<div class="mobile-l1-menu" onclick="handleMobileNavigation(this)">
+                  <img class="img-30-x-30 margin-r-12 lazyload" src="{{ link_img_src }}" height="30" width="30"  alt="{{link.title}}">
+                  <span>{{- link.title -}}
+                    <svg focusable="false" class="icon icon--arrow-bottom l1-arrow-alignment" viewBox="0 0 12 8" role="presentation">
+      					<path stroke="currentColor" stroke-width="2" d="M10 2L6 6 2 2" fill="none" stroke-linecap="square"></path>
+    				</svg>
+                  </span>
+                </div>
+                {%- if is_mega_menu -%}
+                  {%- render 'mega-menu', is_floating: is_floating, mega_menu: link, index: index_nested -%}
+                {%- else -%}
+              	<div class="mobile-l2-menu hide-for-mobile">
+                  <ul id="{{ index_nested }}" 
+                      class="mobile-menu__nav" 
+                      >
+                    <li class="mobile-menu__panel">
+                      <a href="{{ link.url }}" 
+                                     class="nav-dropdown__link link accent-color" >View All</a>
+                    </li>
+                    {%- for sub_link in link.links -%}
+                      {% if sub_link.url contains 'collections' %}
+                          {% assign collection_handle = sub_link.url | split: '/collections/' | last %} 
+
+                          {% if collections[collection_handle].all_products_count > 0 %}
+                              <li class="mobile-menu__panel">
+                                {%- if sub_link.links.size == 0 -%}
+									<a href="{{ sub_link.url }}" class="nav-dropdown__link link" data-id="{{collections[collection_handle].id}}">
+                                    {{ sub_link.title }}
+									{%- if sub_link.title == "Mother's Day" -%}
+                                    {{ images['mother_s-day-butterfly.png'] | image_url: width: 30 | image_tag }} 
+                                    {%- endif -%}
+                                  </a>
+                                {%- else -%}
+                                  {%- capture index_nested_nested -%}{{ index_nested }}-{% increment nav_dropdown_nested %}{%- endcapture -%}
+                                <div>
+                                  <span class="nav-dropdown__link" onclick="handleMobileNavigation(this)">{{- sub_link.title -}}
+                                    <svg focusable="false" class="icon icon--arrow-bottom" viewBox="0 0 6 6" role="presentation">
+      								  <path stroke="currentColor" stroke-width="2" d="M10 2L6 6 2 2" fill="none" stroke-linecap="square"></path>
+    								</svg>
+                                  </span>
+                                  <ul id="{{ index_nested_nested }}" 
+                                      class="mobile-menu-nested hide-for-mobile">
+                                    <li class="nav-dropdown__item">
+                                        <a href="{{ sub_link.url }}" class="nav-dropdown__link link accent-color" data-type="menuitem">View All</a>
+                                    </li>
+                                    {%- for sub_sub_link in sub_link.links -%}
+                                      {% assign sub_sub_collection_handle = sub_sub_link.url %}
+                                      {% if sub_sub_link.url contains 'collections' %}
+                          				{% assign sub_sub_collection_handle = sub_sub_link.url | split: '/collections/' | last %}
+                                      {% endif %}
+                                      <li class="nav-dropdown__item">
+                                        <a href="{{ sub_sub_link.url }}" class="nav-dropdown__link link" data-type="menuitem" data-id="{{collections[sub_sub_collection_handle].id}}">{{ sub_sub_link.title }}</a>
+                                      </li>
+                                    {%- endfor -%}
+                                  </ul>
+                                {%- endif -%}
+                              </li>
+                          {% endif %}
+                      {% else %}
+                        <li class="nav-dropdown__item "> 
+                          {%- if sub_link.links.size == 0 -%}
+                          <a href="{{ sub_link.url }}" class="nav-dropdown__link link" data-type="menuitem" data-id="{{collections[sub_link.url].id}}">{{ sub_link.title }}
+                            {%- if sub_link.title == "Valentine's Day" -%}
+                            {{ images['BROWN_HEART.png'] | image_url: width: 20 | image_tag }} 
+                            {%- endif -%}
+                            {%- if sub_link.title == "Holi" -%}
+                            {{ images['holi.png'] | image_url: width: 20 | image_tag }} 
+                            {%- endif -%}
+                          </a>
+                          {%- else -%}
+                          {%- capture index_nested_nested -%}{{ index_nested }}-{% increment nav_dropdown_nested %}{%- endcapture -%}
+                          <a href="{{ sub_link.url }}" class="nav-dropdown__link link nav_dropdown_link_wrap" data-type="menuitem" aria-expanded="false" aria-controls="{{ index_nested_nested }}" aria-haspopup="true">{{- sub_link.title -}}</a>
+                          <span class="nav-dropdown__link pages-drop-down" onclick="handleMobileNavigation(this)">
+                              <svg focusable="false" class="icon icon--arrow-bottom" viewBox="0 0 6 6" role="presentation">
+                                <path stroke="currentColor" stroke-width="2" d="M10 2L6 6 2 2" fill="none" stroke-linecap="square"></path>
+                              </svg>
+                          </span>
+
+                          <ul id="{{ index_nested_nested }}" class="mobile-menu-nested hide-for-mobile {% if is_floating %}nav-dropdown--floating{% endif %}" data-type="menu" aria-hidden="true" role="list">
+                            <li class="nav-dropdown__item">
+                                <a href="{{ sub_link.url }}" class="nav-dropdown__link link accent-color" data-type="menuitem">View All</a>
+                            </li>
+
+                            {%- for sub_sub_link in sub_link.links -%}
+                            {% assign sub_collection_handle = sub_sub_link.url | split: '/collections/' | last %}
+                            <li class="nav-dropdown__item">
+                              <a href="{{ sub_sub_link.url }}" class="nav-dropdown__link link" data-type="menuitem"  data-id="{{collections[sub_collection_handle].id}}">{{ sub_sub_link.title }}
+<!--                                 {%- if sub_sub_link.title == "Everday Basics" -%}
+                            {{ images['BROWN-T-SHIRT.png'] | image_url: width: 20 | image_tag }} 
+                            {%- endif -%} -->
+                              </a>
+                            </li>
+                            {%- endfor -%}
+                          </ul>
+                          {%- endif -%}
+                        </li>
+                      {% endif %}
+                    {%- endfor -%}
+                  </ul>
+          		</div>
+                {%- endif -%}
+              {%- endif -%}
+            </li>
+          {%- endfor -%}
+          
+           <!-- New Top Menu -->
+         {%- for link in linklists['top-menu-non-prod'].links -%}
+           {%- if link.title == 'Categories' -%}
+             {% continue %}
+           {%- endif -%}
+          
+           {% if link.title == 'Sale' %}
+           <li class="li_item_spacing">
+<!--             {{ images['percentage.png'] | image_url: width: 40 | image_tag }} -->
+          	 <a href="/pages/offer" class="mobile-menu__cat">Sale</a>
+          </li>
+             {% continue %}
+          {% elsif link.title == 'About Us' %}
+            <div class="about_us_sec li_item_spacing">
+              <a href="{{link.url}}" class="mobile-menu__cat about_mob_vie">{{ link.title }}</a>
+              {% if link.links %}
+              <span class="icon_dropdow_cus">
+                <svg focusable="false" class="icon icon--arrow-bottom l1-arrow-alignment" viewBox="0 0 12 8" role="presentation">
+                  <path stroke="currentColor" stroke-width="2" d="M10 2L6 6 2 2" fill="none" stroke-linecap="square"></path>
+                </svg>
+              </span>
+              {% endif %}
+            </div>
+            {% if link.links %}
+             <ul class="about-sub_link">
+             {%- for child_link in link.links -%}
+              <li class="nav-bar__item about-us-menu {{ child_link.title | handle}}">
+                <a href="{{ child_link.url }}" {% if child_link.active %}aria-current="page"{% endif %} class="nav-bar__link link">
+                  {{ child_link.title }}
+                </a>
+                {%- if child_link.links != blank -%}
+                <ul class="nav-bar__linklist">
+                  {%- for grandchild_link in child_link.links -%}
+                    <li class="nav-bar__item  {{ grandchild_link.title | handle}}">
+                        <a href="{{ grandchild_link.url }}" {% if grandchild_link.active %}aria-current="page"{% endif %} class="nav-bar__link link">
+                          {{ grandchild_link.title }}
+                        </a>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+                {%- endif -%}
+              </li>
+              {%- endfor -%}
+              </ul>
+              {% endif %}
+              {% if forloop.last %}
+                <li class="nav-bar__item mobile-navigate Blog">
+                  <a  href="/blogs/amala-earth-blog" class="nav-bar__link link" data-type="menuitem">Amala Earth Blog</a>
+                </li>
+          		<li class="nav-bar__item mobile-navigate Blog">
+                  <a  href="https://www.youtube.com/channel/UCsOUCPJYqGa4-lfPwOq8gEA/videos" target="_blank" class="nav-bar__link link" data-type="menuitem">Amala Earth Video Blog</a>
+                </li>
+             {% endif %}
+             {% continue %}
+          {% elsif link.title == 'Bulk' %}
+             <li class="li_item_spacing">
+            <!--  <img src="{{ 'event-logo.png' | asset_img_url }}" class="responsive-img"  style="width:35px;"/>-->
+             <a href="{{link.url}}" class="mobile-menu__cat accent-color">{{ link.title }}</a>
+             </li>
+             </li>             
+             <li class="li_item_spacing">
+          	 <a href="/pages/rewards" class="mobile-menu__cat">Rewards</a>
+          </li>
+             {% continue %}
+          {% elsif link.title == 'My Account' %}
+             <li class="li_item_spacing">
+              <a href="{{link.url}}" class="mobile-menu__cat accent-color">{{ link.title }}</a>
+             </li>   
+             {% continue %} 
+          {% elsif link.title == 'Previously Purchased' %}
+             {% if customer %}
+             <li class="li_item_spacing">
+              <a href="{{link.url}}" class="mobile-menu__cat accent-color">{{ link.title }}</a>
+             </li> 
+             {% endif %}
+             {% continue %}
+          {% elsif link.title == 'My Wishlist' %}
+             <li class="li_item_spacing">
+              <a href="{{link.url}}" class="mobile-menu__cat accent-color">{{ link.title }}</a>
+             </li> 
+             {% continue %}
+           {% endif %}
+          	<li class="nav-bar__item mobile-navigate {{ link.title }}">
+            <a  class="nav-bar__link link show-child2" data-type="menuitem">{{ link.title }} 
+              <svg focusable="false" class="icon icon--arrow-right" viewBox="0 0 8 12" role="presentation">
+                <path stroke="currentColor" stroke-width="2" d="M2 2l4 4-4 4" fill="none" stroke-linecap="square"></path>
+              </svg>
+            </a>
+            
+          	{%- if link.links != blank -%}
+              <ul class="nav-bar__linklist mega-submenu">
+                <p class="back-mainmenu herarchay">
+                  <svg focusable="false" class="icon icon--arrow-left" viewBox="0 0 8 12" role="presentation">
+                    <path stroke="currentColor" stroke-width="2" d="M6 10L2 6l4-4" fill="none" stroke-linecap="square"></path>
+                  </svg> Back
+                </p>
+                {%- for child_link in link.links -%}
+                	<li class="nav-bar__item">
+                      <a href="{{ child_link.url }}" {% if child_link.active %}aria-current="page"{% endif %} class="nav-bar__link link">
+                        {{ child_link.title }}
+                      </a>
+                      {%- if child_link.links != blank -%}
+                        <ul class="nav-bar__linklist">
+                          {%- for grandchild_link in child_link.links -%}
+                          <li class="nav-bar__item">
+                            <a href="{{ grandchild_link.url }}" {% if grandchild_link.active %}aria-current="page"{% endif %} class="nav-bar__link link">
+                              {{ grandchild_link.title }}
+                            </a>
+                          </li>
+                          {%- endfor -%}
+                        </ul>
+                      {%- endif -%}
+                    </li>
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}  
+          </li>
+           {% if forloop.last %}
+          		<li class="nav-bar__item mobile-navigate Blog">
+                  <a  href="/blogs/amala-earth-blog" class="nav-bar__link link show-child2" data-type="menuitem">Blog</a>
+          		</li>         
+          
+          {% endif %}
+          {%- endfor -%} 
+           
+        <!--end New top Menu -->
+        </ul>
+      </div>
+
+      {%- if section.settings.navigation_phone_number != blank or section.settings.navigation_email != blank -%}
+        <div class="mobile-menu__section mobile-menu__section--loose">
+          <p class="mobile-menu__section-title heading h5">{{ 'header.navigation.need_help' | t }}</p>
+          
+          {%- if section.settings.navigation_email != blank -%}
+            <div class="mobile-menu__help-wrapper">
+              {%- render 'icon', icon: 'bi-email' -%}
+              <a href="mailto:{{ section.settings.navigation_email }}">{{ section.settings.navigation_email | escape }}</a>
+            </div>
+          {%- endif -%}
+         
+          {%- if section.settings.navigation_phone_number != blank -%}
+          <div class="mobile-menu__help-wrapper">
+            {%- render 'icon', icon: 'bi-phone' -%}
+            <span>{{ section.settings.navigation_phone_number | escape }}</span>
+          </div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+      
+      {%- if section.settings.navigation_phone_number != blank or section.settings.navigation_email != blank -%}
+        <div class="mobile-menu__section mobile-menu__section--loose">
+          <p class="mobile-menu__section-title heading h5">DOWNLOAD OUR MOBILE APP</p>
+
+          {%- if section.settings.navigation_email != blank -%}
+            <div class="mobile-menu__help-wrapper">
+              <img src="{{ 'android.png' | asset_img_url }}" alt="android" class="responsive-img"  style="width:30px"/>
+              <a href="https://play.google.com/store/apps/details?id=com.amala.earth" style="padding-left: 15px;">Android App</a>
+            </div>
+          {%- endif -%}
+
+          {%- if section.settings.navigation_phone_number != blank -%}
+          <div class="mobile-menu__help-wrapper">
+          <img src="{{ 'ios.png' | asset_img_url }}" alt="ios" class="responsive-img"  style="width:30px"/>
+            <a href="https://apps.apple.com/in/app/amala-earth/id1591399697" style="padding-left: 15px;">iOS App</a>
+          </div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      {%- capture social_media -%}{% render 'social-media', show_social_media_name: true %}{%- endcapture -%}
+
+      {%- if section.settings.show_navigation_social_media and social_media != blank -%}
+        <div class="mobile-menu__section mobile-menu__section--loose">
+          <p class="mobile-menu__section-title heading h5">{{ 'header.navigation.follow_us' | t }}</p>
+
+          {{- social_media -}}
+        </div>
+      {%- endif -%}
+    </div>
+
+    
+
+
+  </div>
+</div>
+
+<style>
+  .mobile-menu-nested{
+    padding: 16px 0 16px 8px;
+    list-style: none;
+    white-space: nowrap;
+    z-index: 1;
+  }
+  
+  .padding-8-tb{
+  	padding: 8px 0;
+  }
+  
+  .mobile-l2-menu{
+  	padding: 16px 8px;
+  }
+  
+  .img-30-x-30{
+  	max-width: 30px;
+    max-height: 30px;
+  }
+  
+  .margin-r-12{
+  	margin: 0 12px 0 0;
+  }
+  
+  .l1-arrow-alignment{
+  	float: right;
+    margin: 6px 19px auto auto;
+  }
+
+  .pages-drop-down {
+      position: absolute;
+      top: 5px;
+      left: 40px;
+  }
+  .about_us_sec{
+    display: flex;
+    justify-content: space-between;
+  }
+  .icon_dropdow_cus{
+    padding-left: 50%;
+  }
+  .about-sub_link{
+    display: none;
+  }
+  .about_us_sub_links_show{
+    display: block;
+  }
+
+  .accent-color{
+  	color: #b89c7d;
+  }
+  .about-us-menu a {
+    display: inline-block;
+    padding-left: 40px;
+    background-repeat: no-repeat !important;
+    background-position: left center !important;
+    background-size: 30px !important;
+}
+.about-us-menu.about-us a{
+	background:url({{ 'About-us.png' | asset_img_url: '30x'  }});
+}
+.about-us-menu.founders-note a{
+	background:url({{ 'Founders-note.png' | asset_img_url: '30x'  }});
+}
+.about-us-menu.our-philosophy a{
+	background:url({{ 'Our-philosophy.png' | asset_img_url: '30x'  }});
+}
+  .about-us-menu.our-ethos a{
+	background:url({{ 'Ethos-icon.png' | asset_img_url: '30x'  }});
+}
+.mobile-navigate.Blog a{
+  display: inline-block;
+    padding-left: 40px !important;
+    background-repeat: no-repeat !important;
+    background-position: left center !important;
+    background-size: 30px !important;
+  	background:url({{ 'Blog.png' | asset_img_url: '30x'  }});
+}
+  @media screen and (max-width: 767px) {
+    .about_mob_vie{
+      display: inline-block;
+    }
+    .about_mob_vie::after{
+      content: "";
+      background: url();
+      float: right;
+      color: black;
+    }
+  }
+
+</style>
+
+
+<script>
+  $(document).ready(function(){
+    
+  //$('ul.mobile-menu__nav li.mobile-navigate.Tags').addClass('active-li');
+  //
+  $('.show-child2').on('click', function(e) {           
+    $(this).parent('li').addClass('active-li'); 
+    $('.mobile-menu').addClass('active-megamenu'); 
+  });  
+  $('.show-child3').on('click', function(e) {           
+    $(this).parent('.child3-li').addClass('active-level3');            
+  }); 
+  $('.back-show-child3').on('click', function(e) {           
+    $('.child3-li').removeClass('active-level3');            
+  }); 
+  $('.back-mainmenu,.header__mobile-nav-toggle').on('click', function(e) {           
+    $('.mobile-navigate').removeClass('active-li');  
+    $('.mobile-menu').removeClass('active-megamenu');
+  }); 
+});
+  
+  
+  function handleMobileNavigation(selector){
+    
+    let others = $(selector).parent().siblings('li.padding-8-tb').not(selector);
+    others.find('div.mobile-l2-menu, ul.mobile-menu-nested').addClass('hide-for-mobile');
+
+    $(selector).siblings().toggleClass('hide-for-mobile');
+    
+    if($(selector).siblings().hasClass('hide-for-mobile')) {
+      // remove color
+      	$(selector).removeClass('accent-color');
+    } else {
+      // add color
+      	$(selector).addClass('accent-color');
+        if($(selector).hasClass('mobile-l1-menu')){
+          var topValue = $(".header").height() - 30;
+          $('.mobile-menu__section > .mobile-menu__nav .mobile-l1-menu').each(function(index, item){
+            topValue = topValue + 48;
+            if($(item).hasClass('accent-color')){
+              return false;
+            }
+          })
+          $(`#mobile-menu .mobile-menu__inner > .mobile-menu__panel`).animate({ scrollTop: topValue },1000);
+        }
+      	others.find('div.mobile-l1-menu').removeClass('accent-color');
+      	others.find('span').removeClass('accent-color');
+      
+    }
+    
+  }
+  
+  document.querySelector(".icon_dropdow_cus").addEventListener("click", function(){
+    document.querySelector(".about-sub_link").classList.toggle("about_us_sub_links_show");
+    if(document.querySelector(".about-sub_link").classList.contains("about_us_sub_links_show")){
+      document.querySelector(".icon_dropdow_cus svg").style.cssText += 'transform: rotate(180deg);';
+    } else {
+      document.querySelector(".icon_dropdow_cus svg").style.cssText += 'transform: none;';
+    }
+  });
+
+</script>
+
+<style>
+  .li_item_spacing{
+    padding:10px 0;
+  }
+  
+  .accent-color{
+  	color: #b89c7d;
+  }
+  .about-us-menu a {
+    display: inline-block;
+    padding-left: 40px;
+    background-repeat: no-repeat !important;
+    background-position: left center !important;
+    background-size: 30px !important;
+}
+.about-us-menu.about-us a{
+	background:url({{ 'About-us.png' | asset_img_url: '30x'  }});
+}
+.about-us-menu.founders-note a{
+	background:url({{ 'Founders-note.png' | asset_img_url: '30x'  }});
+}
+.about-us-menu.our-philosophy a{
+	background:url({{ 'Our-philosophy.png' | asset_img_url: '30x'  }});
+}
+  .about-us-menu.our-ethos a{
+	background:url({{ 'Ethos-icon.png' | asset_img_url: '30x'  }});
+}
+.mobile-navigate.Blog a{
+  display: inline-block;
+    padding-left: 40px !important;
+    background-repeat: no-repeat !important;
+    background-position: left center !important;
+    background-size: 30px !important;
+  	background:url({{ 'Blog.png' | asset_img_url: '30x'  }});
+}
+
+</style>

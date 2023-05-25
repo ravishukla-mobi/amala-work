@@ -1,0 +1,1017 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Warehouse",
+    "theme_author": "Maestrooo",
+    "theme_version": "1.15.3",
+    "theme_documentation_url": "http:\/\/support.maestrooo.com\/",
+    "theme_support_url": "https:\/\/support.maestrooo.com\/article\/203-contact-us"
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "header",
+        "content": "General"
+      },
+      {
+        "type": "color",
+        "id": "heading_color",
+        "label": "Heading",
+        "default": "#1c1b1b"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Body text",
+        "default": "#677279"
+      },
+      {
+        "type": "color",
+        "id": "accent_color",
+        "label": "Accent",
+        "default": "#00badb"
+      },
+      {
+        "type": "color",
+        "id": "link_color",
+        "label": "Link color",
+        "default": "#838383"
+      },
+      {
+        "type": "color",
+        "id": "border_color",
+        "label": "Border",
+        "default": "#e1e3e4"
+      },
+      {
+        "type": "color",
+        "id": "background",
+        "label": "Background",
+        "default": "#f3f5f6"
+      },
+      {
+        "type": "color",
+        "id": "secondary_background",
+        "label": "Secondary background",
+        "info": "For best results, secondary background must not be too far from primary background",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "error_color",
+        "label": "Error messages",
+        "default": "#ff0000"
+      },
+      {
+        "type": "color",
+        "id": "success_color",
+        "label": "Success messages",
+        "default": "#00aa00"
+      },
+      {
+        "type": "header",
+        "content": "Primary button"
+      },
+      {
+        "type": "color",
+        "id": "primary_button_background",
+        "label": "Background",
+        "default": "#00badb"
+      },
+      {
+        "type": "color",
+        "id": "primary_button_text_color",
+        "label": "Text",
+        "default": "#ffffff"
+      },
+      {
+        "type": "header",
+        "content": "Secondary button"
+      },
+      {
+        "type": "color",
+        "id": "secondary_button_background",
+        "label": "Background",
+        "default": "#1e2d7d"
+      },
+      {
+        "type": "color",
+        "id": "secondary_button_text_color",
+        "label": "Text",
+        "default": "#ffffff"
+      },
+      {
+        "type": "header",
+        "content": "Header"
+      },
+      {
+        "type": "color",
+        "id": "header_background",
+        "label": "Background",
+        "default": "#1e2d7d"
+      },
+      {
+        "type": "color",
+        "id": "header_text_color",
+        "label": "Text",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "header_light_text_color",
+        "label": "Light text",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "header_accent_color",
+        "label": "Accent",
+        "default": "#00badb"
+      },
+      {
+        "type": "header",
+        "content": "Footer"
+      },
+      {
+        "type": "color",
+        "id": "footer_background_color",
+        "label": "Background",
+        "default": "#f3f5f6"
+      },
+      {
+        "type": "color",
+        "id": "footer_heading_text_color",
+        "label": "Heading text",
+        "default": "#1e2d7d"
+      },
+      {
+        "type": "color",
+        "id": "footer_body_text_color",
+        "label": "Body text",
+        "default": "#677279"
+      },
+      {
+        "type": "color",
+        "id": "footer_accent_color",
+        "label": "Accent",
+        "default": "#00badb"
+      },
+      {
+        "type": "header",
+        "content": "Product"
+      },
+      {
+        "type": "color",
+        "id": "product_on_sale_accent",
+        "label": "On sale accent",
+        "default": "#ee0000"
+      },
+      {
+        "type": "color",
+        "id": "product_in_stock_color",
+        "label": "In stock",
+        "default": "#00a500"
+      },
+      {
+        "type": "color",
+        "id": "product_low_stock_color",
+        "label": "Low stock",
+        "default": "#ee0000"
+      },
+      {
+        "type": "color",
+        "id": "product_sold_out_color",
+        "label": "Sold out",
+        "default": "#8a9297"
+      },
+      {
+        "type": "color",
+        "id": "product_label_1_background",
+        "label": "Custom label 1 background",
+        "default": "#0774d7"
+      },
+      {
+        "type": "color",
+        "id": "product_label_2_background",
+        "label": "Custom label 2 background",
+        "default": "#00a500"
+      },
+      {
+        "type": "color",
+        "id": "product_star_color",
+        "label": "Review star",
+        "default": "#ffbd00"
+      }
+    ]
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "range",
+        "id": "base_text_font_size",
+        "label": "Base size",
+        "info": "All texts, including headings, will scale accordingly.",
+        "min": 14,
+        "max": 17,
+        "unit": "px",
+        "default": 15
+      },
+      {
+        "type": "header",
+        "content": "Headings"
+      },
+      {
+        "type": "font_picker",
+        "id": "heading_font",
+        "label": "Font",
+        "default": "helvetica_n4"
+      },
+      {
+        "type": "header",
+        "content": "Body text"
+      },
+      {
+        "type": "font_picker",
+        "id": "text_font",
+        "label": "Font",
+        "default": "helvetica_n4"
+      },
+      {
+        "type": "checkbox",
+        "id": "underline_links",
+        "label": "Underline links",
+        "info": "Only applies to links defined in rich text fields.",
+        "default": false
+      }
+    ]
+  },
+  {
+    "name": "Animation",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "animation_image_zoom",
+        "label": "Enable image zoom on hover",
+        "default": true
+      }
+    ]
+  },
+  {
+    "name": "Search",
+    "settings": [
+      {
+        "type": "select",
+        "id": "search_mode",
+        "label": "Search only...",
+        "options": [
+          {
+            "value": "product",
+            "label": "Products only"
+          },
+          {
+            "value": "product,page",
+            "label": "Products and pages"
+          },
+          {
+            "value": "product,article",
+            "label": "Products and blog posts"
+          },
+          {
+            "value": "product,article,page",
+            "label": "Products, blog posts and pages"
+          }
+        ],
+        "default": "product,article"
+      },
+      {
+        "type": "select",
+        "id": "search_unavailable_products",
+        "label": "Sold out products should...",
+        "options": [
+          {
+            "value": "show",
+            "label": "Always show"
+          },
+          {
+            "value": "hide",
+            "label": "Be hidden"
+          },
+          {
+            "value": "last",
+            "label": "Show last"
+          }
+        ],
+        "default": "last"
+      }
+    ]
+  },
+  {
+    "name": "Products grid",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_vendor",
+        "label": "Show vendor",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "show_secondary_image",
+        "label": "Show secondary image on hover",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "show_discount",
+        "label": "Show discount label",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "discount_mode",
+        "label": "Show discount as...",
+        "options": [
+          {
+            "value": "percentage",
+            "label": "Percentage"
+          },
+          {
+            "value": "saving",
+            "label": "Saving"
+          }
+        ],
+        "default": "saving"
+      },
+      {
+        "type": "select",
+        "id": "product_price_position",
+        "label": "Price position",
+        "options": [
+          {
+            "value": "before_title",
+            "label": "Before product title"
+          },
+          {
+            "value": "after_title",
+            "label": "After product title"
+          }
+        ],
+        "default": "after_title"
+      },
+      {
+        "type": "select",
+        "id": "product_image_size",
+        "label": "Product image size",
+        "options": [
+          {
+            "value": "natural",
+            "label": "Natural"
+          },
+          {
+            "value": "short",
+            "label": "Short (4:3)"
+          },
+          {
+            "value": "square",
+            "label": "Square (1:1)"
+          },
+          {
+            "value": "tall",
+            "label": "Tall (2:3)"
+          }
+        ],
+        "default": "natural"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_color_swatch",
+        "label": "Show color swatch",
+        "info": "Colors appear white? [Learn more](http:\/\/support.maestrooo.com\/article\/80-product-uploading-custom-color-for-color-swatch)",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "show_inventory_quantity",
+        "label": "Show inventory",
+        "default": false
+      },
+      {
+        "type": "range",
+        "id": "low_inventory_threshold",
+        "label": "Low inventory threshold",
+        "info": "Show inventory quantity in red when quantity is below the threshold. Choose 0 to always show in stock if available.",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "default": 0
+      },
+      {
+        "type": "checkbox",
+        "id": "show_reviews_badge",
+        "label": "Show reviews badge",
+        "info": "You need to install [Shopify's free Product Reviews](https:\/\/apps.shopify.com\/product-reviews) app before enabling this option.",
+        "default": false
+      }
+    ]
+  },
+  {
+    "name": "Cart",
+    "settings": [
+      {
+        "type": "select",
+        "id": "cart_type",
+        "label": "Cart type",
+        "options": [
+          {
+            "value": "message",
+            "label": "Message"
+          },
+          {
+            "value": "page",
+            "label": "Page"
+          }
+        ],
+        "default": "message"
+      },
+      {
+        "type": "number",
+        "id": "reorder_older_than",
+        "label": "Reorder enable older than days",
+        "default": 0
+      },
+      {
+        "type": "url",
+        "id": "cart_empty_button_link",
+        "label": "Empty button link",
+        "default": "\/collections\/all"
+      },
+      {
+        "type": "checkbox",
+        "id": "cart_show_checkout_button",
+        "label": "Show checkout button in drawer",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "cart_show_free_shipping_threshold",
+        "label": "Show free shipping minimum amount",
+        "info": "Make sure that you have properly configured your [shipping rates](\/admin\/settings\/shipping).",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "cart_free_shipping_threshold",
+        "label": "Free shipping minimum amount",
+        "info": "Only write a number, no letters. Wording can be changed in [language settings](https:\/\/support.maestrooo.com\/article\/55-changing-themes-wording).",
+        "default": "50"
+      },
+      {
+        "type": "text",
+        "id": "cart_shipping_amount",
+        "label": "Shipping amount",
+        "info": "Only write a number, no letters.",
+        "default": "70"
+      },
+      {
+        "type": "checkbox",
+        "id": "cart--show-mini",
+        "label": "Enable Cart Upsell",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "upsellCart--head",
+        "label": "Upsell Cart Heading"
+      },
+      {
+        "type": "header",
+        "content": "Discount threshold"
+      },
+      {
+        "type": "text",
+        "id": "cart_discount_threshold",
+        "label": "Discount threshold",
+        "info": "Only write a number, no letters.",
+        "default": "2499"
+      },
+      {
+        "type": "text",
+        "id": "cart_discount_threshold_code",
+        "label": "Discount code",
+        "default": "FLAT500"
+      },
+      {
+        "type": "liquid",
+        "id": "cart_discount_threshold_success_html",
+        "label": "Discount success html"
+      }
+    ]
+  },
+  {
+    "name": "Cart Drawer",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_recently_viewed",
+        "label": "Show Recently Viewed Section",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "mini_cart_recently_viewed_title",
+        "label": "Mini Cart Recently Viewed Title",
+        "default": "Recently Viewed"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_quick_buy",
+        "label": "Show quick buy",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "mini_cart_show_wishlist",
+        "label": "Show Wishlist",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Previously Purchased",
+        "info": "Previously purchased on mini cart section settings"
+      },
+      {
+        "type": "text",
+        "id": "previously_purchased_title",
+        "label": "Heading",
+        "default": "Previously Ordered"
+      },
+      {
+        "type": "range",
+        "id": "products_count",
+        "label": "Products to show",
+        "min": 2,
+        "max": 50,
+        "step": 1,
+        "default": 7
+      },
+      {
+        "type": "range",
+        "id": "limit_diff_prodct",
+        "label": "Minimum limit of different ordered products",
+        "min": 1,
+        "max": 10,
+        "step": 1,
+        "default": 5,
+        "info": "If you select 5, then this section will only be displayed when a user have more than 5 different product in previous orders"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_sold_out",
+        "label": "Show Sold out products",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "stack_products",
+        "label": "Stack products",
+        "info": "Only applicable if layout is set to vertical",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "show_quick_buy_previous_mini_cart",
+        "label": "Show quick buy",
+        "default": true,
+        "info": "Only shows if layout is set to vertical"
+      },
+      {
+        "type": "select",
+        "id": "layout",
+        "label": "Layout",
+        "options": [
+          {
+            "value": "vertical",
+            "label": "Vertical"
+          },
+          {
+            "value": "horizontal",
+            "label": "Horizontal"
+          },
+          {
+            "value": "collage",
+            "label": "Collage"
+          }
+        ],
+        "default": "vertical"
+      }
+    ]
+  },
+  {
+    "name": "Social media",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Accounts"
+      },
+      {
+        "type": "text",
+        "id": "social_facebook",
+        "info": "https:\/\/www.facebook.com\/shopify",
+        "label": "Facebook"
+      },
+      {
+        "type": "text",
+        "id": "social_twitter",
+        "info": "https:\/\/twitter.com\/shopify",
+        "label": "Twitter"
+      },
+      {
+        "type": "text",
+        "id": "social_pinterest",
+        "info": "https:\/\/www.pinterest.com\/shopify",
+        "label": "Pinterest"
+      },
+      {
+        "type": "text",
+        "id": "social_instagram",
+        "info": "https:\/\/instagram.com\/shopify",
+        "label": "Instagram"
+      },
+      {
+        "type": "text",
+        "id": "social_vimeo",
+        "info": "https:\/\/vimeo.com\/shopify",
+        "label": "Vimeo"
+      },
+      {
+        "type": "text",
+        "id": "social_tumblr",
+        "info": "https:\/\/shopify.tumblr.com",
+        "label": "Tumblr"
+      },
+      {
+        "type": "text",
+        "id": "social_youtube",
+        "info": "https:\/\/www.youtube.com\/user\/shopify",
+        "label": "YouTube"
+      },
+      {
+        "type": "text",
+        "id": "social_tiktok",
+        "info": "https:\/\/www.tiktok.com\/shopify",
+        "label": "TikTok"
+      },
+      {
+        "type": "text",
+        "id": "social_linkedin",
+        "info": "https:\/\/linkedin.com\/in\/shopify",
+        "label": "LinkedIn"
+      },
+      {
+        "type": "text",
+        "id": "social_snapchat",
+        "info": "https:\/\/snapchat.com\/add\/shopify",
+        "label": "Snapchat"
+      },
+      {
+        "type": "text",
+        "id": "social_fancy",
+        "info": "https:\/\/fancy.com\/Shopify",
+        "label": "Fancy"
+      }
+    ]
+  },
+  {
+    "name": "Favicon",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "Image",
+        "info": "96 x 96px .png recommended"
+      }
+    ]
+  },
+  {
+    "name": "Infinite Scroll",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_infinite",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "image_picker",
+        "id": "infinite_loader_img",
+        "label": "Loader Image"
+      }
+    ]
+  },
+  {
+    "name": "My Account",
+    "settings": [
+      {
+        "type": "header",
+        "content": "My Account Need Help"
+      },
+      {
+        "type": "text",
+        "id": "myaccount_needhelp_phone_number",
+        "label": "Phone number"
+      },
+      {
+        "type": "text",
+        "id": "myaccount_needhelp_email",
+        "label": "Email"
+      },
+      {
+        "type": "header",
+        "content": "Login"
+      },
+      {
+        "type": "number",
+        "id": "login_otp_length",
+        "label": "Login OTP length",
+        "default": 6
+      },
+      {
+        "type": "header",
+        "content": "Cancel Order"
+      },
+      {
+        "type": "textarea",
+        "id": "myaccount_cancel_order_message",
+        "label": "Cancel order message",
+        "default": "Cancellation requests will be accepted strictly within 24 hours of placing the order only. Orders cannot be cancelled or returned once shipped or delivered."
+      },
+      {
+        "type": "textarea",
+        "id": "myaccount_cancel_order_successful_message",
+        "label": "Cancel order successful message",
+        "default": "You order successfully cancel"
+      }
+    ]
+  },
+  {
+    "name": "Tags on Products Listing",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_tags",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "tags_allowed_on_frontend",
+        "label": "Allowed Tags",
+        "info": "Please enter comma separated tags allowed to show on product listing"
+      },
+      {
+        "type": "text",
+        "id": "tags_allowed_count",
+        "label": "No. of Tags to show"
+      }
+    ]
+  },
+  {
+    "name": "New Arrivals Count",
+    "settings": [
+      {
+        "type": "text",
+        "id": "new_arrivals_allowed_count",
+        "label": "No. of products to show as a new Arrivals"
+      }
+    ]
+  },
+  {
+    "name": "Custom API server URL",
+    "settings": [
+      {
+        "type": "text",
+        "id": "api_url",
+        "label": "set API URL"
+      },
+      {
+        "type": "header",
+        "content": "SearchTap App"
+      },
+      {
+        "type": "text",
+        "id": "st_api_url",
+        "label": "SearchTap API URL"
+      },
+      {
+        "type": "text",
+        "id": "st_api_authorization",
+        "label": "SearchTap API Authorization token"
+      },
+      {
+        "type": "text",
+        "id": "st_api_collection",
+        "label": "SearchTap Collection token"
+      },
+      {
+        "type": "header",
+        "content": "ProductDeliveryAssured API"
+      },
+      {
+        "type": "checkbox",
+        "id": "ProductDeliveryAssured_enable",
+        "label": "ProductDeliveryAssured API Enable"
+      },
+      {
+        "type": "number",
+        "id": "deliveryassured_minute",
+        "label": "API cookies expire minutes",
+        "default": 5
+      }
+    ]
+  },
+  {
+    "name": "Custom Checkout",
+    "settings": [
+      {
+        "type": "text",
+        "id": "custom_checkout_message",
+        "label": "Message to show on checkout payment screen",
+        "info": "Put this field blank to hide message"
+      },
+      {
+        "type": "text",
+        "id": "custom_banner_dis_message",
+        "label": "Message if Banner discount apply",
+        "default": "Discount will be applied at the checkout"
+      },
+      {
+        "type": "header",
+        "content": "OTP Warning Messages"
+      },
+      {
+        "type": "checkbox",
+        "id": "otp_warning_msg_enable",
+        "label": "OTP Warning Messages Enable"
+      },
+      {
+        "type": "richtext",
+        "id": "otp_warning_msg",
+        "label": "OTP Warning Messages"
+      },
+      {
+        "type": "header",
+        "content": "COD Limit"
+      },
+      {
+        "type": "number",
+        "id": "cod_price_limit",
+        "label": "COD Price Limit",
+        "default": 5000
+      },
+      {
+        "type": "header",
+        "content": "Input Field Length"
+      },
+      {
+        "type": "number",
+        "id": "first_name_length",
+        "label": "First Name Length",
+        "default": 30
+      },
+      {
+        "type": "number",
+        "id": "last_name_length",
+        "label": "Last Name Length",
+        "default": 30
+      },
+      {
+        "type": "number",
+        "id": "address2_length",
+        "label": "Apartment, suite etc. Length",
+        "default": 120
+      }
+    ]
+  },
+  {
+    "name": "Customer Discount Codes",
+    "settings": [
+      {
+        "type": "text",
+        "id": "new_user_discount_code",
+        "label": "Discount code 1",
+        "info": "For new user and existing user with 0 orders"
+      },
+      {
+        "type": "text",
+        "id": "existing_user_discount_code",
+        "label": "Discount code 2",
+        "info": "For Existing user with >0 orders"
+      }
+    ]
+  },
+  {
+    "name": "Common Collections list",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "common_collection_handle_list",
+        "label": "Common Collection list",
+        "info": "List all the handles of the collection which are common like 'all,new-arrivals' , with `,` separated value "
+      }
+    ]
+  },
+  {
+    "name": "Fashion Collection list",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "fashion_col_list",
+        "label": "Fashion Collection list",
+        "info": "Enter list of all Fashion collections with ', ' separated values."
+      }
+    ]
+  },
+  {
+    "name": "Vendors list for Check NCOD",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "vendorslist_ncod",
+        "label": "Vendors list",
+        "info": "Enter list of Vendors with '|' separated values."
+      }
+    ]
+  },
+  {
+    "name": "Vendor Name and Value list",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "vendor_value_list",
+        "label": "Vendor - Value list",
+        "info": "Enter list of all VendorName and attached value in given format {'vendor_name' : 'Amala Earth','value' : '423'}."
+      }
+    ]
+  },
+  {
+    "name": "Collection list Sub categories",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "global_mindful_eating-list",
+        "label": "Enter all Mindful Eating collection list with ',' separated values",
+        "default": "mindful-eating,grains-and-pulses,cold-pressed-oils-and-ghee,natural-salts-and-spices,healthy-snacks,superfoods-and-nuts,tea-and-beverages,honey-jaggery-and-natural-sugars,quinoa-pasta-and-gluten-free-foods,baking-premixes,natural-supplements-and-digestive,condiments-pickles-and-jams,fasting-food"
+      },
+      {
+        "type": "textarea",
+        "id": "global_ethical_beauty-list",
+        "label": "Enter all Ethical Beauty collection list with ',' separated values",
+        "default": "ethical-beauty,natural-skincare,hair-care,oral-care,makeup-and-nails,mens-grooming,essential-oils,serums-skin-oils-and-supplements,fragrances,beauty-and-bath-essentials"
+      },
+      {
+        "type": "textarea",
+        "id": "global_joyful_home-list",
+        "label": "Enter all joyful home collection list with ',' separated values",
+        "default": "bedding-cushions-and-throws,crockery-and-cutlery,cookware,candles-and-aromatherapy,home-decor-and-accessories,furniture-and-lighting,garden-and-outdoors,bath-towels-trays-and-accessories,household-cleaning-and-essentials,disposables-and-party-essentials"
+      },
+      {
+        "type": "textarea",
+        "id": "global_mens_fashion-list",
+        "label": "Enter all Mens fashion collection list with ',' separated values",
+        "default": "mens-wear,mens-casual-wear,mens-office-wear,mens-loungewear-and-sleepwear,mens-activewear,mens-ethnic-wear,mens-footwear,travel-outdoors-men,mens-accessories,mens-innerwear,men-winter-wear"
+      },
+      {
+        "type": "textarea",
+        "id": "global_womens_fashion-list",
+        "label": "Enter all Womens fashion collection list with ',' separated values",
+        "default": "women,ethnic-clothing,western-wear,everyday-wardrobe-staples,loungewear-and-sleepwear,yoga-and-workout-wear,shoes-and-others,jewellery,bags-and-accessories,others-and-intimate-wear,winter-wear"
+      },
+      {
+        "type": "textarea",
+        "id": "global_baby_fashion-list",
+        "label": "Enter all Baby(2-5yr) fashion collection list with ',' separated values",
+        "default": "baby-clothing,baby-toys-and-games,baby-bedding-sleepwear,baby-food,baby-skin-care,baby-bundles-hampers,baby-feeding-and-essentials"
+      },
+      {
+        "type": "textarea",
+        "id": "global_children_fashion-list",
+        "label": "Enter all Children(2-15yr) fashion collection list with ',' separated values",
+        "default": "childrens-ethnic-wear,childrens-western-wear,childrens-bedding-sleepwear,childrens-books-toys-and-stationery,childrens-gifts-and-returns,childrens-food-and-essentials,childrens-skin-care,childrens-accessories-essentials"
+      },
+      {
+        "type": "textarea",
+        "id": "global_feelgood_others-list",
+        "label": "Enter all FeelGood others collection list with ',' separated values",
+        "default": "pooja-essentials,yoga-essentials,stationery,insect-repellants,pet-care,books"
+      },
+      {
+        "type": "textarea",
+        "id": "global_holistic_wellness-list",
+        "label": "Enter all Holistic Wellness collection list with ',' separated values",
+        "default": "stress-sleep-and-anxiety-relief,cold-sinus-and-immunity,medicinal-herbs-and-supplements,lungs-asthama-and-anti-pollution,pcod-and-women-wellness,covid-care,anti-ageing-and-skin-problems,ayurvedic-food-skin"
+      }
+    ]
+  }
+]

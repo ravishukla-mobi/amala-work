@@ -1,0 +1,267 @@
+<style>
+  tr.Benefits,
+  tr.Material{
+    display:none
+  }
+</style>
+                {% assign product_usp = 'false' %}
+                {% assign wk_metafields = product.metafields.AE_PROD_DTLS %}
+                {% unless wk_metafields == empty %}
+                   {% for wk_metafield in wk_metafields %} 
+                      {% assign wk_temp_mf = wk_metafield | split : '", "' %}
+                      {% assign key = wk_temp_mf[0] | size | minus: 2 %} 
+                      {% assign value = wk_temp_mf[1] | size | minus:2 %}
+                      {% assign wk_check_mf = wk_temp_mf[1] | slice: 0,value | split : ':' %}
+                      {% assign meta_key = wk_temp_mf[0] | slice: 2,key %}
+                      {% if meta_key != 'Space for Detail1' and meta_key != 'Package preparation days' and meta_key != 'usp' and meta_key != 'Additional Information' and meta_key != 'USP(label:info;label:info)' and  meta_key != 'Short Description(150 char)'  %}
+                          {% assign product_usp = 'true' %}
+                          {% break %}
+                      {% endif %}
+                     
+                   {% endfor %}
+                {% endunless %}
+                {% if product_usp == 'true' %}
+                  <div class="product-info__block product-usp__col">
+                    <table class="product-ups__col table table-sm small">
+                      <tbody>
+                      {%-liquid
+                        assign brand_name = product.metafields.AE_PROD_DTLS['Brand Name']
+                        assign brand_handle = brand_name | handleize
+                      -%}
+
+                        {% if product.metafields.AE_PROD_DTLS['Brand Name'] != blank %}
+                          <tr>
+                            <th>Brand Name</th>
+                            <td><a href="https://amala.earth/collections/{{brand_handle}}" class="material_nav_link" >{{ product.metafields.AE_PROD_DTLS['Brand Name'] }}</a></td>
+                          </tr>
+                        {% endif %}
+                        {% if product.metafields.AE_PROD_DTLS['Material'] != blank %}
+                          <tr class="material_ele">
+                            <th>Material</th>
+                            <td><a class="keyingredient-sec" >{{ product.metafields.AE_PROD_DTLS['Material'] }}</a></td>
+                          </tr>
+                        {% endif %}
+                        {% if product.metafields.AE_PROD_DTLS['Ingredients'] != blank %}
+                          <tr>
+                            <th>Ingredients</th>
+                            <td>{{ product.metafields.AE_PROD_DTLS['Ingredients'] }}</td>
+                          </tr>
+                        {% endif %}
+                        {% if product.metafields.AE_PROD_DTLS['Colour'] != blank %}
+                          <tr>
+                            <th>Color</th>
+                            <td>{{ product.metafields.AE_PROD_DTLS['Colour'] }}</td>
+                          </tr>
+                        {% endif %}
+                        {% if product.metafields.AE_PROD_DTLS['Shelf Life'] != blank %}
+                          <tr>
+                            <th>Shelf Life</th>
+                            <td>{{ product.metafields.AE_PROD_DTLS['Shelf Life'] }}</td>
+                          </tr>
+                        {% endif %}
+                        {% if product.metafields.AE_PROD_DTLS['Pattern'] != blank %}
+                          <tr>
+                            <th>Pattern</th>
+                            <td>{{ product.metafields.AE_PROD_DTLS['Pattern'] }}</td>
+                          </tr>
+                        {% endif %}
+                        {% if product.metafields.AE_PROD_DTLS['fragrance_name'] != blank %}
+                          <tr>
+                            <th>Fragrance Name</th>
+                            <td>{{ product.metafields.AE_PROD_DTLS['fragrance_name'] }}</td>
+                          </tr>
+                        {% endif %}
+                        {% if product.metafields.AE_PROD_DTLS['flavour'] != blank %}
+                          <tr>
+                            <th>Flavour</th>
+                            <td>{{ product.metafields.AE_PROD_DTLS['flavour'] }}</td>
+                          </tr>
+                        {% endif %}
+                        {% if product.metafields.AE_PROD_DTLS['Size'] != blank %}
+                          <tr>
+                            <th>Size</th>
+                            <td>{{ product.metafields.AE_PROD_DTLS['Size'] }}</td>
+                          </tr>
+                        {% endif %}
+                        {% if product.metafields.AE_PROD_DTLS['Weight'] != blank %}
+                          <tr>
+                            <th>Weight</th>
+                            <td>{{ product.metafields.AE_PROD_DTLS['Weight'] }}</td>
+                          </tr>
+                        {% endif %}
+                        {% if product.metafields.AE_PROD_DTLS['Capacity'] != blank %}
+                          <tr>
+                            <th>Capacity</th>
+                            <td>{{ product.metafields.AE_PROD_DTLS['Capacity'] }}</td>
+                          </tr>
+                        {% endif %}
+                        {% if product.metafields.AE_PROD_DTLS['Dimensions'] != blank %}
+                          <tr>
+                            <th>Dimensions</th>
+                            <td>{{ product.metafields.AE_PROD_DTLS['Dimensions'] }}</td>
+                          </tr>
+                        {% endif %}
+                        {% if product.metafields.AE_PROD_DTLS['Recommended Age'] != blank %}
+                          <tr>
+                            <th>Recommended Age</th>
+                            <td>{{ product.metafields.AE_PROD_DTLS['Recommended Age'] }}</td>
+                          </tr>
+                        {% endif %}
+                        {% if product.metafields.AE_PROD_DTLS['Ideal For'] != blank %}
+                          <tr>
+                            <th>Ideal For</th>
+                            <td>{{ product.metafields.AE_PROD_DTLS['Ideal For'] }}</td>
+                          </tr>
+                        {% endif %}
+                        {% if product.metafields.AE_PROD_DTLS['No of Pages'] != blank %}
+                          <tr>
+                            <th>#Pages</th>
+                            <td>{{ product.metafields.AE_PROD_DTLS['No of Pages'] }}</td>
+                          </tr>
+                        {% endif %}
+                        {% if product.metafields.AE_PROD_DTLS['How To Use'] != blank %}
+                          <tr>
+                            <th>How to use</th>
+                            <td>{{ product.metafields.AE_PROD_DTLS['How To Use'] }}</td>
+                          </tr>
+                        {% endif %}
+                        {% if product.metafields.AE_PROD_DTLS['Fit'] != blank %}
+                          <tr>
+                            <th>Fit</th>
+                            <td>{{ product.metafields.AE_PROD_DTLS['Fit'] }}</td>
+                          </tr>
+                        {% endif %}
+                        {% if product.metafields.AE_PROD_DTLS['Binding'] != blank %}
+                          <tr>
+                            <th>Binding</th>
+                            <td>{{ product.metafields.AE_PROD_DTLS['Binding'] }}</td>
+                          </tr>
+                        {% endif %}
+                        {% if product.metafields.AE_PROD_DTLS['Author Name'] != blank %}
+                          <tr>
+                            <th>Author</th>
+                            <td>{{ product.metafields.AE_PROD_DTLS['Author Name'] }}</td>
+                          </tr>
+                        {% endif %}
+                        {% if product.metafields.AE_PROD_DTLS['Publisher'] != blank %}
+                          <tr>
+                            <th>Publisher</th>
+                            <td>{{ product.metafields.AE_PROD_DTLS['Publisher'] }}</td>
+                          </tr>
+                        {% endif %}
+                        {% if product.metafields.AE_PROD_DTLS['Care Instructions'] != blank %}
+                          <tr>
+                            <th>Care Instructions</th>
+                            <td>{{ product.metafields.AE_PROD_DTLS['Care Instructions'] }}</td>
+                          </tr>
+                        {% endif %}
+
+                  
+                      {% unless wk_metafields == empty %}
+                        {% for wk_metafield in wk_metafields %}
+                          {% assign wk_temp_mf = wk_metafield | split : '", "' %}
+                          {% assign key = wk_temp_mf[0] | size | minus: 2 %} 
+                          {% assign value = wk_temp_mf[1] | size | minus:2 %}
+                          {% assign wk_check_mf = wk_temp_mf[1] | slice: 0,value | split : ':' %}
+                          {% assign meta_key = wk_temp_mf[0] | slice: 2,key %}
+                          {% if meta_key == "fragrance_name" or meta_key == "Country Of Origin" or meta_key == "Manufacturer Details" or meta_key == "Packer Details" %}
+                            {% continue %}
+                          {% endif %}
+
+                          {% if meta_key != 'return_policy_summary' and meta_key != 'SKU' and meta_key != 'Disclaimer' and meta_key != 'Return Policy' and meta_key != 'In the box' and meta_key != 'Package Preparation Days' and meta_key != 'Care Instructions' and meta_key != 'Publisher' and meta_key != 'Author Name' and meta_key != 'Binding' and meta_key != 'Fit' and meta_key != 'How To Use' and meta_key != 'No of Pages' and meta_key != 'Ideal For' and meta_key != 'Recommended Age' and meta_key != 'Dimensions' and meta_key != 'Capacity' and meta_key != 'Weight' and meta_key != 'Size' and meta_key != 'flavour' and meta_key != 'Fragrance' and meta_key != 'Pattern' and meta_key != 'Shelf Life' and meta_key != 'Colour' and meta_key != 'Ingredients' and meta_key != 'Material' and meta_key != 'Brand Name' and meta_key != 'Space for Detail1' and meta_key != 'usp' and meta_key != 'Additional Information' and meta_key != 'USP(label:info;label:info)' and meta_key != 'Short Description(150 char)' and meta_key != 'Material'  %}
+                            <tr class="{{ wk_temp_mf[0] | slice: 2,key }}">
+                              {% if meta_key == "Package Preparation Days" %}
+                                <th>Prep Days</th>
+                              {% else %}
+                                <th>{{ wk_temp_mf[0] | slice: 2,key }}</th>
+                              {% endif %}
+                              <td>{{ wk_temp_mf[1] | slice: 0,value }}</td>
+                            </tr>
+                          {% endif %}
+
+                        {% endfor %}
+
+                        {% if product.metafields.AE_PROD_DTLS['Package Preparation Days'] != blank %}
+                          <tr>
+                            <th>Package preparation days</th>
+                            <td>{{ product.metafields.AE_PROD_DTLS['Package Preparation Days'] }}</td>
+                          </tr>
+                        {% endif %}
+                        {% if product.metafields.AE_PROD_DTLS['In the box'] != blank %}
+                          <tr>
+                            <th>In the Box</th>
+                            <td>{{ product.metafields.AE_PROD_DTLS['In the box'] }}</td>
+                          </tr>
+                        {% endif %}
+                        {% if product.metafields.AE_PROD_DTLS['return_policy_summary'] != blank %}
+                          <tr>
+                            <th>Return policy</th>
+                            <td class="return_policy_ingredient"><a class="return_policy_ele">{{ product.metafields.AE_PROD_DTLS['return_policy_summary'] }}</a></td>
+                          </tr>
+                        {% endif %}
+                        {% if product.metafields.AE_PROD_DTLS['Disclaimer'] != blank %}
+                          <tr>
+                            <th>Disclaimer</th>
+                            <td>{{ product.metafields.AE_PROD_DTLS['Disclaimer'] }}</td>
+                          </tr>
+                        {% endif %}
+                        <tr>
+                          <th>SKU</th>
+                          <td><span class="detail-product-meta__sku-number">{{ product.selected_or_first_available_variant.sku }}</span></td>
+                        </tr>
+                      {% endunless %}
+                      </tbody>
+                    </table>
+                  </div>
+                {% elsif product.metafields.AE_PROD_DTLS['usp'] != blank %}
+                    <div class="product-info__block product-usp__col">
+                    <table class="product-ups__col">
+                  
+                      {% assign usps_list = product.metafields.AE_PROD_DTLS['usp'] | split: ';' %}
+                      {% for usp_item in usps_list %}
+                      {% assign usp_title = usp_item | split: ':' %}
+                      <tr class="{{ usp_title[0] }}">
+                        <th>{{ usp_title[0] }}</th>
+                        <td>{{ usp_title[1] }}</td>
+                      </tr> 
+                      {% endfor %} 
+                    </table>
+                  </div>
+                {% endif %}
+                <!-- Product Sangius fluit tab -->
+                <script>
+                  $(document).ready(function(){
+                    if($("#key-ingredients-section .ingredients-slider").length){
+                      $('a.keyingredient-sec').click(function(){
+                        let keyingredient_scroll_height = document.getElementById("shopify-section-key-ingredient-section").offsetTop;
+                        let navbar_scroll_height = document.querySelector("[data-section-id='header']").offsetHeight;
+                        $("html, body").animate({ scrollTop: keyingredient_scroll_height - navbar_scroll_height }, "slow");
+                      })
+                    }
+                    let key_ingredients_length = $(document).find("#key-ingredients-section").length;
+                    if(key_ingredients_length > 0){
+                      $(".product_main_description .keyingredient-sec").addClass("material_nav_link");
+                      $(".product_main_description .keyingredient-sec").attr('href','#key-ingredients-section');
+                    }
+
+                    let product_return_policy = $(document).find("#product_item_return_policy").length;
+                    if(product_return_policy > 0){
+                      $(".return_policy_ingredient .return_policy_ele").addClass("material_nav_link");
+                      $('.return_policy_ele').on("click",function(){
+                        if($(window).width()<768){
+                          if($("#tab-policy .hdng-t.active").length == 0){
+                            $("#tab-policy .hdng-t").click();
+                          }
+                          $('html, body').animate({scrollTop: $('.hide-for-desktop .content-collepse2 #product_item_return_policy').offset().top -150 }, 'slow');
+                        } else {
+                          $('#product_item_return_policy .heading .detail').addClass("display_policy_product");
+                          $('html, body').animate({scrollTop: $('.hide-for-mobile #product_item_return_policy').offset().top - 400 }, 'slow');
+                          setTimeout(function(){
+                            $('#product_item_return_policy .heading .detail').removeClass("display_policy_product");
+                          }, 3500); 
+                        }
+                        
+                      })
+                    }
+                  })
+                </script>

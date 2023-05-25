@@ -1,0 +1,787 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        $(document).on('click', '.product-inner .product-top a, .product-inner .product-title a', function(e) {
+            var $product = $(this).parents('.product-inner');
+            var $form = $product.find('form');
+            var price = $product.find('.product-prices.no-sale').text();
+            price = Number(price.replace(/[^0-9.-]+/g,""));
+            dataLayer.push({
+                event: "productClick",
+                ecommerce: {
+                    click: {
+                        actionField: {
+                            list: window.location.href, 
+                            action: "click"
+                        },
+                        products: [
+                            {
+                                id: $product.find('.wk-add-product').attr('data-wk-add-product'),
+                                name: $product.find('.product-title').text(),
+                                price: price,
+                                brand: $product.find('.st-vendor > a').text(),
+                                category: $('.collection__title').text(),
+                                variant: $form.find('input[name="id"]').val(),
+                                position: $product.parent().index() + 1
+                            }
+                        ]
+                    }
+                },
+            })
+        });
+    });
+  </script>
+
+<div id="searchModalContainer" class="" v-cloak>
+        <div class="" id="searchModal" style="display: none" v-show="isOpen">
+            <div id="stOverlay">
+                <div class="resultLoading" v-show="loader">
+                    <div class="st-loader"></div>
+                </div>
+                <div class="noResult" v-show="totalHits===0 && !someError">
+                    <div class="st-error-text">No Search Result for '${ query }$'</div>
+                    <h5>
+                        <span>Please try with different query <span v-if="filterCount > 0">or try <span class="high-light text-main" v-on:click="clearFilters()">clearing </span>Filters.</span><span v-else>.</span></span>
+                    </h5>
+                    <div class="st-explore-more st-error-text">Explore Our Other Collections</div>
+                    <ul class="st-row">
+                        <li class="st-col-md-4 st-col-sm-4 st-col-xs-6">
+                            <!-- Collection image -->
+                            <div class="image">
+                                <a href="/collections/mindful-eating">
+                                    <img src="//cdn.shopify.com/s/files/1/0523/3252/7770/files/mindfuleating_240x240.png?v=1633428601" alt="Mindful Eating" loading="lazy" srcset="//cdn.shopify.com/s/files/1/0523/3252/7770/files/mindfuleating_240x240.png?v=1633428601" sizes="auto" />
+                                    <div class="brand-spacing">
+                                        <div class="brand-txt">Mindful Eating</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="st-col-md-4 st-col-sm-4 st-col-xs-6">
+                            <!-- Collection image -->
+                            <div class="image">
+                                <a href="/collections/ethical-beauty">
+                                    <img src="//cdn.shopify.com/s/files/1/0523/3252/7770/files/Ethicalbeauty_240x240.png?v=1621497411" alt="Ethical Beauty" loading="lazy" srcset="//cdn.shopify.com/s/files/1/0523/3252/7770/files/Ethicalbeauty_240x240.png?v=1621497411" sizes="auto" />
+                                    <div class="brand-spacing">
+                                        <div class="brand-txt">Ethical Beauty</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="st-col-md-4 st-col-sm-4 st-col-xs-6">
+                            <!-- Collection image -->
+                            <div class="image">
+                                <a href="/collections/joyful-home">
+                                    <img src="//cdn.shopify.com/s/files/1/0523/3252/7770/files/JoyfulHome_240x240.png?v=1621497471" alt="Joyful Home" loading="lazy" srcset="//cdn.shopify.com/s/files/1/0523/3252/7770/files/JoyfulHome_240x240.png?v=1621497471" sizes="auto" />
+                                    <div class="brand-spacing">
+                                        <div class="brand-txt">Joyful Home</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="st-col-md-4 st-col-sm-4 st-col-xs-6">
+                            <!-- Collection image -->
+                            <div class="image">
+                                <a href="/collections/responsible-fashion">
+                                    <img src="//cdn.shopify.com/s/files/1/0523/3252/7770/files/Responsiblefashion_240x240.png?v=1621497431" alt="Responsible Fashion" loading="lazy" srcset="//cdn.shopify.com/s/files/1/0523/3252/7770/files/Responsiblefashion_240x240.png?v=1621497431" sizes="auto" />
+                                    <div class="brand-spacing">
+                                        <div class="brand-txt">Responsible Fashion</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="st-col-md-4 st-col-sm-4 st-col-xs-6">
+                            <!-- Collection image -->
+                            <div class="image">
+                                <a href="/collections/conscious-family">
+                                    <img src="//cdn.shopify.com/s/files/1/0523/3252/7770/files/Consciousfamily_240x240.png?v=1621497451" alt="Conscious Family" loading="lazy" srcset="//cdn.shopify.com/s/files/1/0523/3252/7770/files/Consciousfamily_240x240.png?v=1621497451" sizes="auto" />
+                                    <div class="brand-spacing">
+                                        <div class="brand-txt">Conscious Family </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="st-col-md-4 st-col-sm-4 st-col-xs-6">
+                            <!-- Collection image -->
+                            <div class="image">
+                                <a href="/collections/feel-good-others">
+                                    <img src="//cdn.shopify.com/s/files/1/0523/3252/7770/files/Other_743ebeb7-a65c-4d31-991c-6da89c2b8482_240x240.png?v=1621497490" alt="Feel-good Others" loading="lazy" srcset="//cdn.shopify.com/s/files/1/0523/3252/7770/files/Other_743ebeb7-a65c-4d31-991c-6da89c2b8482_240x240.png?v=1621497490" sizes="auto" />
+                                    <div class="brand-spacing">
+                                        <div class="brand-txt">Feel-good Others </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="somethingWentWrongs" v-show="someError">
+                    <div class="st-error-text">Oops !!! Something Went Wrong.</div>
+                    <h5>
+                    <span>Please try
+                        <span class="high-light text-main" onclick="window.location.reload()">again</span>
+                        or visit our
+                        <a class="high-light text-main" v-bind:href="base_url">Home Page.</a>
+                    </span>
+                    </h5>
+                </div>
+            </div>
+            <div id="stMainContent" v-show="!loader && totalHits && !someError">
+                <div class="st-row">
+                    <div id="left" class="st-hidden-xs st-hidden-sm st-col-md-3 scrollbar">
+                        <div class="filter-inner">
+                            <div class="filter-top-head">
+                                <span class="top-head-title">Filter By</span>
+                                <span class="reset" v-show="filterCount > 0" v-on:click="clearFilters()">Reset All</span>
+                            </div>
+                            <div class="filter-bottom-body">
+                                <div class="filter-wrapper" :class="f.title" v-for="f in filtersForUI" v-show="(f.values.length>0 || f.selected.length>0 || f.field==='excludeOutOfStock') && !f.onTop && f.title!== 'Tags' && f.filterVisibility">
+                                    <span class="clear" v-show="f.selected.length > 0" v-on:click="clearFilters(f.field)">Clear</span>
+                                    <div class="filter-head" v-on:click="f.isOpen = !f.isOpen">
+                                        <span v-if="f.title === 'Product Type'">Type</span>
+                                        <span class="st-filter-title" v-else>${ f.title }$</span>
+                                        <span class="arrow down-arrow" v-show="f.title !== 'Shop By Concerns' && !f.isOpen">
+                                        <svg focusable="false" width="14px" class="icon st-icon--arrow-bottom" viewBox="0 0 12 8" role="presentation">
+                                            <path stroke="currentColor" stroke-width="2" d="M10 2L6 6 2 2" fill="none" stroke-linecap="square"></path>
+                                        </svg>
+                                    </span>
+                                        <span class="arrow up-arrow" v-show="f.title === 'Shop By Concerns' || f.isOpen">
+                                        <svg focusable="false" width="14px" class="icon st-icon--arrow-up" viewBox="0 0 12 8" role="presentation">
+                                            <path stroke="currentColor" stroke-width="2" d="M10 2L6 6 2 2" fill="none" stroke-linecap="square"></path>
+                                        </svg>
+                                    </span>
+                                    </div>
+                                    <div class="filter-body" v-show="f.title === 'Shop By Concerns' || f.isOpen">
+                                        <div class="filter-list scrollTop scrollbar" v-if="f.type==='multiple' && f.title!=='Price' && f.title!=='Discount' && f.title !=='Customer Ratings'">
+                                            <div class="filter-item selected" v-for="i in f.selected" v-bind:key="i">
+                                                <label>
+                                                    <input type="checkbox" v-bind:value="i" v-model="f.selected" v-on:change="pushFilter()" />
+                                                    <span class="checkbox">
+                                                    <svg focusable="false" class="icon st-icon--check" width="12px" viewBox="0 0 24 24" role="presentation">
+                                                        <path fill="currentColor" d="M9 20l-7-7 3-3 4 4L19 4l3 3z"></path>
+                                                    </svg>
+                                                </span>
+                                                    <span class="filter-label">${ i }$</span>
+                                                    <span class="filter-count">[${ getSelectedCount(i, f.field) }$]</span>
+                                                </label>
+                                            </div>
+                                            <div class="filter-item" v-for="i in getNotSelectedFilters(f.field)" v-bind:key="i.name">
+                                                <label>
+                                                    <input type="checkbox" v-bind:value="i.name" v-model="f.selected" v-on:change="pushFilter(),filterAnalytics('left',f.title,i.name)" />
+                                                    <span class="checkbox">
+                                                    <svg focusable="false" class="icon st-icon--check" width="12px" viewBox="0 0 24 24" role="presentation">
+                                                        <path fill="currentColor" d="M9 20l-7-7 3-3 4 4L19 4l3 3z"></path>
+                                                    </svg>
+                                                </span>
+                                                    <span class="filter-label">${ i.name }$</span>
+                                                    <span class="filter-count">[${ i.count }$]</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="filter-list scrollTop scrollbar" v-if="f.title==='Price' || f.title==='Discount' || f.title==='Customer Ratings'">
+                                            <div class="filter-item selected" v-for="i in f.selected" v-bind:key="i[0]">
+                                                <label>
+                                                    <input type="checkbox" v-bind:value="i" v-model="f.selected" v-on:change="pushFilter()" />
+                                                    <span class="checkbox">
+                                                    <svg focusable="false" class="icon st-icon--check" width="12px" viewBox="0 0 24 24" role="presentation">
+                                                        <path fill="currentColor" d="M9 20l-7-7 3-3 4 4L19 4l3 3z"></path>
+                                                    </svg>
+                                                </span>
+                                                    <span class="filter-label" v-if="f.title==='Discount' && i[1] !== 100" v-bind:title="i[0] + '% - ' + i[1] + '%'">${ i[0] }$% - ${ i[1] }$%</span>
+                                                    <span class="filter-label" v-if="f.title==='Discount' && i[1] === 100" v-bind:title="i[0] + '% - ' + '& Above'">${ i[0] }$% and Above</span>
+                                                    <span class="filter-label" v-if="f.title==='Price'" v-bind:title="i[0] + '-' +i[1]">${ currency }$${ numberWithComa(i[0]) }$ - ${currency }$${ numberWithComa(i[1]) }$</span>
+                                                    <span class="filter-label" v-if="f.title==='Customer Ratings'" v-bind:title="i[0] + '+ Rating'">
+                                                    <span class="full-star" v-for="a in i[0]">
+                                                        <i class="fa fa-star"></i> </span><span>${ i[0] }$+ Rating</span>
+                                                </span>
+                                                    <span class="filter-count">[${ getSelectedCount(i, f.field) }$]</span>
+                                                </label>
+                                            </div>
+                                            <div class="filter-item" v-for="i in getNotSelectedFilters(f.field)" v-bind:key="i.min">
+                                                <label>
+                                                    <input type="checkbox" v-bind:value="[i.min,i.max]" v-model="f.selected" v-on:change="pushFilter(),filterAnalytics('left',f.title,[i.min,i.max])" />
+                                                    <span class="checkbox">
+                                                    <svg focusable="false" class="icon st-icon--check" width="12px" viewBox="0 0 24 24" role="presentation">
+                                                        <path fill="currentColor" d="M9 20l-7-7 3-3 4 4L19 4l3 3z"></path>
+                                                    </svg>
+                                                </span>
+                                                    <span class="filter-label" v-if="f.title==='Discount' && i.max !== 100" v-bind:title="i.min + '% -' +i.max + '%'">${ i.min }$% - ${ i.max }$%</span>
+                                                    <span class="filter-label" v-if="f.title==='Discount' && i.max === 100" v-bind:title="i.max + '% - ' + '& Above'">${ i.min }$% and Above</span>
+                                                    <span class="filter-label" v-if="f.title==='Price' && i.max!==200000" v-bind:title="f.title.toUpperCase() + ': ' +  i.min + '-' +i.max">${ currency }$${ numberWithComa(i.min) }$ - ${currency }$${ numberWithComa(i.max) }$</span>
+                                                    <span class="filter-label" v-if="f.title==='Customer Ratings'" v-bind:title="i.min + '+ Rating'">
+                                                    <span class="full-star" v-for="a in i.min">
+                                                        <i class="fa fa-star"></i> </span><span>${ i.min }$+ Rating</span>
+                                                </span>
+                                                    <span class="filter-count">[${ i.count }$]</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="filter-list scrollTop scrollbar" v-if="f.type==='single'">
+                                            <div class="filter-item" v-for="i in f.values" v-bind:key="i" v-bind:class="{'selected':f.selected.length > 0}">
+                                                <label>
+                                                    <input type="checkbox" v-bind:value="i" v-model="f.selected" v-on:change="pushFilter()" />
+                                                    <span class="checkbox">
+                                                    <svg focusable="false" class="icon st-icon--check" width="12px" viewBox="0 0 24 24" role="presentation">
+                                                        <path fill="currentColor" d="M9 20l-7-7 3-3 4 4L19 4l3 3z"></path>
+                                                    </svg>
+                                                </span>
+                                                    <span class="filter-label">${ i }$</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="right" class="st-col-xs-12 st-col-sm-12 st-col-md-9">
+                        <div class="st-row st-hidden-md st-hidden-lg" id="mobile-filter-sort">
+                            <div class="st-col-xs-6" v-on:click="showMobileFilter= true">
+                                <div class="st-filter-tab tab position-relative">
+                                <span>
+                                    <svg focusable="false" class="icon icon--filter" viewBox="0 0 19 20" role="presentation">
+                                        <path d="M17.0288086 4.01391602L11 9v7.0072021l-4 2.008545V9L1.01306152 4.01391602V1H17.0288086z" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="square"></path>
+                                    </svg>
+                                </span>
+                                    <span class="filter-tab-label">Filter</span>
+                                    <span class="filter-cue cue" v-show="filterCount > 0"></span>
+                                </div>
+                            </div>
+                            <div class="st-col-xs-6 mobile-filter-sort-open">
+                                <div class="sort-tab tab" @click="sortDisplay=true">
+                                <span>
+                                    <svg version="1.1" id="Layer_1" width="14px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 460.088 460.088" style="enable-background:new 0 0 460.088 460.088;" xml:space="preserve">
+                                        <g>
+                                            <g>
+                                                <g>
+                                                    <path d="M25.555,139.872h257.526V88.761H25.555C11.442,88.761,0,100.203,0,114.316C0,128.429,11.442,139.872,25.555,139.872z" />
+                                                    <path d="M25.555,242.429h257.526v-51.111H25.555C11.442,191.318,0,202.76,0,216.874C0,230.988,11.442,242.429,25.555,242.429z" />
+                                                    <path d="M25.555,293.874v0.001C11.442,293.875,0,305.316,0,319.43s11.442,25.555,25.555,25.555h178.91
+                c-2.021-6.224-3.088-12.789-3.088-19.523c0-11.277,2.957-22.094,8.48-31.588H25.555z" />
+                                                    <path d="M450.623,302.611c-12.62-12.621-33.083-12.621-45.704,0l-26.535,26.535V52.926c0-17.849-14.469-32.317-32.318-32.317
+                s-32.318,14.469-32.318,32.317v276.22l-26.535-26.535c-12.621-12.62-33.083-12.621-45.704,0
+                c-12.621,12.621-12.621,33.083,0,45.704l81.7,81.699c12.596,12.6,33.084,12.643,45.714,0l81.7-81.699
+                C463.243,335.694,463.244,315.232,450.623,302.611z" />
+                                                </g>
+                                            </g>
+                                        </g>
+                                        <g></g>
+                                        <g></g>
+                                        <g></g>
+                                        <g></g>
+                                        <g></g>
+                                        <g></g>
+                                        <g></g>
+                                        <g></g>
+                                        <g></g>
+                                        <g></g>
+                                        <g></g>
+                                        <g></g>
+                                        <g></g>
+                                        <g></g>
+                                        <g></g>
+                                    </svg>
+                                </span>
+                                    <span class="sort-tab-label">Sort</span>
+                                    <span class="sort-cue cue" v-show="sortLabel !== 'Relevance'"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="result-info-brand-sort" class="st-row">
+                            <div class="st-col-xs-12 st-col-md-8">
+                            <span class="result-info">
+                                <span class=""></span> ${ totalHits }$
+                                <span v-show="totalHits !== 1"> results</span>
+                                <span v-show="totalHits === 1"> result</span>
+                                <span class="st-hidden-xs st-hidden-sm" v-if="query">
+                                    for
+                                    <span class="text-main">'${ query | truncate(15) }$'</span></span>
+                            </span>
+                                <span class="separator st-hidden-xs st-hidden-sm"></span>
+                                <span class="brand">
+                                <a href="https://www.searchtap.io?utm_source=amala.earth&utm_medium=website" target="_blank" class="st-brand-link">
+                                    <span>Powered by SearchTap</span>
+                                    <img src="https://www.searchtap.io/img/st-gray-icon.svg" alt="grey-logo" class="st-logo grey-logo lazyautosizes lazyload" />
+                                    <img src="https://www.searchtap.io/img/st-icon.svg" alt="green-logo" class="st-logo green-logo lazyautosizes lazyload" />
+                                </a>
+                            </span>
+                            </div>
+                            <div class="st-hidden-xs st-hidden-sm st-col-md-4">
+                                <div class="st-sort-desktop xx">
+                                    <span class="sort-text">Sort By:</span>
+                                    <div class="sort-wrapper" @click="sortDesktopDisplay = !sortDesktopDisplay">
+                                        <div class="sort-tab">
+                                            <span class="st-sort-title">${ sortLabel }$</span>
+                                            <span class="st-down-arrow">
+                                            <svg focusable="false" width="14px" class="icon st-icon--arrow-bottom" viewBox="0 0 12 8" role="presentation">
+                                                <path stroke="currentColor" stroke-width="2" d="M10 2L6 6 2 2" fill="none" stroke-linecap="square"></path>
+                                            </svg>
+                                        </span>
+                                        </div>
+                                        <div class="sort-body" v-show="sortDesktopDisplay">
+                                            <div class="sort-list">
+                                                <div class="sort-item" v-bind:class="{'selected':sortLabel === sort.label}" v-for="sort in sorts" v-bind:key="sort.label" v-on:click="sorting(sort.label), goToTop()">
+                                                    <span>${ sort.label }$</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="st-row" id="products-listing">
+                            <div class="st-product st-col-xs-6 st-col-sm-4 st-col-md-4" v-bind:key="item.id" v-for="item in results">
+                                <!-- <Products inline-template v-bind:item="item"> -->
+                                <div class="product-inner" :class="`product_${item.id}`">
+                                    <!--                                <a :href="getUrl(item.handle)" @click="prodUrl(item.title)">-->
+                                    <div class="product-top">
+                                        <a :href="getUrl(item.handle)">
+                                            <div class="product-tags" :class="{ 'sale': item.discount > 0 }">
+                                                <!--                                                    <span class="tag new" v-show="item.tags.indexOf('new')> -1">New</span>-->
+                                                <span class="tag sold-out" v-show="!item.isActive">Sold Out</span>
+                                                <span class="tag sale" v-show="item.discount > 0">${item.discount}$ Off%</span>
+                                                <!--                                                    <span class="tag sale_banner" v-show="item.product_type">${item.product_type}$</span>-->
+                                            </div>
+                                            <div class="product-images" :id="`img_id_${item.id}`">
+                                                <!--                                                <div class="hover-effect"></div>-->
+                                                <img class="img main-img lazyautosizes lazyload" :src="imgResizer(item.image ,'_350x')" :alt="item.title" />
+                                                <img v-if="item.images[1]" class="img hover-img lazyautosizes lazyload" :src="imgResizer(item.images[1], '_350x')" :alt="item.title" />
+                                                <img v-else class="img hover-img lazyautosizes lazyload" :src="imgResizer(item.image ,'_350x')" :alt="item.title" />
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="product-bottom">
+                                        <!--                                        <a :href="getUrl(item.handle)" @click="prodUrl(item.title)">-->
+                                        <!--                                            <div class="st-sizes">
+                                                                                            <span class="st-size" v-for="s in item.size">${s}$</span>
+                                                                                        </div>-->
+                                        <div class="product-title">
+                                            <a :href="getUrl(item.handle)">
+                                                <span>${ item.title }$</span>
+                                            </a>
+                                        </div>
+                                        <div class="st-vendor">
+                                            <a :href="getVendorUrl(item.vendor)">${item.vendor}$</a>
+                                        </div>
+                                        <div class="st-reviews">
+                                        <span class="stamped-product-reviews-badge" :data-product-sku="item.handle" :data-id="item.id" :data-product-type="item.product_type" :data-product-title="item.title" v-if="item.reviews_count">
+                                            <span class="stamped-badge" :data-rating="item.reviews_average" data-lang="en" :aria-label="`Rated ${item.reviews_average} out of 5 stars 5reviews`"><span class="stamped-starrating stamped-badge-starrating" aria-hidden="true">
+                                                    <i class="stamped-fa stamped-fa-star" aria-hidden="true" v-for="a in Math.round(item.reviews_average)"></i>
+                                                    <i class="stamped-fa stamped-fa-star-o" aria-hidden="true" v-for="b in (5 - Math.round(item.reviews_average))"></i>
+                                                </span>
+                                                <span class="stamped-badge-caption" data-reviews="5" :data-rating="item.reviews_average" data-label="reviews" :aria-label="`${item.reviews_count} reviews`" data-version="2">${item.reviews_count}$<span style="display:none;"> reviews</span>
+                                                </span></span></span>
+                                        </div>
+                                        <div class="st-product-prices">
+                                            <div class="product-prices" v-show="item.discount > 0">
+                                                <span class="discounted_price">${currency }$${ numberWithComa(item.activeDiscountedPrice) }$</span>
+                                                <span class="price">${ currency }$${numberWithComa(item.activePrice) }$</span>
+                                                <span class="discount">${ item.discount }$% OFF</span>
+                                            </div>
+                                            <div class="product-prices no-sale" v-show="item.discount <= 0">
+                                                <!--                                                    <span class="multiple-prices" v-if="item.hasMultiplePrice">from </span>-->
+                                                <span class="price.no_sale">${currency }$${ numberWithComa(item.activeDiscountedPrice) }$</span>
+                                            </div>
+                                        </div>
+                                        <!--                                        </a>-->
+                                    </div>
+                                    <!--                                </a>-->
+                                    <div class="buynow_button">
+                                        <div class="cart--button__row">
+                                            <button type="button" title="Add to Wishlist" :data-wk-add-product="item.id" class="wk-button-collection wk-wishlist-button-collection wk-add-product" @click="updateWishlist(item.id)">
+                                                <div class="wk-icon">
+                                                    <svg width="22" height="19" viewBox="0 0 22 19" class="st-wishlist-inactive wk_btn_inactive">
+                                                        <g fill="none" fill-rule="evenodd">
+                                                            <g fill="#000" stroke="#000" stroke-width=".3">
+                                                                <g>
+                                                                    <g>
+                                                                        <g>
+                                                                            <path d="M10 15.408c-3.349-2.381-8.131-6.644-8.131-9.11 0-1.857 1.392-4.43 4.007-4.43 2.378 0 3.218 2.055 3.25 2.136.137.361.483.597.869.6H10c.384 0 .73-.237.87-.594.035-.087.875-2.141 3.253-2.141 2.614 0 4.007 2.571 4.007 4.428 0 2.464-4.782 6.728-8.131 9.111M14.123 0C12.06 0 10.756 1.005 10 1.913 9.244 1.005 7.941 0 5.876 0 2.361 0 0 3.256 0 6.297c0 4.427 8.504 10.36 9.473 11.022.159.108.343.163.527.163s.368-.055.527-.163C11.497 16.657 20 10.724 20 6.297 20 3.257 17.639 0 14.123 0" transform="translate(-619 -1806) translate(40 1377) translate(570 419) translate(10 11)"></path>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                    <svg width="22" height="19" viewBox="0 0 22 19" class="st-wishlist-active wk_btn_active">
+                                                        <g fill="none" fill-rule="evenodd">
+                                                            <g fill="#FFF" stroke="#FFF" stroke-width=".3">
+                                                                <g>
+                                                                    <g>
+                                                                        <path d="M14.123 0C12.06 0 10.756 1.005 10 1.913 9.244 1.005 7.941 0 5.876 0 2.361 0 0 3.256 0 6.297c0 4.427 8.504 10.36 9.473 11.022.159.108.343.163.527.163s.368-.055.527-.163C11.497 16.657 20 10.724 20 6.297 20 3.257 17.639 0 14.123 0" transform="translate(-343 -1832) translate(334 1821) translate(10 12)"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <span class="wk-label">Add to Wishlist</span>
+                                            </button>
+                                            <button type="button" class="wk-button-collection wk-remove-product wk-wishlist-button-collection" @click="updateWishlist(item.id, 'click')" title="Remove from Wishlist" :data-wk-remove-product="item.id" style="display: none">
+                                                <div class="wk-icon">
+                                                    <svg class="wk_btn_inactive" width="22" height="19" viewBox="0 0 22 19">
+                                                        <g fill="none" fill-rule="evenodd">
+                                                            <g fill="#000" stroke="#000" stroke-width=".3">
+                                                                <g>
+                                                                    <g>
+                                                                        <g>
+                                                                            <path d="M10 15.408c-3.349-2.381-8.131-6.644-8.131-9.11 0-1.857 1.392-4.43 4.007-4.43 2.378 0 3.218 2.055 3.25 2.136.137.361.483.597.869.6H10c.384 0 .73-.237.87-.594.035-.087.875-2.141 3.253-2.141 2.614 0 4.007 2.571 4.007 4.428 0 2.464-4.782 6.728-8.131 9.111M14.123 0C12.06 0 10.756 1.005 10 1.913 9.244 1.005 7.941 0 5.876 0 2.361 0 0 3.256 0 6.297c0 4.427 8.504 10.36 9.473 11.022.159.108.343.163.527.163s.368-.055.527-.163C11.497 16.657 20 10.724 20 6.297 20 3.257 17.639 0 14.123 0" transform="translate(-619 -1806) translate(40 1377) translate(570 419) translate(10 11)"></path>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                    <svg class="wk_btn_active" width="22" height="19" viewBox="0 0 22 19">
+                                                        <g fill="none" fill-rule="evenodd">
+                                                            <g fill="#FFF" stroke="#FFF" stroke-width=".3">
+                                                                <g>
+                                                                    <g>
+                                                                        <path d="M14.123 0C12.06 0 10.756 1.005 10 1.913 9.244 1.005 7.941 0 5.876 0 2.361 0 0 3.256 0 6.297c0 4.427 8.504 10.36 9.473 11.022.159.108.343.163.527.163s.368-.055.527-.163C11.497 16.657 20 10.724 20 6.297 20 3.257 17.639 0 14.123 0" transform="translate(-343 -1832) translate(334 1821) translate(10 12)"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <span class="wk-label">In Wishlist</span>
+                                            </button>
+                                            <!-- <form method="post" action="/cart/add" :id=`product_form_id_${item.id}_collection-template` v-show="item.variants.length === 1" accept-charset="UTF-8" class="product-item__action-list button-stack" enctype="multipart/form-data"><input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8" value="✓"><input type="hidden" name="quantity" value="1"> -->
+                                            <form method="post" action="/cart/add" :id=`product_form_id_${item.id}_collection-template` accept-charset="UTF-8" class="product-item__action-list button-stack" enctype="multipart/form-data"><input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8" value="✓"><input type="hidden" name="quantity" value="1">
+                                                <input type="hidden" name="id" :value="item.variants[0].id">
+                                                <!-- <button
+                                                        v-if="item.isActive && item.variants.length === 1"
+                                                        type="submit"
+                                                        class="product-item__action-button button button--small button--primary buy_now"
+                                                        data-action="add-to-cart"
+                                                        :data-product-handle="item.handle"
+                                                        :data-variant-id="item.variants[0].id">
+                                                    Add to cart
+                                                </button> -->
+                                                <!--                                                <button v-else-if="item.isActive && item.variants.length > 1" type="button" class="product-item__action-button button buy_now button&#45;&#45;small button&#45;&#45;primary" data-action="open-modal" data-secondary-action="open-quick-view" aria-controls="modal-quick-view-collection-template" :data-product-url=`/products/${item.handle}`>Add to cart</button>-->
+                                                
+                                                <!-- L&F -->
+                                                <div v-if="item.isActive" class="quick-view-button">
+                                                    <button type="button "
+                                                            class="product-item__action-button button button--small button--primary buy_now"
+                                                            data-action="open-modal"
+                                                            data-secondary-action="open-quick-view"
+                                                            aria-controls="modal-quick-view-{{ section.id }}"
+                                                            :data-product-url="getUrl(item.handle)"
+                                                    >
+                                                        Add to cart
+                                                    </button>
+                                                </div>
+                                                <a v-else-if="!item.isActive" class="product-item__action-button button button--small button--primary buy_now" :href="getUrl(item.handle)">Notify Me</a>
+                                                <!-- End L&F -->
+                                            </form>
+                                            <!-- <a :href="getUrl(item.handle)" @click="prodUrl(item.title)" v-show="item.isActive && item.variants.length > 1" class="button buy_now">View Product</a> -->
+                                        </div> <!--                                    <div class="button buy_now" @click="addToCart($event, item.variants[0].id)">Add To Cart</div>-->
+                                    </div> ${updateWishlist(item.id)}$
+                                    <!--                                    <div class="buynow_button st-sold-out"  style="display: none;">
+                                            <div class="button buy_now disabled">Sold Out</div>
+                                        </div>-->
+                                </div>
+                                <!-- </Products> -->
+                            </div>
+                        </div>
+                        <div class="st-results-end" id="products-footer">
+                            <div class="st-results-loader">
+                                <!--                                        <div class="result-load-more" v-show="!resultsEnd" @click="loadMore">
+                                                                                <span>Show More</span>
+                                                                            </div>-->
+                                <div class="result-loading" v-show="!resultsEnd">
+                                    <span class="st-spinner"><svg version="1.1" id="L5" width="90px" height="60px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve"><circle fill="#945539" stroke="none" cx="6" cy="50" r="6"><animateTransform attributeName="transform" dur="1s" type="translate" values="0 15 ; 0 -15; 0 15" repeatCount="indefinite" begin="0.1"></animateTransform></circle> <circle fill="#945539" stroke="none" cx="30" cy="50" r="6"><animateTransform attributeName="transform" dur="1s" type="translate" values="0 10 ; 0 -10; 0 10" repeatCount="indefinite" begin="0.2"></animateTransform></circle> <circle fill="#945539" stroke="none" cx="54" cy="50" r="6"><animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5" repeatCount="indefinite" begin="0.3"></animateTransform></circle></svg></span>
+                                </div>
+                            </div>
+                            <div class="result-ends" v-show="resultsEnd">
+                                <span>Result Ends Here</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+<!--                <div class="st-pagination" v-if="!loader && results.length > 0">
+                    &lt;!&ndash;                                            <span class="pagination-text">Showing ${ currOffset+1 }$ - ${ currOffset+results.length }$ of ${totalHits}$ results</span>&ndash;&gt;
+                    <Paginate :page-count="pageCount" :page-range="1" v-model="currPage"
+                              prev-text="Load Previous" next-text="Load More"
+                              :container-class="'pagination pagination-custom text-center'"
+                              :page-class="'page-item'" :next-class="'page-item st-next'"
+                              :prev-class="'page-item st-prev'" :click-handler="loadMore" :hide-prev-next="false"
+                              :break-view-class="'st-break-view'">
+                    </Paginate>
+
+                </div>-->
+
+                <div class="st-hidden-md st-hidden-lg" id="mobile-filter-container">
+                    <div class="filter-wrapper" v-show="showMobileFilter">
+                        <div class="filter-head align-items-center position-absolute st-row">
+                            <div class="st-col-xs-5 st-text-left">
+                                <span class="filter-head-label">Filter By</span>
+                            </div>
+                            <div class="st-col-xs-7 st-text-right">
+                                <span class="clear-all" v-on:click="clearFilters()" v-show="filterCount > 0">Reset All</span>
+                                <span class="filter-close" v-on:click="showMobileFilter =false">Close</span>
+                                <span class="filter-head-cross" v-on:click="showMobileFilter =false">
+                                <svg height="10px" style="enable-background: new 0 0 512.001 512.001" viewBox="0 0 512.001 512.001" width="10px" x="0px" xml:space="preserve" y="0px">
+                                    <path class="active-path" d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717    L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859    c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287    l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285    L284.286,256.002z" data-old_color="#000000" data-original="#000000" fill="#4E3830" />
+                                </svg>
+                            </span>
+                            </div>
+                        </div>
+                        <div class="filter-content">
+                            <div class="filter-items" :class="f.title" v-bind:key="f.title" v-for="f in filtersForUI" v-show="(f.values.length>0 || f.selected.length>0 || f.field==='excludeOutOfStock') && !f.onTop && f.title!== 'Tags' && f.filterVisibility">
+                                <div class="filter-item-head">
+                                    <span :class="f.title" class="filter-item-head-label" v-on:click="f.isMobileOpen = !f.isMobileOpen" v-if="f.title === 'Product Type'">Type</span>
+                                    <span class="filter-item-head-label" v-on:click="f.isMobileOpen = !f.isMobileOpen" v-else>${ f.title }$</span>
+                                    <span class="filter-clear" v-on:click="clearFilters(f.field)" v-show="f.selected.length > 0">Clear</span>
+                                    <span class="filter-arrows arrows" v-show="f.title !== 'Shop By Concerns' && ! f.isMobileOpen">
+                                    <svg focusable="false" width="14px" class="icon st-icon--arrow-bottom" viewBox="0 0 12 8" role="presentation">
+                                        <path stroke="currentColor" stroke-width="2" d="M10 2L6 6 2 2" fill="none" stroke-linecap="square"></path>
+                                    </svg>
+                                </span>
+                                    <span class="filter-arrows arrows" v-show="f.title === 'Shop By Concerns' || f.isMobileOpen">
+                                    <svg focusable="false" width="14px" class="icon st-icon--arrow-up" viewBox="0 0 12 8" role="presentation">
+                                        <path stroke="currentColor" stroke-width="2" d="M10 2L6 6 2 2" fill="none" stroke-linecap="square"></path>
+                                    </svg>
+                                </span>
+                                </div>
+                                <div class="filter-item-body scrollTop scrollbar" v-show="f.title === 'Shop By Concerns' || f.isMobileOpen">
+                                    <div v-if="f.textType==='text'">
+                                        <div class="filter-item selected" v-bind:key="i" v-for="i in f.selected">
+                                            <label>
+                                                <input type="checkbox" v-bind:value="i" v-model="f.selected" v-on:change="pushFilter()" />
+                                                <span class="checkbox">
+                                                <svg focusable="false" class="icon st-icon--check" width="12px" viewBox="0 0 24 24" role="presentation">
+                                                    <path fill="currentColor" d="M9 20l-7-7 3-3 4 4L19 4l3 3z"></path>
+                                                </svg>
+                                            </span>
+                                                <span class="filter-label">${ i }$</span>
+                                                <span class="filter-count">(${ getSelectedCount(i, f.field) }$)</span>
+                                            </label>
+                                        </div>
+                                        <div class="filter-item" v-bind:key="i.name" v-for="i in getNotSelectedFilters(f.field)">
+                                            <label>
+                                                <input type="checkbox" v-bind:value="i.name" v-model="f.selected" v-on:change="pushFilter(),filterAnalytics('left',f.title,i.name)" />
+                                                <span class="checkbox">
+                                                <svg focusable="false" class="icon st-icon--check" width="12px" viewBox="0 0 24 24" role="presentation">
+                                                    <path fill="currentColor" d="M9 20l-7-7 3-3 4 4L19 4l3 3z"></path>
+                                                </svg>
+                                            </span>
+                                                <span class="filter-label">${ i.name }$</span>
+                                                <span class="filter-count">(${ i.count }$)</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div v-if="f.title === 'Size (UK)' || f.title === 'Size (EU)' || f.title === 'Color'">
+                                        <div class="filter-item selected st-swatches" v-bind:key="i" v-for="i in f.selected">
+                                            <label class="st-swatch" :class=`filter_${f.field}`>
+                                                <input type="checkbox" v-bind:value="i" v-model="f.selected" v-on:change="pushFilter()" />
+                                                <span class="checkbox" v-if="f.title=== 'Size (UK)' || f.title === 'Size (EU)'">
+                                                <span class="filter-label" :title="f.title.toUpperCase() + ': ' + i">${ i }$</span></span>
+                                                <span class="checkbox" v-if="f.title=== 'Color'" :style="{'background' : getColorName(i)}" :title="f.title.toUpperCase() + ': ' + i"></span>
+                                            </label>
+                                        </div>
+                                        <div class="filter-item st-swatches" v-bind:key="i.name" v-for="i in getNotSelectedFilters(f.field)">
+                                            <label class="st-swatch" :class=`filter_${f.field}`>
+                                                <input type="checkbox" v-bind:value="i.name" v-model="f.selected" v-on:change="pushFilter(),filterAnalytics('left',f.title,i.name)" />
+                                                <span class="checkbox" v-if="f.title=== 'Size (UK)' || f.title === 'Size (EU)'">
+                                                <span class="filter-label" :title="f.title.toUpperCase() + ': ' + i.name">${ i.name }$</span></span>
+                                                <span class="checkbox" v-if="f.title=== 'Color'" :style="{'background' : getColorName(i.name)}" :title="f.title.toUpperCase() + ': ' + i.name"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div v-if="f.textType==='numeric'">
+                                        <div class="filter-item selected" v-bind:key="i" v-for="i in f.selected">
+                                            <label>
+                                                <input type="checkbox" v-bind:value="i" v-model="f.selected" v-on:change="pushFilter()" />
+                                                <span class="checkbox">
+                                                <svg focusable="false" class="icon st-icon--check" width="12px" viewBox="0 0 24 24" role="presentation">
+                                                    <path fill="currentColor" d="M9 20l-7-7 3-3 4 4L19 4l3 3z"></path>
+                                                </svg>
+                                            </span>
+                                                <span class="filter-label" v-if="f.title==='Discount' && i[1] !== 100">${ i[0] }$% - ${ i[1] }$%</span>
+                                                <span class="filter-label" v-if="f.title==='Discount' && i[1] === 100">${ i[0] }$% and Above</span>
+                                                <span class="filter-label" v-if="f.title==='Customer Ratings'">
+                                                <span class="full-star" v-for="a in i[0]">
+                                                    <i class="fa fa-star"></i> </span><span>${i[0]}$+ Rating</span>
+                                            </span>
+                                                <span class="filter-label" v-if="f.title==='Price'">
+                                                ${ currency }$ ${ numberWithComa(i[0]) }$ - ${
+                                                        currency }$ ${ numberWithComa(i[1]) }$
+                                            </span>
+                                                <span class="filter-count">(${ getSelectedCount(i, f.field) }$)</span>
+                                            </label>
+                                        </div>
+                                        <div class="filter-item" v-bind:key="i.min" v-for="i in getNotSelectedFilters(f.field)">
+                                            <label>
+                                                <input type="checkbox" v-bind:value="[i.min,i.max]" v-model="f.selected" v-on:change="pushFilter(),filterAnalytics('left',f.title,[i.min,i.max])" />
+                                                <span class="checkbox">
+                                                <svg focusable="false" class="icon st-icon--check" width="12px" viewBox="0 0 24 24" role="presentation">
+                                                    <path fill="currentColor" d="M9 20l-7-7 3-3 4 4L19 4l3 3z"></path>
+                                                </svg>
+                                            </span>
+                                                <span class="filter-label" v-if="f.title==='Discount' && i.max !== 100">${ i.min }$% - ${ i.max }$%</span>
+                                                <span class="filter-label" v-if="f.title==='Discount' && i.max === 100">${ i.min }$% and Above</span>
+                                                <span class="filter-label" v-if="f.title==='Customer Ratings'">
+                                                <span class="full-star" v-for="a in i.min">
+                                                    <i class="fa fa-star"></i> </span><span>${i.min}$+ Rating</span>
+                                            </span>
+                                                <span class="filter-label" v-if="f.title==='Price'">
+                                                ${ currency }$ ${ numberWithComa(i.min) }$ - ${
+                                                        currency }$ ${ numberWithComa(i.max) }$
+                                            </span>
+                                                <span class="filter-count">(${ i.count }$)</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div v-if="f.type==='single'">
+                                        <div class="filter-item" v-bind:class="{'selected':f.selected.length > 0}" v-bind:key="i" v-for="i in f.values">
+                                            <label>
+                                                <input type="checkbox" v-bind:value="i" v-model="f.selected" v-on:change="pushFilter()" />
+                                                <span class="checkbox">
+                                                <svg focusable="false" class="icon st-icon--check" width="12px" viewBox="0 0 24 24" role="presentation">
+                                                    <path fill="currentColor" d="M9 20l-7-7 3-3 4 4L19 4l3 3z"></path>
+                                                </svg>
+                                            </span>
+                                                <span class="filter-label">${ i }$</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="filter-apply" v-on:click="showMobileFilter =false">Apply Filter</span>
+                    </div>
+                </div>
+                <div class="st-hidden-md st-hidden-lg" id="mobile-sort-container">
+                    <div class="sort-wrapper" v-show="sortDisplay" @click="sortDisplay = !sortDisplay">
+                        <div class="sort-inner">
+                            <div class="sort-head">
+                            <span>Sort By: <span class="text-main">${ sortLabel }$</span><span class="st-sort-cross"><svg height="15px" viewBox="0 0 512.001 512.001" width="15px" x="0px" xml:space="preserve" y="0px">
+                                        <path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717    L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859    c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287    l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285    L284.286,256.002z" data-old_color="#000000" data-original="#000000" fill="#4E3830" class="active-path"></path>
+                                    </svg></span></span>
+                            </div>
+                            <div class="sort-items">
+                                <div class="sort-item" v-bind:key="sort.label" v-for="sort in sorts" v-on:click="sorting(sort.label), goToTop()">
+                                    <span :class="{'selected' : sort.label === sortLabel}">${ sort.label }$</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span id="scroll-to-top" v-show="backToTop" @click="goToTop">
+            <svg focusable="false" width="14px" class="icon st-icon--arrow-up" viewBox="0 0 12 8" role="presentation">
+                <path stroke="currentColor" stroke-width="2" d="M10 2L6 6 2 2" fill="none" stroke-linecap="square"></path>
+            </svg>
+        </span>
+        </div>
+    </div>
+
+{%- comment -%}
+  --------------------------------------------------------------------------------------
+  QUICK VIEW CONTAINER
+  --------------------------------------------------------------------------------------
+  {%- endcomment -%}
+
+  <div id="modal-quick-view-{{ section.id }}" class="modal quick-view-product-modal" aria-hidden="true">
+    <div class="modal__dialog modal__dialog--stretch" role="dialog">
+      <button class="modal__close link" data-action="close-modal" title="{{ 'general.accessibility.close' | t | escape }}">
+        {%- render 'icon', icon: 'close' -%}
+      </button>
+
+      <div class="modal__loader">
+        {%- render 'icon', icon: 'search-loader' -%}
+      </div>
+
+      <div class="modal__inner"></div>
+    </div>
+  </div>
+</section>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var _assuredInterval = setInterval(function() {
+      {%- if settings.ProductDeliveryAssured_enable -%}
+        let skus = [],cSkuvalues = [],SkuCname = 'ProductDeliveryAssured',exSkuminute = parseInt(`{{settings.deliveryassured_minute}}`),getSkuCookies = getCookie(SkuCname),retrievedObj = '',retrievedObjSku = [];
+        if(getSkuCookies != null && getSkuCookies != '' && getSkuCookies != undefined) {
+            retrievedObj = JSON.parse(getSkuCookies);
+            $.each(retrievedObj, function(key, item) {
+                cSkuvalues.push(item);
+                retrievedObjSku.push(item.sku);
+                let $item = $('#products-listing .product-inner [value="' + item.sku + '"]');
+                let $inner = $item.parents('.product-inner');
+                $inner.attr('data-assured-processed', true);
+                if (item.assured) {
+                    if ($inner.find('.product-images .product-meta__assured_delivery').length == 0) {
+                    $inner.find('.product-images').append('<span class="product-meta__assured_delivery"><img src="{{ 'plp-assured-delivery.svg' | asset_url }}"></span>');
+                    }
+                }
+            });
+        }
+        $('#products-listing .product-inner').each(function() {
+            if (!$(this).attr('data-assured-processed')) {
+                let variantId = $(this).find('[name="id"]').val();
+                if (variantId) {
+                    if(retrievedObj != ''){
+                        if(retrievedObjSku.includes(variantId)){
+                        }else{
+                            skus.push(variantId);
+                        }
+                    }else{
+                        skus.push(variantId);
+                    }
+                }
+            }
+        });
+  
+        if (skus.length) {
+            getAssuredResponse(skus, function(response) {
+            var data = $.parseJSON(response);
+            if (data && data.data && data.data.length > 0) {
+                var products = data.data
+                $.each(products, function(key, product) {
+                var $item = $('#products-listing .product-inner [value="' + product.sku + '"]');
+                var $inner = $item.parents('.product-inner');
+                $inner.attr('data-assured-processed', true);
+                if (skus.includes(product.sku) && product.assured) {
+                    if ($inner.find('.product-images .product-meta__assured_delivery').length == 0) {
+                    $inner.find('.product-images').append('<span class="product-meta__assured_delivery"><img src="{{ 'plp-assured-delivery.svg' | asset_url }}"></span>');
+                    }
+                }
+                cSkuvalues.push(product);
+                });
+                let uniqs = {},
+                arrFiltereds = cSkuvalues.filter(obj => !uniqs[obj.sku] && (uniqs[obj.sku] = true)),
+                setcSkuvalues = JSON.stringify(arrFiltereds);
+                setCookie(SkuCname, setcSkuvalues, exSkuminute);
+            }
+            });
+        }
+        {%- endif -%}
+
+        let vendors = [];
+        $('#products-listing .product-inner').each(function() {
+            if (!$(this).attr('data-assured-processed')) {
+                let vendorName = $(this).find('.st-vendor a').text(); 
+                if (vendorName){
+                    vendors.push(vendorName);
+                }
+            }
+        });
+        if (vendors.length) {
+            $.each(vendors, function(key, cvendor) {
+                $.each(theme.allvendors, function(key, vendor) {
+                    if(vendor.vendor_name == cvendor && $inner.find('.product-bottom .freebies_vendor_msg')){
+                        $inner.find('.product-bottom').append(`<span class="freebies_vendor_msg"><span>Freebie on all orders above <span class="freebies_price"><span class="rupee-symbol">₹</span> ${vendor.value}</span>.</span></span>`);
+                    }
+                })
+            });
+        }
+    }, 2000);
+  });
+</script>
+{% schema %}
+{
+"name": "searchtap",
+"settings": []
+}
+{% endschema %}

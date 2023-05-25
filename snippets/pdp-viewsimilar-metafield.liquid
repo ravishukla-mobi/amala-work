@@ -1,0 +1,54 @@
+{%- capture section_settings -%}
+{
+  "stackable": false,
+  "layout": "vertical",
+  "productId": {{ product.id | json }},
+  "recommendationsCount": 10
+}
+{%- endcapture -%}
+{% assign modelview_similars = '_view_similar' %}
+{% assign custom_pro_metafield = product.metafields.custom.you_might_be_interested_in.value %}
+<div class="product_view_similar_metafield_block" data-section-type="product-recommendations" data-section-settings='{{ section_settings }}'>
+    <div class="block-container">
+    {%- if section.settings.similar_product_title != blank -%}
+        <header class="section__header">
+        <h2 class="section__title heading h3">{{ section.settings.similar_product_title }}</h2>
+        </header>
+    {%- endif -%}
+    <div class="product-related">
+        <div class="scroller">
+            <div class="scroller__inner">
+            <div class="product-list product-list--vertical product-list--scrollable">
+                {% for product_item in custom_pro_metafield %}
+                    {%if product_item.available %}
+                    {%- render 'product-item', product: product_item, grid_classes: '1/4--lap 1/5--desk 1/5--wide', show_add_to_cart: true, modelview_similar: modelview_similars -%}
+                    {% endif %}
+                {% endfor %}
+            </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<style>
+    .product_view_similar_metafield_block {
+        margin: 50px 0 0;
+    }
+    .product_view_similar_metafield_block .section__header {
+        margin-bottom: 15px;
+    }
+    .product_view_similar_metafield_block .product-item {
+        width: 40%;
+    }
+    @media screen and (max-width:640px){
+        .product_view_similar_metafield_block {
+            margin: 40px 0;
+        }
+        .product_view_similar_metafield_block .section__header {
+            margin-bottom: 10px;
+        }
+        .product_view_similar_metafield_block .scroller {
+            margin-left: 0;
+        }
+    }
+</style>

@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="blog-container">
+    {% if blog.all_tags %}
+    	{%- section 'blog-filters' -%}
+    {% endif %}
+    {%- section 'blog-template' -%}
+
+    {%- if blog.articles_count > 0 -%}
+      {%- section 'blog-sidebar' -%}
+    {%- endif -%}
+  </div>
+</div>

@@ -1,0 +1,97 @@
+<div id="cancle-order-model" class="pop-up-modal my-account">
+        <div class="pop-up__container">
+            <span class="close-button popup-close" ><img src="{{ 'close-icon.svg' | asset_url }}" alt="X"></span>
+            <div class="pop-up__content-wrapper">
+                <div class="my-account__pop-up-header">
+                    <h1 class="heading">Cancel Order</h1>
+                </div>
+              <form id="cancel_form">
+                          <input type="hidden" value="{{item_id}}" name="item_id" id="item_id">
+<input type="hidden" value="{{handle}}" name="item_handle" id="handle">
+                <input type="hidden" value="cancel" name="action" id="action">
+<input type="hidden" value="{{item_name}}" name="item_name" id="item_name">
+                      <input type="hidden" value="{{item_price}}" name="item_price" id="item_price">
+                  <input type="hidden" name="order_id" value="{{order.order_number}}">
+                      <input type="hidden" name="order_status" value="{{order.fulfillment_status_label}}">
+                       <input type="hidden" name="customer_id" value="{{customer.id}}">
+                       <input type="hidden" name="customer_name" value="{{customer.name}}">
+                <div class="my-account__pop-up-content">
+                  
+                  {%- for line_item in order.line_items -%}
+                    <div class="my-orders__content-wrapper line_item_{{line_item.id}} hide">
+                        <div class="my-orders__image-wrapper">
+                            <a href="javascript:void(0);">
+                                <div class="aspect-ratio" style="padding-bottom: 100.0%">
+                                    <img src="{{ line_item.image | img_url: '90x90', scale: 2 }}" alt="{{ line_item.image.alt | escape }}">
+                                </div>
+                            </a>
+                        </div>
+                      
+                        <div class="my-orders__item-wrapper">
+                            <table class="my-orders__product-info">
+                                <tr>
+                                    <td colspan="2"><a href="{{ line_item.url }}" class="my-orders__product-title ">{{ line_item.title }}</a></td>
+                                </tr>
+                                {%- unless line_item.properties == blank -%}
+                           
+                              {%- for property in line_item.properties -%}
+                                {%- assign first_character_in_key = property.first | truncate: 1, '' -%}
+
+                                {%- if property.last == blank or first_character_in_key == '_' -%}
+                                  {%- continue -%}
+                                {%- endif -%}
+
+                                  <tr>
+                                        <td class="product-info_label">{{ property.first }}</td>
+                                        <td> {{ property.last }}</td>
+                                    </tr>
+                              {%- endfor -%}
+                      
+                          {%- endunless -%}
+                                   
+                                <tr>
+                                    <td class="product-info_label">Qty. </td>
+                                    <td>{{line_item.quantity}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="product-info_label">Amount</td>
+                                    <td><span class="price price--highlight">&nbsp;{{ line_item.final_line_price | money }}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                   {%- endfor -%}
+                    <div class="my-account__pop-up_form-wrapper">
+              
+                            <div class="form-group required">
+                                <label for="exampleInputEmail1" >Choose a reason to cancel your order</label>
+                                <select class="form-control" name="reason">
+                                    <option value="" disabled selected >Choose a reason</option>
+                                    <option>Size</option>
+                                    <option>Color</option>
+                                    <option>Damaged</option>
+                                    <option>Customization (rare)</option>
+                                    <option>Wrong product delivered</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Leave a Comment</label>
+                                <textarea name="comment" class="form-control" placeholder="Why do you want to exchange this order?" rows="5"></textarea>
+                            </div>
+                      		<div class="form-group required">
+                              	<label for="image_attachment">Attache Image:</label>
+                              	<div class="attached_images">
+                              	</div>
+                              	<label for="image_attachment" class="stamped-file-uploader-btn image_attachment-btn">              
+                                    <i class="stamped-fa stamped-fa-camera"></i>                      
+                                    <span class="stamped-file-uploader-btn-label2"></span>                  
+								</label>
+                      		    <input required type="file" class="image_attachment" id="image_attachment" name="files[]" accept="image/*" multiple>
+							</div>
+                            <button onclick="process('cancel_form', event);" type="submit" class="btn btn-default">Cancel Order</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

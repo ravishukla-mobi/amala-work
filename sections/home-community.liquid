@@ -1,0 +1,359 @@
+<div class="home_community_section section" data-section-id="{{ section.id }}" data-section-type="home-community">
+    <div class="container">
+        {%- if section.settings.title != blank or section.settings.subtitle != blank -%}
+        <header class="landing_section_header">
+        {% if section.settings.subtitle != blank %}
+        <h5 class="landing_subheading">{{section.settings.subtitle}}</h5>
+        {% endif %}
+        {% if section.settings.title != blank %}
+        <h4 class="landing_heading">{{section.settings.title}}</h4>
+        {% endif %}
+        </header>
+        {%- endif -%}
+        <div class="home_community_silder">
+            {%- for block in section.blocks -%}
+                <div id="block_{{block.id}}" class="community_block {% if block.settings.content != blank %} read_more {% endif %}" {% if block.settings.content != blank %} data-title="{{block.settings.title}}" data-image="{{block.settings.image | img_url: 'master'}}" data-subtitle="{{block.settings.subtitle}}" data-content="{{block.settings.content}}" {% endif %}>
+                    <div class="community_block-wrapper">
+                        <div class="left-block">
+                            {% if block.settings.subtitle != blank %}
+                            <h4>{{block.settings.subtitle}}</h4>
+                            {% endif %}
+                            {% if block.settings.title != blank %}
+                            <h3>{{block.settings.title}}</h3>
+                            {% endif %}
+                            {% if block.settings.content != blank %}
+                            <div class="content">
+                                {{block.settings.content }}
+                            </div>
+                            <span class="read_more" data-title="{{block.settings.title}}" data-image="{{block.settings.image | img_url: 'master'}}" data-subtitle="{{block.settings.subtitle}}" data-content="{{block.settings.content}}">Read More</span>
+                            {% endif %}
+                        </div>
+                        <div class="right-block">
+                            {% if block.settings.tag != blank %}
+                            <span class="tag">{{block.settings.tag}}</span>
+                            {% endif %}
+                            {%- if block.settings.image != blank -%}
+                                {%- capture supported_sizes -%}{%- render 'image-size', sizes: '300,400,500,600', image: block.settings.image -%}{%- endcapture -%}
+                                {%- assign image_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                                <div class="community__image--block" style="padding-bottom: {{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%;">
+                                    <img class="amala-community_image lazyload image--fade-in" alt="{{ block.settings.image.alt | escape }}" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto">
+                                    <noscript>
+                                    <img src="{{ block.settings.image | img_url: '400x' }}" alt="{{ block.settings.image.alt | escape }}">
+                                    </noscript>
+                                </div>
+                            {%- endif -%}
+                        </div>
+                    </div>
+                </div>
+            {%- endfor -%}
+        </div>
+    </div>
+</div>
+<span class="pp-view-smilar vs-overlay"></span>
+<div id="home_community_popup-{{section.id}}" class="cus-view-smilar home_pop-up-modal community__popup-modal">
+  <span class="close-vs">&times;</span>
+  <div class="pop-up-content community-content">
+  </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var openParametersPopup = function() {
+        $(`#home_community_popup-{{section.id}}`).addClass("show");
+        $("body").addClass('overflow-hidden');
+        $(".vs-overlay").addClass("show");
+        console.log(newStatePopup);
+        if(navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)) {
+          if(newStatePopup.length == 0) {
+            newStatePopup.push('new-state-exist');
+            window.history.pushState('new-popup-state', null, '');
+          }
+        }
+      }
+      $('.home_community_silder .read_more').on('click',function(){
+        let title = $(this).attr('data-title');
+        let subtitle = $(this).attr('data-subtitle');
+        let content = $(this).attr('data-content');
+        let img = $(this).attr('data-image');
+        let popupHtml = `<div class="community-content-wrapper"><div class="community__img"><img src="${img}" alt="${title}"></div><div><h4>${subtitle}</h4><h3>${title}</h3><p>${content}</p></div></div>`;
+        $(`#home_community_popup-{{section.id}} .community-content`).html(popupHtml);
+        setTimeout(function(){openParametersPopup()},100);
+      });
+      $('.community__popup-modal .close-vs').on('click', function(e){
+        $('.community__popup-modal').removeClass('show');
+        $("body").removeClass('overflow-hidden');
+        $(".vs-overlay").removeClass("show");
+      });
+      window.addEventListener("popstate", function (event) {
+        newStatePopup.pop();
+        window.history.replaceState("new-popup-state", null, location.href);
+        if ($(`#home_community_popup-{{section.id}}`).hasClass("show")) {
+          $(".vs-overlay").removeClass("show");
+          $("body").removeClass("overflow-hidden");
+          $(`#home_community_popup-{{section.id}}`).removeClass("show");
+        }
+      });
+    });
+</script>
+{% style %}
+.home_community_silder{
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    z-index: 1;
+    margin-left: -10px;
+}
+.home_community_silder:not(.flickity-enabled){
+    overflow-y:auto;
+}
+.home_community_silder:after {
+  content: 'flickity';
+  display: none; /* hide :after */
+}
+.community_block {
+    flex: none;
+    width:35%;
+    padding:10px;
+}
+.community_block.read_more{
+  cursor: pointer;
+}
+.community_block-wrapper{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+}
+.community_block .left-block {
+    width: 100%;
+    max-width: 60%;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.community_block .right-block {
+    width: 100%;
+    max-width: 40%;
+}
+.community_block h4 {
+    margin-bottom: 0;
+    line-height: 1.2;
+    font-size: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+.community_block h3 {
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 22px;
+}
+.community_block .content {
+    font-size: 15px;
+    margin-top: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+}
+.community__image--block {
+    position: relative;
+}
+.community__image--block:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #b89c7d;
+    z-index: 1;
+}
+.community__image--block img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.community_block .tag {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    font-size: 12px;
+    border-radius: 100%;
+    color: #fff;
+    background-color: #b89c7d;
+}
+{%- for block in section.blocks -%}
+{%- if block.settings.tag_bg != blank -%}
+#block_{{block.id}} .tag{
+    background-color: {{block.settings.tag_bg}};
+}
+{%- endif -%}
+{%- endfor -%}
+.community_block .read_more {
+    color: #b89c7d;
+    cursor: pointer;
+    font-size: 15px;
+}
+.community-content-wrapper {
+    padding: 20px;
+}
+.community-content-wrapper h3 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.community-content-wrapper h4 {
+    font-size: 18px;
+    margin-bottom: 0;
+    line-height: 1.2;
+}
+.community-content-wrapper p {
+    font-size: 15px;
+}
+@media screen and (min-width:641px){
+.home_pop-up-modal.community__popup-modal{
+  max-width: 540px;
+}
+.community__popup-modal .community-content-wrapper {
+  display: flex;
+}
+.community-content-wrapper .community__img {
+  max-width: 170px;
+}
+.community-content-wrapper .community__img+div {
+  max-width: calc(100% - 170px);
+  padding-left: 15px;
+}
+}
+@media screen and (max-width:1399px){
+    .community_block h4,.community_block h3{font-size:18px;}
+    .community_block .content,.community_block .read_more {font-size: 14px;}
+}
+@media screen and (max-width:1199px){
+    .community_block{width:40%}
+    .community_block h4,.community_block h3{font-size:16px;}
+    .community_block .content,.community_block .read_more {font-size: 13px;}
+}
+@media screen and (max-width:991px){
+    .community_block{width:60%}
+}
+@media screen and (max-width:640px){
+  .community-content-wrapper .community__img {
+    display:none;
+  }
+  .home_community_section.section {
+    padding-top: 30px;
+  }
+    .home_community_silder{margin-left:0;}
+    .community_block .left-block{
+        padding-right: 7px;
+    }
+    .home_community_section .container {
+        padding-right: 0;
+    }
+    .community_block{width:80%;padding: 7px;}
+    .community_block-wrapper{
+        padding: 12px;
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
+    }
+    .community_block h4, .community_block h3 {
+        font-size: 14px;
+    }
+    .community_block h3 {
+      margin-bottom: 8px;
+    }
+    .community_block .tag {
+        width: 50px;
+        height: 50px;
+        font-size: 9px;
+    }
+    .community_block .content,.community_block .read_more {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+    .community-content-wrapper p {
+        font-size: 14px;
+    }
+}
+{% endstyle %}
+{% schema %}
+    {
+      "name": "Home Amala Community",
+      "settings": [
+        {
+          "type":"text",
+          "id":"subtitle",
+          "label":"Subheading",
+          "default":"Stories from our"
+        },
+        {
+          "type":"text",
+          "id":"title",
+          "label":"Heading",
+          "default":"community"
+        }
+      ],
+      "blocks":[
+        {
+          "type": "slide",
+          "name": "slide",
+          "settings": [
+            {
+              "type":"text",
+              "id":"subtitle",
+              "label":"Person’s name",
+              "default":"Person’s name"
+            },
+            {
+              "type":"text",
+              "id":"title",
+              "label":"Designation",
+              "default":"Designation"
+            },
+            {
+              "type":"textarea",
+              "id":"content",
+              "label":"Content"
+            },
+            {
+              "type":"image_picker",
+              "id":"image",
+              "label":"Image"
+            },
+            {
+              "type":"text",
+              "id":"tag",
+              "label":"Tag"
+            },
+            {
+              "type":"color",
+              "id":"tag_bg",
+              "label":"Tag background",
+              "default":"#b89c7d"
+            }
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "Home Amala Community",
+          "category": "Custom"
+        }
+      ]
+    }
+  {% endschema %}

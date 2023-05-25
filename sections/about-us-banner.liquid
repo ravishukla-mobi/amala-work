@@ -1,0 +1,167 @@
+<div class="banner_about_us">
+    {% if section.settings.about-banner-desk %}
+        <img src="{{section.settings.about-banner-desk | img_url: 'master'}}" alt="Banner Desktop image" class="banner_desktop_img">
+    {% endif %}
+    {% if section.settings.about-banner-mob %}
+        <img src="{{section.settings.about-banner-mob | img_url: 'master'}}" alt="Banner Mobile image" class="banner_mob_img">
+    {% endif %}
+    <div class="banner_main_content">
+        <h1 class="banner_heading">{{section.settings.banner-heading}}</h1>
+        <div class="banner_content">{{section.settings.banner-content}}</div>
+    </div>
+</div>
+<div class="banner_content_mob">{{section.settings.banner-content}}</div>
+
+<style>
+    .banner_mob_img{
+        display: none;
+    }
+    .banner_desktop_img{
+        display: block;
+    }
+    .banner_about_us{
+        position: relative;
+    }
+    .banner_main_content {
+        max-width: 610px;
+        position: absolute;
+        top: 70px;
+        right: 9%;
+        color: white;
+    }
+    .banner_heading{
+        font-family: Perpetua;
+        font-size: 80px;
+        font-weight: 500;
+        line-height: 89px;  
+        margin-bottom: 33px;
+        text-align: center;
+    }
+    .banner_content{
+        font-family: Poppins;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 36px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+    .banner_content_mob{
+        display: none;
+    }
+
+    @media screen and (max-width: 1750px) {
+        .banner_main_content{
+            top: 5%;
+        }
+        .banner_heading{
+            margin-bottom: 0;
+            font-size: 55px;
+        }
+    }
+    @media screen and (max-width: 1400px) {
+        .banner_content{
+            font-size: 20px;
+            line-height: 30px;
+        }
+        .banner_heading{
+            font-size: 50px;
+        }
+    }
+    @media screen and (max-width: 1100px) {
+        .banner_heading {
+            font-size: 30px;
+            line-height: 55px;
+        }
+        .banner_content {
+            font-size: 17px;
+            line-height: 23px;
+        }
+    }
+    @media screen and (max-width: 767px) {
+
+        .about-us-banner{
+            padding: 20px
+        }
+
+        .banner_content{
+            display: none;
+        }
+        .banner_mob_img{
+            display: block;
+            border-radius: 16px;
+            margin-bottom: 29px;
+            width: 100%;
+        }
+        .banner_desktop_img{
+            display: none;
+        }
+        .banner_heading {
+            font-family: Poppins;
+            font-size: 14px;
+            line-height: 21px;
+            letter-spacing: 0.05em;
+            text-align: center;
+            padding-left: 61px;
+            border-bottom: 1px solid white;
+        }
+        .banner_main_content {
+            top: 26px;
+            left: 0px;
+            right: auto;
+        }
+        .banner_content{
+            display: none;
+        }
+        .banner_content_mob{
+            display: block;
+            font-family: Poppins;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21px;
+            letter-spacing: 0.05em;
+            text-align: center;
+            margin: auto;
+            color: #9F7356;
+        }
+
+    }
+    @media screen and (max-width: 420px) {
+        .banner_main_content{
+            left: 0px;
+        }
+    }
+    @media screen and (max-width: 400px) {
+        .banner_main_content {
+    top: 15px;}
+    }
+</style>
+
+{% schema %}
+{
+    "name": "About Us Banner",
+    "class": "about-us-banner",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "about-banner-desk",
+            "label": "About-us Desktop Banner"
+        },
+        {
+            "type": "image_picker",
+            "id": "about-banner-mob",
+            "label": "About-us Mobile Banner"
+        },
+        {
+            "type": "text",
+            "id": "banner-heading",
+            "label": "Banner Heading",
+            "default": "About Us"
+        },
+        {
+            "type": "richtext",
+            "id": "banner-content",
+            "label": "Banner Content"
+        }
+    ]
+}
+{% endschema %}

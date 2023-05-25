@@ -1,0 +1,443 @@
+{
+  "sections": {
+    "5a0a78d3-e470-49c9-b7ed-cffc79005991": {
+      "type": "main-banner",
+      "custom_css": [
+        ".festive-banner-mobile {padding: 0px 0px 0px;}",
+        ".banner-image-mobile img {border-radius: 10px;}"
+      ],
+      "settings": {
+        "banner_desktop_image": "shopify:\/\/shop_images\/Collection_page_banner_Dsite_31db6b8b-8085-431c-8d5d-c73b3583d8d7.jpg",
+        "banner_mobile_image": "shopify:\/\/shop_images\/Collection_page_banner_Msite_2_370eb938-7eb4-43ad-9ba1-e5bcdafc2ad5.jpg",
+        "desktop_banner_title": "",
+        "color_heading": "#000000",
+        "desktop_banner_subtitle": "",
+        "color_subheading": "#000000",
+        "desktop_banner_button": "",
+        "color_button": "#000000",
+        "button_background": "#000000",
+        "desktop_button_url": "",
+        "desktop_image_url": ""
+      }
+    },
+    "5f8c7a06-f1a9-457f-8d59-d9206a8bf583": {
+      "type": "subscription-banner",
+      "disabled": true,
+      "custom_css": [
+        ".collection_subscription_topbanner {width: 100%; margin-bottom: 70px;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "banner_image_desktop": "shopify:\/\/shop_images\/Collection_page_banner_Dsite_31db6b8b-8085-431c-8d5d-c73b3583d8d7.jpg",
+        "banner_image_mob": "shopify:\/\/shop_images\/Collection_page_banner_Msite_2_370eb938-7eb4-43ad-9ba1-e5bcdafc2ad5.jpg"
+      }
+    },
+    "0b095b63-6ed8-4ecf-b4e4-d741f866b6cc": {
+      "type": "amala-earth-curation",
+      "disabled": true,
+      "blocks": {
+        "f0b43343-0d8c-4f44-84bb-8377b0f5e339": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/Collection_page_banner_Dsite_31db6b8b-8085-431c-8d5d-c73b3583d8d7.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/Collection_page_banner_Msite_2_370eb938-7eb4-43ad-9ba1-e5bcdafc2ad5.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "f0b43343-0d8c-4f44-84bb-8377b0f5e339"
+      ],
+      "settings": {
+        "curation_heading1": "",
+        "curation_sub_heading2": ""
+      }
+    },
+    "25ba2a35-456f-409f-ba7b-71917f92bb55": {
+      "type": "amala-earth-curation",
+      "blocks": {
+        "7fd0b36c-d26d-4685-8c73-b67220e6c4d8": {
+          "type": "Banner",
+          "disabled": true,
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/Mothers_day_Curated_collection_banner_website.png",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/Mothers_day_Curated_collection_banner_Mobile.png",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/mothers-day-gifts"
+          }
+        },
+        "05096c0a-7931-4f87-a27e-905f2cd685c2": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/Dessktop.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/Mobile.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/pages\/summer-essentials"
+          }
+        },
+        "9bb3c629-5715-4d1d-ae7b-90ede3eb67e3": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/1_71594658-326c-4864-a9ff-b41cfe36dfe5.png",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/1_1_d107cd48-16c0-4bec-8993-efb863eb595f.png",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/from-the-loom"
+          }
+        },
+        "05925f57-8cd2-49bf-8db8-253df0617785": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/1_2.png",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/9_eba4db22-c131-4fff-892d-666a37dad40c.png",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/fasting-food"
+          }
+        },
+        "4da74ad0-885a-4644-b4b1-768437750bcd": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/2_2.png",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/10_91e629ce-d05d-4041-83fc-06d4153f5ae8.png",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/ayurvedic-skincare"
+          }
+        },
+        "f21fe075-17c4-48e5-9bcf-2f9a57aa8dc1": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/2_46961071-e36e-4205-8894-98bb65f14ad3.png",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/2_1_a638073c-311f-49b7-94df-f4e4b29fba30.png",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/hand-block-prints-rf"
+          }
+        },
+        "0add2d78-0d87-436a-9231-138ec9e773f4": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/website_art_of_journalling.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/mobile_art_of_journalling.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/art-of-jounaling"
+          }
+        },
+        "43c09993-3461-4a4e-84ef-eedb85db03a1": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/4_2.png",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/11_1.png",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/joyful-home-copper"
+          }
+        },
+        "b3b35fdb-5446-43fe-b017-ffe4c1b0311e": {
+          "type": "Banner",
+          "disabled": true,
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/4_f972c68c-6512-49c3-aa76-5836d61cad93.png",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/3_38330e31-b623-4d39-9781-080836664ab2.png",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/womens-day-fashion"
+          }
+        },
+        "18e4de0f-9a48-4a08-9d47-6424813eb183": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/5.1.png",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/12_1.png",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/joyful-home-wood"
+          }
+        },
+        "615fcb89-0eb6-4d9d-adc9-53da274827ac": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/5_a1266b57-8d4e-406b-a252-6415528acdd5.png",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/4_1_b82b227a-7f4a-4a32-a984-d4284a2906be.png",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/joyful-home-linen"
+          }
+        },
+        "2f80a490-0ed7-45fc-a19e-1120b5854921": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/8.1.png",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/7.1_e6bfb5d1-10b7-4676-b5a6-cd7cd196aae4.png",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/traditional-home"
+          }
+        },
+        "51bacb8b-5895-4047-b47c-061441d8d8d7": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/7_8078159b-011f-47fc-bd12-287ec557353d.png",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/6_1_3a1ba572-f4d4-4273-a041-4d05f3b2fb0f.png",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/minimal-home"
+          }
+        },
+        "40a3cd52-4b18-4a92-8578-556f367406d1": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/web_school_ready.png",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/mobile_school_ready.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/school-ready"
+          }
+        },
+        "2f2cb765-f200-4bfa-b21b-e1a62a459237": {
+          "type": "Banner",
+          "disabled": true,
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/6_5666347a-7ca9-458d-be9c-a97f42820feb.png",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/5.2_ab0f6e36-3dc9-40ce-a29d-1d8a870f58d7.png",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": ""
+          }
+        },
+        "7a2b59f0-7982-4986-9216-36ef75f9ab52": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/6.1.png",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/5.1_1_c8ae4cfb-6094-4f60-b341-aaf7865103cc.png",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/women-hemp"
+          }
+        },
+        "0508e3e5-1baf-4fe2-9ec1-4f2260664757": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/10.2.png",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/barware"
+          }
+        },
+        "98deb885-e6a8-4c8e-8f61-07c25c0c1473": {
+          "type": "Banner",
+          "disabled": true,
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/8.3.png",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": ""
+          }
+        },
+        "09c74f6f-3e43-41e3-a518-360eaad8d431": {
+          "type": "Banner",
+          "disabled": true,
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/11.png",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/10_2674f72e-9c7d-4a01-bdd9-a1eb8432bdc9.png",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": ""
+          }
+        },
+        "256784d5-e68e-40d3-b499-c6def3db149e": {
+          "type": "Banner",
+          "disabled": true,
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/12.png",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/9_f5f3569f-01e9-4d5e-889c-2a2fac02e4dd.png",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": ""
+          }
+        },
+        "69d52a7d-9071-413e-b994-f881dbba9865": {
+          "type": "Banner",
+          "disabled": true,
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/weekend_activity_ess_website_1.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/weekend_activity_ess_mobile_1_648747c6-35a6-4128-bb03-88a1b94de447.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/weekend-activity-essentials"
+          }
+        },
+        "434c7651-c837-4e4c-a2d3-be0c59eaab26": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/summer_ess.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/summer_ess_mobile.png",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/pages\/summer-essentials"
+          }
+        }
+      },
+      "block_order": [
+        "7fd0b36c-d26d-4685-8c73-b67220e6c4d8",
+        "05096c0a-7931-4f87-a27e-905f2cd685c2",
+        "9bb3c629-5715-4d1d-ae7b-90ede3eb67e3",
+        "05925f57-8cd2-49bf-8db8-253df0617785",
+        "4da74ad0-885a-4644-b4b1-768437750bcd",
+        "f21fe075-17c4-48e5-9bcf-2f9a57aa8dc1",
+        "0add2d78-0d87-436a-9231-138ec9e773f4",
+        "43c09993-3461-4a4e-84ef-eedb85db03a1",
+        "b3b35fdb-5446-43fe-b017-ffe4c1b0311e",
+        "18e4de0f-9a48-4a08-9d47-6424813eb183",
+        "615fcb89-0eb6-4d9d-adc9-53da274827ac",
+        "2f80a490-0ed7-45fc-a19e-1120b5854921",
+        "51bacb8b-5895-4047-b47c-061441d8d8d7",
+        "40a3cd52-4b18-4a92-8578-556f367406d1",
+        "2f2cb765-f200-4bfa-b21b-e1a62a459237",
+        "7a2b59f0-7982-4986-9216-36ef75f9ab52",
+        "0508e3e5-1baf-4fe2-9ec1-4f2260664757",
+        "98deb885-e6a8-4c8e-8f61-07c25c0c1473",
+        "09c74f6f-3e43-41e3-a518-360eaad8d431",
+        "256784d5-e68e-40d3-b499-c6def3db149e",
+        "69d52a7d-9071-413e-b994-f881dbba9865",
+        "434c7651-c837-4e4c-a2d3-be0c59eaab26"
+      ],
+      "custom_css": [
+        ".container_desktop_container img {padding-bottom: 60px; border-radius: none;}",
+        ".curation_section_container {margin-top: 0px;}",
+        ".curation_mobile_image {margin-bottom: 35px; margin-top: 0px;}"
+      ],
+      "settings": {
+        "curation_heading1": "",
+        "curation_sub_heading2": ""
+      }
+    }
+  },
+  "order": [
+    "5a0a78d3-e470-49c9-b7ed-cffc79005991",
+    "5f8c7a06-f1a9-457f-8d59-d9206a8bf583",
+    "0b095b63-6ed8-4ecf-b4e4-d741f866b6cc",
+    "25ba2a35-456f-409f-ba7b-71917f92bb55"
+  ]
+}

@@ -1,0 +1,51 @@
+<div id="thank-you-modal" class="pop-up-modal my-account thank-you-modal" data-traget>
+	<div class="pop-up__container">
+		<span class="thank-you-close-button"><img src="{{ 'close-icon.svg' | asset_url }}" alt="X"></span>
+		<div class="pop-up__content-wrapper">
+			<div class="pop-up__content">
+				<h1 class="title">{{ section.settings.title }}</h1>
+				<p class="content">{{ section.settings.text }}</p>
+				<a href="{{ shop.url }}" class="button button--primary">{{ section.settings.button_title }}</a>
+			</div>
+    	</div>
+		</div>
+	</div>
+</div>
+<style type="text/css">
+  .thank-you-modal .pop-up__content {
+    text-align: center;
+  }
+  .thank-you-modal .title {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .thank-you-modal .content {
+    margin-bottom: 30px;
+  }
+</style>
+{% schema %}
+{
+  "name": "Thank you popup",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Thank You!"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Message",
+      "default": "Use coupon code WELCOME10 and get 10% discount"
+    },
+    {
+      "type": "text",
+      "id": "button_title",
+      "label": "Title of button",
+      "default": "Continue Shopping"
+    }
+   ]
+}
+{% endschema %}

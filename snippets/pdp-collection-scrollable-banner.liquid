@@ -1,0 +1,68 @@
+{%- liquid
+    assign collection_with_metafield = ""
+    assign banner_handle = ""
+    for collection_name in product.collections
+        if collection_name.metafields.custom.collection_pdp_banner_products
+            assign collection_with_metafield = collection_name.handle
+            break
+        endif
+    endfor
+    assign product_count = 0 
+
+    for banner in collections[collection_with_metafield].metafields.custom.collection_pdp_banner_products.value
+        assign banner_url = banner.pdpbannerurl
+        assign pre_banner_handle = banner_url | split: "/collections/"
+        assign banner_handle = pre_banner_handle[1]
+    endfor
+-%}
+
+{%- capture section_settings -%}
+{
+    "stackable": true,
+    "layout": "vertical",
+    "products_json": "{%- for banner_details in collections[collection_with_metafield].metafields.custom.collection_pdp_banner_products.value -%}{% if banner_details.displaybanner %}{%- for productid in collections[banner_handle].products -%}{% if product_count >= 10 %}{%break%}{%endif%}{% unless productid.id == product.id %}{% assign product_count = product_count | plus: 1 %}{% if forloop.first %}id:{{productid.id}}{% else %} OR id:{{productid.id}}{% endif %}{% endunless %}{%- endfor -%}{% endif %}{%- endfor -%}"
+}
+{%- endcapture -%}
+
+<section class="pdp-banner-and-collection-section section noproductcollection collection_banners-products" data-section-id="{{ section.id }}" data-section-type="pdp_collection_banners_products" data-section-settings='{{ section_settings }}'>
+    <div class="container banner-container">
+        {%- for banner in collections[collection_with_metafield].metafields.custom.collection_pdp_banner_products.value -%}
+            {% if banner.displaybanner == true %}
+                {%- if section.settings.food_section_heading != blank -%}
+                <header class="section__header">
+                    <h2 class="section__title heading h3">{{ section.settings.food_section_heading }} {{collections[collection_with_metafield].title}}</h2>
+                </header>
+                {%- endif -%}
+                <a href="{{ banner.pdpbannerurl }}" class="pdp_colbanner">
+                    {%- if banner.pdpdesktopbanner -%}
+                        <div class="custom__banner-img {% if banner.pdpmobilebanner %}show-tablet-and-up{% endif %}">
+                            <img class="lazyload" data-src="{{ banner.pdpdesktopbanner }}" alt="custom banner">
+                        </div>
+                        {%- if banner.pdpmobilebanner -%}
+                        <div class="custom__banner-img hidden-tablet-and-up">
+                            <img class="lazyload" data-src="{{ banner.pdpmobilebanner }}" alt="custom banner">
+                        </div>
+                        {%- endif -%}
+                    {%- endif -%}
+                </a>
+            {% endif %}
+        {%- endfor -%}
+    </div>
+    <div class="container collection_banners_products_slider">
+        <div class="product-related">
+        </div>
+    </div>
+</section>
+<div id="modal-quick-view-{{ section.id }}" class="modal quick-view-product-modal" aria-hidden="true">
+    <div class="modal__dialog modal__dialog--stretch" role="dialog">
+      <button class="modal__close link" data-action="close-modal" title="{{ 'general.accessibility.close' | t | escape }}">
+        {%- render 'icon', icon: 'close' -%}
+      </button>
+
+      <div class="modal__loader">
+        {%- render 'icon', icon: 'search-loader' -%}
+      </div>
+
+      <div class="modal__inner"></div>
+    </div>
+</div>

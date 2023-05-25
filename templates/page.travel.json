@@ -1,0 +1,1316 @@
+{
+  "sections": {
+    "1de4fa5f-841e-48a3-ad94-a958bc0b9988": {
+      "type": "page-navigation",
+      "settings": {}
+    },
+    "festival-landings-page": {
+      "type": "main-banner",
+      "disabled": true,
+      "custom_css": [
+        ".festive-banner-mobile {margin: 0px; padding: 0px;}"
+      ],
+      "settings": {
+        "banner_desktop_image": "shopify:\/\/shop_images\/QUOTE1.jpg",
+        "desktop_banner_title": "",
+        "color_heading": "#ffffff",
+        "desktop_banner_subtitle": "",
+        "color_subheading": "#b89c7d",
+        "desktop_banner_button": "",
+        "color_button": "#ffffff",
+        "button_background": "#9d7242",
+        "desktop_button_url": "https:\/\/amala.earth\/collections\/gifts",
+        "desktop_image_url": "https:\/\/amala.earth\/collections\/gifts"
+      }
+    },
+    "3b33781e-3c89-459e-9145-18ca5bd442bc": {
+      "type": "main-banner",
+      "disabled": true,
+      "custom_css": [
+        ".festive-banner-mobile {margin: 0px; padding: 0px;}"
+      ],
+      "settings": {
+        "banner_desktop_image": "shopify:\/\/shop_images\/Illustration_Banner.jpg",
+        "desktop_banner_title": "",
+        "color_heading": "#000000",
+        "desktop_banner_subtitle": "",
+        "color_subheading": "#000000",
+        "desktop_banner_button": "",
+        "color_button": "#000000",
+        "button_background": "#000000",
+        "desktop_button_url": "",
+        "desktop_image_url": ""
+      }
+    },
+    "1129f574-3060-4c7d-89ec-fded4a385161": {
+      "type": "main-banner",
+      "disabled": true,
+      "custom_css": [
+        ".festive-banner-mobile {margin: 0px; padding: 0px;}"
+      ],
+      "settings": {
+        "banner_desktop_image": "shopify:\/\/shop_images\/QUOTE2.jpg",
+        "banner_mobile_image": "shopify:\/\/shop_images\/main_Mobile_banner_2x_10e6ce93-471f-40f1-bfd2-a26fecf44e35.jpg",
+        "desktop_banner_title": "",
+        "color_heading": "#000000",
+        "desktop_banner_subtitle": "",
+        "color_subheading": "#000000",
+        "desktop_banner_button": "",
+        "color_button": "#000000",
+        "button_background": "#000000",
+        "desktop_button_url": "",
+        "desktop_image_url": ""
+      }
+    },
+    "0c2b618c-51e6-4b7e-91dd-21510d50eb80": {
+      "type": "main-banner-without-padding",
+      "settings": {
+        "banner_desktop_image": "shopify:\/\/shop_images\/QUOTE1_3_3805e374-7a8f-4f33-93ec-6bac08052cdf.jpg",
+        "banner_mobile_image": "shopify:\/\/shop_images\/mobile_travel3_09be5439-62a3-4777-a748-3e85acbc4503.png",
+        "desktop_banner_title": "",
+        "color_heading": "#000000",
+        "desktop_banner_subtitle": "",
+        "color_subheading": "#000000",
+        "desktop_banner_button": "",
+        "color_button": "#000000",
+        "button_background": "#000000",
+        "desktop_button_url": "",
+        "desktop_image_url": ""
+      }
+    },
+    "d30c17bb-f596-4015-b067-9e6e5fdba375": {
+      "type": "main-banner-without-padding",
+      "settings": {
+        "banner_desktop_image": "shopify:\/\/shop_images\/Illustration_Banner_3.jpg",
+        "banner_mobile_image": "shopify:\/\/shop_images\/mobile_travel2_952626cb-70b2-4f5b-99ed-be659fa10b9f.png",
+        "desktop_banner_title": "",
+        "color_heading": "#000000",
+        "desktop_banner_subtitle": "",
+        "color_subheading": "#000000",
+        "desktop_banner_button": "",
+        "color_button": "#000000",
+        "button_background": "#000000",
+        "desktop_button_url": "",
+        "desktop_image_url": ""
+      }
+    },
+    "7d2e9e37-66cf-4931-8ad7-8adf4ca634cc": {
+      "type": "main-banner-without-padding",
+      "settings": {
+        "banner_desktop_image": "shopify:\/\/shop_images\/QUOTE2_3.jpg",
+        "banner_mobile_image": "shopify:\/\/shop_images\/mobile_travel1_a92a2966-8bde-4fb0-a83d-ee88ba1879b1.png",
+        "desktop_banner_title": "",
+        "color_heading": "#000000",
+        "desktop_banner_subtitle": "",
+        "color_subheading": "#000000",
+        "desktop_banner_button": "",
+        "color_button": "#000000",
+        "button_background": "#000000",
+        "desktop_button_url": "",
+        "desktop_image_url": ""
+      }
+    },
+    "3acaab5c-845a-4f38-9625-d19618de1ee7": {
+      "type": "main-banner-without-padding",
+      "settings": {
+        "banner_desktop_image": "shopify:\/\/shop_images\/Beach1_2_87803643-95f1-43c5-adc8-7ab76fe4b391.jpg",
+        "banner_mobile_image": "shopify:\/\/shop_images\/Beach_mobile_banner_1_e0ac152f-86be-4be7-ac9d-289d4a099ede.png",
+        "desktop_banner_title": "",
+        "color_heading": "#000000",
+        "desktop_banner_subtitle": "",
+        "color_subheading": "#000000",
+        "desktop_banner_button": "",
+        "color_button": "#000000",
+        "button_background": "#000000",
+        "desktop_button_url": "",
+        "desktop_image_url": "https:\/\/amala.earth\/collections\/eco-friendly-beach-accessories"
+      }
+    },
+    "2debdb1b-9d7d-4786-81e0-4139ec9e4a54": {
+      "type": "slider-test",
+      "disabled": true,
+      "blocks": {
+        "template--16696574771444__2debdb1b-9d7d-4786-81e0-4139ec9e4a54-1679918871eb83fa2a-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Beach1_2.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Beach_mobile_banner_1.png",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": ""
+          }
+        },
+        "template--16696574771444__2debdb1b-9d7d-4786-81e0-4139ec9e4a54-1679918871eb83fa2a-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Beach1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/sample_4_18ae5a8a-004b-4131-836a-0f29b24aa169.png",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16696574771444__2debdb1b-9d7d-4786-81e0-4139ec9e4a54-1679918871eb83fa2a-0",
+        "template--16696574771444__2debdb1b-9d7d-4786-81e0-4139ec9e4a54-1679918871eb83fa2a-1"
+      ],
+      "custom_css": [
+        "#template--16696574771444__2debdb1b-9d7d-4786-81e0-4139ec9e4a54 {min-height: 0px; margin-top: 50px;}"
+      ],
+      "settings": {
+        "edge_to_edge": true,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "dda780b6-4f92-47c8-b444-c7e3e2a9e9bb": {
+      "type": "travelsite-circle-bgimg",
+      "blocks": {
+        "646861ef-f054-4001-a87d-3a9d1daddf1e": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/1_6e4e26b4-cb1e-4aaa-a8e2-ca9eca52c337.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/1_5eb508e1-9d96-45ef-9ce1-0df6727a5399.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/natural-sunscreens",
+            "block_two_subtitle": "Reef-safe",
+            "title": "Sunscreens"
+          }
+        },
+        "805067d2-2702-41c6-8bbe-540188cafd00": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/2_70a4f3a5-2f81-4a03-8d89-761f61813979.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/2_390145f5-63d1-4462-9ab0-216788b99316.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/eco-friendly-beach-towels",
+            "block_two_subtitle": "Sustainable",
+            "title": "Beach towels"
+          }
+        },
+        "f929564c-34b5-4a2b-bd1c-e8fb301739d5": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/3_1e47cd0f-c1ee-44b4-a51c-d73b369ce25b.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/3_ceb93241-110a-40df-b027-e6fe7dfea308.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/disposables-and-party-essentials",
+            "block_two_subtitle": "Plastic-free",
+            "title": "Cutlery"
+          }
+        },
+        "a3210888-49e4-4776-90c7-d89e7a6eb620": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/4_6dd44d8b-b6f6-4716-8155-10f45f006994.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/4_70b49e87-3905-429c-b46a-054dea9277fe.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/non-toxic-waterproof-makeup-products",
+            "block_two_subtitle": "Non-toxic",
+            "title": "makeup"
+          }
+        },
+        "aa1f4aad-6173-44b1-8f27-2eb28d47fb1e": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/5_8e6bc6ca-40a6-4f0e-a630-56288b2b2505.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/5_da971de9-a630-403b-bd4a-dcf1ae780617.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/handmade-sunglasses",
+            "block_two_subtitle": "Handcrafted",
+            "title": "Sunglasses"
+          }
+        }
+      },
+      "block_order": [
+        "646861ef-f054-4001-a87d-3a9d1daddf1e",
+        "805067d2-2702-41c6-8bbe-540188cafd00",
+        "f929564c-34b5-4a2b-bd1c-e8fb301739d5",
+        "a3210888-49e4-4776-90c7-d89e7a6eb620",
+        "aa1f4aad-6173-44b1-8f27-2eb28d47fb1e"
+      ],
+      "settings": {
+        "heading_one": "Beach Ready",
+        "heading_two": "essentials",
+        "btn_text": "",
+        "url_link": ""
+      }
+    },
+    "c3c35892-12a5-4d81-ba82-8d1ff98780f7": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "747998b7-fdbc-4276-b2b4-6870c5cce0a8": {
+          "type": "Product",
+          "settings": {
+            "product": "sustainable-creme-bucket-hat"
+          }
+        },
+        "85b4fdf3-8d1c-46de-9884-d5435927acd5": {
+          "type": "Product",
+          "settings": {
+            "product": "vilvah-store-cotton-jute-towel-herbal-dyed-yellow-vs-vlk-001-291122"
+          }
+        },
+        "90f34e1f-f9db-4bdd-9911-5b6b28acbb1e": {
+          "type": "Product",
+          "settings": {
+            "product": "100-linen-lightweight-tote-bag"
+          }
+        },
+        "d7cde68e-6a55-463f-affa-81b2a6aa2f87": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-walong-orange-wooden-sunglasses"
+          }
+        },
+        "be353250-fb7e-4e54-9f14-f2eaa6e0172e": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-soul-birchwood-cutlery-set-disposable-cutlery-75-forks-50-spoons-50-knives-bcs175-21323"
+          }
+        },
+        "3178640a-a489-48fb-8f34-d966127ae8a3": {
+          "type": "Product",
+          "settings": {
+            "product": "saltpetre-organic-cotton-hat-for-kids-brown-spacc-kht-cff-13922"
+          }
+        },
+        "61eb6089-980f-4ff8-a5d9-f9ee680c6ed5": {
+          "type": "Product",
+          "settings": {
+            "product": "the-terra-tribe-organic-cotton-hemp-shorts-deep-brown-304-db-16123"
+          }
+        },
+        "daf3ead0-3a46-4c41-8bcf-03baf5e85b43": {
+          "type": "Product",
+          "settings": {
+            "product": "conscious-chemist-sun-drink-sun-protection-50-ml-ccsd01-301122"
+          }
+        },
+        "470f155b-745c-4b29-aefa-2b96a6b3f518": {
+          "type": "Product",
+          "settings": {
+            "product": "sirohi-by-skilled-samaritan-foundation-natural-grass-tote-bag-water-hyacinth-half-moon-brown-sir-bg-m-d6-090123"
+          }
+        },
+        "b449cf5d-11e0-4b94-9bdd-c97277b760bb": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-kala-cotton-white-mens-half-sleeves-shirt"
+          }
+        },
+        "b3d3a1ee-1782-4c38-937e-56a422fb15ab": {
+          "type": "Product",
+          "settings": {
+            "product": "cotton-printed-co-ord-set-maroon"
+          }
+        }
+      },
+      "block_order": [
+        "747998b7-fdbc-4276-b2b4-6870c5cce0a8",
+        "85b4fdf3-8d1c-46de-9884-d5435927acd5",
+        "90f34e1f-f9db-4bdd-9911-5b6b28acbb1e",
+        "d7cde68e-6a55-463f-affa-81b2a6aa2f87",
+        "be353250-fb7e-4e54-9f14-f2eaa6e0172e",
+        "3178640a-a489-48fb-8f34-d966127ae8a3",
+        "61eb6089-980f-4ff8-a5d9-f9ee680c6ed5",
+        "daf3ead0-3a46-4c41-8bcf-03baf5e85b43",
+        "470f155b-745c-4b29-aefa-2b96a6b3f518",
+        "b449cf5d-11e0-4b94-9bdd-c97277b760bb",
+        "b3d3a1ee-1782-4c38-937e-56a422fb15ab"
+      ],
+      "settings": {
+        "title1": "Unique",
+        "title2": "Beach finds",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/eco-friendly-beach-accessories",
+        "button_position": "top"
+      }
+    },
+    "a141e8d6-3d3a-41c3-9cd8-f10315ae1973": {
+      "type": "slider-show",
+      "blocks": {
+        "template--16696574771444__a141e8d6-3d3a-41c3-9cd8-f10315ae1973-167998954332c1cd10-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mountain3_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Mountain_mobile_banner_1.png",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/natural-mountain-accessories"
+          }
+        }
+      },
+      "block_order": [
+        "template--16696574771444__a141e8d6-3d3a-41c3-9cd8-f10315ae1973-167998954332c1cd10-0"
+      ],
+      "custom_css": [],
+      "settings": {
+        "edge_to_edge": true,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "892cb093-15c7-49ec-be97-6307bf015fb0": {
+      "type": "travelsite-circle-bgimg",
+      "blocks": {
+        "7b6ef817-bc23-4a59-8e73-3722f55b6f76": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/1_92749da0-4099-4b72-998b-e573047063c0.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/1_eced564b-d8e9-4898-b9d6-4a056f628797.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/reusable-cups-online",
+            "block_two_subtitle": "Reusable",
+            "title": "Cups"
+          }
+        },
+        "9fd53377-305e-4651-b4c5-6db29bf72eaa": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/2_e4e6dbc3-a6c9-4107-9559-9f732093d11d.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/2_b31a9ff9-f875-4e66-9e4e-5fc448acac57.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/upcycled-accessories",
+            "block_two_subtitle": "Upcycled",
+            "title": "Accessories"
+          }
+        },
+        "beb09335-797d-40d9-8a2a-7023cf425830": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/3_e165d0c8-9941-4793-82bf-85b711271c71.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/3_00a19b58-12d9-49c7-9c4b-6e42f0ccb042.png",
+            "brands_link": "",
+            "block_two_subtitle": "Guilt-free",
+            "title": "Snacks"
+          }
+        },
+        "615ee2a6-db2e-4dc3-a96b-2e776b77da4e": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/4_43e9415b-8710-42dd-944a-94d6b91627c3.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/4_cf0d4ce8-a8fa-4528-8122-0e6024c93484.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/eco-friendly-water-bottle",
+            "block_two_subtitle": "Water",
+            "title": "Bottles"
+          }
+        },
+        "23ba1459-d402-4419-9bbc-5f164b9c1e6c": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/5_d0d08c3c-5544-4711-988d-c1fd63621a3c.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/5_69d49339-32bd-4305-82f8-9575c8228489.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/sustainable-athleisure-fashion",
+            "block_two_subtitle": "Comfortable",
+            "title": "Athleisure"
+          }
+        }
+      },
+      "block_order": [
+        "7b6ef817-bc23-4a59-8e73-3722f55b6f76",
+        "9fd53377-305e-4651-b4c5-6db29bf72eaa",
+        "beb09335-797d-40d9-8a2a-7023cf425830",
+        "615ee2a6-db2e-4dc3-a96b-2e776b77da4e",
+        "23ba1459-d402-4419-9bbc-5f164b9c1e6c"
+      ],
+      "settings": {
+        "heading_one": "",
+        "heading_two": "",
+        "btn_text": "",
+        "url_link": ""
+      }
+    },
+    "740b653d-4ddd-49cc-b12c-806378bbcd23": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "96f83f4c-2ee0-4894-8b34-fd710fa302a7": {
+          "type": "Product",
+          "settings": {
+            "product": "sustainable-black-organic-cotton-sweatshirt"
+          }
+        },
+        "97e5b8cf-f595-4d3d-87e2-aacbe74803d9": {
+          "type": "Product",
+          "settings": {
+            "product": "natural-dark-hot-chocolate-kashmir-chilli-100gm"
+          }
+        },
+        "7769c539-25f4-4e18-8ec8-13829db9bc38": {
+          "type": "Product",
+          "settings": {
+            "product": "aplito-cotton-throw-blanket-navy-blue-throw-blanket-navy-blue-23323"
+          }
+        },
+        "8d6f6c9f-b8c2-42b2-98c0-e9ec94209e2a": {
+          "type": "Product",
+          "settings": {
+            "product": "oziss-recycled-cotton-sweatshirt-wide-fit-wine-sweatsh-wine-xs-s-m-sweatsh-wine-m-l-m-sweatsh-wine-xl-xxl-m-18123"
+          }
+        },
+        "6b059dd0-dda5-4b3a-a69e-89554ae92125": {
+          "type": "Product",
+          "settings": {
+            "product": "natural-bamboo-fabric-unisex-ultra-soft-socks"
+          }
+        },
+        "2acfcc08-5e86-4e56-9b0c-0c7807f84270": {
+          "type": "Product",
+          "settings": {
+            "product": "saltpetre-organic-cotton-sweatshirt-and-jogger-set-for-kids-purple-spkw-j1-p1-llc-13922"
+          }
+        },
+        "40f4abca-52bc-4cb0-91e5-d35e6ca46487": {
+          "type": "Product",
+          "settings": {
+            "product": "breathe-therapeutic-cold-reliever-oil-10ml"
+          }
+        },
+        "f077fd70-addc-47d0-b8ac-83a18b574156": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "cream-yellow-cotton-throw"
+          }
+        }
+      },
+      "block_order": [
+        "96f83f4c-2ee0-4894-8b34-fd710fa302a7",
+        "97e5b8cf-f595-4d3d-87e2-aacbe74803d9",
+        "7769c539-25f4-4e18-8ec8-13829db9bc38",
+        "8d6f6c9f-b8c2-42b2-98c0-e9ec94209e2a",
+        "6b059dd0-dda5-4b3a-a69e-89554ae92125",
+        "2acfcc08-5e86-4e56-9b0c-0c7807f84270",
+        "40f4abca-52bc-4cb0-91e5-d35e6ca46487",
+        "f077fd70-addc-47d0-b8ac-83a18b574156"
+      ],
+      "settings": {
+        "title1": "Unique Mountain",
+        "title2": "essentials",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": true,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/natural-mountain-accessories",
+        "button_position": "top"
+      }
+    },
+    "7da27a31-3454-4615-8490-bc406e6d3bff": {
+      "type": "slider-show",
+      "blocks": {
+        "template--16696574771444__7da27a31-3454-4615-8490-bc406e6d3bff-167998954332c1cd10-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/road_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Road_trip_mobile_banner_1.png",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/road-trip-essesntials"
+          }
+        },
+        "template--16696574771444__7da27a31-3454-4615-8490-bc406e6d3bff-167998954332c1cd10-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "Slide title",
+            "subtitle": "Slide title",
+            "content": "Tell your story",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "Button",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16696574771444__7da27a31-3454-4615-8490-bc406e6d3bff-167998954332c1cd10-0",
+        "template--16696574771444__7da27a31-3454-4615-8490-bc406e6d3bff-167998954332c1cd10-1"
+      ],
+      "settings": {
+        "edge_to_edge": true,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "53ea251a-8228-4a8f-9a17-28f3e6722c1f": {
+      "type": "travelsite-circle-bgimg",
+      "blocks": {
+        "69833d5f-f173-4dd7-8994-09d723e9ded9": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/1_ab33956a-4064-4f23-92ec-8c73aec18f70.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/1_51845a11-85e4-4d27-92ca-25a963ceb5f7.png",
+            "brands_link": "https:\/\/amala.earth\/search?q=eye%20pillow",
+            "block_two_subtitle": "Relaxing",
+            "title": "Eye pillows"
+          }
+        },
+        "9879b4d9-8f11-4aa7-b9a6-786e1e0bffd2": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/2_0d9684da-cc4a-4a7f-b6c9-1f17ca8e4c4a.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/2_c4a5dc12-30da-4d32-aedc-2dfd293f582b.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/bedding-cushions-and-throws?f_Type=Throws",
+            "block_two_subtitle": "Organic",
+            "title": "Throws"
+          }
+        },
+        "2e8db32a-bb2b-4ad6-9e4e-ebd909ffe60a": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/3_16dfb925-6256-477b-9590-33989cc6e27b.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/3_f2e7771c-e882-41d0-9cec-2f18c9de5b0f.png",
+            "brands_link": "https:\/\/amala.earth\/search?q=wipes",
+            "block_two_subtitle": "Paraben-free",
+            "title": "Wipes"
+          }
+        },
+        "2ade313f-77c3-4bd2-9e07-9500acc5dcab": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/4_87bbb320-41a9-48e4-aafd-d5e7c220a89f.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/4_ddd33e3b-c2cb-4a17-a5ab-f0215b8b1124.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/fragrances",
+            "block_two_subtitle": "Natural",
+            "title": "Fragrances"
+          }
+        },
+        "452d1b27-c419-4eae-a61b-f0ed448cfecc": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/5_2e4b1b06-8a8e-4cc0-918f-cb780b4b6d15.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/5_e7b8dd96-f2be-468e-a268-565e0f0516a1.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/hygiene-essentials",
+            "block_two_subtitle": "Hygiene",
+            "title": "Essentials"
+          }
+        }
+      },
+      "block_order": [
+        "69833d5f-f173-4dd7-8994-09d723e9ded9",
+        "9879b4d9-8f11-4aa7-b9a6-786e1e0bffd2",
+        "2e8db32a-bb2b-4ad6-9e4e-ebd909ffe60a",
+        "2ade313f-77c3-4bd2-9e07-9500acc5dcab",
+        "452d1b27-c419-4eae-a61b-f0ed448cfecc"
+      ],
+      "settings": {
+        "heading_one": "Road Trip",
+        "heading_two": "essentials",
+        "btn_text": "",
+        "url_link": ""
+      }
+    },
+    "88f45fa1-1cf0-4344-b8e1-6aff35c21750": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "98690010-f1fe-478c-a563-979e5133838a": {
+          "type": "Product",
+          "settings": {
+            "product": "mulberry-silk-eye-mask"
+          }
+        },
+        "8aa12129-3827-4442-add8-f94fb429b7de": {
+          "type": "Product",
+          "settings": {
+            "product": "insect-repellent-set-of-2-7mlx2"
+          }
+        },
+        "4258b112-d811-4a96-a537-c6f4e8d0677e": {
+          "type": "Product",
+          "settings": {
+            "product": "sarveda-copper-water-bottle-diamond-groove-1-l-svh_d_037-230922"
+          }
+        },
+        "3f86e445-2aae-4336-a5c7-a8b3cd1bb1e2": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-cotton-canvas-sling-bag"
+          }
+        },
+        "fcb24fa8-2201-4791-bd9a-96da0b16c98b": {
+          "type": "Product",
+          "settings": {
+            "product": "zero-waste-collapsible-steel-tumbler-275ml"
+          }
+        },
+        "8d98e733-1de4-4eb5-ace8-fb2451d2a06c": {
+          "type": "Product",
+          "settings": {
+            "product": "studio-beej-cork-bottle-holder-brown-bj-cr-241-29922"
+          }
+        },
+        "b2f1f1ad-af97-40c4-b785-deceee57aa28": {
+          "type": "Product",
+          "settings": {
+            "product": "mosquito-repellent-body-spray-herbal-organic-100-ml-pack-of-2"
+          }
+        },
+        "dd4ea68f-624d-4484-964c-a2a9e60f2138": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-brown-tan-jute-sling-bag"
+          }
+        },
+        "7ea1a47a-8dc2-45b5-af7e-51b0aa786f9e": {
+          "type": "Product",
+          "settings": {
+            "product": "riti-coconut-malai-leather-clips-wire-clips-beige-set-of-4-xishawc008160323"
+          }
+        }
+      },
+      "block_order": [
+        "98690010-f1fe-478c-a563-979e5133838a",
+        "8aa12129-3827-4442-add8-f94fb429b7de",
+        "4258b112-d811-4a96-a537-c6f4e8d0677e",
+        "3f86e445-2aae-4336-a5c7-a8b3cd1bb1e2",
+        "fcb24fa8-2201-4791-bd9a-96da0b16c98b",
+        "8d98e733-1de4-4eb5-ace8-fb2451d2a06c",
+        "b2f1f1ad-af97-40c4-b785-deceee57aa28",
+        "dd4ea68f-624d-4484-964c-a2a9e60f2138",
+        "7ea1a47a-8dc2-45b5-af7e-51b0aa786f9e"
+      ],
+      "settings": {
+        "title1": "Road Trip",
+        "title2": "ready",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": true,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/road-trip-essesntials",
+        "button_position": "top"
+      }
+    },
+    "de52b36c-8a6b-4535-82da-7442492f84d6": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "f53fb515-c8b4-4a2c-9ad4-ad1601e50b3b": {
+          "type": "Product",
+          "settings": {
+            "product": "plain-copper-bottle-1-l"
+          }
+        },
+        "c47f7141-2527-4ee7-af17-40dd23b82e2f": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-soul-palm-leaf-dinner-set-round-pdsro50-21323"
+          }
+        },
+        "bf3decef-9019-4112-9639-f55db50772dc": {
+          "type": "Product",
+          "settings": {
+            "product": "bamboo-bathroom-essentials-travel-kit-set-of-10"
+          }
+        },
+        "c7ee93b5-d1fd-4d97-8f1b-20018a659b39": {
+          "type": "Product",
+          "settings": {
+            "product": "natural-vibes-sunscreen-lotion-spf-30-anti-pollution-nv_sunblock_lotion_30ml-270922"
+          }
+        },
+        "87d10d5d-942f-48a8-ba9a-79bfea1ca113": {
+          "type": "Product",
+          "settings": {
+            "product": "kronokare-hand-sanitizer-kills-99-99-bacteria-30-ml-hs-30ml-tub-51222"
+          }
+        },
+        "ca19bcae-ef31-4daf-a968-d3fe58fae5fb": {
+          "type": "Product",
+          "settings": {
+            "product": "sustainable-multi-color-masks-in-regular-size"
+          }
+        },
+        "e2cf9ada-c5cd-4c5b-8635-760c8c80ce68": {
+          "type": "Product",
+          "settings": {
+            "product": "ntural-sweet-ripe-banana-chips-with-amchur-and-chilli-90gm-pack-of-3"
+          }
+        },
+        "90a4f0d4-3c00-4d6b-90a7-9027614ed987": {
+          "type": "Product",
+          "settings": {
+            "product": "gluten-free-candy-gift-box-pack-of-3"
+          }
+        },
+        "3bf57412-6b04-4fac-82ff-c58222eef327": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-bamboo-straws-travel-kit-pack-of-2"
+          }
+        },
+        "2efdc24b-7601-4698-813e-4f6bd0dbc6c6": {
+          "type": "Product",
+          "settings": {
+            "product": "beige-brown-bamboo-bowls-with-cutlery-set-of-7"
+          }
+        },
+        "3e82afc3-f597-4b9e-b8e9-02310778951c": {
+          "type": "Product",
+          "settings": {
+            "product": "100-recycled-unbleached-face-tissue-100-pull"
+          }
+        },
+        "d856c503-215a-41ef-8d30-a6a7a5aa4924": {
+          "type": "Product",
+          "settings": {
+            "product": "teeth-a-bit-mint-mouthwash-tablets-cardamom-fennel-60-tabs-mwt-mp-as-cf-141022"
+          }
+        },
+        "cf9b9ac6-24bd-42c1-b069-015c1c74f838": {
+          "type": "Product",
+          "settings": {
+            "product": "habbits-toothpaste-hemp-seed-oil-vitamin-c-e-100-g-hc-po1-30123"
+          }
+        },
+        "fd2cd719-3c09-4fe4-a6e7-445e64e7af30": {
+          "type": "Product",
+          "settings": {
+            "product": "vegan-granola-super-food-bar-combo-set-of-6"
+          }
+        }
+      },
+      "block_order": [
+        "f53fb515-c8b4-4a2c-9ad4-ad1601e50b3b",
+        "c47f7141-2527-4ee7-af17-40dd23b82e2f",
+        "bf3decef-9019-4112-9639-f55db50772dc",
+        "c7ee93b5-d1fd-4d97-8f1b-20018a659b39",
+        "87d10d5d-942f-48a8-ba9a-79bfea1ca113",
+        "ca19bcae-ef31-4daf-a968-d3fe58fae5fb",
+        "e2cf9ada-c5cd-4c5b-8635-760c8c80ce68",
+        "90a4f0d4-3c00-4d6b-90a7-9027614ed987",
+        "3bf57412-6b04-4fac-82ff-c58222eef327",
+        "2efdc24b-7601-4698-813e-4f6bd0dbc6c6",
+        "3e82afc3-f597-4b9e-b8e9-02310778951c",
+        "d856c503-215a-41ef-8d30-a6a7a5aa4924",
+        "cf9b9ac6-24bd-42c1-b069-015c1c74f838",
+        "fd2cd719-3c09-4fe4-a6e7-445e64e7af30"
+      ],
+      "settings": {
+        "title1": "Travel",
+        "title2": "Easy Switches",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "",
+        "link_url": "https:\/\/amala.earth\/collections\/waste-free-travel",
+        "button_position": "top"
+      }
+    },
+    "4d7ca25f-cf5f-4c40-abcc-b5c7f4c69fd7": {
+      "type": "travel-slideshow",
+      "blocks": {
+        "template--16696574771444__4d7ca25f-cf5f-4c40-abcc-b5c7f4c69fd7-1680070065609c19fc-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/blog_1_2.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/blog_1_2_1.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/top-5-must-haves-sustainable-travel-essentials"
+          }
+        },
+        "template--16696574771444__4d7ca25f-cf5f-4c40-abcc-b5c7f4c69fd7-1680070065609c19fc-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "Slide title",
+            "subtitle": "Slide title",
+            "content": "Tell your story",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "Button",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16696574771444__4d7ca25f-cf5f-4c40-abcc-b5c7f4c69fd7-1680070065609c19fc-0",
+        "template--16696574771444__4d7ca25f-cf5f-4c40-abcc-b5c7f4c69fd7-1680070065609c19fc-1"
+      ],
+      "settings": {
+        "edge_to_edge": true,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "fdda1bef-a24c-442e-b78f-64ad8e3bfc12": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "2939003c-0403-49fd-900f-a977b6a070a7": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-cotton-reusable-pocket-baby-diapers-pack-of-5"
+          }
+        },
+        "0124e102-a049-4870-ad5b-fa8eaada51ee": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-cotton-wash-clothes-waffle-pattern"
+          }
+        },
+        "55299269-9541-4d60-8030-9998c869dc42": {
+          "type": "Product",
+          "settings": {
+            "product": "take-it-easy-soothing-vapor-bubble-bath-250ml"
+          }
+        },
+        "95a357ac-40c2-45df-a230-d79fc7c72f3d": {
+          "type": "Product",
+          "settings": {
+            "product": "teeth-a-bit-neem-toothbrush-for-kids-gum-sensitive-soft-bristles-hefty-handle-pack-of-2-mtb-kd-nh-sg-141022"
+          }
+        },
+        "f824f841-abc5-44c9-a7b4-281ea6978c06": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-canvas-sky-blue-printed-sealion-diaper-bag"
+          }
+        },
+        "0228e834-6814-472b-b581-6acf84adf61d": {
+          "type": "Product",
+          "settings": {
+            "product": "lil-treazures-organic-cotton-linen-hair-band-for-girls-multicolour-set-of-2-pc-lthb0323-140223"
+          }
+        },
+        "1bafefdf-dffd-44f7-bed7-cc488523ee57": {
+          "type": "Product",
+          "settings": {
+            "product": "handmade-recycled-cotton-block-printed-travel-journal"
+          }
+        },
+        "f54522bd-490c-4c61-a1ba-298e9bc7466a": {
+          "type": "Product",
+          "settings": {
+            "product": "cotton-baby-bib"
+          }
+        },
+        "ed018b42-457d-4aa5-8c71-4b6fbb69b429": {
+          "type": "Product",
+          "settings": {
+            "product": "jute-bag-collection-1-seed-diary-4-4-seed-pen-and-pencil-combo"
+          }
+        },
+        "c0b2e711-f278-4c96-b574-aafea43b97ee": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-snakes-and-ladders-ancient-board"
+          }
+        }
+      },
+      "block_order": [
+        "2939003c-0403-49fd-900f-a977b6a070a7",
+        "0124e102-a049-4870-ad5b-fa8eaada51ee",
+        "55299269-9541-4d60-8030-9998c869dc42",
+        "95a357ac-40c2-45df-a230-d79fc7c72f3d",
+        "f824f841-abc5-44c9-a7b4-281ea6978c06",
+        "0228e834-6814-472b-b581-6acf84adf61d",
+        "1bafefdf-dffd-44f7-bed7-cc488523ee57",
+        "f54522bd-490c-4c61-a1ba-298e9bc7466a",
+        "ed018b42-457d-4aa5-8c71-4b6fbb69b429",
+        "c0b2e711-f278-4c96-b574-aafea43b97ee"
+      ],
+      "settings": {
+        "title1": "Travel",
+        "title2": "with kids",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "",
+        "link_url": "",
+        "button_position": "top"
+      }
+    },
+    "d33f9ed7-8699-4685-abb4-6f4f7fee29f6": {
+      "type": "travel-slideshow",
+      "blocks": {
+        "template--16696574771444__d33f9ed7-8699-4685-abb4-6f4f7fee29f6-1680070065609c19fc-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/news_letter_1_1_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/3_3_e8ea3d89-089a-433b-a5e4-1f32f2649bfe.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": ""
+          }
+        },
+        "template--16696574771444__d33f9ed7-8699-4685-abb4-6f4f7fee29f6-1680070065609c19fc-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/news_letter_2_1_2.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/1_12.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": ""
+          }
+        },
+        "9733568f-7305-459e-9e43-6b07c6f9952f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/news_letter_3_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/2_4_692d68e5-81c1-460c-98c2-4978a0d659f2.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16696574771444__d33f9ed7-8699-4685-abb4-6f4f7fee29f6-1680070065609c19fc-0",
+        "template--16696574771444__d33f9ed7-8699-4685-abb4-6f4f7fee29f6-1680070065609c19fc-1",
+        "9733568f-7305-459e-9e43-6b07c6f9952f"
+      ],
+      "settings": {
+        "edge_to_edge": true,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "e81059a3-56b3-4699-9c24-ce8ac819c3d3": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "7017c96a-88f5-4fa9-8371-aada6d80573a": {
+          "type": "Product",
+          "settings": {
+            "product": "indiegood-canvas-treat-bag-for-dogs-blue-ig00105-18822"
+          }
+        },
+        "f14ebeaa-82af-4c7a-b963-16fc8ee9e129": {
+          "type": "Product",
+          "settings": {
+            "product": "indiegood-organic-corduroy-dog-harness-onion-pink-ig00112-18822"
+          }
+        },
+        "93dc0769-d953-46e1-94b0-8d79a8127287": {
+          "type": "Product",
+          "settings": {
+            "product": "hemp-hearts-100gm"
+          }
+        },
+        "37f203a0-e02a-4cc3-9255-fe098f24b0b8": {
+          "type": "Product",
+          "settings": {
+            "product": "paw-handmade-organic-balm-10gm"
+          }
+        },
+        "78cb1924-d41f-4791-a7fb-22c4e3ae77d1": {
+          "type": "Product",
+          "settings": {
+            "product": "paraben-free-hemp-healing-balm-for-pets-30gm"
+          }
+        },
+        "edd180a2-179d-4b36-90e8-595bbd84a11e": {
+          "type": "Product",
+          "settings": {
+            "product": "herbal-dog-spray-200ml"
+          }
+        },
+        "c16bf6c5-417c-4c49-81f4-cac674f1b113": {
+          "type": "Product",
+          "settings": {
+            "product": "pure-cotton-brown-bib-bandana-for-dogs"
+          }
+        },
+        "e6e804e6-9107-4add-9b90-b2a12a445b92": {
+          "type": "Product",
+          "settings": {
+            "product": "plant-based-pet-hemp-seed-oil-for-pets-30ml"
+          }
+        },
+        "1fa499dc-6c1c-482c-8853-4e31055726a1": {
+          "type": "Product",
+          "settings": {
+            "product": "pure-cotton-red-tux-bandana-for-dogs"
+          }
+        },
+        "b2e3694b-ab39-48ba-91d9-147beace7ba7": {
+          "type": "Product",
+          "settings": {
+            "product": "wiggle-dog-mouth-freshner-spray-dentapet-10-ml-dentapet-10ml-po1-201022"
+          }
+        }
+      },
+      "block_order": [
+        "7017c96a-88f5-4fa9-8371-aada6d80573a",
+        "f14ebeaa-82af-4c7a-b963-16fc8ee9e129",
+        "93dc0769-d953-46e1-94b0-8d79a8127287",
+        "37f203a0-e02a-4cc3-9255-fe098f24b0b8",
+        "78cb1924-d41f-4791-a7fb-22c4e3ae77d1",
+        "edd180a2-179d-4b36-90e8-595bbd84a11e",
+        "c16bf6c5-417c-4c49-81f4-cac674f1b113",
+        "e6e804e6-9107-4add-9b90-b2a12a445b92",
+        "1fa499dc-6c1c-482c-8853-4e31055726a1",
+        "b2e3694b-ab39-48ba-91d9-147beace7ba7"
+      ],
+      "settings": {
+        "title1": "Travel",
+        "title2": "with Pet",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/pet-care",
+        "button_position": "top"
+      }
+    },
+    "25fe2d5c-ba9c-4b37-9b8b-9ad36ff63320": {
+      "type": "travel-slideshow",
+      "blocks": {
+        "template--16696574771444__25fe2d5c-ba9c-4b37-9b8b-9ad36ff63320-1680070065609c19fc-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Tips_banner1_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/1_c184e030-187c-4edb-9510-92d9ffc720c7.png",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/top-5-must-haves-sustainable-travel-essentials"
+          }
+        },
+        "template--16696574771444__25fe2d5c-ba9c-4b37-9b8b-9ad36ff63320-1680070065609c19fc-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Tips_banner2_2.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/2_c9abfdd2-dee6-42b5-82ba-f53650057c00.png",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": ""
+          }
+        },
+        "28dc89c4-5266-4249-b531-2c6c20cda402": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Tips_banner3_2.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/3_95273c5c-e59d-40a2-b3c4-08ca11b11177.png",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16696574771444__25fe2d5c-ba9c-4b37-9b8b-9ad36ff63320-1680070065609c19fc-0",
+        "template--16696574771444__25fe2d5c-ba9c-4b37-9b8b-9ad36ff63320-1680070065609c19fc-1",
+        "28dc89c4-5266-4249-b531-2c6c20cda402"
+      ],
+      "settings": {
+        "edge_to_edge": true,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "9ad129bb-626b-4bbe-8242-d0084626604d": {
+      "type": "travel-slideshow",
+      "blocks": {
+        "template--16696574771444__9ad129bb-626b-4bbe-8242-d0084626604d-1680070065609c19fc-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/blog_2_4.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/blog_2_2_2.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/sustainable-checklist-for-a-traveller"
+          }
+        },
+        "template--16696574771444__9ad129bb-626b-4bbe-8242-d0084626604d-1680070065609c19fc-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "Slide title",
+            "subtitle": "Slide title",
+            "content": "Tell your story",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "Button",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16696574771444__9ad129bb-626b-4bbe-8242-d0084626604d-1680070065609c19fc-0",
+        "template--16696574771444__9ad129bb-626b-4bbe-8242-d0084626604d-1680070065609c19fc-1"
+      ],
+      "settings": {
+        "edge_to_edge": true,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    }
+  },
+  "order": [
+    "1de4fa5f-841e-48a3-ad94-a958bc0b9988",
+    "festival-landings-page",
+    "3b33781e-3c89-459e-9145-18ca5bd442bc",
+    "1129f574-3060-4c7d-89ec-fded4a385161",
+    "0c2b618c-51e6-4b7e-91dd-21510d50eb80",
+    "d30c17bb-f596-4015-b067-9e6e5fdba375",
+    "7d2e9e37-66cf-4931-8ad7-8adf4ca634cc",
+    "3acaab5c-845a-4f38-9625-d19618de1ee7",
+    "2debdb1b-9d7d-4786-81e0-4139ec9e4a54",
+    "dda780b6-4f92-47c8-b444-c7e3e2a9e9bb",
+    "c3c35892-12a5-4d81-ba82-8d1ff98780f7",
+    "a141e8d6-3d3a-41c3-9cd8-f10315ae1973",
+    "892cb093-15c7-49ec-be97-6307bf015fb0",
+    "740b653d-4ddd-49cc-b12c-806378bbcd23",
+    "7da27a31-3454-4615-8490-bc406e6d3bff",
+    "53ea251a-8228-4a8f-9a17-28f3e6722c1f",
+    "88f45fa1-1cf0-4344-b8e1-6aff35c21750",
+    "de52b36c-8a6b-4535-82da-7442492f84d6",
+    "4d7ca25f-cf5f-4c40-abcc-b5c7f4c69fd7",
+    "fdda1bef-a24c-442e-b78f-64ad8e3bfc12",
+    "d33f9ed7-8699-4685-abb4-6f4f7fee29f6",
+    "e81059a3-56b3-4699-9c24-ce8ac819c3d3",
+    "25fe2d5c-ba9c-4b37-9b8b-9ad36ff63320",
+    "9ad129bb-626b-4bbe-8242-d0084626604d"
+  ]
+}

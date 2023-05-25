@@ -1,0 +1,37 @@
+<div id="seller_with_products">
+  <div class="product-1">
+    <img src="" />
+    <p class="title"></p>
+    <p class="price"></p>
+    <p class="comp_price"></p>
+  </div>
+  <div class="product-2">
+    <img src="" />
+    <p class="title"></p>
+    <p class="price"></p>
+    <p class="comp_price"></p>
+  </div>
+  <div class="product-3">
+    <img src="" />
+    <p class="title"></p>
+    <p class="price"></p>
+    <p class="comp_price"></p>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Seller Section",
+    "settings": []
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+<script>
+  var vendor_name = "{{- product.vendor -}}";
+  var main_product = "{{- product.id -}}";
+  //setTimeout(function(){ seller_section(vendor_name,main_product); }, 3000);
+  
+</script>

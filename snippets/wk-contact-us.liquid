@@ -1,0 +1,185 @@
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  .mp-full-width {
+        width: 100%;
+    }
+    .rateit, .wk-inline-block {
+        display: inline-block !important;
+    }
+    .hidden {
+        display: none;
+    }
+    .mp-no-lr-pad {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .mp-mrgn-btm-12 {
+        margin-bottom: 12px;
+    }
+    .mp-mrgn-btm-5 {
+        margin-bottom: 5px;
+    }
+    .mp-mrgn-btm-32 {
+        margin-bottom: 32px;
+    }
+    .mp-vmiddle {
+        vertical-align: middle;
+    }
+    .mp-store-logo {
+        overflow: hidden;
+    }
+    .wk-modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 10000; /* Sit on top */
+        outline: 0;
+        left: 0;
+        top: -100px;
+        right: 0;
+        bottom: 0;
+        overflow-x: hidden;
+        overflow-y: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+  
+    .wk-modal-content {
+        position: relative;
+        background-color: #fefefe;
+        color: #444;
+        margin: 10% auto;
+        padding: 0;
+        border: 1px solid #888;
+        border-radius: 6px;
+        outline: 0;
+        width: 50%;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s;
+    }
+    .wk-modal-content label{
+        color: #444 !important;    
+    }  
+    .wk-close {
+        color: white;
+        float: right;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .wk-close:hover,
+    .wk-close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .wk-modal-header {
+        padding: 15px 15px;
+        background-color: #C0392B;
+        border-radius: 3px 3px 0 0;
+        color: white;
+    }
+    .wk-modal-body {
+        padding: 2px 16px;
+    }
+    .btn-cont{
+        border: none;
+        color: white;
+        padding: 10px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        margin: 4px 2px;
+        cursor: pointer;
+        background-color: #3498DB;
+        border-radius: 25px;
+    }
+    .btn-cont:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        background-color: #85C1E9;
+     }
+    .mp-success {
+        color: green;
+        border: 1px solid #CCCCCC;
+        line-height: 32px;
+        text-align: center;
+        display: none;
+    }
+    .mp-err{
+        color:red;
+    }
+    #loader {
+        display: none;  
+        margin-left: 50px ;
+    }
+</style>
+<div id="myModal" class="wk-modal">
+            <!-- Modal content -->
+	<div class="wk-modal-content">
+		<div class="wk-modal-header">
+         <span>Contact to seller </span>
+         <span id="loader"><i class="fa fa-spinner fa-spin" style="font-size:36px"></i></span>
+         <span class="wk-close" id="wk-close-contact">&times;</span>
+        </div>
+        <div class="wk-modal-body">
+          <div class="mp-success mp-mrgn-btm-12">
+            Query submitted 
+          </div>
+          <form action="/" class="contact-form mp-mrgn-btm-12" id="contact-us-form" method="post">
+            <div>
+              <label>Name</label>
+              <input type="text" name="name" required="" class="mp-full-width">
+            </div>
+            <div>
+              <label>Email</label>
+              <input type="email" name="email" required="" class="mp-full-width">
+            </div>
+            <div>
+              <label>Query</label>
+              <textarea name="query" required="" class="mp-full-width"></textarea>
+            </div>
+            <input type="hidden" name="main_id_product" value="{{product.id}}">
+            <div>
+              <div class="mp-err"></div>
+              <button type="submit" class="btn button-primary" id="query-btn">Submit</button>
+            </div>
+          </form>
+        </div>
+	</div>
+</div>
+
+<div class="mp-mrgn-btm-12 contact_btn" style="display:none">
+    <span id="contact_modal" class="btn btn-cont mp-mrgn-btm-12" >
+      <span class="fa fa-envelope-o" aria-hidden="true"></span> Contact
+    </span>
+</div>
+
+<script>
+    var modal = document.getElementById("myModal");
+    // Get the button that opens the modal
+    var btn = document.getElementById("contact_modal");
+    // if modal exist then trigger it only
+    if (modal === null || btn === null){}
+    else
+    {
+      // Get the <span> element that closes the modal
+      var span = document.getElementById("wk-close-contact");
+      // When the user clicks the button, open the modal 
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+      //When the user clicks on <span> (x), close the modal contact
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+      //When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal)
+          modal.style.display = "none";
+      }
+      /** modal block end */
+    }
+</script>

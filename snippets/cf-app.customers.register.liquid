@@ -1,0 +1,62 @@
+{%- render 'my-account-breadcrumbs' -%}
+<div class="page__content  layout editprofile-page">
+  {%- render 'my-account-sidebar' -%}
+  <div class="layout__section">
+    <div class="card">
+      <div class="card__section card__section--tight">
+        <h1 class="heading h1">Edit Account</h1>
+      </div>
+      {%- form 'create_customer', name: 'create', class: 'form form--main', id: 'create_customer' -%}
+      <div id="cf-app-customer-fields">
+        <!-- Fields will be dynamically included here. -->
+      </div>
+      {% if customer %}
+        <style>
+          #cf-app-customer-fields label{
+            width: 100%;
+            display: block;
+            text-align: left;
+            padding-left: 7px;
+            margin-top: 10px;
+          }
+          #cf-app-customer-fields label:first-child{
+            margin-top: 0;
+          }
+          .editprofile-page .oxi_social_wrapper{
+            display: none;
+          }
+        </style> 
+        <script>
+          $(document).ready(function(){
+            var csuFirstName = "{{customer.first_name}}";
+            var csuLastName = "{{customer.last_name}}";
+            var editProfileInterval = setInterval(function(){
+              if(document.querySelector("#cf-app-customer-fields #FirstName")){
+                document.querySelector("#cf-app-customer-fields #FirstName").value = csuFirstName;
+                document.querySelector("#cf-app-customer-fields #LastName").value = csuLastName;
+                clearInterval(editProfileInterval);
+              }
+            }, 1000);
+          })
+        </script>
+      {% endif %}
+    </div>  
+  </div>
+</div>
+<script src="https://cdn.apps.bonify.io/customer_fields/public/live/CustomerFieldsApp-min.js"></script>
+<br><script>
+  if (typeof CustomerFieldsApp !== 'undefined') {
+    CustomerFieldsApp.initFields("#cf-app-customer-fields", {
+      base_url: "https://apps.bonify.io/",
+      styles_url: "https://cdn.apps.bonify.io/customer_fields/public/live/cf-app-form.css",
+      site_id: "{{ shop.metafields.cf_app.internal_site_id }}",
+      shop_domain: "{{ shop.permanent_domain }}",
+      {% if customer %}
+      customer_id: "{{ customer.id }}",
+      customer_token: "{{ customer.metafields.cf_app.api_token }}",
+      {% endif %}
+    });
+  }
+</script>
+
+{% endform %}

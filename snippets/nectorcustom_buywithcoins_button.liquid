@@ -1,0 +1,49 @@
+{%- liquid
+  assign button_type = type | default: 'product'
+  assign buywithcoins_button_classes = buywithcoins_button_classes | default: ''
+  assign buy_button_selector = buy_button_selector | default: ''
+  assign animate_buywithcoins_button = animate_buywithcoins_button | default: false
+-%}
+
+{% if button_type == 'product' %}
+  {%- liquid
+    assign product_id = product.id
+    assign target = product.selected_or_first_available_variant
+    assign integer_price = target.price
+    assign price = integer_price | money_without_currency
+    assign classname = 'nector-buy-with-coins-button-product-container'
+  -%}
+{% elsif button_type == 'cart' %}
+  {%- liquid
+    assign product_id = ''
+    assign integer_price = cart.total_price
+    assign price = integer_price | money_without_currency
+    assign classname = 'nector-buy-with-coins-button-cart-container'
+  -%}
+{% endif %}
+
+<div
+  class="{{ classname }}"
+  data-price="{{ price }}"
+  data-product_id="{{ product_id }}"
+  data-buy_button_selector="{{ buy_button_selector }}"
+  data-buywithcoins_button_classes="{{ buywithcoins_button_classes }}"
+  data-animate_buywithcoins_button="{{ animate_buywithcoins_button }}"
+></div>
+
+<style>
+ div.product-form__payment-container.hide-for-mobile.full-width__add-button > div:nth-child(4) > div > div > button{
+   border-radius:12px;
+ }
+  .nector-buy-with-coins-mobile{
+    width:100%;
+  }
+  .nector-buy-with-coins-button{
+     border-radius:10px !important;
+  }
+@media only screen and (min-width: 768px){
+  .nector-buy-with-coins-mobile{
+    display:none;
+  }
+}
+</style>

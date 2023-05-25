@@ -1,0 +1,8 @@
+
+development:
+  password: shptka_0f47a62673d7fd6ea0691db309f41efd
+  theme_id: "136825962740"
+  store: amala-earth.myshopify.com
+  ignore_files:
+  - config/settings_data.json
+  - templates/*.json

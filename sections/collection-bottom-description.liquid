@@ -1,0 +1,38 @@
+{%- if collection.metafields.details.desc_2 != blank -%}
+
+
+<style>
+  .collection-bottom-description .content-wrapper{
+  	background:#FAF5F0;
+    border-radius:15px;
+    padding:36px;
+  }
+  .collection-bottom-description .content-wrapper{
+  	color:#000;
+  }
+  .collection-bottom-description h4{
+  	font-size:20px;
+    color:rgba(0, 0, 0, 1);
+    margin-bottom: 15px;
+  }
+  .collection-bottom-description .content,
+  .collection-bottom-description p{
+    margin-bottom:30px;
+    line-height:26px;
+    
+  }
+  .collection-bottom-description .margin-bottom-0{
+  	margin-bottom:0;
+  }
+</style>
+
+<section class="collection-bottom-description">
+  <div class="container">
+    <div class="content-wrapper">
+      {{ collection.metafields.details.desc_2 }}
+    </div>
+  </div>
+</section>
+<br/>
+{%- endif -%}
+

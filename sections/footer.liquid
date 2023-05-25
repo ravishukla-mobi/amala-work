@@ -1,0 +1,840 @@
+<footer class="footer" data-section-id="{{ section.id }}" data-section-type="footer" role="contentinfo">
+
+  <div class="footer-colord">
+  <div class="container">
+    <div class="footer__wrapper">
+      {%- if section.blocks.size > 0 -%}
+        <div class="footer__block-list">
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'text' -%}
+                {% if block.settings.title == 'Newsletter' and section.settings.show_newsletter %}
+                    {% assign show_details = 'true' %} 
+                {% elsif block.settings.title1 == 'Newsletter' %}
+                    {% assign show_details = 'false' %}
+                {% else %}
+                    {% assign show_details = 'true' %}
+                {% endif %}
+          
+                {% if show_details == 'true' %}
+                <div class="footer__block-item footer__block-item--text" {{ block.shopify_attributes }}>
+                  <button class="footer__title heading h6 hj" disabled aria-expanded="true" aria-controls="block-{{ block.id }}" >
+                    <span>{{ block.settings.title1 | escape }}</span>
+                   
+                  </button>
+                  <div id="block-{{ block.id }}" class="footer__collapsible1 footer-newletter_b">
+          {%- form 'customer', id: 'footer-newsletter', class: 'footer__newsletter-form' -%}
+                      {%- if form.posted_successfully? -%}
+                        <p class="alert alert--success alert--center">{{ 'footer.newsletter.success' | t }}</p>
+                      {%- else -%}
+                        {%- if form.errors -%}
+                          <p class="alert alert--error alert--center">{{ form.errors.messages['email'] }}</p>
+                        {%- endif -%}
+
+                        <input type="hidden" name="contact[tags]" value="newsletter">
+
+                        <div class="form__input-wrapper form__input-wrapper--labelled">
+                          <input type="email" id="footer[{{ section.id }}][contact][email]" name="contact[email]" class="form__field form__field--text" required="">
+                          <label for="footer[{{ section.id }}][contact][email]" class="form__floating-label">{{ 'footer.newsletter.input' | t }}</label>
+                        </div>
+
+                        <button type="submit" class="form__submit form__submit--tight button button--primary">{{ 'footer.newsletter.submit' | t }}</button>
+                      {%- endif -%}
+                    {%- endform -%}
+                    </div>
+                  <button class="footer__title heading h6" disabled aria-expanded="false">
+                    <span>{{ block.settings.title | escape }}</span>
+                  </button>
+                  <div>
+                    <div class="footer__collapsible-content">
+                      <div class="rte">
+                        {{ block.settings.content }}
+                        
+                        {% if block.settings.title == "Contact & Support" %}
+                           
+                        {%- if section.settings.show_store_directions -%}
+                          <div class="footer__aside-item footer__aside-item--get-directions">
+                            {%comment%}
+                            <button class="footer__title heading h6">
+                              <span>{{ section.settings.get_directions_heading | escape }}</span>
+                            </button>
+                           
+                               <div class="rte">
+                              {{ section.settings.store_directions_text }}                       
+                              </div>
+                             {%endcomment%}
+                            {%- if section.settings.get_directions_link != blank and section.settings.get_directions_button != blank -%}
+                            <span>
+                              <label>Our cafe</label>
+                              {%- render 'icon', icon: 'directions-icon' -%}
+                              <a href="{{ section.settings.get_directions_link }}" class= "directions directions-link">{{ section.settings.get_directions_button | escape }}</a>
+                            </span>
+                            {%- endif -%}
+                          </div>
+                        {%- endif -%}
+                        {% endif %}
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            {% endif %}
+                </div>
+
+              {%- when 'links' -%}
+                {%- assign menu = linklists[block.settings.menu] -%}
+
+                {%- unless menu.empty? -%}
+                  <div class="footer__block-item footer__block-item--links" {{ block.shopify_attributes }}>
+                    <button class="footer__title heading h6" disabled aria-expanded="false" aria-controls="block-{{ block.id }}" data-action="toggle-collapsible">
+                      <span>{{ block.settings.title }}</span>
+                      <span class="plus-button"></span>
+                    </button>
+
+                    <div id="block-{{ block.id }}" class="footer__collapsible">
+                      <div class="footer__collapsible-content">
+                        <ul class="footer__linklist list--unstyled" role="list">
+                          {%- for link in menu.links -%}
+                            <li>
+                              <a href="{{ link.url }}" class="footer__link-item link">{{ link.title }}</a>
+                              {% if link.links.size > 0 %}
+                                <ul class="footer__linklist list--unstyled footer__sublinklist" role="list">
+                                  {% for sublink in link.links %}
+                                    <li>
+                                      <a href="{{ sublink.url }}" class="footer__link-item link">{{ sublink.title }}</a>
+                                    </li>
+                                  {% endfor %}
+                                </ul>
+                              {% endif %}
+                            </li>
+                          {%- endfor -%}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+               {% comment%}
+                <div class=" foot3 footer__block-item footer__block-item--links" {{ block.shopify_attributes }}>
+                  <button class="footer__title heading h6" disabled aria-expanded="false" aria-controls="block-{{ block.id }}" data-action="toggle-collapsible">
+                    <span>{{ menu.title }}</span>
+                    <span class="plus-button"></span>
+                  </button>
+
+                  <div id="block-{{ block.id }}" class="footer__collapsible">
+                    <div class="footer__collapsible-content">
+                      <ul class="footer__linklist list--unstyled" role="list">
+                        {%- for link in menu.links -%}
+                        <li>
+                          <a href="{{ link.url }}" class="footer__link-item link">{{ link.title }}</a>
+                        </li>
+                        {%- endfor -%}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+           {% endcomment %}
+                {%- endunless -%}
+    
+              {%- when 'newsletter' -%}
+      <div class="news-sller-column">
+        <div class="lower-footer">
+       <div class="upper-lower">
+       {% if section.settings.show_contact_support %}
+        <div class="store_info">
+          <button class="footer__title heading h6" disabled="" aria-expanded="false">
+                <span>{{ section.settings.contact_heading }}</span>
+             </button>
+          <div>
+            <div class="footer__collapsible-content">
+              <div class="rte">
+                {{ section.settings.contact_content }}
+              </div>
+            </div>
+          </div>
+        </div>
+       {% endif %}
+         <div class="download-apps">
+           <h6 class="download-apps">{{ section.settings.headingapps | escape }}</h6>
+
+           {% if section.settings.appdownloadtext != blank %}
+              <a href="{{ section.settings.appdownloadurl | escape }}" class="button cutom-button">{{ section.settings.appdownloadtext | escape }}</a>
+           {% endif %}
+         </div>
+         </div>
+        <div class="social-footer">
+               {%- if section.settings.show_social_media -%}
+          <ul class="social-media__item-list  list--unstyled" role="list">
+          {% for block in section.blocks %}
+          	{% if block.type == 'social' %}
+    <li class="social-media__item">
+      <a href="{{block.settings.social_link}}" target="_blank">
+      	{%- assign imageURL = block.settings.social_icon | img_url:"master" -%}
+        <img src="{{imageURL}}" alt="social Icons" />
+      </a>
+    </li>
+            {%endif%}
+          {%endfor%}
+            </ul>
+                      {%- endif -%}
+                      {%- if social_media != blank -%}
+                         {%comment%}<p class="footer__aside-title">{{ 'footer.general.follow_us' | t }}</p>{%endcomment%}
+                         {{ social_media }}
+                       
+                      {%- endif -%}
+          </div>
+       
+          <div class="footer-apps">
+               {%- if section.settings.show_social_media -%}
+            {%- if section.settings.download_app_title != blank -%}
+             <p>{{section.settings.download_app_title}}</p>
+            {%- endif -%}
+          <ul class="social-media__item-list  list--unstyled apps_icon" role="list">
+            {%- if section.settings.app_store_img != blank -%}
+            <li class="social-media__item">
+             <a href="https://apps.apple.com/in/app/amala-earth/id1591399697"><img loading="lazy" src="{{ section.settings.app_store_img | img_url:'master' }}" class="responsive-img" alt="apple store logo" /></a>
+            </li>
+          {%- endif -%}
+          {%- if section.settings.g_play_img != blank -%}
+            <li class="social-media__item">
+             <a href="https://play.google.com/store/apps/details?id=com.amala.earth"><img loading="lazy" src="{{ section.settings.g_play_img | img_url:'master' }}" class="responsive-img" alt="Play store logo" /></a>
+            </li>
+          {%- endif -%}
+          </ul>
+                      {%- endif -%}
+                      {%- if social_media != blank -%}
+                         {%comment%}<p class="footer__aside-title">{{ 'footer.general.follow_us' | t }}</p>{%endcomment%}
+                         {{ social_media }}
+                       
+                      {%- endif -%}
+          </div>
+       
+     
+   
+      </div>
+        
+        
+
+              
+               {%- when 'text_button' -%}
+                <div class="footer__block-item footer__block-item--text  " {{ block.shopify_attributes }}>
+                  <button class="footer__title heading h6 hh" disabled aria-expanded="false" aria-controls="block-{{ block.id }}" data-action="toggle-collapsible">
+                    <span>{{ block.settings.title1 | escape }}</span>
+                    <span class="plus-button"></span>
+                  </button>
+
+                  <div id="block-{{ block.id }}" class="footer__collapsible seller-footer-text">
+                    <div class="footer__collapsible-content">
+                      <div class="rte">
+                        {{ block.settings.content }}                       
+                      </div>
+                      {%- if block.settings.link != blank and block.settings.button_text != blank -%}
+                        <a href="{{ block.settings.link }}" class= "button cutom-button">{{ block.settings.button_text | escape }}</a>
+                      {%- endif -%}
+                    </div>
+                  </div>
+                  {% if block.settings.title == "Become a Seller" %}
+               {%- capture copyright_info -%}© {{ 'now' | date: '%Y' }} {{ shop.name }}{%- endcapture -%}
+                  <!-- hide copyright -->
+
+                  <p class="hidden-pocket f-copyright__p">{{ copyright_info }}</p>
+              {% endif %}
+                </div>
+        
+    </div>
+              <style>
+                  #block-{{ block.id }} {
+                    color: {{ block.settings.text_color }};
+                  }
+
+                  #block-{{ block.id }} .button {
+                    color: {{ block.settings.button_text_color }};
+                    background: {{ block.settings.button_background }};
+                  }
+
+                  #block-{{ block.id }} .button:hover {
+                    background: {{ block.settings.button_background | color_modify: 'alpha', 0.8 }};
+                  }
+                </style>
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+      </div>
+     
+<div id="gd-pre-footer" class="pre_footer index-section home-section">
+    <div class="wrapper">
+    <div>
+    <ul class="footer-badges-list">
+    <li class="col-item">
+    <div class="text-center">
+    <img src="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/seller_1.jpg?v=1660120334" alt="seller logo" style="height: 50px;">
+    <p class="footer__title heading h6 title_foot "><a href="https://docs.google.com/forms/d/e/1FAIpQLSdCKxSfiYyR3TaXMk2tZ0w0_y4RLaAk57JfencyEXBaG3zmYQ/viewform?vc=0&c=0&w=1&flr=0">Become a Seller</a></p>
+    </div>
+<!--     <a href="https://docs.google.com/forms/d/13AD9JQR7rUVL1y9p21shiiDluI-PCsgZmk0n285bN1o/viewform?edit_requested=true" class="work_us-footer button button cutom-button" title="Work With Us" target="_blank" rel="noopener" aria-describedby="a11y-new-window-message"> <span>Register your interest</span></a> -->
+    </li>
+    <li class="col-item">
+    <div class="text-center">
+    <img class="" src="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/work_1.jpg?v=1660120334" alt="work logo" style="height: 50px;">
+    <p class="footer__title heading h6 title_foot "><a href="https://amala.earth/pages/career">Work With Us</a></p>
+    </div>
+<!--     <a href="https://amala.earth/pages/career" class="work_us-footer button button cutom-button" title="Work With Us" target="_blank" rel="noopener" aria-describedby="a11y-new-window-message"> <span> Submit your CV</span></a> -->
+    </li>
+    <li class="col-item">
+    <div class="text-center">
+    <img class="img90" src="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/footer_icons.jpg?v=1660120366" alt="footer icon" style="height: 50px;">
+    <p class="footer__title heading h6 title_foot "><a href="https://docs.google.com/forms/d/e/1FAIpQLSdVk0YaIMpdVbSxl-yLU7TTKYHzbsmLwujeNUkCbr3gUoLlKA/viewform?vc=0&c=0&w=1&flr=0">Collaborate With Us</a></p>
+    </div>
+<!--     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVk0YaIMpdVbSxl-yLU7TTKYHzbsmLwujeNUkCbr3gUoLlKA/viewform?vc=0&c=0&w=1&flr=0" class="work_us-footer button button cutom-button" title="Work With Us" target="_blank" rel="noopener" aria-describedby="a11y-new-window-message"> <span>Submit your details</span></a> -->
+    </li>
+    <li class="col-item">
+    <div class="text-center">
+    <img class="img90" src="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/bulk_1.jpg?v=1660120334" alt="Bulk order" style="height: 50px;">
+    <p class="footer__title heading h6 title_foot "><a href="https://docs.google.com/forms/d/e/1FAIpQLSe5Vhr2MqfvQ0v3dV2vbg2qxyQmwa_orBlSM3aSxTjwYfrqiw/viewform?vc=0&c=0&w=1&flr=0"> Bulk Order Request</a></p>
+    </div>
+<!--     <a href="https://docs.google.com/forms/d/e/1FAIpQLSe5Vhr2MqfvQ0v3dV2vbg2qxyQmwa_orBlSM3aSxTjwYfrqiw/viewform?vc=0&c=0&w=1&flr=0" class="work_us-footer button button cutom-button" title="Work With Us" target="_blank" rel="noopener" aria-describedby="a11y-new-window-message"> <span>Submit your details</span></a> -->
+    </li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </div>    
+    
+      <aside class="footer__aside currency-accepted">
+        {%- if section.settings.show_currency_selector and shop.enabled_currencies.size > 1 -%}
+          {%- assign currency_selector = true -%}
+        {%- endif -%}
+
+        {%- if section.settings.show_locale_selector and shop.published_locales.size > 1 -%}
+          {%- assign locale_selector = true -%}
+        {%- endif -%}
+
+        <div class="footer__aside-item footer__aside-item--localization">
+          {%- if locale_selector or currency_selector -%}
+            {%- form 'localization', id: 'localization_form_footer', class: 'footer__localization-form' -%}
+              {%- if locale_selector -%}
+                <div class="footer__localization-form-item">
+                  <input type="hidden" name="locale_code" value="{{ form.current_locale.iso_code }}">
+                  <span class="visually-hidden">{{ 'footer.general.language' | t }}</span>
+
+                  <div class="value-picker-wrapper">
+                    <button type="button" class="select-button select-button--mini" aria-haspopup="true" aria-expanded="false" aria-controls="footer-locale-picker" data-action="open-value-picker">
+                      {{- form.current_locale.endonym_name | capitalize -}}
+                      {%- render 'icon', icon: 'arrow-bottom' -%}
+                    </button>
+
+                    <div id="footer-locale-picker" class="value-picker value-picker--small" data-picker-position="top" aria-hidden="true">
+                      {% render 'icon', icon: 'nav-triangle-borderless' %}
+
+                      <div class="value-picker__inner">
+                        <header class="value-picker__header">
+                          <span class="value-picker__title text--strong">{{ 'footer.general.language' | t }}</span>
+                          <button type="button" class="value-picker__close" data-action="close-value-picker" aria-controls="footer-locale-picker" aria-label="{{ 'general.accessibility.close' | t }}">{% render 'icon', icon: 'close' %}</button>
+                        </header>
+
+                        <ul class="value-picker__choice-list" role="list">
+                          {%- for locale in form.available_locales -%}
+                            <li class="value-picker__choice-list-item">
+                              <button type="submit" name="locale_code" class="value-picker__choice-item" value="{{ locale.iso_code }}" {% if locale.iso_code == form.current_locale.iso_code %}aria-current="true"{% endif %}>
+                                {{- locale.endonym_name | capitalize -}}
+                              </button>
+                            </li>
+                          {%- endfor -%}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {%- endif -%}
+
+              {%- if currency_selector -%}
+                <div class="footer__localization-form-item">
+                  <input type="hidden" name="currency_code" value="{{ form.current_currency.iso_code }}">
+                  <span class="visually-hidden">{{ 'footer.general.currency' | t }}</span>
+
+                  <div class="value-picker-wrapper">
+                    <button type="button" class="select-button select-button--mini" aria-haspopup="true" aria-expanded="false" aria-controls="footer-currency-picker" data-action="open-value-picker">
+                      {{ form.current_currency.iso_code }} {% if form.current_currency.symbol %}{{ form.current_currency.symbol }}{% endif %}
+                      {%- render 'icon', icon: 'arrow-bottom' -%}
+                    </button>
+
+                    <div id="footer-currency-picker" class="value-picker value-picker--auto value-picker--small" data-picker-position="top" aria-hidden="true">
+                      {% render 'icon', icon: 'nav-triangle-borderless' %}
+
+                      <div class="value-picker__inner">
+                        <header class="value-picker__header">
+                          <span class="value-picker__title text--strong">{{ 'footer.general.currency' | t }}</span>
+                          <button type="button" class="value-picker__close" data-action="close-value-picker" aria-controls="footer-currency-picker" aria-label="{{ 'general.accessibility.close' | t }}">{% render 'icon', icon: 'close' %}</button>
+                        </header>
+
+                        <ul class="value-picker__choice-list" role="list">
+                          {%- for currency in form.available_currencies -%}
+                            <li class="value-picker__choice-list-item">
+                              <button type="submit" name="currency_code" class="value-picker__choice-item" value="{{ currency.iso_code }}" {% if currency.iso_code == form.current_currency.iso_code %}aria-current="true"{% endif %}>
+                                {{ currency.iso_code }} {% if currency.symbol %}{{ currency.symbol }}{% endif %}
+                              </button>
+                            </li>
+                          {%- endfor -%}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {%- endif -%}
+            {%- endform -%}
+          {%- endif -%}
+
+         
+          
+        </div>
+
+        
+
+        {%- if section.settings.show_payment_icons and shop.enabled_payment_types.size > 0 -%}
+          <div class="footer__aside-item footer__aside-item--payment">
+            <p class="footer__aside-title">{{ 'footer.general.we_accept' | t }}</p>
+
+            <div class="payment-list">
+              {% for block in section.blocks %}
+                {% if block.type == 'payment' %}
+            {%- assign payimageURL = block.settings.paymet_icon | img_url:"master" -%}
+            <img class="lazyload" src="{{payimageURL}}" style="max-height:40px;"/>
+
+                {%endif%}
+              {%endfor%}
+<!--                <img src="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/Visa1.svg" alt="Visa">
+              <img src="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/Mastercard1.svg" alt="Mastercard">
+              <img src="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/Maestro1.svg" alt="Maestro">
+              <img src="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/Rupay1.svg" alt="Rupay">
+               <img src="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/upi.svg?v=1626088513" alt="UPI">
+              <img src="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/Net_Banking1.svg" alt="Net Banking">
+              <img src="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/COD1.svg" alt="Cash on delivery"> -->
+             
+<!--               {% for type in shop.enabled_payment_types %}
+                {{ type | payment_type_svg_tag: class: 'payment-list__item' }}
+              {% endfor %} -->
+            </div>
+          </div>
+        {%- endif -%}
+
+        <div class="hidden-pocket footer__aside-item footer__aside-item--copyright hidden-lap-and-up">
+          <p>{{ copyright_info }}</p>
+        </div>
+        <p class=" f-copyright__p" style="color:#fff;margin:15px 0 0 0;text-align:center;">{{ copyright_info }}</p>
+      </aside>
+    
+    </div>
+  </div>
+  
+  {%- comment -%}
+    In order to reduce the number of static sections, we were asked by Shopify team to move the cookie bar to the footer instead of its own
+    section. This feels a bit hacky but it works :).
+  {%- endcomment -%}
+
+  {%- if section.settings.show_cookie_bar -%}
+    <aside class="cookie-bar" aria-hidden="true">
+      <div class="container">
+        <div class="cookie-bar__inner">
+          <div class="cookie-bar__text rte">
+            {{- section.settings.text -}}
+          </div>
+
+          {%- if section.settings.accept_button != blank -%}
+            <button type="button" class="cookie-bar__button button button--secondary" data-action="accept-terms">{{ section.settings.accept_button | escape }}</button>
+          {%- endif -%}
+        </div>
+      </div>
+    </aside>
+  {%- endif -%}
+</footer>
+
+<style>
+#gd-pre-footer { overflow:hidden; clear:both; margin-top:35px; margin-bottom:10px; padding-bottom:0; }
+#gd-pre-footer .col-item { padding:30px 25px; text-align:center; list-style:none; }
+#gd-pre-footer ul { padding-left:0 !important; }
+#gd-pre-footer center { background:#FFFFFF; }
+@media screen and (min-width: 768px) {
+#gd-pre-footer .col-item {
+width:25%;
+text-align:center;
+float:left;
+padding:5px 15px;
+}
+}
+.footer__title{color:#fff;padding:20px 0px;font-size: 23px;
+    font-weight: 700;}
+  .title_foot{text-align:center;display:block;}
+  
+  
+.footer-apps{width:100%;}
+ul.social-media__item-list.list--unstyled.apps_icon {
+    display: block;
+}
+.footer-apps ul li a img{width:150px;}
+.footer-apps p{color:#fff;font-weight:bold;padding-top:15px;font-size:20px}
+@media screen and (max-width: 768px) {
+#gd-pre-footer .col-item{text-align:center;padding: 0px 0px;width: 25%;}
+  ul.social-media__item-list.list--unstyled.apps_icon {
+    display: flex;
+    justify-content: space-between;
+  }
+ul.footer-badges-list{display: inline-flex;}
+ .footer__title{font-size: 13px;font-weight:bold;}
+ ul.social-media__item-list.list--unstyled.apps_icon {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 0;
+}
+ul.social-media__item-list.apps_icon li.social-media__item {
+  margin: 0;
+  width: 100%;
+  max-width: calc(50% - 10px);
+}
+.footer-apps ul li a img {
+  width: auto;
+}
+.footer-apps p {
+  padding-top: 0;
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+}
+}
+
+</style>
+
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+  {
+      "type": "checkbox",
+      "id": "show_contact_support",
+      "label": "Show Contact and Support",
+      "default": true
+    },
+  {
+      "type": "checkbox",
+      "id": "show_newsletter",
+      "label": "Show Newsletter",
+      "default": true
+    },
+    {
+    "type": "text",
+    "id": "contact_heading",
+    "label": "Heading",
+    "info": "Contact and Support",
+    "default": "Contact & Support"
+  },
+  {
+          "type": "html",
+          "id": "contact_content",
+          "label": "Content",
+          "default": "<p>Contact <a href='mailto:help@amalaearth.com'>help@amalaearth.com</a></p>"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_social_media",
+      "label": "Show social media",
+      "info": "Make sure to have properly configured your social media in the theme settings.",
+      "default": true
+    },
+    
+  {
+  "type": "text",
+    "id": "headingapps",
+      "label": {
+      "en": "Download the App"
+      }
+    },
+  {
+  "type": "text",
+    "id": "appdownloadtext",
+      "label": {
+      "en": "Download Our App button text"
+      }
+    },
+  {
+  "type": "text",
+    "id": "appdownloadurl",
+      "label": {
+      "en": "Download App URL"
+      }
+    },
+    {
+      "type": "checkbox",
+      "id": "show_payment_icons",
+      "label": "Show payment icons",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Language selector",
+      "info": "To add a language, go to your [language settings.](/admin/settings/languages)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_locale_selector",
+      "label": "Show language selector",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Currency selector",
+      "info": "To add a currency, go to your [payment settings.](/admin/settings/payments)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_currency_selector",
+      "label": "Show currency selector",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Cookie bar"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_cookie_bar",
+      "label": "Show cookie bar",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Use this bar to show information about your cookie policy.</p>"
+    },
+    {
+      "type": "text",
+      "id": "accept_button",
+      "label": "Accept button",
+      "default": "Accept"
+    },
+  {
+      "type": "checkbox",
+      "id": "show_store_directions",
+      "label": "Show Get Directions",
+      "default": false
+    },
+  {
+      "type": "text",
+      "id": "work_us",
+      "label": "Work With Us",
+      "default": "Work With Us"
+    },
+   {
+      "type": "richtext",
+      "id": "workus_text",
+      "label": "work with us Text"
+    },
+{
+      "type": "url",
+      "id": "workus_link",
+      "label": "work with us link"
+    },
+    {
+      "type": "header",
+      "content": "Download App Icons"
+    },
+    {
+      "type": "text",
+      "id": "download_app_title",
+      "label": "Title",
+      "default": "Download the App"
+    },
+    {
+      "type": "image_picker",
+      "id": "g_play_img",
+      "label": "Google Play Img"
+    },
+    {
+      "type": "image_picker",
+      "id": "app_store_img",
+      "label": "App Store Img"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title1",
+          "label": "Heading 2",
+          "default": "About our store"
+        },
+    {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "About our store"
+        },
+        {
+          "type": "html",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.</p>"
+        }
+      ]
+    },
+    {
+      "type": "links",
+      "name": "Links",
+      "settings": [
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Menu",
+          "info": "This menu won't show dropdown items."
+        },
+    {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        }
+      ]
+    },
+	{
+		"type": "social",
+		"name" : "Social Link",
+		"settings": [
+			{
+				"type" : "image_picker",
+				"id": "social_icon",
+				"label" : "Social Media Icon"
+			},
+			{
+				"type" : "url",
+				"id": "social_link",
+				"label" : "Social Media Link"
+			}
+		]
+	},
+	{
+		"type": "work",
+		"name" : "Add block",
+		"settings": [
+			{
+				"type" : "text",
+				"id": "heading",
+				"label" : "Heading"
+			},
+			{
+				"type" : "text",
+				"id": "detail_text",
+				"label" : "Details"
+			},
+			{
+				"type" : "url",
+				"id": "btn_url",
+				"label" : "Button Link"
+			},
+			{
+				"type" : "text",
+				"id": "btn_text",
+				"label" : "Button Text",
+				"default" : "Button"
+			}
+		]
+	},
+{
+		"type": "payment",
+		"name" : "Payment Image",
+		"settings": [
+			{
+				"type" : "image_picker",
+				"id": "paymet_icon",
+				"label" : "Payment Icon"
+			}
+		]
+	},
+    {
+      "type": "newsletter",
+      "name": "Newsletter",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Customers who subscribe will have their email address added to the \"accepts marketing\" [customer list](/admin/customers?query=&accepts_marketing=1)."
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Newsletter4"
+        },
+        {
+          "type": "richtext",
+          "id": "subheading",
+          "label": "Subheading",
+          "default": "<p>A short sentence describing what someone will receive by subscribing</p>"
+        }
+      ]
+    },
+  {
+      "type": "text_button",
+      "name": "Text and Button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Become a Seller"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.</p>"
+        },
+    {
+          "type": "color",
+          "id": "button_background",
+          "label": "Background",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "button_text_color",
+          "label": "Text",
+          "default": "#000000"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Text",
+          "default": "Button"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "text",
+        "settings": {}
+      },
+      {
+        "type": "links",
+        "settings": {
+          "menu": "footer"
+        }
+      },
+      {
+        "type": "newsletter",
+        "settings": {}
+      },
+   {
+        "type": "text_button",
+        "settings": {}
+      }
+    ]
+  }
+}
+{% endschema %}

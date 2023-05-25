@@ -1,0 +1,406 @@
+{%- if section.settings.enable -%}
+    
+    {% assign product_articles = '' %}
+    {% for tag in product.tags %}
+          {% assign tag_name = tag %}
+          {% for article in blogs.amala-earth-blog.articles %}
+			 {% if article.tags contains tag_name %}
+    			{% if product_articles == '' %}
+    				{% assign product_articles = article.handle %}
+    			{% else %}
+    				{% assign product_articles = product_articles | append: ';' | append: article.handle %}
+    			{% endif %}
+    		 {% endif %}
+          {% endfor %}
+    {% endfor %}
+    
+    {% assign product_articles_all = product_articles | split: ';' %}
+
+	{% if product_articles_all.size > 0 %}
+
+    <section class="section image-with-text-overlay-grid-container pdp_blog_post_overlay">
+      <div class="container">
+        <div class="heading-bx">
+          <h3 class="section__title">{{ section.settings.title | escape }}</h3>
+          <div class="view_all_container"><a href="{{section.settings.view_all_url}}" class="section__action-link link">{{section.settings.view_all_text}} <svg focusable="false" class="icon icon--tail-right" viewBox="0 0 24 24" role="presentation">
+            <path fill="currentColor" d="M22.707 11.293L15 3.586 13.586 5l6 6H2c-.553 0-1 .448-1 1s.447 1 1 1h17.586l-6 6L15 20.414l7.707-7.707c.391-.391.391-1.023 0-1.414z"></path>
+          </svg></a></div>
+        </div>
+        <div class="image_grid image-slider-{{section.id}}">
+          {% for item in product_articles_all limit: section.settings.blog_posts_count %}
+            {% assign article = articles[item] %}
+            <div class="image_item">
+              <a href="{{ article.url | default: '#' }}" class="blog_post">
+                <div class="image-with-text-wrap">
+                  {% if article.image != blank %}
+                    <div class="image-with-text-img-wrap">
+                      <div class="aspect-ratio" style="padding-bottom: {{ 100.0 | divided_by: article.image.aspect_ratio }}%">
+                      {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,300,400,500,600', image: article.image -%}{%- endcapture -%}
+                      {%- assign image_url = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                      <img class="image-with-text-img lazyload image--fade-in" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ article.image.alt | escape }}">
+                      <noscript>
+                        <img src="{{ article.image | img_url: '500x' }}" alt="{{ article.image.alt | escape }}">
+                      </noscript>
+                      </div>
+                    </div>
+                  {% endif %}
+                  {% if article.title != blank %}
+                    <div class="image-with-text-container-wrap">
+                      <div class="image_box_shadow_container">
+                        <h2>{{ article.title }}</h2>
+                      </div>
+                    </div>
+                  {% endif %}
+                </div>
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+  {%- if section.settings.show_section -%}
+    <section id="{{ section.id }}_newsletter" class="section section--isolated section--tight section--text-centered blogs_newsletter" data-section-id="{{ section.id }}_newsletter" data-section-type="newsletter">
+      <div class="container container--giga-narrow">
+        {%- if section.settings.newsletter_title != blank -%}
+          <h5 class="heading ">{{ section.settings.newsletter_title | escape }}</h5>
+        {%- endif -%}
+        {%- if section.settings.content != blank -%}
+          <div class="rte">
+            {{ section.settings.content }}
+          </div>
+        {%- endif -%}
+  
+        {%- assign newsletter_id = 'newsletter-' | append: section.id -%}
+        <div class="newsletter">
+          {%- form 'customer', id: newsletter_id, class: 'form newsletter__form' -%}
+            {%- if form.posted_successfully? -%}
+              <p class="alert alert--success">Thanks for subscribing!</p>
+            {%- endif -%}
+              <input type="hidden" name="contact[tags]" value="newsletter">
+  
+              <div class="form__input-row">
+                <div class="form__input-wrapper form__input-wrapper--labelled">
+                  <input type="email" id="newsletter[contact][email]" name="contact[email]" class="form__field form__field--text form__field--borderless" required>
+                  <label for="newsletter[contact][email]" class="form__floating-label">{{ 'home_page.newsletter.input' | t }}</label>
+                </div>
+  
+                <button type="submit" class="form__submit button button--primary custom_loading">{{ 'home_page.newsletter.submit' | t }}<div class="custom-loader-wrap"><div class="custom-loader"></div></div></button>
+              </div>
+              {%- unless form.posted_successfully? -%}
+                {%- if form.errors -%}
+                  <p class="alert alert--error">{{ form.errors.messages['email'] }}</p>
+                {%- endif -%}
+                {% unless form.errors %}
+                  {% if form.email %}
+                    <p class="alert alert--error">This email address has been already Subscribed.</p>
+                  {% endif %}
+                {% endunless %}
+              {%- endunless -%}
+              {%- if form.posted_successfully? or form.errors or form.email -%}
+              <script>
+                $(document).ready(function(){
+                  setTimeout(function(){
+                    if (window.location.search == '?contact%5Btags%5D=newsletter&form_type=customer' || window.location.search == '?customer_posted=true') {
+                      $('html, body').animate({
+                        scrollTop: $(`#{{ section.id }}_newsletter`).offset().top - 150
+                      }, 2000);
+                    }
+                  },1100);
+                });
+              </script>
+              {%- endif -%}
+          {%- endform -%}
+          {%- if section.settings.subtext != blank -%}
+            <p class="newsletter__text">{{ section.settings.subtext | escape }}</p>
+          {%- endif -%}
+        </div>
+      </div>
+    </section>
+    <style>
+      body #shopify-section-{{ section.id }} .blogs_newsletter{
+        background: {{ section.settings.background }};
+        color: {{ section.settings.text }};
+        padding-top: 0;
+      }
+      @media (min-width: 640px){
+        .section-viewport-related-blog-posts-new .section {
+          margin-bottom: 30px;
+        }
+      }
+    </style>
+  {%- endif -%}
+	{% endif %}
+{% endif %}
+
+<style>
+  .image-slider-related-blog-posts-new{
+    overflow: hidden;
+  }
+  .image-slider-related-blog-posts-new .slick-list{
+    margin: 0 -20px;
+  }
+  .image-slider-related-blog-posts-new .image_item{
+    margin: 0 20px;
+  }
+  .pdp_blog_post_overlay .image_item{
+    position: relative;
+  }
+  .pdp_blog_post_overlay .image-with-text-container-wrap{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+  }
+  .pdp_blog_post_overlay .image-with-text-wrap, .pdp_blog_post_overlay .image-with-text-container-wrap{
+    width: 100%;
+  }
+  .image_box_shadow_container{
+    min-height: 150px;
+    background: linear-gradient(180deg, rgba(217, 217, 217, 0) 33.72%, #222222 93.87%);
+    overflow: hidden;
+    border-radius: 25px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .pdp_blog_post_overlay .image-with-text-container-wrap h2{
+    font-weight: 500;
+    line-height: 1.5em;
+    padding-bottom: 15px;
+    margin: 0 15px;
+    font-size: 1.8em;
+    color: white;
+    text-align: left;
+  }
+  .pdp_blog_post_overlay .image-with-text-img-wrap{
+    border-radius: 25px;
+    overflow: hidden; 
+  }
+  .pdp_blog_post_overlay .image_grid:hover .slick-arrow{
+    opacity: 0.6;
+  }
+  .pdp_blog_post_overlay .image_grid .slick-arrow {
+    opacity: 0;
+    color: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 99;
+    transition: all 0.3s ease;
+    background-color: #cab49e;
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    left: 0;
+    margin:0;
+  }
+  .pdp_blog_post_overlay .image_grid .slick-arrow.slick-next {
+    left: unset;
+    right: 0;
+  }
+  .pdp_blog_post_overlay .image_grid .slick-arrow:after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    top: 48%;
+    transform: rotate(45deg) translateY(-50%);
+    left: 13px;
+  }
+  .pdp_blog_post_overlay .image_grid .slick-arrow.slick-next:after {
+    border-left: none;
+    border-bottom: none;
+    border-right: 2px solid #ffffff;
+    border-top: 2px solid #ffffff;
+    left: 9px;
+  }
+
+  .pdp_blog_post_overlay .heading-bx {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .view_all_container{
+    display: flex;
+    min-width: 100px;
+    justify-content: flex-end;
+  }
+  .pdp_blog_post_overlay .heading-bx{
+    display: flex;
+  }
+
+  @media screen and (max-width: 1300px){
+    .pdp_blog_post_overlay .image-with-text-container-wrap h2{
+      font-size: 1.3em;
+    }
+  }
+  @media screen and (max-width: 999px){
+    .pdp_blog_post_overlay .image-with-text-container-wrap h2 {
+      font-size: 1.13em;
+    }
+  }
+  @media screen and (max-width: 680px){
+    .pdp_blog_post_overlay .heading-bx{
+      margin-bottom: 13px;
+      margin-top: 20px;
+    }
+    .pdp_blog_post_overlay .image_grid .slick-arrow{
+      opacity: 0.6;
+      height: 30px;
+      width: 30px;
+    }
+    .pdp_blog_post_overlay .image_grid .slick-arrow.slick-next:after{
+      left: 5px;
+    }
+    .pdp_blog_post_overlay .image_grid .slick-arrow:after{
+      top: 46%;
+      left: 8px;
+    }
+  }
+  @media screen and (max-width: 550px){
+    .pdp_blog_post_overlay .image_grid{
+      margin-left: -20px;
+      margin-right: -20px;
+      width: 100vw;
+    }
+    .pdp_blog_post_overlay .image-with-text-img-wrap{
+      border-radius: 0px;
+    }
+    .pdp_blog_post_overlay .image_box_shadow_container{
+      border-radius: 0px;
+    }
+    .heading-bx .section__title {
+      font-size: 1.1em;
+    }
+  }
+</style>
+<script>
+  $(document).ready(function(){
+    $('.image-slider-{{section.id}}').slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      arrows:true,
+      dots:false,
+      infinite:false,
+      lazyLoad: 'ondemand',
+      adaptiveHeight: true,
+      responsive: [
+        {
+          breakpoint: 850,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true
+          }
+        }
+      ]
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Blog posts Section",
+  "settings": [
+	{
+      "type": "checkbox",
+      "id": "enable",
+      "label": "Enable",
+	  "default": true
+    },
+    {
+      "type": "text",
+      "id": "view_all_text",
+      "label": "View All text",
+      "default": "View All"
+    },
+    {
+      "type": "url",
+      "id": "view_all_url",
+      "label": "View All URL"
+    },
+	{
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+	  "default": "Related Blog posts"
+    },
+	{
+      "type": "range",
+      "id": "blog_posts_count",
+      "label": "Blog posts to show",
+      "min": 3,
+      "max": 9,
+      "step": 3,
+      "default": 3
+	},
+    {
+      "type": "checkbox",
+      "id": "show_category",
+      "label": "Show category",
+      "info": "The first article's tag will be shown as category.",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_author",
+      "label": "Show author",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_date",
+      "label": "Show date",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_excerpt",
+      "label": "Show excerpt",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "stack_mobile",
+      "label": "Stack on mobile",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Newsletter"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_section",
+      "label": "Show newsletter",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "newsletter_title",
+      "label": "Heading",
+      "default": "Amala Earth Newsletter"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Text",
+      "default": "<p>For more info like this enter your email id</p>"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "text",
+      "label": "Text",
+      "default": "#000"
+    }
+  ]
+}
+{% endschema %}

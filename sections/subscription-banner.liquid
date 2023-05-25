@@ -1,0 +1,70 @@
+<div id="subscription_banner-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="subscription_banner" class="subscription_banner_section">
+{%- if section.settings.full_width == false -%}
+  <div class="container">
+    {%- endif -%}
+	{%- if section.settings.banner_image_desktop != blank or section.settings.banner_image_mob != blank -%}
+    <div class="collection_subscription_topbanner">
+        {%- if section.settings.banner_image_desktop != blank -%}
+        <div class="collection_banner_image-wrapper {% if section.settings.banner_image_mob != blank %} hide_on_mobi{% endif %}">
+            <div class="collection__banner-image lazyload image--fade-in" data-bg="{{ section.settings.banner_image_desktop | img_url: '1200x' }}" style="padding-top: {{ 1 | divided_by: section.settings.banner_image_desktop.aspect_ratio | times: 100 }}%;"></div>
+        </div>
+        {%- endif -%}
+        {%- if section.settings.banner_image_mob != blank -%}
+        <div class="collection_banner_image-wrapper {% if section.settings.banner_image_desktop != blank %} hide_on_desk{% endif %}">
+            <div class="collection__banner-image lazyload image--fade-in" data-bg="{{ section.settings.banner_image_mob | img_url: '800x' }}" style="padding-top: {{ 1 | divided_by: section.settings.banner_image_mob.aspect_ratio | times: 100 }}%;"></div>
+        </div>
+        {%- endif -%}
+    </div>
+  {%- endif -%}
+  {%- if section.settings.full_width == false -%}
+  </div>
+  {%- endif -%}
+</div>
+{% style %}
+  .subscription_banner_section .collection__banner-image{
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor:pointer;
+    
+  }
+  .hide_on_desk{
+    display: none;
+  }
+  @media screen and (max-width: 768px) {
+
+    .hide_on_mobi{
+      display: none;
+    }
+    .hide_on_desk{
+      display: block;
+    }
+  }
+{% endstyle %}
+{% schema %}
+{
+  "name": "Subscription Banner",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_image_desktop",
+      "label": "Desktop Banner image"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_image_mob",
+      "label": "Mobile Banner image"
+    }
+   ],
+   "presets": [
+     {
+       "category": "Image",
+       "name": "Subscription Banner"
+     }
+   ]
+}
+{% endschema %}

@@ -1,0 +1,81 @@
+{% if product.metafields.custom.video_slides != blank %}
+<section class="videos-section videos-gallery-section">
+  <div class="container">
+    <div class="heading-bx m-show">
+      <h3 class="section__title">{{ section.settings.sec-heading-video }} <span class="line-heading"></span></h3>
+    </div>
+    <div class="videos-slider slider-arrow" data-size="{{product.metafields.custom.video_slides.value.size}}">
+      {% for slides in product.metafields.custom.video_slides.value %}
+      <div class="videos-iteam">
+        <div class="videos-row">
+          <div class="videos-colm">
+            <div class="videos-content">
+				<div class="heading-bx">
+                  <h3 class="section__title">{{ section.settings.sec-heading-video }} <span class="line-heading"></span></h3>
+                </div>
+              <p class="xs-heading">{{ slides.title }}</p>
+              <h3 class="section__title2">{{ slides.subtitle }}</h3>
+              {% if slides.buttonurl != blank %}<a href="{{ slides.buttonurl }}" class="view-all-videos">View all Videos</a>{% endif %}
+            </div>
+          </div>
+          <div class="videos-colm videos-colm2">
+          {% if slides.videourl != blank %}
+            <div class="videos-bx">
+				<video width="100%" height="100%" controls poster="{{ slides.poster }}">
+                  <source src="{{ slides.videourl }}" type="video/mp4">     
+                </video>
+            </div>
+          {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="video_pdp_social_block">
+      {% if section.settings.social_text != blank %}
+      <span>{{section.settings.social_text}}</span>
+      {% endif %}
+      {% if section.settings.social_icon != blank %}
+      <a href="{{section.settings.social_link}}" target="_blank">
+        <img src="{{section.settings.social_icon | img_url:"40x" }}" alt="{{section.settings.social_icon.alt}}"/>
+      </a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Video Slider",
+    "settings": [
+      {
+        "type" : "text",
+        "id" : "sec-heading-video",
+        "label" : "Section heading",
+        "default" : "Videos"
+      },
+      {
+				"type" : "text",
+				"id": "social_text",
+				"label" : "Social Text"
+			},
+      {
+				"type" : "image_picker",
+				"id": "social_icon",
+				"label" : "Social Media Icon"
+			},
+			{
+				"type" : "url",
+				"id": "social_link",
+				"label" : "Social Media Link"
+			}
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

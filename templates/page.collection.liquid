@@ -1,0 +1,37 @@
+{% layout none %}
+<head>
+   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="{{ settings.accent_color }}">
+<meta name="google-site-verification" content="p-za_fqa5pcRWFrX0uXGQWK5g4wE3QJeMWqlUMYSajU" />
+{%- if settings.favicon -%}
+      <link rel="shortcut icon" href="{{ settings.favicon | img_url: '96x96' }}" type="image/png">
+    {%- endif -%}
+  <title>Amala Earth | Curated Market Place for Conscious Living</title>
+  {%- if page_description -%}
+  <meta name="description" content="{{ page_description | escape }}">
+  {%- endif -%}
+   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+ 
+  {% render 'social-meta-tags' %}
+    {% render 'css-variables' %}
+    <link rel="preload" as="script" href="{{ 'theme.js' | asset_url }}">
+   <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}">
+   <link rel="stylesheet" href="{{ 'shopbyconcern.css' | asset_url }}">
+  {% if template contains 'blog' or template contains 'article' %}
+  {{ 'blogpage.css' | asset_url | stylesheet_tag }}
+  {% endif %}
+  {{ 'jquery-3.4.1.js' | asset_url | script_tag }}
+  <script src="{{ 'theme.js' | asset_url }}" defer></script>
+    <script src="{{ 'custom.js' | asset_url }}" defer></script>
+  
+  <style>
+    
+  </style>
+
+</head>
+<body class="warehouse--v1 {% if settings.animation_image_zoom %}features--animate-zoom{% endif%} template-{{ request.page_type | handle }} {% if request.page_type contains '/' %}template-{{ request.page_type | split: '/' | last | handle }}{% endif %} {% if template == 'page' %} {{page.handle}} {% endif %}" data-instant-intensity="viewport">
+
+	{% section 'page-collection' %}
+</body>

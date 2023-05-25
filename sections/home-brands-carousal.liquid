@@ -1,0 +1,316 @@
+<section class="container brands-section-container home-brands-section-container">
+  <div class="brands_text">
+      {% if section.settings.heading_one != blank or section.settings.heading_two != blank %}
+        <header class="landing_section_header">
+          {% if section.settings.heading_one != blank %}
+              <h5 class="landing_subheading">{{ section.settings.heading_one }}</h5>
+          {% endif %}
+          {% if section.settings.heading_two != blank %}
+              <h4 class="landing_heading">{{ section.settings.heading_two }}</h4>
+          {% endif %}
+        </header>
+      {% endif %} 
+      <div class="blog-post-link">
+          {% if section.settings.btn_text != blank %}
+              <a href="{{ section.settings.url_link }}">{{ section.settings.btn_text }}<svg focusable="false" class="icon icon--tail-right" viewBox="0 0 24 24" role="presentation">
+                      <path fill="currentColor" d="M22.707 11.293L15 3.586 13.586 5l6 6H2c-.553 0-1 .448-1 1s.447 1 1 1h17.586l-6 6L15 20.414l7.707-7.707c.391-.391.391-1.023 0-1.414z"></path>
+                  </svg>
+              </a>
+          {% endif %}
+      </div>
+  </div>
+  <div id="brands_slider-{{section.id}}" class="brands-container">
+      {% for block in section.blocks %}
+          {% if block.type == 'brands' %}
+              <div class="brands-carousal-box">
+                  <div class="brands-slider-box">
+                      <a href="{{ block.settings.brands_link }}">
+                          {% if block.settings.brands_image_desktop != blank %}
+                              <div class="brands-img-desktop">
+                                {%- capture supported_sizes -%}{%- render 'image-size', sizes: '250,300,400,500', image: block.settings.brands_image_desktop -%}{%- endcapture -%}
+                                {%- assign image_url = block.settings.brands_image_desktop | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                                <img class="lazyload image--fade-in" alt="brand image desktop" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto">
+                                <noscript>
+                                <img src="{{ block.settings.brands_image_desktop | img_url: '400x' }}" alt="brand image desktop">
+                                </noscript>
+                              </div>
+                              {% endif %}
+                              {% if block.settings.brands_image_mobile != blank %}
+                                <div class="brands-img-mobile">
+                                  {%- capture supported_sizes -%}{%- render 'image-size', sizes: '250,300,400,500', image: block.settings.brands_image_mobile -%}{%- endcapture -%}
+                                  {%- assign image_url = block.settings.brands_image_mobile | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                                  <img class="lazyload image--fade-in" alt="brand image desktop" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto">
+                                  <noscript>
+                                  <img src="{{ block.settings.brands_image_mobile | img_url: '400x' }}" alt="brand image mobile">
+                                  </noscript>
+                                </div>
+                              {% endif %}
+                              </a>
+                          </div>
+                      </div>
+                  {% endif %}
+              {% endfor %}
+          </div>
+      </section>
+
+  <script>
+    $(document).ready(function(){
+        $('#brands_slider-{{section.id}}').slick({
+            slidesToShow:6.5,
+            slidesToScroll:6,
+            arrows:true,
+            dots:false,
+            infinite:false,
+            responsive: [
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 5,
+              slidesToScroll: 5
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 4
+            }
+          },
+          {
+            breakpoint: 460,
+            settings: {
+              slidesToShow: 3.5,
+              slidesToScroll: 3
+            }
+          }
+        ]
+          });
+    });
+</script>
+
+<style>
+{% if section.settings.background_image_desktop != blank %}
+  #shopify-section-{{ section.id }} .brands-section-container{
+  background-image: url('{{ section.settings.background_image_desktop | img_url: 'master' }}');
+  background-position: 64% 0;
+  background-repeat: no-repeat;
+}
+{% endif %}
+.home-brands-section-container .landing_section_header {
+    margin-top: 0;
+}
+    .brands_text{
+        display: flex;
+        align-items:end;
+        justify-content: space-between;
+    }
+    .brands-img-mobile{
+        display:none;
+      }
+      .brands-section-container{
+        margin-top: 60px;
+        margin-bottom: 60px;
+      }
+      .brands-container{
+        text-align: -webkit-center;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.29) 1.04%, rgba(154, 111, 87, 0.29) 48.44%, rgba(245, 240, 233, 0.29) 83.85%, rgba(255, 255, 254, 0.29) 100%);
+      }
+      .brands-carousal-box:nth-child(even) {
+        margin-top: 50px;
+      }
+      .blog-post-link a{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight:500;
+        font-size:15px;
+        line-height: 27px;
+        letter-spacing: 0.03em;
+        color: #946C56;
+        text-decoration: underline;
+      }
+      .brands-slider-box img.lazyload{opacity:0;}
+.blog-post-link svg{
+  opacity: 0;
+}
+.blog-post-link a:hover svg{
+  opacity: 1;
+  color: var(--brand-color);
+}
+.blog-post-link:hover{
+  transform: translate(-16px);
+transition: transform .35s cubic-bezier(.645,.045,.355,1);
+}
+.brands-img-desktop img:hover{
+    transform: translate3D(0,-1px,0) scale(1.02); /* move up slightly and zoom in */
+    transition: all .4s ease; /* zoom in */
+}
+.brands-container  .slick-arrow{opacity:0;color:transparent; position:absolute;top:50%; transform:translateY(-50%);z-index:99;transition:all 0.3s ease;}
+.brands-container:hover  .slick-arrow{
+  opacity:1;
+}
+  .brands-container  .slick-arrow:before{
+  	content:'';
+    position:absolute;
+    width:40px;
+    height:40px;
+    background-color:#cab49e;
+    border-radius: 100%;
+  }
+  .brands-container  .slick-arrow:after{
+  	content:'';
+    position:absolute;
+    width:15px;
+    height:15px;
+    border-left:3px solid #fff;
+    border-bottom:3px solid #fff;
+    top:12px;
+    transform:rotate(45deg);
+  }
+  .brands-container  .slick-arrow.slick-prev{
+  	left:0;
+  }
+  .brands-container  .slick-arrow.slick-prev:after{
+  	left:14px;
+  }
+  .brands-container  .slick-arrow.slick-next{
+  	right:5px;
+  }
+  .brands-container  .slick-arrow.slick-next:after{
+  	right:10px;
+    transform:rotate(225deg) translateY(0%);
+  }
+  .brands-slider-box{
+    margin:15px;
+    overflow:hidden;
+    border-radius:10px;
+    position:relative;
+  }
+  .slick-dots{list-style:none;text-align:center;}
+  .slick-dots  button{display:none;}
+  .slick-dots li{display:inline-block;margin:5px;width:8px;height:8px;border-radius:50%;border:1px solid #b89c7d;}
+  .slick-dots li.slick-active{background-color:#b89c7d;}
+  .home-brands-section-container .brands-container:not(.slick-initialized){
+    display:flex;
+    flex-wrap:nowrap;
+  }
+  .home-brands-section-container .brands-container:not(.slick-initialized){
+    min-width:190px;
+    width:max-content;
+  }
+  @media only screen and (max-width:768px) {
+    .brands-img-mobile{
+      display:block;
+    }
+    .brands-img-desktop{
+      display:none;
+    }
+    .brands_text{
+      padding: 0 20px;
+    }
+  }
+  @media only screen and (max-width:592px) {
+    #shopify-section-{{ section.id }} .brands-section-container{
+    {% if section.settings.background_image_mobile != blank %}
+      background-image: url('{{ section.settings.background_image_mobile | img_url: 'master' }}');
+      background-position: -50px 0px;
+    {% else %}
+      background-image: none;
+    {% endif %}
+    }
+    .brands-container{
+      gap: 0;
+    }
+    .brands-section-container{
+      padding: 0px;
+      margin-top: 35px;
+      margin-bottom: 35px;
+    }
+    .brands-container  .slick-arrow:after{
+      width:8px;
+      height:8px;
+      border-left:3px solid #fff;
+      border-bottom:3px solid #fff;
+      transform:rotate(45deg);
+    }
+    .brands-container .slick-arrow:before{
+        width: 32px;
+        height: 32px;
+    }
+    .brands-container .slick-arrow.slick-prev:after{
+        left: 13px;
+    }
+    .brands-container .slick-arrow.slick-next:after{
+        right: 13px;
+    }
+    .brands-slider-box{
+      width: 105px;
+    }    
+  }
+</style>
+  {% schema %}
+  {
+    "name": "Home Brand Carousel",
+    "settings": [
+      {
+        "type":"image_picker",
+        "id":"background_image_desktop",
+        "label":"Background Image Desktop"
+      },
+      {
+        "type":"image_picker",
+        "id":"background_image_mobile",
+        "label":"Background Image Mobile"
+      },
+      {
+        "type":"text",
+        "id":"heading_one",
+        "label":"Heading"
+      },
+      {
+        "type":"text",
+        "id":"heading_two",
+        "label":"Sub Heading"
+      },
+      {
+        "type":"text",
+        "id":"btn_text",
+        "label":"View Text"
+      },
+      {
+        "type":"url",
+        "id":"url_link",
+        "label":"Link"
+      }
+    ],
+    "name": "Brand Carousel",
+    "blocks":[
+        {
+        "type": "brands",
+        "name": "product brands",
+        "settings": [
+          {
+        "type":"image_picker",
+        "id":"brands_image_desktop",
+        "label":"Desktop Image"
+          },
+          {
+        "type":"image_picker",
+        "id":"brands_image_mobile",
+        "label":"Mobile Image"
+          },
+      {
+        "type":"url",
+        "id":"brands_link",
+        "label":"Link"
+      }
+        ]
+      }
+    ],
+    "presets": [
+{
+"name": "Home Brand Carousel",
+"category": "Custom"
+}
+]
+  }
+{% endschema %}

@@ -1,0 +1,532 @@
+{%- assign selected_variant = product.selected_or_first_available_variant -%}
+
+<div id="quick-view-modal" class="card {% if product.media.size > 0 %}card--collapsed{% endif %} card--sticky">
+  {%- if section.settings.enable_image_zoom -%}
+  <div id="product-zoom-{{ section.id }}" class="product__zoom-wrapper"></div>
+  {%- endif -%}
+
+  <div class="card__section">
+    {% comment %}
+    ------------------------------------------------------------------------------
+    PRODUCT META
+    ------------------------------------------------------------------------------
+    {% endcomment %}
+
+    {%- if section.settings.show_share_buttons -%}
+      {%- capture share_buttons -%}
+        {%- assign share_url = shop.url | append: product.url -%}
+        {%- assign twitter_text = product.title | url_param_escape -%}
+        {%- assign pinterest_description = product.description | strip_html | truncatewords: 15 | url_param_escape -%}
+        {%- assign pinterest_image = product.featured_media | img_url: '1024x' | prepend: 'https:' -%}
+		<a href="https://www.facebook.com/sharer.php?u={{ share_url }}" target="_blank" rel="noopener" aria-label="{{ 'general.social.facebook_share' | t }}">{%- render 'icon', icon: 'facebook' -%}</a>
+        {% comment %}<a href="https://pinterest.com/pin/create/button/?url={{ share_url }}{% if pinterest_image != blank %}&media={{ pinterest_image }}{% endif %}&description={{ pinterest_description }}" target="_blank" rel="noopener" aria-label="{{ 'general.social.pinterest_pin' | t }}">{%- render 'icon', icon: 'pinterest' -%}</a>
+        <a href="https://twitter.com/share?{% if twitter_text != blank %}text={{twitter_text}}&{% endif %}url={{ share_url }}" target="_blank" rel="noopener" aria-label="{{ 'general.social.twitter_tweet' | t }}">{%- render 'icon', icon: 'twitter' -%}</a>{% endcomment %}
+        <a href="mailto:?&subject={{ product.title | escape }}&body={{ share_url }}" aria-label="{{ 'general.social.email_share' | t }}">{% render 'icon', icon: 'email' %}</a>
+
+      {%- endcapture -%}
+    {%- endif -%}
+
+    <div class="product-meta">
+      <div class="product-info">
+        <div class="product-info-left">
+          <a href="{{ product.url }}" class="product-meta__title heading h1">
+          {{ product.title }}</a>
+          {%- capture product_labels -%}
+          {%- for tag in product.tags -%}
+          {%- if tag contains '__label:' -%}
+          <span class="product-label product-label--custom1">{{ tag | split: '__label:' | last }}</span>
+          {%- endif -%}
+
+          {%- if tag contains '__label1:' -%}
+          <span class="product-label product-label--custom1">{{ tag | split: '__label1:' | last }}</span>
+          {%- endif -%}
+
+          {%- if tag contains '__label2:' -%}
+          <span class="product-label product-label--custom2">{{ tag | split: '__label2:' | last }}</span>
+          {%- endif -%}
+          {%- endfor -%}
+          {%- endcapture -%}
+
+          {%- if product_labels != blank -%}
+          <div class="product-meta__label-list">
+            {{- product_labels -}}
+          </div>
+          {%- endif -%}
+
+        </div>
+        <div class="product-seller-info-row">
+          {%- if section.settings.show_vendor -%}
+          <span class="product-meta__reference">
+            {%- if section.settings.show_vendor -%}
+            {%- assign vendor_handle = product.vendor | handle -%}
+            {%- assign collection_for_vendor = collections[vendor_handle] -%}
+
+            {%- unless collection_for_vendor.empty? -%}
+            <a class="product-meta__vendor link link--accented" href="{{ collection_for_vendor.url }}">{{ product.vendor }}</a>
+            {%- else -%}
+            <a class="product-meta__vendor link link--accented" href="{{ product.vendor | url_for_vendor }}">{{ product.vendor }}</a>
+            {%- endunless -%}
+            {%- endif -%}
+
+          </span>
+          {%- endif -%}
+
+          {%- if section.settings.show_vendor and section.settings.show_sku and selected_variant.sku != blank -%}
+          <span class="product-meta-sap"> | </span>
+          {%- endif -%}
+          {%- if selected_variant.sku != blank and section.settings.show_sku  -%}
+          <span class="product-meta__sku">
+            {{- 'product.general.sku' | t -}} <span class="product-meta__sku-number">{{ selected_variant.sku }}</span>
+          </span>
+          {%- endif -%}
+
+        </div>
+      </div>
+
+      <div class="price-block">
+       <div class="price-list actual-product-price"> 
+         <label class="product-form__info-title text--strong">Price</label>
+          {%- if selected_variant.compare_at_price > selected_variant.price -%}
+          <span class="price price--highlight">
+            <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
+            {{- selected_variant.price | money -}}
+          </span>
+
+          <span class="price price--compare">
+            <span class="visually-hidden">{{ 'product.general.regular_price' | t }}</span>
+            {{- selected_variant.compare_at_price | money -}}
+          </span>
+          {%- else -%}
+          <span class="price price--highlight">
+            <span class="visually-hidden">{{ 'product.general.sale_price' | t }}</span>
+            {{- selected_variant.price | money -}}
+          </span>
+          {%- endif -%}
+
+        </div>
+      
+      
+          {%- if section.settings.show_discount -%}
+          {%- assign savings = 0 -%}
+
+          {%- capture savings -%}<span>{{ selected_variant.compare_at_price | minus: selected_variant.price | money }}</span>{%- endcapture -%}
+          <span class="product-meta">
+            <span class="product-label product-label--p-sale" {% unless selected_variant.price < selected_variant.compare_at_price %}style="display: none"{% endunless %}>(Save {{selected_variant.compare_at_price | minus: selected_variant.price | times: 100.0 | divided_by: selected_variant.compare_at_price | floor | append: '%'}})</span>
+          </span>
+          {%- endif -%}
+      </div>
+
+
+      <div class="product-rating-info-row">
+        {% render 'nectorcustom_review_rating', product: product, customer: customer, shop: shop %}
+        {%- render 'product-tags' -%}
+      </div>
+      {%- for tag in product.tags -%}
+      {%- if tag contains '__stock:' -%}
+      {%- assign stock_countdown_max = tag | split: '__stock:' | last | times: 1.0 -%}
+      {%- assign stock_countdown_progress = selected_variant.inventory_quantity | divided_by: stock_countdown_max | times: 100.0 | at_least: 0 | at_most: 100 -%}
+
+      <span class="inventory-bar {% if stock_countdown_progress == 0 %}inventory-bar--hidden{% endif %}" data-stock-countdown-max="{{ stock_countdown_max }}">
+        <span class="inventory-bar__progress" style="width: 100%"></span>
+      </span>
+      {%- break -%}
+      {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    <div class="product-form__info-item">
+      {%comment%}<span class="product-form__info-title text--strong">{{ 'product.form.price' | t }}:</span>{%endcomment%}
+
+      <div class="product-form__info-content" role="region" aria-live="polite">
+
+        <div class="product-form__price-info" style="display: {% if selected_variant.unit_price_measurement %}block{% else %}none{% endif %}">
+          <div class="unit-price-measurement">
+            <span class="unit-price-measurement__price">{{ selected_variant.unit_price | money }}</span>
+            <span class="unit-price-measurement__separator">/ </span>
+
+            <span class="unit-price-measurement__reference-value" {%- if selected_variant.unit_price_measurement.reference_value == 1 -%}style="display: none"{% endif %}>
+              {{- selected_variant.unit_price_measurement.reference_value -}}
+            </span>
+
+            <span class="unit-price-measurement__reference-unit">{{ selected_variant.unit_price_measurement.reference_unit }}</span>
+          </div>
+        </div>
+
+        {%- if section.settings.show_taxes_included -%}
+        {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
+        <p class="product-form__price-info">
+          {%- if shop.taxes_included -%}
+          {{ 'product.general.include_taxes' | t }}
+          {%- endif -%}
+
+          {%- if shop.shipping_policy.body != blank -%}
+          {{ 'product.general.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+          {%- endif -%}
+        </p>
+        {%- endif -%}
+        {%- endif -%}
+      </div>
+    </div>
+    {%- if section.settings.show_short_description and product.metafields.wk_custom_field['Short Description(150 char)'] != blank -%}
+    <div class="product-meta__description rte">
+      {{ product.metafields.wk_custom_field['Short Description(150 char)'] }}
+    </div>
+    {%- endif -%}
+
+    {% comment %}
+    ------------------------------------------------------------------------------
+    PRODUCT FORM
+    ------------------------------------------------------------------------------
+    {% endcomment %}
+
+    {%- assign color_label = 'color,colour,couleur,cor,colore,farbe,색,色,カラー,färg,farve,szín' | split: ',' -%}
+
+    {%- form 'product', product, class: 'product-form product-quick_view-form' -%}
+
+
+    {%- unless product.has_only_default_variant -%}
+    <div class="product-form__variants">
+      {%- for option in product.options_with_values -%}
+      {%- assign downcase_option = option.name | downcase -%}
+      {%- capture option_name -%}{{ section.id }}-{{ product.id }}-{{ forloop.index }}{%- endcapture -%}
+
+      {%- assign option_selector_type = 'select' -%}
+
+      {%- if section.settings.color_mode != 'block' and section.settings.color_mode != 'dropdown' and color_label contains downcase_option -%}
+      {%- comment -%}NOTE: even if the merchant is using the mode to display variant images, if ALL variant do not have an associated image, we fallback to color{%- endcomment -%}
+
+      {%- assign has_image_attached_to_all_variants = true -%}
+
+      {%- for variant in product.variants -%}
+      {%- unless variant.image -%}
+      {%- assign has_image_attached_to_all_variants = false -%}
+      {%- break -%}
+      {%- endunless -%}
+      {%- endfor -%}
+
+      {%- if section.settings.color_mode == 'color' or has_image_attached_to_all_variants == false -%}
+      {%- assign option_selector_type = 'color' -%}
+      {%- else -%}
+      {%- assign option_selector_type = 'variant' -%}
+      {%- endif -%}
+      {%- else -%}
+      {%- if color_label contains downcase_option -%}
+      {%- if section.settings.color_mode == 'block' -%}
+      {%- assign option_selector_type = 'block' -%}
+      {%- endif -%}
+      {%- elsif section.settings.selector_mode == 'block' -%}
+      {%- assign option_selector_type = 'block' -%}
+      {%- endif -%}
+      {%- endif -%}
+
+      <div class="product-form__option" {% if option.values.size == 1 %}style="display: none;"{% endif %} data-selector-type="{{ option_selector_type }}">
+        {%- case option_selector_type -%}
+        {%- when 'color' -%}
+        <span class="product-form__option-name text--strong">Choose {{ option.name }} {%comment%}<span class="product-form__selected-value">{{ option.selected_value }}</span>{%endcomment%}</span>
+
+        <div class="color-swatch-list color-swatch-list--large">
+          {%- for value in option.values -%}
+          {%- assign downcased_value = value | downcase -%}
+          {%- capture color_id -%}{{ option_name }}-{{ forloop.index }}{%- endcapture -%}
+
+          {%- assign color_swatch_name = value | handle | append: '.png' -%}
+          {%- assign color_swatch_image = images[color_swatch_name] -%}
+
+          <div class="color-swatch {% if downcased_value == 'white' or downcased_value == 'blanc' %}color-swatch--white{% endif %}">
+            <input class="color-swatch__radio product-form__single-selector" type="radio" name="{{ option_name }}" id="{{ color_id }}" value="{{ value | escape }}" {% if option.selected_value == value %}checked{% endif %} data-option-position="{{ option.position }}">
+            <label class="color-swatch__item lazyload" for="{{ color_id }}" {% if color_swatch_image != blank %}data-bg="{{ color_swatch_image | img_url: '64x64' }}"{% else %}style="background-color: {{ value | replace: ' ', '' | downcase }}"{% endif %} title="{{ value | escape }}">
+              <span class="visually-hidden">{{ value }}</span>
+              {%- render 'icon', icon: 'cross-sold-out' -%}
+            </label>
+          </div>
+          {%- endfor -%}
+        </div>
+        {%- when 'variant' -%}
+        <span class="product-form__option-name text--strong">Choose {{ option.name }} {%comment%}<span class="product-form__selected-value">{{ option.selected_value }}</span>{%endcomment%}</span>
+
+        <div class="variant-swatch-list">
+          {%- capture option_name -%}option{{ option.position }}{%- endcapture -%}
+
+          {%- for value in option.values -%}
+          {%- capture variant_swatch_id -%}{{ option_name }}-{{ forloop.index }}{%- endcapture -%}
+
+          {%- for variant in product.variants -%}
+          {%- if variant[option_name] == value and variant.image -%}
+          <div class="variant-swatch">
+            <input class="variant-swatch__radio product-form__single-selector" type="radio" name="{{ option_name }}" id="{{ variant_swatch_id }}" value="{{ value | escape }}" {% if option.selected_value == value %}checked{% endif %} data-option-position="{{ option.position }}">
+
+            <label class="variant-swatch__item" for="{{ variant_swatch_id }}" title="{{ value | escape }}">
+              <div class="aspect-ratio" style="padding-bottom: {{ 100.0 | divided_by: variant.image.aspect_ratio }}%">
+                <img src="{{ variant.image | img_url: '120x' }}" alt="{{ variant.image.alt | escape }}">
+              </div>
+
+              {% render 'icon', icon: 'cross-sold-out' %}
+            </label>
+          </div>
+
+          {%- break -%}
+          {%- endif -%}
+          {%- endfor -%}
+          {%- endfor -%}
+        </div>
+        {%- when 'block' -%}
+        <span class="swatch_required_msg hide">This is required</span>
+        <span class="product-form__option-name text--strong">Choose {{ option.name }} {%comment%}<span class="product-form__selected-value">{{ option.selected_value }}</span>{%endcomment%}</span>
+        <div class="product-form__option_chart">
+        	{% for image in product.images %}
+            {% assign image_src = image.src | downcase %}
+            {% if image_src contains 'sizechart' %}  
+              <a class="trigger-pop-up btn" style="color:#b97d58;" data-cur-producthandle="{{product.handle}}" data-image="{{ image.src | img_url: "master" }}" >Size Chart</a>
+            {% endif %}
+          {% endfor %}
+        </div> 
+        <div class="block-swatch-list">
+          {%- for value in option.values -%}
+          {%- capture block_swatch_id -%}{{ option_name }}-{{ forloop.index }}{%- endcapture -%}
+
+          <div class="block-swatch">
+            <input class="block-swatch__radio product-form__single-selector" type="radio" name="{{ option_name }}" id="{{ block_swatch_id }}" value="{{ value | escape }}" data-option-position="{{ option.position }}" {% if option.values.size == 1 %}checked{% endif %}>
+            <label class="block-swatch__item" for="{{ block_swatch_id }}" title="{{ value | escape }}">
+              <span class="block-swatch__item-text">{{ value }}</span>
+            </label>
+          </div>
+          {%- endfor -%}
+        </div>
+        {%- when 'select' -%}
+        <label for="{{ option_name }}" class="product-form__option-name text--strong">Choose {{ option.name }} {%comment%}<span class="product-form__selected-value">{{ option.selected_value }}</span>{%endcomment%}</label>
+
+        <div class="select-wrapper select-wrapper--primary">
+          {%- render 'icon', icon: 'select-left' -%}
+          <span class="amala-tooltip d-none">This is required</span>
+          <select class="product-form__single-selector" name="{{ option_name }}" id="{{ option_name }}" data-option-position="{{ option.position }}">
+            {% if product.variants.size > 1 %}
+              <option value="NA" {% unless option.selected_value %} selected {% endunless %} >Select</option>
+            {% endif %}
+            {%- for value in option.values -%}
+              <option value="{{ value | escape }}">{{ value }}</option>
+            {%- endfor -%}
+          </select>
+        </div>
+        {%- endcase -%}
+      </div>
+      {%- endfor -%}
+
+      <div class="no-js product-form__option">
+        <label for="product-select-{{ product.id }}">{{ 'product.form.variant' | t }}</label>
+
+        <div class="select-wrapper select-wrapper--primary">
+          <select id="product-select-{{ product.id }}" name="id">
+            {%- for variant in product.variants -%}
+            <option {% if variant == selected_variant %}selected="selected"{% endif %} {% unless variant.available %}disabled="disabled"{% endunless %} value="{{ variant.id }}" data-sku="{{ variant.sku }}">{{ variant.title }} - {{ variant.price | money }}</option>
+            {%- endfor -%}
+          </select>
+        </div>
+      </div>
+    </div>
+    {%- else -%}
+    <input type="hidden" name="id" data-sku="{{ selected_variant.sku }}" value="{{ selected_variant.id }}">
+    {%- endunless -%}
+
+    <div class="product-form__info-list">
+      <div class="quantity-block">
+      {%- if product.template_suffix != 'contact' -%}
+      {%- if section.settings.show_quantity_selector -%}
+      <div class="product-form__info-item product-form__info-item--quantity">
+        <label for="{{ section.id }}-{{ product.id }}-quantity" class="product-form__info-title text--strong">{{ 'product.form.quantity' | t }}</label>
+        <div class="product-form__info-content">
+          <div class="quantity-selector quantity-selector--product">
+            <button type="button" class="quantity-selector__button" data-action="decrease-picker-quantity" aria-label="{{ 'cart.items.decrease_quantity' | t }}" title="{{ 'cart.items.decrease_quantity' | t }}">{% render 'icon', icon: 'minus' %}</button>
+            <input name="quantity" aria-label="{{ 'product.form.quantity' | t }}" class="quantity-selector__value" inputmode="numeric" value="1" size="3">
+            <button type="button" class="quantity-selector__button" data-action="increase-picker-quantity" aria-label="{{ 'cart.items.increase_quantity' | t }}" title="{{ 'cart.items.increase_quantity' | t }}">{% render 'icon', icon: 'plus' %}</button>
+          </div>
+        </div>
+      </div>
+      {%- else -%}
+      <input type="hidden" name="quantity" value="1">
+      {%- endif -%}
+      {%- endif -%}
+
+
+      {%- if section.settings.show_inventory_quantity and product.template_suffix != 'pre-order' -%}
+      <div class="product-form__info-item">
+        <div class="product-form__info-content">
+          {%- if selected_variant.available -%}
+            {%- if selected_variant.inventory_management and selected_variant.inventory_policy == 'deny' and section.settings.low_inventory_threshold > 0 -%}
+              {%- if selected_variant.inventory_quantity <= section.settings.low_inventory_threshold -%}
+                <span class="product-form__inventory inventory inventory--low">{{ 'product.form.low_stock_with_quantity_count' | t: count: selected_variant.inventory_quantity }}</span>
+              {%- endif -%}
+            {%- endif -%}
+          {%- endif -%}
+
+        </div>
+      </div>
+      {%- endif -%}
+      </div>
+      
+		
+    </div>
+
+    <!-- Start: To show the cashback by Wallet app -->
+    <div class="wk_cashback_product" product_id="{{ product.id }}"></div>
+    <!-- End: To show the cashback by Wallet app -->
+    
+    <div class="product-form__payment-container">
+    <!-- wishlist-king Code -->
+      <!-- include 'wishlist-button-product-without-text' with '{{ product.id }}' -->
+    <!-- End wishlist-king Code -->
+      {%- if product.template_suffix != 'contact' -%}
+      {%- if selected_variant.available -%}
+      {%- if product.template_suffix == 'pre-order' -%}
+        <button type="submit" class="product-form__add-button button button--primary cutom-button" data-action="add-to-cart" data-product-handle="{{ product.handle }}" data-product-id="{{product.id}}" data-variant-id="{{ product.selected_or_first_available_variant.id }}">{{ 'product.form.pre_order' | t }}
+          <span class="show-mobile">
+            {%- if selected_variant.compare_at_price > selected_variant.price -%}
+              <span class="price price--highlight" data-price="{{selected_variant.price}}">
+                {{- selected_variant.price | money -}}
+              </span>
+            {%- else -%}
+              <span class="price price--highlight" data-price="{{selected_variant.price}}">
+                {{- selected_variant.price | money -}}
+              </span>
+            {%- endif -%}
+          </span>
+        </button>
+      {%- else -%}
+        <button type="submit" class="product-form__add-button button button--primary cutom-button" data-action="add-to-cart" data-product-handle="{{ product.handle }}" data-product-id="{{product.id}}" data-variant-id="{{ product.selected_or_first_available_variant.id }}">{{ 'product.form.add_to_cart' | t }}
+          <span class="show-mobile">
+            {%- if selected_variant.compare_at_price > selected_variant.price -%}
+              <span class="price price--highlight" data-price="{{selected_variant.price}}">
+                {{- selected_variant.price | money -}}
+              </span>
+            {%- else -%}
+              <span class="price price--highlight" data-price="{{selected_variant.price}}">
+                {{- selected_variant.price | money -}}
+              </span>
+            {%- endif -%}
+          </span>
+        </button>
+      {%- endif -%}
+      {%- else -%}
+        <button type="submit" class="product-form__add-button button button--disabled cutom-button" data-product-id="{{product.id}}" disabled>{{ 'product.form.sold_out' | t }}</button>
+      {%- endif -%}
+
+      {%- if section.settings.show_payment_button and product.template_suffix != 'pre-order' -%}
+      {% comment %}{{ form | payment_button }} {% endcomment %}
+      {%- endif -%}
+      {%- else -%}
+      <a href="mailto:{{ shop.email }}" class="button button--primary cutom-button">{{ 'product.form.contact_us' | t }}</a>
+      {%- endif -%}
+      <!-- Adding Back in Stock button code -->  
+      <a href="#" id="BIS_trigger" {% if product.available %} style="display: none;" {% endif %} class="product-form__add-button button button--primary cutom-button">Notify Me</a>
+      <!-- EOF Adding Back in Stock button code -->
+
+    </div>
+    {%- endform -%} 
+
+    {%- comment -%}The availability container will be added automatically if there is store pickup available{%- endcomment -%}
+    {%- if section.settings.show_pickup_availability -%}
+    <div class="product-meta__store-availability-container"></div>
+    {%- endif -%}
+    
+    {% comment %}
+    ------------------------------------------------------------------------------
+    Pin code and Share code row
+    ------------------------------------------------------------------------------
+    {% endcomment %}
+    <div class="product-bottom__row">
+      {%comment%}
+      <div class="product-delivery__block">
+        {%- render 'icon', icon: 'delivery-icon' -%}
+        <label>Delivery:</label>
+        
+      </div>
+      {%endcomment%}
+      <div class="product-gift__block">
+        <ul>
+          {%comment%}
+          <li>
+            {%- render 'icon', icon: 'gift-icon' -%}
+            <label>Send as a Gift</label>
+          </li>
+          {%endcomment%}
+          <li class="share-product__row">
+            <div class="share-button__col">
+            {%- render 'icon', icon: 'share-icon' -%}
+            <label>Share</label>
+            </div>
+            <div class="share-icon__col">
+              {%- if section.settings.show_share_buttons -%}
+              {{ share_buttons }}
+              {%- endif -%}
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  {%- if section.settings.show_payment_button and product.selected_or_first_available_variant.available == false -%}
+  <style>
+    #shopify-section-{{ section.id }} .shopify-payment-button {
+      display: none;
+    }
+  </style>
+  {%- endif -%}
+
+  {% comment %}
+  ------------------------------------------------------------------------------
+  Product Data. This must be outputted for all products (including home page).
+
+  IMPORTANT: THIS CODE IS VITAL. DO NOT EDIT IT NOT REMOVE IT. MAKE SURE TO KEEP
+  THE EXACT SAME ATTRIBUTES.
+  ------------------------------------------------------------------------------
+  {% endcomment %}
+
+  <script type="application/json" data-product-json>
+    {
+      "product": {{ product | json }},
+      "options_with_values": {{ product.options_with_values | json }},
+      "selected_variant_id": {{ selected_variant.id }}
+      {%- if section.settings.show_inventory_quantity -%}
+        ,"inventories": {
+          {%- for variant in product.variants -%}
+            {%- if variant.available -%}
+              {%- if variant.inventory_management and variant.inventory_policy == 'deny' and section.settings.low_inventory_threshold > 0 -%}
+                {%- if variant.inventory_quantity <= section.settings.low_inventory_threshold -%}
+                  {%- capture inventory_message -%}{{ 'product.form.low_stock_with_quantity_count' | t: count: variant.inventory_quantity }}{%- endcapture -%}
+                {%- else -%}
+                  {%- capture inventory_message -%}{%- endcapture -%}
+                {%- endif -%}
+              {%- else -%}
+                {%- if variant.inventory_policy == 'continue' and variant.inventory_quantity <= 0 and selected_variant.requires_shipping -%}
+                  {%- capture inventory_message -%}{{ 'product.form.oversell_stock' | t }}{%- endcapture -%}
+                {%- else -%}
+                  {%- capture inventory_message -%}{%- endcapture -%}
+                {%- endif -%}
+              {%- endif -%}
+            {%- else -%}
+              {%- capture inventory_message -%}{{ 'product.form.sold_out' | t }}{%- endcapture -%}
+            {%- endif -%}
+
+            "{{ variant.id }}": {
+              "inventory_management": {{ variant.inventory_management | json }},
+              "inventory_policy": {{ variant.inventory_policy | json }},
+              "inventory_quantity": {{ variant.inventory_quantity | json }},
+              "inventory_message": {{ inventory_message | json }}
+            }{% unless forloop.last %},{% endunless %}
+          {%- endfor -%}
+        }
+      {%- endif -%}
+    }
+  </script>
+</div>
+
+<script>
+var CP_CHRIS = [6880647217306,6880648069274,6880648724634,6886817661082,6886820544666,6887049429146,6887050805402,6891647303834,6891656511642,6891702812826,6891703074970,6891703337114,6891703173274,6891704221850,6891727093914,6891734859930,6891736432794,6898293964954,6906058703002,6906059260058,6911558025370,6911632015514,6925738737818,6925743587482,6925745094810,6925747355802,6925745881242,6925748175002,6925776945306,6959021424794,6975876989082,6975879970970,6975878529178,6975911461018,6976473006234,6980370923674,6980407296154,6980410605722,6980417224858,6980423090330,6991034417306,6991034581146,6991034679450,6991034613914,6991034843290,6991034810522,6991035138202,6991035269274,6991035400346,6991035498650,6991035531418,6991035695258,6993072488602,6993072652442,6993375723674,6997318107290,6997318074522,6997322006682,6997320925338,7001345851546,7004341043354,7004341141658,7004341371034,7011335995546,7011336749210,7011337044122,7011338354842,7011346940058,7013927551130,7015972634778,7033682854042,7041362559130,7041470922906,7041470791834,7041578991770,7043214672026,7050010820762,7050008723610,7050012065946,7050014130330,7050036019354,7050041655450,7050039591066,7050044571802,7050042245274,7050044604570,7050044801178,7050044932250,7050044833946,7050634035354,7050634068122,7050634166426,7050634297498,7050634199194,7050634494106,7050634461338,7050634592410,7059621281946,7059621576858,7059621773466,7059621609626,7061774172314,7061774237850,7061774631066,7061774794906,7061774860442,7068030566554,7068031090842,7078801047706,7078801178778,7078801211546,7078801342618,7078801408154,7078861242522,7078861406362,7082275864730,7087879422106,7089759420570,7089760370842,7089760567450,7093470593178,7116171444378,7116171477146,7120001630362,7120022732954,7438686486772,7438686978292,7440914284788,7443652346100,7443650511092,7443652542708,7443652706548,7443652673780,7443652739316,7443669254388,7443652837620,7449077448948,7449077612788,7449077580020,7449077678324,7449077973236,7450792558836,7450792526068,7451465482484,7451475575028,7451475771636,7451475804404,7451475837172,7451475902708,7452422439156,7452440822004,7455358288116,7455358320884,7455358386420,7455358615796,7455358746868,7462695567604,7464350613748,7464350810356,7464350843124,7464381907188,7464382103796,7464414118132,7464414216436,7464414314740,7464414478580,7464414544116,7464414642420,7464414707956,7464433320180,7464433352948,7464470151412,7464472445172,7464715026676,7475640631540,7478444261620,7479685873908,7479683678452,7479685972212,7479686004980,7482670022900,7482709737716,7482709770484,7482709868788,7482710098164,7482710163700,7482710327540,7482710360308,7482710393076,7483804254452,7483804287220,7483804680436,7483804975348,7483805106420,7487022563572,7487774458100,7488831553780,7488832733428,7490171666676,7496062796020,7497141518580,7497141551348,7497141715188,7498714022132,7502320730356,7506380882164,7506380980468,7506381340916,7507978617076,7509142700276,7509142864116,7509151285492,7509196341492,7509220425972,7509196472564,7512718541044,7513813254388,7513813418228,7524331389172,7524331356404,7524331520244,7525405753588,7525405982964,7529940484340,7531779358964,7531779424500,7531779522804,7531780538612,7531780571380,7531780604148,7531780669684,7539174310132,7539174375668,7539174539508,7539174703348,7539175194868,7539432849652,7539432915188,7539433046260,7546585743604,7546585809140,7546585776372,7546585841908,7546898612468,7546898907380,7548306981108,7548382609652,7551334842612,7553102905588,7553102971124,7553103069428,7553103266036,7553103462644,7553103593716,7553103528180,7555810427124,7555811082484,7555811803380,7561298280692,7561298313460,7561298346228,7561298510068,7564078088436,7568846717172,7568846749940,7568909041908,7568909271284,7572094615796,7572711309556,7572711375092,7577143902452,7577144131828,7577144426740,7577144492276,7577144656116,7577144721652,7577146851572,7577147212020,7577147343092,7577147801844,7577147965684,7577148063988,7577148358900,7577148424436,7579018985716,7580758966516,7580759064820,7580765946100,7584141377780,7584141476084,7585784725748,7587929850100,7587929882868,7587930013940,7589405819124,7589406474484,7590533857524,7591852802292,7593433825524,7593456238836,7593459319028,7593459450100,7593459941620,7596522176756,7596522537204,7596526174452,7596526928116,7596527288564,7596527386868,7598241382644,7598241415412,7598241448180,7598241644788,7598241841396,7598241906932,7598242070772,7598242201844,7598242332916,7598393950452,7599339733236,7599423095028,7599423291636,7599423521012,7599423619316,7599424078068,7600392208628,7600393027828,7600397025524,7600402628852,7600403448052,7600403579124,7600403775732,7600407773428,7605317796084,7605318484212,7609475793140,7613521559796,7616469860596,7620099440884,7620099768564,7620099965172,7620100161780,7620174545140,7621024448756,7621024481524,7621024907508,7621025169652,7621025497332,7622753124596,7622753452276,7622753550580,7622753648884,7622753943796,7622758236404,7622758301940,7622758367476,7622759088372,7622758990068,7622759907572,7622769836276,7622776848628,7622777045236,7623028769012,7624202617076,7625436725492,7625437053172,7625437315316,7625437380852,7625437413620,7625437577460,7626385522932,7626389651700,7626390503668,7626395255028,7626395386100,7626395648244,7626695311604,7626696032500,7626696098036,7626696229108,7628112134388,7628112199924,7629575454964,7630213021940,7630213251316,7630213808372,7630214267124,7630214332660,7630214496500,7630214660340,7630214627572,7630355726580,7630789509364,7630896038132,7630896169204,7630896267508,7630896464116,7630896627956,7630896759028,7630896988404,7632580215028,7632580542708,7638399156468,7638399189236,7638399222004,7638399353076,7638399418612,7638399385844,7638399451380,7638400631028,7638400794868,7638400762100,7638401253620,7640176394484,7642352681204,7642352746740,7642353041652,7642353139956,7642374373620,7645047750900,7642374406388,7645047783668,7645047980276,7645048176884,7645048373492,7645048406260,7645048668404,7649179435252,7649264107764,7652214243572,7652214505716,7652214538484,7652214931700,7652215292148,7652215455988,7652215488756,7652215849204,7652215914740,7652217815284,7652218667252,7652218896628,7653790220532,7653792022772,7653792710900,7653792874740,7653793267956,7654059507956,7654059606260,7654059737332,7654059671796,7658978115828,7658978148596,7658978017524,7658978345204,7658978377972,7658978410740,7659218305268,7659218501876,7659218534644,7659218993396,7659221090548,7659221254388,7659221745908,7659221778676,7659221942516,7659222040820,7659222008052,7659222171892,7659222499572,7660905234676,7660905464052,7660905300212,7660905857268,7660906053876,7660906283252,7660906447092,7660908118260,7660908151028,7660908445940,7660908413172,7660908544244,7660908577012,7660908871924,7660909068532,7660991054068,7660991086836,7661193232628,7661193462004,7661193593076,7661193625844,7661193855220,7665006838004,7665007427828,7666053710068,7666053808372,7666054693108,7666054922484,7666634653940,7666634719476,7666634752244,7666634785012,7666634916084,7666634883316,7666634948852,7666635079924,7666635210996,7666635178228,7666635276532,7666635309300,7666635374836,7666635407604,7666635440372,7666635473140,7666635571444,7666635505908,7666635931892,7666636062964,7667031048436,7667031113972,7671951065332,7671951130868,7671951163636,7671971447028,7671971479796,7671971545332,7671972036852,7671972069620,7671975870708,7671976100084,7671976558836,7671976591604,7671976657140,7671976722676,7671984619764,7673429459188,7673429655796,7673429688564,7673429721332,7673430147316,7673430409460,7673430573300,7673431523572,7673431752948,7673431851252,7673452921076,7673452986612,7673453019380,7673453412596,7673453445364,7675500986612,7675501117684,7675501347060,7675501412596,7675501445364,7675501707508,7675501805812,7675501871348,7675502067956,7675503116532,7675525497076,7675525660916,7676498149620,7676498378996,7676498411764,7676651438324,7676651471092,7676861579508,7679827312884,7680214466804,7680214597876,7680214728948,7680214925556,7680214991092,7681334837492,7681335034100,7681335853300,7681396801780,7682855796980,7682855862516,7682907668724,7683936813300,7683936944372,7683937304820,7683937337588,7683937501428,7683938124020,7683940024564,7684055466228,7684055924980,7684056350964,7684057661684,7684620550388,7684733993204,7688222998772,7688226210036,7688387592436,7688387559668,7688387690740,7688387756276,7688387789044,7688387821812,7688472461556,7688472920308,7688473084148,7688474755316,7691759911156,7691760107764,7692727288052,7694173602036,7694173634804,7694146175220,7694173667572,7694173700340,7694173765876,7694173733108,7694173864180,7701360804084,7701361230068,7701361656052,7701361721588,7701594570996,7701594636532,7701594702068,7701594800372,7701595062516,7702944841972,7702925246708,7702944940276,7702945005812,7702945104116,7702945300724,7702945366260,7702945399028,7702945661172,7704320835828,7704320901364,7704321065204,7704336761076,7704338694388,7706948600052,7706985595124,7706989002996,7706990018804,7706990313716,7706995687668,7706996244724,7707026784500,7707026981108,7707063320820,7707063517428,7707063550196,7707063484660,7707063779572,7707069939956,7707070038260,7707070005492,7707070169332,7707070202100,7707070267636,7707070431476,7707070562548,7707070595316,7707074527476,7707074658548,7707074822388,7707077804276,7707077869812,7707077837044,7707077902580,7707077935348,7707078000884,7707078033652,7707078066420,7707077968116,7707078099188,7707078131956,7707078263028,7707078230260,7707078328564,7707080982772,7708944400628,7708948824308,7708952232180,7708952330484,7709039296756,7709039919348,7709043523828,7709101523188,7709101588724,7709101621492,7709101687028,7709101719796,7709101752564,7709101785332,7709102014708,7709102080244,7709102145780,7709102276852,7709102375156,7709115613428,7709981671668,7709981835508,7711186092276,7711186288884,7711186518260,7711205654772,7711458427124,7711458525428,7711463702772,7712169066740,7712188891380,7712189579508,7712195510516,7712351125748,7712359678196,7712359842036,7712810336500,7712810467572,7712810500340,7712895107316,7715260465396,7715268886772,7715270066420,7715311812852,7715329147124,7715344351476,7715369910516,7715384262900,7715384787188,7715432792308,7715433316596,7715445539060,7715445604596,7715445965044,7715446030580,7715954655476,7715954884852,7716313563380,7718427459828,7718431817972,7718431850740,7718431752436,7718431949044,7718431981812,7718432014580,7718432047348,7718432080116,7718432145652,7718432112884,7718459113716,7718459179252,7719497433332,7719497531636,7719497859316,7719497761012,7719499366644,7719558709492,7719767245044,7719767376116,7719768785140,7721397092596,7721397289204,7721397387508,7721397420276,7721398075636,7721398436084,7721625485556,7721625518324,7721882779892,7721886089460,7721886122228,7721886154996,7721886187764,7721886220532,7721886286068,7721886318836,7721886384372,7721886417140,7721886515444,7721886548212,7721886613748,7721886679284,7721886712052,7721886744820,7724428558580,7724429082868,7725069762804,7725070057716,7725070090484,7725070188788,7725070254324,7725077299444,7725077364980,7725077332212,7725077397748,7725077430516,7725077463284,7726048313588,7726770454772,7726775501044,7726775599348,7726857683188,7726857715956,7726857879796,7726857912564,7726858010868,7726858043636,7726858076404,7726858109172,7726858404084,7726946156788,7727920251124,7727971991796,7728839065844,7728839622900,7728840048884,7728860659956,7728860987636,7728861020404,7728861151476,7728861217012,7729537122548,7729572905204,7729580998900,7729581097204,7729581457652,7729581719796,7732472447220,7732472545524,7732735705332,7732736033012,7732736229620,7732736327924,7733680341236,7733680701684,7733680734452,7733865873652,7733875933428,7733875966196,7733876064500,7733876097268,7733876162804,7733876228340,7733876293876,7733962473716,7733962572020,7736605540596,7736605573364,7736605671668,7736659280116,7736659607796,7736667275508,7736667439348,7736667472116,7737923436788,7737923961076,7737924157684,7737924518132,7737932251380,7737932677364,7737932742900,7737932447988,7737932775668,7737932841204,7737932873972,7737933005044,7737933201652,7737933267188,7737933332724,7737933627636,7740582035700,7740582068468,7740582134004,7740582559988,7740582887668,7740583739636,7740730376436,7740730507508,7740730573044,7740730671348,7740730835188,7740751151348,7741026468084,7741402448116,7741430661364,7742952374516,7742952571124,7742953029876,7742970102004,7743461556468,7743475548404,7743475908852,7743475941620,7743475974388,7743495209204,7743495241972,7743495307508,7743495438580,7743495602420,7746076377332,7746198339828,7746198470900,7746339504372,7746339602676,7746339700980,7746339832052,7746412052724,7746411954420,7748389011700,7748389470452,7748389830900,7748390125812,7748433346804,7748434133236,7748435181812,7748436033780,7748436263156,7748436492532,7751478345972,7751579861236,7751582777588,7751583400180,7752257896692,7752258093300,7752258158836,7752276705524,7752454996212,7752458240244,7752474788084,7755335303412,7755379998964,7755380195572,7755380588788,7756319883508,7756389581044,7756389646580,7756389843188,7756455870708,7757627818228,7757627916532,7757627982068,7757628080372,7757628342516,7757628375284,7757698171124,7757698236660,7757698269428,7757698400500,7759694725364,7759901163764,7759901524212,7759901589748,7764176142580,7764347126004,7765706014964,7766227484916,7766227255540,7766228205812,7768813994228,7768813961460,7768813928692,7768814026996,7768814125300,7768814223604,7768814354676,7768814256372,7769601540340,7769911492852,7771699085556,7771699151092,7771699118324,7771699183860,7773813244148,7773813801204,7773814620404,7773814849780,7773815275764,7773815668980,7773815832820,7773815472372,7773817307380,7773817274612,7773817503988,7773817700596,7773818290420,7775219220724,7775219187956,7776868532468,7776880460020,7776880558324,7776880689396,7776880722164,7776882032884,7776882196724,7776882589940,7776883441908,7778838675700,7778838774004,7780603855092,7780604903668,7780605919476,7780607361268,7780830544116,7784524480756,7785076982004,7785713008884,7785713795316,7785714581748,7786610819316,7786612064500,7786612097268,7786686611700,7786686939380,7786688053492,7786695688436,7786696769780,7787688788212,7788546654452,7788859293940,7788859359476,7788859490548,7789650837748,7789657587956,7792903815412,7798645162228,7798645424372,7798646243572,7798647357684,7798715351284,7802938687732,7802938654964,7802938720500,7802938753268,7802938949876,7802938982644,7802939080948,7802939113716,7802939408628,7802939375860,7802939539700,7802939834612,7802939801844,7802939605236,7802940293364,7804688433396,7804688400628,7804688466164,7804688498932,7804874719476,7804875342068,7804877209844,7804877078772,7804877242612,7804877799668,7804878160116,7804878192884,7804878389492,7804878651636,7815202504948,7815414972660,7815418642676,7815423295732,7815425655028,7815522550004,7815619576052,7815673807092,7815673741556,7815673774324,7815673905396,7816458535156,7816506048756,7816506081524,7816506147060,7816506245364,7816506278132,7816774516980,7816775106804,7816776351988,7816776483060,7816776515828,7816779104500,7816779333876,7816779530484,7816779596020,7817714925812,7818336862452,7819005722868,7819006345460,7819006574836,7819043340532,7819044028660,7819044323572,7819046060276,7819401134324,7819402445044,7819412308212,7819436065012,7823235875060,7823235907828,7823236333812,7823237185780,7823300526324,7823375433972,7823375466740,7823376449780,7823376417012,7823376810228,7823377694964,7823481766132,7823481798900,7823483732212,7823483863284,7823653503220,7823854895348,7823855288564,7823855485172,7823856238836,7825813962996,7825814290676,7825819959540,7825820025076,7825820188916,7825820221684,7825820451060,7825820516596,7825820778740,7825820745972,7825820877044,7825820909812,7825821204724,7825822384372,7825822482676,7825822580980,7825822744820,7825822810356,7825822908660,7825823006964,7825823138036,7825823269108,7825823334644,7825823760628,7826967462132,7826988335348,7826988302580,7826988400884,7826988368116,7826988433652,7826990006516,7826990170356,7826990301428,7827037978868,7827038109940,7827038470388,7827038666996,7827038732532,7827038863604,7828353122548,7828391690484,7830088286452,7830088351988,7830111879412,7830113026292,7833376817396,7835429404916,7835429568756,7835430125812,7835430519028,7835430945012,7835431370996,7837582360820,7837836542196,7839120654580,7839120949492,7839272861940,7839274139892,7839279382772,7839280103668,7839281643764,7840318030068,7840318718196,7840319078644,7840319242484,7843374268660,7844333289716,7844333781236,7844335026420,7844335452404,7844336140532,7844336566516,7844337123572,7844337582324,7844338368756,7844341317876,7844342137076,7845648204020,7845648761076,7845701681396,7846382141684,7846382239988,7846382338292,7846382829812,7846398427380,7847345357044,7847345422580,7847345586420,7847346569460,7847347093748,7847637876980,7847642366196,7847778582772,7847778648308,7847779205364,7847780385012,7847780450548,7848940306676,7849039954164,7849039823092,7852284084468,7852290867444,7852291129588,7852506579188,7853160431860,7854400045300,7854454604020,7854454571252,7855388852468,7855389147380,7855389212916,7855389343988,7855778595060,7856901161204,7857168777460,7857169236212,7857920409844,7857980801268,7857980899572,7857982275828,7858182914292,7858184618228,7858188091636,7858190680308,7858190844148,7858192089332,7858193236212,7858193367284,7864192794868,7864192860404,7864309285108,7864309317876,7864309350644,7864309383412,7865925566708,7865995657460,7866099695860,7866099761396,7866244530420,7866259407092,7866259374324,7866260652276,7866260685044,7866261143796,7867920187636,7869026828532,7869026894068,7869122478324,7869122511092,7869122576628,7869123166452,7869123264756,7869123330292,7869123428596,7869123592436,7869123690740,7869123756276,7869123789044,7869123920116,7869123952884,7869123985652,7869124083956,7869124149492,7869124280564,7869124411636,7869124477172,7869124706548,7869124739316,7869124772084,7869124804852,7869124837620,7869124935924,7869125001460,7869125296372,7869125787892,7869126279412,7869177987316,7869178413300,7869178511604,7869179461876,7869179953396,7869205119220,7869205217524,7869205184756,7869205381364,7869205414132,7869205479668,7872563314932,7872564461812,7872564265204,7872665452788,7873177420020,7874192802036,7874194505972,7874194669812,7874195063028,7874337112308,7874336981236,7874337145076,7874337439988,7874338685172,7874338881780,7874339143924,7874339700980,7874339766516,7874340290804,7874339635444,7874342682868,7874342650100,7874565996788,7877372018932,7877373886708,7877374083316,7877375131892,7877375066356,7879479787764,7879480246516,7879482245364,7880761278708,7880762556660,7880795128052,7880795259124,7880795357428,7880795455732,7880795783412,7880814952692,7880814428404,7880815149300,7880815018228,7880814493940,7880993145076,7880993767668,7881108193524,7881108324596,7881108422900,7881108488436,7881108652276,7881108717812,7881109209332,7881109307636,7881109340404,7881109373172,7881109438708,7881109471476,7881109569780,7881109537012,7881109668084,7881109700852,7881109733620,7881109864692,7881109897460,7884687966452,7884688031988,7884688425204,7884688523508,7884688982260,7884782338292,7884782403828,7884783026420,7884783255796,7885700071668,7885700530420,7889837064436,7889878286580,7889960698100,7893737505012,7893738225908,7893738258676,7893837644020,7893839773940,7893839806708,7895094231284,7895094264052,7895094296820,7895094329588,7895094395124,7895094362356,7895094460660,7895094493428,7895094526196,7895094558964,7895140794612,7895094591732,7895094427892,7895143088372,7895143186676,7900139847924,7900140372212,7900474212596,7901804134644,7901804167412,7901804200180,7901807247604,7901887398132,7901887463668,7901887529204,7901887496436,7901887824116,7901887856884,7901923475700,7901973905652,7903266504948,7903266832628,7903321424116,7903323717876,7903325290740,7903326863604,7903326798068,7903348916468,7903348850932,7903349342452,7903349801204,7903349965044,7903349866740,7904467157236,7904467976436,7904468402420,7904468599028,7904468664564,7904683852020,7904773636340,7904684081396,7904773701876,7904774881524,7906002534644,7906017345780,7909246697716,7911018332404,7911018529012,7911018823924,7911018889460,7911019217140,7911111327988,7911141441780,7911258063092,7911257997556,7911257964788,7911258095860,7911258030324,7912003698932,7912029978868,7912030175476,7912032403700,7912262598900,7912262631668,7912262729972,7912262828276,7913182691572,7913301213428,7913588850932,7913588949236,7921327079668,7921327177972,7921327669492,7921327636724,7921327702260,7921327964404,7931013529844,7931012841716,7931013857524,7932766945524,7932766978292,7932767174900,7932767142132,7932767994100,7932768026868,7933749756148,7933750575348,7933750608116,7933752410356,7939202384116,7939202416884,7939202449652,7939202482420,7939202711796,7939202777332,7939202842868,7939203236084,7939203039476,7939203301620,7939203432692,7939203629300,7939203465460,7939203924212,7939204055284,7939204546804,7939204579572,7939204481268,7939204612340,7939204710644,7939204841716,7939204776180,7939204907252,7939205333236,7939205071092,7939205103860,7939205366004,7939204940020,7939205398772,7939205726452,7939205464308,7939205923060,7939206381812,7939205955828,7939206054132,7939206480116,7939206742260,7939206676724,7939206414580,7939206971636,7939207004404,7939207135476,7939207856372,7939207790836,7939206938868,7941449580788,7943726498036,7943726596340,7943726530804,7943726563572,7943731577076,7943731675380,7943733805300,7943733936372,7943733870836,7943776796916,7943734100212,7943776764148,7943776829684,7943776862452,7943777091828,7943777059060,7944063877364,7944063910132,7944063942900,7944065057012,7950466908404,7951444738292,7951392768244,7951444771060,7951567683828,7951567716596,7951567847668,7951567749364,7951567880436,7951567978740,7951567913204,7951567782132,7951568077044,7952693821684,7952728326388,7952728359156,7952728424692,7952728555764,7952728621300,7953828184308,7953828348148,7953829921012,7953829953780,7953829888244,7953829593332,7953829986548,7953830052084,7953830019316,7953830084852,7953830117620,7953830150388,7953830183156,7953830215924,7953830248692,7953830281460,7953830314228,7953830346996,7953830379764,7953830772980,7953831035124,7953831067892,7953831133428,7953831100660,7953831166196,7953831231732,7953831264500,7953831330036,7953831395572,7953831428340,7953831461108,7953831526644,7953831559412,7953831592180,7953831493876,7953831198964,7953831657716,7953831723252,7953831690484,7953831756020,7953831788788,7953831887092,7953863606516,7953863639284,7953863672052,7953863704820,7953863803124,7954879185140,7954879152372,7954879250676,7954879217908,7954879545588,7954879512820,7954879578356,7954879611124,7954879709428,7954879840500,7954879873268,7954880004340,7954880069876,7954880102644,7954879774964,7954880135412,7954880233716,7954880299252,7954880528628,7954880397556,7954880332020,7954880594164,7954880659700,7954880626932,7954880987380,7954881249524,7958799810804,7958800335092,7958800433396,7958800531700,7958800892148,7958800695540,7958800990452,7958801055988,7958801154292,7959784521972,7959784620276,7959784653044,7959784685812,7959784784116,7959784718580,7959784816884,7959784849652,7959827710196,7959828398324,7959828726004,7959828889844,7959829119220,7959829217524,7959829348596,7959829610740,7959829414132,7959829709044,7959829741812,7959829643508,7959829774580,7959830528244,7959830659316,7959830593780,7960841322740,7960841781492,7960843518196,7960844304628,7960894669044,7960894701812,7960894734580,7960894767348,7960894832884,7960990220532,7961059459316,7961063817460,7961059426548,7961856311540,7961059492084,7961856344308,7961856409844,7961856377076,7961856540916,7961856573684,7961856606452,7961856671988,7961856770292,7961856901364,7961856868596,7961856966900,7961856934132,7961857032436,7961857065204,7961857097972,7961857130740,7961857196276,7961857229044,7961857261812,7961857523956,7961857687796,7961857818868,7961857982708,7961857949940,7961858015476,7961858048244,7962965082356,7962965147892,7962965180660,7962965246196,7962965115124,7962965213428,7962965278964,7962965311732,7962965410036,7962965344500,7962965442804,7962965475572,7962965508340,7966256890100,7966256922868,7966256005364,7966256955636,7966257021172,7970150121716,7970150088948,7970150318324,7970150187252,7970150252788,7970150711540,7970150416628,7970150973684,7970150154484,7970151071988,7970151006452,7971092726004,7971092758772,7971092791540,7971092824308,7971092889844,7971092857076,7971092922612,7971092955380,7971093250292,7971093348596,7971093577972,7971093315828,7971093676276,7971093709044,7971093741812,7971093643508,7971093774580,7971093807348,7971093872884,7971093971188,7971093905652,7971094069492,7971094036724,7971094102260,7971094135028,7971094167796,7971094200564,7971094233332,7971094266100,7971094298868,7971094331636,7971094364404,7971094397172,7971094429940,7971094462708,7971094495476,7971094528244,7971094561012,7971094593780,7971094626548,7971094659316,7971094692084,7971094724852,7971094790388,7971094757620,7971095118068,7971095412980,7971095314676,7971095511284,7971095478516,7971096133876,7971096002804,7971096297716,7971096330484,7971096428788,7971096363252,7971096494324,7971096461556,7971096527092,7971096592628,7971096625396,7971096559860,7971096658164,7971096690932,7971096723700,7971096822004,7971096789236,7971340124404,7971340157172,7973513363700,7973513429236,7973513396468,7973513462004,7973513658612,7973513756916,7973513855220,7973514051828,7973513691380,7973514117364,7973514215668,7973514445044,7973514576116,7973514641652,7973514248436,7973514772724,7973515165940,7973515264244,7973515067636,7973515198708,7973515559156,7973516116212,7973516050676,7973516214516,7973516345588,7973516476660,7973516771572,7973516411124,7973517132020,7973516837108,7973516968180,7973516869876,7973517164788,7973517426932,7973517263092,7973517492468,7973517525236,7973517590772,7973518082292,7973518049524,7973518147828,7973518967028,7973518180596,7973519130868,7973519065332,7973520113908,7973520212212,7973520376052,7973899305204,7973899337972,7973899370740,7973899862260,7973899665652,7973899469044,7973899927796,7973899960564,7973900157172,7973899993332,7973900353780,7973900288244,7973900615924,7973900714228,7973900845300,7973900484852,7973900779764,7973900976372,7973901107444,7973901041908,7973901336820,7973901304052,7973901402356,7973901828340,7973901533428,7973902156020,7973902254324,7973902647540,7973902385396,7973902778612,7973902975220,7973902942452,7973903139060,7973903368436,7973903728884,7973903466740,7973903499508,7973903827188,7973903991028,7973904122100,7973903859956,7973904253172,7973904318708,7973904580852,7973904351476,7973904711924,7973904744692,7973904810228,7973905039604,7973905105140,7973905072372,7973905301748,7973905367284,7973927289076,7973905465588,7973927321844,7973927354612,7973927387380,7973927813364,7973927846132,7973927878900,7973928304884,7973927944436,7973928239348,7973928861940,7973928403188,7973928829172,7973928501492,7973929124084,7973928894708,7973929058548,7973929287924,7973929353460,7973929582836,7973929681140,7973929812212,7973930008820,7973930107124,7973930041588,7973930467572,7973930205428,7973930664180,7973930795252,7973931974900,7973931909364,7973930926324,7973931614452,7973932171508,7973932368116,7973932499188,7973932630260,7973932695796,7975792902388,7975792935156,7975792967924,7975793000692,7975793131764,7975793328372,7975793721588,7975793754356];
+if(jQuery.inArray(meta.product.id, CP_CHRIS) == -1) {
+  $("#cp_chris").remove();
+}else{
+  $("#cp_chris").show();
+}
+
+</script>

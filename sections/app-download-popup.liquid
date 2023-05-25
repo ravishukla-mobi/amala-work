@@ -1,0 +1,43 @@
+{% if section.settings.image != blank %}
+<aside class="modal modal--app-download" data-section-id="{{ section.id }}" data-section-type="app-popup" data-popup-type="app-download" aria-hidden="true">
+    <div class="modal__dialog" role="dialog">
+        <div class="popup-app-download">
+            <button class="popup-newsletter__close link" data-action="close-popup" aria-label="{{ 'general.accessibility.close' | t }}">
+              {%- render 'icon', icon: 'close' -%}
+            </button>
+            <div class="popup-app-download_inner">
+                <a href="" class="modal_app_image" data-apple="{% if section.settings.ios_device_link != blank %}{{section.settings.ios_device_link}}{% else %}javascript:void(0);{% endif %}" data-android="{% if section.settings.android_device_link != blank %}{{section.settings.android_device_link}}{% else %}javascript:void(0);{% endif %}" target="_blank">
+                  <img src="{{ section.settings.image | img_url: '375x' }}" alt="{{ section.settings.image.alt | escape }}">
+                </a>
+            </div>
+        </div>
+    </div>
+</aside>
+{% endif %}
+  
+  {% schema %}
+  {
+    "name": "App Download Popup",
+    "settings": [
+        {
+          "type": "paragraph",
+          "content": "Enable app popup if a user visits the website 2nd time then on homepage show."
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Popup Image"
+        },
+        {
+          "type": "url",
+          "id": "ios_device_link",
+          "label": "IOS device url"
+        },
+        {
+          "type": "url",
+          "id": "android_device_link",
+          "label": "Android device url"
+        }
+    ]
+  }
+  {% endschema %}

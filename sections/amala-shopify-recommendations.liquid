@@ -1,0 +1,137 @@
+{%- capture section_settings -%}
+    {
+        "stackable": {% if section.settings.layout == 'vertical' and section.settings.stack_products == false %}false{% else %}true{% endif %},
+        "layout": {{ section.settings.layout | json }}
+    }
+{%- endcapture -%}
+
+{%- if section.settings.enabled -%}
+<section class="section" data-section-id="{{ section.id }}" data-section-type="product-recommendations" data-section-settings='{{ section_settings }}'>
+    <div class="container">
+        <header class="section__header">
+            <div class="section__header-stack">
+                <h4 class="section__title heading">{{ section.settings.title }}</h4>
+            </div>
+
+            {%- if section.settings.link_title != blank and section.settings.button_position == 'top' -%}
+            <a href="{{ section.settings.link_url | default: collection.url | default: '#' }}" class="section__action-link link">{{ section.settings.link_title | escape }} {% render 'icon', icon: 'tail-right' %}</a>
+            {%- endif -%}
+        </header>
+      	<div id="product-recommendations">
+      	</div>
+    </div>
+</section>
+{%- endif -%}
+
+<script type="text/javascript">
+    const productRecommendationsSection = document.querySelector('#product-recommendations');
+    fetch("/recommendations/products?product_id={{product.id}}&limit={{section.settings.products_count}}&section_id=ajax-recommendations")
+    .then(response => response.text())
+    .then((text) => {
+        const html = document.createElement('div');
+        html.innerHTML = text;
+        const recommendations = html.querySelector('#shopify-section-ajax-recommendations');
+        if(recommendations && recommendations.innerHTML.trim().length) {
+            productRecommendationsSection.innerHTML = recommendations.innerHTML;
+        }
+    });
+</script>
+    
+<style>
+    .amala-produdct-recommendations-list{
+  	     display: block;
+    }
+    .amala-produdct-recommendations-list .product-list--scrollable{
+      	flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(5, 20%);
+        justify-content: space-between;
+    }
+    .amala-produdct-recommendations-list .product-list--scrollable > div{
+        margin-bottom: 20px;
+        margin-left: auto !important;
+        margin-right: auto !important;width:95%;
+    }
+    .amala-produdct-recommendations-list .scroller {
+        margin: 0;
+    }
+    .amala-produdct-recommendations-list .product-list--scrollable .product-item {
+        max-width: 95%;
+    }
+    @media(max-width:1100px) {
+        .amala-produdct-recommendations-list .product-list--scrollable {
+            grid-template-columns: repeat(3, 33%);
+        }
+    }
+    @media(max-width:768px) {
+        .amala-produdct-recommendations-list .product-list--scrollable {
+            grid-template-columns: repeat(2, 50%);
+        }
+    }
+    @media(max-width:560px) {
+        .amala-produdct-recommendations-list .product-list--scrollable {
+            grid-template-columns: repeat(1, 100%);
+            justify-content: center;
+        }
+    }
+    /*.amala-produdct-recommendations-list::-webkit-scrollbar {
+        height: 0em;
+    }*/
+    #product-recommendations .product-list {
+    	padding:0 20px; 
+    }
+    @media screen and (max-width:767px){
+      #product-recommendations .product-list .product-item{
+        width: 42%;
+      }
+    }
+</style>
+
+{% schema %}
+    {
+        "name": "Shopify Recommendations",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Heading",
+                "default": "Featured Products"
+            },
+	        {
+                "type": "checkbox",
+                "id": "enabled",
+                "label": "Enable product recommendations",
+                "default": false
+            },
+            {
+                "type": "range",
+                "id": "products_count",
+                "label": "Products to show",
+                "min": 2,
+                "max": 100,
+                "step": 1,
+                "default": 3
+            },
+            {
+                "type": "select",
+                "id": "layout",
+                "label": "Layout",
+                "options": [
+                    {
+                        "value": "vertical",
+                        "label": "Vertical"
+                    },
+                    {
+                        "value": "horizontal",
+                        "label": "Horizontal"
+                    },
+                    {
+                        "value": "collage",
+                        "label": "Collage"
+                    }
+                ],
+                "default": "vertical"
+            }
+        ]
+    }
+{% endschema %}

@@ -1,0 +1,391 @@
+.page__content {
+    margin-bottom: 60px;
+}
+body.about-us header.page__header,
+.founders-note header.page__header,
+body.philosophy header.page__header{
+    display: none;
+}
+.about-us main#main .container.container--narrow, .founders-note .container.container--narrow, .philosophy .container.container--narrow  {
+    max-width: 100%;
+    padding: 0;
+}
+.aboutpage-outer .banner-content {
+text-align: center;
+    background-image: url(https://cdn.shopify.com/s/files/1/0523/3252/7770/files/aboutpage-left.png), 
+      url(https://cdn.shopify.com/s/files/1/0523/3252/7770/files/aboutpage-right.png);
+    background-repeat: no-repeat;
+  background-position: bottom left, bottom right;
+    background-size: 440px;
+    /* height: 510px; */
+    padding-top: 110px;
+    padding-bottom: 160px;
+    margin-bottom: 0px;
+    background-color: #b99c7d;
+  height: 400px;
+}
+.aboutpage-outer .banner-content img {
+    margin: 0 auto;
+    max-width: 250px;
+}
+.aboutpage-outer .banner-content h2 {
+    color: #fff;
+    margin: 0;
+    margin-top: 30px;
+   text-transform: capitalize;
+}
+.aboutpage-outer .banner-content h2:first-letter{
+  text-transform: capitalize;
+}
+.aboutpage-outer.foundernote .banner-content h2 {
+    font-size: 50px;
+    font-weight: normal;
+    margin-top: 70px;
+}
+.aboutpage img {
+    display: inline-block;
+    margin: 0;
+}
+.aboutpage {
+text-align: center;
+    padding-top: 50px;
+    width: 640px;
+    margin: 0 auto;
+    max-width: 100%;
+    color: #231F20;
+}
+.aboutpage h2 {
+    font-size: 44px;
+    font-family: var(--heading-font-family);
+    margin-top: 50px;
+    margin-bottom: 35px;
+    line-height: 1;
+}
+.aboutpage p {
+    font-family: var(--heading-font-family);
+    /* font-size: 16px; */
+}
+.aboutpage p.uppertext {
+    text-align: left;
+    margin-bottom: 30px;
+}
+.blocks-mision {
+    width: 448px;
+    margin: 0 auto;
+    max-width: 100%;
+    margin-bottom: 30px;
+    padding-top: 10px;
+}
+.aboutpage h3 {
+    color: #AC9074;
+    margin-bottom: 2px;
+    line-height: 1;
+    font-weight: bold;
+}
+.blocks-mision.our-essence {
+   margin-bottom: 0px;
+}
+.about-us main#main {
+    padding-bottom: 50px;
+}
+.aboutpage h4 {
+text-transform: none;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 40px;
+    line-height: 1.5;
+}
+.bottom-logo {
+    margin-top: 120px;
+}
+body.founders-note .bottom-logo {
+    margin-top: 250px;
+}
+.rte .bottom-logo a:not(.button) {
+    text-decoration: none;
+    font-family: var(--heading-font-family);
+    font-size: 1em;
+    line-height: 32px;
+    letter-spacing: 1px;
+}
+.rte .bottom-logo a:not(.button):hover {
+opacity:.8;
+}
+body.about-us section.section.section--about-text.icon-with-text ,
+body.founders-note section.section.section--about-text.icon-with-text,
+body.philosophy section.section.section--about-text.icon-with-text{
+    display: none;
+}
+.about-us .page__content.rte,body.founders-note .page__content.rte,body.philosophy .page__content.rte {
+    margin-bottom: 0;
+}
+.aboutpage-outer {
+/*     background-image: url(https://cdn.shopify.com/s/files/1/0523/3252/7770/files/about-bg_654ad09b-4e0f-44c1-b1eb-9938b5ba0a4d.jpg?v=1619590196);
+    background-position: bottom;
+    background-size: 100%;
+    background-repeat: no-repeat; */
+/*     width: 860px;
+    margin: 0 auto;
+    max-width: 100%;
+  background-color: #fff; */
+    padding-bottom: 20px;
+}
+.about-us main#main, .founders-note main#main, .philosophy main#main  {
+  background-image: url(https://cdn.shopify.com/s/files/1/0523/3252/7770/files/bottom-left_b1e2227a-b6c7-4fc1-a084-342d74cd74c1.png?v=1620193224), url(https://cdn.shopify.com/s/files/1/0523/3252/7770/files/bottom-right.png?v=1620029385);
+    background-repeat: no-repeat;
+    background-position: bottom left, bottom right;
+    background-size:180px;
+    height: 100%;
+}
+
+.aboutpage h5 {
+    text-transform: none;
+    margin: 30px 0;
+    font-size: 20px;
+}
+div#philosophy {
+    text-align: center;
+    padding-top: 20px;
+}
+div#philosophy h2 {
+    margin: 0;
+    font-size: 28px;
+    color: var(--price-color);
+}
+div#philosophy .aboutpage {
+    padding-top: 15px;
+}
+/* body.philosophy main#main {
+  background-image: url(https://cdn.shopify.com/s/files/1/0523/3252/7770/files/founder-left.jpg), url(https://cdn.shopify.com/s/files/1/0523/3252/7770/files/founder-right.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom left, bottom right;
+    background-size:260px;
+    height: 100%;
+    border-bottom: 1px solid #f5f5f5;
+} */
+.philosophy .aboutpage h2 {
+    color: var(--heading-color);
+}
+div#philosophy .aboutpage h3 {
+   margin-top: 20px;
+    margin-bottom: 30px;
+}
+div#philosophy .aboutpage h3.jst {
+    line-height: inherit;
+    font-size: 18px;
+  margin-bottom: 10px;
+}
+
+body.philosophy .aboutpage h3:not(.jst) {
+    font-size: 18px;
+}
+.aboutpage h5.gjp {
+    margin-bottom: 0;
+}
+div#philosophy {
+    padding-top: 170px;
+}
+.aboutpage-outer.foundernote {
+    padding-bottom: 100px;
+}
+h5.transform-text {
+    font-size: 26px;
+}
+.philosophy img.butterflyicon {
+    max-width: 350px;
+}
+.philosophy .aboutpage h3 {
+    color: var(--heading-color);
+    line-height: 1.5;
+}
+.philosophy .aboutpage h4 {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+.founders-note main#main {
+    background-size: 150px;
+}
+.add-info {
+    text-align: left;
+    margin-top: 40px;
+    position: relative;
+    padding-top: 20px;
+}
+.add-info:before {
+    content: '';
+    display: inline-block;
+    width: 170px;
+    border-top: 1px dashed;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+h4.align-left {
+    text-align: left;
+}
+body.founders-note p#philosphay-sec {
+    text-align: center;
+}
+/**privacy**/
+.static-page{
+ font-size:16px; 
+}
+.static-page strong, .static-page b {
+    font-weight: 600;
+}
+.static-page.privacy-page ul {
+    list-style: disc;
+    padding-left: 0px;
+}
+.static-page.terms-page ol {
+list-style-type: none;
+    counter-reset: item;
+    margin: 0;
+    padding: 0;
+    word-break: normal;
+    margin-left: 0;
+}
+
+.static-page.terms-page ol > li {
+  display: table;
+  counter-increment: item;
+ margin-bottom: 0.7em;
+}
+
+.static-page.terms-page ol > li:before {
+  content: counters(item, ".") ". ";
+  display: table-cell;
+  padding-right: 0.6em;    
+}
+
+.static-page.terms-page li ol > li {
+  margin: 0;
+}
+
+.static-page.terms-page li ol > li:before {
+  content: counters(item, ".") " ";
+}
+.static-page.terms-page ol.alphabet {
+    list-style-type: lower-alpha;
+      padding-left: 20px;
+}
+.static-page.terms-page ol.alphabet li {
+    display: list-item;
+}
+.static-page.terms-page ol.alphabet li:before {
+    display: none;
+}
+
+@media (max-width:1000px){
+  .aboutpage-outer .banner-content {
+    background-size: 250px;
+    padding-bottom: 80px;
+    margin-bottom: 10px;
+    height: 318px;
+}
+  
+  .about-us main#main {
+    background-size: 150px;
+  }
+  body.philosophy main#main {
+    background-size: 180px;
+  }
+  body.founders-note .bottom-logo {
+    margin-top: 120px;
+  }
+
+  .aboutpage-outer.foundernote .banner-content h2 {
+    font-size: 44px;
+    font-weight: normal;
+    margin-top: 32px;
+}
+div#philosophy {
+    padding-top: 90px;
+}
+}
+
+@media (max-width:767px){
+  .aboutpage-outer .banner-content {
+    height: auto;
+  }
+  .aboutpage-outer.foundernote .banner-content h2 {
+    font-size: 32px;
+    font-weight: normal;
+    margin-top: 0px;
+  }
+  .about-us main#main,body.philosophy main#main,
+  .founders-note main#main{
+    background-size: 70px;
+  }
+  .aboutpage p.uppertext {
+    text-align: center;
+}
+  .aboutpage img {
+    max-width: 200px;
+}
+  .aboutpage h2 {
+    font-size: 28px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    line-height: 1;
+}
+  .philosophy img.butterflyicon {
+    max-width: 250px;
+}
+  .aboutpage h3.jst {
+    line-height: 1.4;
+}
+  .aboutpage {
+    padding: 0 15px;
+  }
+  .aboutpage h4 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 22px;
+  }
+  .blocks-mision {
+    margin-bottom: 15px;
+  }
+  .aboutpage p.uppertext {
+    margin-bottom: 15px;
+  }
+  .aboutpage-outer .banner-content {
+    background-size: 150px;
+    padding-bottom: 80px;
+    margin-bottom: 50px;
+}
+  .blocks-mision.our-essence {
+    margin-bottom: 20px;
+}
+  div#philosophy {
+    padding-top: 130px;
+}
+  h4.align-left {
+    text-align: center;
+  }
+  .add-info {
+    text-align: center;
+  }
+  .add-info:before {
+    display: block;
+    width: 170px;
+    border-top: 1px dashed;
+    position: relative;
+    top: 0;
+    left: auto;
+    margin: 0 auto 10px;
+}
+  .static-page {
+    font-size: 15px;
+  }
+  .page__content {
+    margin-bottom: 45px;
+}
+  .about-us main#main {
+    padding-bottom: 0px;
+}
+  .aboutpage-outer.foundernote {
+    padding-bottom: 50px;
+}
+  
+}

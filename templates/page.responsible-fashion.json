@@ -1,0 +1,2028 @@
+{
+  "sections": {
+    "3e38aca5-5077-4220-831b-859e274c9a16": {
+      "type": "page-navigation",
+      "settings": {}
+    },
+    "69712fe2-d9a6-4e98-af69-9f6b691aa405": {
+      "type": "slideshow",
+      "blocks": {
+        "5a54ef26-7ed3-4541-9ccd-42f4fe90edcd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Summer_dress_v2_Banner_1920x600_e687c31b-a424-436e-b21d-0e25b7942eff.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/summer_dresses_v2_banner-microsite-mobile.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/western-wear?f_Type=Dresses",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "49a90bcf-2b49-4036-b766-66846f9744a4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Jewellery_Banner_1920x600_b1e39808-5512-4b09-a248-8c0e8434b560.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Jewellery_banner-microsite-mobile.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/jewellery?f_Material=Brass,Silver",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "6ac25bd1-c6ac-469c-980b-8bd71cab7d1e": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/summer_fashion_web_banner.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/summer_fashion_mobile_banner_._6fa01f58-dd6a-4336-b635-9728d4090ed5.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/women",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "4738265a-2046-4eb0-9542-7d6a2bde9ab4": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sustainable_whites_banner_web_58dafe38-6835-497e-9ccf-82a9d25e0003.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/sustainable_whites_mobile_banner_eec22710-ffec-440a-b159-f6c5a6185023.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/white-clothing?f_Gender=Women",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "5896f9bc-dd78-4b75-b4c5-c4ea33d3081b": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Banner_1920x600_celebrating_crafts.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/crafts_banner_mobile_1.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/crafts-of-india",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "f5c4d5e0-6ead-46ab-9238-c0283ab15e27": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Saree_v2_Banner_1920x600_f0cc025a-92aa-4125-875d-834d95d0f739.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Saree_v2banner-microsite-mobile.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/ethnic-clothing?f_Type=Saree,Blouse",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "5a54ef26-7ed3-4541-9ccd-42f4fe90edcd",
+        "49a90bcf-2b49-4036-b766-66846f9744a4",
+        "6ac25bd1-c6ac-469c-980b-8bd71cab7d1e",
+        "4738265a-2046-4eb0-9542-7d6a2bde9ab4",
+        "5896f9bc-dd78-4b75-b4c5-c4ea33d3081b",
+        "f5c4d5e0-6ead-46ab-9238-c0283ab15e27"
+      ],
+      "settings": {
+        "edge_to_edge": true,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "festival-landings-page": {
+      "type": "main-banner",
+      "disabled": true,
+      "settings": {
+        "banner_desktop_image": "shopify:\/\/shop_images\/fashion-microsite-desktop_version_1.jpg",
+        "banner_mobile_image": "shopify:\/\/shop_images\/fashion-microsite-Mobile_version_1.jpg",
+        "desktop_banner_title": "",
+        "color_heading": "#ffffff",
+        "desktop_banner_subtitle": "",
+        "color_subheading": "#b89c7d",
+        "desktop_banner_button": "",
+        "color_button": "#ffffff",
+        "button_background": "#9d7242",
+        "desktop_button_url": "https:\/\/amala.earth\/collections\/women",
+        "desktop_image_url": "https:\/\/amala.earth\/collections\/women"
+      }
+    },
+    "3ce8650f-ee5d-4ec2-8c3e-43b4fde36a2f": {
+      "type": "custom-grid",
+      "blocks": {
+        "9d8a0cc5-207d-4537-b54a-dd1666611f34": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/artisnal_ethnic_widget.png",
+            "title": "Artisanal ethnics ",
+            "block_button_url": "https:\/\/amala.earth\/collections\/ethnic-clothing"
+          }
+        },
+        "4ba4ea05-4dcd-44b1-8e66-b2e11c1d8eca": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/ethical_casuals_ab89492a-5c8e-4d50-b1ba-ff981765a40a.png",
+            "title": "Ethical casuals",
+            "block_button_url": "https:\/\/amala.earth\/collections\/western-wear"
+          }
+        },
+        "bad5f3ff-9274-4267-9c3e-9a6deba99ea1": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/asscessories_4bf8b892-2241-4903-88c7-d48b9144aedb.png",
+            "title": "Handmade accessories",
+            "block_button_url": "https:\/\/amala.earth\/collections\/bags-and-accessories"
+          }
+        },
+        "adb9e735-9398-4722-9a2d-a10e739bacf6": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/activewear.png",
+            "title": " Breathable activewear ",
+            "block_button_url": "https:\/\/amala.earth\/collections\/yoga-and-workout-wear"
+          }
+        },
+        "9f57f552-0ea6-4e2b-8b7a-a4f12d36551b": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/footwear_73a4694d-30f9-45e9-a464-059e4f718a43.png",
+            "title": "Cruelty-free footwear ",
+            "block_button_url": "https:\/\/amala.earth\/collections\/shoes-and-others"
+          }
+        },
+        "46dcfbea-f442-422a-8f61-c28429a2d9a2": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/jwellery.png",
+            "title": "Timeless jewellery ",
+            "block_button_url": "https:\/\/amala.earth\/collections\/jewellery"
+          }
+        }
+      },
+      "block_order": [
+        "9d8a0cc5-207d-4537-b54a-dd1666611f34",
+        "4ba4ea05-4dcd-44b1-8e66-b2e11c1d8eca",
+        "bad5f3ff-9274-4267-9c3e-9a6deba99ea1",
+        "adb9e735-9398-4722-9a2d-a10e739bacf6",
+        "9f57f552-0ea6-4e2b-8b7a-a4f12d36551b",
+        "46dcfbea-f442-422a-8f61-c28429a2d9a2"
+      ],
+      "settings": {
+        "subtitle": "",
+        "title": ""
+      }
+    },
+    "a176c55c-ca16-4eed-aebb-1b912303e2ef": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "f8754f73-9d78-40dd-b948-140dfbb491d7": {
+          "type": "Product",
+          "settings": {
+            "product": "shop-staple-linen-floral-printed-shirt-pink-ss04psp-14922"
+          }
+        },
+        "3035ff44-58bf-4bf1-966c-d7c1712ddb59": {
+          "type": "Product",
+          "settings": {
+            "product": "raglan-sleeves-mid-length-organic-cotton-dress"
+          }
+        },
+        "ce585b93-8834-4708-8dd5-93feabffcd69": {
+          "type": "Product",
+          "settings": {
+            "product": "ecoshi-silk-scarf-floral-print-green-ess-ba-0322-141022"
+          }
+        },
+        "39560c90-7995-46cf-b903-ed29642eec2c": {
+          "type": "Product",
+          "settings": {
+            "product": "ilamra-cotton-floral-printed-dress-indigo-white-fl18-22722"
+          }
+        },
+        "0b21e4a5-b9de-4eb2-911a-e891597489d0": {
+          "type": "Product",
+          "settings": {
+            "product": "phlar-pure-cotton-short-dress-handblock-print-blue-ph0088-240223"
+          }
+        },
+        "129b08aa-d32b-4b44-8884-29c1faa31509": {
+          "type": "Product",
+          "settings": {
+            "product": "kavana-handblock-printed-linen-blouse-pink-tsosb02-29822"
+          }
+        },
+        "38e5e558-096c-4724-a667-799d61212da9": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-cotton-kalamkari-tunic"
+          }
+        },
+        "0a238a5e-7e87-480a-8c9c-8860be41d4db": {
+          "type": "Product",
+          "settings": {
+            "product": "linen-tiered-dress-off-white"
+          }
+        },
+        "7a6540da-551f-44de-a8ef-602a6b2dfce6": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-ivory-chanderi-silk-floral-printed-dress-with-hand-embroidery"
+          }
+        }
+      },
+      "block_order": [
+        "f8754f73-9d78-40dd-b948-140dfbb491d7",
+        "3035ff44-58bf-4bf1-966c-d7c1712ddb59",
+        "ce585b93-8834-4708-8dd5-93feabffcd69",
+        "39560c90-7995-46cf-b903-ed29642eec2c",
+        "0b21e4a5-b9de-4eb2-911a-e891597489d0",
+        "129b08aa-d32b-4b44-8884-29c1faa31509",
+        "38e5e558-096c-4724-a667-799d61212da9",
+        "0a238a5e-7e87-480a-8c9c-8860be41d4db",
+        "7a6540da-551f-44de-a8ef-602a6b2dfce6"
+      ],
+      "settings": {
+        "title1": "Spring",
+        "title2": "Florals",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/floral-for-spring-fashion",
+        "button_position": "top"
+      }
+    },
+    "dbbe8435-b77b-4221-9004-1371c1c1e54e": {
+      "type": "landing-page-recommendation",
+      "disabled": true,
+      "blocks": {
+        "ae798dac-79a1-4384-a3a5-678a707f8bab": {
+          "type": "Product",
+          "settings": {
+            "product": "pure-cotton-tiered-dress-orange"
+          }
+        },
+        "2fd8dd5b-9d01-420b-8dd8-7354dc28514a": {
+          "type": "Product",
+          "settings": {
+            "product": "shop-staple-linen-corset-top-pink-ss04cp-14922"
+          }
+        },
+        "0c4202a9-6df9-4a11-9907-93be30b8dfd2": {
+          "type": "Product",
+          "settings": {
+            "product": "equiivalence-brass-choker-necklace-lightweight-silver-toned-eqn0022s-81122"
+          }
+        },
+        "9e22db4a-ba3f-484b-9f5a-ae5b063d042c": {
+          "type": "Product",
+          "settings": {
+            "product": "tencel-red-khloe-dress"
+          }
+        },
+        "311cf09a-2b34-4876-a186-2b3ff7cb0630": {
+          "type": "Product",
+          "settings": {
+            "product": "paio-vegan-leather-block-heels-navy-paio-305-35-160822"
+          }
+        },
+        "ef0d0e75-de60-489f-88d4-8481d2c28dde": {
+          "type": "Product",
+          "settings": {
+            "product": "copy-of-brass-gold-plated-dangle-earrings"
+          }
+        },
+        "8a41cec0-7c5c-40b8-8575-aa9e9abc273b": {
+          "type": "Product",
+          "settings": {
+            "product": "shop-staple-linen-slit-dress-adjustable-slit-beige-ss04sdbei-14922"
+          }
+        },
+        "75a472ba-96c5-482f-987c-6cfd1459c6c0": {
+          "type": "Product",
+          "settings": {
+            "product": "arras-cotton-silk-sleeveless-top-side-panelled-off-white-t010101-231122"
+          }
+        },
+        "65f2ff32-c021-43b1-8dc7-7e3c833fe47a": {
+          "type": "Product",
+          "settings": {
+            "product": "palison-cotton-tiered-dress-puff-sleeves-maroon-ss21drs065-xs-261022"
+          }
+        }
+      },
+      "block_order": [
+        "ae798dac-79a1-4384-a3a5-678a707f8bab",
+        "2fd8dd5b-9d01-420b-8dd8-7354dc28514a",
+        "0c4202a9-6df9-4a11-9907-93be30b8dfd2",
+        "9e22db4a-ba3f-484b-9f5a-ae5b063d042c",
+        "311cf09a-2b34-4876-a186-2b3ff7cb0630",
+        "ef0d0e75-de60-489f-88d4-8481d2c28dde",
+        "8a41cec0-7c5c-40b8-8575-aa9e9abc273b",
+        "75a472ba-96c5-482f-987c-6cfd1459c6c0",
+        "65f2ff32-c021-43b1-8dc7-7e3c833fe47a"
+      ],
+      "settings": {
+        "title1": "Valentine's Day Edit",
+        "title2": "conscious choices",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/valentines-day-fashion?f_Type=Dresses",
+        "button_position": "top"
+      }
+    },
+    "0b36822e-8ef3-4a5a-8886-2ea38bed22df": {
+      "type": "slider-show",
+      "disabled": true,
+      "blocks": {
+        "template--16608366690548__0b36822e-8ef3-4a5a-8886-2ea38bed22df-1678007297d294a7a6-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner_website_handblock_op_2_2a13904f-aaa5-456d-ac17-769bba847dfb.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/banner_mobile_handblock_op_2_1_a411ace7-76e9-4b60-82b3-071c624ce58f.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/hand-block-prints-rf"
+          }
+        },
+        "template--16608366690548__0b36822e-8ef3-4a5a-8886-2ea38bed22df-1678007297d294a7a6-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner_website_weavers.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/banner_mobile_weavers.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/handloom-fashion"
+          }
+        },
+        "14a19229-e29c-4914-8ea1-ac70b55eaa6c": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "Slide title",
+            "subtitle": "Slide title",
+            "content": "Tell your story",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "Button",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16608366690548__0b36822e-8ef3-4a5a-8886-2ea38bed22df-1678007297d294a7a6-0",
+        "template--16608366690548__0b36822e-8ef3-4a5a-8886-2ea38bed22df-1678007297d294a7a6-1",
+        "14a19229-e29c-4914-8ea1-ac70b55eaa6c"
+      ],
+      "settings": {
+        "edge_to_edge": false,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "efe18422-8db0-4935-b425-181f630bcd50": {
+      "type": "slider-test",
+      "blocks": {
+        "template--16608366690548__efe18422-8db0-4935-b425-181f630bcd50-1680072842efb31962-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner_website_handblock_op_2_1_632dbf1d-90ae-48d2-8ba2-6fca7ae9e314.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/banner_mobile_handblock_op_2_1_1_b4887d31-013e-478f-b076-3cfb5830913e.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/hand-block-prints-rf"
+          }
+        },
+        "template--16608366690548__efe18422-8db0-4935-b425-181f630bcd50-1680072842efb31962-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Banner_1920x600_studio_beej.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/banner_mobile_studio_beej.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/Studio-Beej"
+          }
+        },
+        "f0d8bf01-897e-474c-8cc9-6714e873ed38": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Dyed_clothes_web_banner_1b34e361-9ba2-45fa-9f9a-ca1f4ef44bb3.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Dyed_clothes_web_mobile_1.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#fff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/natural-dyes-fashion"
+          }
+        },
+        "77c1cc38-9ecc-464d-bcea-fcf2172628b4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Banner_1920x600_celebrating_crafts_347b5f7e-22e8-4203-8d4a-b53b929ddfd3.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/crafts_banner_mobile_1_63856679-2b23-4f56-b1e4-d9deba6ceda4.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#fff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/crafts-of-india"
+          }
+        }
+      },
+      "block_order": [
+        "template--16608366690548__efe18422-8db0-4935-b425-181f630bcd50-1680072842efb31962-0",
+        "template--16608366690548__efe18422-8db0-4935-b425-181f630bcd50-1680072842efb31962-1",
+        "f0d8bf01-897e-474c-8cc9-6714e873ed38",
+        "77c1cc38-9ecc-464d-bcea-fcf2172628b4"
+      ],
+      "settings": {
+        "edge_to_edge": false,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "c701f5c7-9172-4f7f-9b46-7be12d7e8ef0": {
+      "type": "amala-earth-curation",
+      "disabled": true,
+      "blocks": {
+        "3ff0510b-6fee-4f29-aa6e-10515a280336": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/Banner_1920x600_studio_beej.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/banner_mobile_studio_beej.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/hand-block-prints-rf"
+          }
+        }
+      },
+      "block_order": [
+        "3ff0510b-6fee-4f29-aa6e-10515a280336"
+      ],
+      "settings": {
+        "curation_heading1": "",
+        "curation_sub_heading2": ""
+      }
+    },
+    "7148a954-d95c-483a-9aed-5f0f443b2075": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "f8d58b91-b19b-4f92-bd6c-240d4a5a162b": {
+          "type": "Product",
+          "settings": {
+            "product": "kavana-chanderi-kurta-set-hand-embroidered-pink-ombre-aks04-050523"
+          }
+        },
+        "059dc22d-bbed-4073-bf89-9afa1c2550f0": {
+          "type": "Product",
+          "settings": {
+            "product": "kavana-linen-kurta-set-floral-hand-embroidered-pink-aks01-050523"
+          }
+        },
+        "3f6f2e98-82f3-4c34-9a74-44c9755b7e88": {
+          "type": "Product",
+          "settings": {
+            "product": "kavana-chanderi-kurta-set-v-neck-pink-aks06-050523"
+          }
+        },
+        "2a001bf8-0c0a-4e23-b0b9-30d2c6834f96": {
+          "type": "Product",
+          "settings": {
+            "product": "kavana-linen-kurta-set-a-line-kurta-hand-embroidery-blue-aks07-050523"
+          }
+        },
+        "6e0e5c61-1147-4b3f-ba76-5f9e71cfcb50": {
+          "type": "Product",
+          "settings": {
+            "product": "kavana-chanderi-kurta-set-hand-embroidered-spaghetti-strap-black-aks12-050523"
+          }
+        },
+        "7c8ce166-5ed6-43fd-9c5e-4438e69b6580": {
+          "type": "Product",
+          "settings": {
+            "product": "kavana-linen-kurta-set-floral-hand-embroidered-aqua-green-aks05-050523"
+          }
+        },
+        "8eb9e142-ada2-445b-a6d6-076ac597cd49": {
+          "type": "Product",
+          "settings": {
+            "product": "kavana-linen-kurta-set-hand-embroidery-white-aks08-050523"
+          }
+        },
+        "a536670b-d426-4311-995d-9d624a4cfec5": {
+          "type": "Product",
+          "settings": {
+            "product": "kavana-linen-kurta-set-hand-embroidery-curved-hem-beige-aks11-050523"
+          }
+        },
+        "b987b0d4-488d-4aca-b210-012bd665435c": {
+          "type": "Product",
+          "settings": {
+            "product": "kavana-linen-kurta-set-hand-embroidery-straight-fit-yellow-aks09-050523"
+          }
+        },
+        "315da3e2-6f5b-4148-8de5-1502922a82f2": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "mati-pants-for-women-pure-cotton-pleated-pants-beige-mt-mile-pants-aw-beige-80423"
+          }
+        },
+        "ab731813-5a4a-4160-ac7c-2f24cb8e8c80": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "mati-pure-cotton-co-ord-set-crop-top-skirt-beige-red-mt-bow-set-aw-beige-red-80423"
+          }
+        }
+      },
+      "block_order": [
+        "f8d58b91-b19b-4f92-bd6c-240d4a5a162b",
+        "059dc22d-bbed-4073-bf89-9afa1c2550f0",
+        "3f6f2e98-82f3-4c34-9a74-44c9755b7e88",
+        "2a001bf8-0c0a-4e23-b0b9-30d2c6834f96",
+        "6e0e5c61-1147-4b3f-ba76-5f9e71cfcb50",
+        "7c8ce166-5ed6-43fd-9c5e-4438e69b6580",
+        "8eb9e142-ada2-445b-a6d6-076ac597cd49",
+        "a536670b-d426-4311-995d-9d624a4cfec5",
+        "b987b0d4-488d-4aca-b210-012bd665435c",
+        "315da3e2-6f5b-4148-8de5-1502922a82f2",
+        "ab731813-5a4a-4160-ac7c-2f24cb8e8c80"
+      ],
+      "settings": {
+        "title1": "Newly",
+        "title2": "launched",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/Kavana",
+        "button_position": "top"
+      }
+    },
+    "68c33a46-c30e-4b8a-84b9-d80dacac4a04": {
+      "type": "circular-image-grid",
+      "blocks": {
+        "8ff10c40-b5fb-49fa-ad25-3e5a8b8cdd3e": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Cotton.png",
+            "block_two_subtitle": "Ethical",
+            "title": "Cotton",
+            "second_block_url": "https:\/\/amala.earth\/collections\/women-cotton"
+          }
+        },
+        "57ff8aac-d518-41e4-b337-6627f65f383e": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Linen.png",
+            "block_two_subtitle": "Pure",
+            "title": "Linen",
+            "second_block_url": "https:\/\/amala.earth\/collections\/women-linen"
+          }
+        },
+        "8a6d3a3c-94c0-4179-ad43-af8efd49d07b": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/cork.png",
+            "block_two_subtitle": "Handcrafted",
+            "title": "Cork",
+            "second_block_url": "https:\/\/amala.earth\/collections\/women-cork"
+          }
+        },
+        "2e909473-ebc0-45b7-a5fa-7463a5a4b3ba": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Mulmul.png",
+            "block_two_subtitle": "Plant-based",
+            "title": "Mulmul",
+            "second_block_url": "https:\/\/amala.earth\/collections\/women-mulmul"
+          }
+        },
+        "dfe64664-5b98-41cd-85ad-d3bfffba4906": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Leather.png",
+            "block_two_subtitle": "Vegan",
+            "title": "Leather",
+            "second_block_url": "https:\/\/amala.earth\/collections\/women-vegan-leather"
+          }
+        },
+        "8da60efe-7020-4864-85da-93994fd29308": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Hemp_Fabric.png",
+            "block_two_subtitle": "Homegrown",
+            "title": "Hemp",
+            "second_block_url": "https:\/\/amala.earth\/collections\/women-hemp"
+          }
+        },
+        "9498bd5e-cb81-49b2-8bb3-ba9f7c4ca19d": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Polyester.png",
+            "block_two_subtitle": "Recycled",
+            "title": "Polyester",
+            "second_block_url": "https:\/\/amala.earth\/collections\/women?f_Material=Recycled+Polyester,Recycled+Plastic"
+          }
+        },
+        "92774282-274e-4445-aec9-b275fa7c6f5e": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Denim_1.png",
+            "block_two_subtitle": "Upcycled",
+            "title": "Denim",
+            "second_block_url": "https:\/\/amala.earth\/collections\/women-denim"
+          }
+        },
+        "88258eae-41cf-4183-8762-a32eb51d4bc0": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Bamboo.png",
+            "block_two_subtitle": "100% organic",
+            "title": "Bamboo",
+            "second_block_url": "https:\/\/amala.earth\/collections\/women-bamboo"
+          }
+        }
+      },
+      "block_order": [
+        "8ff10c40-b5fb-49fa-ad25-3e5a8b8cdd3e",
+        "57ff8aac-d518-41e4-b337-6627f65f383e",
+        "8a6d3a3c-94c0-4179-ad43-af8efd49d07b",
+        "2e909473-ebc0-45b7-a5fa-7463a5a4b3ba",
+        "dfe64664-5b98-41cd-85ad-d3bfffba4906",
+        "8da60efe-7020-4864-85da-93994fd29308",
+        "9498bd5e-cb81-49b2-8bb3-ba9f7c4ca19d",
+        "92774282-274e-4445-aec9-b275fa7c6f5e",
+        "88258eae-41cf-4183-8762-a32eb51d4bc0"
+      ],
+      "settings": {
+        "subtitle": "",
+        "title": ""
+      }
+    },
+    "090a9f92-04b9-4b92-a5a8-5b9a015cf5cb": {
+      "type": "curation-template-new",
+      "blocks": {
+        "d69fba2d-f971-40b7-82f1-f71d71e3ddac": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/linen_banner_website.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/linen_banner_mobile.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/the-linen-shop"
+          }
+        }
+      },
+      "block_order": [
+        "d69fba2d-f971-40b7-82f1-f71d71e3ddac"
+      ],
+      "settings": {
+        "curation_heading1": "",
+        "curation_sub_heading2": ""
+      }
+    },
+    "d2b479e7-0d5b-42d8-9216-8f3d1e72bef2": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "d6f4f438-b7fb-4caf-8fc3-c36fdcdfb0a0": {
+          "type": "Product",
+          "settings": {
+            "product": "pure-cotton-tiered-dress-orange"
+          }
+        },
+        "f4bf2514-1b7a-41bf-b6ef-c60f237d82fa": {
+          "type": "Product",
+          "settings": {
+            "product": "the-august-co-cotton-flared-short-dress-hand-dyed-ivory-aa20571aa251122"
+          }
+        },
+        "15766e03-d805-4d25-b0ec-2e85adc21b5f": {
+          "type": "Product",
+          "settings": {
+            "product": "whysoblue-cotton-wrap-dress-white-nat041-10123"
+          }
+        },
+        "2c2e53cd-ff6e-426b-831e-61ec3c3acefe": {
+          "type": "Product",
+          "settings": {
+            "product": "kanelle-pure-cotton-flared-dress-multi-panel-olive-kan-ap-23s04-110423"
+          }
+        },
+        "c564e25e-ea14-484a-b9c0-fbb41ef0c0b1": {
+          "type": "Product",
+          "settings": {
+            "product": "cosset-clothing-cotton-dress-white-cc_gdd_v-090822"
+          }
+        },
+        "ec939aa4-2a7e-4d8e-ba9b-4add96b6c923": {
+          "type": "Product",
+          "settings": {
+            "product": "silk-waves-cotton-collar-dress-handblock-printed-black-white-black-macro-collar-dress-27922"
+          }
+        },
+        "1937d605-2203-4ab4-a61c-b6e3ee3f990d": {
+          "type": "Product",
+          "settings": {
+            "product": "blue-moon-cotton-dress"
+          }
+        },
+        "49c8a388-5062-46b2-bdc5-0bf4e975e6a5": {
+          "type": "Product",
+          "settings": {
+            "product": "the-august-co-cotton-a-line-dress-tie-dye-ivory-aa20572aa251122"
+          }
+        },
+        "22c0900f-3051-4be5-a3f3-58db3dc2d97e": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "d6f4f438-b7fb-4caf-8fc3-c36fdcdfb0a0",
+        "f4bf2514-1b7a-41bf-b6ef-c60f237d82fa",
+        "15766e03-d805-4d25-b0ec-2e85adc21b5f",
+        "2c2e53cd-ff6e-426b-831e-61ec3c3acefe",
+        "c564e25e-ea14-484a-b9c0-fbb41ef0c0b1",
+        "ec939aa4-2a7e-4d8e-ba9b-4add96b6c923",
+        "1937d605-2203-4ab4-a61c-b6e3ee3f990d",
+        "49c8a388-5062-46b2-bdc5-0bf4e975e6a5",
+        "22c0900f-3051-4be5-a3f3-58db3dc2d97e"
+      ],
+      "settings": {
+        "title1": "Summer",
+        "title2": "Cotton Dresses",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/cotton-dresses-for-women",
+        "button_position": "top"
+      }
+    },
+    "2bd14898-d935-4349-9e83-f4372de58bf7": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "65342066-f6a1-4e0c-8a31-266b1fa66266": {
+          "type": "Product",
+          "settings": {
+            "product": "oziss-100-cotton-t-shirt-crew-neck-aqua-green-cmrhs-solid-mint-xs-w-cmrhs-solid-mint-s-w-cmrhs-solid-mint-m-w-cmrhs-solid-mint-l-w-cmrhs-solid-mint-xl-w-cmrhs-solid-mint-xxl-w-18123"
+          }
+        },
+        "80820f18-87a0-4a91-af2a-5729f89510de": {
+          "type": "Product",
+          "settings": {
+            "product": "sustainable-light-grey-og-cotton-cropped-t-shirt"
+          }
+        },
+        "056f647c-c1d7-437e-8233-11c3955d3f53": {
+          "type": "Product",
+          "settings": {
+            "product": "oziss-organic-cotton-jogger-pants-off-white-sweatpnt-offwhite-xs-s-w-sweatpnt-offwhite-m-l-w-sweatpnt-offwhite-xl-xxl-w-18123"
+          }
+        },
+        "faa1f530-a28e-4eb8-8189-0c3ca401d56f": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-cotton-t-shirt-brown"
+          }
+        },
+        "53a0122f-376d-440e-92b6-8d797cb6f8bd": {
+          "type": "Product",
+          "settings": {
+            "product": "oziss-100-cotton-t-shirt-crew-neck-lilac-cmrhs-solid-peri-xs-w-cmrhs-solid-peri-s-w-cmrhs-solid-peri-m-w-cmrhs-solid-peri-l-w-cmrhs-solid-peri-xl-w-cmrhs-solid-peri-xxl-w-18123"
+          }
+        },
+        "3d2810cb-434f-4ca9-8841-628f6fd11487": {
+          "type": "Product",
+          "settings": {
+            "product": "reistor-tencel-high-waist-pants-stone-grey-rwtstptss2200934800xs-27722"
+          }
+        },
+        "b1cd6b28-3123-45c7-ac3f-5c8962472004": {
+          "type": "Product",
+          "settings": {
+            "product": "soft-white-organic-cotton-ribbed-crew-neck-t-shirt"
+          }
+        },
+        "d52df913-842b-4904-8a8e-9f97c555aebd": {
+          "type": "Product",
+          "settings": {
+            "product": "skin-friendly-charcoal-scoop-neck-top"
+          }
+        },
+        "d9a3dc21-ab3d-40e1-bbfd-b0516768e326": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-cotton-off-white-floral-print-t-shirt"
+          }
+        },
+        "bb8405b3-6cc2-491e-a3d5-f5ab92805382": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-cotton-sleeveless-top-maroon"
+          }
+        },
+        "b72291b0-a8f5-43c4-af09-a0e759be7423": {
+          "type": "Product",
+          "settings": {
+            "product": "something-sustainable-organic-cotton-crop-top-pink-sos64-22822"
+          }
+        }
+      },
+      "block_order": [
+        "65342066-f6a1-4e0c-8a31-266b1fa66266",
+        "80820f18-87a0-4a91-af2a-5729f89510de",
+        "056f647c-c1d7-437e-8233-11c3955d3f53",
+        "faa1f530-a28e-4eb8-8189-0c3ca401d56f",
+        "53a0122f-376d-440e-92b6-8d797cb6f8bd",
+        "3d2810cb-434f-4ca9-8841-628f6fd11487",
+        "b1cd6b28-3123-45c7-ac3f-5c8962472004",
+        "d52df913-842b-4904-8a8e-9f97c555aebd",
+        "d9a3dc21-ab3d-40e1-bbfd-b0516768e326",
+        "bb8405b3-6cc2-491e-a3d5-f5ab92805382",
+        "b72291b0-a8f5-43c4-af09-a0e759be7423"
+      ],
+      "settings": {
+        "title1": "Wardrobe",
+        "title2": "staples",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/everyday-wardrobe-staples",
+        "button_position": "top"
+      }
+    },
+    "7ef04d73-4521-4582-bcc6-34b7912fd03a": {
+      "type": "slider-show",
+      "disabled": true,
+      "blocks": {
+        "template--16608366690548__7ef04d73-4521-4582-bcc6-34b7912fd03a-1678007297d294a7a6-0": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sustainable_whites_banner_web_800da701-e287-48a0-98ee-67ba209cad97.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/sustainable_whites_mobile_banner_0aba31f7-0b84-4a49-bad9-5388cd6dfdbc.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/white-clothing?f_Gender=Women"
+          }
+        },
+        "template--16608366690548__7ef04d73-4521-4582-bcc6-34b7912fd03a-1678007297d294a7a6-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/FASHION_Banner_1920x600_d797a9fa-d8b5-4a4b-842f-e54492ffae03.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/microsite_collection_page_banners_PANTONE_mobile_e2b06ce2-8296-46ae-affa-e88edb8a8a0d.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/pantone-colour-of-the-year"
+          }
+        }
+      },
+      "block_order": [
+        "template--16608366690548__7ef04d73-4521-4582-bcc6-34b7912fd03a-1678007297d294a7a6-0",
+        "template--16608366690548__7ef04d73-4521-4582-bcc6-34b7912fd03a-1678007297d294a7a6-1"
+      ],
+      "settings": {
+        "edge_to_edge": false,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "3c9249f0-2646-4993-86a9-27b13bcacf44": {
+      "type": "slider-test",
+      "blocks": {
+        "49e89ef4-e7b7-455b-b332-67d2311d9318": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sustainable_whites_banner_web_038154ee-cc09-4002-b9b3-befb226567ef.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/sustainable_whites_mobile_banner_7e2e308d-3298-452d-80eb-7ff93ebe67e5.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#fff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/white-clothing?f_Gender=Women"
+          }
+        },
+        "template--16608366690548__3c9249f0-2646-4993-86a9-27b13bcacf44-1680072842efb31962-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/FASHION_Banner_1920x600_4a1b20b5-d37d-4451-ad23-3b69f1c7ead3.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/microsite_collection_page_banners_PANTONE_mobile_61bdd443-b07e-49ae-aed1-4a1fd52e2e9c.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/pantone-colour-of-the-year"
+          }
+        },
+        "template--16608366690548__3c9249f0-2646-4993-86a9-27b13bcacf44-1680072842efb31962-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Dyed_clothes_web_banner.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Dyed_clothes_web_mobile.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/natural-dyes-fashion"
+          }
+        }
+      },
+      "block_order": [
+        "49e89ef4-e7b7-455b-b332-67d2311d9318",
+        "template--16608366690548__3c9249f0-2646-4993-86a9-27b13bcacf44-1680072842efb31962-0",
+        "template--16608366690548__3c9249f0-2646-4993-86a9-27b13bcacf44-1680072842efb31962-1"
+      ],
+      "settings": {
+        "edge_to_edge": false,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "5a90c44d-b9f1-423d-9887-cdbff931c254": {
+      "type": "custom-square-carousel",
+      "disabled": true,
+      "blocks": {
+        "e7352657-c548-4f3d-93f0-e37244a485a9": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/1.1.png",
+            "title": "",
+            "url_link": "https:\/\/amala.earth\/collections\/mens-accessories?f_Material=Cork"
+          }
+        },
+        "bac9d4c3-93a1-4993-b84d-bd30fb596c32": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/1.2.png",
+            "title": "",
+            "url_link": "https:\/\/amala.earth\/collections\/barware"
+          }
+        },
+        "f7f70b02-a568-45f6-923c-e793ab6cc279": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/1.4.png",
+            "title": "",
+            "url_link": "https:\/\/amala.earth\/search?q=laptop&f_Type=Accessories,Bags,Pouch,Corporate+Hampers"
+          }
+        },
+        "f383fca7-97a8-4454-ae9e-f5af889e2d8b": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/1.5_1.png",
+            "title": "",
+            "url_link": "https:\/\/amala.earth\/collections\/mens-accessories?f_Type=Sunglasses"
+          }
+        },
+        "c5cb8cc5-4af7-446e-9a1f-366d99d19f73": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/1.6_1.png",
+            "title": "",
+            "url_link": "https:\/\/amala.earth\/collections\/travel?f_Type=Earth-friendly+Gifts,Travel,Kits"
+          }
+        },
+        "9b15fb89-dfa6-4cdf-8c4a-d43ee48112f4": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/1.3.png",
+            "title": "",
+            "url_link": "https:\/\/amala.earth\/collections\/mens-grooming?f_Type=Kits"
+          }
+        },
+        "fec1734f-cba1-4318-a329-5581f147f629": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/1.7_2.png",
+            "title": "",
+            "url_link": "https:\/\/amala.earth\/collections\/barware"
+          }
+        }
+      },
+      "block_order": [
+        "e7352657-c548-4f3d-93f0-e37244a485a9",
+        "bac9d4c3-93a1-4993-b84d-bd30fb596c32",
+        "f7f70b02-a568-45f6-923c-e793ab6cc279",
+        "f383fca7-97a8-4454-ae9e-f5af889e2d8b",
+        "c5cb8cc5-4af7-446e-9a1f-366d99d19f73",
+        "9b15fb89-dfa6-4cdf-8c4a-d43ee48112f4",
+        "fec1734f-cba1-4318-a329-5581f147f629"
+      ],
+      "settings": {
+        "heading_one": "Gifting ideas",
+        "heading_two": "for men"
+      }
+    },
+    "599fb9d5-a3b4-4dd1-a141-eef20c6845ef": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "b64a0e63-5167-4ddc-87e6-a545db26fa90": {
+          "type": "Product",
+          "settings": {
+            "product": "moora-mulmul-cotton-saree-dabu-hand-block-print-indigo-sr-mc-be-0055-120423"
+          }
+        },
+        "14130e83-6507-434f-b50b-e3373c61191b": {
+          "type": "Product",
+          "settings": {
+            "product": "cotton-checkered-saree-white"
+          }
+        },
+        "688c4a65-86c2-42f4-9334-ed326693da45": {
+          "type": "Product",
+          "settings": {
+            "product": "silk-waves-mul-cotton-saree-criss-cross-black-criss-cross-black-saree-27922"
+          }
+        },
+        "e5c71f4c-9ece-4007-9f05-d0726ff0a62e": {
+          "type": "Product",
+          "settings": {
+            "product": "moora-mulmul-cotton-saree-bagru-print-red-beige-sr-mc-mr-0092-120423"
+          }
+        },
+        "77fd30f6-7039-489c-b5d1-ea93f2ba57f5": {
+          "type": "Product",
+          "settings": {
+            "product": "kanelle-saree-for-women-mul-mul-cotton-saree-multicolour-print-kan-ap-23s35-110423"
+          }
+        },
+        "3b627a98-e96a-4567-a46b-b999aff61fbb": {
+          "type": "Product",
+          "settings": {
+            "product": "mogasu-chanderi-silk-saree-hand-block-print-paana-pink-blue-mog1panpins0-200423"
+          }
+        },
+        "c08f83b7-f2d8-485f-8371-5393fdf26dd3": {
+          "type": "Product",
+          "settings": {
+            "product": "parijat-mulmul-cotton-saree-handblock-print-olive-green-pm-007-201222"
+          }
+        },
+        "7f93e4de-8586-40c8-9e23-9fb584271163": {
+          "type": "Product",
+          "settings": {
+            "product": "begum-beliya-mulmul-cotton-saree-handblock-printed-pink-bb-99-130323"
+          }
+        },
+        "7f4d624f-69aa-4ed2-8792-d6bc4ab11c7b": {
+          "type": "Product",
+          "settings": {
+            "product": "silk-waves-mul-cotton-saree-handblock-printed-white-stick-white-saree-27922"
+          }
+        },
+        "a44332c4-afd1-4ef5-bae0-29ddee4f97a3": {
+          "type": "Product",
+          "settings": {
+            "product": "moora-mulmul-cotton-saree-dabu-hand-block-print-dull-salmon-sr-mc-ph-0127-120423"
+          }
+        }
+      },
+      "block_order": [
+        "b64a0e63-5167-4ddc-87e6-a545db26fa90",
+        "14130e83-6507-434f-b50b-e3373c61191b",
+        "688c4a65-86c2-42f4-9334-ed326693da45",
+        "e5c71f4c-9ece-4007-9f05-d0726ff0a62e",
+        "77fd30f6-7039-489c-b5d1-ea93f2ba57f5",
+        "3b627a98-e96a-4567-a46b-b999aff61fbb",
+        "c08f83b7-f2d8-485f-8371-5393fdf26dd3",
+        "7f93e4de-8586-40c8-9e23-9fb584271163",
+        "7f4d624f-69aa-4ed2-8792-d6bc4ab11c7b",
+        "a44332c4-afd1-4ef5-bae0-29ddee4f97a3"
+      ],
+      "settings": {
+        "title1": "Mul Cotton",
+        "title2": "Saree",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/mul-mul-cotton-sarees",
+        "button_position": "top"
+      }
+    },
+    "ce4fc3d8-3bef-4283-be08-dc84eedeb3d7": {
+      "type": "slider-test",
+      "blocks": {
+        "template--16608366690548__ce4fc3d8-3bef-4283-be08-dc84eedeb3d7-1676610597f0106688-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner_2_web_91502a68-b408-4f2f-b0b5-5d29faa3f922.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/banner_2_mobile_8d5baa68-6eea-4bce-9417-a96ea0177960.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/organic-cotton-know-your-earth-friendly-fabrics"
+          }
+        },
+        "074ab7f1-58b5-4000-91dd-9739f11d2c1f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sustainable_fashion_web_banner_5ca221ea-162f-4056-a230-5d867e1d84d0.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/sustainable_fashion_mobile_banner_16ec3ab6-4f24-41f5-a399-97b56fbade28.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/5-sustainable-fashion-trends-to-watch-out-for-in-2023"
+          }
+        },
+        "template--16608366690548__ce4fc3d8-3bef-4283-be08-dc84eedeb3d7-1676610597f0106688-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hemp_banner_web_c11b5a35-ff93-48ae-869e-ce4f600dc61b.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/hemp_banner_mobile_5c958ce5-0eea-4e79-8016-4c79210a419d.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/how-hemp-fabric-is-made-and-why-is-it-better-for-you-and-the-environment"
+          }
+        }
+      },
+      "block_order": [
+        "template--16608366690548__ce4fc3d8-3bef-4283-be08-dc84eedeb3d7-1676610597f0106688-0",
+        "074ab7f1-58b5-4000-91dd-9739f11d2c1f",
+        "template--16608366690548__ce4fc3d8-3bef-4283-be08-dc84eedeb3d7-1676610597f0106688-1"
+      ],
+      "settings": {
+        "edge_to_edge": false,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "7e727bcc-acea-4a68-bf80-27371ae6d902": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "72995800-ecf7-46ec-b2ff-f4be43592e1e": {
+          "type": "Product",
+          "settings": {
+            "product": "crochet-shoulder-bag-with-keychain-cotton-thread-green-sckb002-31022"
+          }
+        },
+        "31fb0fb1-31fc-4221-b26b-b3e53253464e": {
+          "type": "Product",
+          "settings": {
+            "product": "silk-cotton-flower-tassel-stole-green-yellow-1"
+          }
+        },
+        "45c49ccf-a090-4093-bc1c-f1fa6114aa75": {
+          "type": "Product",
+          "settings": {
+            "product": "studio-beej-cork-penny-pouch-multipurpose-yellow-bj-cr-233-29922"
+          }
+        },
+        "70927f2a-7341-46d8-8531-ecd81dbba1d4": {
+          "type": "Product",
+          "settings": {
+            "product": "potli-bag-silk-fabric-pearl-rose-gold-scpb002-31022"
+          }
+        },
+        "4ae424f7-1f42-4b80-bce9-5d09ddce85db": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-green-kauna-grass-handbag"
+          }
+        },
+        "f89fdc97-793b-4a2b-a68b-ff1e73733321": {
+          "type": "Product",
+          "settings": {
+            "product": "tann-trim-vegan-leather-wallet-mustard-sipr04005-25822"
+          }
+        },
+        "50270a92-3b15-4e59-8a9f-6b6d4fd972a3": {
+          "type": "Product",
+          "settings": {
+            "product": "funky-kalakar-recycled-leather-card-holder-brown-pocabrw-15722"
+          }
+        },
+        "9ad3ee0a-3cb0-4fe3-9cc7-8db8092ba456": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-cork-floral-ink-sunglasses-case"
+          }
+        },
+        "a92da7e3-7b00-413a-a234-90e9c670667b": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-bromma-brown-wooden-sunglasses"
+          }
+        }
+      },
+      "block_order": [
+        "72995800-ecf7-46ec-b2ff-f4be43592e1e",
+        "31fb0fb1-31fc-4221-b26b-b3e53253464e",
+        "45c49ccf-a090-4093-bc1c-f1fa6114aa75",
+        "70927f2a-7341-46d8-8531-ecd81dbba1d4",
+        "4ae424f7-1f42-4b80-bce9-5d09ddce85db",
+        "f89fdc97-793b-4a2b-a68b-ff1e73733321",
+        "50270a92-3b15-4e59-8a9f-6b6d4fd972a3",
+        "9ad3ee0a-3cb0-4fe3-9cc7-8db8092ba456",
+        "a92da7e3-7b00-413a-a234-90e9c670667b"
+      ],
+      "settings": {
+        "title1": "Handmade",
+        "title2": "accessories",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/bags-and-accessories",
+        "button_position": "top"
+      }
+    },
+    "5197c485-96a4-4d12-a1d7-a756d4b39fe6": {
+      "type": "highlighted-brands",
+      "settings": {
+        "select_your_heading1": "Highlighted",
+        "select_your_heading2": "brand",
+        "highlighted_brands_desktop": "shopify:\/\/shop_images\/highlighted_brand_-_desktop_sui.png",
+        "highlighted_brands": "shopify:\/\/shop_images\/highlighted_brand-mobile_sui.png",
+        "title": "SUI",
+        "anchor_text": "Explore the brand",
+        "url_link": "https:\/\/amala.earth\/collections\/sui"
+      }
+    },
+    "c0308d8b-0365-4681-af50-ffdc0d63c61f": {
+      "type": "brands-we-love",
+      "blocks": {
+        "b70edc9c-83a4-4f37-8677-438409a2b298": {
+          "type": "brands",
+          "disabled": true,
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/the_slow_studio_web.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/The_slow_studio.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/The-Slow-Studio"
+          }
+        },
+        "3bcd13ce-366a-4263-8e53-b0d47815bf1a": {
+          "type": "brands",
+          "disabled": true,
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_634.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_634_1.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/paio"
+          }
+        },
+        "16891b45-c1cc-4ea3-8a15-0e45471fd314": {
+          "type": "brands",
+          "disabled": true,
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_627.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_638.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/with-n"
+          }
+        },
+        "7d74fd87-96e2-4139-9545-ce1874e864f2": {
+          "type": "brands",
+          "disabled": true,
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/rangsutra_web.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/rangsutra.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/Rangsutra"
+          }
+        },
+        "c86d9ee4-a443-4369-987f-17c8856e99ad": {
+          "type": "brands",
+          "disabled": true,
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/indicult-desktop.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/indicult-mobile.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/indicult"
+          }
+        },
+        "b9003a84-01ab-40ad-9db6-d5ef3bcac955": {
+          "type": "brands",
+          "disabled": true,
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/ira_web.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/ira.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/Ira"
+          }
+        },
+        "15a4c0fe-054e-4686-8427-d050862eecc6": {
+          "type": "brands",
+          "disabled": true,
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/silai_web.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/SILAI.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/Silai-Studio"
+          }
+        },
+        "38234968-9399-4c2a-8f06-53fecc26273e": {
+          "type": "brands",
+          "disabled": true,
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_628.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_628_1.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/whysoblue"
+          }
+        },
+        "318abb6b-bcc3-459f-9b9a-bb4c3073b889": {
+          "type": "brands",
+          "disabled": true,
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_631.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_631_1.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/equiivalence"
+          }
+        },
+        "7fb470c1-d504-4423-ab2b-72f354eb4a0b": {
+          "type": "brands",
+          "disabled": true,
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_633.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_633_1.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/the-right-cut"
+          }
+        },
+        "075c9c70-fab8-4cd0-98a8-7c382ae22770": {
+          "type": "brands",
+          "disabled": true,
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_632.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_632_1.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/paaduks"
+          }
+        },
+        "e54f33f8-ccee-4ced-a94d-5c20d751f656": {
+          "type": "brands",
+          "disabled": true,
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_625.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_637.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/moirra"
+          }
+        },
+        "8491926f-84ac-42be-af37-ad2adf1deff1": {
+          "type": "brands",
+          "disabled": true,
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/beej_c37e5f9e-61ba-4183-bad4-b1ae144be033.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_636.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/studio-beej"
+          }
+        },
+        "8df64a77-3057-4598-a0fc-8ca19c7f0b47": {
+          "type": "brands",
+          "disabled": true,
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/the_burlap_web_aca046be-bb2f-4fae-996a-2ba1306337c9.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/the_burlap_people.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/The-Burlap-People"
+          }
+        },
+        "6f09327d-a726-4563-880b-ce14a2684e15": {
+          "type": "brands",
+          "disabled": true,
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/reistor_web.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/reistor.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/Reistor"
+          }
+        },
+        "92859a4a-01e5-4c7a-ad37-54f00b549bc6": {
+          "type": "brands",
+          "disabled": true,
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/palison_web.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/palison_741fbfb0-4361-4df2-a9fe-ff5cb029d8c4.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/Palison"
+          }
+        },
+        "b28532b3-c026-4e3c-92dd-1b6ad598e23f": {
+          "type": "brands",
+          "disabled": true,
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/itya_web.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/itya.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/Itya"
+          }
+        },
+        "e2bfb20a-44ac-4dfc-9269-47588921912b": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/ziddi_web.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/ziddi_mobile.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/Ziddi"
+          }
+        },
+        "6666fbff-4d34-4349-baf0-01159cd1e3b3": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/zebein_web.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/zebein_mobile.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/ZEBEIN"
+          }
+        },
+        "4f67c7d1-27ee-4a8c-ad96-d3600d9778bc": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/silkwaves_web.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/silkwaves_mobile.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/SILKWAVES"
+          }
+        },
+        "ee670e2e-f7d7-4005-9de6-a3b58c4dde6c": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/mati_web.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/mati_mobile.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/MATI"
+          }
+        },
+        "bb978c37-9004-41e9-b1df-615f208dcb10": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/kanelle_web.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/kanelle_mobile.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/KANELLE"
+          }
+        },
+        "38f17d53-ac5e-4735-8664-7f2f9d48ec94": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/tangerine_web.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/tangerine_mobile.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/tangerine"
+          }
+        },
+        "d646b410-4eeb-4dbb-ba31-34a5a3f70df8": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/banera_web.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/banera_mobile.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/Banera"
+          }
+        },
+        "e49a151c-5023-4111-88fa-a62cb97389be": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/riti_web.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/riti_mobile.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/Riti"
+          }
+        },
+        "5ac724b5-8065-49a5-8766-bca1d88cd578": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/nambiweb.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/nambi_mobile.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/NAMBI-KAI"
+          }
+        },
+        "aa771bdb-ee14-428c-ae49-2d8a24b6e22b": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/unborn_web.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/unborn_mobile.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/Unborn-Studio"
+          }
+        }
+      },
+      "block_order": [
+        "b70edc9c-83a4-4f37-8677-438409a2b298",
+        "3bcd13ce-366a-4263-8e53-b0d47815bf1a",
+        "16891b45-c1cc-4ea3-8a15-0e45471fd314",
+        "7d74fd87-96e2-4139-9545-ce1874e864f2",
+        "c86d9ee4-a443-4369-987f-17c8856e99ad",
+        "b9003a84-01ab-40ad-9db6-d5ef3bcac955",
+        "15a4c0fe-054e-4686-8427-d050862eecc6",
+        "38234968-9399-4c2a-8f06-53fecc26273e",
+        "318abb6b-bcc3-459f-9b9a-bb4c3073b889",
+        "7fb470c1-d504-4423-ab2b-72f354eb4a0b",
+        "075c9c70-fab8-4cd0-98a8-7c382ae22770",
+        "e54f33f8-ccee-4ced-a94d-5c20d751f656",
+        "8491926f-84ac-42be-af37-ad2adf1deff1",
+        "8df64a77-3057-4598-a0fc-8ca19c7f0b47",
+        "6f09327d-a726-4563-880b-ce14a2684e15",
+        "92859a4a-01e5-4c7a-ad37-54f00b549bc6",
+        "b28532b3-c026-4e3c-92dd-1b6ad598e23f",
+        "e2bfb20a-44ac-4dfc-9269-47588921912b",
+        "6666fbff-4d34-4349-baf0-01159cd1e3b3",
+        "4f67c7d1-27ee-4a8c-ad96-d3600d9778bc",
+        "ee670e2e-f7d7-4005-9de6-a3b58c4dde6c",
+        "bb978c37-9004-41e9-b1df-615f208dcb10",
+        "38f17d53-ac5e-4735-8664-7f2f9d48ec94",
+        "d646b410-4eeb-4dbb-ba31-34a5a3f70df8",
+        "e49a151c-5023-4111-88fa-a62cb97389be",
+        "5ac724b5-8065-49a5-8766-bca1d88cd578",
+        "aa771bdb-ee14-428c-ae49-2d8a24b6e22b"
+      ],
+      "settings": {
+        "heading_one": "Brands",
+        "heading_two": "we love",
+        "btn_text": "",
+        "url_link": ""
+      }
+    },
+    "96083abf-22c9-4296-82c9-e67b18017a11": {
+      "type": "consious-journey",
+      "blocks": {
+        "794d66cc-b338-4821-9f99-aeba19c33753": {
+          "type": "Consious",
+          "settings": {
+            "consious_banner_desktop": "shopify:\/\/shop_images\/artisanal_lead_1.png",
+            "consious_banner_mobile": "shopify:\/\/shop_images\/artisanal_lead_mobile.png",
+            "title": "ARTISAN-LED",
+            "url_link": "https:\/\/amala.earth\/collections\/women-wear-artisan-led"
+          }
+        },
+        "ce055ec2-b4a4-4634-ad37-8fa0bdfe4fc0": {
+          "type": "Consious",
+          "settings": {
+            "consious_banner_desktop": "shopify:\/\/shop_images\/fashion_footwear_widget_web_1_2.png",
+            "consious_banner_mobile": "shopify:\/\/shop_images\/fashion_widget_mobile_1_1_1.png",
+            "title": "CRUELTY-FREE",
+            "url_link": "https:\/\/amala.earth\/collections\/women-wear-cruelty-free"
+          }
+        },
+        "f7453415-95d8-423d-92e9-b9b903bd2e3b": {
+          "type": "Consious",
+          "settings": {
+            "consious_banner_desktop": "shopify:\/\/shop_images\/zerowaste_1.png",
+            "consious_banner_mobile": "shopify:\/\/shop_images\/zerowaste_mobile.png",
+            "title": "ZERO-WASTE",
+            "url_link": "https:\/\/amala.earth\/collections\/women-wear-zero-waste"
+          }
+        },
+        "0bbceefc-fe44-4751-93a4-dd1be7a3f9aa": {
+          "type": "Consious",
+          "settings": {
+            "consious_banner_desktop": "shopify:\/\/shop_images\/upcycled_1.png",
+            "consious_banner_mobile": "shopify:\/\/shop_images\/upcycled_mobile.png",
+            "title": "UPCYCLED",
+            "url_link": "https:\/\/amala.earth\/collections\/women-wear-upcycled"
+          }
+        }
+      },
+      "block_order": [
+        "794d66cc-b338-4821-9f99-aeba19c33753",
+        "ce055ec2-b4a4-4634-ad37-8fa0bdfe4fc0",
+        "f7453415-95d8-423d-92e9-b9b903bd2e3b",
+        "0bbceefc-fe44-4751-93a4-dd1be7a3f9aa"
+      ],
+      "settings": {
+        "consious_heading1": "Start Your",
+        "consious_sub_heading2": "conscious journey"
+      }
+    },
+    "a7ea0487-7e3a-4b47-a708-8bb88a506e59": {
+      "type": "blog-posts-carousel",
+      "blocks": {
+        "27868fc1-92ff-4364-a21a-b747207d85d3": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Sustainable_fashion_brands.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/sustainable-fashion-brands-that-stand-the-test-of-time",
+            "title": "Sustainable fashion brands that stand the test of time"
+          }
+        },
+        "ef963f74-b640-44b8-87d7-9d9388e9f306": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Why_Is_Linen_The_Most_Summer-friendly.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/how-is-linen-the-most-stylish-summer-friendly-fabric",
+            "title": "Why Is Linen The Most Summer-friendly & Stylish Fabric?"
+          }
+        },
+        "83096ee0-be4b-470d-9530-bd96da1edbb8": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Summer_Accessories.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/summer-accessories-to-accentuate-basic-looks",
+            "title": "Summer Accessories To Accentuate Basic Looks"
+          }
+        },
+        "d755903b-8620-4fbd-a113-8404281f35f1": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Handloom_Sarees_You_Must_Consider_this_Festive_Season.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/handloom-sarees-you-must-consider-this-festive-season",
+            "title": "Handloom Sarees You Must Consider this Festive Season"
+          }
+        },
+        "e3bbb9f0-8c3b-4247-9abe-80373ac4a94c": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/The_Ultimate_Guide_To_Earth-Friendly_Yoga_And_Workout_Wear.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/the-ultimate-guide-to-earth-friendly-yoga-and-workout-wear",
+            "title": "The Ultimate Guide To Earth-Friendly Yoga And Workout Wear"
+          }
+        },
+        "f7883cfd-14da-4a4b-80f6-5418ecdf8110": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Ethnic_Workwear_Made_Comfortable.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/ethnic-workwear-made-comfortable",
+            "title": "Ethnic Workwear Made Comfortable"
+          }
+        },
+        "2e4f2e1f-0b41-4e0a-81c4-87c6000e864a": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Mulmul_Cotton_Sarees_to_Brighten_Up_Your_Indian_Wardrobe.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/mulmul-cotton-sarees-to-brighten-up-your-indian-wardrobe",
+            "title": "Mulmul Cotton Sarees to Brighten Up Your Indian Wardrobe"
+          }
+        },
+        "e030cd63-9da3-4563-864d-74b6b6e62a30": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/3_Questions_You_Should_Be_Asking_Sustainable_Clothing_Brands_1.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/3-questions-you-should-be-asking-sustainable-clothing-brands",
+            "title": "3 Questions You Should Be Asking Sustainable Clothing Brands"
+          }
+        },
+        "49bc4d51-8a54-4fa6-9506-b04db4416416": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/6_Responsible_Fashion_Brands_We_Are_Sure_You_Will_Love.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/7-responsible-fashion-brands-we-are-sure-you-will-love",
+            "title": "6 Responsible Fashion Brands We Are Sure You Will Love!"
+          }
+        },
+        "f97b7cdf-bff0-48a9-8c92-f5f16852b186": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Why_Should_You_Choose_Sustainable_Ethical_Sleepwear.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/why-should-you-choose-sustainable-ethical-sleepwear",
+            "title": "Why Should You Choose Sustainable, Ethical Sleepwear?"
+          }
+        },
+        "49516805-9e1a-42ad-9b61-decac6393814": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/A_Modern_Man_s_Guide_To_Sustainable_Fashion.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/a-modern-mans-guide-to-sustainable-fashion",
+            "title": "A Modern Man's Guide To Sustainable Fashion"
+          }
+        }
+      },
+      "block_order": [
+        "27868fc1-92ff-4364-a21a-b747207d85d3",
+        "ef963f74-b640-44b8-87d7-9d9388e9f306",
+        "83096ee0-be4b-470d-9530-bd96da1edbb8",
+        "d755903b-8620-4fbd-a113-8404281f35f1",
+        "e3bbb9f0-8c3b-4247-9abe-80373ac4a94c",
+        "f7883cfd-14da-4a4b-80f6-5418ecdf8110",
+        "2e4f2e1f-0b41-4e0a-81c4-87c6000e864a",
+        "e030cd63-9da3-4563-864d-74b6b6e62a30",
+        "49bc4d51-8a54-4fa6-9506-b04db4416416",
+        "f97b7cdf-bff0-48a9-8c92-f5f16852b186",
+        "49516805-9e1a-42ad-9b61-decac6393814"
+      ],
+      "settings": {
+        "heading_one": "Recent",
+        "heading_two": "blogposts",
+        "view_text": "",
+        "url_link": ""
+      }
+    },
+    "41014bac-ea4d-4b27-8c03-52bef9fe55fe": {
+      "type": "landing-page-video",
+      "blocks": {
+        "0555d9b2-e1ce-40c9-8fcd-481e025e1cd3": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/9kkz7pSMH7Q",
+            "image": "shopify:\/\/shop_images\/WOMEN_S_microsite_-video_blog_1383cd7a-0aab-4470-ae09-29a20aa396bd.jpg",
+            "title": "Handcrafted ethnic wear",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "9770c9aa-57b2-42fb-89ed-b39443515912": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtube.com\/watch?v=mXCiSRuVm6Y",
+            "image": "shopify:\/\/shop_images\/IMG3.jpg",
+            "title": "Festive fashion and accessories",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "8ca15421-ba45-427c-8190-b359be131cbc": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtube.com\/watch?v=BfJpqBp84Fg",
+            "image": "shopify:\/\/shop_images\/imgs_7.jpg",
+            "title": "Fitness to fun - Athleisure",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "84bb1ceb-f46d-41d6-b337-d61f90609772": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtube.com\/watch?v=L7kkPlQDTJA",
+            "image": "shopify:\/\/shop_images\/imgs_6.jpg",
+            "title": "Summer Accessories at Amala Earth",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "5f1064ed-195f-4b18-a177-6f541dc17ce1": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtube.com\/watch?v=LQmk2ypGF0A",
+            "image": "shopify:\/\/shop_images\/imgs5_600d3c1d-040e-4d4b-92f8-13d6298d4ed6.jpg",
+            "title": "Artisanal ethnic mens wear",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "880899d6-ad8c-49e9-933e-aada13519725": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtube.com\/watch?v=EQw-WplSVVU",
+            "image": "shopify:\/\/shop_images\/IMG1.jpg",
+            "title": "Loungewear at Amala Earth",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "d268173e-ca11-4947-ae9b-86b41bdc16fe": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtube.com\/watch?v=IumCBSbopBo",
+            "image": "shopify:\/\/shop_images\/IMG2.jpg",
+            "title": "Naturally dyed silk sarees",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        }
+      },
+      "block_order": [
+        "0555d9b2-e1ce-40c9-8fcd-481e025e1cd3",
+        "9770c9aa-57b2-42fb-89ed-b39443515912",
+        "8ca15421-ba45-427c-8190-b359be131cbc",
+        "84bb1ceb-f46d-41d6-b337-d61f90609772",
+        "5f1064ed-195f-4b18-a177-6f541dc17ce1",
+        "880899d6-ad8c-49e9-933e-aada13519725",
+        "d268173e-ca11-4947-ae9b-86b41bdc16fe"
+      ],
+      "settings": {
+        "video_title1": "Video",
+        "video_title2": "Blogs",
+        "btn_text": "",
+        "url_link": ""
+      }
+    }
+  },
+  "order": [
+    "3e38aca5-5077-4220-831b-859e274c9a16",
+    "69712fe2-d9a6-4e98-af69-9f6b691aa405",
+    "festival-landings-page",
+    "3ce8650f-ee5d-4ec2-8c3e-43b4fde36a2f",
+    "a176c55c-ca16-4eed-aebb-1b912303e2ef",
+    "dbbe8435-b77b-4221-9004-1371c1c1e54e",
+    "0b36822e-8ef3-4a5a-8886-2ea38bed22df",
+    "efe18422-8db0-4935-b425-181f630bcd50",
+    "c701f5c7-9172-4f7f-9b46-7be12d7e8ef0",
+    "7148a954-d95c-483a-9aed-5f0f443b2075",
+    "68c33a46-c30e-4b8a-84b9-d80dacac4a04",
+    "090a9f92-04b9-4b92-a5a8-5b9a015cf5cb",
+    "d2b479e7-0d5b-42d8-9216-8f3d1e72bef2",
+    "2bd14898-d935-4349-9e83-f4372de58bf7",
+    "7ef04d73-4521-4582-bcc6-34b7912fd03a",
+    "3c9249f0-2646-4993-86a9-27b13bcacf44",
+    "5a90c44d-b9f1-423d-9887-cdbff931c254",
+    "599fb9d5-a3b4-4dd1-a141-eef20c6845ef",
+    "ce4fc3d8-3bef-4283-be08-dc84eedeb3d7",
+    "7e727bcc-acea-4a68-bf80-27371ae6d902",
+    "5197c485-96a4-4d12-a1d7-a756d4b39fe6",
+    "c0308d8b-0365-4681-af50-ffdc0d63c61f",
+    "96083abf-22c9-4296-82c9-e67b18017a11",
+    "a7ea0487-7e3a-4b47-a708-8bb88a506e59",
+    "41014bac-ea4d-4b27-8c03-52bef9fe55fe"
+  ]
+}

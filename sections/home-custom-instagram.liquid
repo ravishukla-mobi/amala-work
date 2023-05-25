@@ -1,0 +1,185 @@
+<div class="home_instagram_section section" data-section-id="{{ section.id }}" data-section-type="home-instagram">
+    <div class="container">
+        <div class="home_instagram_top_block">
+        {%- if section.settings.title != blank or section.settings.subtitle != blank -%}
+        <header class="landing_section_header">
+        {% if section.settings.subtitle != blank %}
+        <h5 class="landing_subheading">{{section.settings.subtitle}}</h5>
+        {% endif %}
+        {% if section.settings.title != blank %}
+        <h4 class="landing_heading">{{section.settings.title}}</h4>
+        {% endif %}
+        </header>
+        {%- endif -%}
+        {% if section.settings.enable_instagram %}
+        <a href="{{section.settings.instagram_link | default:'#'}}" class="instagram">
+            <img src="{{'Instagramicon.png' | asset_img_url:'45x' }}" alt="instagram">
+            <span>{{section.settings.insta_title}}</span></a>
+        {%- endif -%}
+        </div>
+        <div class="home_instagram_block">
+          {{section.settings.insta_liquid}}
+        </div>
+        {% if section.settings.enable_facebook or section.settings.enable_youtube %}
+        <div class="home_bottom_social_media">
+        {% if section.settings.enable_facebook %}
+            <a href="{{section.settings.facebook_link | default:'#'}}" class="social_icon">    
+                <img src="{{'Facebookicon.png' | asset_img_url:'45x' }}" alt="Facebook">
+            </a>
+        {%- endif -%}
+        {% if section.settings.enable_youtube %}
+            <a href="{{section.settings.youtube_link | default:'#'}}" class="social_icon"> 
+            <img src="{{'Youtubeicon.png' | asset_img_url:'45x' }}" alt="Youtube">
+            </a>
+        {%- endif -%}
+        </div>
+        {%- endif -%}
+    </div>
+</div>
+
+{% style %}
+.home_instagram_top_block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.home_instagram_top_block a.instagram {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+.home_instagram_top_block a.instagram span {
+    font-size: 26px;
+    color: #946c56;
+    margin-left: 15px;
+}
+.home_bottom_social_media {
+    display: flex;
+    align-items: center;
+}
+.home_bottom_social_media .social_icon{
+    display: flex;
+    margin-right: 10px;
+}
+.home_bottom_social_media svg {
+    width: 45px;
+    height: 45px;
+}
+.home_instagram_block #insta-feed {
+  margin: 0 -5px 30px;
+}
+.home_instagram_block #insta-feed a .instafeed-container {
+  margin: 5px;
+  width: calc(16.666667% - 10px) !important;
+  padding-top: calc(16.666667% - 10px) !important;
+}
+@media screen and (max-width:1199px){
+  .home_instagram_block #insta-feed a .instafeed-container {
+    width: calc(25% - 10px) !important;
+    padding-top: calc(25% - 10px) !important;
+  }
+}
+@media screen and (max-width:837px){
+  .home_instagram_block #insta-feed a .instafeed-container {
+    width: calc(33.333333% - 10px) !important;
+    padding-top: calc(33.333333% - 10px) !important;
+  }
+}
+@media screen and (max-width:640px){
+  .home_instagram_section {
+    padding-bottom: 0;
+  }
+  .home_instagram_section .container{
+    padding-top: 30px;
+    padding-bottom: 40px;
+    background:{{section.settings.mobi_bg_color}};
+  }
+  .home_instagram_top_block a.instagram span{
+      font-size:14px;
+      margin-left: 5px;
+  }
+  .home_instagram_top_block a.instagram img, .home_bottom_social_media img {
+      width: 22px;
+      height: 22px;
+  }
+  .home_instagram_block #insta-feed {
+    margin-bottom: 15px;
+  }
+}
+{% endstyle %}
+{% schema %}
+    {
+      "name": "Home Instagram",
+      "settings": [
+        {
+          "type":"text",
+          "id":"subtitle",
+          "label":"Subheading",
+          "default":"Amala Earth on"
+        },
+        {
+          "type":"text",
+          "id":"title",
+          "label":"Heading",
+          "default":"social media"
+        },
+        {
+          "type":"liquid",
+          "id":"insta_liquid",
+          "label":"Custom code"
+        },
+        {
+          "type":"header",
+          "content":"social media"
+        },
+        {
+          "type":"checkbox",
+          "id":"enable_instagram",
+          "label":"Show Instagram"
+        },
+        {
+          "type":"text",
+          "id":"insta_title",
+          "label":"Instagram label",
+          "default":"AmalaEarth"
+        },
+        {
+          "type":"url",
+          "id":"instagram_link",
+          "label":"Instagram link"
+        },
+        {
+          "type":"checkbox",
+          "id":"enable_facebook",
+          "label":"Show facebook"
+        },
+        {
+          "type":"url",
+          "id":"facebook_link",
+          "label":"Facebook link"
+        },
+        {
+          "type":"checkbox",
+          "id":"enable_youtube",
+          "label":"Show youtube"
+        },
+        {
+          "type":"url",
+          "id":"youtube_link",
+          "label":"Youtube link"
+        },
+        {
+          "type":"color",
+          "id":"mobi_bg_color",
+          "label":"Mobile backgroud",
+          "default":"#F2E5D8"
+        }
+      ],
+      "presets": [
+        {
+          "name": "Home Instagram",
+          "category": "Custom"
+        }
+      ]
+    }
+  {% endschema %}

@@ -1,0 +1,94 @@
+<div id="selectable-order-details-model" class="pop-up-modal my-account">
+  <div class="pop-up__container">
+    <span class="close-button popup-close" ><img src="{{ 'close-icon.svg' | asset_url }}" alt="X"></span>
+    <div class="pop-up__content-wrapper">
+      <div class="my-account__pop-up-header">
+        <h1 class="heading">Select items to reorder</h1>
+      </div>
+      <div class="my-account__pop-up-content order-details_popup-content">
+        {% assign alloutofstock = true %}
+        {%- for line_item in order.line_items -%}  
+        {% liquid
+          if line_item.product.available
+            assign alloutofstock = false
+          endif
+          assign variant_count = 0
+          for variant in line_item.product.variants
+            assign variant_count = variant_count | plus: 1
+          endfor
+          unless variant_count > 1
+            assign item_product_title = line_item.product.title
+          else
+            assign item_product_title = line_item.title
+          endunless
+        %}
+        
+        <div class="my-orders__content-wrapper  {% if line_item.product.available %}reorder-item {% else %} disabled {% endif %}" data-id="{{line_item.product.selected_or_first_available_variant.id}}" data-qty="{{line_item.quantity}}">
+          {% if order.line_items. > 1 %}
+            <label class="form-control order-item-selector">
+            	<input type="checkbox" name="order-item" {% if line_item.product.available %}checked {% else %} disabled {% endif %} />
+          	</label>
+          {% endif %}
+                        <div class="my-orders__image-wrapper">
+                            <a href="{{ line_item.url }}" target="_blank">
+                                <div class="aspect-ratio" style="padding-bottom: 100.0%">
+                                    <img src="{{ line_item.image | img_url: '90x90', scale: 2 }}" alt="{{ line_item.image.alt | escape }}">
+                                </div>
+                            </a>
+                        </div>
+                      
+                        <div class="my-orders__item-wrapper">
+                            <table class="my-orders__product-info">
+                                <tr>
+                                    <td colspan="2"><a href="{{ line_item.url }}" class="my-orders__product-title ">{{ item_product_title }}</a></td>
+                                </tr>
+                                {%- unless line_item.properties == blank -%}
+                           
+                              {%- for property in line_item.properties -%}
+                                {%- assign first_character_in_key = property.first | truncate: 1, '' -%}
+
+                                {%- if property.last == blank or first_character_in_key == '_' -%}
+                                  {%- continue -%}
+                                {%- endif -%}
+
+                                  <tr>
+                                        <td class="product-info_label">{{ property.first }}</td>
+                                        <td> {{ property.last }}</td>
+                                    </tr>
+                              {%- endfor -%}
+                      
+                          {%- endunless -%}
+                                   
+                                <tr>
+                                    <td class="product-info_label">Qty. </td>
+                                    <td>{{line_item.quantity}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="product-info_label">Amount</td>
+                                    <td><span class="price price--highlight">&nbsp;{{ line_item.final_line_price | money }}</td>
+                                </tr>
+                          {% if line_item.product.available %}
+                          {% else %}
+                           
+                                <tr>
+                                    <td colspan="2"><a href="{{ line_item.url }}" class="my-orders__product-title ">The item is currently out of stock.</a></td>
+                                </tr>
+                                    
+
+                           {% endif %}
+                            </table>
+                        </div>
+                    </div>
+        
+     {% endfor %}
+       
+        <button type="submit" class="btn btn-default btn-reorder" {% if alloutofstock %} disabled {% endif %}>Reorder</button>
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  
+</script>

@@ -1,0 +1,382 @@
+{%- liquid 
+    assign collection_name = collection
+    if collection == blank
+      assign allCol = product.collections | sort: 'published_at'
+      for col in allCol
+      if col.metafields.custom.expert_speaks
+        assign collection_name = col
+        break
+      endif
+      endfor
+    endif
+-%}
+{%- if collection_name.metafields.custom.expert_speaks -%}
+  <div class="home_community_section section" data-section-id="{{ section.id }}" data-section-type="home-community">
+    <div class="container">
+        {%- if section.settings.heading != blank -%}
+        <header class="section__header">
+            <div class="section__header-stack">
+                <h4 class="section__title heading">{{section.settings.heading}}</h4>
+            </div>
+        </header>
+        {%- endif -%}
+        <div class="home_community_silder{% if collection_name.metafields.custom.expert_speaks.value.size == 1 %} home_community_grid{% endif %}">
+            {%- for item in collection_name.metafields.custom.expert_speaks.value -%}
+                <div class="community_block">
+                    <div class="community_block-wrapper">
+                        <div class="left-block">
+                            {% if item.expert_name != blank %}
+                            <h4>{{item.expert_name}}</h4>
+                            {% endif %}
+                            {% if item.expert_designation != blank %}
+                            <h3>{{item.expert_designation}}</h3>
+                            {% endif %}
+                            {% if item.description != blank %}
+                            <div class="content">
+                                {{ item.description }}
+                            </div>
+                            <span class="read_more" data-title="{{item.expert_name}}" data-image="{{item.image}}" data-subtitle="{{item.expert_designation}}" data-content="{{item.description}}">Read More</span>
+                            {% endif %}
+                        </div>
+                        <div class="right-block">
+                            {% if item.tag != blank %}
+                            <span class="tag">{{item.tag}}</span>
+                            {% endif %}
+                            {%- if item.image != blank -%}
+                                <div class="community__image--block">
+                                  {%- if item.desktop_image != blank -%}
+                                    <img class="amala-community_image amala-community-desktop_img" src="{{ item.desktop_image }}" alt="{{item.tag}}">
+                                  {%- endif -%}
+                                    <img class="amala-community_image{% if item.desktop_image != blank %} amala-community-mobi_img{% endif %}" src="{{ item.image }}" alt="{{item.tag}}">
+                                </div>
+                            {%- endif -%}
+                        </div>
+                    </div>
+                </div>
+            {%- endfor -%}
+        </div>
+    </div>
+</div>
+<span class="pdp-expert-overlay"></span>
+<div id="home_community_popup-{{section.id}}" class="cus-view-smilar home_pop-up-modal community__popup-modal">
+  <span class="close-vs">&times;</span>
+  <div class="pop-up-content community-content">
+  </div>
+</div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var openParametersPopup = function() {
+        $(`#home_community_popup-{{section.id}}`).addClass("show");
+        $(".pdp-expert-overlay").addClass("show");
+        console.log(newStatePopup);
+        if(navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)) {
+          if(newStatePopup.length == 0) {
+            newStatePopup.push('new-state-exist');
+            window.history.pushState('new-popup-state', null, '');
+          }
+        }
+      }
+      $('.home_community_silder .read_more').on('click',function(){
+        let title = $(this).attr('data-title');
+        let subtitle = $(this).attr('data-subtitle');
+        let content = $(this).attr('data-content');
+        let img = $(this).attr('data-image');
+        let popupHtml = `<div class="community-content-wrapper"><div class="community__img"><img src="${img}" alt="${title}"></div><div><h4>${title}</h4><h3>${subtitle}</h3><p>${content}</p></div></div>`;
+        $(`#home_community_popup-{{section.id}} .community-content`).html(popupHtml);
+        setTimeout(function(){openParametersPopup()},100);
+      });
+      $('.community__popup-modal .close-vs,.pdp-expert-overlay').on('click', function(e){
+        $('.community__popup-modal').removeClass('show');
+        $(".pdp-expert-overlay").removeClass("show");
+      });
+      window.addEventListener("popstate", function (event) {
+        newStatePopup.pop();
+        window.history.replaceState("new-popup-state", null, location.href);
+        if ($(`#home_community_popup-{{section.id}}`).hasClass("show")) {
+          $(".pdp-expert-overlay").removeClass("show");
+          $(`#home_community_popup-{{section.id}}`).removeClass("show");
+        }
+      });
+    });
+</script>
+{% style %}
+.home_community_silder{
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    z-index: 1;
+    margin-left: -10px;
+}
+.home_community_silder:not(.flickity-enabled){
+    overflow-y:auto;
+}
+.home_community_silder:after {
+  content: 'flickity';
+  display: none; /* hide :after */
+}
+.community_block {
+    flex: none;
+    width:35%;
+    padding:10px;
+}
+.community_block-wrapper{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #F2E5D8;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+}
+.community_block .left-block {
+    width: 100%;
+    max-width: 60%;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.community_block .right-block {
+    width: 100%;
+    max-width: 40%;
+}
+.community_block h4 {
+    margin-bottom: 5px;
+    line-height: 1.2;
+    font-size: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    font-weight: 500;
+}
+.community_block h3 {
+    line-height: 1.2;
+    font-size: 22px;
+}
+.community_block .content {
+    font-size: 14px;
+}
+.home_community_silder:not(.home_community_grid) .community_block .content{
+  margin-top: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+}
+.community_block .tag {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    font-size: 12px;
+    border-radius: 100%;
+    color: #fff;
+    background-color: #b89c7d;
+}
+.community_block .read_more {
+    color: #b89c7d;
+    cursor: pointer;
+    font-size: 15px;
+}
+.community-content-wrapper {
+    padding: 20px;
+}
+.community-content-wrapper h3 {
+    font-size: 18px;
+    line-height: 1.2;
+}
+.community-content-wrapper h4 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+.community-content-wrapper p {
+    font-size: 15px;
+}
+.pdp-expert-overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 9;
+}
+.pdp-expert-overlay.show{
+    display: block;
+}
+.home_community_silder.home_community_grid .community_block {
+  width: 100%;
+  max-width: 975px;
+  margin: 0 auto;
+}
+.amala-community-desktop_img{
+  display:none;
+}
+@media screen and (min-width:641px){
+.home_pop-up-modal.community__popup-modal{
+  max-width: 540px;
+}
+.community__popup-modal .community-content-wrapper {
+  display: flex;
+}
+.community-content-wrapper .community__img {
+  max-width: 170px;
+}
+.community-content-wrapper .community__img+div {
+  max-width: calc(100% - 170px);
+  padding-left: 15px;
+}
+}
+@media screen and (min-width:990px){
+    .community_block .right-block{
+        position:relative;
+        overflow: hidden;
+    }
+    .community_block .tag {
+        width: 120px;
+        height: auto;
+        right: auto;
+        left:0;
+        line-height: 1.5;
+        top: 0;
+        padding: 5px 15px;
+        border-radius: 0 0 15px 0px;
+    }
+    .community_block .right-block:before {
+        content: '';
+        background: url('https://cdn.shopify.com/s/files/1/0523/3252/7770/files/line-butterfly.png') no-repeat left top;
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 20px;
+        z-index: 5;
+        left: 10px;
+    }
+    .community_block-wrapper{
+      align-items: center;
+    }
+  .home_community_grid .community_block .left-block {
+    padding-right: 55px;
+  }
+  .home_community_grid .community_block .content {
+    margin-top: 0;
+    margin-bottom: auto;
+  }
+  .community_block .read_more {
+    width: fit-content;
+    border-bottom: 1px solid #b89c7d;
+    line-height: 1.2;
+  }
+  .amala-community-desktop_img{
+    display:block;
+  }
+  .amala-community-mobi_img {
+    display: none;
+  }
+  .community_block .read_more {
+    color: #b89c7d;
+    cursor: pointer;
+    font-size: 15px;
+    display:none;
+  }
+}
+@media screen and (max-width:1399px){
+    .community_block h4,.community_block h3{font-size:18px;}
+    .community_block .content,.community_block .read_more {font-size: 14px;}
+}
+@media screen and (max-width:1199px){
+    .community_block{width:40%}
+    .community_block h4,.community_block h3{font-size:16px;}
+    .community_block .content,.community_block .read_more {font-size: 13px;}
+}
+@media screen and (min-width:1200px){
+  .home_community_section.section {
+    margin: 80px 0;
+  }
+  .home_community_section .section__header .section__title.heading {
+    font-size: 32px;
+    font-weight: 500;
+    color: rgba(0,0,0,0.8);
+  }
+}
+@media screen and (max-width:990px){
+  .community_block{width:60%}
+  .home_community_silder .community_block .content{
+    margin-top: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+  }
+}
+@media screen and (max-width:640px){
+  .home_community_section .section__header {
+    margin-bottom: 7px;
+  }
+  .community-content-wrapper .community__img {
+    display:none;
+  }
+  .home_community_section.section {
+    padding-top: 33px;
+    padding-bottom: 13px;
+  }
+    .home_community_silder{margin-left:-7px;}
+    .community_block .left-block{
+        padding-right: 7px;
+    }
+    .home_community_section .container {
+        padding-right: 0;
+    }
+    .community_block{width:80%;padding: 7px;}
+    .community_block-wrapper{
+        padding: 12px;
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
+    }
+    .community_block h4, .community_block h3 {
+        font-size: 14px;
+    }
+    .community_block h3 {
+      margin-bottom: 15px;
+    }
+    .community_block .tag {
+        width: 50px;
+        height: 50px;
+        font-size: 9px;
+    }
+    .community_block .content,.community_block .read_more {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+    .community-content-wrapper p {
+        font-size: 14px;
+    }
+}
+{% endstyle %}
+{%- endif -%}
+{% schema %}
+{
+    "name": "PDP Expert section",
+    "class": "expert-carousel-section",
+    "settings": [
+      {
+        "type":"text",
+        "id":"heading",
+        "label":"Heading",
+        "default":"Expert’s Recommendations"
+      }
+    ]
+}
+{% endschema %}

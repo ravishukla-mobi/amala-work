@@ -1,0 +1,163 @@
+{% if collection.handle == 'vendors' %}
+	<style>
+		#loading {
+			display: flex;
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			background: rgba(255,255,255,1);
+			top: 0;
+			left: 0;
+			justify-content: center;
+			align-items: center;
+		  z-index:99;
+		}
+		.loading {
+			border: 16px solid rgba(0,0,0,0.05);
+			border-top: 16px solid #b89c7d;
+			border-radius: 50%;
+			width: 120px;
+			height: 120px;
+			animation: spin 2s linear infinite;
+			display: block;
+		}
+		@keyframes spin {
+		  0% { transform: rotate(0deg); }
+		  100% { transform: rotate(360deg); }
+		}
+		
+		</style>
+		<!--loader css end-->
+		<div id="loading">
+		  <span class="loading"></span>
+		</div>
+	<script>
+	$(document).ready(function() {
+
+		let vendor_query_url = window.location.href;
+		let currentwindowurl = decodeURI(window.location.href);
+		if (window.location.href.indexOf("/collections/vendors?q") > -1) {
+		$('#loading').css("display","flex");
+			var currentUrl = window.location.href;
+            let vendor_query_url = window.location.href;
+            let currentwindowurl = decodeURI(window.location.href);
+            switch(currentwindowurl){
+                case "https://amala.earth/collections/vendors?q=Bella Vita Organic":
+                    window.location.replace("https://amala.earth/collections/bella-vita-organic");
+                    break
+                case "https://amala.earth/collections/vendors?q=Earthy Sapo":
+                    window.location.replace("https://amala.earth/collections/earthy-sapo");
+                    break
+                case "https://amala.earth/collections/vendors?q=Kannauj Attar":
+                    window.location.replace("https://amala.earth/collections/kannauj-attar");
+                    break
+                case "https://amala.earth/collections/vendors?q=COSMIX":
+                    window.location.replace("https://amala.earth/collections/cosmix");
+                    break
+                case "https://amala.earth/collections/vendors?q=TAC-The Ayurveda Co.":
+                    window.location.replace("https://amala.earth/collections/t-a-c-the-ayurveda-co");
+                    break
+                case "https://amala.earth/collections/vendors?q=The Healthy Binge":
+                    window.location.replace("https://amala.earth/collections/the-healthy-binge");
+                    break
+                case "https://amala.earth/collections/vendors?q=Barosi":
+                    window.location.replace("https://amala.earth/collections/barosi");
+                    break
+                case "https://amala.earth/collections/vendors?q=Sri Sri Tattva":
+                    window.location.replace("https://amala.earth/collections/sri-sri-tattva");
+                    break
+                case "https://amala.earth/collections/vendors?q=DIVINE COPPER":
+                    window.location.replace("https://amala.earth/collections/divine-copper");
+                    break
+                case "https://amala.earth/collections/vendors?q=Quirksmith":
+                    window.location.replace("https://amala.earth/collections/quirksmith");
+                    break
+                case "https://amala.earth/collections/vendors?q=Nutty Yogi":
+                    window.location.replace("https://amala.earth/collections/nutty-yogi");
+                    break
+                case "https://amala.earth/collections/vendors?q=Blue Tokai":
+                    window.location.replace("https://amala.earth/collections/blue-tokai");
+                    break
+                case "https://amala.earth/collections/vendors?q=Nat Habit":
+                    window.location.replace("https://amala.earth/collections/nat-habit");
+                    break
+                case "https://amala.earth/collections/vendors?q=Bagrrys":
+                    window.location.replace("https://amala.earth/collections/bagrrys");
+                    break
+                case "https://amala.earth/collections/vendors?q=Earthful":
+                    window.location.replace("https://amala.earth/collections/earthful");
+                    break
+                case "https://amala.earth/collections/vendors?q=Studio Beej":
+                    window.location.replace("https://amala.earth/collections/studio-beej");
+                    break
+                case "https://amala.earth/collections/vendors?q=Brillare":
+                    window.location.replace("https://amala.earth/collections/brillare");
+                    break
+                case "https://amala.earth/collections/vendors?q=Fix My Curls":
+                    window.location.replace("https://amala.earth/collections/fix-my-curls");
+                    break
+                case "https://amala.earth/collections/vendors?q=Nabhi Sutra":
+                    window.location.replace("https://amala.earth/collections/nabhi-sutra");
+                    break
+                case "https://amala.earth/collections/vendors?q=Rangsutra":
+                    window.location.replace("https://amala.earth/collections/rangsutra");
+                    break
+                case "https://amala.earth/collections/vendors?q=Tea Trunk":
+                    window.location.replace("https://amala.earth/collections/tea-trunk");
+                    break
+                case "https://amala.earth/collections/vendors?q=dressfolk":
+                    window.location.replace("https://amala.earth/collections/dressfolk");
+                    break
+                case "https://amala.earth/collections/vendors?q=ORGANIC INDIA":
+                    window.location.replace("https://amala.earth/collections/organic-india");
+                    break
+                case "https://amala.earth/collections/vendors?q=Creatures of Habit":
+                    window.location.replace("https://amala.earth/collections/creatures-of-habit");
+                    break
+                case "https://amala.earth/collections/vendors?q=Rage Coffee":
+                    window.location.replace("https://amala.earth/collections/rage-coffee");
+                    break
+                case "https://amala.earth/collections/vendors?q=SoulTree":
+                    window.location.replace("https://amala.earth/collections/soultree");
+                    break
+                case "https://amala.earth/collections/vendors?q=Jaipur Dohar":
+                    window.location.replace("https://amala.earth/collections/jaipur-dohar");
+                    break
+                case "https://amala.earth/collections/vendors?q=The Tea Shelf":
+                    window.location.replace("https://amala.earth/collections/the-tea-shelf");
+                    break
+                case "https://amala.earth/collections/vendors?q=Amrutam":
+                    window.location.replace("https://amala.earth/collections/amrutam");
+                    break
+                case "https://amala.earth/collections/vendors?q=mCaffeine":
+                    window.location.replace("https://amala.earth/collections/mcaffeine");
+                    break
+                case "https://amala.earth/collections/vendors?q=Rad Living":
+                    window.location.replace("https://amala.earth/collections/rad-living");
+                    break
+                case "https://amala.earth/collections/vendors?q=Indus Valley":
+                    window.location.replace("https://amala.earth/collections/indus-valley");
+                    break
+                case "https://amala.earth/collections/vendors?q=Sadhev":
+                    window.location.replace("https://amala.earth/collections/sadhev");
+                    break
+                case "https://amala.earth/collections/vendors?q=Almitra Sustainables":
+                    window.location.replace("https://amala.earth/collections/almitra-sustainables");
+                    break
+                case "https://amala.earth/collections/vendors?q=Kaisori":
+                    window.location.replace("https://amala.earth/collections/kaisori");
+                    break
+                case "https://amala.earth/collections/vendors?q=Little Moppet Foods":
+                    window.location.replace("https://amala.earth/collections/little-moppet-foods");
+                    break
+                case "https://amala.earth/collections/vendors?q=Raamae":
+                    window.location.replace("https://amala.earth/collections/raamae");
+                    break
+                default:
+                    break
+            } 
+		}	
+		
+	});
+	</script>
+{% endif %}

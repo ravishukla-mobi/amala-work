@@ -1,0 +1,120 @@
+{%- if section.settings.show_section -%}
+  <section class="section section--isolated section--tight section--text-centered" data-section-id="{{ section.id }}" data-section-type="newsletter">
+    <div class="container container--giga-narrow">
+      {%- if section.settings.title != blank -%}
+        <h5 class="heading ">{{ section.settings.title | escape }}</h5>
+      {%- endif -%}
+
+      {%- if section.settings.content != blank -%}
+        <div class="rte">
+          {{ section.settings.content }}
+        </div>
+      {%- endif -%}
+
+      {%- assign newsletter_id = 'newsletter-' | append: section.id -%}
+
+      <div class="newsletter">
+        {%- form 'customer', id: newsletter_id, class: 'form newsletter__form' -%}
+          {%- if form.posted_successfully? -%}
+            <p class="alert alert--success">Thanks for subscribing!</p>
+          {%- endif -%}
+            <input type="hidden" name="contact[tags]" value="newsletter">
+
+            <div class="form__input-row">
+              <div class="form__input-wrapper form__input-wrapper--labelled">
+                <input type="email" id="newsletter[contact][email]" name="contact[email]" class="form__field form__field--text form__field--borderless" required>
+                <label for="newsletter[contact][email]" class="form__floating-label">{{ 'home_page.newsletter.input' | t }}</label>
+              </div>
+
+              <button type="submit" class="form__submit button button--primary custom_loading">{{ 'home_page.newsletter.submit' | t }}<span class="custom-loader-wrap"><div class="custom-loader"></div></span></button>
+            </div>
+            {%- unless form.posted_successfully? -%}
+              {%- if form.errors -%}
+                <p class="alert alert--error">{{ form.errors.messages['email'] }}</p>
+              {%- endif -%}
+              {% unless form.errors %}
+                {% if form.email %}
+                  <p class="alert alert--error">This email address has been already Subscribed.</p>
+                {% endif %}
+              {% endunless %}
+            {%- endunless -%}
+            {%- if form.posted_successfully? or form.errors or form.email -%}
+            <script>
+              $(document).ready(function(){
+                setTimeout(function(){
+                  if ((window.location.search == '?contact%5Btags%5D=newsletter&form_type=customer' || window.location.search == '?customer_posted=true') && localStorage.getItem("themePopup") != 'true') {
+                      $('html, body').animate({
+                        scrollTop: $("#shopify-section-static-newsletter").offset().top - 150
+                      }, 2000);
+                  }
+                },1000);
+              });
+            </script>
+            {%- endif -%}
+        {%- endform -%}
+
+        {%- if section.settings.subtext != blank -%}
+          <p class="newsletter__text">{{ section.settings.subtext | escape }}</p>
+        {%- endif -%}
+      </div>
+    </div>
+  </section>
+
+  <style>
+    body #shopify-section-{{ section.id }} {
+      background: {{ section.settings.background }};
+      color: {{ section.settings.text }};
+    }
+        #shopify-section-static-newsletter .heading, .blogs_newsletter .heading{font-size:20px;}
+
+  </style>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Newsletter",
+  "class": "shopify-section--isolated",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Customers who subscribe will have their email address added to the \"accepts marketing\" [customer list](/admin/customers?query=&accepts_marketing=1)."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_section",
+      "label": "Show section",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Subscribe to our newsletter"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Text",
+      "default": "<p>A short sentence describing what someone will receive by subscribing</p>"
+    },
+    {
+      "type": "text",
+      "id": "subtext",
+      "label": "Sub-text",
+      "default": "100% free, Unsubscribe any time!"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#1e2d7d"
+    },
+    {
+      "type": "color",
+      "id": "text",
+      "label": "Text",
+      "default": "#ffffff"
+    }
+  ]
+}
+{% endschema %}

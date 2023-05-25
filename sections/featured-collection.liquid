@@ -1,0 +1,121 @@
+{% include 'featured-collection-inner' %}
+
+{% schema %}
+{
+  "name": "Featured collection",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Featured"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Sub Heading",
+      "default": "Products"
+    },
+	{
+      "type": "checkbox",
+      "id": "logged_in",
+      "label": "Hide this section if user is logged-in",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "products_count",
+      "label": "Products to show",
+      "min": 2,
+      "max": 100,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "options": [
+        {
+          "value": "vertical",
+          "label": "Vertical"
+        },
+        {
+          "value": "horizontal",
+          "label": "Horizontal"
+        },
+        {
+          "value": "collage",
+          "label": "Collage"
+        }
+      ],
+      "default": "vertical"
+    },
+    {
+      "type": "checkbox",
+      "id": "stack_products",
+      "label": "Stack products",
+      "info": "Only applicable if layout is set to vertical",
+      "default": false
+    },
+	{
+      "type": "checkbox",
+      "id": "show_sold_out",
+      "label": "Show Sold out products",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_quick_buy",
+      "label": "Show quick buy",
+      "default": false,
+      "info": "Only shows if layout is set to vertical"
+    },
+    {
+      "type": "text",
+      "id": "link_title",
+      "label": "Link title",
+      "default": "View all"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL",
+      "info": "If empty, the collection URL is used."
+    },
+	{
+      "type": "select",
+      "id": "button_position",
+      "label": "Button Position",
+      "options": [
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        }
+      ],
+      "default": "top"
+    },
+    {
+      "type": "text",
+      "id": "old_section_id",
+      "label": "Old Section ID for App"
+    }
+  ],
+  "presets": [
+    {
+      "category": "Collection",
+      "name": "Featured collection",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

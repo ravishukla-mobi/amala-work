@@ -1,0 +1,268 @@
+{%- capture section_settings -%}
+{
+  "stackable": false,
+  "layout": "vertical",
+ "draggable": false
+}
+{%- endcapture -%}
+
+<section class="section collection-move collection-productmove" id="shopify-section-{{section.id}}" data-section-id="{{ section.id }}" data-section-type="featured-collection" data-section-settings='{{ section_settings }}'>
+ <div class="container ">
+   <div class="scroller scroller--flush">
+            <div class="scroller__inner">
+   <div class=" product-list product-list--scrollable flickyslider" data-flickity='{ "draggable": false,"adaptiveHeight": true }'> 
+  {% for block in section.blocks %}
+    <div id="block-{{ block.id }}" class="collect-block  {% if block.settings.title != blank %}{{ block.settings.title | downcase | replace: " ", "" }} {% endif %}">
+      {%- assign collection = collections[block.settings.collection] -%}
+
+      <div class="featured-collection lazyload" {% if block.settings.image %}data-bgset="{{ block.settings.image | img_url: '1000x' }} [--lap]"{% endif %}>
+        <header class="featured-collection__header lazyload" {% if block.settings.image %}data-bgset="{{ block.settings.image | img_url: '1000x' }} [--tablet]"{% endif %}>
+          {%- if block.settings.title != blank -%}
+            <h2 class="featured-collection__title heading h2">{{ block.settings.title | escape }}</h2>
+          {%- endif -%}
+
+          {%- if block.settings.content != blank -%}
+            <div class="featured-collection__text">{{ block.settings.content | escape | newline_to_br }}</div>
+          {%- endif -%}
+
+          {%- if block.settings.button_text != blank -%}
+            <a href="{{ block.settings.button_link | default: collection.url | default: '#' }}" class="featured-collection__cta button button--floating">{{ block.settings.button_text | escape }}</a>
+          {%- endif -%}
+        </header>
+        
+
+
+        <div class="featured-collection__content">
+          <div class="product-list product-list--scrollable sliderproducts" data-flickity='{ "cellAlign": "left", "contain": true,"groupCells": true }'>
+                {%- assign grid_classes = '1/2--lap 1/3--desk 1/4--wide' -%}
+
+                {%- unless collection.empty? -%}
+                  {%- for product in collection.products limit: block.settings.products_count -%}
+                    {% if section.settings.show_sold_out or product.available %}                                          
+                      {%- render 'featured-collection-product-items', product: product, grid_classes: grid_classes, show_add_to_cart: false -%}
+                    {% endif %}
+                  {%- endfor -%}
+                {%- elsif block.settings.product1 != blank -%}
+                  {% assign product1 = all_products[block.settings.product1] %}
+                  {% if product1.id != '' %}
+                    {% if section.settings.show_sold_out or product1.available %}                                          
+                        {%- render 'featured-collection-product-items', product: product1, grid_classes: grid_classes, show_add_to_cart: false -%}
+                      {% endif %}
+                  {% endif %}
+                  {% assign product2 = all_products[block.settings.product2] %}
+               {% if product2.id != '' %}
+                  {% if section.settings.show_sold_out or product2.available %}                                          
+                      {%- render 'featured-collection-product-items', product: product2, grid_classes: grid_classes, show_add_to_cart: false -%}
+                    {% endif %}
+               {% endif %}
+                  {% assign product3 = all_products[block.settings.product3] %}
+            {% if product3.id != '' %}
+                  {% if section.settings.show_sold_out or product3.available %}                                          
+                      {%- render 'featured-collection-product-items', product: product3, grid_classes: grid_classes, show_add_to_cart: false -%}
+                  {% endif %}
+            {% endif %}
+            	  {% assign product4 = all_products[block.settings.product4] %}
+            {% if product4.id != '' %}
+                  {% if section.settings.show_sold_out or product4.available %}                                          
+                      {%- render 'featured-collection-product-items', product: product4, grid_classes: grid_classes, show_add_to_cart: false -%}
+                  {% endif %}
+            {% endif %}
+            	  {% assign product5 = all_products[block.settings.product5] %}
+            {% if product5.id != '' %}
+                  {% if section.settings.show_sold_out or product5.available %}                                          
+                      {%- render 'featured-collection-product-items', product: product5, grid_classes: grid_classes, show_add_to_cart: false -%}
+                  {% endif %}
+            {% endif %}
+            	  {% assign product6 = all_products[block.settings.product6] %}
+            {% if product6.id != '' %}
+                  {% if section.settings.show_sold_out or product6.available %}                                          
+                      {%- render 'featured-collection-product-items', product: product6, grid_classes: grid_classes, show_add_to_cart: false -%}
+                  {% endif %}
+            {% endif %}
+                {%- else -%}
+                  {%- for i in (1..block.settings.products_count) -%}
+                    {%- render 'product-item-placeholder', grid_classes: grid_classes -%}
+                  {%- endfor -%}
+                {%- endunless -%}
+              </div>
+        </div>
+      </div>
+              <style>
+            #block-{{ block.id }} {
+              color: {{ block.settings.text_color }};
+              background-color:{{ block.settings.background }};
+              border-radius: 10px;
+            }
+
+            #block-{{ block.id }} .button {
+              color: {{ block.settings.button_text_color }};
+              background: {{ block.settings.button_background  }};
+            }
+
+            #block-{{ block.id }} .button:hover {
+              background: {{ block.settings.button_background | color_modify: 'alpha', 0.8 }} !important;
+            }
+
+           
+          </style>
+    </div>
+  {% endfor %}
+  </div>
+              </div>
+  </div>
+  </div>
+</section>
+
+<style>
+
+	{% for block in section.blocks %}
+        #shopify-section-{{ section.id }} #{{block.id}} {
+        background-color: {{ block.settings.background }};
+      }
+
+      #shopify-section-{{ section.id }} #{{block.id}} .featured-collection__header {
+        color: {{ block.settings.text_color }};
+      }
+
+      #shopify-section-{{ section.id }} #{{block.id}} .button {
+        color: {{ block.settings.button_text_color }};
+        background-color: {{ block.settings.button_background }};
+      }
+	{% endfor %}
+</style>
+
+
+{% schema %}
+{
+  "name": "Collection with image",
+   "blocks": [
+	  {
+        "type": "Collection",
+        "name": "Block",
+        "settings": [
+          {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+          },
+          {
+            "type": "range",
+            "id": "products_count",
+            "label": "Products to show",
+            "min": 3,
+            "max": 30,
+            "step": 1,
+            "default": 3
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image",
+            "info": "1000 x 400px .png with transparency recommended (hidden on mobile)"
+          },
+          {
+            "type": "color",
+            "id": "background",
+            "label": "Background",
+            "default": "#0774d7"
+          },
+          {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text",
+            "default": "#ffffff"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Featured collection"
+          },
+          {
+            "type": "textarea",
+            "id": "content",
+            "label": "Text",
+            "default": "Tell more about your product, collection..."
+          },
+          {
+            "type": "checkbox",
+            "id": "show_sold_out",
+            "label": "Show Sold out products",
+            "default": true
+          },                                                          
+          {
+            "type": "header",
+            "content": "Button"
+          },
+          {
+            "type": "color",
+            "id": "button_background",
+            "label": "Background",
+            "default": "#ffffff"
+          },
+          {
+            "type": "color",
+            "id": "button_text_color",
+            "label": "Text",
+            "default": "#0774d7"
+          },
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "Text",
+            "default": "Learn more"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Link",
+            "info": "If left empty, collection URL is used."
+          },
+		  {
+            "id": "product1",
+            "type": "product",
+            "label": "Product 1",
+			"info": "If not an actual collection, then this product will be displayed"
+          },
+		  {
+            "id": "product2",
+            "type": "product",
+            "label": "Product 2",
+			"info": "If not an actual collection, then this product will be displayed"
+          },
+		  {
+            "id": "product3",
+            "type": "product",
+            "label": "Product 3",
+			"info": "If not an actual collection, then this product will be displayed"
+          },
+		  {
+            "id": "product4",
+            "type": "product",
+            "label": "Product 4",
+			"info": "If not an actual collection, then this product will be displayed"
+          },
+		  {
+            "id": "product5",
+            "type": "product",
+            "label": "Product 5",
+			"info": "If not an actual collection, then this product will be displayed"
+          },
+		  {
+            "id": "product6",
+            "type": "product",
+            "label": "Product 6",
+			"info": "If not an actual collection, then this product will be displayed"
+          }
+        ]
+     }
+  ],
+  "presets": [
+    {
+      "category": "Collection",
+      "name": "Collection with image",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

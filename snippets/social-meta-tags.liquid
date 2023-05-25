@@ -1,0 +1,182 @@
+{%- comment -%}
+Add Facebook and Pinterest Open Graph meta tags to product pages
+for friendly Facebook sharing and Pinterest pinning.
+
+More info Open Graph meta tags
+- https://developers.facebook.com/docs/opengraph/using-objects/
+- https://developers.pinterest.com/rich_pins/
+
+Use the Facebook Open Graph Debugger for validation (and cache clearing)
+- http://developers.facebook.com/tools/debug
+
+Validate your Pinterest rich pins
+- https://developers.pinterest.com/rich_pins/validator/
+{%- endcomment -%}
+
+
+
+{%- if request.page_type == 'product' -%}
+  <meta property="og:type" content="product">
+  <meta property="og:title" content="{{ product.title | strip_html | escape }}">
+  <meta name="og:description" content="{{ product.description | strip_html | truncatewords: 140, '' | escape }}">
+
+  {%- comment -%}
+   Facebook deeplink start Code
+  {%- endcomment -%}
+    <meta property="al:ios:url" content="amalaearth://amala.earth/product-detail?pid={{ product.id | strip_html | escape }}" />
+    <meta property="al:ios:app_store_id" content="1591399697" />
+    <meta property="al:ios:app_name" content="amala-earth" />
+    
+    <meta property="al:android:url" content="amalaearth://amala.earth/product-detail?pid={{ product.id | strip_html | escape }}">
+    <meta property="al:android:package" content="com.amala.earth">
+    <meta property="al:android:app_name" content="amala-earth">
+
+  {%- comment -%}
+   Facebook deeplink end Code
+  {%- endcomment -%}
+
+  {%- if product.featured_media -%}
+    <meta property="og:image" content="http:{{ product.featured_media | img_url: 'master' }}">
+    <meta property="og:image:secure_url" content="https:{{ product.featured_media | img_url: 'master' }}">
+    <meta property="og:image:width" content="{{ product.featured_media.width }}">
+    <meta property="og:image:height" content="{{ product.featured_media.height }}">
+  {%- endif -%}
+
+  <meta property="product:price:amount" content="{{ product.price | money_without_currency | strip_html | escape }}">
+  <meta property="product:price:currency" content="{{ cart.currency.iso_code }}">
+{%- elsif request.page_type == 'article' -%}
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{ article.title | strip_html | escape }}">
+
+  {%- if article.image -%}
+    <meta property="og:image" content="http:{{ article.image | img_url: 'master' }}">
+    <meta property="og:image:secure_url" content="https:{{ article.image | img_url: 'master' }}">
+    <meta property="og:image:width" content="{{ article.image.width }}">
+    <meta property="og:image:height" content="{{ article.image.height }}">
+  {%- endif -%}
+{%- elsif request.page_type == 'collection' -%}
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ collection.title | strip_html | escape }}">
+  <meta property="og:image" content="http:{{ collection.image | default: collection.products.first.featured_media | img_url: 'master' }}">
+  <meta property="og:image:secure_url" content="https:{{ collection.image | default: collection.products.first.featured_media | img_url: 'master' }}">
+  <meta property="og:image:width" content="{{ collection.products.first.featured_media.width }}">
+  <meta property="og:image:height" content="{{ collection.products.first.featured_media.height }}">
+{%- else -%}
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page_title | escape }}">
+{%- endif -%}
+
+{%- if page_description -%}
+  <meta property="og:description" content="{{ page_description | escape }}">
+{%- endif -%}
+
+<meta property="og:url" content="{{ canonical_url }}">
+<meta property="og:site_name" content="{{ shop.name }}">
+
+{%- comment -%}
+This snippet renders meta data needed to create a Twitter card
+for products and articles.
+
+Your cards must be approved by Twitter to be activated
+- https://dev.twitter.com/docs/cards/validation/validator
+
+More information:
+- https://dev.twitter.com/cards/types/summary
+{%- endcomment -%}
+
+<meta name="twitter:card" content="summary">
+{%- if request.page_type == 'product' -%}
+  <meta name="twitter:title" content="{{ product.title | escape }}">
+  <meta name="twitter:description" content="{{ product.description | strip_html | truncatewords: 140, '' | escape }}">
+  <meta name="twitter:image" content="https:{{ product.featured_media | img_url: '600x600', crop: 'center' }}">
+{%- elsif request.page_type == 'article' -%}
+  <meta name="twitter:title" content="{{ article.title }}">
+  <meta name="twitter:description" content="{{ article.excerpt_or_content | strip_html | truncatewords: 140, '' | escape }}">
+
+  {%- if article.image -%}
+    <meta name="twitter:image" content="https:{{ article.image | img_url: '600x600', crop: 'center' }}">
+  {%- endif -%}
+{%- elsif request.page_type == 'collection' -%}
+  <meta name="twitter:title" content="{{ collection.title }}">
+  <meta name="twitter:description" content="{{ collection.description | strip_html | truncatewords: 140, '' | escape }}">
+  <meta name="twitter:image" content="https:{{ collection.image | default: collection.products.first.featured_image | img_url: '600x600', crop: 'center' }}">
+{%- else -%}
+  <meta name="twitter:title" content="{{ page_title | escape }}">
+  <meta name="twitter:description" content="{{ page_description | default: page_title | escape }}">
+{%- endif -%}
+
+ {% if page.handle == 'mindful-eating' %}
+  <meta property="og:url" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/7_38434f17-13c9-4917-9e48-4ec823a0191d.jpg?v=1675766806"/>
+  <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/7_38434f17-13c9-4917-9e48-4ec823a0191d.jpg?v=1675766806"/>
+{%- endif -%} 
+{% if page.handle == 'ethical-beauty' %}
+  <meta property="og:url" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/6_43f27064-597a-485c-b5d5-6fbc1b196dfc.jpg?v=1675766744"/>
+  <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/6_43f27064-597a-485c-b5d5-6fbc1b196dfc.jpg?v=1675766744"/>
+{%- endif -%} 
+{% if page.handle == 'gift' %}
+  <meta property="og:url" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/1_46533e47-c7ad-49af-bfc4-d2072f9b4f3f.jpg?v=1675766895"/>
+  <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/1_46533e47-c7ad-49af-bfc4-d2072f9b4f3f.jpg?v=1675766895"/>
+{%- endif -%} 
+{% if page.handle == 'responsible-fashion-women' %}
+  <meta property="og:url" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/4_e23d83f1-ced6-4afa-9db7-6d6119aeea8a.jpg?v=1675767252"/>
+  <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/4_e23d83f1-ced6-4afa-9db7-6d6119aeea8a.jpg?v=1675767252"/>
+{%- endif -%} 
+{% if page.handle == 'baby' %}
+  <meta property="og:url" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/Banner_e4272893-aeb7-40a7-8573-02be84275ff6.png?v=1668495230"/>
+  <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/Banner_e4272893-aeb7-40a7-8573-02be84275ff6.png?v=1668495230"/>
+{%- endif -%} 
+{% if page.handle == 'wedding' %}
+  <meta property="og:url" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/3_31796d5b-c5ce-4293-b8e4-7cce51ade94b.jpg?v=1675767318"/>
+  <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/3_31796d5b-c5ce-4293-b8e4-7cce51ade94b.jpg?v=1675767318"/>
+{%- endif -%} 
+{% if page.handle == 'joyful-home' %}
+  <meta property="og:url" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/5_506b1e7b-e8c8-4875-a9e6-cc8e6473d984.jpg?v=1675767090"/>
+  <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/5_506b1e7b-e8c8-4875-a9e6-cc8e6473d984.jpg?v=1675767090"/>
+{%- endif -%} 
+{% if page.handle == 'responsible-fashion-men' %}
+  <meta property="og:url" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/2_3_ccb44df9-7ef8-4d3b-9c83-5c70b54138e5.jpg?v=1675767224"/>
+  <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/2_3_ccb44df9-7ef8-4d3b-9c83-5c70b54138e5.jpg?v=1675767224"/>
+{%- endif -%} 
+
+{% if page.handle == 'christmas' %}
+  <meta property="og:url" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/WhatsApp_Image_2022-11-17_at_4.56.46_PM.jpg?v=1668772136"/>
+  <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/WhatsApp_Image_2022-11-17_at_4.56.46_PM.jpg?v=1668772136"/>
+{%- endif -%} 
+{% if page.handle == 'amrutam' %}
+  <meta property="og:url" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/amrutam-thumbnail.png?v=1669280783"/>
+  <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/amrutam-thumbnail.png?v=1669280783"/>
+{%- endif -%}
+{% if page.handle == 'valentine-day' %}
+  <meta property="og:url" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/unnamed_b9e51d0a-0758-4709-ae6c-c70dd067c319.png?v=1673356609"/>
+  <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/unnamed_b9e51d0a-0758-4709-ae6c-c70dd067c319.png?v=1673356609"/>
+{%- endif -%}
+{% if page.handle == 'holi' %}
+  <meta property="og:url" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/WhatsApp_Image_2023-01-23_at_5.49.17_PM.jpg?v=1674494137"/>
+  <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/WhatsApp_Image_2023-01-23_at_5.49.17_PM.jpg?v=1674494137"/>
+{%- endif -%}
+{% if page.handle == 'gluten-free' %}
+  <meta property="og:url" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/whatsapp_thumbnail_2.jpg?v=1677847622"/>
+  <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/whatsapp_thumbnail_2.jpg?v=1677847622"/>
+  <meta name="title" content="Buy Healthy Gluten Free Food Items online">
+  <meta name="description" content="Explore a variety of gluten free products at Amala Earth. Try different gluten free food items like pasta, noodles, different atta and more for your healthy diet. ">
+
+  {%- endif -%}
+{% if page.handle == 'vegan' %}
+  <meta property="og:url" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/whatsapp_thumbnail_1.jpg?v=1677847660"/>
+  <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/whatsapp_thumbnail_1.jpg?v=1677847660"/>
+  <meta name="title" content="Buy vegan food items and clean beauty products online only at Amala Earth">
+  <meta name="description" content="Buy plant based vegan food items and clean, chemical free vegan skincare products only at Amala Earth. Get vegan protein bars, supplements and more.">
+
+  {%- endif -%}
+{% if page.handle == 'celebrity-collaborations' %}
+  <meta property="og:url" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/Dia_mirza_thumbnail.jpg?v=1679033629"/>
+  <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/Dia_mirza_thumbnail.jpg?v=1679033629"/>
+{%- endif -%}
+{% if collections.handle == 'mothers-day-gifts' %}
+  <meta property="og:url" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/resize_1.jpg?v=1682570912"/>
+  <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/resize_1.jpg?v=1682570912"/>
+{%- endif -%}
+{% if page.handle == 'summer-essentials' %}
+  <meta property="og:url" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/Summer-microsite.jpg?v=1683261904"/>
+  <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/Summer-microsite.jpg?v=1683261904"/>
+{%- endif -%}

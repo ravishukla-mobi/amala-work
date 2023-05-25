@@ -1,0 +1,496 @@
+<style>
+  .cart--upsell{position:relative;}
+  .upsellQuantitySelector {display:none !important;}
+  input#upsellQuantity.loading {
+    color: #eaeaea;
+  }
+  body.no-upsell:not(.template-cart) .upsellWrap  {
+    display:none;
+  }
+  .decrement-quantity[disabled] {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+  
+  /*body.no-upsell .cart--upsell {
+  		display:none!important
+  }*/
+  
+  .d-none {
+   	display:none!important; 
+  }
+
+  .hide .variantImagesYo, .variantImageRoot.hide {
+    display: none;
+  }
+
+
+  .upsellQuantitySelector {
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius:8px;
+    overflow:hidden;
+  }
+
+  .increment-quantity, .decrement-quantity {
+    background-color: #ffff;
+    border-radius: 0px;
+    border: 0 none;
+    color: #57575A;
+    font-weight: 700;
+    padding: 0 15px;
+    cursor: pointer;
+    height: 38px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .increment-quantity{
+  	border-left:1px solid #ccc;
+  }
+  .decrement-quantity {
+  	border-right:1px solid #ccc;
+  }
+  .upsellRemove {
+    font-size: 12px;
+    letter-spacing: 1px;    
+    cursor: pointer;
+    line-height: 1.35;
+    border-bottom: 0.07143em solid #111111;
+  }
+
+  #upsellQuantity {
+    height: 32px;
+    line-height: 32px;
+    z-index: 1;
+    border-top: 0 !important;
+    border-bottom: 0 !important;
+    width: 38px;
+    margin: 0;
+    border-radius: 0;
+    border: 0 none;
+    padding: 19px 8px;
+    text-align: center;
+  }
+
+  .upsellWrapBoth {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: center;
+    padding:8px;
+    margin:0px 8px 0px 0px;
+    border-radius:8px;
+    border:1px solid #e2e2e2;
+    background-color: #fff;
+    width: 33.3334%;
+  }
+
+  .w-100 {
+    width: 100%;
+  }
+
+  .upsellWrapBoth .upsellLeft img {
+    width: 100%;
+    height: auto;
+    
+    border-radius:8px;
+  }
+
+  .upsellRemove {
+    text-transform: capitalize;
+    font-weight: normal;
+  }
+
+  .upsellWrapBoth .upsellLeft {
+    width: 75px;
+    text-align: center;
+    position: relative;
+  }
+
+  .upsellBelow div .upsellProductPrice {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--price-color);
+    margin-right: 15px;
+    margin-top: 5px;
+    display: inline-block;
+  }
+
+  .upsellBelow {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .upsellBelow div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
+
+
+  .upsellWrapBoth .upsellRight {
+    width: calc(100% - 85px);
+  }
+
+  .upsellProductPrice {
+    margin-top: 5px;
+  }
+
+  .upsellProductName {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--black-color);
+    margin-bottom: 7px;
+    max-width: 100%;
+    line-height: 1.13;
+    
+/*       margin-bottom:15px; */
+  }
+ .upsellProductNameN{
+  	overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+  .upsellProductVName {
+    font-size: 14px;
+  }
+
+  select#upsellID {
+    margin-bottom: 10px;
+    padding-left: 9px;
+    font-weight: normal;
+    color: #57575A;
+    opacity: 1;
+  }
+
+  .upsellRightWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
+
+  .upsellRightWrap button.increment-quantity, .upsellRightWrap button.decrement-quantity {
+    height: 45px;
+    padding: 0 10px;
+    border: 1px solid transparent;
+  }
+
+  .upsellRightWrap button.increment-quantity:hover, .upsellRightWrap button.decrement-quantity:hover {
+    border-color: #ccbebe;
+  }
+
+  .upsellTitle {
+    text-align: left;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    font-family: "Poppins";
+  }
+
+  button#add-to-cart-button {
+    margin-top:8px;
+    visibility: visible;
+    border-radius: 10px;
+    background-color: var(--brand-color);
+    color: var(--white-color);
+    border: 0;
+    margin-bottom: 0;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    box-shadow: none;
+    transition: all 0.25s ease-in-out;
+  }
+
+  button#add-to-cart-button:hover {
+    
+  }
+
+  .upsellRightWrap button.increment-quantity:focus, .upsellRightWrap button.decrement-quantity:focus, #upsellQuantity:focus {
+    outline: none;
+  }
+
+  .upsellWrap:not(.success) .upsellRemove,.upsellWrap.success .upsellTitle, .upsellProductPrice .compare-price.hide, .upsellProductPrice .actual-price.hide {
+    display: none;
+  }
+
+  .upsellWrap.success .upsellWrapBoth {
+    background: #fff;
+    padding: 10px;
+    border-radius: 7px;
+    border: 0 none;
+    box-shadow: 0.01pt 0.01pt 8pt #0000000D;
+    margin-bottom: 10px;
+  }
+
+  .upsellWrap.success .upsellWrapBoth select#upsellID {
+    display: none;
+  }
+
+  .upsellWrap.success .upsellWrapBoth .upsellProductVName {
+    margin: 10px 0;
+  }
+  .cart--upsell.show {
+    background: #f1f1f1;
+    padding: 0 0 10px 15px;
+  }
+  .upsellWrapBoth .upsellRight {
+  	position: relative;
+  }
+  .upsellWrapBoth button#add-to-cart-button{
+  	position: absolute;
+    right: 0;
+    top: calc(50% - 16px);
+    margin-top:0px;
+  }
+  .upsell_products_slider .flickity-page-dots {
+    display: none;
+  }
+  .upsellProductVendor {
+    display: block;
+    font-size: 11px;
+    margin-top: 7px;
+  }
+  .upsellProductPrice span.compare-price del {
+    margin-left: 0 !important;
+  }
+  @media(max-width:768px){
+    .upsellWrapBoth {width: 60%;}
+    .upsellWrapBoth .upsellLeft{width:50px;}
+    .upsellWrapBoth .upsellRight{width:calc(100% - 60px)}
+    .upsellTitle, .upsellProductName{font-size:13px;}
+    .upsellBelow div .upsellProductPrice{font-size:14px;}
+    .upsellWrapBoth button#add-to-cart-button{margin-top:0px;padding: 8px 15px;}
+  }
+
+</style>
+<script>
+  $(document).ready(function(){
+    
+    $('html').on('product:added', function(){
+        console.log(getCookie_new('upsell'));
+      	if(getCookie_new('upsell') == 'yes') {
+            $('body').addClass('no-upsell');
+            $('.minicart-inn').removeClass('has_r');
+    	}
+    });
+    
+    $('html').on('click', '[data-action="decrease-quantity"]', function(){
+      	if(getCookie_new('upsell') == 'yes') {
+            $('body').addClass('no-upsell');
+            $('.minicart-inn').removeClass('has_r');
+    	}
+    });
+    
+    $('html').on('click', '[data-action="increase-quantity"]', function(){
+      	if(getCookie_new('upsell') == 'yes') {
+            $('body').addClass('no-upsell');
+            $('.minicart-inn').removeClass('has_r');
+    	}
+    });
+    
+   
+    if(getCookie_new('upsell') == 'yes') {
+      $('body').addClass('no-upsell');
+      $('.minicart-inn').removeClass('has_r');
+    }
+    
+   $('body').on('click', 'span.remove-upsell', function(){
+    	$('.cart--upsell').removeClass('show').addClass('d-none');
+      	setCookie_new('upsell', 'yes', 0);
+        $('.minicart-inn').removeClass('has_r');
+    })
+   
+    var updateCartTotal = function (cart){
+      $('.cart--upsell').removeClass('hide');
+      var total_now = cart.total_price/100;
+      var total_price = '£'+total_now+' GBP';
+      $('.cart--total--price').text(total_price);
+      $('span.cart--external--total-items').html(cart.item_count);
+    }
+    var changeStyle = function(variantName,variantID){
+      $(".upsellWrap button#add-to-cart-button").html("&#10003; Added");
+      $(".upsellWrap").addClass("success");
+      $(".upsellProductVName").text(variantName);
+      $(".upsellRemove").attr("data-variantid", variantID);
+      setTimeout(function(){ $(".upsellBelow div button#add-to-cart-button").hide(); }, 2000);
+    }
+
+    
+
+ 
+
+    $("body").on('click', '.increment-quantity', function(){
+      var currentQty = $('#upsellQuantity').val();
+      var qtyDirection = $(this).data("direction");
+      var newQty = 0;
+
+      if (qtyDirection == "1") {
+        newQty = parseInt(currentQty) + 1;
+      }
+      else if (qtyDirection == "-1") {
+        newQty = parseInt(currentQty) - 1;
+      }
+
+      // make decrement disabled at 1
+      if (newQty == 1) {
+        $(".decrement-quantity").attr("disabled", "disabled");
+      }
+
+      // remove disabled attribute on subtract
+      if (newQty > 1) {
+        $(".decrement-quantity").removeAttr("disabled");
+      }
+
+      if (newQty > 0) {
+        newQty = newQty.toString();
+        $('#upsellQuantity').val(newQty);
+      }
+      else {
+        $('#upsellQuantity').val("1");
+      }
+    })
+    $("body").on('click', '.upsellWrap.success .increment-quantity', function(e){
+      e.preventDefault();      
+      var productId = parseInt($(".upsellRemove").attr("data-variantid"));
+      var productQ = parseInt($("#upsellQuantity").val());
+
+      $("#upsellQuantity").addClass('loading');
+
+      jQuery.post('/cart/update.js', {updates: {[productId]: productQ}})
+      .done(function(cart) {
+        console.log("success");
+        $("#upsellQuantity").removeClass('loading');
+        console.log(cart);
+        updateCartTotal(cart);
+      })
+      .fail(function() {
+        console.log("error");
+      })
+      .always(function() {
+        console.log("complete");
+      });
+    });
+    $("body").on('click', '.decrement-quantity', function(){
+      var currentQty = $('#upsellQuantity').val();
+      var qtyDirection = $(this).data("direction");
+      var newQty = 0;
+
+      if (qtyDirection == "1") {
+        newQty = parseInt(currentQty) + 1;
+      }
+      else if (qtyDirection == "-1") {
+        newQty = parseInt(currentQty) - 1;
+      }
+
+      // make decrement disabled at 1
+      if (newQty == 1) {
+        $(".decrement-quantity").attr("disabled", "disabled");
+      }
+
+      // remove disabled attribute on subtract
+      if (newQty > 1) {
+        $(".decrement-quantity").removeAttr("disabled");
+      }
+
+      if (newQty > 0) {
+        newQty = newQty.toString();
+        $('#upsellQuantity').val(newQty);
+      }
+      else {
+        $('#upsellQuantity').val("1");
+      }
+    })
+    $("body").on('click', '.upsellWrap.success .decrement-quantity', function(e){
+      e.preventDefault();      
+      var productId = parseInt($(".upsellRemove").attr("data-variantid"));
+      var productQ = parseInt($("#upsellQuantity").val());
+
+      $("#upsellQuantity").addClass('loading');
+
+      jQuery.post('/cart/update.js', {updates: {[productId]: productQ}})
+      .done(function(cart) {
+        console.log("success");
+        $("#upsellQuantity").removeClass('loading');
+        updateCartTotal(cart);
+      })
+      .fail(function() {
+        console.log("error");
+      })
+      .always(function() {
+        console.log("complete");
+      });
+    });
+
+    $("body").on('click', '.upsellRemove', function(e){
+      e.preventDefault();      
+      var productId = parseInt($(".upsellRemove").attr("data-variantid"));
+
+      jQuery.post('/cart/update.js', {updates: {[productId]: 0}})
+      .done(function(cart) {
+        ga('send', 'event', 'ecommerce', 'upsell', 'remove');
+        $(".upsellWrap").removeClass("success");
+        $(".upsellBelow div button#add-to-cart-button").html("Add to Cart");
+        updateCartTotal(cart);
+        $("#upsellQuantity").val("1");
+        setTimeout(function(){ $(".upsellBelow div button#add-to-cart-button").show(); }, 1000);
+      })
+      .fail(function() {
+        console.log("error");
+      })
+      .always(function() {
+        console.log("complete");
+      });
+    });
+
+
+    $("body").on('click', '#add-to-cart-button', function(e){
+      $(".upsellWrap button#add-to-cart-button").html("Adding...");
+      variant_id = $('#upsellID').val();
+      qty = $('#upsellQuantity').val();
+      properties = {}
+      
+     
+      data = {
+        "id": variant_id,
+        "quantity": 1,
+        "properties":properties,
+      }
+     
+      jQuery.ajax({
+        type: 'POST',
+        url: '/cart/add.js',
+        data: data,
+        dataType: 'json',
+        success: function() {
+          ga('send', 'event', 'ecommerce', 'add-to-cart');
+          addtocartengage($('#handleID').val(), $('#upsellID').val(), 1);
+          event = new CustomEvent('product:added', {
+              bubbles: true,
+              detail: {
+                button: e,
+                variant: null,
+                quantity:1
+              		}
+            	});
+             $('html')[0].dispatchEvent(event);
+        }
+      });
+    });
+    $("body").on('change', '#upsellID', function(){
+      var varID = $(this).val();
+      $(".variantImageRoot, .variantImagesYo").addClass("hide").removeClass("showThis");
+      $(".upsellProductPrice .actual-price, .upsellProductPrice .compare-price").addClass("hide");
+      $(".variantImageRoot[data-variant='"+varID+"'], .variantImagesYo[data-variant='"+varID+"'], .upsellProductPrice .actual-price[data-variant='"+varID+"'], .upsellProductPrice .compare-price[data-variant='"+varID+"']").removeClass("hide").addClass("showThis");
+    });
+  })
+</script>

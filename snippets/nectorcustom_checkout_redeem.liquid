@@ -1,0 +1,865 @@
+
+{{ 'nectorcustom_checkout_styles.css' | asset_url | stylesheet_tag }}
+
+{% assign nector_api_key = shop.metafields.nector.api_key %}
+{% assign nector_entity_id = shop.metafields.nector.entity_id %}
+{% assign nector_env = shop.metafields.nector.env %}
+
+{% assign nector_platform_url = 'https://platform.nector.io' %}
+{% assign nector_minimum_checkout_amount = minimum_checkout_amount | default: 0 %}
+{% assign nector_platform = platform | default: 'shopify' %}
+{% assign nector_button_background_color = button_background_color | default: '#222' %}
+{% assign nector_button_text_color = button_text_color | default: '#eee' %}
+
+{% if nector_env != 'production' %}
+  {% assign nector_platform_url = 'https://stageplatform.nector.io' %}
+{% endif %}
+
+{% if customer %}
+  {% assign nector_customer_id = customer.id %}
+{% endif %}
+
+<div id="nector-checkout-redeem-container" class="nector-checkout-redeem-container" style="display:none;">
+  <div class="nector-loader-container" style="display: none;">
+    <span class="nector-loader"></span>
+  </div>
+
+  <div class="nector-checkout-redeem-content" style="display: none;">
+    <div class="nector-checkout-redeem-header">
+      <span>Redeem points</span>
+      <span class="nector-checkout-redeem-customer-coins"></span>
+    </div>
+
+    <div class="nector-checkout-redeem-description-container">
+      <span class="nector-checkout-redeem-description">This is some dummy description</span>
+    </div>
+
+    <div class="nector-checkout-redeem-slider-container">
+      <input class="nector-checkout-redeem-slider" type="range" min="1" step="1" value="1">
+    </div>
+
+    <div>
+      <button
+        class="nector-reset-button nector-checkout-redeem-action-button"
+        style="background-color: #222; color: #eee"
+      >
+        Redeem Offer
+      </button>
+    </div>
+
+    <div class="nector-center nector-checkout-redeem-error" style="display: none"></div>
+    <div class="nector-center nector-checkout-redeem-success" style="display: none"></div>
+  </div>
+</div>
+
+<script>
+  let entity = null;
+  let lead = null;
+  let aggregateddetails = null;
+  let aggregatedoffers = null;
+  let checkoutpage_action = null;
+  let checkoutpage_action_offer_rule = null;
+  let discount_type = null;
+  let redeemable_amount = 0;
+  let is_offer_redeemable = true;
+  let current_step = 1;
+  let is_coupon_redeeming = false;
+  let redeemed_coupon = null;
+  let smartcheckout_coupon = null;
+  let is_nector_checkout_redeem_container_hidden = false;
+  let is_coupon_applying = false;
+  let applied_coupon_code = null;
+  let mutation_observer = null;
+
+  const minimum_checkout_amount_required = Number('{{ nector_minimum_checkout_amount }}') || 0;
+  const customer_id = '{{ nector_customer_id }}';
+  const api_key = '{{ nector_api_key }}';
+
+  if (!customer_id || !api_key) {
+    set_nector_checkout_redeem_container_visiblity(false);
+  }
+
+  function set_loader_visibility(visible = true) {
+    const container = document.querySelector('.nector-loader-container');
+    if (container) {
+      if (visible) container.style.display = 'flex';
+      else container.style.display = 'none';
+    }
+  }
+
+  function set_nector_checkout_redeem_content_visibility(visible = true) {
+    const content_element = document.querySelector('.nector-checkout-redeem-content');
+    if (content_element) {
+      if (visible) content_element.style.display = 'block';
+      else content_element.style.display = 'none';
+    }
+  }
+
+  function set_nector_checkout_redeem_container_visiblity(visible = true) {
+    const container = document.querySelector('.nector-checkout-redeem-container');
+    if (container) {
+      if (visible) {
+        is_nector_checkout_redeem_container_hidden = false;
+        container.style.display = 'block';
+      } else {
+        is_nector_checkout_redeem_container_hidden = true;
+        container.style.display = 'none';
+      }
+    }
+  }
+
+  function set_slider_container_visibility(visible = true) {
+    const slider_container_element = document.querySelector('.nector-checkout-redeem-slider-container');
+    if (slider_container_element) {
+      if (visible) slider_container_element.style.display = 'block';
+      else slider_container_element.style.display = 'none';
+    }
+  }
+
+  function set_slider_usability(enable = true) {
+    const slider_element = document.querySelector('input.nector-checkout-redeem-slider');
+    if (slider_element) {
+      if (enable) slider_element.disabled = false;
+      else slider_element.disabled = true;
+    }
+  }
+
+  function set_action_button_usability(enable = true) {
+    const action_button_element = document.querySelector('.nector-checkout-redeem-action-button');
+    if (action_button_element) {
+      if (enable) action_button_element.disabled = false;
+      else action_button_element.disabled = true;
+    }
+  }
+
+  function create_event(type = 'submit') {
+    const e = document.createEvent('Event');
+    e.initEvent(type, true, true);
+    return e;
+  }
+
+  async function api_merchant_get_leads() {
+    if (!customer_id) return;
+
+    const final_url = `{{ nector_platform_url }}/api/v2/merchant/leads/6d488927-f266-40b4-bc2c-807c5338a544?customer_id={{ nector_platform }}-${customer_id}`;
+
+    const headers = {
+      accept: 'application/json',
+      'content-type': 'application/json',
+      'x-source': 'web',
+      'x-apikey': api_key,
+    };
+
+    let options = {
+      method: 'GET',
+      headers: headers,
+    };
+
+    const response = await fetch(final_url, options);
+    const response_data = await response.json();
+
+    if (
+      response.ok === true &&
+      response_data &&
+      response_data.meta &&
+      response_data.meta.status === 'success' &&
+      response_data.data &&
+      response_data.data.item
+    ) {
+      lead = response_data.data.item;
+    }
+  }
+
+  async function api_merchant_get_aggregateddetails() {
+    let final_url = `{{ nector_platform_url }}/api/v2/merchant/aggreegateddetails`;
+
+    const headers = {
+      accept: 'application/json',
+      'content-type': 'application/json',
+      'x-source': 'web',
+      'x-apikey': api_key,
+    };
+
+    let options = {
+      method: 'GET',
+      headers: headers,
+    };
+
+    const response = await fetch(final_url, options);
+    const response_data = await response.json();
+
+    if (
+      response.ok === true &&
+      response_data &&
+      response_data.meta &&
+      response_data.meta.status === 'success' &&
+      response_data.data
+    ) {
+      aggregateddetails = response_data.data;
+
+      if (aggregateddetails && aggregateddetails.businessinfos && aggregateddetails.businessinfos.entity) {
+        entity = aggregateddetails.businessinfos.entity;
+      }
+
+      if (aggregateddetails && aggregateddetails.actioninfos && aggregateddetails.actioninfos.checkoutbutton_action) {
+        checkoutbutton_action = aggregateddetails.actioninfos.checkoutbutton_action;
+        if (checkoutbutton_action && checkoutbutton_action.meta && checkoutbutton_action.meta.offer_rule) {
+          checkoutpage_action_offer_rule = checkoutbutton_action.meta.offer_rule;
+        }
+      }
+    }
+  }
+
+  async function api_merchant_create_offerredeems(values) {
+    if (!lead || !checkoutpage_action_offer_rule) return null;
+
+    const lead_id = lead._id;
+    const step = current_step || 1;
+
+    let final_url = `{{ nector_platform_url }}/api/v2/merchant/offerredeems`;
+
+    const headers = {
+      accept: 'application/json',
+      'content-type': 'application/json',
+      'x-source': 'web',
+      'x-apikey': api_key,
+    };
+
+    const payload = {
+      lead_id: lead_id,
+      step: step,
+    };
+
+    let options = {
+      method: 'POST',
+      headers: headers,
+      body: JSON.stringify(payload),
+    };
+
+    const response = await fetch(final_url, options);
+    const response_data = await response.json();
+
+    if (
+      response.ok === true &&
+      response_data &&
+      response_data.meta &&
+      response_data.meta.status === 'success' &&
+      response_data.data
+    ) {
+      redeemed_coupon = response_data.data;
+      return redeemed_coupon;
+    } else {
+      return null;
+    }
+  }
+
+  async function api_merchant_create_checkoutpagecoupons(values) {
+    if (!lead) return;
+
+    const lead_id = lead._id;
+    const value = values.coupon_code || undefined;
+    const step = values.step || undefined;
+
+    if (step < 1) return null;
+
+    let final_url = `{{ nector_platform_url }}/api/v2/merchant/checkoutpagecoupons`;
+
+    const headers = {
+      accept: 'application/json',
+      'content-type': 'application/json',
+      'x-source': 'web',
+      'x-apikey': api_key,
+    };
+
+    const payload = {
+      lead_id: lead_id,
+      value: value,
+      step: step,
+    };
+
+    let options = {
+      method: 'POST',
+      headers: headers,
+      body: JSON.stringify(payload),
+    };
+
+    const response = await fetch(final_url, options);
+    const response_data = await response.json();
+
+    if (response.ok === true && response_data && response_data.meta && response_data.meta.status === 'success') {
+      if (response_data.data && response_data.data.item) {
+        smartcheckout_coupon = response_data.data.item;
+      }
+
+      return true;
+    } else {
+      return null;
+    }
+  }
+
+  // submit the form
+  async function apply_coupon_to_cart(values) {
+    if (!values.coupon_code) return;
+
+    // find the input element for entering the code
+    const discount_input_element = document.querySelector('input[data-discount-field]');
+    if (!discount_input_element) return false;
+
+    discount_input_element.setAttribute('value', values.coupon_code);
+    if (!discount_input_element.form) return;
+
+    discount_input_element.form.dispatchEvent(create_event());
+    setTimeout(() => {
+      discount_input_element.setAttribute('value', '');
+    }, 100);
+
+    is_coupon_applying = true;
+    return true;
+  }
+
+  function select_best_offer(account_for_available_balance = true) {
+    // if multiplier offer is available, select that
+    // else fallback to other fixed offer
+    if (!aggregatedoffers || !aggregateddetails || !entity) return;
+
+    const business_offers =
+      (aggregatedoffers && aggregatedoffers.businessoffers && aggregatedoffers.businessoffers.items) || [];
+    if (!business_offers || business_offers?.length < 1) return;
+
+    const available_balance = lead ? lead.available : 0;
+
+    const conversion_factor = Number(entity.conversion_factor || 1);
+    let redeemable_offers = [];
+    if (account_for_available_balance) {
+      redeemable_offers = business_offers.filter((offer) => {
+        if (!offer || !offer.rule) return false;
+
+        const coin_amount = Math.round(offer.rule.coin_amount / Number(entity.conversion_factor || 1));
+        return offer && offer.rule && coin_amount <= available_balance;
+      });
+      if (redeemable_offers.length < 1) return null;
+    } else {
+      redeemable_offers = [...business_offers];
+    }
+
+    const checkoutpage_offers = redeemable_offers.filter((offer) => offer && offer.applicable_on === 'checkout_page');
+    if (checkoutpage_offers.length > 0) {
+      return checkoutpage_offers[0];
+    }
+  }
+
+  function get_max_steps_for_slider() {
+    if (!checkoutpage_action_offer_rule || !checkoutpage_action_offer_rule.fiat_range) return;
+    const is_multiplier =
+      checkoutpage_action_offer_rule.fiat_range.min !== checkoutpage_action_offer_rule.fiat_range.max;
+    if (!is_multiplier) return 0;
+
+    let total_price_without_discount = Number(window.Shopify.Checkout.totalPrice);
+
+    let total_discount = null;
+    const min_fiat_discount = checkoutpage_action_offer_rule.fiat_range.min;
+    const max_fiat_discount = checkoutpage_action_offer_rule.fiat_range.max;
+    const conversion_factor = Number(entity.conversion_factor || 1);
+    const coin_amount = Math.round(checkoutpage_action_offer_rule.coin_amount / Number(entity.conversion_factor || 1));
+    const fiat_class = checkoutpage_action_offer_rule.fiat_class;
+    const customer_available_balance = lead.available;
+
+    let max_steps = 0;
+
+    if (customer_available_balance < coin_amount) return 0;
+
+    if (fiat_class === 'amount') {
+      let max_discount_customer_can_redeem =
+        total_price_without_discount > minimum_checkout_amount_required
+          ? total_price_without_discount - minimum_checkout_amount_required
+          : 0;
+
+      // calculate the max steps
+      let max_steps_for_offer = Math.floor(max_fiat_discount / min_fiat_discount);
+      let max_steps_for_redeemable_discount = Math.floor(max_discount_customer_can_redeem / min_fiat_discount);
+      let max_steps_with_available_balance = Math.floor(customer_available_balance / coin_amount);
+
+      max_steps = Math.min(max_steps_for_offer, max_steps_for_redeemable_discount, max_steps_with_available_balance);
+    } else if (fiat_class === 'percent') {
+      let max_discount_customer_can_redeem =
+        total_price_without_discount > minimum_checkout_amount_required
+          ? total_price_without_discount - minimum_checkout_amount_required
+          : 0;
+      let max_discount_percent_customer_can_redeem =
+        max_discount_customer_can_redeem > 0
+          ? (max_discount_customer_can_redeem / total_price_without_discount) * 100
+          : 0;
+
+      let max_steps_for_offer = Math.floor(max_fiat_discount / min_fiat_discount);
+      let max_steps_for_redeemable_discount = Math.floor(max_discount_percent_customer_can_redeem / min_fiat_discount);
+      let max_steps_with_available_balance = Math.floor(customer_available_balance / coin_amount);
+
+      max_steps = Math.min(max_steps_for_offer, max_steps_for_redeemable_discount, max_steps_with_available_balance);
+    }
+
+    return max_steps;
+  }
+
+  function set_slider_bounds() {
+    if (!checkoutpage_action_offer_rule || !checkoutpage_action_offer_rule.fiat_range) return;
+    const is_multiplier =
+      checkoutpage_action_offer_rule.fiat_range.min !== checkoutpage_action_offer_rule.fiat_range.max;
+    if (!is_multiplier) return 0;
+
+    const max_steps = get_max_steps_for_slider();
+    const slider_element = document.querySelector('.nector-checkout-redeem-slider');
+    if (!slider_element) return;
+
+    // slider defaults
+    slider_element.min = 1;
+    slider_element.value = 1;
+    current_step = 1;
+
+    if (max_steps > 0) {
+      slider_element.setAttribute('max', max_steps);
+
+      slider_element.value = max_steps;
+      current_step = max_steps;
+
+      set_slider_usability(true);
+      is_offer_redeemable = true;
+
+      if (max_steps === 1) {
+        slider_element.min = 0;
+      }
+    } else {
+      set_slider_usability(false);
+      is_offer_redeemable = false;
+    }
+  }
+
+  function calculate_redeemable_amount() {
+    if (!checkoutpage_action_offer_rule) {
+      redeemable_amount = 0;
+      return;
+    }
+
+    if (checkoutpage_action_offer_rule && checkoutpage_action_offer_rule.fiat_range) {
+      redeemable_amount = checkoutpage_action_offer_rule.fiat_range.min * (current_step || 1);
+    } else {
+      redeemable_amount = 0;
+    }
+  }
+
+  function update_ui_customer_coins_balance() {
+    const available_balance = lead ? Number(lead.available || 0) : 0;
+    const customer_coins_balance_element = document.querySelector('.nector-checkout-redeem-customer-coins');
+    if (customer_coins_balance_element) customer_coins_balance_element.innerText = `${available_balance} Earth Seeds`;
+  }
+
+  function update_ui_description() {
+    let description = '';
+
+    const description_element = document.querySelector('.nector-checkout-redeem-description');
+    if (!description_element) return;
+
+    if (!checkoutpage_action_offer_rule) {
+      description_element.innerText = 'No offers found for you';
+      return;
+    }
+
+    const max_steps_for_slider = get_max_steps_for_slider();
+
+    const is_multiplier =
+      (checkoutpage_action_offer_rule.fiat_range && checkoutpage_action_offer_rule.fiat_range.min) !==
+      (checkoutpage_action_offer_rule.fiat_range && checkoutpage_action_offer_rule.fiat_range.max);
+
+    if (checkoutpage_action_offer_rule && is_multiplier === true && max_steps_for_slider < 1) {
+      description_element.innerText = 'Unable to find an offer for you based on your cart amount';
+      return;
+    }
+
+    if (checkoutpage_action_offer_rule && is_multiplier === true) {
+      description = 'Use the slider to generate a discount.';
+    } else {
+      if (checkoutpage_action_offer_rule && !checkoutpage_action_offer_rule.fiat_range) {
+        // external offer
+        description = 'External offer';
+      } else {
+        if (
+          !is_multiplier &&
+          checkoutpage_action_offer_rule?.fiat_range?.min &&
+          checkoutpage_action_offer_rule?.fiat_class
+        ) {
+          description = `${checkoutpage_action_offer_rule?.fiat_class === 'amount' ? 'Get ' : ''} ${
+            checkoutpage_action_offer_rule?.fiat_range?.min
+          }${checkoutpage_action_offer_rule?.fiat_class === 'percent' ? '%' : ''} Off.`.trim();
+        }
+
+        if (checkoutpage_action_offer_rule?.fiat_target === 'shipping') {
+          description = `${name} on Shipping.`.trim();
+        }
+      }
+    }
+
+    if (
+      checkoutpage_action_offer_rule &&
+      checkoutpage_action_offer_rule.minimumcart_amount !== null &&
+      Number(checkoutpage_action_offer_rule.minimumcart_amount) >= 0
+    )
+      description += ` Minimum cart amount of ${checkoutpage_action_offer_rule.minimumcart_amount} is required.`;
+
+    if (
+      checkoutpage_action_offer_rule &&
+      checkoutpage_action_offer_rule.product_ids &&
+      checkoutpage_action_offer_rule.product_ids.length > 0
+    )
+      description += ' Discount applicable only on certain products';
+
+    if (
+      checkoutpage_action_offer_rule &&
+      checkoutpage_action_offer_rule.category_ids &&
+      checkoutpage_action_offer_rule.category_ids.length > 0
+    )
+      description += ' Discount applicable only on certain categories of products';
+
+    description_element.innerText = description;
+  }
+
+  function update_ui_action_button_text() {
+    const action_button_element = document.querySelector('.nector-checkout-redeem-action-button');
+    if (!action_button_element) return;
+
+    // reset
+    action_button_element.innerText = 'Redeem Offer';
+    action_button_element.disabled = false;
+
+    if (!is_offer_redeemable || !checkoutpage_action_offer_rule) {
+      action_button_element.disabled = true;
+      return;
+    }
+
+    const is_multiplier =
+      (checkoutpage_action_offer_rule.fiat_range && checkoutpage_action_offer_rule.fiat_range.min) !==
+      (checkoutpage_action_offer_rule.fiat_range && checkoutpage_action_offer_rule.fiat_range.max);
+
+    if (checkoutpage_action_offer_rule && is_multiplier) {
+      const amount_text = discount_type === 'percent' ? `${redeemable_amount}%` : `₹${redeemable_amount}`;
+      action_button_element.innerText = `Redeem for ${amount_text} off`;
+    } else {
+      action_button_element.innerText = `Redeem Now`;
+    }
+
+    if (is_coupon_redeeming === true) {
+      action_button_element.disabled = true;
+      action_button_element.innerText = 'Redeeming offer';
+    }
+  }
+
+  function update_ui_error_message(message) {
+    const error_element = document.querySelector('.nector-checkout-redeem-error');
+    if (!error_element) return;
+
+    error_element.style.display = 'none';
+    error_element.innerText = '';
+
+    if (message) {
+      error_element.style.display = 'flex';
+      error_element.innerText = message;
+    }
+  }
+
+  function update_ui_success_message(message) {
+    const success_element = document.querySelector('.nector-checkout-redeem-success');
+    if (!success_element) return;
+
+    success_element.style.display = 'none';
+    success_element.innerText = '';
+
+    if (message) {
+      success_element.style.display = 'flex';
+      success_element.innerText = message;
+    }
+  }
+
+  function get_applied_coupon_code() {
+    const reduction_code_element = document.querySelector('.order-summary__section--discount .reduction-code__text');
+    if (!reduction_code_element || reduction_code_element.innerText.length < 1) return null;
+
+    const applied_coupon_code = reduction_code_element.innerText;
+    return applied_coupon_code;
+  }
+
+  function check_is_nector_coupon(coupon_code) {
+    if (!coupon_code) return false;
+
+    const is_nector_coupon = coupon_code.toLowerCase().startsWith('nec');
+    return is_nector_coupon;
+  }
+
+  // check if nector coupon is applied and check if cart amount is valid
+  // if not valid, then run the smartcheckout_coupon api and apply the new discount
+  function check_is_cart_amount_valid() {
+    // get the total cart amount
+    let is_giftcard = false;
+    let code = '';
+    if (document.querySelectorAll('tr.total-line.total-line--reduction').length) {
+      const ele = document.querySelector('tr.total-line.total-line--reduction');
+      if (ele) {
+        let code_element = ele.querySelector('.reduction-code__text');
+        if (code_element) code = code_element.innerText || '';
+        code = code.trim();
+
+        if (ele.getAttribute('data-giftcard-success') != undefined) {
+          is_giftcard = true;
+        }
+      }
+    }
+
+    if (is_giftcard || code.indexOf('WCID') !== -1) return true;
+
+    let total_cart_amount_element = document.querySelector('.total-line__price .payment-due__price');
+    if (!total_cart_amount_element) return false;
+
+    let cart_amount = Math.round(
+      (Number(total_cart_amount_element.getAttribute('data-checkout-payment-due-target') || 0) || 0) / 100
+    );
+    if (!isNaN(cart_amount) && cart_amount < minimum_checkout_amount_required) {
+      return false;
+    }
+
+    return true;
+  }
+
+  async function fetch_data() {
+    await api_merchant_get_leads();
+    await api_merchant_get_aggregateddetails();
+
+    if (!lead || !aggregateddetails || !entity) {
+      throw new Error('failed to fetch the data');
+    }
+  }
+
+  async function on_coupon_code_removed(coupon_code) {
+    if (!coupon_code || check_is_nector_coupon(coupon_code) === false) return;
+
+    try {
+      const result = await api_merchant_create_checkoutpagecoupons({ coupon_code: coupon_code });
+      if (result) {
+        await api_merchant_get_leads();
+        setup_ui();
+
+        set_action_button_usability(true);
+        set_slider_usability(true);
+      }
+    } catch (error) {
+      console.log('[nector] Error when handling removed coupon code', error);
+    }
+  }
+
+  function on_order_summary_dom_change() {
+    const newly_applied_coupon_code = get_applied_coupon_code();
+    if (
+      (!applied_coupon_code && newly_applied_coupon_code) ||
+      (applied_coupon_code && newly_applied_coupon_code && applied_coupon_code !== newly_applied_coupon_code)
+    ) {
+      console.log('[nector] code applied');
+      // code applied
+
+      if (is_coupon_applying) {
+        is_coupon_applying = false;
+
+        is_coupon_redeeming = false;
+        update_ui_action_button_text();
+
+        setup_ui();
+
+        set_action_button_usability(false);
+        set_slider_usability(false);
+      }
+    } else if (applied_coupon_code && !newly_applied_coupon_code) {
+      console.log('[nector] code removed');
+      // coupon code removed
+
+      // check if nector code and burn it
+      const removed_coupon_code = applied_coupon_code;
+      on_coupon_code_removed(removed_coupon_code);
+    } else {
+      // check for error
+      const coupon_error_element = document.querySelector(
+        '.order-summary__section.order-summary__section--discount #error-for-reduction_code'
+      );
+      if (coupon_error_element && is_coupon_applying) {
+        update_ui_error_message('Failed to apply the code');
+
+        is_coupon_applying = false;
+
+        is_coupon_redeeming = false;
+        update_ui_action_button_text();
+
+        setup_ui();
+      }
+    }
+
+    applied_coupon_code = newly_applied_coupon_code || null;
+  }
+
+  function init_dom_changes_watcher() {
+    if ('function' != typeof MutationObserver) {
+      console.error('MutationObserver not supported');
+    }
+
+    const target = document.querySelector('.order-summary__sections');
+    if (!target) return;
+
+    mutation_observer = new MutationObserver(on_order_summary_dom_change);
+    mutation_observer.observe(target, { subtree: true, childList: true });
+  }
+
+  function on_slider_change(e) {
+    const selected_step = Number(e.target.value);
+    current_step = selected_step;
+
+    const min_fiat_discount = checkoutpage_action_offer_rule.fiat_range.min;
+    redeemable_amount = min_fiat_discount * current_step;
+
+    update_ui_action_button_text();
+  }
+
+  async function on_redeem_button_click() {
+    try {
+      if (!checkoutpage_action_offer_rule) return;
+
+      update_ui_error_message(null);
+
+      const is_multiplier =
+        (checkoutpage_action_offer_rule.fiat_range && checkoutpage_action_offer_rule.fiat_range.min) !==
+        (checkoutpage_action_offer_rule.fiat_range && checkoutpage_action_offer_rule.fiat_range.max);
+      if (checkoutpage_action_offer_rule && is_multiplier) {
+        const max_steps_for_offer = get_max_steps_for_slider();
+        if (current_step > max_steps_for_offer) current_step = max_steps_for_offer;
+      } else {
+        current_step = 1;
+      }
+
+      is_coupon_redeeming = true;
+      update_ui_action_button_text();
+
+      const offerredeems_result = await api_merchant_create_offerredeems();
+      if (!offerredeems_result) {
+        // some api error. show error message below the button
+        update_ui_error_message('Failed to redeem coupon. Please try again later');
+      }
+
+      // apply the coupon code
+      if (redeemed_coupon) {
+        const coupon_code = redeemed_coupon.coupon.value;
+        const applycouponcode_result = await apply_coupon_to_cart({ coupon_code: coupon_code });
+        if (!applycouponcode_result) {
+          update_ui_success_message(
+            "Couldn't auto apply the coupon code. Please apply the coupon code: " + coupon_code
+          );
+
+          is_coupon_redeeming = false;
+          update_ui_action_button_text();
+
+          setup_ui();
+
+          set_action_button_usability(false);
+          set_slider_usability(false);
+        }
+      }
+
+      // refetch the lead
+      await api_merchant_get_leads();
+    } catch (error) {
+      console.log('[nector] Error redeeming offer', error);
+
+      is_coupon_redeeming = false;
+      update_ui_action_button_text();
+    }
+  }
+
+  async function setup_ui() {
+    // reset ui
+
+    if (!checkoutpage_action_offer_rule) {
+      // show the slider but keep it disabled
+      // set_slider_container_visibility(true);
+      // set_slider_usability(false);
+      set_nector_checkout_redeem_container_visiblity(false);
+
+      const is_multiplier =
+        (checkoutpage_action_offer_rule.fiat_range && checkoutpage_action_offer_rule.fiat_range.min) !==
+        (checkoutpage_action_offer_rule.fiat_range && checkoutpage_action_offer_rule.fiat_range.max);
+    } else if (checkoutpage_action_offer_rule && !is_multiplier) {
+      // hide the slider for regular offers
+      set_slider_container_visibility(false);
+    }
+
+    set_slider_bounds();
+    calculate_redeemable_amount();
+
+    update_ui_customer_coins_balance();
+    update_ui_description();
+    update_ui_action_button_text();
+  }
+
+  async function init() {
+    try {
+      // move the html to proper place;
+      const nector_checkout_redeem_container_element = document.getElementById('nector-checkout-redeem-container');
+      if (!nector_checkout_redeem_container_element) return;
+
+      nector_checkout_redeem_container_element.parentElement.removeChild(nector_checkout_redeem_container_element);
+
+      const discount_section_element = document.querySelector(
+        '.order-summary__section.order-summary__section--discount'
+      );
+      if (!discount_section_element) return;
+      discount_section_element.parentElement.insertBefore(
+        nector_checkout_redeem_container_element,
+        discount_section_element
+      );
+
+      set_nector_checkout_redeem_container_visiblity(true);
+      set_loader_visibility(true);
+
+      await fetch_data();
+      await setup_ui();
+
+      set_loader_visibility(false);
+      set_nector_checkout_redeem_content_visibility(true);
+
+      init_dom_changes_watcher();
+    } catch (error) {
+      console.log('[nector] error when initializing the redeem widget', error);
+      set_nector_checkout_redeem_container_visiblity(false);
+    }
+
+    // set event listeners on the slider and action button
+    const slider = document.querySelector('.nector-checkout-redeem-slider');
+    if (slider) {
+      slider.addEventListener('input', on_slider_change);
+    }
+
+    const redeem_button = document.querySelector('.nector-checkout-redeem-action-button');
+    if (redeem_button) {
+      redeem_button.addEventListener('click', on_redeem_button_click);
+    }
+  }
+
+  if (!window.$ && typeof Checkout !== 'undefined' && Checkout.$) {
+    window.$ = Checkout.$;
+  }
+
+  if (window.$) {
+    $(document).on('page:load', function () {
+      console.log('[nector] page loaded. initializing redeem widget');
+      init();
+    });
+
+    $(document).on('page:change', function () {
+      if (!is_nector_checkout_redeem_container_hidden) {
+        setup_ui();
+      }
+    });
+  } else {
+    // TODO do it with vanilla js
+  }
+</script>

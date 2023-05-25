@@ -1,0 +1,124 @@
+.nector-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nector-checkout-redeem-container,
+.nector-checkout-redeem-container * {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.nector-checkout-redeem-container {
+	/* border: 1px solid #eee; */
+	border-radius: 4px;
+	padding: 15px;
+}
+
+.nector-loader-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: 15px;
+}
+
+.nector-loader {
+	width: 48px;
+	height: 48px;
+	border: 3px solid #000;
+	border-bottom-color: transparent;
+	border-radius: 50%;
+	display: inline-block;
+	box-sizing: border-box;
+	animation: nector-rotation 1s linear infinite;
+}
+
+.nector-checkout-redeem-header {
+	display: flex;
+	justify-content: space-between;
+	gap: 15px;
+
+	margin-bottom: 10px;
+}
+
+.nector-checkout-redeem-description-container {
+	color: rgba(0, 0, 0, 0.5);
+	margin-bottom: 10px;
+}
+
+.nector-checkout-redeem-slider-container {
+	margin: 10px 0;
+}
+
+.nector-checkout-redeem-slider {
+	width: 100%;
+	padding-left: 5px;
+
+	-webkit-appearance: auto;
+	-moz-appearance: auto;
+	appearance: auto;
+}
+
+.nector-reset-button {
+	border: none;
+	outline: none;
+	overflow: visible;
+	background: transparent;
+	text-align: inherit;
+	line-height: normal;
+	color: inherit;
+	font: inherit;
+	/* Corrects font smoothing for webkit */
+	-webkit-font-smoothing: inherit;
+	-moz-osx-font-smoothing: inherit;
+
+	/* Corrects inability to style clickable `input` types in iOS */
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+.nector-reset-button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+.nector-checkout-redeem-action-button {
+	display: block;
+	width: 100%;
+	padding: 10px 20px;
+	font-weight: bold;
+	border-radius: 6px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.nector-checkout-redeem-action-button:disabled {
+	cursor: not-allowed;
+	background-color: #c4c4c4 !important;
+	color: #fff !important;
+}
+
+.nector-checkout-redeem-error {
+	font-size: 14px;
+	margin: 10px;
+	color: #ff0033;
+}
+
+.nector-checkout-redeem-success {
+	font-size: 14px;
+	margin: 10px;
+	color: #4bb543;
+}
+
+@keyframes nector-rotation {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}

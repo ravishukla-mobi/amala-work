@@ -1,0 +1,102 @@
+{%- capture section_settings -%}
+{
+  "stackable": false,
+  "layout": "vertical",
+  "productId": {{ product.id | json }},
+  "recommendationsCount": 10
+}
+{%- endcapture -%}
+
+{% if product.metafields.wk_custom_field.related_products != blank %}
+	{% assign related_items_all = product.metafields.wk_custom_field.related_products %}
+{% elsif  product.metafields.customAttribute.related_products != blank %}
+	{% assign related_items_all = product.metafields.customAttribute.related_products %}
+{% endif %}
+
+{%- if section.settings.show_related_products and related_items_all != blank -%}
+  <section class="section" data-section-id="{{ section.id }}" data-section-type="product-recommendations" data-section-settings='{{ section_settings }}'>
+    <div class="container">
+      {%- if section.settings.heading != blank -%}
+        <header class="section__header">
+          <h2 class="section__title heading h3">{{ section.settings.heading | escape }}</h2>
+        </header>
+      {%- endif -%}
+
+      <div class="product-related">
+        {%- if related_items_all != blank -%}
+          <div class="scroller">
+            <div class="scroller__inner">
+              <div class="product-list product-list--vertical product-list--scrollable">
+
+                  {% assign related_products = related_items_all | split: ';' | uniq %}
+                  {%- for item in related_products -%}
+                	{% assign item_handle = item | strip %}
+                    {%- assign related_product = all_products[item_handle] -%}
+
+                	{% if section.settings.show_sold_out or upsell_product.available %}
+                      {%- unless related_product.empty? -%}
+                        {%- render 'product-item', product: related_product, grid_classes: '1/4--lap 1/5--desk 1/5--wide', show_add_to_cart: section.settings.show_quick_buy -%}
+                      {%- endunless -%}
+                	{% endif %}
+                  {%- endfor -%}
+              </div>
+            </div>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+
+    {%- comment -%}
+    --------------------------------------------------------------------------------------
+    QUICK VIEW CONTAINER
+    --------------------------------------------------------------------------------------
+    {%- endcomment -%}
+
+    <div id="modal-quick-view-{{ section.id }}" class="modal quick-view-product-modal" aria-hidden="true">
+      <div class="modal__dialog modal__dialog--stretch" role="dialog">
+        <button class="modal__close link" data-action="close-modal" title="{{ 'general.accessibility.close' | t | escape }}">
+          {%- render 'icon', icon: 'close' -%}
+        </button>
+
+        <div class="modal__loader">
+          {%- render 'icon', icon: 'search-loader' -%}
+        </div>
+
+        <div class="modal__inner"></div>
+      </div>
+    </div>
+  </section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Related Products",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_related_products",
+      "label": "Show dynamic Related Products",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "You may also like"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_quick_buy",
+      "label": "Show quick buy",
+      "default": true
+    },
+	{
+      "type": "checkbox",
+      "id": "show_sold_out",
+      "label": "Show Sold out Products",
+      "default": true,
+	 "info": "show sold out items also"
+    }
+  ]
+}
+{% endschema %}

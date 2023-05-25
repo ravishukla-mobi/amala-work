@@ -1,0 +1,68 @@
+{%- liquid
+    assign check_mindful_banner = false
+    for collection in product.collections
+        if collection.handle == 'mindful-eating'
+            assign check_mindful_banner = true
+        endif
+    endfor
+-%}
+
+{% if section.settings.show-desktop-subscription-banner %}
+    <div class="banner-pdp-newsletter">
+      <div class="collection_subscription_topbanner">
+        {% if section.settings.pdp_banner_img_desktop != blank and check_mindful_banner == false %}
+        <div class="collection_banner_image-wrapper{% if section.settings.pdp_banner_img_mob != blank %} pdp-banner-desk{% endif %}">
+          <div class="collection__banner-image lazyload image--fade-in" data-bg="{{ section.settings.pdp_banner_img_desktop | img_url: '1100x' }}" style="padding-top: {{ 1 | divided_by: section.settings.pdp_banner_img_desktop.aspect_ratio | times: 100 }}%;"></div>
+        </div>
+        {% endif %}
+        {% if section.settings.pdp_banner_img_mob != blank and check_mindful_banner == false %}
+        <div class="collection_banner_image-wrapper{% if section.settings.pdp_banner_img_desktop != blank %} pdp-banner-mob{% endif %}">
+          <div class="collection__banner-image lazyload image--fade-in" data-bg="{{ section.settings.pdp_banner_img_mob | img_url: '1100x' }}" style="padding-top: {{ 1 | divided_by: section.settings.pdp_banner_img_mob.aspect_ratio | times: 100 }}%;"></div>
+        </div>
+        {% endif %}
+        {% if section.settings.pdp_banner_mindful_img_desktop != blank and check_mindful_banner == true %}
+          <div class="collection_banner_image-wrapper{% if section.settings.pdp_banner_mindful_img_mob != blank %} pdp-banner-desk mindful_popup_subscription{% endif %}">
+            <div class="collection__banner-image lazyload image--fade-in" data-bg="{{ section.settings.pdp_banner_mindful_img_desktop | img_url: '1100x' }}" style="padding-top: {{ 1 | divided_by: section.settings.pdp_banner_mindful_img_desktop.aspect_ratio | times: 100 }}%;"></div>
+          </div>
+        {% endif %}
+        {% if section.settings.pdp_banner_mindful_img_mob != blank and check_mindful_banner == true %}
+          <div class="collection_banner_image-wrapper{% if section.settings.pdp_banner_mindful_img_desktop != blank %} pdp-banner-mob mindful_popup_subscription{% endif %}">
+            <div class="collection__banner-image lazyload image--fade-in" data-bg="{{ section.settings.pdp_banner_mindful_img_mob | img_url: '1100x' }}" style="padding-top: {{ 1 | divided_by: section.settings.pdp_banner_mindful_img_mob.aspect_ratio | times: 100 }}%;"></div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+{% endif %}
+{% schema %}
+{
+    "name": "Subscribe Now Banner",
+    "settings": [
+        {
+            "type": "checkbox",
+            "id": "show-desktop-subscription-banner",
+            "label": "Show Subscription Banner in PDP",
+            "default": true
+        },
+        {
+            "type": "image_picker",
+            "id": "pdp_banner_img_desktop",
+            "label": "PDP Desktop Banner image"
+        },
+        {
+            "type": "image_picker",
+            "id": "pdp_banner_img_mob",
+            "label": "PDP Mobile Banner image"
+        },
+        {
+            "type": "image_picker",
+            "id": "pdp_banner_mindful_img_desktop",
+            "label": "Mindful Eating Desktop Banner image"
+        },
+        {
+            "type": "image_picker",
+            "id": "pdp_banner_mindful_img_mob",
+            "label": "Mindful Eating Mobile Banner image"
+        }
+    ]
+}
+{% endschema %}

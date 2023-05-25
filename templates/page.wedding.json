@@ -1,0 +1,852 @@
+{
+  "sections": {
+    "80e1063d-cb22-4cb5-864e-8c83bf2f7612": {
+      "type": "page-navigation",
+      "settings": {}
+    },
+    "festival-landings-page": {
+      "type": "main-banner",
+      "settings": {
+        "banner_desktop_image": "shopify:\/\/shop_images\/Wedding_Banner_1920x600_52736d99-3b6b-4efc-9ab1-786b020077b0.jpg",
+        "banner_mobile_image": "shopify:\/\/shop_images\/wedding_page_mobile_banner.jpg",
+        "desktop_banner_title": "",
+        "color_heading": "#ffffff",
+        "desktop_banner_subtitle": "",
+        "color_subheading": "#b89c7d",
+        "desktop_banner_button": "",
+        "color_button": "#ffffff",
+        "button_background": "#9d7242",
+        "desktop_button_url": "https:\/\/amala.earth\/collections\/wedding-gifts-and-returns",
+        "desktop_image_url": "https:\/\/amala.earth\/collections\/wedding-gifts-and-returns"
+      }
+    },
+    "6c3ffd28-8866-4dd6-9319-f9af612a844d": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "fd40d4c2-778f-4c6e-8439-f91d0cca0f4f": {
+          "type": "Product",
+          "settings": {
+            "product": "kavana-festive-wear-for-women-linen-saree-embroidered-red-js01-141022"
+          }
+        },
+        "1f4ed279-9348-43b8-8525-32c399e15956": {
+          "type": "Product",
+          "settings": {
+            "product": "seed-hamper-zero-preservative-miniatures-seeds-gift-hamper-pack-of-9"
+          }
+        },
+        "0d21cca3-26ec-4c77-9e8d-6da6b523cb25": {
+          "type": "Product",
+          "settings": {
+            "product": "natural-vibes-skin-care-gift-set-face-roller-gua-sha-flower-oil-pack-of-3-nv_gift_rose_toolcombo_oil-270922"
+          }
+        },
+        "83f32ab0-e17f-484f-a0fd-838184a407df": {
+          "type": "Product",
+          "settings": {
+            "product": "boond-fragrances-best-wedding-gifts-petrichor-and-jasmine-perfume-attar-gift-box-sitara01_gifts_wgr-261022"
+          }
+        },
+        "e1925f3f-1786-4cd4-aa3f-72427a8f9ba7": {
+          "type": "Product",
+          "settings": {
+            "product": "ikeda-designs-cotton-crop-top-lehenga-set-white-yellow-idfg109yo-15722"
+          }
+        },
+        "d9cf6136-fcb3-498e-a252-d89e485bb2da": {
+          "type": "Product",
+          "settings": {
+            "product": "healthy-gifts-natural-evening-hazelnut-hamper-set-of-6"
+          }
+        },
+        "381da2b8-7d7d-4ebc-8e6f-24ac5875bda2": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-peach-printed-flats-for-women"
+          }
+        },
+        "ea217874-c9bc-4e2b-93e0-fdb26093d690": {
+          "type": "Product",
+          "settings": {
+            "product": "myra-veda-best-wedding-gifts-heritage-gift-hamper-pack-of-8-mvdgh-6_wgr-031122"
+          }
+        },
+        "99d41f21-b87c-44b7-bda9-75db21b709c5": {
+          "type": "Product",
+          "settings": {
+            "product": "prashast-glass-beads-necklace-multi-layered-blue-white-p-ac-70-30922"
+          }
+        }
+      },
+      "block_order": [
+        "fd40d4c2-778f-4c6e-8439-f91d0cca0f4f",
+        "1f4ed279-9348-43b8-8525-32c399e15956",
+        "0d21cca3-26ec-4c77-9e8d-6da6b523cb25",
+        "83f32ab0-e17f-484f-a0fd-838184a407df",
+        "e1925f3f-1786-4cd4-aa3f-72427a8f9ba7",
+        "d9cf6136-fcb3-498e-a252-d89e485bb2da",
+        "381da2b8-7d7d-4ebc-8e6f-24ac5875bda2",
+        "ea217874-c9bc-4e2b-93e0-fdb26093d690",
+        "99d41f21-b87c-44b7-bda9-75db21b709c5"
+      ],
+      "settings": {
+        "title1": "Earth-Friendly",
+        "title2": "offers",
+        "logged_in": false,
+        "products_count": 78,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/wedding-gifts-and-returns?f_Discount=1+-+25,50+-+100,25+-+50",
+        "button_position": "top"
+      }
+    },
+    "3ce8650f-ee5d-4ec2-8c3e-43b4fde36a2f": {
+      "type": "custom-grid",
+      "blocks": {
+        "9f57f552-0ea6-4e2b-8b7a-a4f12d36551b": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/category.jpg",
+            "title": "Artisanal clothing",
+            "block_button_url": "https:\/\/amala.earth\/collections\/wedding-clothing"
+          }
+        },
+        "46dcfbea-f442-422a-8f61-c28429a2d9a2": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/Concerns-D-2.png",
+            "title": "Handmade accessories",
+            "block_button_url": "https:\/\/amala.earth\/collections\/wedding-jewellery-footwear"
+          }
+        },
+        "4ba4ea05-4dcd-44b1-8e66-b2e11c1d8eca": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/Concerns-D-3.png",
+            "title": "Mindful food",
+            "block_button_url": "https:\/\/amala.earth\/collections\/wedding-food"
+          }
+        },
+        "bad5f3ff-9274-4267-9c3e-9a6deba99ea1": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/Concerns-D-4.png",
+            "title": "Organic makeup",
+            "block_button_url": "https:\/\/amala.earth\/collections\/wedding-beauty-glow"
+          }
+        },
+        "adb9e735-9398-4722-9a2d-a10e739bacf6": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/Concerns-D-5.png",
+            "title": "Wedding gifts",
+            "block_button_url": "https:\/\/amala.earth\/collections\/wedding-gifting"
+          }
+        },
+        "9d8a0cc5-207d-4537-b54a-dd1666611f34": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/Concerns-D-6.png",
+            "title": "Tokens of Appreciation",
+            "block_button_url": "https:\/\/amala.earth\/collections\/wedding-favours"
+          }
+        }
+      },
+      "block_order": [
+        "9f57f552-0ea6-4e2b-8b7a-a4f12d36551b",
+        "46dcfbea-f442-422a-8f61-c28429a2d9a2",
+        "4ba4ea05-4dcd-44b1-8e66-b2e11c1d8eca",
+        "bad5f3ff-9274-4267-9c3e-9a6deba99ea1",
+        "adb9e735-9398-4722-9a2d-a10e739bacf6",
+        "9d8a0cc5-207d-4537-b54a-dd1666611f34"
+      ],
+      "settings": {
+        "subtitle": "",
+        "title": ""
+      }
+    },
+    "7148a954-d95c-483a-9aed-5f0f443b2075": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "f8d58b91-b19b-4f92-bd6c-240d4a5a162b": {
+          "type": "Product",
+          "settings": {
+            "product": "the-right-cut-pre-stitched-saree-cotton-chanderi-green-trcf030-21922"
+          }
+        },
+        "7c8ce166-5ed6-43fd-9c5e-4438e69b6580": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-tangerine-tissue-silk-ensemble-with-dual-toned-silk-chanderi-dupatta"
+          }
+        },
+        "6e0e5c61-1147-4b3f-ba76-5f9e71cfcb50": {
+          "type": "Product",
+          "settings": {
+            "product": "pure-cotton-red-printed-kurta"
+          }
+        },
+        "8eb9e142-ada2-445b-a6d6-076ac597cd49": {
+          "type": "Product",
+          "settings": {
+            "product": "vintage-loom-hand-embroidered-kota-doria-suit-set-yellow-vl-sf22kpd32-mustard-yellow-090822"
+          }
+        },
+        "a536670b-d426-4311-995d-9d624a4cfec5": {
+          "type": "Product",
+          "settings": {
+            "product": "ira-handwoven-cotton-saree-with-jamdani-motifs-red-ira065-5922"
+          }
+        },
+        "059dc22d-bbed-4073-bf89-9afa1c2550f0": {
+          "type": "Product",
+          "settings": {
+            "product": "vaaya-slub-cotton-tunic-with-pants-pink-encottam01-23822"
+          }
+        },
+        "3f6f2e98-82f3-4c34-9a74-44c9755b7e88": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "saphed-linen-kurta-set-multicolour-060728a-s-21122"
+          }
+        },
+        "b987b0d4-488d-4aca-b210-012bd665435c": {
+          "type": "Product",
+          "settings": {
+            "product": "kavana-linen-saree-mustard-tsoss08-29822"
+          }
+        },
+        "2a001bf8-0c0a-4e23-b0b9-30d2c6834f96": {
+          "type": "Product",
+          "settings": {
+            "product": "cotton-silk-saree-yellow-gnch"
+          }
+        },
+        "9159a88a-8176-4edc-bf3c-b8016c820ee2": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "hyaluronic-oat-amino-acid-moisturiser-50-g"
+          }
+        }
+      },
+      "block_order": [
+        "f8d58b91-b19b-4f92-bd6c-240d4a5a162b",
+        "7c8ce166-5ed6-43fd-9c5e-4438e69b6580",
+        "6e0e5c61-1147-4b3f-ba76-5f9e71cfcb50",
+        "8eb9e142-ada2-445b-a6d6-076ac597cd49",
+        "a536670b-d426-4311-995d-9d624a4cfec5",
+        "059dc22d-bbed-4073-bf89-9afa1c2550f0",
+        "3f6f2e98-82f3-4c34-9a74-44c9755b7e88",
+        "b987b0d4-488d-4aca-b210-012bd665435c",
+        "2a001bf8-0c0a-4e23-b0b9-30d2c6834f96",
+        "9159a88a-8176-4edc-bf3c-b8016c820ee2"
+      ],
+      "settings": {
+        "title1": "Artisanal",
+        "title2": "clothing",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/wedding-clothing",
+        "button_position": "top"
+      }
+    },
+    "7e727bcc-acea-4a68-bf80-27371ae6d902": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "c48fc1bc-5aa8-495a-9c7e-080f491621f5": {
+          "type": "Product",
+          "settings": {
+            "product": "the-date-house-wedding-return-gifts-natural-evening-hazelnut-hamper-set-of-4-tdh182_gifts_wgr-261022"
+          }
+        },
+        "3236e110-6734-4bb4-b349-a468b6a2fe78": {
+          "type": "Product",
+          "settings": {
+            "product": "the-india-craft-project-wedding-gift-for-friend-festive-gift-box-set-yellow-blue-va_gf_01a_wgr-261022"
+          }
+        },
+        "45c49ccf-a090-4093-bc1c-f1fa6114aa75": {
+          "type": "Product",
+          "settings": {
+            "product": "wedding-return-gifts-food-hamper"
+          }
+        },
+        "4ae424f7-1f42-4b80-bce9-5d09ddce85db": {
+          "type": "Product",
+          "settings": {
+            "product": "niana-wedding-gifts-for-couples-soy-wax-floral-scented-candles-set-of-3-nia_flc_gifts_wgr-261022"
+          }
+        },
+        "31fb0fb1-31fc-4221-b26b-b3e53253464e": {
+          "type": "Product",
+          "settings": {
+            "product": "the-india-craft-project-cardboard-festive-gift-box-white-pa_gf_01-26822"
+          }
+        },
+        "70927f2a-7341-46d8-8531-ecd81dbba1d4": {
+          "type": "Product",
+          "settings": {
+            "product": "the-india-craft-project-scented-candle-with-stand-gift-box-brass-scallop-shaped-zi-br-04-171022"
+          }
+        },
+        "72995800-ecf7-46ec-b2ff-f4be43592e1e": {
+          "type": "Product",
+          "settings": {
+            "product": "all-thats-puja-bridal-chura-haldi-box-pack-of-31-atp27-121022"
+          }
+        },
+        "f89fdc97-793b-4a2b-a68b-ff1e73733321": {
+          "type": "Product",
+          "settings": {
+            "product": "all-thats-puja-haldi-ceremony-box-pack-of-28-atp26-121022"
+          }
+        },
+        "6cea51e5-a84f-4047-a3b9-f6261f8a7aa2": {
+          "type": "Product",
+          "settings": {
+            "product": "boond-fragrances-best-wedding-gifts-petrichor-and-jasmine-perfume-attar-gift-box-sitara01_gifts_wgr-261022"
+          }
+        },
+        "2adff8ad-1882-4d1c-8509-740808a590dd": {
+          "type": "Product",
+          "settings": {
+            "product": "intiki-return-gifts-for-wedding-white-ceramic-bowl-set-of-2-intkdnbw_gifts_wgr-261022"
+          }
+        }
+      },
+      "block_order": [
+        "c48fc1bc-5aa8-495a-9c7e-080f491621f5",
+        "3236e110-6734-4bb4-b349-a468b6a2fe78",
+        "45c49ccf-a090-4093-bc1c-f1fa6114aa75",
+        "4ae424f7-1f42-4b80-bce9-5d09ddce85db",
+        "31fb0fb1-31fc-4221-b26b-b3e53253464e",
+        "70927f2a-7341-46d8-8531-ecd81dbba1d4",
+        "72995800-ecf7-46ec-b2ff-f4be43592e1e",
+        "f89fdc97-793b-4a2b-a68b-ff1e73733321",
+        "6cea51e5-a84f-4047-a3b9-f6261f8a7aa2",
+        "2adff8ad-1882-4d1c-8509-740808a590dd"
+      ],
+      "settings": {
+        "title1": "Wedding",
+        "title2": "gifts",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/wedding-gifting",
+        "button_position": "top"
+      }
+    },
+    "a1604e37-d042-44e6-9b55-11075920a20e": {
+      "type": "amala-earth-curation",
+      "blocks": {
+        "d29be58d-9a18-4d9c-802c-ce5223ad72f2": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/FOR_THE_BRIDE_DESKTOP_1.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/curation_mobile_FOR_THE_BRIDE_1.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/bride"
+          }
+        },
+        "21dd7f79-1fa1-4a22-9659-917723e4de27": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/1.1.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/1_png.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/groom"
+          }
+        },
+        "b5063a29-7aa8-4e07-bc10-0d7af36b505d": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/2.2_1.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/Conscious_-M-3_1.png",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/family"
+          }
+        },
+        "41f6e6e5-7bef-4b43-9c80-9cf32f494d5c": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/3.3.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/3_b34ca64b-efd7-4269-8735-199f1846ceec.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/pooja-essentials"
+          }
+        }
+      },
+      "block_order": [
+        "d29be58d-9a18-4d9c-802c-ce5223ad72f2",
+        "21dd7f79-1fa1-4a22-9659-917723e4de27",
+        "b5063a29-7aa8-4e07-bc10-0d7af36b505d",
+        "41f6e6e5-7bef-4b43-9c80-9cf32f494d5c"
+      ],
+      "settings": {
+        "curation_heading1": "Shop by",
+        "curation_sub_heading2": "curations"
+      }
+    },
+    "2bd14898-d935-4349-9e83-f4372de58bf7": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "65342066-f6a1-4e0c-8a31-266b1fa66266": {
+          "type": "Product",
+          "settings": {
+            "product": "kavana-festive-wear-for-women-linen-saree-embroidered-red-js01-141022"
+          }
+        },
+        "faa1f530-a28e-4eb8-8189-0c3ca401d56f": {
+          "type": "Product",
+          "settings": {
+            "product": "moirra-mang-tika-maroon-gold-mp02-271022"
+          }
+        },
+        "056f647c-c1d7-437e-8233-11c3955d3f53": {
+          "type": "Product",
+          "settings": {
+            "product": "saphed-festive-wear-for-women-linen-kurta-set-panelled-lime-green-051327b-s-m-21122"
+          }
+        },
+        "80820f18-87a0-4a91-af2a-5729f89510de": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "tamaksh-banarasi-silk-nehru-jacket-purple-brc-m-j-p-7922"
+          }
+        },
+        "53a0122f-376d-440e-92b6-8d797cb6f8bd": {
+          "type": "Product",
+          "settings": {
+            "product": "potli-bag-silk-fabric-copper-scpb003-31022"
+          }
+        },
+        "3d2810cb-434f-4ca9-8841-628f6fd11487": {
+          "type": "Product",
+          "settings": {
+            "product": "handwoven-purple-pure-linen-chitrangada-saree"
+          }
+        },
+        "dd81d6c2-b03a-4387-9f4e-85e9163ea1d5": {
+          "type": "Product",
+          "settings": {
+            "product": "paaduks-vegan-leather-mules-embroidered-gold-pd159w-36-26922"
+          }
+        },
+        "921b513b-2d8f-4b96-b6d8-405820cd4e1a": {
+          "type": "Product",
+          "settings": {
+            "product": "saphed-festive-wear-for-women-linen-kurta-set-multicolour-051428b-s-m-21122"
+          }
+        },
+        "d9316e50-997c-4f71-b34f-f532012be4d3": {
+          "type": "Product",
+          "settings": {
+            "product": "moirra-earrings-grey-gold-e95-271022"
+          }
+        },
+        "9edbd3e8-003d-45f7-88ab-4fcec7c532a3": {
+          "type": "Product",
+          "settings": {
+            "product": "the-august-co-festive-wear-for-women-cotton-silk-kurta-set-with-dupatta-embroidered-red-aa20668aa-71022"
+          }
+        }
+      },
+      "block_order": [
+        "65342066-f6a1-4e0c-8a31-266b1fa66266",
+        "faa1f530-a28e-4eb8-8189-0c3ca401d56f",
+        "056f647c-c1d7-437e-8233-11c3955d3f53",
+        "80820f18-87a0-4a91-af2a-5729f89510de",
+        "53a0122f-376d-440e-92b6-8d797cb6f8bd",
+        "3d2810cb-434f-4ca9-8841-628f6fd11487",
+        "dd81d6c2-b03a-4387-9f4e-85e9163ea1d5",
+        "921b513b-2d8f-4b96-b6d8-405820cd4e1a",
+        "d9316e50-997c-4f71-b34f-f532012be4d3",
+        "9edbd3e8-003d-45f7-88ab-4fcec7c532a3"
+      ],
+      "settings": {
+        "title1": "Curations",
+        "title2": "for the bride",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/bride",
+        "button_position": "top"
+      }
+    },
+    "599fb9d5-a3b4-4dd1-a141-eef20c6845ef": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "14130e83-6507-434f-b50b-e3373c61191b": {
+          "type": "Product",
+          "settings": {
+            "product": "tamaksh-banarasi-silk-nehru-jacket-purple-brc-m-j-p-7922"
+          }
+        },
+        "688c4a65-86c2-42f4-9334-ed326693da45": {
+          "type": "Product",
+          "settings": {
+            "product": "beige-neem-wood-grooming-kit-set-of-6"
+          }
+        },
+        "b64a0e63-5167-4ddc-87e6-a545db26fa90": {
+          "type": "Product",
+          "settings": {
+            "product": "pure-cotton-green-handblock-printed-kurta-1"
+          }
+        },
+        "e5c71f4c-9ece-4007-9f05-d0726ff0a62e": {
+          "type": "Product",
+          "settings": {
+            "product": "saphed-linen-kurta-set-multicolour-060728a-s-21122"
+          }
+        },
+        "77fd30f6-7039-489c-b5d1-ea93f2ba57f5": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-pinatex-hemp-black-bow-tie"
+          }
+        },
+        "3b627a98-e96a-4567-a46b-b999aff61fbb": {
+          "type": "Product",
+          "settings": {
+            "product": "gifts-for-him-natural-perfume-tabac-stress-relief-scent-50ml"
+          }
+        },
+        "c08f83b7-f2d8-485f-8371-5393fdf26dd3": {
+          "type": "Product",
+          "settings": {
+            "product": "tamaksh-banarasi-silk-nehru-jacket-purple-brc-m-j-p-7922"
+          }
+        },
+        "7f93e4de-8586-40c8-9e23-9fb584271163": {
+          "type": "Product",
+          "settings": {
+            "product": "kalp-cotton-block-print-kurta-grey-kk552-080822"
+          }
+        },
+        "13e2cc4d-7f23-41e9-aa75-a1f8a1037324": {
+          "type": "Product",
+          "settings": {
+            "product": "bow-square-linen-mens-nehru-jacket-blue-bs22lnjk0002-131222"
+          }
+        }
+      },
+      "block_order": [
+        "14130e83-6507-434f-b50b-e3373c61191b",
+        "688c4a65-86c2-42f4-9334-ed326693da45",
+        "b64a0e63-5167-4ddc-87e6-a545db26fa90",
+        "e5c71f4c-9ece-4007-9f05-d0726ff0a62e",
+        "77fd30f6-7039-489c-b5d1-ea93f2ba57f5",
+        "3b627a98-e96a-4567-a46b-b999aff61fbb",
+        "c08f83b7-f2d8-485f-8371-5393fdf26dd3",
+        "7f93e4de-8586-40c8-9e23-9fb584271163",
+        "13e2cc4d-7f23-41e9-aa75-a1f8a1037324"
+      ],
+      "settings": {
+        "title1": "Curations",
+        "title2": "for the groom",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/groom",
+        "button_position": "top"
+      }
+    },
+    "0ff19b5e-62df-4104-8515-a3ad593dcdf3": {
+      "type": "consious-journey",
+      "blocks": {
+        "a81226bf-54c7-41ed-97b6-f54b462297a4": {
+          "type": "Consious",
+          "settings": {
+            "consious_banner_desktop": "shopify:\/\/shop_images\/CJ-deskyop-5.png",
+            "consious_banner_mobile": "shopify:\/\/shop_images\/CJ-mobile-5.png",
+            "title": "UPCYCLED DECOR",
+            "url_link": "https:\/\/amala.earth\/collections\/wedding-upcycled"
+          }
+        },
+        "0103534f-0263-47c8-a2f4-b187d3612737": {
+          "type": "Consious",
+          "settings": {
+            "consious_banner_desktop": "shopify:\/\/shop_images\/CJ-deskyop-2.png",
+            "consious_banner_mobile": "shopify:\/\/shop_images\/CJ-mobile-3.png",
+            "title": "GREEN GIFTING",
+            "url_link": "https:\/\/amala.earth\/collections\/wedding-gifting"
+          }
+        },
+        "dca97d33-d3cc-4cbf-a267-b0d865007813": {
+          "type": "Consious",
+          "disabled": true,
+          "settings": {
+            "consious_banner_desktop": "shopify:\/\/shop_images\/CJ-deskyop-3.png",
+            "consious_banner_mobile": "shopify:\/\/shop_images\/CJ-mobile-2.png",
+            "title": "ARTISAN LED",
+            "url_link": "https:\/\/amala.earth\/collections\/wedding-artisan-led"
+          }
+        },
+        "93d314ea-af3f-488e-b8c0-ddf7c4a0aea1": {
+          "type": "Consious",
+          "disabled": true,
+          "settings": {
+            "consious_banner_desktop": "shopify:\/\/shop_images\/CJ-deskyop-4.png",
+            "consious_banner_mobile": "shopify:\/\/shop_images\/CJ-mobile-1.png",
+            "title": "HANDMADE",
+            "url_link": "https:\/\/amala.earth\/collections\/wedding-handmade"
+          }
+        }
+      },
+      "block_order": [
+        "a81226bf-54c7-41ed-97b6-f54b462297a4",
+        "0103534f-0263-47c8-a2f4-b187d3612737",
+        "dca97d33-d3cc-4cbf-a267-b0d865007813",
+        "93d314ea-af3f-488e-b8c0-ddf7c4a0aea1"
+      ],
+      "settings": {
+        "consious_heading1": "Start your",
+        "consious_sub_heading2": "conscious journey"
+      }
+    },
+    "a7ea0487-7e3a-4b47-a708-8bb88a506e59": {
+      "type": "blog-posts-carousel",
+      "blocks": {
+        "e030cd63-9da3-4563-864d-74b6b6e62a30": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Blogs-D-1.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/handloom-sarees-you-must-consider-this-festive-season",
+            "title": "Handloom Sarees You Must Consider this Festive Season"
+          }
+        },
+        "2e4f2e1f-0b41-4e0a-81c4-87c6000e864a": {
+          "type": "blog",
+          "disabled": true,
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Rectangle_219.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/non-toxic-cookware-types-and-brands",
+            "title": "Non-toxic cookware: Types and brands"
+          }
+        },
+        "e3bbb9f0-8c3b-4247-9abe-80373ac4a94c": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Blogs-D-3.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/celebrate-this-festive-season-with-sustainable-pooja-essentials",
+            "title": "Celebrate this Festive Season with Sustainable Pooja Essentials"
+          }
+        },
+        "d755903b-8620-4fbd-a113-8404281f35f1": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Blogs-D-4.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/how-to-gradually-adopt-a-clean-beauty-routine",
+            "title": "How to Gradually Adopt A Clean Beauty Routine"
+          }
+        },
+        "f7883cfd-14da-4a4b-80f6-5418ecdf8110": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Blogs-D-2.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/eco-friendly-jewellery-to-shine-bright-this-festive-season",
+            "title": "Copper, Clay And Stoneware: The Ayurvedic Approach To A Sustainable Future"
+          }
+        },
+        "49bc4d51-8a54-4fa6-9506-b04db4416416": {
+          "type": "blog",
+          "disabled": true,
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Rectangle_219_1.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/healthy-reasons-to-cook-and-eat-in-kansa-utensils",
+            "title": "Healthy Reasons to Cook and Eat in Kansa Utensils"
+          }
+        },
+        "f97b7cdf-bff0-48a9-8c92-f5f16852b186": {
+          "type": "blog",
+          "disabled": true,
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Why_Should_You_Choose_Sustainable_Ethical_Sleepwear.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/why-should-you-choose-sustainable-ethical-sleepwear",
+            "title": "Why Should You Choose Sustainable, Ethical Sleepwear?"
+          }
+        },
+        "49516805-9e1a-42ad-9b61-decac6393814": {
+          "type": "blog",
+          "disabled": true,
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/A_Modern_Man_s_Guide_To_Sustainable_Fashion.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/a-modern-mans-guide-to-sustainable-fashion",
+            "title": "A Modern Man's Guide To Sustainable Fashion"
+          }
+        }
+      },
+      "block_order": [
+        "e030cd63-9da3-4563-864d-74b6b6e62a30",
+        "2e4f2e1f-0b41-4e0a-81c4-87c6000e864a",
+        "e3bbb9f0-8c3b-4247-9abe-80373ac4a94c",
+        "d755903b-8620-4fbd-a113-8404281f35f1",
+        "f7883cfd-14da-4a4b-80f6-5418ecdf8110",
+        "49bc4d51-8a54-4fa6-9506-b04db4416416",
+        "f97b7cdf-bff0-48a9-8c92-f5f16852b186",
+        "49516805-9e1a-42ad-9b61-decac6393814"
+      ],
+      "settings": {
+        "heading_one": "Recent",
+        "heading_two": "blogposts",
+        "view_text": "",
+        "url_link": ""
+      }
+    },
+    "41014bac-ea4d-4b27-8c03-52bef9fe55fe": {
+      "type": "landing-page-video",
+      "blocks": {
+        "9770c9aa-57b2-42fb-89ed-b39443515912": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/1ARvKobDTx8",
+            "image": "shopify:\/\/shop_images\/video_blogs-3.png",
+            "title": "Skincare & Selfcare Rituals with Sustainable products ft. Vasudha Rai|Amala Earth\"",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "8ca15421-ba45-427c-8190-b359be131cbc": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/am2wMIIafl0",
+            "image": "shopify:\/\/shop_images\/video_blogs.png",
+            "title": "Shop Natural Makeup Products Online - Amala Earth",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "84bb1ceb-f46d-41d6-b337-d61f90609772": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/Eqr4nM7fUOk",
+            "image": "shopify:\/\/shop_images\/video_blogs-1_1.png",
+            "title": "Mindful Eating | Organic Food Range For Healthy Living - Amala Earth",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "5f1064ed-195f-4b18-a177-6f541dc17ce1": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/1Q5RJqGxzyo",
+            "image": "shopify:\/\/shop_images\/Zero_Waste_Festive_Decorations_for_Sustainable_Living___Amala_Earth_4b7ff266-866e-49de-8b3c-a7b5ae091f00.png",
+            "title": "Zero Waste Festive Decorations for Sustainable Living | Amala Earth",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "880899d6-ad8c-49e9-933e-aada13519725": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/1kSFAadikCE",
+            "image": "shopify:\/\/shop_images\/Minimising_Waste_at_Home_-_Live_Session_with_Vani_Murthy_and_Jia_Singh_6d337a1b-32f8-45cb-a99a-5bd47ac78934.png",
+            "title": "Minimising Waste at Home - Live Session with Vani Murthy and Jia Singh",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "d268173e-ca11-4947-ae9b-86b41bdc16fe": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtube.com\/watch?v=fYCTdaYSUHE",
+            "image": "shopify:\/\/shop_images\/Table_Set_up_with_Ceramics____Amala_Earth_7f715d24-8fc2-486c-949b-ed8a50514957.png",
+            "title": "Table Set up with Ceramics \/\/ Amala Earth",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "c52f85ba-2571-42d6-9870-78e1d05413a4": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/hhhRgHsamAE",
+            "title": "Shop Organic, Chemical-free Men's Grooming Products Range - Amala Earth.",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        }
+      },
+      "block_order": [
+        "9770c9aa-57b2-42fb-89ed-b39443515912",
+        "8ca15421-ba45-427c-8190-b359be131cbc",
+        "84bb1ceb-f46d-41d6-b337-d61f90609772",
+        "5f1064ed-195f-4b18-a177-6f541dc17ce1",
+        "880899d6-ad8c-49e9-933e-aada13519725",
+        "d268173e-ca11-4947-ae9b-86b41bdc16fe",
+        "c52f85ba-2571-42d6-9870-78e1d05413a4"
+      ],
+      "settings": {
+        "video_title1": "Video",
+        "video_title2": "blogs",
+        "btn_text": "",
+        "url_link": ""
+      }
+    }
+  },
+  "order": [
+    "80e1063d-cb22-4cb5-864e-8c83bf2f7612",
+    "festival-landings-page",
+    "6c3ffd28-8866-4dd6-9319-f9af612a844d",
+    "3ce8650f-ee5d-4ec2-8c3e-43b4fde36a2f",
+    "7148a954-d95c-483a-9aed-5f0f443b2075",
+    "7e727bcc-acea-4a68-bf80-27371ae6d902",
+    "a1604e37-d042-44e6-9b55-11075920a20e",
+    "2bd14898-d935-4349-9e83-f4372de58bf7",
+    "599fb9d5-a3b4-4dd1-a141-eef20c6845ef",
+    "0ff19b5e-62df-4104-8515-a3ad593dcdf3",
+    "a7ea0487-7e3a-4b47-a708-8bb88a506e59",
+    "41014bac-ea4d-4b27-8c03-52bef9fe55fe"
+  ]
+}

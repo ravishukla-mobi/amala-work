@@ -1,0 +1,531 @@
+{
+  "sections": {
+    "festival-landings-page": {
+      "type": "main-banner",
+      "custom_css": [
+        ".festive-banner {margin-bottom: 100px;}"
+      ],
+      "settings": {
+        "banner_desktop_image": "shopify:\/\/shop_images\/cover_181517c3-f247-4893-a7d6-a51f6c248456.jpg",
+        "banner_mobile_image": "shopify:\/\/shop_images\/cover_2613b72e-ec03-4335-8894-278943c5c4f3.jpg",
+        "desktop_banner_title": "",
+        "color_heading": "#ffffff",
+        "desktop_banner_subtitle": "",
+        "color_subheading": "#b89c7d",
+        "desktop_banner_button": "",
+        "color_button": "#ffffff",
+        "button_background": "#9d7242",
+        "desktop_button_url": "https:\/\/amala.earth\/collections\/vegan-food-and-beauty",
+        "desktop_image_url": "https:\/\/amala.earth\/collections\/vegan-food-and-beauty"
+      }
+    },
+    "c3d018c2-4d99-4198-8d2b-86489c4d84a3": {
+      "type": "circular-image-grid",
+      "disabled": true,
+      "blocks": {
+        "be0eadc9-c04d-48c0-b132-11ef2970341a": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/1_f5a3ea89-035a-4142-b964-3568594db68a.png",
+            "block_two_subtitle": "",
+            "title": "",
+            "second_block_url": ""
+          }
+        },
+        "17ff9549-76ba-4d90-88e6-e8b52d8b2db9": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/2_d1698bb2-40c0-4450-a769-aeb7c9e103ce.png",
+            "block_two_subtitle": "",
+            "title": "",
+            "second_block_url": ""
+          }
+        },
+        "ac5fcdec-1da6-474c-91ab-1805ce88bd0b": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/3_03177f75-0d5c-4b72-9817-1826b3d17bca.png",
+            "block_two_subtitle": "",
+            "title": "",
+            "second_block_url": ""
+          }
+        },
+        "8b174933-6f42-4069-abf4-2a33dffdb3d5": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/4_36c19724-23fa-442a-a04d-4c30b6cd564e.png",
+            "block_two_subtitle": "",
+            "title": "",
+            "second_block_url": ""
+          }
+        },
+        "a6023513-e0c6-4606-936e-34129ea496b7": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/5_86d00c7b-1494-4441-977c-a608b12b4d28.png",
+            "block_two_subtitle": "",
+            "title": "",
+            "second_block_url": ""
+          }
+        },
+        "5a7e97fe-67d1-4c33-b809-d30fd3d70aaa": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/6_b618b709-4094-4e13-8679-8d2d8e8df57c.png",
+            "block_two_subtitle": "",
+            "title": "",
+            "second_block_url": ""
+          }
+        },
+        "dba30166-4a79-4376-ad7d-8abdaf200e17": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/7_80847587-a6d2-486c-973c-d6bbaaa70400.png",
+            "block_two_subtitle": "",
+            "title": "",
+            "second_block_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "be0eadc9-c04d-48c0-b132-11ef2970341a",
+        "17ff9549-76ba-4d90-88e6-e8b52d8b2db9",
+        "ac5fcdec-1da6-474c-91ab-1805ce88bd0b",
+        "8b174933-6f42-4069-abf4-2a33dffdb3d5",
+        "a6023513-e0c6-4606-936e-34129ea496b7",
+        "5a7e97fe-67d1-4c33-b809-d30fd3d70aaa",
+        "dba30166-4a79-4376-ad7d-8abdaf200e17"
+      ],
+      "settings": {
+        "subtitle": "",
+        "title": ""
+      }
+    },
+    "c381ca4a-96e5-4d12-b43c-11887ed8febd": {
+      "type": "amala-earth-curation",
+      "disabled": true,
+      "blocks": {
+        "386b99ef-e7f3-40e7-849d-120650d24207": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/1_1330b146-2636-4a4a-8250-7e8490fa0637.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/2_684bb4c4-9e63-4af4-b0d8-5722db78d397.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": ""
+          }
+        },
+        "1327a060-e5e5-4778-ac77-85a98a9673dc": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/2_fdf7d71d-6d8a-46fb-a8f0-197cafd0ede0.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/1_20a4035f-5aee-490d-8620-54875f173ee8.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": ""
+          }
+        },
+        "89e2cda1-91c5-4978-8805-650af0ac5079": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/3_b2df401d-1fa7-4880-b0e2-87a1fe14744e.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/3_2e618f39-d732-4fca-8726-c0bd68b8263e.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "386b99ef-e7f3-40e7-849d-120650d24207",
+        "1327a060-e5e5-4778-ac77-85a98a9673dc",
+        "89e2cda1-91c5-4978-8805-650af0ac5079"
+      ],
+      "settings": {
+        "curation_heading1": "",
+        "curation_sub_heading2": ""
+      }
+    },
+    "b0671cba-c092-4995-9c47-dbf3c5c04639": {
+      "type": "custom-grid",
+      "blocks": {
+        "c1566235-cd56-4a52-8697-c47154c400c7": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/blog1_f401bc6c-e83b-40a6-9236-46e3f18487cd.jpg",
+            "title": "Vegan Food",
+            "block_button_url": "https:\/\/amala.earth\/collections\/vegan-plant-based-products"
+          }
+        },
+        "f11ee30c-040d-49d5-8221-cdd4dcb566b4": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/blog2_9a2fa1f2-7e0c-4dbe-950e-6ce0510ad429.jpg",
+            "title": "Vegan Beauty",
+            "block_button_url": "https:\/\/amala.earth\/collections\/vegan-beauty"
+          }
+        }
+      },
+      "block_order": [
+        "c1566235-cd56-4a52-8697-c47154c400c7",
+        "f11ee30c-040d-49d5-8221-cdd4dcb566b4"
+      ],
+      "settings": {
+        "subtitle": "",
+        "title": ""
+      }
+    },
+    "1170bbb2-4fb5-4ab6-a031-427182b816ee": {
+      "type": "circular-image-grid",
+      "blocks": {
+        "fcddce99-5922-4cb8-b8c3-d096851c4898": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/1_8ae18517-1678-4159-a65f-5d6c6ec7089e.png",
+            "block_two_subtitle": "",
+            "title": "Supplements",
+            "second_block_url": "https:\/\/amala.earth\/collections\/natural-supplements-and-digestive?f_Shop%20By%20Concern=Vegan%2FPlant+based"
+          }
+        },
+        "713c94c9-f534-4ec6-996e-bce35bbd1278": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/2_6d8a39a2-9248-46a8-9b67-57de8bcf2e5b.png",
+            "block_two_subtitle": "",
+            "title": "Digestives",
+            "second_block_url": "https:\/\/amala.earth\/collections\/natural-supplements-and-digestive?f_Shop%20By%20Concern=Vegan%2FPlant+based"
+          }
+        },
+        "f15f7c92-4568-44f9-acee-94d3cdc55f83": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/3_3443e00b-dd96-407e-8889-0779d0397e4a.png",
+            "block_two_subtitle": "",
+            "title": "Superfoods",
+            "second_block_url": "https:\/\/amala.earth\/collections\/superfoods-and-protein?f_Shop%20By%20Concern=Vegan%2FPlant+based"
+          }
+        },
+        "386feaa6-5a3d-459b-bfd5-ebfe2e6d2a5a": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/4_159262d5-1ad8-42fd-b9e1-3f9ee18ab50e.png",
+            "block_two_subtitle": "",
+            "title": "Cereals",
+            "second_block_url": "https:\/\/amala.earth\/collections\/vegan-plant-based-products?f_Type=Breakfast+Cereals"
+          }
+        },
+        "7f5e4fbb-a0d2-4780-8a6d-6dcbfce5bcf6": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/5_4121a017-0b43-49e8-a6a9-8ffa36a9ca2c.png",
+            "block_two_subtitle": "",
+            "title": "Chocolates",
+            "second_block_url": "https:\/\/amala.earth\/collections\/vegan-plant-based-products?f_Type=Chocolate"
+          }
+        },
+        "569ad5c9-476f-4ed5-8f10-96f400cca936": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/6_ffaff6c8-6318-4a3d-b470-f96a37d1068d.png",
+            "block_two_subtitle": "",
+            "title": "Snacks",
+            "second_block_url": "https:\/\/amala.earth\/collections\/vegan-plant-based-products?f_Type=Snacks"
+          }
+        },
+        "a97fd556-41f1-4864-9d5f-523c9356d7d2": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/7_8bb6b065-3cc4-4387-966e-e3b3f37d413b.png",
+            "block_two_subtitle": "",
+            "title": "Butter",
+            "second_block_url": "https:\/\/amala.earth\/collections\/vegan-plant-based-products?f_Type=Butter"
+          }
+        }
+      },
+      "block_order": [
+        "fcddce99-5922-4cb8-b8c3-d096851c4898",
+        "713c94c9-f534-4ec6-996e-bce35bbd1278",
+        "f15f7c92-4568-44f9-acee-94d3cdc55f83",
+        "386feaa6-5a3d-459b-bfd5-ebfe2e6d2a5a",
+        "7f5e4fbb-a0d2-4780-8a6d-6dcbfce5bcf6",
+        "569ad5c9-476f-4ed5-8f10-96f400cca936",
+        "a97fd556-41f1-4864-9d5f-523c9356d7d2"
+      ],
+      "settings": {
+        "subtitle": "",
+        "title": ""
+      }
+    },
+    "148d2aba-d260-4fe6-8aca-cf377536f93d": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "8c5fa317-47e1-4c61-bda1-a6cb32ba1d45": {
+          "type": "Product",
+          "settings": {
+            "product": "unsweetened-almond-butter-265gm"
+          }
+        },
+        "3f0a9b95-3c20-4304-a944-d2055abd16b2": {
+          "type": "Product",
+          "settings": {
+            "product": "cookies-lemon-jaggery-organic-150-g"
+          }
+        },
+        "db45af17-e43d-4ffb-b998-99e1a3b1dac4": {
+          "type": "Product",
+          "settings": {
+            "product": "choco-almond-cranberry-protein-muesli-350gm"
+          }
+        },
+        "2cfeef95-ac19-42a6-9b78-c923e5e95571": {
+          "type": "Product",
+          "settings": {
+            "product": "vegan-chocolate-coconut-cookies"
+          }
+        },
+        "e441c821-5d82-40e5-af86-f8167aa30f55": {
+          "type": "Product",
+          "settings": {
+            "product": "multigrain-flakes-with-raisins-and-roasted-almonds-400gm"
+          }
+        },
+        "907dc427-a12d-45b1-a351-27bc862573b1": {
+          "type": "Product",
+          "settings": {
+            "product": "vegan-sunshine-premium-filled-dates-gift-box-16-pcs"
+          }
+        },
+        "df1deac4-4fe1-4ad2-8bba-1052089cb491": {
+          "type": "Product",
+          "settings": {
+            "product": "vegan-energy-bar-gluten-free-50-g-pack-of-3"
+          }
+        },
+        "72bab489-e675-4317-8af9-ca2cdb3d4ca6": {
+          "type": "Product",
+          "settings": {
+            "product": "dark-chocolate-peanut-butter-creamy-super-saver-pack-all-natural-gluten-free-vegan-925gm"
+          }
+        },
+        "d0e2ac2b-acf7-487b-84cf-5e102c03bca0": {
+          "type": "Product",
+          "settings": {
+            "product": "gluten-free-artisanal-dark-chocolate-pack-of-2"
+          }
+        },
+        "a10d0fd2-98e3-4beb-a700-d15081b0520f": {
+          "type": "Product",
+          "settings": {
+            "product": "crunchygmranola-bars-cranberry-orange-pack-of-6-240gm"
+          }
+        },
+        "be96823d-9241-4ddc-bca9-bd5d12f4b991": {
+          "type": "Product",
+          "settings": {
+            "product": "gluten-free-dark-hot-chocolate-sri-lankan-cinnamon-100-g-pack-of-2"
+          }
+        }
+      },
+      "block_order": [
+        "8c5fa317-47e1-4c61-bda1-a6cb32ba1d45",
+        "3f0a9b95-3c20-4304-a944-d2055abd16b2",
+        "db45af17-e43d-4ffb-b998-99e1a3b1dac4",
+        "2cfeef95-ac19-42a6-9b78-c923e5e95571",
+        "e441c821-5d82-40e5-af86-f8167aa30f55",
+        "907dc427-a12d-45b1-a351-27bc862573b1",
+        "df1deac4-4fe1-4ad2-8bba-1052089cb491",
+        "72bab489-e675-4317-8af9-ca2cdb3d4ca6",
+        "d0e2ac2b-acf7-487b-84cf-5e102c03bca0",
+        "a10d0fd2-98e3-4beb-a700-d15081b0520f",
+        "be96823d-9241-4ddc-bca9-bd5d12f4b991"
+      ],
+      "settings": {
+        "title1": "",
+        "title2": "Vegan Food",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/vegan-plant-based-products",
+        "button_position": "top"
+      }
+    },
+    "5f3dc2c9-34a1-4dec-a171-c80810e3b819": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "4d1a0ca3-e284-45cb-8ecd-bdc51c37545d": {
+          "type": "Product",
+          "settings": {
+            "product": "french-pink-9-free-breathable-lacquer-nail-polish"
+          }
+        },
+        "2e86a416-95b3-4aff-861d-8b6a0394c19a": {
+          "type": "Product",
+          "settings": {
+            "product": "protein-powered-deep-conditioning-hair-mask-for-curly-and-wavy-hair-150-g"
+          }
+        },
+        "b23a6f1d-d18b-4573-8c49-38efe651e0e5": {
+          "type": "Product",
+          "settings": {
+            "product": "pureearth-laali-lip-paint-pot-8-g-f-llp-8-180822"
+          }
+        },
+        "72b1e489-2d08-49a3-811c-9f0084287023": {
+          "type": "Product",
+          "settings": {
+            "product": "lip-balm"
+          }
+        },
+        "e600ad05-dcc4-48dc-bd31-8753fbbbc11c": {
+          "type": "Product",
+          "settings": {
+            "product": "vegan-tooth-powder-100-g"
+          }
+        },
+        "0d20d9d9-758f-4cf5-b071-10a530fec082": {
+          "type": "Product",
+          "settings": {
+            "product": "blend-it-raw-vegan-aloe-vera-gel-rough-itchy-skin-200-g-bira-h30-70922"
+          }
+        },
+        "222f04b8-cddc-4801-92f4-ad044df114ba": {
+          "type": "Product",
+          "settings": {
+            "product": "just-herbs-8-in-1-eyeshadow-lidsticks-infinity-and-beyond-12-g-8906107054378-151122"
+          }
+        },
+        "8d74d0db-6d7f-4906-9317-a91f69b78dae": {
+          "type": "Product",
+          "settings": {
+            "product": "gush-beauty-3-in-1-vegan-face-palette-6-9-gsiyf-02dd-200922"
+          }
+        },
+        "28cf154b-e5d5-4f29-a313-6e901f28c5ae": {
+          "type": "Product",
+          "settings": {
+            "product": "anti-pollution-kit"
+          }
+        },
+        "68427fee-82a7-4ea8-a220-1a093c295950": {
+          "type": "Product",
+          "settings": {
+            "product": "debelle-gel-nail-polish-cruelty-free-8-ml-pack-of-4-dnpc_465-81122"
+          }
+        }
+      },
+      "block_order": [
+        "4d1a0ca3-e284-45cb-8ecd-bdc51c37545d",
+        "2e86a416-95b3-4aff-861d-8b6a0394c19a",
+        "b23a6f1d-d18b-4573-8c49-38efe651e0e5",
+        "72b1e489-2d08-49a3-811c-9f0084287023",
+        "e600ad05-dcc4-48dc-bd31-8753fbbbc11c",
+        "0d20d9d9-758f-4cf5-b071-10a530fec082",
+        "222f04b8-cddc-4801-92f4-ad044df114ba",
+        "8d74d0db-6d7f-4906-9317-a91f69b78dae",
+        "28cf154b-e5d5-4f29-a313-6e901f28c5ae",
+        "68427fee-82a7-4ea8-a220-1a093c295950"
+      ],
+      "settings": {
+        "title1": "VEGAN",
+        "title2": "beauty",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": true,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/vegan-beauty",
+        "button_position": "top"
+      }
+    },
+    "fed3dc81-6873-4ae7-b83d-55520c48e4d0": {
+      "type": "amala-earth-curation",
+      "blocks": {
+        "49f5ad1e-98b2-4532-ae81-b07cc3451a3e": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/1_6f732f6e-e0a5-4a4f-8e18-1108fe3d95d3.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/2_500d853e-8bdf-4f29-8b47-f3b3cefb10cb.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/amala-earth-s-complete-guide-to-adopting-a-vegan-lifestyle-1"
+          }
+        },
+        "f8daf02b-f429-4ca3-8273-24782fdcfc49": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/2_7f468a0c-16d5-4e56-b467-9ba165717564.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/1_c648f9df-fb8a-474b-8086-7ab3514e5046.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/ways-to-make-your-diet-more-earth-friendly"
+          }
+        },
+        "412c62d9-933a-4e1e-9022-74a55ac9125a": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/111.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/3_a5f1facb-11e5-4c83-aa76-c95524d12b72.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/vegan-nail-paint-yes-now-nail-it-with-cruelty-free-and-non-toxic-nail-paint"
+          }
+        }
+      },
+      "block_order": [
+        "49f5ad1e-98b2-4532-ae81-b07cc3451a3e",
+        "f8daf02b-f429-4ca3-8273-24782fdcfc49",
+        "412c62d9-933a-4e1e-9022-74a55ac9125a"
+      ],
+      "settings": {
+        "curation_heading1": "",
+        "curation_sub_heading2": ""
+      }
+    }
+  },
+  "order": [
+    "festival-landings-page",
+    "c3d018c2-4d99-4198-8d2b-86489c4d84a3",
+    "c381ca4a-96e5-4d12-b43c-11887ed8febd",
+    "b0671cba-c092-4995-9c47-dbf3c5c04639",
+    "1170bbb2-4fb5-4ab6-a031-427182b816ee",
+    "148d2aba-d260-4fe6-8aca-cf377536f93d",
+    "5f3dc2c9-34a1-4dec-a171-c80810e3b819",
+    "fed3dc81-6873-4ae7-b83d-55520c48e4d0"
+  ]
+}

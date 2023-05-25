@@ -1,0 +1,100 @@
+{%- case section.settings.text_width -%}
+  {%- when 'narrow' -%}
+    {%- assign container_classes = 'container' -%}
+
+  {%- when 'regular' -%}
+    {%- assign container_classes = 'container' -%}
+
+  {%- when 'wide' -%}
+    {%- assign container_classes = 'container' -%}
+{%- endcase -%}
+
+<section class="section section--director-msg" data-section-id="{{ section.id }}" data-section-type="rich-text">
+  <div class="container">
+    <div class="director-msg-container"> 
+        <div class="director-img-block">
+          {%- if section.settings.about_image -%}
+          <div class="director-img">
+            {%- capture supported_sizes -%}{%- render 'image-size', sizes: '300,400,500,600,700,800,900,1000,1100,1200', image: section.settings.image -%}{%- endcapture -%}
+            {%- assign image_url = section.settings.about_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+            <img class="lazyload image--fade-in" data-src="{{ image_url }}" src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" alt="{{ section.settings.image.alt | escape }}">
+
+            <noscript>
+              <img src="{{ section.settings.about_image | img_url: '800x' }}" alt="{{ section.settings.image.alt | escape }}">
+            </noscript>
+          </div>
+          {%- else -%}
+          {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+        </div>
+       
+        <div class="director-text-block">
+            {{ section.settings.content }}
+            <div class="name-role">
+              {%- if section.settings.name != blank -%}
+              <strong>{{ section.settings.name}}</strong>
+                {%- endif -%}
+              {%- if section.settings.role != blank -%}
+              <span>{{ section.settings.role}}</span>
+                {%- endif -%}
+            </div>
+        </div> 
+    </div>
+  </div>  
+</section>
+
+{% schema %}
+{
+  "name": "Text with image and from",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Your title"
+    },
+    {
+      "type": "image_picker",
+      "id": "about_image",
+      "label": "Image",
+      "info": "1200 x 800px .jpg recommended"
+    },
+    {
+      "type": "range",
+      "id": "image_width",
+      "min": 20,
+      "max": 70,
+      "step": 5,
+      "unit": "%",
+      "label": "Image width",
+      "default": 50
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Text after Image",
+      "default": "<p>Text after Image</p>"
+    },
+    {
+      "type": "text",
+      "id": "name",
+      "label": "Name",
+      "default": "Name"
+    },
+	{
+      "type": "text",
+      "id": "role",
+      "label": "Role",
+      "default": "Role"
+    }
+   ],
+  "presets": [
+    {
+      "category": "Text",
+      "name": "Text with image and from",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

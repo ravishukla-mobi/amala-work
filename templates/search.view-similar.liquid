@@ -1,0 +1,25 @@
+{%- layout none -%}
+
+<div class="pdp_viewsimilar_widgets">
+    <div class="scroller">
+        <div class="scroller__inner">
+            <div class="product-list product-list--vertical product-list--scrollable">
+            {%- liquid
+                if template.name == 'search'
+                    assign parsed_terms = search.terms | split: ' OR '
+                    for parsed_term in parsed_terms
+                        assign id = parsed_term | split: 'id:' | last | times: 1
+                        for product in search.results
+                            if product.id == id and product.available
+                                assign products_count = products_count | plus: 1
+                                render 'new-product-item', product: product, grid_classes: '1/4--lap 1/5--desk 1/5--wide', show_add_to_cart: true,modelview_similar: 'product-template_view_similar'
+                                break
+                            endif
+                        endfor
+                    endfor
+                endif
+            -%}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<section>
+    <div class="container">
+        {% if section.settings.title != blank or section.settings.subtitle != blank %}
+        <header class="landing_section_header">
+        {% if section.settings.subtitle != blank %}
+        <h3 class="landing_subheading">{{section.settings.subtitle}}</h3>
+        {% endif %}
+        {% if section.settings.title != blank %}
+        <h2 class="landing_heading">{{section.settings.title}}</h2>
+        {% endif %}
+        </header>
+        {% endif %}
+        <div class="second-block-container">
+        {% for block in section.blocks %}
+            {% if block.settings.brand_image != blank %}
+            <a class="brand_block{% if forloop.index > 9 %} additional_block hide{% endif %}" href="{% if block.settings.brand_url != blank %}{{ block.settings.brand_url }}{% else %}javascript:void(0);{% endif %}">
+            <div class="circular_image">
+                <img src="{{ block.settings.brand_image | img_url: 'master' }}">
+            </div>
+            </a>
+            {% endif %}
+        {% endfor %}
+        </div>
+        {% if section.settings.view_title != blank and section.blocks.size > 9 %}
+        <div class="btn-center">
+            <span class="button brand_list_view_all_btn" data-sectionId="{{section.id}}">{{ section.settings.view_title | escape }}</span>
+        </div>
+        {% endif %}
+    </div>
+</section> 
+<style>
+{% if section.settings.background %}
+#shopify-section-{{section.id}} .container{
+    background:{{section.settings.background}};
+}
+{% endif %} 
+</style>

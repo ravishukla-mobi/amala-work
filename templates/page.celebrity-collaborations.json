@@ -1,0 +1,747 @@
+{
+  "sections": {
+    "festival-landings-page": {
+      "type": "main-banner",
+      "disabled": true,
+      "custom_css": [
+        ".festive-banner {margin-bottom: 100px;}"
+      ],
+      "settings": {
+        "banner_desktop_image": "shopify:\/\/shop_images\/Dia_mirza_Banner_1920x600_c5844c07-63c8-4ddb-8daa-16fa6170ba66.jpg",
+        "banner_mobile_image": "shopify:\/\/shop_images\/Dia_mirzabanner-microsite-mobile_77a25910-b91d-426e-bcf9-6785b072aad7.jpg",
+        "desktop_banner_title": "",
+        "color_heading": "#ffffff",
+        "desktop_banner_subtitle": "",
+        "color_subheading": "#b89c7d",
+        "desktop_banner_button": "",
+        "color_button": "#ffffff",
+        "button_background": "#9d7242",
+        "desktop_button_url": "https:\/\/amala.earth\/collections\/dm-feed",
+        "desktop_image_url": "https:\/\/amala.earth\/collections\/dm-feed"
+      }
+    },
+    "e562a8e8-156d-48d3-971f-fd0715d18dd5": {
+      "type": "custom-link-slider",
+      "blocks": {
+        "template--16711477297396__e562a8e8-156d-48d3-971f-fd0715d18dd5-1680497405c59c15ed-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Dia_mirza_Banner_1920x600_1a0baecb-9f6c-4776-963d-ed2cf89be8f3.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Home_banner-microsite-mobile_copy_1_cf4068be-4320-47f6-b7c0-fbf182e02963.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "#"
+          }
+        },
+        "template--16711477297396__e562a8e8-156d-48d3-971f-fd0715d18dd5-1680497405c59c15ed-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dia_mirza_Banner_1920x600_v2_7c665345-fdf8-4261-969a-484b6d11d945.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Home_banner-microsite-mobile__Dia_mirza_V2_bcbc9d68-51cf-4438-aba9-fbfd3b1ef256.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/dm-feed"
+          }
+        }
+      },
+      "block_order": [
+        "template--16711477297396__e562a8e8-156d-48d3-971f-fd0715d18dd5-1680497405c59c15ed-0",
+        "template--16711477297396__e562a8e8-156d-48d3-971f-fd0715d18dd5-1680497405c59c15ed-1"
+      ],
+      "settings": {
+        "edge_to_edge": true,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "6a765e93-4a86-46e5-9c37-f77feae3e6b5": {
+      "type": "home-conscious-journey",
+      "blocks": {
+        "d71c7c60-27b4-485e-aafe-d8b09e46c34a": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1_1_f5169d50-91ae-4ad2-be5e-118a0040aa56.jpg",
+            "link": ""
+          }
+        },
+        "b71c8a74-2286-4b27-94d4-b630134733e9": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3_5.jpg",
+            "link": "https:\/\/amala.earth\/pages\/mindful-eating"
+          }
+        },
+        "0f8296af-20d4-41a6-b3a5-44c2dffd9aaf": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/4_1_fa49c723-204f-4f4f-b42d-b5636e3834c7.jpg",
+            "link": "https:\/\/amala.earth\/pages\/ethical-beauty"
+          }
+        },
+        "ab6888d3-9d29-4b29-bda1-0069f4b5917e": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/5_1_ccce5404-d942-45ec-9ec3-7cb93fa0fdff.jpg",
+            "link": "https:\/\/amala.earth\/pages\/joyful-home"
+          }
+        },
+        "419f430a-0e09-447b-a9c8-c825567517d7": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/6_1_9c17309d-5032-4339-8cca-85d67dbf083a.jpg",
+            "link": "https:\/\/amala.earth\/pages\/responsible-fashion-women"
+          }
+        },
+        "0cf0a593-714a-42e2-b22b-60a87ada2617": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/7_1_fa99d67e-2895-4fcb-9864-5cfbe8677c0a.jpg",
+            "link": "https:\/\/amala.earth\/collections\/holistic-wellness"
+          }
+        },
+        "cc1f016d-ac57-4da8-a525-d7a498350aa1": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/8_1_f2221975-f7e9-4d92-98de-62388b136540.jpg",
+            "link": "https:\/\/amala.earth\/pages\/gift"
+          }
+        }
+      },
+      "block_order": [
+        "d71c7c60-27b4-485e-aafe-d8b09e46c34a",
+        "b71c8a74-2286-4b27-94d4-b630134733e9",
+        "0f8296af-20d4-41a6-b3a5-44c2dffd9aaf",
+        "ab6888d3-9d29-4b29-bda1-0069f4b5917e",
+        "419f430a-0e09-447b-a9c8-c825567517d7",
+        "0cf0a593-714a-42e2-b22b-60a87ada2617",
+        "cc1f016d-ac57-4da8-a525-d7a498350aa1"
+      ],
+      "settings": {
+        "subtitle": "",
+        "title": ""
+      }
+    },
+    "af39ed92-711b-4197-9ba0-88ce287feba0": {
+      "type": "circular-image-grid",
+      "blocks": {
+        "2944091b-cf2a-49b0-9138-35ba95fb48fb": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/soap.png",
+            "block_two_subtitle": "Handmade",
+            "title": "Soaps",
+            "second_block_url": "https:\/\/amala.earth\/collections\/soaps"
+          }
+        },
+        "2254d2ab-2cb3-4def-baf1-1b96126f7675": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/toothbrush.png",
+            "block_two_subtitle": "Zero-waste",
+            "title": "Oral Care",
+            "second_block_url": "https:\/\/amala.earth\/collections\/oral-care"
+          }
+        },
+        "c24efde1-8c02-4521-a479-7303ae4c7218": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/dress.png",
+            "block_two_subtitle": "Summer",
+            "title": "Dresses",
+            "second_block_url": "https:\/\/amala.earth\/collections\/womens-dresses"
+          }
+        },
+        "91b86191-15b9-4087-8b3f-87184c946d48": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/organic_grains.png",
+            "block_two_subtitle": "Gluten-free",
+            "title": "Grains",
+            "second_block_url": "https:\/\/amala.earth\/collections\/gluten-free?f_Type=Flour+%2F+Aata,Pulses+%2F+Lentils+%2F+Dals,Flour,Rice,Rice+%2F+Chawal"
+          }
+        },
+        "40684b19-8482-449a-9344-86a524189138": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/candle_e7aea7c4-a253-4e60-bdd5-81f0618ff30f.png",
+            "block_two_subtitle": "Soy wax",
+            "title": "Candles",
+            "second_block_url": "https:\/\/amala.earth\/collections\/candles-and-aromatherapy?f_Type=Candle"
+          }
+        },
+        "48f2f29d-204f-4c7d-8f08-5b4fd35a06ba": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/cleaner.png",
+            "block_two_subtitle": "Non-toxic",
+            "title": "Cleaners",
+            "second_block_url": "https:\/\/amala.earth\/collections\/household-cleaning-and-essentials"
+          }
+        },
+        "88ae10fb-db30-4b35-a0b0-e18f86734ae6": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/wooden_toys.png",
+            "block_two_subtitle": "Wooden",
+            "title": "Toys",
+            "second_block_url": "https:\/\/amala.earth\/collections\/toys-and-games?f_Material=Wood"
+          }
+        },
+        "cd9b773f-44dc-46d9-9d4a-8decf333a979": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/cookware_7a58e4d6-7e88-4f07-b7c3-48ebc355ee7f.png",
+            "block_two_subtitle": "Traditional",
+            "title": "Cookware",
+            "second_block_url": "https:\/\/amala.earth\/collections\/cookware"
+          }
+        },
+        "fcd97048-23d5-4901-9c32-58fef26a42d1": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/summer_drinks.png",
+            "block_two_subtitle": "Summer",
+            "title": "Beverages",
+            "second_block_url": "https:\/\/amala.earth\/collections\/summer-drinks"
+          }
+        }
+      },
+      "block_order": [
+        "2944091b-cf2a-49b0-9138-35ba95fb48fb",
+        "2254d2ab-2cb3-4def-baf1-1b96126f7675",
+        "c24efde1-8c02-4521-a479-7303ae4c7218",
+        "91b86191-15b9-4087-8b3f-87184c946d48",
+        "40684b19-8482-449a-9344-86a524189138",
+        "48f2f29d-204f-4c7d-8f08-5b4fd35a06ba",
+        "88ae10fb-db30-4b35-a0b0-e18f86734ae6",
+        "cd9b773f-44dc-46d9-9d4a-8decf333a979",
+        "fcd97048-23d5-4901-9c32-58fef26a42d1"
+      ],
+      "custom_css": [],
+      "settings": {
+        "subtitle": "",
+        "title": ""
+      }
+    },
+    "1a398080-104c-4479-88d4-c915e7f2ae8d": {
+      "type": "image-with-text-overlay-grid",
+      "disabled": true,
+      "blocks": {
+        "fa12f399-f413-4608-9491-e65f4ba30e3f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1_d039e8c4-58b7-4f6e-b418-1c918eec3709.jpg",
+            "title": "",
+            "url": ""
+          }
+        },
+        "5c91ed50-b0ff-4ecf-9327-4723ab3faef4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3_1_1bcc029f-a4d2-4d89-9957-a2981ae0b828.jpg",
+            "title": "",
+            "url": ""
+          }
+        },
+        "75bbe109-8bd3-4ede-b318-0f988c5694c3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/5_932f1cc2-f0c6-4d95-a412-9202ed214589.jpg",
+            "title": "",
+            "url": ""
+          }
+        },
+        "6e049b4f-0b77-4320-937f-29afd1083c14": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/6_0a5d54ce-e3a4-474b-a8f9-f5573cab8f2a.jpg",
+            "title": "",
+            "url": ""
+          }
+        },
+        "d9a88d90-06f3-4627-82f3-810b1d24d9ab": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/4_ee4bde9a-5b0b-4f65-9a8b-753cabd3bffd.jpg",
+            "title": "",
+            "url": ""
+          }
+        },
+        "2de2bbdf-9ad6-47cd-a141-0b247d2d2c79": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/7_f7e0a9db-87ac-4e7d-981b-1e8a03467edc.jpg",
+            "title": "",
+            "url": ""
+          }
+        },
+        "081bca53-e635-4194-8e93-d29d540133b9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/8_24e37b3b-89b6-447b-b34a-57175595af96.jpg",
+            "title": "",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "fa12f399-f413-4608-9491-e65f4ba30e3f",
+        "5c91ed50-b0ff-4ecf-9327-4723ab3faef4",
+        "75bbe109-8bd3-4ede-b318-0f988c5694c3",
+        "6e049b4f-0b77-4320-937f-29afd1083c14",
+        "d9a88d90-06f3-4627-82f3-810b1d24d9ab",
+        "2de2bbdf-9ad6-47cd-a141-0b247d2d2c79",
+        "081bca53-e635-4194-8e93-d29d540133b9"
+      ],
+      "custom_css": [
+        ".image-with-text-overlay-grid-section .image-with-text-img-wrap:after {background: none;}"
+      ],
+      "settings": {}
+    },
+    "11687a93-5fe1-4b20-a9c7-596a0ecaebf5": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "3da50c40-2453-432f-a950-dbc9d978a4bc": {
+          "type": "Product",
+          "settings": {
+            "product": "100-natural-chandan-blend-of-kumkum-and-kesar"
+          }
+        },
+        "3ab99aa9-4774-4d3a-af70-b169074832b4": {
+          "type": "Product",
+          "settings": {
+            "product": "two-brothers-kodo-millet-gluten-free-1-kg-kodo_millets1kg-101011"
+          }
+        },
+        "9f9f49c7-8591-45fb-b837-74b7e6b06f88": {
+          "type": "Product",
+          "settings": {
+            "product": "maati-petrichor-organic-attar-fragrance-3ml"
+          }
+        },
+        "ef70f3cf-fe2a-463c-9d80-b2714c763676": {
+          "type": "Product",
+          "settings": {
+            "product": "mint-ginger-lemon-squash"
+          }
+        },
+        "6fddba48-898a-4cd5-b136-8f8f70823a2c": {
+          "type": "Product",
+          "settings": {
+            "product": "the-bare-bar-kansa-face-massage-wand-kfmw-311022"
+          }
+        },
+        "e13af2ad-121b-4806-aff6-d0e8ab06e6c1": {
+          "type": "Product",
+          "settings": {
+            "product": "nyumi-radiant-skin-gummies-reduces-wrinkles-healthy-glow-50-gummies-gsk50or-81122"
+          }
+        },
+        "ebfc9dd5-fe56-40fa-b955-f023cf8d4db4": {
+          "type": "Product",
+          "settings": {
+            "product": "ohria-ayurveda-deodorant-raatrani-mint-natural-50-ml-rd050-221122"
+          }
+        },
+        "9599289a-96ee-48f2-8986-f0ffc958fd92": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-quinoa-500g"
+          }
+        },
+        "8293a889-d541-4b1f-b9f1-f3e398a64729": {
+          "type": "Product",
+          "settings": {
+            "product": "body-brush-2-in-1-with-free-loofah"
+          }
+        },
+        "b6dbf16c-61af-4732-949c-8d34cf8d5c30": {
+          "type": "Product",
+          "settings": {
+            "product": "natural-gulkand-250gm"
+          }
+        },
+        "1bb2c8d2-5fa0-4769-9b0e-0a90bed6d74a": {
+          "type": "Product",
+          "settings": {
+            "product": "ayurvedic-therapeutic-aloe-vera-mint-and-tulsi-shower-gel-200-ml"
+          }
+        }
+      },
+      "block_order": [
+        "3da50c40-2453-432f-a950-dbc9d978a4bc",
+        "3ab99aa9-4774-4d3a-af70-b169074832b4",
+        "9f9f49c7-8591-45fb-b837-74b7e6b06f88",
+        "ef70f3cf-fe2a-463c-9d80-b2714c763676",
+        "6fddba48-898a-4cd5-b136-8f8f70823a2c",
+        "e13af2ad-121b-4806-aff6-d0e8ab06e6c1",
+        "ebfc9dd5-fe56-40fa-b955-f023cf8d4db4",
+        "9599289a-96ee-48f2-8986-f0ffc958fd92",
+        "8293a889-d541-4b1f-b9f1-f3e398a64729",
+        "b6dbf16c-61af-4732-949c-8d34cf8d5c30",
+        "1bb2c8d2-5fa0-4769-9b0e-0a90bed6d74a"
+      ],
+      "settings": {
+        "title1": "Healthy",
+        "title2": "inside and out",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/dia-mirza?f_Type=Lipstick,Body+Wash+and+Cleansers,Pasta,Hair+Oil,Quinoa,Perfume+%26+Scent,Nail+Polish,Body+and+Face+oils,Oils,Creams%3B+Lotions+and+Moisturisers,Face+%26+Body+Tools,Oil+Pulling,Nuts+%26+Dryfruits,Breakfast+Cereals,Deodorant,Mascara,Face+Masks+and+Scrub,Flour+%2F+Aata,Lip+Care,Kits,Kajal,Highlighter+%26+Blush,Hair+Comb,Hair+Care,Foundation,Snacks,Digestives,Chocolate,Eyeshadow,Hair+Mask,Rice+%2F+Chawal,Shampoo,Sunscreen,Superfood,Beverages,Supplements,Butter,Coffee,Immunity+Essentials,Hair+Colour,Seeds,Ayurvedic+Food+and+Skin,Conditioner",
+        "button_position": "top"
+      }
+    },
+    "6173d02c-d7b2-4ffb-8349-a404750bd711": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "a26f68af-bbc3-4569-9df4-91b66fae569f": {
+          "type": "Product",
+          "settings": {
+            "product": "silk-waves-mul-cotton-checkered-saree-handblock-printed-white-grid-white-saree-27922"
+          }
+        },
+        "0932decd-d42c-4606-8e3b-42367b32a0c0": {
+          "type": "Product",
+          "settings": {
+            "product": "greendigo-organic-cotton-baby-girl-dress-white-1000002390-200223"
+          }
+        },
+        "806e4cfd-23eb-4482-a0df-8ead77905431": {
+          "type": "Product",
+          "settings": {
+            "product": "the-august-co-cotton-co-ord-set-dip-die-ivory-aa20586aa251122"
+          }
+        },
+        "3c58cdfd-e3c3-49d0-a6ce-31736dabff32": {
+          "type": "Product",
+          "settings": {
+            "product": "mhysa-cotton-tiered-dress-for-girls-blue-beige-my-dr-013-021122"
+          }
+        },
+        "83d32aa9-2ae3-470e-9ce2-bb3356df764f": {
+          "type": "Product",
+          "settings": {
+            "product": "unborn-studio-cotton-printed-top-green-mrmu01-d16-p15-1922"
+          }
+        },
+        "5068214f-f98b-4946-8f09-36fdf4eb73a6": {
+          "type": "Product",
+          "settings": {
+            "product": "greendigo-organic-cotton-baby-bodysuit-green-1000002450-200223"
+          }
+        },
+        "f305ac7e-a29e-4537-9c55-6c3ef204bce5": {
+          "type": "Product",
+          "settings": {
+            "product": "handwoven-linen-indigo-kimono-sleeves-dress"
+          }
+        },
+        "ab0d65dc-0c96-4b08-b3c5-8eeb59dfd0ab": {
+          "type": "Product",
+          "settings": {
+            "product": "neemboo-cotton-dress-for-kids-grey-nbbgy-21922"
+          }
+        },
+        "d117e252-139f-4a42-bb79-53cbfe93769e": {
+          "type": "Product",
+          "settings": {
+            "product": "sustainable-yellow-cotton-poplin-round-neck-dress"
+          }
+        },
+        "aea52612-067c-49a3-9d18-44a302cf1a7d": {
+          "type": "Product",
+          "settings": {
+            "product": "mr-brat-linen-co-ord-set-for-boys-white-lin11-12922"
+          }
+        },
+        "868360db-d187-4134-bcda-c42673a6eecb": {
+          "type": "Product",
+          "settings": {
+            "product": "100-cotton-black-printed-t-shirt"
+          }
+        }
+      },
+      "block_order": [
+        "a26f68af-bbc3-4569-9df4-91b66fae569f",
+        "0932decd-d42c-4606-8e3b-42367b32a0c0",
+        "806e4cfd-23eb-4482-a0df-8ead77905431",
+        "3c58cdfd-e3c3-49d0-a6ce-31736dabff32",
+        "83d32aa9-2ae3-470e-9ce2-bb3356df764f",
+        "5068214f-f98b-4946-8f09-36fdf4eb73a6",
+        "f305ac7e-a29e-4537-9c55-6c3ef204bce5",
+        "ab0d65dc-0c96-4b08-b3c5-8eeb59dfd0ab",
+        "d117e252-139f-4a42-bb79-53cbfe93769e",
+        "aea52612-067c-49a3-9d18-44a302cf1a7d",
+        "868360db-d187-4134-bcda-c42673a6eecb"
+      ],
+      "settings": {
+        "title1": "Made from",
+        "title2": "natural fabrics",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/dia-mirza?f_Type=Dresses,Clothing+Sets,Girls+Dresses,Tops+%26+T-Shirts,Mens+Shirts,Saree,Bags,Kurtas,Co-Ords,Onesies,Shirts,Soft+Toys,Girls+Tops+%26+T-Shirts,Kurtas+%26+Kurtas+Set,Swaddles,Girls+Kurta+Sets,Kurta+Sets,Sleepwear,Stoles+%26+Scarves,Boys+Kurtas,Jumpsuits,Kaftans,Lounge+Set,Mens+Pants,Mens+T-Shirts,Mens+Trackpants,Romper,Bibs+%26+Burp+Cloth,Blazercomma+Jackets+%26+Coats,Girls+Kurtas,Girls+Pants,Mens+Blazerscomma+Jackets+%26+Coats,Mens+Lounge+Set,Mens+Shorts,Shorts,Sports+Bra,Sports+Tops+%26+T-Shirts",
+        "button_position": "top"
+      }
+    },
+    "88c3aec8-d4e6-4a45-a5ab-f45e690f1b4b": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "d3b5afd8-96c2-4cf4-8daf-03d3399d6c2b": {
+          "type": "Product",
+          "settings": {
+            "product": "vanchai-cane-basket-set-of-3-mn004317922"
+          }
+        },
+        "b53d2b62-259d-43f9-8c5d-999ec63165ad": {
+          "type": "Product",
+          "settings": {
+            "product": "unalome-handmade-paper-diary-notebook-50-pages-un-dr-01-211022"
+          }
+        },
+        "a85e3e51-4dae-49a2-adf3-6ab63b1a1c88": {
+          "type": "Product",
+          "settings": {
+            "product": "100-linen-chrome-chambray-napkin-set-of-2"
+          }
+        },
+        "3ec02324-d566-4035-9629-2dbb628f8135": {
+          "type": "Product",
+          "settings": {
+            "product": "dvaar-cotton-yoga-mat-macrame-carrier-beige-bbms10-20722"
+          }
+        },
+        "6f18dcc9-be84-44f4-a4ba-e21a2329103e": {
+          "type": "Product",
+          "settings": {
+            "product": "plain-copper-bottle-1-l"
+          }
+        },
+        "1fbb4100-ed2b-4aa0-b1fe-8048233beab6": {
+          "type": "Product",
+          "settings": {
+            "product": "humanhood-maplitho-paper-diary-365-reminders-desk-essentials-380-pages-365r-wg-11-100123"
+          }
+        },
+        "928aa537-beb0-4eb3-b29a-c16a6e014ffe": {
+          "type": "Product",
+          "settings": {
+            "product": "100-linen-chrome-striped-bedsheet-set"
+          }
+        },
+        "2ad3d91b-e076-4764-a673-dd974106d5c2": {
+          "type": "Product",
+          "settings": {
+            "product": "handloom-multicolor-banana-fiber-mat"
+          }
+        },
+        "9ddf2722-5510-4e7b-a364-57f24e657342": {
+          "type": "Product",
+          "settings": {
+            "product": "coconut-shell-aroma-candle-vanilla-fragrance"
+          }
+        },
+        "12e5fd8b-97aa-45e4-9898-2d89f89bc093": {
+          "type": "Product",
+          "settings": {
+            "product": "satya-pro-cork-yoga-mat"
+          }
+        }
+      },
+      "block_order": [
+        "d3b5afd8-96c2-4cf4-8daf-03d3399d6c2b",
+        "b53d2b62-259d-43f9-8c5d-999ec63165ad",
+        "a85e3e51-4dae-49a2-adf3-6ab63b1a1c88",
+        "3ec02324-d566-4035-9629-2dbb628f8135",
+        "6f18dcc9-be84-44f4-a4ba-e21a2329103e",
+        "1fbb4100-ed2b-4aa0-b1fe-8048233beab6",
+        "928aa537-beb0-4eb3-b29a-c16a6e014ffe",
+        "2ad3d91b-e076-4764-a673-dd974106d5c2",
+        "9ddf2722-5510-4e7b-a364-57f24e657342",
+        "12e5fd8b-97aa-45e4-9898-2d89f89bc093"
+      ],
+      "settings": {
+        "title1": "Elevate",
+        "title2": "your home",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/dia-mirza?f_Type=Crockery+and+Serveware,Cushions+%26+Covers,Indoor+Planters+and+Vases,Blankets+and+Quilts,Yoga+Mats,Candle,Cupscomma+Mugs+%26+Glasses,Duvet+Covers,Kitchen+Storage+and+Containers,Bedsheets+and+Bedcovers,Bottles,Planters,Dried+Flowers,Storage+and+Organisers,Throws,Bedsheets+%26+Bedcovers,Candle+Holder,Diary+and+Journals,Hanging+lamps,Incense+Sticks+and+Cones,Home+Fragrances,Meditation+Essentials,Mirrors,Kadai+%26+Woks,Pots+%26+Pans,Sheets+and+Papers,Stationary+Kit,Table+Decor,Towels,Yoga+Bags,Yoga+Blocks,Bedding+Sets,Cutlery+Sets,Kitchen+Tools,Table+Linen+%26+Accessories,Yoga+Accessories",
+        "button_position": "top"
+      }
+    },
+    "d7c8cf3d-c2d4-4172-a717-e09386e1a194": {
+      "type": "slider-test",
+      "blocks": {
+        "template--16711477297396__d7c8cf3d-c2d4-4172-a717-e09386e1a194-16787263796f4cef43-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/curation_1_web_dia_mirza_1_3eeb96d5-e58a-4aa0-89b2-cb951760e4d2.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/428x272_dia_mirza1_3d1fcebf-64ff-4e5c-beba-f3b1dc456dca.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": ""
+          }
+        },
+        "template--16711477297396__d7c8cf3d-c2d4-4172-a717-e09386e1a194-16787263796f4cef43-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/curation_1_web_dia_mirza_2_b088af3d-65f5-4380-9fc4-844965c81159.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/428x272_dia_mirza2_c0dbcb14-6ecf-4aa9-8791-ef6590c12a5a.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": ""
+          }
+        },
+        "2e467725-19bd-403a-876b-334faf7e64e0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/curation_1_web_dia_mirza_3_7eb7ca50-df8f-4744-8a3e-80e33be8bf1f.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/428x272_dia_mirza3_58c7005e-491e-4e8a-a4c2-d48d20beb967.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "Button",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16711477297396__d7c8cf3d-c2d4-4172-a717-e09386e1a194-16787263796f4cef43-0",
+        "template--16711477297396__d7c8cf3d-c2d4-4172-a717-e09386e1a194-16787263796f4cef43-1",
+        "2e467725-19bd-403a-876b-334faf7e64e0"
+      ],
+      "settings": {
+        "edge_to_edge": false,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "3a29b50e-2d85-4be0-84e8-0d335cf35dcc": {
+      "type": "custom-link-slider",
+      "disabled": true,
+      "blocks": {
+        "template--16711477297396__3a29b50e-2d85-4be0-84e8-0d335cf35dcc-168052362045a177e5-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dia_mirza_Banner_1920x600_v2_7c665345-fdf8-4261-969a-484b6d11d945.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Home_banner-microsite-mobile__Dia_mirza_V2_bcbc9d68-51cf-4438-aba9-fbfd3b1ef256.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": ""
+          }
+        },
+        "template--16711477297396__3a29b50e-2d85-4be0-84e8-0d335cf35dcc-168052362045a177e5-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner-mobile-4_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/highlighted_brand-mobile_3c132955-c28b-4760-8c7f-d4af03a8e1f8.png",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "Slide title",
+            "subtitle": "Slide title",
+            "content": "Tell your story",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "Button",
+            "link": "https:\/\/amala.earth\/collections\/responsible-fashion"
+          }
+        }
+      },
+      "block_order": [
+        "template--16711477297396__3a29b50e-2d85-4be0-84e8-0d335cf35dcc-168052362045a177e5-0",
+        "template--16711477297396__3a29b50e-2d85-4be0-84e8-0d335cf35dcc-168052362045a177e5-1"
+      ],
+      "settings": {
+        "edge_to_edge": false,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    }
+  },
+  "order": [
+    "festival-landings-page",
+    "e562a8e8-156d-48d3-971f-fd0715d18dd5",
+    "6a765e93-4a86-46e5-9c37-f77feae3e6b5",
+    "af39ed92-711b-4197-9ba0-88ce287feba0",
+    "1a398080-104c-4479-88d4-c915e7f2ae8d",
+    "11687a93-5fe1-4b20-a9c7-596a0ecaebf5",
+    "6173d02c-d7b2-4ffb-8349-a404750bd711",
+    "88c3aec8-d4e6-4a45-a5ab-f45e690f1b4b",
+    "d7c8cf3d-c2d4-4172-a717-e09386e1a194",
+    "3a29b50e-2d85-4be0-84e8-0d335cf35dcc"
+  ]
+}

@@ -1,0 +1,49 @@
+<div class="product-usp-icon">
+  {% if section.settings.title != blank %}
+  <h2>{{ section.settings.title }}</h2>
+  {% endif %}
+  <div class="icon-list">
+    {% for block in section.blocks %}
+      {% if block.settings.image != blank %}
+      <div class="single-icon">
+        <img class="lazyload" src="{{ block.settings.image | img_url: 'master'}}" alt="{{ block.settings.image.alt }}"/>
+        {% if block.settings.text != blank %}
+          <p>{{ block.settings.text }}</p>
+        {% endif %}
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "USP Icons",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "USPs"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "USP Icon",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "250 x 80px .jpg recommended"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Icon Text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

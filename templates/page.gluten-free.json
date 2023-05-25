@@ -1,0 +1,269 @@
+{
+  "sections": {
+    "festival-landings-page": {
+      "type": "main-banner",
+      "custom_css": [
+        ".festive-banner {margin-bottom: 100px;}"
+      ],
+      "settings": {
+        "banner_desktop_image": "shopify:\/\/shop_images\/Cover.jpg",
+        "banner_mobile_image": "shopify:\/\/shop_images\/COVER_3a14dbc5-bdc5-4f7f-8a93-0615ea5e4252.jpg",
+        "desktop_banner_title": "",
+        "color_heading": "#ffffff",
+        "desktop_banner_subtitle": "",
+        "color_subheading": "#b89c7d",
+        "desktop_banner_button": "",
+        "color_button": "#ffffff",
+        "button_background": "#9d7242",
+        "desktop_button_url": "https:\/\/amala.earth\/collections\/gluten-free",
+        "desktop_image_url": "https:\/\/amala.earth\/collections\/gluten-free"
+      }
+    },
+    "c3d018c2-4d99-4198-8d2b-86489c4d84a3": {
+      "type": "circular-image-grid",
+      "blocks": {
+        "be0eadc9-c04d-48c0-b132-11ef2970341a": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/1_f5a3ea89-035a-4142-b964-3568594db68a.png",
+            "block_two_subtitle": "",
+            "title": "Chocolates",
+            "second_block_url": "https:\/\/amala.earth\/collections\/gluten-free?f_Type=Chocolate"
+          }
+        },
+        "17ff9549-76ba-4d90-88e6-e8b52d8b2db9": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/2_d1698bb2-40c0-4450-a769-aeb7c9e103ce.png",
+            "block_two_subtitle": "",
+            "title": "Supplements",
+            "second_block_url": "https:\/\/amala.earth\/collections\/natural-supplements-and-digestive?f_Shop%20By%20Concern=Gluten-free"
+          }
+        },
+        "ac5fcdec-1da6-474c-91ab-1805ce88bd0b": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/3_03177f75-0d5c-4b72-9817-1826b3d17bca.png",
+            "block_two_subtitle": "",
+            "title": "Pasta",
+            "second_block_url": "https:\/\/amala.earth\/collections\/quinoa-pasta-and-gluten-free-foods?f_Shop%20By%20Concern=Gluten-free&f_Type=Pasta"
+          }
+        },
+        "8b174933-6f42-4069-abf4-2a33dffdb3d5": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/4_36c19724-23fa-442a-a04d-4c30b6cd564e.png",
+            "block_two_subtitle": "",
+            "title": "Rice",
+            "second_block_url": "https:\/\/amala.earth\/collections\/grains-and-pulses?f_Shop%20By%20Concern=Gluten-free&f_Type=Rice+%2F+Chawal"
+          }
+        },
+        "a6023513-e0c6-4606-936e-34129ea496b7": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/5_86d00c7b-1494-4441-977c-a608b12b4d28.png",
+            "block_two_subtitle": "",
+            "title": "Protein",
+            "second_block_url": "https:\/\/amala.earth\/collections\/superfoods-and-protein?f_Shop%20By%20Concern=Gluten-free"
+          }
+        },
+        "5a7e97fe-67d1-4c33-b809-d30fd3d70aaa": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/6_b618b709-4094-4e13-8679-8d2d8e8df57c.png",
+            "block_two_subtitle": "",
+            "title": "Snacks",
+            "second_block_url": "https:\/\/amala.earth\/collections\/gluten-free?f_Type=Snacks"
+          }
+        },
+        "dba30166-4a79-4376-ad7d-8abdaf200e17": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/7_80847587-a6d2-486c-973c-d6bbaaa70400.png",
+            "block_two_subtitle": "",
+            "title": "Flour",
+            "second_block_url": "https:\/\/amala.earth\/collections\/gluten-free?f_Type=Flour+%2F+Aata"
+          }
+        }
+      },
+      "block_order": [
+        "be0eadc9-c04d-48c0-b132-11ef2970341a",
+        "17ff9549-76ba-4d90-88e6-e8b52d8b2db9",
+        "ac5fcdec-1da6-474c-91ab-1805ce88bd0b",
+        "8b174933-6f42-4069-abf4-2a33dffdb3d5",
+        "a6023513-e0c6-4606-936e-34129ea496b7",
+        "5a7e97fe-67d1-4c33-b809-d30fd3d70aaa",
+        "dba30166-4a79-4376-ad7d-8abdaf200e17"
+      ],
+      "custom_css": [
+        ".circular-image-grid-section .second-block-container h3 {text-align: center;}"
+      ],
+      "settings": {
+        "subtitle": "",
+        "title": ""
+      }
+    },
+    "85cb6992-d758-4a17-a027-e4acc4e54d19": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "4f87068a-b6b7-4cb3-8541-c437b9105a77": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-chakrata-rajma-500-g-pack-of-2"
+          }
+        },
+        "e875737d-31f5-4909-af97-de130db98cb4": {
+          "type": "Product",
+          "settings": {
+            "product": "gluten-free-multi-grain-pasta-200g"
+          }
+        },
+        "774e09b9-4c08-4da2-b347-146ac9235025": {
+          "type": "Product",
+          "settings": {
+            "product": "gluten-free-fig-amaranth-cookies"
+          }
+        },
+        "f6751ab7-b7c1-44fa-a24f-4bb96325b96f": {
+          "type": "Product",
+          "settings": {
+            "product": "jungly-delights-superfood-bars-chocolate-with-moringa-190-g-pack-of-5-jd-ch-03-111022"
+          }
+        },
+        "c29750fd-5a00-4354-9b8c-d447cd0ed6b8": {
+          "type": "Product",
+          "settings": {
+            "product": "ragi-cookies-vegan-150-g"
+          }
+        },
+        "b8ce5070-ade2-4030-ae13-67fe3c6e0766": {
+          "type": "Product",
+          "settings": {
+            "product": "natural-purple-sweet-potato-chips-with-pani-puri-masala-90gm-pack-of-3"
+          }
+        },
+        "25125cc0-7e0e-4c67-a40b-bd5737538b25": {
+          "type": "Product",
+          "settings": {
+            "product": "gluten-free-oats-cranberry-cookies"
+          }
+        },
+        "ddd737cf-4fe0-4c33-a5d6-de5b99ee96bc": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-quinoa-atta-500g"
+          }
+        },
+        "f8fa0c5c-a929-435c-a3aa-cbfd1d5466ee": {
+          "type": "Product",
+          "settings": {
+            "product": "gluten-free-himalayan-navrangi-dal-500-gm"
+          }
+        },
+        "4acfb686-0124-4981-8959-911319d3387d": {
+          "type": "Product",
+          "settings": {
+            "product": "roasted-heing-chana-200-gm"
+          }
+        },
+        "31444341-0b68-4a0d-b7e6-43c015dd8c0d": {
+          "type": "Product",
+          "settings": {
+            "product": "veggies-masala-oats-1kg"
+          }
+        }
+      },
+      "block_order": [
+        "4f87068a-b6b7-4cb3-8541-c437b9105a77",
+        "e875737d-31f5-4909-af97-de130db98cb4",
+        "774e09b9-4c08-4da2-b347-146ac9235025",
+        "f6751ab7-b7c1-44fa-a24f-4bb96325b96f",
+        "c29750fd-5a00-4354-9b8c-d447cd0ed6b8",
+        "b8ce5070-ade2-4030-ae13-67fe3c6e0766",
+        "25125cc0-7e0e-4c67-a40b-bd5737538b25",
+        "ddd737cf-4fe0-4c33-a5d6-de5b99ee96bc",
+        "f8fa0c5c-a929-435c-a3aa-cbfd1d5466ee",
+        "4acfb686-0124-4981-8959-911319d3387d",
+        "31444341-0b68-4a0d-b7e6-43c015dd8c0d"
+      ],
+      "settings": {
+        "title1": "Gluten-free",
+        "title2": "food",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/gluten-free",
+        "button_position": "top"
+      }
+    },
+    "c381ca4a-96e5-4d12-b43c-11887ed8febd": {
+      "type": "amala-earth-curation",
+      "blocks": {
+        "386b99ef-e7f3-40e7-849d-120650d24207": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/1_1330b146-2636-4a4a-8250-7e8490fa0637.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/2_684bb4c4-9e63-4af4-b0d8-5722db78d397.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/make-quinoa-a-part-of-your-diet-for-these-5-reasons"
+          }
+        },
+        "1327a060-e5e5-4778-ac77-85a98a9673dc": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/2_fdf7d71d-6d8a-46fb-a8f0-197cafd0ede0.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/1_20a4035f-5aee-490d-8620-54875f173ee8.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/5-healthiest-nut-butters-and-their-recipes"
+          }
+        },
+        "89e2cda1-91c5-4978-8805-650af0ac5079": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/3_b2df401d-1fa7-4880-b0e2-87a1fe14744e.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/3_2e618f39-d732-4fca-8726-c0bd68b8263e.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/benefits-of-gluten-free-flour-you-didnt-know-about"
+          }
+        }
+      },
+      "block_order": [
+        "386b99ef-e7f3-40e7-849d-120650d24207",
+        "1327a060-e5e5-4778-ac77-85a98a9673dc",
+        "89e2cda1-91c5-4978-8805-650af0ac5079"
+      ],
+      "settings": {
+        "curation_heading1": "",
+        "curation_sub_heading2": ""
+      }
+    }
+  },
+  "order": [
+    "festival-landings-page",
+    "c3d018c2-4d99-4198-8d2b-86489c4d84a3",
+    "85cb6992-d758-4a17-a027-e4acc4e54d19",
+    "c381ca4a-96e5-4d12-b43c-11887ed8febd"
+  ]
+}

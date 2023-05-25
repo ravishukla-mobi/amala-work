@@ -1,0 +1,84 @@
+{%- if section.settings.show_section -%}
+<section class="section section--about-text {% if section.settings.title != blank %}{{ section.settings.title | downcase | replace: " ", "-" }}" {% endif %} data-section-id="{{ section.id }}" data-section-type="rich-text">
+  <div class="container">
+    <div class="about-container">     
+        <div class="icons-with-text">
+          <!-- loop the icon div -->
+          {%- for block in section.blocks -%}
+          <div class="icon-text">
+            {%- if block.settings.custom_icon -%}
+            <div class="icon-img-col">
+               <img class="lazyload" src="{{ block.settings.custom_icon}}" alt="{{ block.settings.title | escape }}"  width='62' height='62' />  
+             
+            </div>
+            {%- endif -%}
+            <div class="title-content">
+              {%- if block.settings.title != blank -%}
+              <span class="icon-title">{{ block.settings.title}}</span>        	
+              {%- endif -%}
+              {%- if block.settings.content != blank -%}
+              <div class="icon-content">{{ block.settings.content}}</div>        	
+              {%- endif -%}
+              
+            </div>
+          </div>  
+          {%- endfor -%}
+          <!-- end loop the icon div-->
+        </div>
+       
+    </div>
+  </div>  
+</section>
+{%- endif -%}
+{% schema %}
+{
+  "name": "Text with SVG icons",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_section",
+      "label": "Show section",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Your title"
+    }
+   ],
+ 	"blocks": [
+    {
+      "type": "text-with-icon",
+      "name": "Text icons",
+      "settings": [
+        {
+          "type": "text",
+          "id": "custom_icon",
+          "label": "Custom icon SVG URL",
+          "info": "Please enter uploaded icon URL"
+          },
+          {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Your title"
+          },
+          {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Short content about your store</p>"
+          }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Text",
+      "name": "Text with icons",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

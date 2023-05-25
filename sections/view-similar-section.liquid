@@ -1,0 +1,214 @@
+{%- capture section_settings -%}
+{
+  "stackable": false,
+  "layout": "vertical",
+  "productId": {{ product.id | json }},
+  "recommendationsCount": 10
+}
+{%- endcapture -%}
+
+{%- liquid
+
+  assign number_of_related_products_per_row = 20
+  assign counter = 0
+  assign break_at = number_of_related_products_per_row
+  assign current_product = product
+  assign cols = ''
+  assign mens = false
+  assign women = false
+  assign product_items = ''
+  assign max_price = product.selected_or_first_available_variant.price | times:1.1
+  assign min_price = product.selected_or_first_available_variant.price | times:0.7
+
+  for collection in product.collections
+    if collection.handle != 'all' and collection.handle != 'new-arrivals' and collection.handle != 'bestselling-products'
+      if collection.handle == 'women'
+        assign mens = true
+      endif 
+      if collection.handle == 'men'
+        assign women = true 
+      endif 
+      if cols == ''
+        assign cols = collection.handle
+      else 
+        assign cols = cols | append: ',' | append:collection.handle
+      endif
+    endif
+  endfor 
+
+  assign h_cols = cols | split:','
+
+  for col in h_cols 
+    assign col_instance = collections[col]
+    assign col_products = col_instance.products | sort: 'created_at'
+    paginate col_products by 100
+    for product in col_products
+      unless product_items contains product.handle
+        if product.available 
+            assign skip = false 
+            if mens 
+              for collection in product.collections 
+                if collection.handle == 'men'
+                  assign skip = true 
+                  break
+                endif 
+              endfor
+            endif
+
+            if women 
+              for collection in product.collections
+                if collection.handle == 'women'
+                  assign skip = true
+                  break
+                endif 
+              endfor
+            endif 
+
+            if skip == false
+              unless product.handle == current_product.handle 
+                if current_product.type == product.type
+                  assign price = product.selected_or_first_available_variant.price
+                  if price >= min_price and price <= max_price
+                    if product_items == '' 
+                      assign product_items = product.handle
+                      assign counter = counter | plus: 1 
+                    else
+                      assign product_items = product_items | append: ',' | append: product.handle
+                      assign counter = counter | plus: 1 
+                    endif 
+                    if counter == break_at 
+                      break
+                    endif 
+                  endif 
+                endif 
+              endunless
+            else 
+              continue 
+            endif 
+        endif 
+      endunless 
+    endfor 
+    endpaginate
+      if counter == break_at
+        break
+    endif
+  endfor
+
+  assign product_items = product_items | split: ','
+  assign minimum_limit = block.settings.min_products
+
+-%}
+
+{%- if section.settings.show_related_products and product_items.size >= minimum_limit -%}
+  <section class="section" data-section-id="{{ section.id }}" data-section-type="product-recommendations" data-section-settings='{{ section_settings }}'>
+    <div class="container">
+      {%- if section.settings.heading != blank -%}
+        <header class="section__header">
+          <h2 class="section__title heading h3">{{ section.settings.heading | escape }}</h2>
+        </header>
+      {%- endif -%}
+
+      <div class="product-related">
+          <div class="scroller">
+            <div class="scroller__inner">
+              <div class="product-list product-list--vertical product-list--scrollable">
+				  {% assign products_count = 0 %}
+                  {%- for item in product_items -%}
+                	{% if products_count == section.settings.products_count %}
+                		{% break %}
+					{% endif %}
+                		{% assign item_handle = item | strip %}
+                        {%- assign related_product = all_products[item_handle] -%}
+                        {% if section.settings.show_sold_out or related_product.available %}
+                          {%- unless related_product.empty? -%}
+                			{% assign products_count = products_count | plus: 1 %}
+                            {%- render 'product-item', product: related_product, grid_classes: '1/4--lap 1/5--desk 1/5--wide', show_add_to_cart: section.settings.show_quick_buy -%}
+                          {%- endunless -%}
+                        {% endif %}
+                  {%- endfor -%}
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    {%- comment -%}
+    --------------------------------------------------------------------------------------
+    QUICK VIEW CONTAINER
+    --------------------------------------------------------------------------------------
+    {%- endcomment -%}
+
+    <div id="modal-quick-view-{{ section.id }}" class="modal quick-view-product-modal" aria-hidden="true">
+      <div class="modal__dialog modal__dialog--stretch" role="dialog">
+        <button class="modal__close link" data-action="close-modal" title="{{ 'general.accessibility.close' | t | escape }}">
+          {%- render 'icon', icon: 'close' -%}
+        </button>
+
+        <div class="modal__loader">
+          {%- render 'icon', icon: 'search-loader' -%}
+        </div>
+
+        <div class="modal__inner"></div>
+      </div>
+    </div>
+  </section>
+{%- endif -%}
+<style>
+  @media screen and (max-width: 1000px) {
+    #shopify-section-view-similar-section .product-list {
+      padding:0 20px 20px;
+    }
+  }
+</style>
+{% schema %}
+{
+  "name": "View similar Products",
+  "settings": [
+    
+    {
+      "type": "checkbox",
+      "id": "show_related_products",
+      "label": "Show dynamic Related Products",
+      "default": true
+    },
+	{
+      "type": "range",
+      "id": "products_count",
+      "label": "Products to show",
+      "min": 2,
+      "max": 50,
+      "step": 1,
+      "default": 10
+    },
+	{
+      "type": "range",
+      "id": "min_products",
+      "label": "Minimum products to show",
+      "min": 2,
+      "max": 10,
+      "step": 1,
+      "default": 5,
+	  "info": "If the products for this section have less than this count, then this section will not be displayed."
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "View Similar Products "
+    },
+    {
+      "type": "checkbox",
+      "id": "show_quick_buy",
+      "label": "Show quick buy",
+      "default": true
+    },
+	{
+      "type": "checkbox",
+      "id": "show_sold_out",
+      "label": "Show Sold out Products",
+      "default": true,
+	 "info": "show sold out items also"
+    }
+  ]
+}
+{% endschema %}

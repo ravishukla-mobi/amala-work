@@ -1,0 +1,131 @@
+<div class="home_conscious_journey_section section" data-section-id="{{ section.id }}" data-section-type="conscious-journey">
+    <div class="container">
+        {%- if section.settings.title != blank or section.settings.subtitle != blank -%}
+        <header class="landing_section_header">
+        {% if section.settings.subtitle != blank %}
+        <h5 class="landing_subheading">{{section.settings.subtitle}}</h5>
+        {% endif %}
+        {% if section.settings.title != blank %}
+        <h4 class="landing_heading">{{section.settings.title}}</h4>
+        {% endif %}
+        </header>
+        {%- endif -%}
+        <div class="home_conscious_journey_silder">
+            {%- for block in section.blocks -%}
+            <div id="block_{{block.id}}" class="journey-image_block">
+                {%- if block.settings.image != blank -%}
+                {%- capture supported_sizes -%}{%- render 'image-size', sizes: '400,500,600,700', image: block.settings.image -%}{%- endcapture -%}
+                {%- assign image_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                <a href="{{ block.settings.link }}">
+                    <div class="journey-image_wrapper" style="padding-bottom: {{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%;">
+                        <img class="amala-journey_image lazyload image--fade-in" alt="{{ block.settings.image.alt | escape }}" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto">
+                        <noscript>
+                        <img src="{{ block.settings.image | img_url: '500x' }}" alt="{{ block.settings.image.alt | escape }}">
+                        </noscript>
+                    </div>
+                </a>
+                {%- endif -%}
+            </div>
+            {%- endfor -%}
+        </div>
+    </div>
+</div>
+
+{% style %}
+.home_conscious_journey_silder{
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    z-index: 1;
+}
+.home_conscious_journey_silder:not(.flickity-enabled){
+    overflow-y:auto;
+}
+.home_conscious_journey_silder:after {
+  content: 'flickity';
+  display: none; /* hide :after */
+}
+.journey-image_block{
+    flex: none;
+    width:calc(35% - 20px);
+    margin-right:20px;
+}
+.journey-image_wrapper{
+    position:relative;
+    border-radius:15px;
+    overflow:hidden;
+}
+.journey-image_wrapper:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #b89c7d;
+    z-index: 1;
+}
+.journey-image_wrapper img{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    z-index:2;
+}
+@media screen and (max-width:767px){
+.home_conscious_journey_section .container {
+    padding-right: 0;
+}
+}
+@media screen and (max-width:641px){
+.journey-image_block{
+    width:calc(75% - 15px);
+    margin-right:15px;
+}
+}
+{% endstyle %}
+{% schema %}
+    {
+      "name": "Home conscious journey",
+      "settings": [
+        {
+          "type":"text",
+          "id":"subtitle",
+          "label":"Subheading",
+          "default":"Start your"
+        },
+        {
+          "type":"text",
+          "id":"title",
+          "label":"Heading",
+          "default":"conscious journey"
+        }
+      ],
+      "blocks":[
+        {
+          "type": "banner",
+          "name": "banner",
+          "settings": [
+            {
+              "type":"image_picker",
+              "id":"image",
+              "label":"Image"
+            },
+            {
+              "type":"url",
+              "id":"link",
+              "label":"link"
+            }
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "Home conscious journey",
+          "category": "Custom"
+        }
+      ]
+    }
+  {% endschema %}

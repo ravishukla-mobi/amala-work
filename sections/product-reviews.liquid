@@ -1,0 +1,10 @@
+<div id="stamped-main-widget"
+data-widget-style="standard" 
+data-product-id="{{ product.id }}"   
+data-name="{{ product.title | escape }}"   
+data-url="{{ shop.url }}{{ product.url }}"   
+data-image-url="{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}" 
+data-product-sku="{{product.handle}}"
+data-product-type="{{product.type}}"
+data-offset="150">   
+</div>

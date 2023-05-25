@@ -1,0 +1,72 @@
+<section>
+  <div class="container">
+    {%- render 'my-account-breadcrumbs' -%}
+    <div class="page__content  layout editprofile-page">
+      {%- render 'my-account-sidebar' -%}
+      <div class="layout__section">
+        <div class="card">
+          <div class="card__section card__section--tight">
+            <h2 class="heading h1">Edit Account</h2>
+          </div>
+          <form id="edit_customer" accept-charset="UTF-8" name="edit" class="form edit_customer">
+            <div class="form__input-wrapper form__input-wrapper--labelled">
+              <label for="customer[first_name]">{{ 'customer.register.first_name' | t }}</label>
+              <input type="text" id="customer[first_name]" class="form__field form__field--text" name="customer[first_name]" autocomplete="given-name" required="required" value="{{customer.first_name}}">
+              <span class="form_error"></span>
+            </div>
+            <div class="form__input-wrapper form__input-wrapper--labelled">
+              <label for="customer[last_name]">{{ 'customer.register.last_name' | t }}</label>
+              <input type="text" id="customer[last_name]" class="form__field form__field--text" name="customer[last_name]" autocomplete="family-name" required="required" value="{{customer.last_name}}">
+              <span class="form_error"></span>
+            </div>
+            <button type="button" class="custom_form__submit button button--primary custom_loading">Submit<div class="custom-loader-wrap"><div class="custom-loader"></div></div></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  $(document).on('click','#edit_customer .custom_form__submit',function(e){
+    e.preventDefault();
+    let _this = $(this),
+        $form = _this.closest('form'),
+        first_name = $form.find('input[name="customer[first_name]"]').val(),
+        last_name = $form.find('input[name="customer[last_name]"]').val();
+    if(first_name == ''){
+      $form.find('input[name="customer[first_name]"]').siblings('.form_error').text('First Name field is required.').show();
+      return false;
+    }else{$form.find('input[name="customer[first_name]"]').siblings('.form_error').hide()}
+    if(last_name == ''){
+      $form.find('input[name="customer[last_name]"]').siblings('.form_error').text('Last Name field is required.').show();
+      return false;
+    }else{$form.find('input[name="customer[last_name]"]').siblings('.form_error').hide()}
+
+    _this.addClass('loading');
+    let formObject = {
+      "updateData[customer_id]":`{{customer.id}}`,
+      "updateData[first_name]":first_name,
+      "updateData[last_name]":last_name
+    };
+  $.ajax({
+    type: "POST",
+    url: theme.apiUrl+"/updateAccount.php",
+    data: formObject,
+    dataType: "json",
+    success: function (data) {
+      _this.removeClass('loading');
+      if(data.status == true){
+        $form.append(`<p class="alert alert--success">Your details are updated!</p>`);
+        setTimeout(function(){$form.find('p.alert--success').remove()},5000);
+      }
+      console.log(data);
+    },
+    error: function (error) {
+      _this.removeClass('loading');
+      $form.append(`<p class="alert alert--error">Something went wrong please try again</p>`);
+      setTimeout(function(){$form.find('p.alert--error').remove()},5000);
+    }
+  });
+});
+</script>

@@ -1,0 +1,60 @@
+<style type="text/css">
+  	.empty-state {
+     	margin: 0px !important;
+      	margin-top: 20px !important;
+    }
+  	.fourzerofourdiv {
+      	margin: 0px auto;
+      	text-align: center;
+    }
+  	.empty-state__link {
+        border-radius: 10px;
+        background-color: #b97d58;
+        font-size: 18px;
+        color: #fff;
+        font-weight: 500;
+      	padding: 15px;
+      	text-transform: uppercase;
+    }
+  	@media(max-width:768px) {
+      	.fourzerofourdiv {
+            margin-top: 75px;
+            margin-bottom: 15px; 
+        }
+      	.empty-state__link {
+            padding-left: 100px;
+          	padding-right: 100px
+        }
+    }
+  	#shopify-section-featured-collection p:first-of-type {
+      	display: none;
+    }
+</style>
+
+<section>
+  	<div class="container">
+    	<div class="empty-state">
+      		<p class="empty-state__heading heading h1">{{ '404.general.title' | t }}</p>
+      		<p class="empty-state__description">{{ '404.general.content' | t }}</p>
+            <form class="empty-state__quick-form" action="{{ routes.search_url }}" method="get">
+              	<input type="hidden" name="type" value="product">
+              	<div class="form__connected-item">
+                	<div class="form__input-wrapper form__input-wrapper--labelled">
+                  		<input id="4O4-search" type="text" class="form__field form__field--text" name="q" autocomplete="off" autocorrect="off">
+                  		<label for="4O4-search" class="form__floating-label">{{ '404.general.search' | t }}</label>
+                	</div>
+                	<button type="submit" class="form__connection button button--primary" aria-label="{{ '404.general.search' | t }}">{% render 'icon', icon: 'search' %}</button>
+              	</div>
+            </form>
+          	<div class="fourzerofour_bestselling">
+          		{% section 'featured-collection' %}
+          	</div>
+          	<div class="fourzerofour_recommend">
+          		{% section 'amala-recommend' %}
+          	</div>
+            <div class="fourzerofourdiv">
+                <a href="{{ routes.root_url }}" class="empty-state__link link link--accented">{{ '404.general.continue_shopping' | t }}</a>
+            </div>
+    	</div>
+  	</div>
+</section>

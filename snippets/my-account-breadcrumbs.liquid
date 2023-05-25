@@ -1,0 +1,24 @@
+<div class="page__sub-header">
+   <nav aria-label="{{ 'general.breadcrumb.title' | t }}" class="breadcrumb">
+     <ol class="breadcrumb__list" role="list">
+       <li class="breadcrumb__item">
+         <a class="breadcrumb__link link" href="{{ routes.root_url }}">{{ 'general.breadcrumb.home' | t }}</a> {%- render 'icon', icon: 'arrow-right' -%}
+       </li>
+
+       <li class="breadcrumb__item">
+         <a class="breadcrumb__link link" href="{{ routes.account_url }}">{{ 'general.breadcrumb.account' | t }}</a> {%- render 'icon', icon: 'arrow-right' -%}
+       </li>
+
+       <li class="breadcrumb__item">
+         <span class="breadcrumb__link" aria-current="page">
+            {% if template contains 'address' %} {{ 'customer.general.addresses' | t }}{% endif %}
+            {% if template contains 'account.edit' %} Edit Account {% endif %}
+            {% if template == 'customers/account' %} {{- 'customer.general.orders' | t -}}{% endif %}
+            {% if template contains 'my-wallet' %}My Wallet{% endif %}
+            {% if template contains 'wishlist' %}Wishlist{% endif %}
+            {% if template contains 'order' %} {{- 'customer.general.orders' | t -}}{% endif %}
+         </span>
+       </li>
+     </ol>
+   </nav>
+</div>

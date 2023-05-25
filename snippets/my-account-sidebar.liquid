@@ -1,0 +1,63 @@
+<div class="layout__section layout__section--secondary wishlist-layout">
+  <div class="card card--sticky hidden-pocket">
+    <div class="card__section card__section--tight">
+      <div class="card__linklist">
+        <a href="{{ routes.account_url }}" class="card__linklist-item link {% if template == 'customers/account' %}text--strong{%- endif -%}">{{ 'customer.general.orders' | t }}</a>
+        <a href="{{ routes.account_addresses_url }}" class="card__linklist-item link {% if template contains 'address' %}text--strong{%- endif -%}">{{ 'customer.general.addresses' | t }}</a>
+        <a href="/account?view=edit" class="card__linklist-item link {% if template contains 'account.edit' %}text--strong{%- endif -%}" data-no-instant>Edit Account</a>
+        <a href="/pages/wishlist" class="card__linklist-item link {% if template contains 'wishlist' %}text--strong{%- endif -%}" title="Wishlist" data-no-instant>Wishlist</a>
+        {% comment %} <a href="/pages/my-wallet" class="card__linklist-item link {% if template contains 'my-wallet' %}text--strong{%- endif -%}" data-no-instant title="My Wallet">My Wallet</a> {% endcomment %}
+        <a href="{{ routes.account_logout_url }}" class="card__linklist-item link" data-no-instant>{{ 'customer.general.logout' | t }}</a>
+         <p class="card__linklist-item link help">{{ 'header.navigation.need_help' | t }}</p>
+          {%- if settings.myaccount_needhelp_phone_number != blank -%}
+            <div class="mobile-menu__help-wrapper">
+              {%- render 'icon', icon: 'bi-phone' -%}
+              <span>{{ settings.myaccount_needhelp_phone_number | escape }}</span>
+            </div>
+          {%- endif -%}
+
+          {%- if settings.myaccount_needhelp_email != blank -%}
+            <div class="mobile-menu__help-wrapper">
+              {%- render 'icon', icon: 'bi-email' -%}
+              <a href="mailto:{{ settings.myaccount_needhelp_email }}">{{ settings.myaccount_needhelp_email | escape }}</a>
+            </div>
+          {%- endif -%}
+      </div>
+    </div>
+  </div>
+
+  <div class="value-picker-wrapper hidden-tablet-and-up">
+    <button class="value-picker-button value-picker-button--pill" aria-haspopup="true" aria-expanded="false" aria-controls="account-selector" data-action="open-value-picker">
+      {% if template contains 'address' %} {{ 'customer.general.addresses' | t }}{% endif %}
+      {% if template contains 'account.edit' %} Edit Account{% endif %}
+      {% if template == 'customers/account' %} {{- 'customer.general.orders' | t -}}{% endif %}
+      {% comment %} {% if template contains 'my-wallet' %}My Wallet{% endif %} {% endcomment %}
+      {% if template contains 'order' %} {{- 'customer.general.orders' | t -}}{% endif %}
+      {%- render 'icon', icon: 'arrow-bottom' -%}
+    </button>
+
+    <div id="account-selector" class="value-picker" aria-hidden="true">
+      <div class="value-picker__inner">
+        <header class="value-picker__header">
+          <span class="value-picker__title text--strong">
+            {% if template contains 'address' %} {{ 'customer.general.addresses' | t }}{% endif %}
+            {% if template contains 'account.edit' %} Edit Account{% endif %}
+            {% if template == 'customers/account' %} {{- 'customer.general.orders' | t -}}{% endif %}
+            {% comment %} {% if template contains 'my-wallet' %}My Wallet{% endif %} {% endcomment %}
+            {% if template contains 'order' %} {{- 'customer.general.orders' | t -}}{% endif %}
+          </span>
+          <button class="value-picker__close" data-action="close-value-picker" aria-controls="account-selector" aria-label="{{ 'general.accessibility.close' | t }}">{% render 'icon', icon: 'close' %}</button>
+        </header>
+
+        <div class="value-picker__choice-list">
+         <a href="{{ routes.account_url }}" class="card__linklist-item link {% if template == 'customers/account' %}text--strong{%- endif -%}">{{ 'customer.general.orders' | t }}</a>
+        <a href="/pages/wishlist" class="card__linklist-item link {% if template contains 'wishlist' %}text--strong{%- endif -%}" title="Wishlist" data-no-instant>Wishlist</a>
+          <a href="{{ routes.account_addresses_url }}" class="card__linklist-item link {% if template contains 'address' %}text--strong{%- endif -%}">{{ 'customer.general.addresses' | t }}</a>
+        <a href="/account?view=edit" class="card__linklist-item link {% if template contains 'account.edit' %}text--strong{%- endif -%}">Edit Account</a>
+        {% comment %} <a href="/pages/my-wallet" class="card__linklist-item link {% if template contains 'my-wallet' %}text--strong{%- endif -%}" title="My Wallet">My Wallet</a> {% endcomment %}
+        <a href="{{ routes.account_logout_url }}" class="card__linklist-item link" data-no-instant>{{ 'customer.general.logout' | t }}</a>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>

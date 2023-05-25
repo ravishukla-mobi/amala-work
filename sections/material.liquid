@@ -1,0 +1,217 @@
+<div class="section">
+<div class="container">
+  <header class="section__header video-header">
+      
+        <h4 class="section__title heading ">{{section.settings.title}}</h4>
+        <a href="{{section.settings.video_link}}" class="section__action-link link">{{section.settings.btn_text}} <svg focusable="false" class="icon icon--tail-right" viewBox="0 0 24 24" role="presentation">
+      <path fill="currentColor" d="M22.707 11.293L15 3.586 13.586 5l6 6H2c-.553 0-1 .448-1 1s.447 1 1 1h17.586l-6 6L15 20.414l7.707-7.707c.391-.391.391-1.023 0-1.414z"></path>
+    </svg></a>
+      
+  </header>
+ 
+<div class="material-slider">
+	{% for block in section.blocks %}
+  <div class="video-slider-box">
+    <a href="{{block.settings.video_url}}">
+    	<img class="lazyload" src="{{block.settings.image | img_url: '300x300', crop: 'center'}}" alt="{{block.settings.image}}"/>
+        <h4>{{block.settings.videoHeading}}</h4>
+    </a>
+  </div>
+  	{% endfor %}
+  
+  
+</div>
+  
+</div></div>
+<script>
+  $(document).ready(function(){
+  	$('.material-slider').slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      arrows:true,
+      dots:false,
+      nfinite: true,
+      adaptiveHeight: true,
+      responsive: [
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 460,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+    });
+    
+  });
+  
+  
+  
+</script>
+
+<style>
+  .expert-speaks-label {
+   	position: absolute;
+    top: -1px;
+    left: 10px;
+    border-radius: 0 10px 10px 0;
+    z-index: 2;
+    padding: 2px 5px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #9c4a2f;
+    display: inline-block; 
+  }
+  
+/*   .video-slider{margin-bottom:50px;} */
+  .material-slider  .slick-arrow{opacity:0;color:transparent; position:absolute;top:50%; transform:translateY(-50%);z-index:99;transition:all 0.3s ease;}
+  .material-slider:hover  .slick-arrow{
+  	opacity:1;
+  }
+  .material-slider  .slick-arrow:before{
+  	content:'';
+    position:absolute;
+    width:40px;
+    height:40px;
+    background-color:#cab49e;
+    border-radius:50%;
+  }
+  .material-slider  .slick-arrow:after{
+  	content:'';
+    position:absolute;
+    width:15px;
+    height:15px;
+    border-left:3px solid #fff;
+    border-bottom:3px solid #fff;
+    top:63%;
+    transform:rotate(45deg) translateY(-50%);
+  }
+  .material-slider  .slick-arrow.slick-prev{
+  	left:0;
+  }
+  .material-slider  .slick-arrow.slick-prev:after{
+  	left:8px;
+  }
+  .material-slider  .slick-arrow.slick-next{
+  	right:0;
+  }
+  .material-slider  .slick-arrow.slick-next:after{
+  	right:8px;
+    top:14px;
+    transform:rotate(225deg) translateY(0%);
+  }
+  .video-slider-box{
+    margin:15px;
+    overflow:hidden;
+    border-radius:10px;
+    position:relative;
+  }
+  .video-slider-box svg{
+  	position:absolute;
+    top:50%;
+    left:50%;
+    transform:translateX(-50%) translateY(-50%);
+    opacity: 0.5;
+    width:50px;
+  }
+  .video-slider-box a h4{
+  	text-overflow: ellipsis;
+    overflow:hidden;
+    display: -webkit-box;
+  	-webkit-line-clamp: 2;
+  	-webkit-box-orient: vertical;
+    word-wrap: break-word;
+  }
+  .video-slider-box img{border-radius:10px;margin:auto;}
+  .slick-dots{list-style:none;text-align:center;}
+  .slick-dots  button{display:none;}
+  .slick-dots li{display:inline-block;margin:5px;width:8px;height:8px;border-radius:50%;border:1px solid #b89c7d;}
+  .slick-dots li.slick-active{background-color:#b89c7d;}
+  @media(max-width:768px){
+  .material-slider  .slick-arrow{
+  	opacity:1;
+  }
+    .video-header{margin-top:35px;}
+  }
+</style>
+
+
+{% schema %}
+{
+  "name": "Material Products",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Material"
+    },
+{
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button text",
+      "default": "View All"
+    },
+{
+            "type": "url",
+            "id": "video_link",
+            "label": "View All Link"
+          }
+   
+  ],
+"blocks": [
+    {
+      "type": "Product",
+      "name": "Add Material",
+      "settings": [
+         {
+            "type": "url",
+            "id": "video_url",
+            "label": "Link"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image",
+            "info": "Image size 1:1  recommended."
+          },
+		{
+            "type": "text",
+            "id": "videoHeading",
+            "label": "Title",
+  			"default": "Title"
+          }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Products",
+      "name": "Material Products"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

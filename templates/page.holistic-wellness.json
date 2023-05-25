@@ -1,0 +1,1640 @@
+{
+  "sections": {
+    "37e3938c-1ec6-4afc-864f-133b5ddc7bc6": {
+      "type": "page-navigation",
+      "settings": {}
+    },
+    "5c5af5b3-31b6-4503-8c9d-83a656ed198a": {
+      "type": "subscription-banner",
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "banner_image_desktop": "shopify:\/\/shop_images\/Collection_page_subscription_banner_desktopPDP.jpg",
+        "banner_image_mob": "shopify:\/\/shop_images\/collection-page-subscription-banner-desktop_1.jpg"
+      }
+    },
+    "9248411d-d71b-498e-839b-0e22ca66ed0d": {
+      "type": "slideshow",
+      "blocks": {
+        "template--16615862042868__9248411d-d71b-498e-839b-0e22ca66ed0d-1678169220264f3c81-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gummies_web.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/gummies_mobile.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/Nyumi"
+          }
+        },
+        "template--16615862042868__9248411d-d71b-498e-839b-0e22ca66ed0d-1678169220264f3c81-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/web_banner_Menstrual.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/mobile_banner_Menstrual.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/Fabpad"
+          }
+        },
+        "2437845c-beb4-484a-bc28-7a7f483a7c8b": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/web_banner_suppliments.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/mobile_banner_suppliments.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/medicinal-herbs-and-supplements"
+          }
+        }
+      },
+      "block_order": [
+        "template--16615862042868__9248411d-d71b-498e-839b-0e22ca66ed0d-1678169220264f3c81-0",
+        "template--16615862042868__9248411d-d71b-498e-839b-0e22ca66ed0d-1678169220264f3c81-1",
+        "2437845c-beb4-484a-bc28-7a7f483a7c8b"
+      ],
+      "settings": {
+        "edge_to_edge": true,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "3ce8650f-ee5d-4ec2-8c3e-43b4fde36a2f": {
+      "type": "custom-grid",
+      "blocks": {
+        "9f57f552-0ea6-4e2b-8b7a-a4f12d36551b": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/stress_relieve.png",
+            "title": "Stress Relief",
+            "block_button_url": "https:\/\/amala.earth\/collections\/stress-sleep-and-anxiety-relief"
+          }
+        },
+        "bad5f3ff-9274-4267-9c3e-9a6deba99ea1": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/immunity_booster_aed7f811-cecf-4d1d-aed8-7ad62cb67712.png",
+            "title": "Immunity Boosters",
+            "block_button_url": "https:\/\/amala.earth\/collections\/cold-sinus-and-immunity"
+          }
+        },
+        "4ba4ea05-4dcd-44b1-8e66-b2e11c1d8eca": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/natural_supplements.png",
+            "title": "Natural Supplements",
+            "block_button_url": "https:\/\/amala.earth\/collections\/medicinal-herbs-and-supplements"
+          }
+        },
+        "46dcfbea-f442-422a-8f61-c28429a2d9a2": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/covid_care_web_90c6341d-f21d-4cb6-b2f5-c50d823d28a8.png",
+            "title": "Covid Care",
+            "block_button_url": "https:\/\/amala.earth\/collections\/anti-ageing-and-skin-problems"
+          }
+        },
+        "9d8a0cc5-207d-4537-b54a-dd1666611f34": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/women_wellness.png",
+            "title": "Women Wellness",
+            "block_button_url": "https:\/\/amala.earth\/collections\/pcod-and-women-wellness"
+          }
+        },
+        "adb9e735-9398-4722-9a2d-a10e739bacf6": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/ayurvedic_food_and_skin.png",
+            "title": "Ayurvedic Food & Skin",
+            "block_button_url": "https:\/\/amala.earth\/pages\/ayurvedic-food-skin"
+          }
+        }
+      },
+      "block_order": [
+        "9f57f552-0ea6-4e2b-8b7a-a4f12d36551b",
+        "bad5f3ff-9274-4267-9c3e-9a6deba99ea1",
+        "4ba4ea05-4dcd-44b1-8e66-b2e11c1d8eca",
+        "46dcfbea-f442-422a-8f61-c28429a2d9a2",
+        "9d8a0cc5-207d-4537-b54a-dd1666611f34",
+        "adb9e735-9398-4722-9a2d-a10e739bacf6"
+      ],
+      "settings": {
+        "subtitle": "Shop by",
+        "title": "concern"
+      }
+    },
+    "99562c33-2413-46de-993c-de993a3a2132": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "749554a1-c75a-42a3-a547-c45dbaaa3829": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "satmya-ashwagandha-fermented-brew-powder-50-g-natural-anxiety-and-stress-relief-60922"
+          }
+        },
+        "746636ae-340e-4389-80a4-557c54a4b78b": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "organic-triphala-powder-150-g"
+          }
+        },
+        "1d4d774f-cf6b-4d1c-bce5-0e6212c0d087": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "bio-resurge-brahmi-tablets-improves-brain-health-60-tablets-8906095561155-250123"
+          }
+        },
+        "153300da-c915-4743-b719-b96b2dbc0aff": {
+          "type": "Product",
+          "settings": {
+            "product": "immunity-booster-giloy-60-capsules"
+          }
+        },
+        "bb432cb4-335e-4546-b9f4-be40dbad20cc": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-safed-musli-powder-100gm"
+          }
+        },
+        "4f75eb1d-2158-468b-82d2-96646cda2720": {
+          "type": "Product",
+          "settings": {
+            "product": "chyawanprash"
+          }
+        },
+        "9086d3b0-a928-4225-b312-bd25338e55ed": {
+          "type": "Product",
+          "settings": {
+            "product": "herbal-kadak-moringa-masala-tea-250-gm"
+          }
+        },
+        "f9e5079d-8bfe-4bff-980c-f9a386a88dad": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-moringa-powder-100gm-1"
+          }
+        },
+        "c343fc7e-098f-40e3-b82d-293a713d74a0": {
+          "type": "Product",
+          "settings": {
+            "product": "ayurvedic-energy-booster-ashwangandha-churna"
+          }
+        },
+        "98e4fd1c-607d-486b-b22d-2895ea2e9406": {
+          "type": "Product",
+          "settings": {
+            "product": "vediko-amla-murabba-immunity-boosting-1-kg80822"
+          }
+        },
+        "54113b8a-173e-4908-92bc-241531870c8f": {
+          "type": "Product",
+          "settings": {
+            "product": "natural-brainkey-gold-malt-for-mental-immunity-400-gm"
+          }
+        },
+        "32116399-1f97-41dd-a3e7-6efe93a25723": {
+          "type": "Product",
+          "settings": {
+            "product": "varaahi-anandprash-sugarfreelasting-memory100-g-var004-181122"
+          }
+        },
+        "9830a20d-360d-4165-9bee-53d741fca76e": {
+          "type": "Product",
+          "settings": {
+            "product": "nutriburp-chyawanprash-gummies-immunity-booster-30-gummies-pack-of-2-nbcg2-171122"
+          }
+        }
+      },
+      "block_order": [
+        "749554a1-c75a-42a3-a547-c45dbaaa3829",
+        "746636ae-340e-4389-80a4-557c54a4b78b",
+        "1d4d774f-cf6b-4d1c-bce5-0e6212c0d087",
+        "153300da-c915-4743-b719-b96b2dbc0aff",
+        "bb432cb4-335e-4546-b9f4-be40dbad20cc",
+        "4f75eb1d-2158-468b-82d2-96646cda2720",
+        "9086d3b0-a928-4225-b312-bd25338e55ed",
+        "f9e5079d-8bfe-4bff-980c-f9a386a88dad",
+        "c343fc7e-098f-40e3-b82d-293a713d74a0",
+        "98e4fd1c-607d-486b-b22d-2895ea2e9406",
+        "54113b8a-173e-4908-92bc-241531870c8f",
+        "32116399-1f97-41dd-a3e7-6efe93a25723",
+        "9830a20d-360d-4165-9bee-53d741fca76e"
+      ],
+      "settings": {
+        "title1": "Immunity",
+        "title2": "Boosters",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/cold-sinus-and-immunity",
+        "button_position": "top"
+      }
+    },
+    "599fb9d5-a3b4-4dd1-a141-eef20c6845ef": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "e5c71f4c-9ece-4007-9f05-d0726ff0a62e": {
+          "type": "Product",
+          "settings": {
+            "product": "kidney-detox-capsules-60-veg-capsules"
+          }
+        },
+        "13e2cc4d-7f23-41e9-aa75-a1f8a1037324": {
+          "type": "Product",
+          "settings": {
+            "product": "bio-resurge-bhringraj-tablet-hair-fall-control-reduce-premature-grey-hair-60-tablets-8906095561148-60123"
+          }
+        },
+        "3b627a98-e96a-4567-a46b-b999aff61fbb": {
+          "type": "Product",
+          "settings": {
+            "product": "cholesterol-control-lipid-care-60-capsules"
+          }
+        },
+        "b64a0e63-5167-4ddc-87e6-a545db26fa90": {
+          "type": "Product",
+          "settings": {
+            "product": "auric-liver-detox-supplement-reduce-cholesterol-20-tablets-liver20-220922"
+          }
+        },
+        "77fd30f6-7039-489c-b5d1-ea93f2ba57f5": {
+          "type": "Product",
+          "settings": {
+            "product": "nyumi-hair-gummies-reduces-hairfall-hair-breakage-50-gummies-ghr50sy-81122"
+          }
+        },
+        "14130e83-6507-434f-b50b-e3373c61191b": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-safed-musli-dietary-supplement-60-capsules"
+          }
+        },
+        "c08f83b7-f2d8-485f-8371-5393fdf26dd3": {
+          "type": "Product",
+          "settings": {
+            "product": "aditam-himalayan-shilajit-20-g-290722"
+          }
+        },
+        "688c4a65-86c2-42f4-9334-ed326693da45": {
+          "type": "Product",
+          "settings": {
+            "product": "butterfly-ayurveda-vita-m-capsules-for-boosting-strength-stamina-in-men-30-capsuless-bavita-311022"
+          }
+        },
+        "7f93e4de-8586-40c8-9e23-9fb584271163": {
+          "type": "Product",
+          "settings": {
+            "product": "earthful-gut-health-supplement-100-plant-based-acidity-constipation-75-g-gut_health-291222"
+          }
+        }
+      },
+      "block_order": [
+        "e5c71f4c-9ece-4007-9f05-d0726ff0a62e",
+        "13e2cc4d-7f23-41e9-aa75-a1f8a1037324",
+        "3b627a98-e96a-4567-a46b-b999aff61fbb",
+        "b64a0e63-5167-4ddc-87e6-a545db26fa90",
+        "77fd30f6-7039-489c-b5d1-ea93f2ba57f5",
+        "14130e83-6507-434f-b50b-e3373c61191b",
+        "c08f83b7-f2d8-485f-8371-5393fdf26dd3",
+        "688c4a65-86c2-42f4-9334-ed326693da45",
+        "7f93e4de-8586-40c8-9e23-9fb584271163"
+      ],
+      "settings": {
+        "title1": "Natural",
+        "title2": "Supplements",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/medicinal-herbs-and-supplements",
+        "button_position": "top"
+      }
+    },
+    "9517eac8-58a2-4d75-9ed2-29b892f20cbd": {
+      "type": "amala-earth-curation",
+      "blocks": {
+        "31f20906-240e-41b0-be61-b08981c3baa4": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/sirona_web_banner.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/sirona_banner_mobile.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/Sirona"
+          }
+        }
+      },
+      "block_order": [
+        "31f20906-240e-41b0-be61-b08981c3baa4"
+      ],
+      "settings": {
+        "curation_heading1": "",
+        "curation_sub_heading2": ""
+      }
+    },
+    "526e67bb-2f95-49e3-850c-de71d1b24577": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "912b04c9-3cb2-4070-a354-898180688d0c": {
+          "type": "Product",
+          "settings": {
+            "product": "sirona-peebuddy-portable-urination-device-for-women-disposable-10-funnels-fsp002-141222"
+          }
+        },
+        "77550771-828e-470a-a758-5b15c3cd3321": {
+          "type": "Product",
+          "settings": {
+            "product": "sirona-strawberry-flavoured-gummies-for-women-pms-support-pack-of-30-fsp622-141222"
+          }
+        },
+        "b2c9eeaa-d6e8-4709-bd94-6bdb407907e6": {
+          "type": "Product",
+          "settings": {
+            "product": "sirona-herbal-pain-relief-patches-instant-relief-formula-for-headaches-pack-of-16-fsp649-141222"
+          }
+        },
+        "da0ae1c5-d2f9-4c36-8966-36e9965fd84e": {
+          "type": "Product",
+          "settings": {
+            "product": "sirona-hair-removal-cream-talc-free-formula-for-dry-sensitive-skin-50-g-pack-of-2-fsp558-141222"
+          }
+        },
+        "18dc5aa6-07af-4852-ada9-f59781b10318": {
+          "type": "Product",
+          "settings": {
+            "product": "sirona-back-and-bum-cream-for-womennatural-dermatologically-tested-100-g-fsp486-141222"
+          }
+        },
+        "d70e8e5c-c084-4faf-a565-1a92fbf29ead": {
+          "type": "Product",
+          "settings": {
+            "product": "sirona-sanitary-pads-ultra-soft-with-leak-protection-xl-size-10-pads-pack-of-2-fsp361-141222"
+          }
+        },
+        "a3f4a0eb-7c98-4f1a-b24b-28c3731cb151": {
+          "type": "Product",
+          "settings": {
+            "product": "sirona-menstrual-cup-wash-100-ml-fsp255-141222"
+          }
+        },
+        "b80ee0c8-5bf0-4556-aec3-40dfe8d5b69f": {
+          "type": "Product",
+          "settings": {
+            "product": "sirona-sanitary-and-diapers-disposal-bag-45-bags-fsp044-141222"
+          }
+        },
+        "51397116-0961-4179-8e18-3bb12b17db02": {
+          "type": "Product",
+          "settings": {
+            "product": "sirona-depigmentation-face-serum-10-niacinamide-vitamin-c-30-ml-fsp435-141222"
+          }
+        },
+        "d3cd9d03-5eb8-496a-bf2d-c190d36b5b36": {
+          "type": "Product",
+          "settings": {
+            "product": "sirona-after-shaving-gelnatural-mineral-oil-free-formula-100-g-fsp495-141222"
+          }
+        },
+        "b9bdb733-3835-40a1-ac8e-c8d9eccec553": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "color-chemistry-lip-cheek-tint-creamy-matte-finish-coconut-lt03-3-5-g-cc0904-270223"
+          }
+        },
+        "a3684743-8e71-40bc-9c28-172b207c465a": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "vilvah-milk-mud-mask-instant-brightness-glow-face-50-ml-vl-sc-69-231122"
+          }
+        },
+        "a7c88fd2-682d-4b5c-9863-72ae0e10be83": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "just-herbs-8-in-1-eyeshadow-lidsticks-infinity-and-beyond-12-g-8906107054378-151122"
+          }
+        },
+        "9c26b8b8-2bf5-454d-90d5-204654a5c213": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "conscious-chemist-hydro-moisturiser-serum-skin-hydration-pack-of-2-cchpsm-301122"
+          }
+        }
+      },
+      "block_order": [
+        "912b04c9-3cb2-4070-a354-898180688d0c",
+        "77550771-828e-470a-a758-5b15c3cd3321",
+        "b2c9eeaa-d6e8-4709-bd94-6bdb407907e6",
+        "da0ae1c5-d2f9-4c36-8966-36e9965fd84e",
+        "18dc5aa6-07af-4852-ada9-f59781b10318",
+        "d70e8e5c-c084-4faf-a565-1a92fbf29ead",
+        "a3f4a0eb-7c98-4f1a-b24b-28c3731cb151",
+        "b80ee0c8-5bf0-4556-aec3-40dfe8d5b69f",
+        "51397116-0961-4179-8e18-3bb12b17db02",
+        "d3cd9d03-5eb8-496a-bf2d-c190d36b5b36",
+        "b9bdb733-3835-40a1-ac8e-c8d9eccec553",
+        "a3684743-8e71-40bc-9c28-172b207c465a",
+        "a7c88fd2-682d-4b5c-9863-72ae0e10be83",
+        "9c26b8b8-2bf5-454d-90d5-204654a5c213"
+      ],
+      "settings": {
+        "title1": "Hygiene",
+        "title2": "Essentials",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "",
+        "button_position": "top"
+      }
+    },
+    "68c33a46-c30e-4b8a-84b9-d80dacac4a04": {
+      "type": "circular-image-grid",
+      "blocks": {
+        "2e909473-ebc0-45b7-a5fa-7463a5a4b3ba": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/natural_supplements_4ddfb351-6ae8-4c46-8686-b6130afe3356.png",
+            "block_two_subtitle": "Herbal",
+            "title": "Supplements",
+            "second_block_url": "https:\/\/amala.earth\/collections\/medicinal-herbs-and-supplements?f_Type=Medicinalcomma+Herbs+and+Supplements,Supplements,Medicinal+Herbs+and+Supplements,Serumscomma+Skin+Oils+and+Supplements"
+          }
+        },
+        "8a6d3a3c-94c0-4179-ad43-af8efd49d07b": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/immunity_boosters.png",
+            "block_two_subtitle": "Immunity",
+            "title": "Boosters",
+            "second_block_url": "https:\/\/amala.earth\/collections\/cold-sinus-and-immunity?f_Type=Immunity+Essentials"
+          }
+        },
+        "8da60efe-7020-4864-85da-93994fd29308": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/hygine_essentials.png",
+            "block_two_subtitle": "Hygiene",
+            "title": "Essentials",
+            "second_block_url": "https:\/\/amala.earth\/collections\/pcod-and-women-wellness?f_Type=Hygiene+Essentials"
+          }
+        },
+        "dfe64664-5b98-41cd-85ad-d3bfffba4906": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/body_and_face_oils_1_b6e0e7a2-04f8-4584-8b1b-a79a32aa6694.png",
+            "block_two_subtitle": "Wellness",
+            "title": "Essential oils",
+            "second_block_url": "https:\/\/amala.earth\/collections\/body-and-face-oils-1"
+          }
+        },
+        "9498bd5e-cb81-49b2-8bb3-ba9f7c4ca19d": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/medicinal_herbs.png",
+            "block_two_subtitle": "Medicinal",
+            "title": "Herbs",
+            "second_block_url": "https:\/\/amala.earth\/collections\/medicinal-herbs-and-supplements?f_Type=Medicinalcomma+Herbs+and+Supplements,Medicinal+Herbs+and+Supplements,Supplements"
+          }
+        },
+        "8ff10c40-b5fb-49fa-ad25-3e5a8b8cdd3e": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/digestives.png",
+            "block_two_subtitle": "Natural",
+            "title": "Digestives",
+            "second_block_url": "https:\/\/amala.earth\/collections\/natural-supplements-and-digestive?f_Type=Digestives"
+          }
+        },
+        "88258eae-41cf-4183-8762-a32eb51d4bc0": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/superfoods.png",
+            "block_two_subtitle": "Organic",
+            "title": "Superfoods",
+            "second_block_url": "https:\/\/amala.earth\/collections\/superfoods-and-protein?f_Type=Superfood"
+          }
+        },
+        "57ff8aac-d518-41e4-b337-6627f65f383e": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/teas_and_brevrages.png",
+            "block_two_subtitle": "Tea and",
+            "title": "Beverages",
+            "second_block_url": "https:\/\/amala.earth\/collections\/tea-and-beverages?f_Type=Tea,Beverages"
+          }
+        },
+        "92774282-274e-4445-aec9-b275fa7c6f5e": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/healthy_snacks_1.png",
+            "block_two_subtitle": "Healthy",
+            "title": "Snacks",
+            "second_block_url": "https:\/\/amala.earth\/collections\/healthy-snacks"
+          }
+        }
+      },
+      "block_order": [
+        "2e909473-ebc0-45b7-a5fa-7463a5a4b3ba",
+        "8a6d3a3c-94c0-4179-ad43-af8efd49d07b",
+        "8da60efe-7020-4864-85da-93994fd29308",
+        "dfe64664-5b98-41cd-85ad-d3bfffba4906",
+        "9498bd5e-cb81-49b2-8bb3-ba9f7c4ca19d",
+        "8ff10c40-b5fb-49fa-ad25-3e5a8b8cdd3e",
+        "88258eae-41cf-4183-8762-a32eb51d4bc0",
+        "57ff8aac-d518-41e4-b337-6627f65f383e",
+        "92774282-274e-4445-aec9-b275fa7c6f5e"
+      ],
+      "custom_css": [
+        ".circular-image-grid-section .second-block-container h2 {font-size: 12px;}"
+      ],
+      "settings": {
+        "subtitle": "",
+        "title": ""
+      }
+    },
+    "f7f09ee2-9fd6-4b55-b81f-dd69a1745cb1": {
+      "type": "landing-page-recommendation",
+      "disabled": true,
+      "blocks": {
+        "b10ae80a-e728-4be1-8234-d925b696cc67": {
+          "type": "Product",
+          "settings": {
+            "product": "reusable-red-sanitary-cloth-panty-liners-pack-of-3"
+          }
+        },
+        "58b91e08-9dbf-4de9-b684-35f537628eea": {
+          "type": "Product",
+          "settings": {
+            "product": "b-feral-malt-and-capsules-b-feral-combo"
+          }
+        },
+        "db66e4a4-4199-4fd8-a0f4-d09a78233985": {
+          "type": "Product",
+          "settings": {
+            "product": "bio-resurge-gokhru-tablet-kidney-functions-urinary-disorders-60-tablets-8906095561162-60123"
+          }
+        },
+        "b6a9d335-c808-448a-88f8-01e87a603d89": {
+          "type": "Product",
+          "settings": {
+            "product": "naari-menstral-cotton-pads-lithe-period-kit-nar14-30092022"
+          }
+        },
+        "0aa6ceb6-bba9-45c2-98a7-c7ff17fb9e6f": {
+          "type": "Product",
+          "settings": {
+            "product": "satmya-fermented-ashwagandha-brew-290722"
+          }
+        },
+        "d59baf37-6f0f-4988-833c-eea4911a0683": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-gudmar-gymnema-dietary-supplement-60-capsules"
+          }
+        },
+        "0ee3ef99-f9fd-46d1-aa19-c78aa0a935d9": {
+          "type": "Product",
+          "settings": {
+            "product": "bio-resurge-variwell-capsules-reduce-pain-varicose-veins-60-capsules-8906095561018-60123"
+          }
+        },
+        "c0a17dd2-8a7f-4f75-8bc5-45f9fa524418": {
+          "type": "Product",
+          "settings": {
+            "product": "nabhi-sutra-lavender-oil-better-sleep-lesser-stress-15-ml-8939997917966-71022"
+          }
+        },
+        "01af6f5e-705c-4233-a5b4-9975252cdd39": {
+          "type": "Product",
+          "settings": {
+            "product": "chemical-free-ultra-soft-biodegradable-tampons-for-women-pack-of-18-without-applicator"
+          }
+        },
+        "85261951-a877-4cdc-84c5-127703fca112": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "b10ae80a-e728-4be1-8234-d925b696cc67",
+        "58b91e08-9dbf-4de9-b684-35f537628eea",
+        "db66e4a4-4199-4fd8-a0f4-d09a78233985",
+        "b6a9d335-c808-448a-88f8-01e87a603d89",
+        "0aa6ceb6-bba9-45c2-98a7-c7ff17fb9e6f",
+        "d59baf37-6f0f-4988-833c-eea4911a0683",
+        "0ee3ef99-f9fd-46d1-aa19-c78aa0a935d9",
+        "c0a17dd2-8a7f-4f75-8bc5-45f9fa524418",
+        "01af6f5e-705c-4233-a5b4-9975252cdd39",
+        "85261951-a877-4cdc-84c5-127703fca112"
+      ],
+      "settings": {
+        "title1": "Anyone",
+        "title2": "Product Type Widget",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/holistic-wellness",
+        "button_position": "top"
+      }
+    },
+    "d965103b-1b02-440c-818d-c9d64c96f623": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "19324a8e-5533-4e3c-aed3-e3345a478e5e": {
+          "type": "Product",
+          "settings": {
+            "product": "natural-bamboo-black-unisex-face-mask-pack-of-2"
+          }
+        },
+        "57769bbe-3048-4e27-bb68-08a784351ea6": {
+          "type": "Product",
+          "settings": {
+            "product": "immunity-booster-giloy-60-capsules"
+          }
+        },
+        "f1a95717-90fc-47eb-9218-5e21df276b5d": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-immunity-boosting-giloy-veg-capsules-100-pcs"
+          }
+        },
+        "3cf7b12f-5780-4f8f-9a09-bc8f51914431": {
+          "type": "Product",
+          "settings": {
+            "product": "ganga-jamuna-kadha"
+          }
+        },
+        "6d0a2726-87f3-4782-b751-481b105c2a08": {
+          "type": "Product",
+          "settings": {
+            "product": "vedic-kadha-herbal-tea"
+          }
+        },
+        "8e60056c-c604-4c5a-ba90-990e0f63f62e": {
+          "type": "Product",
+          "settings": {
+            "product": "neem-giloy-brew"
+          }
+        },
+        "c39b241d-f646-4066-afa6-f0424086b993": {
+          "type": "Product",
+          "settings": {
+            "product": "butterfly-ayurveda-hello-aloe-herbal-hand-sanitizer-for-germ-free-and-soft-hands-100-ml-bahahs-1-311022"
+          }
+        },
+        "bc9f912e-947f-498d-88f4-c00ec734596f": {
+          "type": "Product",
+          "settings": {
+            "product": "kronokare-hand-sanitizer-kills-99-99-bacteria-30-ml-hs-30ml-tub-51222"
+          }
+        },
+        "2864b125-b0c9-40e4-ad94-785bc74720a8": {
+          "type": "Product",
+          "settings": {
+            "product": "last-forest-eucalyptus-essential-oil-improve-respiratory-circulation-100-mllfeo-ey100-50423"
+          }
+        },
+        "18db44a6-bb17-4ad7-86a5-f20899fbbc0e": {
+          "type": "Product",
+          "settings": {
+            "product": "sirona-bodyguard-sanitizer-spray-multipurpose-surface-disinfectant-400-ml-fsp307-141222"
+          }
+        }
+      },
+      "block_order": [
+        "19324a8e-5533-4e3c-aed3-e3345a478e5e",
+        "57769bbe-3048-4e27-bb68-08a784351ea6",
+        "f1a95717-90fc-47eb-9218-5e21df276b5d",
+        "3cf7b12f-5780-4f8f-9a09-bc8f51914431",
+        "6d0a2726-87f3-4782-b751-481b105c2a08",
+        "8e60056c-c604-4c5a-ba90-990e0f63f62e",
+        "c39b241d-f646-4066-afa6-f0424086b993",
+        "bc9f912e-947f-498d-88f4-c00ec734596f",
+        "2864b125-b0c9-40e4-ad94-785bc74720a8",
+        "18db44a6-bb17-4ad7-86a5-f20899fbbc0e"
+      ],
+      "settings": {
+        "title1": "Covid",
+        "title2": "care",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/covid-care",
+        "button_position": "top"
+      }
+    },
+    "7e727bcc-acea-4a68-bf80-27371ae6d902": {
+      "type": "landing-page-recommendation",
+      "disabled": true,
+      "blocks": {
+        "31fb0fb1-31fc-4221-b26b-b3e53253464e": {
+          "type": "Product",
+          "settings": {
+            "product": "honey-fix-face-cleanser-100-ml"
+          }
+        },
+        "45c49ccf-a090-4093-bc1c-f1fa6114aa75": {
+          "type": "Product",
+          "settings": {
+            "product": "nat-habit-kaolin-aparajita-face-pack-mask-clears-marks-tan-40-g-fc-kl-ka-040-160922"
+          }
+        },
+        "72995800-ecf7-46ec-b2ff-f4be43592e1e": {
+          "type": "Product",
+          "settings": {
+            "product": "juicy-chemistry-facial-oil-rosehip-anti-scarring-pigmentation-control-10-ml-jc0618-201222"
+          }
+        },
+        "3236e110-6734-4bb4-b349-a468b6a2fe78": {
+          "type": "Product",
+          "settings": {
+            "product": "glycolic-salicylic-acid-serum-15-ml"
+          }
+        },
+        "2adff8ad-1882-4d1c-8509-740808a590dd": {
+          "type": "Product",
+          "settings": {
+            "product": "anti-pollution-kit"
+          }
+        },
+        "6cea51e5-a84f-4047-a3b9-f6261f8a7aa2": {
+          "type": "Product",
+          "settings": {
+            "product": "nat-habit-neem-ajwain-face-pack-mask-removes-blackheads-40-g-fc-kl-na-040-160922"
+          }
+        },
+        "c48fc1bc-5aa8-495a-9c7e-080f491621f5": {
+          "type": "Product",
+          "settings": {
+            "product": "ayurvedic-anti-aging-face-oil-i-10-ml"
+          }
+        },
+        "70927f2a-7341-46d8-8531-ecd81dbba1d4": {
+          "type": "Product",
+          "settings": {
+            "product": "under-eye-cream-dark-circle-control-20-ml"
+          }
+        }
+      },
+      "block_order": [
+        "31fb0fb1-31fc-4221-b26b-b3e53253464e",
+        "45c49ccf-a090-4093-bc1c-f1fa6114aa75",
+        "72995800-ecf7-46ec-b2ff-f4be43592e1e",
+        "3236e110-6734-4bb4-b349-a468b6a2fe78",
+        "2adff8ad-1882-4d1c-8509-740808a590dd",
+        "6cea51e5-a84f-4047-a3b9-f6261f8a7aa2",
+        "c48fc1bc-5aa8-495a-9c7e-080f491621f5",
+        "70927f2a-7341-46d8-8531-ecd81dbba1d4"
+      ],
+      "settings": {
+        "title1": "Concerned",
+        "title2": "base",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/hair-care?f_Hair%20Concern=Dandruff",
+        "button_position": "top"
+      }
+    },
+    "fbd8009f-1ee0-4a6a-8ff7-65b9174218f4": {
+      "type": "amala-earth-curation",
+      "blocks": {
+        "06b0dc12-25c2-4e84-9c3b-8f7472e0b132": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/organic_india_web_banner.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/organic_india_mobile.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/ORGANIC-INDIA"
+          }
+        },
+        "f9304783-95b9-408f-aa41-66b194d5b114": {
+          "type": "Banner",
+          "disabled": true,
+          "settings": {
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "06b0dc12-25c2-4e84-9c3b-8f7472e0b132",
+        "f9304783-95b9-408f-aa41-66b194d5b114"
+      ],
+      "settings": {
+        "curation_heading1": "",
+        "curation_sub_heading2": ""
+      }
+    },
+    "2bd14898-d935-4349-9e83-f4372de58bf7": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "cfa4c56f-99a3-44dd-bf10-6ecfcd15f9a5": {
+          "type": "Product",
+          "settings": {
+            "product": "sugar-balance-60-capsules-pack-of-2"
+          }
+        },
+        "65342066-f6a1-4e0c-8a31-266b1fa66266": {
+          "type": "Product",
+          "settings": {
+            "product": "joint-muscle-pain-arnica-oil-60ml"
+          }
+        },
+        "dd81d6c2-b03a-4387-9f4e-85e9163ea1d5": {
+          "type": "Product",
+          "settings": {
+            "product": "tulsi-tummy-25-tea-bags"
+          }
+        },
+        "b1a77b35-304f-457b-b1a2-c39c726e486e": {
+          "type": "Product",
+          "settings": {
+            "product": "liver-kidney-care-60-capsules"
+          }
+        },
+        "d9316e50-997c-4f71-b34f-f532012be4d3": {
+          "type": "Product",
+          "settings": {
+            "product": "triphala-60-capsules-pack-of-2"
+          }
+        },
+        "056f647c-c1d7-437e-8233-11c3955d3f53": {
+          "type": "Product",
+          "settings": {
+            "product": "immunity-booster-wheatgrass-powder-100g"
+          }
+        },
+        "d7926a33-817c-4fa5-bd0d-7d47e84f6770": {
+          "type": "Product",
+          "settings": {
+            "product": "ashwagandha-60-capsules"
+          }
+        },
+        "80820f18-87a0-4a91-af2a-5729f89510de": {
+          "type": "Product",
+          "settings": {
+            "product": "cinnamon-60-capsules"
+          }
+        },
+        "53a0122f-376d-440e-92b6-8d797cb6f8bd": {
+          "type": "Product",
+          "settings": {
+            "product": "flaxseed-oil-60-capsules"
+          }
+        },
+        "06faf630-3377-4d17-ac4a-17d4706a1b4a": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-india-tulsi-green-tea-ashwagandha-25-tea-bags-290722"
+          }
+        },
+        "3d2810cb-434f-4ca9-8841-628f6fd11487": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "all-day-gel-kajal"
+          }
+        }
+      },
+      "block_order": [
+        "cfa4c56f-99a3-44dd-bf10-6ecfcd15f9a5",
+        "65342066-f6a1-4e0c-8a31-266b1fa66266",
+        "dd81d6c2-b03a-4387-9f4e-85e9163ea1d5",
+        "b1a77b35-304f-457b-b1a2-c39c726e486e",
+        "d9316e50-997c-4f71-b34f-f532012be4d3",
+        "056f647c-c1d7-437e-8233-11c3955d3f53",
+        "d7926a33-817c-4fa5-bd0d-7d47e84f6770",
+        "80820f18-87a0-4a91-af2a-5729f89510de",
+        "53a0122f-376d-440e-92b6-8d797cb6f8bd",
+        "06faf630-3377-4d17-ac4a-17d4706a1b4a",
+        "3d2810cb-434f-4ca9-8841-628f6fd11487"
+      ],
+      "settings": {
+        "title1": "Organic Food",
+        "title2": "Essentials",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/makeup-and-nails",
+        "button_position": "top"
+      }
+    },
+    "a6abd9b5-c73f-4e09-9099-6cf35e47554f": {
+      "type": "custom-grid",
+      "disabled": true,
+      "blocks": {
+        "bc74c6b1-daa6-4f54-a2ad-6144f63860eb": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/vegan_plant_based_a18a1e8f-4b28-46c8-bde1-a37735053844.png",
+            "title": "Vegan\/Plant-based",
+            "block_button_url": "https:\/\/amala.earth\/collections\/vegan-plant-based-products"
+          }
+        },
+        "0bc6c7f8-030c-4494-8257-f01ac22206a3": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/gluten-free.png",
+            "title": "Gluten-free",
+            "block_button_url": "https:\/\/amala.earth\/pages\/gluten-free"
+          }
+        },
+        "30af52ba-c36e-4352-a582-82c8860ebbd9": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/diabetic-friendly.png",
+            "title": "Diabetic-friendly",
+            "block_button_url": "https:\/\/amala.earth\/collections\/diabetic-friendly"
+          }
+        },
+        "2f082c99-54be-47cc-a94b-4fd526c44a55": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/immunity_boosters_1.png",
+            "title": "Immunity boosters",
+            "block_button_url": "https:\/\/amala.earth\/collections\/immunity-essentials"
+          }
+        },
+        "366812c4-62cb-4f51-8b17-550e13ae9aaa": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/heart_friendly_8f0f8230-8d9e-4d6d-9506-298e29334bb8.png",
+            "title": "Heart-friendly",
+            "block_button_url": "https:\/\/amala.earth\/collections\/heart-friendly"
+          }
+        },
+        "cf8258e8-a603-4b4e-91de-073e88e1cc30": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/ayurvedic_0baf022c-2b97-4a1d-8ff1-2ccfd43f7f62.png",
+            "title": "Ayurvedic",
+            "block_button_url": "https:\/\/amala.earth\/collections\/ayurvedic-food"
+          }
+        }
+      },
+      "block_order": [
+        "bc74c6b1-daa6-4f54-a2ad-6144f63860eb",
+        "0bc6c7f8-030c-4494-8257-f01ac22206a3",
+        "30af52ba-c36e-4352-a582-82c8860ebbd9",
+        "2f082c99-54be-47cc-a94b-4fd526c44a55",
+        "366812c4-62cb-4f51-8b17-550e13ae9aaa",
+        "cf8258e8-a603-4b4e-91de-073e88e1cc30"
+      ],
+      "settings": {
+        "subtitle": "Shop by",
+        "title": "Concerns"
+      }
+    },
+    "5197c485-96a4-4d12-a1d7-a756d4b39fe6": {
+      "type": "highlighted-brands",
+      "settings": {
+        "select_your_heading1": "Highlighted",
+        "select_your_heading2": "brand",
+        "highlighted_brands_desktop": "shopify:\/\/shop_images\/amrutam_highlighted_banner.jpg",
+        "highlighted_brands": "shopify:\/\/shop_images\/amrutam_highlighted_banner_mobile.jpg",
+        "title": "Amrutam",
+        "anchor_text": "Explore the brand",
+        "url_link": "https:\/\/amala.earth\/pages\/Amrutam"
+      }
+    },
+    "86f09998-5ddc-4f04-bac9-68f3b0ef81b9": {
+      "type": "amala-earth-curation",
+      "disabled": true,
+      "blocks": {
+        "203fcfe2-2443-49c8-badd-db8bb8e63d0e": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/Vegan_banner_website_2_540bfad1-d168-4a6b-8ffd-41f7c445b05f.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/Vegan_beauty_banner-microsite-mobile_2_2cac4012-e6cb-42f3-a683-aa004b149655.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/pages\/vegan"
+          }
+        }
+      },
+      "block_order": [
+        "203fcfe2-2443-49c8-badd-db8bb8e63d0e"
+      ],
+      "settings": {
+        "curation_heading1": "",
+        "curation_sub_heading2": ""
+      }
+    },
+    "ea4f2333-13c2-4636-9e12-f1b5d744856f": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "221994d5-26cb-47dd-89f3-276641aea18d": {
+          "type": "Product",
+          "settings": {
+            "product": "just-jaivik-organic-brahmi-powder-100gm-290722"
+          }
+        },
+        "96a06d33-d011-4d68-8740-fccf3eb03841": {
+          "type": "Product",
+          "settings": {
+            "product": "ayurvedic-anti-depressant-shankhpushpi-churna"
+          }
+        },
+        "48167e31-b6a7-4fd0-b2dc-2d08407187af": {
+          "type": "Product",
+          "settings": {
+            "product": "satmya-ashwagandha-fermented-brew-powder-50-g-natural-anxiety-and-stress-relief-60922"
+          }
+        },
+        "4b958b14-1a74-44d3-a6d1-ca18a67591a3": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-india-organic-brahmi-180-capsules-290722"
+          }
+        },
+        "a39aa1e7-9384-4c2c-a23f-8aee4d31cb62": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-india-simply-chamomile-soothing-relaxing-25-tea-bags-pack-of-2190822"
+          }
+        },
+        "aa6086fa-b512-4081-a697-88fcb877bc85": {
+          "type": "Product",
+          "settings": {
+            "product": "korus-essentials-bergamot-essential-oil-soothe-anxiety-15-ml-672975245795-210922"
+          }
+        },
+        "7984ce43-f8f0-4167-94dc-3c2320cbb77e": {
+          "type": "Product",
+          "settings": {
+            "product": "mindsattva-herb-essence-supplement-stress-relief"
+          }
+        },
+        "bae94f7b-aeee-425d-95d9-804652dc4022": {
+          "type": "Product",
+          "settings": {
+            "product": "bio-resurge-regustress-capsules-anxiety-relieve-stress-30-capsules-8906095560530-60123"
+          }
+        },
+        "04caeb0d-43ac-4f9c-9a5a-58ecc339f865": {
+          "type": "Product",
+          "settings": {
+            "product": "nutmeg-essential-oil-depression-anxiety-relief-10-ml"
+          }
+        }
+      },
+      "block_order": [
+        "221994d5-26cb-47dd-89f3-276641aea18d",
+        "96a06d33-d011-4d68-8740-fccf3eb03841",
+        "48167e31-b6a7-4fd0-b2dc-2d08407187af",
+        "4b958b14-1a74-44d3-a6d1-ca18a67591a3",
+        "a39aa1e7-9384-4c2c-a23f-8aee4d31cb62",
+        "aa6086fa-b512-4081-a697-88fcb877bc85",
+        "7984ce43-f8f0-4167-94dc-3c2320cbb77e",
+        "bae94f7b-aeee-425d-95d9-804652dc4022",
+        "04caeb0d-43ac-4f9c-9a5a-58ecc339f865"
+      ],
+      "settings": {
+        "title1": "Anxiety",
+        "title2": "Relief",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": true,
+        "show_quick_buy": false,
+        "link_title": "View all",
+        "link_url": "",
+        "button_position": "top"
+      }
+    },
+    "f08b6ff6-e74b-481a-a7f4-283ef888d23b": {
+      "type": "landing-page-recommendation",
+      "disabled": true,
+      "blocks": {
+        "30c1bf27-d117-4201-b317-f606cac47595": {
+          "type": "Product",
+          "settings": {
+            "product": "vikarah-apple-calendula-revitalizing-toner-inproves-skin-complexion-60ml-vhbrtonac202004-271022"
+          }
+        },
+        "deef6cff-a4c7-4685-bea4-4fb1281c1c6b": {
+          "type": "Product",
+          "settings": {
+            "product": "daivik-moringa-moringa-hair-conditioner-110-g-dm-con-100-131022"
+          }
+        },
+        "b7697578-bc1a-4085-9390-7f6f964d10c5": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-moringa-seeds-cold-pressed-oil-50-ml"
+          }
+        },
+        "d15fa4ee-5936-4bb4-8832-2c94cb13c81d": {
+          "type": "Product",
+          "settings": {
+            "product": "pureearth-mitti-raw-honey-face-masque-50-ml-f-mcfm-50-180822"
+          }
+        },
+        "307bb18a-a3be-40f7-9d25-d6bce8888450": {
+          "type": "Product",
+          "settings": {
+            "product": "natural-amla-juice-500ml"
+          }
+        },
+        "798c70c4-2704-4711-adf1-a14130aa31c2": {
+          "type": "Product",
+          "settings": {
+            "product": "glowveda-herb-essence-supplement-glowing-skin"
+          }
+        },
+        "d069811b-05c6-4d4a-ac0c-8f414005f4ea": {
+          "type": "Product",
+          "settings": {
+            "product": "auric-sleep-gummies-with-ashwagandha-strawberry-flavour-60-gummy-aurgummy-220922"
+          }
+        },
+        "c3e597ec-ba77-4421-9b59-0241efbd2465": {
+          "type": "Product",
+          "settings": {
+            "product": "100-pure-gir-bilona-a2-cow-ghee-500ml"
+          }
+        },
+        "09525c45-5fe8-4f27-87bf-ea722287a03c": {
+          "type": "Product",
+          "settings": {
+            "product": "triphala"
+          }
+        },
+        "ff3f60f4-a46b-47ad-803a-6d0eae431ba9": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "sohmya-hibiscus-rich-hair-vitalizer-reduces-hairfall-100-ml-smh100ml017-50922"
+          }
+        }
+      },
+      "block_order": [
+        "30c1bf27-d117-4201-b317-f606cac47595",
+        "deef6cff-a4c7-4685-bea4-4fb1281c1c6b",
+        "b7697578-bc1a-4085-9390-7f6f964d10c5",
+        "d15fa4ee-5936-4bb4-8832-2c94cb13c81d",
+        "307bb18a-a3be-40f7-9d25-d6bce8888450",
+        "798c70c4-2704-4711-adf1-a14130aa31c2",
+        "d069811b-05c6-4d4a-ac0c-8f414005f4ea",
+        "c3e597ec-ba77-4421-9b59-0241efbd2465",
+        "09525c45-5fe8-4f27-87bf-ea722287a03c",
+        "ff3f60f4-a46b-47ad-803a-6d0eae431ba9"
+      ],
+      "settings": {
+        "title1": "Remedies",
+        "title2": "for hairfall ",
+        "logged_in": false,
+        "products_count": 38,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/pages\/ayurvedic-food-skin",
+        "button_position": "top"
+      }
+    },
+    "c0308d8b-0365-4681-af50-ffdc0d63c61f": {
+      "type": "brands-we-love",
+      "blocks": {
+        "38234968-9399-4c2a-8f06-53fecc26273e": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/organic_india_tiles_web.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/organic_india_tiles_mobile.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/ORGANIC-INDIA"
+          }
+        },
+        "e54f33f8-ccee-4ced-a94d-5c20d751f656": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/amrutam_tiles_web.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/amrutam_tiles_mobile_1.png",
+            "brands_link": "https:\/\/amala.earth\/pages\/Amrutam"
+          }
+        },
+        "8491926f-84ac-42be-af37-ad2adf1deff1": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/tac_tiles_web.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/tac_tiles_mobile.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/t-a-c-the-ayurveda-co"
+          }
+        },
+        "318abb6b-bcc3-459f-9b9a-bb4c3073b889": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/fabpad_tiles_web.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/fabpad_tiles_mobile.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/Fabpad"
+          }
+        },
+        "075c9c70-fab8-4cd0-98a8-7c382ae22770": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/nyumi_tiles_web.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/nyumi_tiles_mobile.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/Nyumi"
+          }
+        },
+        "c86d9ee4-a443-4369-987f-17c8856e99ad": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/just_jaivik_tiles_web.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/just_jaivik_tiles_mobile.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/Just-Jaivik"
+          }
+        },
+        "3bcd13ce-366a-4263-8e53-b0d47815bf1a": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/sirona_tiles_web.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/sirona_tiles_mobile.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/Sirona"
+          }
+        },
+        "16891b45-c1cc-4ea3-8a15-0e45471fd314": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/bio_resurge_web.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/bio_resurge_tiles_mobile.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/Bio-Resurge"
+          }
+        },
+        "7fb470c1-d504-4423-ab2b-72f354eb4a0b": {
+          "type": "brands",
+          "disabled": true,
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_656.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_666.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/ethical-beauty?f_Brand=Nat+Habit"
+          }
+        },
+        "de9e2fc9-e677-44bc-8769-843d2d77d09b": {
+          "type": "brands",
+          "disabled": true,
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_658.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_673_82dd2d24-4fd1-46e6-8531-c58f1a2c36af.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/ethical-beauty?f_Brand=Bella+Vita+Organic"
+          }
+        }
+      },
+      "block_order": [
+        "38234968-9399-4c2a-8f06-53fecc26273e",
+        "e54f33f8-ccee-4ced-a94d-5c20d751f656",
+        "8491926f-84ac-42be-af37-ad2adf1deff1",
+        "318abb6b-bcc3-459f-9b9a-bb4c3073b889",
+        "075c9c70-fab8-4cd0-98a8-7c382ae22770",
+        "c86d9ee4-a443-4369-987f-17c8856e99ad",
+        "3bcd13ce-366a-4263-8e53-b0d47815bf1a",
+        "16891b45-c1cc-4ea3-8a15-0e45471fd314",
+        "7fb470c1-d504-4423-ab2b-72f354eb4a0b",
+        "de9e2fc9-e677-44bc-8769-843d2d77d09b"
+      ],
+      "settings": {
+        "heading_one": "Brands",
+        "heading_two": "we love",
+        "btn_text": "",
+        "url_link": ""
+      }
+    },
+    "a7ea0487-7e3a-4b47-a708-8bb88a506e59": {
+      "type": "blog-posts-carousel",
+      "blocks": {
+        "d755903b-8620-4fbd-a113-8404281f35f1": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/3_5.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/healthy-and-tasty-gummies-for-nutrition",
+            "title": "Healthy and tasty gummies for nutrition"
+          }
+        },
+        "e3bbb9f0-8c3b-4247-9abe-80373ac4a94c": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/2_6.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/herbal-drinks-malts-benefits-with-recipes",
+            "title": "Herbal Drinks & Malts - Benefits With Recipes"
+          }
+        },
+        "f7883cfd-14da-4a4b-80f6-5418ecdf8110": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/1_6.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/pcos-how-to-manage-your-symptoms-naturally",
+            "title": "PCOS - How To Manage Your Symptoms Naturally"
+          }
+        },
+        "2e4f2e1f-0b41-4e0a-81c4-87c6000e864a": {
+          "type": "blog",
+          "disabled": true,
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Oralcare.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/breath-of-fresh-air-the-best-sustainable-oral-care-products",
+            "title": "Breath of Fresh Air: The Best Sustainable Oral Care Products"
+          }
+        },
+        "e030cd63-9da3-4563-864d-74b6b6e62a30": {
+          "type": "blog",
+          "disabled": true,
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Oral_care.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/how-to-gradually-adopt-a-clean-beauty-routine",
+            "title": "How to Gradually Adopt A Clean Beauty Routine"
+          }
+        },
+        "49bc4d51-8a54-4fa6-9506-b04db4416416": {
+          "type": "blog",
+          "disabled": true,
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/6_Responsible_Fashion_Brands_We_Are_Sure_You_Will_Love.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/7-responsible-fashion-brands-we-are-sure-you-will-love",
+            "title": "6 Responsible Fashion Brands We Are Sure You Will Love!"
+          }
+        },
+        "f97b7cdf-bff0-48a9-8c92-f5f16852b186": {
+          "type": "blog",
+          "disabled": true,
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Why_Should_You_Choose_Sustainable_Ethical_Sleepwear.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/why-should-you-choose-sustainable-ethical-sleepwear",
+            "title": "Why Should You Choose Sustainable, Ethical Sleepwear?"
+          }
+        },
+        "49516805-9e1a-42ad-9b61-decac6393814": {
+          "type": "blog",
+          "disabled": true,
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/A_Modern_Man_s_Guide_To_Sustainable_Fashion.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/a-modern-mans-guide-to-sustainable-fashion",
+            "title": "A Modern Man's Guide To Sustainable Fashion"
+          }
+        }
+      },
+      "block_order": [
+        "d755903b-8620-4fbd-a113-8404281f35f1",
+        "e3bbb9f0-8c3b-4247-9abe-80373ac4a94c",
+        "f7883cfd-14da-4a4b-80f6-5418ecdf8110",
+        "2e4f2e1f-0b41-4e0a-81c4-87c6000e864a",
+        "e030cd63-9da3-4563-864d-74b6b6e62a30",
+        "49bc4d51-8a54-4fa6-9506-b04db4416416",
+        "f97b7cdf-bff0-48a9-8c92-f5f16852b186",
+        "49516805-9e1a-42ad-9b61-decac6393814"
+      ],
+      "settings": {
+        "heading_one": "Recent",
+        "heading_two": "blogposts",
+        "view_text": "",
+        "url_link": ""
+      }
+    },
+    "41014bac-ea4d-4b27-8c03-52bef9fe55fe": {
+      "type": "landing-page-video",
+      "blocks": {
+        "c52f85ba-2571-42d6-9870-78e1d05413a4": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=Eqr4nM7fUOk",
+            "image": "shopify:\/\/shop_images\/video_blog_image_2.jpg",
+            "title": "Organic Food Range For Healthy Living",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "84bb1ceb-f46d-41d6-b337-d61f90609772": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtube.com\/watch?v=82yXqjyLd88",
+            "image": "shopify:\/\/shop_images\/video_blog_image_1.jpg",
+            "title": "Handmade Natural Chywanprash to Boost Your Immunity",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "5f1064ed-195f-4b18-a177-6f541dc17ce1": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/am2wMIIafl0",
+            "image": "shopify:\/\/shop_images\/V3.png",
+            "title": "Natural Makeup Products Online",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "880899d6-ad8c-49e9-933e-aada13519725": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/-l2WdUf5qjo",
+            "image": "shopify:\/\/shop_images\/V4.png",
+            "title": "Shampoo Bars | Vegan",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "d268173e-ca11-4947-ae9b-86b41bdc16fe": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/8-bqT3xoyc4",
+            "image": "shopify:\/\/shop_images\/V5.png",
+            "title": "Natural Essential Oils for Face & Body",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "9770c9aa-57b2-42fb-89ed-b39443515912": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtube.com\/watch?v=VEdpYp0QceU",
+            "image": "shopify:\/\/shop_images\/vasudha_rai_2.png",
+            "title": "Beauty Rituals Ft. Vasudha Rai",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "8ca15421-ba45-427c-8190-b359be131cbc": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/rPc-WfHkaIw",
+            "title": "HOW TO WEAR MAKEUP WITH GLASSES UPDATED | Nikol Johnson",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        }
+      },
+      "block_order": [
+        "c52f85ba-2571-42d6-9870-78e1d05413a4",
+        "84bb1ceb-f46d-41d6-b337-d61f90609772",
+        "5f1064ed-195f-4b18-a177-6f541dc17ce1",
+        "880899d6-ad8c-49e9-933e-aada13519725",
+        "d268173e-ca11-4947-ae9b-86b41bdc16fe",
+        "9770c9aa-57b2-42fb-89ed-b39443515912",
+        "8ca15421-ba45-427c-8190-b359be131cbc"
+      ],
+      "settings": {
+        "video_title1": "Video",
+        "video_title2": "blogs",
+        "btn_text": "",
+        "url_link": ""
+      }
+    },
+    "5dc00baa-6529-4a0c-9dbf-540bbfa62059": {
+      "type": "subscription-widget",
+      "settings": {
+        "hide_widget": false,
+        "title": "Get 10% OFF",
+        "content": "<p>on your first purchase. Subscribe now and start your earth-friendly journey today!<\/p>",
+        "button_text": "Get 10% OFF",
+        "thank_you_title": "Thank You!",
+        "thank_you_content": "<p>Use coupon code <strong>WELCOME10<\/strong> and <strong>get 10% discount<\/strong>.<\/p>"
+      }
+    },
+    "29ffb572-5d2d-49ea-99c9-724cdef627a2": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "bestselling-products",
+        "title": "Bestselling Products",
+        "subtitle": "Products",
+        "logged_in": false,
+        "products_count": 10,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "shopify:\/\/collections\/bestselling-products",
+        "button_position": "top",
+        "old_section_id": ""
+      }
+    },
+    "4bcf5237-b7b4-4f52-8120-c02769da93e6": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "title": "Recently viewed",
+        "subtitle": "",
+        "products_count": 10,
+        "show_quick_buy": true
+      }
+    }
+  },
+  "order": [
+    "37e3938c-1ec6-4afc-864f-133b5ddc7bc6",
+    "5c5af5b3-31b6-4503-8c9d-83a656ed198a",
+    "9248411d-d71b-498e-839b-0e22ca66ed0d",
+    "3ce8650f-ee5d-4ec2-8c3e-43b4fde36a2f",
+    "99562c33-2413-46de-993c-de993a3a2132",
+    "599fb9d5-a3b4-4dd1-a141-eef20c6845ef",
+    "9517eac8-58a2-4d75-9ed2-29b892f20cbd",
+    "526e67bb-2f95-49e3-850c-de71d1b24577",
+    "68c33a46-c30e-4b8a-84b9-d80dacac4a04",
+    "f7f09ee2-9fd6-4b55-b81f-dd69a1745cb1",
+    "d965103b-1b02-440c-818d-c9d64c96f623",
+    "7e727bcc-acea-4a68-bf80-27371ae6d902",
+    "fbd8009f-1ee0-4a6a-8ff7-65b9174218f4",
+    "2bd14898-d935-4349-9e83-f4372de58bf7",
+    "a6abd9b5-c73f-4e09-9099-6cf35e47554f",
+    "5197c485-96a4-4d12-a1d7-a756d4b39fe6",
+    "86f09998-5ddc-4f04-bac9-68f3b0ef81b9",
+    "ea4f2333-13c2-4636-9e12-f1b5d744856f",
+    "f08b6ff6-e74b-481a-a7f4-283ef888d23b",
+    "c0308d8b-0365-4681-af50-ffdc0d63c61f",
+    "a7ea0487-7e3a-4b47-a708-8bb88a506e59",
+    "41014bac-ea4d-4b27-8c03-52bef9fe55fe",
+    "5dc00baa-6529-4a0c-9dbf-540bbfa62059",
+    "29ffb572-5d2d-49ea-99c9-724cdef627a2",
+    "4bcf5237-b7b4-4f52-8120-c02769da93e6"
+  ]
+}

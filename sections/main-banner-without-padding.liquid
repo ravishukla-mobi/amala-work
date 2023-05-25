@@ -1,0 +1,245 @@
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<section>
+  <a href="{{ section.settings.desktop_image_url }}">
+    <div class="festive-banner">
+      {% if section.settings.banner_desktop_image != blank %}
+        <div class="banner-image-desktop">
+          <img src="{{ section.settings.banner_desktop_image | img_url: 'master' }}" alt="" class="">
+        </div>
+      {% endif %}
+      <div class="banner-image-desktop-text">
+        {% if section.settings.desktop_banner_title != blank %}
+          <h1 style="color: {{ section.settings.color_heading }}">{{ section.settings.desktop_banner_title }}</h1>
+        {% endif %}
+        {% if section.settings.desktop_banner_subtitle != blank %}
+          <h2 style="color: {{ section.settings.color_subheading }}">{{ section.settings.desktop_banner_subtitle }}</h2>
+        {% endif %}
+        {% if section.settings.desktop_banner_button != blank %}
+          <button style="background-color: {{ section.settings.button_background }};color: {{ section.settings.color_button }}">
+            {{ section.settings.desktop_banner_button }}
+          </button>
+        {% endif %}
+      </div>
+    </div>
+  </a>
+  {%- comment -%}
+    banner for mobile starts here
+  {%- endcomment -%}
+  <a href="{{ section.settings.desktop_image_url }}">
+    <div class="festive-banner-mobile">
+      {% if section.settings.banner_mobile_image != blank %}
+        <div class="banner-image-mobile">
+          <img src="{{ section.settings.banner_mobile_image | img_url: 'master' }}" alt="" class="">
+        </div>
+      {% endif %}
+      <div class="banner-image-mobile-text">
+        {% if section.settings.desktop_banner_title != blank %}
+          <h1 style="color: {{ section.settings.color_heading }}">{{ section.settings.desktop_banner_title }}</h1>
+        {% endif %}
+        {% if section.settings.desktop_banner_subtitle != blank %}
+          <h2 style="color: {{ section.settings.color_subheading }}">{{ section.settings.desktop_banner_subtitle }}</h2>
+        {% endif %}
+        {% if section.settings.desktop_banner_button != blank %}
+          <button style="background-color: {{ section.settings.button_background }}; color: {{ section.settings.color_button }}">
+            {{ section.settings.desktop_banner_button }}
+          </button>
+        {% endif %}
+      </div>
+    </div>
+  </a>
+</section>
+
+<style>
+      {%- comment -%} highlighted brands css starts here {%- endcomment -%}
+
+
+      .banner-image-desktop img{
+        width:100%;
+    }
+    .festive-banner{
+        position: relative;
+    }
+    .banner-image-desktop-text{
+        position: absolute;
+        top: 50%;
+        left: 90%;
+        transform: translate(-60%,-65%);
+        text-align: center;
+        width: 100%;
+        padding-right: 10%;
+    }
+    .banner-image-desktop-text h1{
+        margin: 0;
+        font-size: 34px;
+        font-weight: 500;
+        line-height: 44px;
+    }
+    .banner-image-desktop-text h2{
+        margin: 0;
+        font-size: 20px;
+        font-weight: 300;
+    }
+    .banner-image-desktop-text button{
+        width: 11%;
+        box-shadow: 0px 4px 25px rgb(0 0 0 / 25%);
+        border-radius: 8px;
+        padding: 6px 0;
+        margin-top: 20px;
+    }
+    .festive-banner-mobile{
+      display:none;
+  }
+  .banner-image-desktop-text button:hover{
+          transform: translate3D(0,-1px,0) scale(1.03); /* move up slightly and zoom in */
+          box-shadow: 8px 28px 50px rgba(39,44,49,.07), 1px 6px 12px rgba(39,44,49,.04);
+          transition: all .4s ease; /* zoom in */
+          cursor: pointer;
+  }
+
+
+
+
+
+
+      @media only screen and (max-width:1024px) {
+        .banner-image-desktop-text{
+          padding-right: 25%;
+        }
+        .banner-image-desktop-text button{
+          width: 22%;
+        }
+        }
+        @media only screen and (max-width:768px) {
+          .festive-banner{
+              display:none;
+          }
+        .festive-banner-mobile{
+            display:block;
+            position: relative;
+            padding: 0px 0px 0px;
+        }
+        .banner-image-mobile img{
+            width: 100%;
+        }
+        .banner-image-mobile-text{
+        position: absolute;
+        top:28%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+        text-align: center;
+        }
+        .banner-image-mobile-text h1{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 27px;
+            text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+            margin: 0;
+        }
+        .banner-image-mobile-text h2{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 22px;
+            text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+            margin: 0;
+        }
+        .banner-image-mobile-text button{
+        box-shadow: 0px 4px 25px rgb(0 0 0 / 25%);
+        border-radius: 8px;
+        width: 42.5%;
+        margin-top: 20px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        }
+        .banner-image-mobile-text button:hover{
+          transform: translate3D(0,-1px,0) scale(1.03); /* move up slightly and zoom in */
+          box-shadow: 8px 28px 50px rgba(39,44,49,.07), 1px 6px 12px rgba(39,44,49,.04);
+          transition: all .4s ease; /* zoom in */
+          cursor: pointer;
+        }
+        }
+        @media only screen and (max-width:592px) {
+
+        }
+
+
+      {%- comment -%} highlighted brands css ends here {%- endcomment -%}
+</style>
+
+{% schema %}
+  {
+    "name": "Main-Banner-Padding",
+    "settings": [
+      {
+        "type":"image_picker",
+        "id":"banner_desktop_image",
+        "label":"Desktop Banner Image"
+      },
+      {
+        "type":"image_picker",
+        "id":"banner_mobile_image",
+        "label":"Mobile Banner Image"
+      },
+      {
+        "type":"text",
+        "id":"desktop_banner_title",
+        "label":"Heading"
+      },
+      {
+  "type": "color",
+  "id": "color_heading",
+  "label": "Heading color",
+  "default": "#000"
+},
+      {
+        "type":"text",
+        "id":"desktop_banner_subtitle",
+        "label":"Sub-Heading"
+      },
+      {
+  "type": "color",
+  "id": "color_subheading",
+  "label": "Sub-Heading color",
+  "default": "#000"
+},
+      {
+        "type":"text",
+        "id":"desktop_banner_button",
+        "label":"CTA Button Text"
+      },
+      {
+  "type": "color",
+  "id": "color_button",
+  "label": "Button Text color",
+  "default": "#000"
+},
+{
+  "type": "color",
+  "id": "button_background",
+  "label": "Button Background Color",
+  "default": "#000"
+},
+      {
+        "type":"url",
+        "id":"desktop_button_url",
+        "label":"CTA Button Link"
+      },
+      {
+        "type":"url",
+        "id":"desktop_image_url",
+        "label":"Image Link"
+      }
+    ],
+    "presets": [
+{
+"name": "main-banner-padding",
+"category": "Custom"
+}
+]
+}
+{% endschema %}

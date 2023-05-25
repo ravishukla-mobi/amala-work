@@ -1,0 +1,182 @@
+<div class="how-your-purchase_section section" data-section-id="{{ section.id }}" data-section-type="how-your-purchase">
+    <div class="container">
+        {%- if section.settings.title != blank or section.settings.subtitle != blank -%}
+        <header class="landing_section_header">
+        {% if section.settings.subtitle != blank %}
+        <h5 class="landing_subheading">{{section.settings.subtitle}}</h5>
+        {% endif %}
+        {% if section.settings.title != blank %}
+        <h4 class="landing_heading">{{section.settings.title}}</h4>
+        {% endif %}
+        </header>
+        {%- endif -%}
+        <div class="how-your-purchase_wrapper">
+            {%- for block in section.blocks -%}
+            {%- if block.settings.mobile_image -%}
+              {%- capture mobile_size -%}{{ block.settings.mobile_image.width | at_most: 600 }}x{{ block.settings.mobile_image.height | at_most: 800 }}{%- endcapture -%}
+              {%- capture bgset -%}{{ block.settings.mobile_image | img_url: mobile_size, crop: 'center' }} [--phone] | {{ block.settings.image | img_url: '800x' }} 800w, {{ block.settings.image | img_url: '1000x' }} 1000w, {{ block.settings.image | img_url: '1200x' }} 1200w, {{ block.settings.image | img_url: '1400x' }} 1400w, {{ block.settings.image | img_url: '1600x' }} 1600w, {{ block.settings.image | img_url: '1800x' }} 1800w{%- endcapture -%}
+            {%- else -%}
+              {%- capture mobile_size -%}{{ block.settings.image.width | at_most: 600 }}x{{ block.settings.image.height | at_most: 800 }}{%- endcapture -%}
+              {%- capture bgset -%}{{ block.settings.image | img_url: mobile_size, crop: 'center' }} [--phone] | {{ block.settings.image | img_url: '800x' }} 800w, {{ block.settings.image | img_url: '1000x' }} 1000w, {{ block.settings.image | img_url: '1200x' }} 1200w, {{ block.settings.image | img_url: '1400x' }} 1400w, {{ block.settings.image | img_url: '1600x' }} 1600w, {{ block.settings.image | img_url: '1800x' }} 1800w{%- endcapture -%}
+            {%- endif -%}
+            <div id="block_{{block.id}}" class="your-purchase_block">
+                <div class="your-purchase-img_wrapper lazyload image--fade-in" {% if block.settings.image %}data-bgset="{{ bgset }}" data-sizes="auto"{% endif %}>
+                  {%- if block.settings.image -%}
+                    {%- capture supported_sizes -%}{%- render 'image-size', sizes: '800,900,1000,1100,1200,1300,1400,1600,1800,2000,2200', image: block.settings.image -%}{%- endcapture -%}
+                    {%- assign image_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                    <div class="aspect-ratio {% if block.settings.mobile_image %}hidden-phone{% endif %}" style="padding-bottom: {{ 100.0 | divided_by: block.settings.image.aspect_ratio }}%"> 
+                      <noscript><img src="{{ block.settings.image | img_url: '1200x' }}" alt="{{ block.settings.image.alt | escape }}"></noscript>
+                    </div>
+                    {%- if block.settings.mobile_image -%}
+                      {%- capture supported_sizes -%}{%- render 'image-size', sizes: '600,700,800,900,1000,1100,1200', image: block.settings.mobile_image -%}{%- endcapture -%}
+                      {%- assign image_url = block.settings.mobile_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}    
+                    <div class="aspect-ratio hidden-tablet-and-up" style="padding-bottom: {{ 100.0 | divided_by: block.settings.mobile_image.aspect_ratio }}%">
+                      <noscript><img src="{{ block.settings.mobile_image | img_url: '800x' }}" alt="{{ block.settings.mobile_image.alt | escape }}"></noscript>
+                    </div>
+                    {%- endif -%}
+                  {%- endif -%}
+                </div>
+                {%- if block.settings.numbers != blank -%}
+                    <h3 class="numbers">{{block.settings.numbers}}</h3>
+                {%- endif -%}
+                {%- if block.settings.text != blank -%}
+                    <p class="text">{{block.settings.text}}</p>
+                {%- endif -%}
+            </div>
+            {%- endfor -%}
+        </div>
+    </div>
+</div>
+
+{% style %}
+.how-your-purchase_wrapper{
+    display: flex;
+    flex-wrap:wrap;
+    align-items: flex-end;
+}
+.your-purchase_block{
+    flex: none;
+    width:100%;
+    max-width:33.3334%;
+    padding: 0 20px;
+    text-align: center;
+}
+.your-purchase_block .your-purchase-img_wrapper {
+  margin: 0 10%;
+}
+.your-purchase_block .numbers {
+    font-size: 60px;
+    font-weight: 500;
+    color: #946C56;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+.your-purchase_block p {
+    font-size: 28px;
+    line-height: 1.2;
+}
+.your-purchase-img_wrapper {
+    background-position: center;
+    background-size: 100%;
+}
+@media screen and (min-width:1200px){
+  .how-your-purchase_section .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .how-your-purchase_section .landing_section_header {
+    margin: 0;
+  }
+  .how-your-purchase_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    width: 100%;
+    max-width: calc(100% - 362px);
+  }
+}
+@media (min-width:1200px) and (max-width:1399px){
+  .your-purchase_block .numbers{font-size:45px;}
+  .your-purchase_block p{font-size:24px;}
+}
+@media screen and (max-width:1199px){
+  .your-purchase_block{padding:0 5%;}
+  .your-purchase_block .your-purchase-img_wrapper {
+    margin: 0;
+  }
+  .your-purchase_block .numbers{font-size:44px;}
+  .your-purchase_block p{font-size:22px;}
+}
+@media screen and (max-width:991px){
+    .your-purchase_block{padding:0 10px;}
+    .your-purchase_block .numbers{
+        font-size:30px;
+        margin-bottom: 10px;
+        margin-top: 15px;
+    }
+    .your-purchase_block p{font-size:16px;}
+}
+@media screen and (max-width:640px){
+    .your-purchase_block .numbers{
+        font-size:18px;
+        margin-bottom: 7px;
+        margin-top: 10px;
+    }
+    .your-purchase_block p{font-size:12px;}
+}
+{% endstyle %}
+{% schema %}
+    {
+      "name": "How will your purchase",
+      "settings": [
+        {
+          "type":"text",
+          "id":"subtitle",
+          "label":"Subheading",
+          "default":"How will your purchase"
+        },
+        {
+          "type":"text",
+          "id":"title",
+          "label":"Heading",
+          "default":"make a difference?"
+        }
+      ],
+      "blocks":[
+        {
+          "type": "Grid",
+          "name": "grid",
+          "settings": [
+            {
+              "type":"image_picker",
+              "id":"image",
+              "label":"Image"
+            },
+            {
+              "type":"image_picker",
+              "id":"mobile_image",
+              "label":"Mobile Image"
+            },
+            {
+              "type":"text",
+              "id":"numbers",
+              "label":"Numbers"
+            },
+            {
+              "type":"text",
+              "id":"text",
+              "label":"Text"
+            }
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "How will your purchase",
+          "category": "Custom"
+        }
+      ]
+    }
+  {% endschema %}

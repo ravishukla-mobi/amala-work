@@ -1,0 +1,116 @@
+{%- liquid
+  assign hide_banner = false
+  if customer and customer.orders.size != 0
+  assign hide_banner = true
+  endif
+-%}
+
+
+<section class="section{% if customer %} hide{% endif %}" data-section-id="{{ section.id }}" data-section-type="home-discount-banner">
+  <div class="container">
+  {% if section.settings.banner_text != blank %}
+  <div class="home_discount_banner_wrapper">
+      <div class="banner_text">{{section.settings.banner_text}}</div>
+      {% if section.settings.banner_button != blank %}
+      <a href="{% if customer %}/account{% else %}/account/login?return_url=/{% endif %}" class="button button--primary button--small banner_btn">{{section.settings.banner_button}}</a>
+      {% endif %}
+  </div>
+  {% endif %}
+  </div>
+</section>
+
+
+{% style %}
+  #shopify-section-{{section.id}} .home_discount_banner_wrapper{
+      background:{{section.settings.bg_color}};
+      color:{{section.settings.color}};
+  }
+{% endstyle %}
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+
+    if(localStorage.getItem('themeDisBanner') == 'true' && localStorage.getItem('themeDisBannerShow') != 'true'){
+      $('.home_discount_banner_wrapper .banner_btn').hide();
+      localStorage.setItem('themeDisBannerShow',true);
+    {% if customer and customer.orders.size == 0 %}
+      if(localStorage.getItem('themeUserNew') == 'true'){
+        $('.home_discount_banner_wrapper .banner_text').html(`{{section.settings.message_1}}`);
+      }else{
+        $('.home_discount_banner_wrapper .banner_text').html(`{{section.settings.message_2}}`);
+      }
+    {% elsif customer %}
+      $('.home_discount_banner_wrapper .banner_text').html(`{{section.settings.message_3}}`);
+    {% endif %}
+    $(`#shopify-section-{{section.id}} .section`).removeClass('hide');
+    $('html, body').animate({
+          scrollTop: $("#shopify-section-{{section.id}}").offset().top - 200
+        }, 1000);
+    }else{
+      if(localStorage.getItem('themeDisBannerShow') == 'true') $(`#shopify-section-{{section.id}}`).hide();
+      {% if hide_banner %}
+        $(`#shopify-section-{{section.id}}`).hide();
+      {% endif %}
+    }
+
+    $(document).on('click','.home_discount_banner_wrapper .banner_btn',function(e){
+      localStorage.setItem('themeDisBanner',true);
+    });
+  {% unless customer %}
+    localStorage.removeItem("themeDisBanner");
+    localStorage.removeItem('themeUserNew');
+    localStorage.removeItem('themeDisBannerShow');
+  {% endunless %}
+  });
+</script>
+  {% schema %}
+  {
+    "name": "Home Discount banner",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "banner_text",
+        "label": "Text"
+      },
+      {
+        "type": "text",
+        "id": "banner_button",
+        "label": "Button text"
+      },
+      {
+        "type": "richtext",
+        "id": "message_1",
+        "label": "New user message",
+        "default": "<p>Thanks, order now and <strong>get 10% </strong>instant discount.</p>"
+      },
+      {
+        "type": "richtext",
+        "id": "message_2",
+        "label": "Existing user 0 orders message",
+        "default": "<p>Thanks, didn’t ordered anything yet? Order now and <strong>get 10% </strong>instant discount.</p>"
+      },
+      {
+        "type": "richtext",
+        "id": "message_3",
+        "label": "Existing user >0 orders message",
+        "default": "<p>Thanks, order now and <strong>get 5% </strong>instant discount.</p>"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color"
+      },
+      {
+        "type": "color",
+        "id": "color",
+        "label": "Color"
+      }
+    ],
+    "presets": [
+      {
+        "category": "Text",
+        "name": "Home Discount banner",
+        "settings": {}
+      }
+    ]
+  }
+  {% endschema %}

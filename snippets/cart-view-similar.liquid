@@ -1,0 +1,158 @@
+{%- capture section_settings -%}
+{
+  "stackable": false,
+  "layout": "vertical",
+  "productId": {{ product.id | json }},
+  "recommendationsCount": 10,
+  "similarPopup": true
+}
+{%- endcapture -%}
+  <span class="add-view-similar-overlay vs-overlay" style="display:none;"></span>
+  <div class="add-view-similar view-similar-product-wrapper position-relative" id="view-similar-product-wrapper" data-section-id="{{ section.id }}" data-section-type="product-viewsimilar-section" data-section-settings='{{ section_settings }}' style="display:none;">
+
+    <span class="close-vs">&#10006;</span>
+     <div class="">
+       	<div class="vs-header">
+           <h3>Similar Products</h3>
+        </div>
+        <div class="product-list scrollable product-related" id="similar-products">
+        </div>
+     </div>
+
+  </div>
+
+
+<style>
+  .vs-overlay{
+    display:none;
+  	position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(0,0,0,0.7);
+    z-index:9
+  }
+  .vs-overlay.show{display:block;}
+   .view-similar-product-wrapper{
+   position:fixed;
+   bottom:calc(-80vh - 100px);
+   height:80vh;
+   left:0;
+   right:0;
+   background:#fff;
+   border-radius:15px 15px 0 0;
+   z-index:99;
+   padding:15px;
+   box-shadow:0 0 5px #ccc;
+   transition:all 0.3s ease;
+     text-align: left;
+   }
+   .view-similar-product-wrapper.show{
+   bottom:0;
+   }
+@media (min-width:1200px){
+  .view-similar-product-wrapper{
+    right: 0;
+    height: calc(100vh - 158px);
+    bottom:calc(-100vh - 100px);
+    width: 35vw;
+    left: auto;
+  }
+}
+   .view-similar-product-wrapper .product-list{
+   display:flex;
+   flex-wrap:wrap;
+   justify-content:space-between;
+   border:0;
+   overflow-y:auto;
+   height:calc(80vh - 50px);
+   }
+   .view-similar-product-wrapper .product-list .product-item  {
+   width:49%;
+   padding:8px;
+   border:1px solid #eee;
+   border-radius:8px;
+   margin:15px 0;
+   }
+   .close-vs{
+   position:absolute;
+   display:inline-block;
+   width:35px;
+   height:35px;
+   text-align:center;
+   line-height:35px;
+   border-radius:50%;
+   box-shadow:0 0 5px #ccc;
+   background:#fff;
+   top:-45px;
+   left:calc(50% - 17px);
+   font-size:22px;
+    cursor: pointer;
+   }
+  @media (min-width:1200px){
+    .close-vs{
+      /* top: 15px;
+      left: auto; */
+      right: 10px;
+      z-index: 2;
+    }
+    .view-similar-product-wrapper .product-list {
+      height: calc(100vh - 208px);
+    }
+  }
+  .overflow-hidden{
+  	overflow:hidden;
+    height:100vh;
+  }
+  p.page__description.alert.alert--info.size-view {
+    cursor: pointer;
+  }
+  .cart-wrapper .freeship-minicart .alert.size-view linked {
+    color: #007ED2;
+  }
+  .add-view-similar{
+    display: none;
+  }
+  .add-view-similar-overlay{
+    display: none;
+  }
+  .add-view-similar.view-similar-product-wrapper{
+    margin: auto;
+    max-width: 600px;
+  }
+</style>
+<script>
+    function similarWrapperOverlay() {
+        $('.add-view-similar.view-similar-product-wrapper').removeClass('show');
+        $('body').removeClass('overflow-hidden');
+        $('.add-view-similar-overlay.vs-overlay').removeClass('show');
+    }
+   $(document).ready(function(){
+    if(getCookie("cart-vs-popup-open") == 'true'){
+      $(".add-view-similar-overlay").css('display','block');
+      $(".add-view-similar").css('display','block');
+      $(".add-view-similar.view-similar-product-wrapper").addClass("show");
+       $("body").addClass('overflow-hidden');
+       $(".add-view-similar.vs-overlay").addClass("show");
+       window.history.pushState('forward', null, '');
+       document.cookie = "cart-vs-popup-open=false;path=/";
+    }
+	$(document.body).on('click','.size-view', function(e) {
+      $(".add-view-similar-overlay").css('display','block');
+      $(".add-view-similar").css('display','block');
+      $(".add-view-similar.view-similar-product-wrapper").addClass("show");
+       $("body").addClass('overflow-hidden');
+       $(".add-view-similar-overlay.vs-overlay").addClass("show");
+       window.history.pushState('forward', null, '');
+     });
+     $(document.body).on('click','.close-vs', function(e) {
+          similarWrapperOverlay();
+          $(".add-view-similar-overlay").css('display','none');
+          $(".add-view-similar").css('display','none');
+     })
+      $(window).on('popstate', function () {
+          similarWrapperOverlay();
+    });
+   })
+</script>

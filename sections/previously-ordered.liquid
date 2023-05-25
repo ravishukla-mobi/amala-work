@@ -1,0 +1,235 @@
+{%- capture section_settings -%}
+{
+  "stackable": {% if section.settings.layout == 'vertical' and section.settings.stack_products == false %}false{% else %}true{% endif %},
+  "layout": {{ section.settings.layout | json }}
+}
+{%- endcapture -%}
+
+{% if customer and customer.orders_count > 0 %}
+	{% assign ordered_products = '' %}
+	{% for order in customer.orders %} 
+		{% if order.fulfillment_status == 'fulfilled' %}
+          {% for line_item in order.line_items %} 
+			{% if all_products[line_item.product.handle].id != '' %}	
+              {% if section.settings.show_sold_out or line_item.product.available %}
+                  {% if ordered_products == '' %}
+                      {% assign ordered_products = line_item.product.handle %}
+                  {% else %}
+                      {% assign ordered_products = ordered_products | append: ',' | append: line_item.product.handle %}
+                  {% endif %}
+              {% endif %}
+			{% endif %}	
+          {% endfor %}
+        {% endif %}
+    {% endfor %}
+
+    {% if ordered_products != '' %}
+		
+		{% assign ordered_products_array = ordered_products | split: ',' | uniq %}
+		{% assign available_count = ordered_products_array|size %}        
+
+    {% endif %}
+{% endif %}
+
+
+
+{% if customer and customer.orders_count > 0 and available_count > section.settings.limit_diff_prodct %}
+<section class="section {% if section.settings.title != blank %}{{ section.settings.title | downcase | replace: " ", "" }} {% endif %}" data-section-id="{{ section.id }}" data-section-type="featured-collection" data-section-settings='{{ section_settings }}'>
+  	
+  <div class="container">
+    <header class="section__header">
+      <div class="section__header-stack">
+        <h2 class="section__title heading h3">{{ section.settings.title | default: collection.title | escape }}</h2>
+      </div>
+
+      {%- if section.settings.link_title != blank -%}
+      <a href="{{ section.settings.link_url }}" class="section__action-link link">{{ section.settings.link_title | escape }} {% render 'icon', icon: 'tail-right' %}</a>
+      {%- endif -%}
+    </header>
+  </div>
+
+  <div class="container {% if section.settings.layout != 'vertical' or section.settings.stack_products %}container--flush{% endif %}">
+    {%- capture product_list -%}
+    <div class="product-list product-list--{{ section.settings.layout }} {% if section.settings.stack_products %}product-list--stackable{% elsif section.settings.layout == 'vertical' %}product-list--scrollable{% endif %}">
+
+        {% for product_id in ordered_products_array %}
+      
+      		{% assign product = all_products[product_id] %}
+
+                {%- if section.settings.layout == 'vertical' -%}
+                  {%- assign products_per_row = section.settings.products_count | at_most: 6 -%}
+
+                  {%- if section.settings.stack_products -%}
+                    {%- capture grid_classes -%}1/2 1/4--lap 1/{{ products_per_row | minus: 1 }}--desk 1/{{ products_per_row | minus: 1 }}--wide{%- endcapture -%}
+                  {%- else -%}
+                    {%- capture grid_classes -%}1/4--lap 1/{{ products_per_row | minus: 1 }}--desk 1/{{ products_per_row | minus: 1 }}--wide{%- endcapture -%}
+                  {%- endif -%}
+
+                  {%- if use_placeholder -%}
+                    {%- include 'product-item-placeholder', product: product, grid_classes: grid_classes, show_add_to_cart: section.settings.show_quick_buy -%}
+                  {%- else -%}
+                    {%- include 'product-item', product: product, grid_classes: grid_classes, show_add_to_cart: section.settings.show_quick_buy -%}
+                  {%- endif -%}
+                {%- elsif section.settings.layout == 'horizontal' -%}
+                    {%- if use_placeholder -%}
+                        {%- include 'product-item-placeholder', product: product, horizontal: true, grid_classes: '1/2--tablet 1/3--lap-and-up', show_add_to_cart: false -%}
+                    {%- else -%}
+                        {%- include 'product-item', product: product, horizontal: true, grid_classes: '1/2--tablet 1/3--lap-and-up', show_add_to_cart: false -%}
+                    {%- endif -%}
+                {%- else -%}
+                    {%- assign mod = forloop.index0 | modulo: 3 -%}
+
+                    {%- if mod == 0 -%}
+                      <div class="product-list__column product-list__column--highlight">
+                        {%- elsif mod == 1 -%}
+                        <div class="product-list__column {% if forloop.last %}product-list__column--shrink{% endif %}">
+                          {%- endif -%}
+
+                          {%- if mod == 0 -%}
+                          {%- if use_placeholder -%}
+                          {%- include 'product-item-placeholder', product: product, show_add_to_cart: false -%}
+                          {%- else -%}
+                          {%- include 'product-item', product: product, show_add_to_cart: false -%}
+                          {%- endif -%}
+                          {%- else -%}
+                          {%- if use_placeholder -%}
+                          {%- include 'product-item-placeholder', product: product, horizontal: true, show_add_to_cart: false -%}
+                          {%- else -%}
+                          {%- include 'product-item', product: product, horizontal: true, show_add_to_cart: false -%}
+                          {%- endif -%}
+                          {%- endif -%}
+
+                          {%- if mod == 0 or mod == 2 or forloop.last -%}
+                        </div>
+                      {%- endif -%}
+                  {%- endif -%}
+        {%- endfor -%}
+      </div>
+      {%- endcapture -%}
+
+      {%- if section.settings.layout == 'vertical' and section.settings.stack_products == false -%}
+      <div class="scroller">
+        <div class="scroller__inner">
+          {{ product_list }}
+        </div>
+      </div>
+      {%- else -%}
+      {{ product_list }}
+      {%- endif -%}
+    </div>
+
+    {%- comment -%}
+    --------------------------------------------------------------------------------------
+    QUICK VIEW CONTAINER
+    --------------------------------------------------------------------------------------
+    {%- endcomment -%}
+
+    <div id="modal-quick-view-{{ section.id }}" class="modal quick-view-product-modal" aria-hidden="true">
+      <div class="modal__dialog modal__dialog--stretch" role="dialog">
+        <button class="modal__close link" data-action="close-modal" title="{{ 'general.accessibility.close' | t | escape }}">
+          {%- render 'icon', icon: 'close' -%}
+        </button>
+
+        <div class="modal__loader">
+          {%- render 'icon', icon: 'search-loader' -%}
+        </div>
+
+        <div class="modal__inner"></div>
+      </div>
+    </div>
+  </div>
+    
+</section>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Previously ordered",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Previously Ordered"
+    },
+    {
+      "type": "range",
+      "id": "products_count",
+      "label": "Products to show",
+      "min": 2,
+      "max": 50,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "limit_diff_prodct",
+      "label": "Minimum limit of different ordered products",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "default": 5,
+	  "info": "If you select 5, then this section will only be displayed when a user have more than 5 different product in previous orders"
+	},
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "options": [
+        {
+          "value": "vertical",
+          "label": "Vertical"
+        },
+        {
+          "value": "horizontal",
+          "label": "Horizontal"
+        },
+        {
+          "value": "collage",
+          "label": "Collage"
+        }
+      ],
+      "default": "vertical"
+    },
+	{
+      "type": "checkbox",
+      "id": "show_sold_out",
+      "label": "Show Sold out products",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "stack_products",
+      "label": "Stack products",
+      "info": "Only applicable if layout is set to vertical",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_quick_buy",
+      "label": "Show quick buy",
+      "default": true,
+      "info": "Only shows if layout is set to vertical"
+    },
+    {
+      "type": "text",
+      "id": "link_title",
+      "label": "Link title",
+      "default": "View all"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL",
+      "info": "If empty, the collection URL is used."
+    }
+  ],
+  "presets": [
+    {
+      "category": "Product",
+      "name": "Previously Ordered",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

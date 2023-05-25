@@ -1,0 +1,195 @@
+<style>
+  .product-policy .detail{
+    display:none;
+    position: absolute;
+    background: #fff;
+    left: 0px;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    bottom: 140%;
+    line-height: 20px;
+    width:100%;
+    text-align: left;
+    box-shadow: 0px 4px 10px rgb(0 0 0 / 20%);
+  }
+  .product-policy .product-policy-item span:hover .detail{
+    display:block; 
+  }
+    
+  .product-policy .detail:after{
+    content:'';
+   width: 20px;
+    position: absolute;
+    height: 20px;
+    bottom: -8px;
+    transform: rotate(45deg);
+    background: #fff;
+    box-shadow: 2px 2px 0px 0px rgb(0 0 0 / 2%);
+    left: 46%;
+  }
+  .product-policy{
+    display:flex;
+    padding: 0px 0px 30px;
+    border-top: 0;
+    margin-top: 35px;
+  }
+  .product-policy-item {
+    width:33.3%;
+    font-size:14px;
+    position:relative;
+  }
+  
+  .product-policy .heading span img{
+    display:inline-block;
+    width:18px;
+    margin-right: 5px;
+  }
+   .product-policy .return .heading span img{
+     top:4px;
+  }
+  .product-policy .heading span{
+         display: block;
+    text-align: center;
+  }
+  .product-policy .heading span span{
+    display:inline-flex;
+    padding-left:24px;
+    cursor:pointer;
+    align-items: center;
+  }
+  .product-policy .heading span span{
+    padding-left:0px; 
+  }
+  
+  @media only screen and (max-width: 767px) {
+   .product-policy-item{
+     width:100%;
+   }
+    .product-policy{
+      display:block; 
+      padding:0px;
+      border-top: 1px solid #e2e2e2;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    .product-policy .heading{
+      border-bottom: 1px solid #cccc;
+    padding: 15px 0px 12px 0px;
+    }
+    .product-policy .heading span{
+     display:flex;
+      justify-content: space-between;
+      padding-left:0px;
+      align-items: center;
+    }
+    .product-policy .heading span span {
+      display: block;
+      padding-left: 0px;
+      width: 125px;
+      position: relative;
+      text-align: center;
+    }
+    .product-policy .heading span span img{
+        width: 24px;
+      display:block;
+      margin:0px auto;
+      margin-bottom:5px;
+    }
+    .product-policy .detail{
+          display: block;
+        position: static;
+        box-shadow: none;
+        padding-top: 0px;
+        padding-right: 0px;
+      	width: calc(100% - 125px);
+        padding-bottom: 0px;
+    }
+    .product-policy .detail:after{
+      display:none;
+    }
+  }
+
+</style>
+
+<div class="product-policy">
+		{% assign product_usp = 'false' %}
+        {% assign wk_metafields = product.metafields.wk_custom_field %}
+  
+       {% assign ae_fields = product.metafields.AE_PROD_DTLS %}
+  {% for field in ae_fields %}
+  {% if field[0] == 'Return Policy' %}
+    			<div id="product_item_return_policy" class="product-policy-item return">
+                  <div class="heading">
+                    <span>
+                      <span><img src="{{ 'exchange.png' | asset_url }}">
+                      Return/Exchange</span> {% assign fields = field | split:'", "' %}
+                      <div class="detail">{{fields[1] | replace:'"]',''}}</div>
+                    </span>
+                    
+                  </div>
+                  
+    			</div>
+              {% endif %}
+           {% endfor %}
+  
+         
+  
+          <div class="product-policy-item ">
+            <div class="heading">
+              <span>
+                <span><img src="{{ 'Cancellation.png' | asset_url }}">
+                Cancellation</span>
+                 <div class="detail">Cancellation requests will be accepted strictly within 24 hours of placing the order only.  Orders cannot be cancelled or returned once shipped or delivered.</div>
+              </span>
+          </div>
+            </div>
+            
+  
+
+
+{% assign ae_fields = product.metafields.AE_PROD_DTLS %}
+{% for field in ae_fields %}
+  {% if field[0] == 'Package Preparation Days' %}
+    <div class="product-policy-item preparation-days new">
+      <div class="heading">
+        <span>
+          <span>
+             <img src="{{ 'Prep-time.png'| asset_url }}">
+            Preparation Days
+          </span>
+          <div class="detail">{{ field[1] }} Days</div>
+        </span>
+      </div>
+    </div>  	
+  {% endif %}
+{% endfor %}
+  
+  {% comment %}
+
+        {% unless wk_metafields == empty %}
+           {% for wk_metafield in wk_metafields %} 
+              {% assign wk_temp_mf = wk_metafield | split : '", "' %}
+              {% assign key = wk_temp_mf[0] | size | minus: 2 %} 
+              {% assign value = wk_temp_mf[1] | size | minus:2 %}
+              {% assign wk_check_mf = wk_temp_mf[1] | slice: 0,value | split : ':' %}
+        	  {% assign meta_key = wk_temp_mf[0] | slice: 2,key %}
+              {% if meta_key == 'Package preparation days'%}
+    			<div class="product-policy-item preparation-days">
+                  <div class="heading">
+                    <span>
+                      <span>
+               		  <img src="{{ 'Prep-time.png'| asset_url }}">
+                      Preparation Time
+                      </span>
+                     <div class="detail">{{ wk_temp_mf[1] | slice: 0,value }}</div>
+                    </span>
+                  </div>
+                  
+    			</div>
+              {% endif %}
+           {% endfor %}
+        {% endunless %}
+  {% endcomment %}
+</div>

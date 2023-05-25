@@ -1,0 +1,43 @@
+{% if collection.handle == 'vendors' and collection.products.size == 0 and section.settings.title != blank %}
+<div class="container container--flush">
+    <div class="collection">
+        <header class="card__header no-banner card__header--tight">
+            <div class="collection__header-inner">
+                <div class="collection__meta">
+                    <h1 class="collection__title heading h1">{{section.settings.title | escape }}</h1>
+                </div>
+            </div>
+            </div>
+        </header>
+    </div>
+</div>
+<style>
+    .vendors-page-header-section .collection .card__header--tight {
+        border: none;
+        border-bottom: 1px solid #946c5652;
+        padding: 20px 0 5px;
+        margin-bottom: 0;
+    }
+    .vendors-page-header-section .collection header .collection__meta .collection__title {
+        color: #946c56;
+    }
+    @media (max-width:640px){
+        .vendors-page-header-section .collection .card__header--tight {
+            margin: 0 20px;
+        }
+    }
+</style>
+{% endif %} 
+{% schema %}
+{
+    "name": "vendors page header",
+    "class": "vendors-page-header-section",
+    "settings": [
+        {
+            "type":"text",
+            "id":"title",
+            "label":"Heading"
+        }
+    ]
+}
+{% endschema %}

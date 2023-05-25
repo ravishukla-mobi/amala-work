@@ -1,0 +1,26 @@
+ <div class="app-message-box">
+  <div class="message-box__icon"><img src="{{ 'App-icon.png' | asset_url }}" alt="App Icon image">
+  </div>
+  <div class="message-box__content">
+   <!--   <p class="title">Earth-friendly shopping!</p> -->
+     <p class="heighlight">Earth-Friendly Offer! <br>Get Rs.300 Off *| FLAT300</br></p> 
+  </div> 
+  <a href="https://amala.earth/collections/all" class="message-box__link" target="_blank">Shop Now</a>
+</div>
+
+<script>
+  function getMobileOperatingSystem() {
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      // Windows Phone must come first because its UA also contains "Android"
+      if (/android/i.test(userAgent)) {
+            $('.message-box__link').attr('href','https://play.google.com/store/apps/details?id=com.amala.earth');
+      }else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+          $('.message-box__link').attr('href','https://amala.earth/collections/all');
+      } else {
+	  	$('.message-box__link').attr('href','https://play.google.com/store/apps/details?id=com.amala.earth');
+      }
+  }
+  
+  getMobileOperatingSystem();
+</script>

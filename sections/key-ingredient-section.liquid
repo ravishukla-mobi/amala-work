@@ -1,0 +1,59 @@
+{% if product.metafields.custom.key_ingredients != blank %}
+<section class="key-ingredients" id="key-ingredients-section">
+  <div class="container product_key_ingredients">
+    <div class="heading-bx">
+  {% assign key_ingredient_heading = section.settings.sec-head %}
+  
+  {% if product.metafields.custom.key_ingredients_heading != blank %}
+    {% assign key_ingredient_heading = product.metafields.custom.key_ingredients_heading %}
+  {% endif %}
+  
+      <h3 class="section__title">{{ key_ingredient_heading }} </h3>
+    </div>
+  <div class="ingredients-slider slider-arrow">
+    {% for ing in product.metafields.custom.key_ingredients.value %}
+   <div class="ingredients-cards-item">
+     <div class="ingredients-card-inner">
+      {% if ing.img != blank %}
+        <div class="ingredients_img_container">
+          <img src="{{ ing.img }}" alt="{{ ing.title }}" class="ingredients-img ingredients_mob_image">
+          {% if ing.deskImg != blank %}
+          <img src="{{ ing.deskImg }}" alt="{{ ing.title }}" class="ingredients-img ingredients_desk_image">
+          {% else %}
+          <img src="{{ ing.img }}" alt="{{ ing.title }}" class="ingredients-img ingredients_desk_image">
+          {% endif %}
+        </div>
+      {% endif %}
+      <div class="ingredients-content">
+        <div class="ingredients_inner_content">
+          <h3>{{ ing.title }}</h3>
+          <p>{{ ing.desc }}</p>
+        </div>
+      </div>
+     </div>
+    </div>
+    {% endfor %}
+  </div>
+  </div>
+</section>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Key Ingredient",
+    "settings": [
+      {
+        "type" : "text",
+        "id" : "sec-head",
+        "label" : "Section Heading",
+        "default" : "Key materials"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

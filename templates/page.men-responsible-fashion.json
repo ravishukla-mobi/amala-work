@@ -1,0 +1,1620 @@
+{
+  "sections": {
+    "3e38aca5-5077-4220-831b-859e274c9a16": {
+      "type": "page-navigation",
+      "settings": {}
+    },
+    "festival-landings-page": {
+      "type": "main-banner",
+      "disabled": true,
+      "settings": {
+        "banner_desktop_image": "shopify:\/\/shop_images\/men_s_fashion_banner_website.jpg",
+        "banner_mobile_image": "shopify:\/\/shop_images\/men_s_fashion_banner_mobile.jpg",
+        "desktop_banner_title": "",
+        "color_heading": "#ffffff",
+        "desktop_banner_subtitle": "",
+        "color_subheading": "#b89c7d",
+        "desktop_banner_button": "",
+        "color_button": "#ffffff",
+        "button_background": "#9d7242",
+        "desktop_button_url": "https:\/\/amala.earth\/collections\/mens-wear",
+        "desktop_image_url": "https:\/\/amala.earth\/collections\/mens-wear"
+      }
+    },
+    "747481e2-8bdd-405b-8460-758c89da4363": {
+      "type": "slideshow",
+      "blocks": {
+        "e329e3d3-51a3-4f3a-9b11-6f9b2b6643b3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mens_Banner_1920x600_a27fc17f-fb1d-410c-8bb5-0776901716c7.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Mens_banner-microsite-mobile.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/mens-wear",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "template--16663078502644__747481e2-8bdd-405b-8460-758c89da4363-1682333450481bae3d-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/summer-starting-from-599-Mens_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/summer-starting-from-599-Mens-mobile.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/mens-wear?f_Price=599+-+1000,1001+-+1500,1501+-+2000,2001+-+3000,3001+-+5000",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "template--16663078502644__747481e2-8bdd-405b-8460-758c89da4363-1682333450481bae3d-0": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/men_s_fashion_banner_website_f7b85c9b-ba68-4dd6-9941-6b5117a7eea1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/men_s_fashion_banner_mobile_567733b7-4bd4-47bc-af82-c6dad9cd44f8.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/mens-wear",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "e329e3d3-51a3-4f3a-9b11-6f9b2b6643b3",
+        "template--16663078502644__747481e2-8bdd-405b-8460-758c89da4363-1682333450481bae3d-1",
+        "template--16663078502644__747481e2-8bdd-405b-8460-758c89da4363-1682333450481bae3d-0"
+      ],
+      "settings": {
+        "edge_to_edge": true,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "3ce8650f-ee5d-4ec2-8c3e-43b4fde36a2f": {
+      "type": "custom-grid",
+      "blocks": {
+        "4ba4ea05-4dcd-44b1-8e66-b2e11c1d8eca": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/ethical_casuals.png",
+            "title": "Ethical casuals",
+            "block_button_url": "https:\/\/amala.earth\/collections\/mens-casual-wear"
+          }
+        },
+        "9d8a0cc5-207d-4537-b54a-dd1666611f34": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/artisnal_ethnics.png",
+            "title": "Artisanal ethnics ",
+            "block_button_url": "https:\/\/amala.earth\/collections\/mens-ethnic-wear"
+          }
+        },
+        "bad5f3ff-9274-4267-9c3e-9a6deba99ea1": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/handmade_accessories.png",
+            "title": "Handmade accessories",
+            "block_button_url": "https:\/\/amala.earth\/collections\/mens-accessories"
+          }
+        },
+        "46dcfbea-f442-422a-8f61-c28429a2d9a2": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/utility_outerwear.png",
+            "title": " Everyday Basics",
+            "block_button_url": "shopify:\/\/collections\/everyday-wardrobe-staples-men"
+          }
+        },
+        "adb9e735-9398-4722-9a2d-a10e739bacf6": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/breathable_activewear.png",
+            "title": "Breathable activewear ",
+            "block_button_url": "https:\/\/amala.earth\/collections\/mens-activewear"
+          }
+        },
+        "9f57f552-0ea6-4e2b-8b7a-a4f12d36551b": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/footwear_014b5b07-9591-4984-9a3b-403a76690a51.png",
+            "title": " Cruelty-free footwear ",
+            "block_button_url": "https:\/\/amala.earth\/collections\/mens-footwear"
+          }
+        }
+      },
+      "block_order": [
+        "4ba4ea05-4dcd-44b1-8e66-b2e11c1d8eca",
+        "9d8a0cc5-207d-4537-b54a-dd1666611f34",
+        "bad5f3ff-9274-4267-9c3e-9a6deba99ea1",
+        "46dcfbea-f442-422a-8f61-c28429a2d9a2",
+        "adb9e735-9398-4722-9a2d-a10e739bacf6",
+        "9f57f552-0ea6-4e2b-8b7a-a4f12d36551b"
+      ],
+      "settings": {
+        "subtitle": "",
+        "title": ""
+      }
+    },
+    "89c358b0-1e8e-4b5c-8b3b-66bbd5a90bab": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "7300c033-075b-4970-9f2c-a7fa5be56560": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-grey-linen-kai-shorts"
+          }
+        },
+        "7535a9b1-fa00-4dd4-bb9b-a4435767b565": {
+          "type": "Product",
+          "settings": {
+            "product": "paaduks-vegan-leather-sandals-for-men-dark-brown-pd77m6-301222"
+          }
+        },
+        "7c64e9ab-cbec-4b50-b619-29253a9b62f2": {
+          "type": "Product",
+          "settings": {
+            "product": "with-n-organic-cotton-striped-shirt-white-ar-is-iwg-1922"
+          }
+        },
+        "1a58df58-ed6f-4e80-aa7b-58aaa1f56719": {
+          "type": "Product",
+          "settings": {
+            "product": "saphed-linen-half-sleeves-shirt-light-blue-060422a-101022"
+          }
+        },
+        "5a3a9e50-4157-4e78-811f-223d644300b7": {
+          "type": "Product",
+          "settings": {
+            "product": "bow-square-linen-short-kurta-white-bskuhln0008-22822"
+          }
+        },
+        "4897dbe0-e033-4ed7-8f4f-55f218c6fce0": {
+          "type": "Product",
+          "settings": {
+            "product": "ecentric-casual-shirt-for-men-black-apmcscbs-111022"
+          }
+        },
+        "febd5596-23c9-43ef-b7f3-3036a8bc355c": {
+          "type": "Product",
+          "settings": {
+            "product": "b-label-hemp-shorts-off-white-bmltr403s-om-100822"
+          }
+        },
+        "1d556443-a6b8-4021-866c-ec9dd3e4279f": {
+          "type": "Product",
+          "settings": {
+            "product": "bow-square-linen-short-kurta-for-men-blue-bskuhlnblc0001-38-wgr-281022"
+          }
+        },
+        "39190d71-9e9a-43de-9680-a2553e0d16ea": {
+          "type": "Product",
+          "settings": {
+            "product": "translate-ikat-print-pure-cotton-shirt-band-collar-green-blue-fg22-13-151222"
+          }
+        }
+      },
+      "block_order": [
+        "7300c033-075b-4970-9f2c-a7fa5be56560",
+        "7535a9b1-fa00-4dd4-bb9b-a4435767b565",
+        "7c64e9ab-cbec-4b50-b619-29253a9b62f2",
+        "1a58df58-ed6f-4e80-aa7b-58aaa1f56719",
+        "5a3a9e50-4157-4e78-811f-223d644300b7",
+        "4897dbe0-e033-4ed7-8f4f-55f218c6fce0",
+        "febd5596-23c9-43ef-b7f3-3036a8bc355c",
+        "1d556443-a6b8-4021-866c-ec9dd3e4279f",
+        "39190d71-9e9a-43de-9680-a2553e0d16ea"
+      ],
+      "settings": {
+        "title1": "Summer Edit",
+        "title2": "men's collection",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/spring-summer-mens",
+        "button_position": "top"
+      }
+    },
+    "7148a954-d95c-483a-9aed-5f0f443b2075": {
+      "type": "landing-page-recommendation",
+      "disabled": true,
+      "blocks": {
+        "f8d58b91-b19b-4f92-bd6c-240d4a5a162b": {
+          "type": "Product",
+          "settings": {
+            "product": "kalp-cotton-kurta-sanganeri-print-green-kk542-080822"
+          }
+        },
+        "7c8ce166-5ed6-43fd-9c5e-4438e69b6580": {
+          "type": "Product",
+          "settings": {
+            "product": "saphed-linen-kurta-set-multicolour-060728a-s-21122"
+          }
+        },
+        "6e0e5c61-1147-4b3f-ba76-5f9e71cfcb50": {
+          "type": "Product",
+          "settings": {
+            "product": "bow-square-linen-short-kurta-yellow-bskuhln0005-22822"
+          }
+        },
+        "8eb9e142-ada2-445b-a6d6-076ac597cd49": {
+          "type": "Product",
+          "settings": {
+            "product": "translate-ikat-print-pure-cotton-long-kurta-multicolour-fg22-19-151222"
+          }
+        },
+        "a536670b-d426-4311-995d-9d624a4cfec5": {
+          "type": "Product",
+          "settings": {
+            "product": "bow-square-linen-mens-nehru-jacket-pink-bs22lnjk0001-131222"
+          }
+        },
+        "059dc22d-bbed-4073-bf89-9afa1c2550f0": {
+          "type": "Product",
+          "settings": {
+            "product": "kalp-cotton-block-print-kurta-grey-kk552-080822"
+          }
+        },
+        "3f6f2e98-82f3-4c34-9a74-44c9755b7e88": {
+          "type": "Product",
+          "settings": {
+            "product": "pure-cotton-green-handblock-printed-kurta-1"
+          }
+        },
+        "b987b0d4-488d-4aca-b210-012bd665435c": {
+          "type": "Product",
+          "settings": {
+            "product": "tamaksh-banarasi-silk-nehru-jacket-purple-brc-m-j-p-7922"
+          }
+        },
+        "2a001bf8-0c0a-4e23-b0b9-30d2c6834f96": {
+          "type": "Product",
+          "settings": {
+            "product": "men-metamorphosis-peach-hemp-kurta"
+          }
+        },
+        "e2070349-3c76-4355-92e1-a1e06dd6cf4c": {
+          "type": "Product",
+          "settings": {
+            "product": "pure-cotton-wine-asymmetric-style-kurta"
+          }
+        },
+        "1c04c379-0f25-4d73-a2a2-1b313837f4f8": {
+          "type": "Product",
+          "settings": {
+            "product": "handblock-printed-cotton-white-kurta"
+          }
+        }
+      },
+      "block_order": [
+        "f8d58b91-b19b-4f92-bd6c-240d4a5a162b",
+        "7c8ce166-5ed6-43fd-9c5e-4438e69b6580",
+        "6e0e5c61-1147-4b3f-ba76-5f9e71cfcb50",
+        "8eb9e142-ada2-445b-a6d6-076ac597cd49",
+        "a536670b-d426-4311-995d-9d624a4cfec5",
+        "059dc22d-bbed-4073-bf89-9afa1c2550f0",
+        "3f6f2e98-82f3-4c34-9a74-44c9755b7e88",
+        "b987b0d4-488d-4aca-b210-012bd665435c",
+        "2a001bf8-0c0a-4e23-b0b9-30d2c6834f96",
+        "e2070349-3c76-4355-92e1-a1e06dd6cf4c",
+        "1c04c379-0f25-4d73-a2a2-1b313837f4f8"
+      ],
+      "settings": {
+        "title1": "Artisanal",
+        "title2": "ethnics ",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/mens-ethnic-wear",
+        "button_position": "top"
+      }
+    },
+    "6524cdb9-0e87-420a-a91a-d4fc14b0cf1b": {
+      "type": "amala-earth-curation",
+      "blocks": {
+        "6401d091-3d83-46eb-b326-017bc61b1009": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/linen_banner_website_6d15c365-1bc1-42b7-a6b2-f2cd8f402222.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/linen_banner_mobile_fb762008-ac70-4b0b-875c-15781c91c76b.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/the-linen-shop"
+          }
+        }
+      },
+      "block_order": [
+        "6401d091-3d83-46eb-b326-017bc61b1009"
+      ],
+      "settings": {
+        "curation_heading1": "",
+        "curation_sub_heading2": ""
+      }
+    },
+    "68c33a46-c30e-4b8a-84b9-d80dacac4a04": {
+      "type": "circular-image-grid",
+      "blocks": {
+        "8ff10c40-b5fb-49fa-ad25-3e5a8b8cdd3e": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Category-01_1_1c447ed1-f871-4ac8-b94a-549008bf5b7e.png",
+            "block_two_subtitle": "100%  pure",
+            "title": "Cotton",
+            "second_block_url": "https:\/\/amala.earth\/collections\/mens-wear?f_Material=Cotton"
+          }
+        },
+        "57ff8aac-d518-41e4-b337-6627f65f383e": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Final_Category_Icons-02_1-1.png",
+            "block_two_subtitle": "Fine",
+            "title": "Linen",
+            "second_block_url": "https:\/\/amala.earth\/collections\/mens-wear?f_Material=Linen"
+          }
+        },
+        "8a6d3a3c-94c0-4179-ad43-af8efd49d07b": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/JoyfulHome_240x240_2_08769ee6-f931-45fb-8ddf-79fa57e0720b.png",
+            "block_two_subtitle": "Handcrafted",
+            "title": "Cork",
+            "second_block_url": "https:\/\/amala.earth\/collections\/mens-wear?f_Material=Cork"
+          }
+        },
+        "2e909473-ebc0-45b7-a5fa-7463a5a4b3ba": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Category-01_1-2.png",
+            "block_two_subtitle": "Ethical",
+            "title": "Wool",
+            "second_block_url": "https:\/\/amala.earth\/collections\/mens-wear?f_Material=Wool"
+          }
+        },
+        "dfe64664-5b98-41cd-85ad-d3bfffba4906": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/JoyfulHome_240x240_2-1.png",
+            "block_two_subtitle": "Vegan",
+            "title": "Leather",
+            "second_block_url": "https:\/\/amala.earth\/collections\/mens-wear?f_Material=Vegan+Leather"
+          }
+        },
+        "8da60efe-7020-4864-85da-93994fd29308": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Final_Category_Icons-02_1_8027f3f0-1e36-4b13-b268-c4a84c95be11.png",
+            "block_two_subtitle": "Homegrown",
+            "title": "Hemp",
+            "second_block_url": "https:\/\/amala.earth\/collections\/mens-wear?f_Material=Hemp"
+          }
+        },
+        "9498bd5e-cb81-49b2-8bb3-ba9f7c4ca19d": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Category-01_1-1.png",
+            "block_two_subtitle": "Wood-based",
+            "title": "Tencel",
+            "second_block_url": "https:\/\/amala.earth\/collections\/mens-wear?f_Material=Tencel"
+          }
+        },
+        "92774282-274e-4445-aec9-b275fa7c6f5e": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Final_Category_Icons-02_1-2.png",
+            "block_two_subtitle": "Recycled",
+            "title": "rubber",
+            "second_block_url": "https:\/\/amala.earth\/collections\/mens-wear?f_Material=Upcycled+Rubber"
+          }
+        },
+        "88258eae-41cf-4183-8762-a32eb51d4bc0": {
+          "type": "block-2",
+          "disabled": true,
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/linen_86a9bf45-7102-4667-a80d-3528f829d583.png",
+            "block_two_subtitle": "100% organic",
+            "title": "Bamboo",
+            "second_block_url": "https:\/\/amala.earth\/collections\/mens-wear?f_Material=Bamboo"
+          }
+        }
+      },
+      "block_order": [
+        "8ff10c40-b5fb-49fa-ad25-3e5a8b8cdd3e",
+        "57ff8aac-d518-41e4-b337-6627f65f383e",
+        "8a6d3a3c-94c0-4179-ad43-af8efd49d07b",
+        "2e909473-ebc0-45b7-a5fa-7463a5a4b3ba",
+        "dfe64664-5b98-41cd-85ad-d3bfffba4906",
+        "8da60efe-7020-4864-85da-93994fd29308",
+        "9498bd5e-cb81-49b2-8bb3-ba9f7c4ca19d",
+        "92774282-274e-4445-aec9-b275fa7c6f5e",
+        "88258eae-41cf-4183-8762-a32eb51d4bc0"
+      ],
+      "settings": {
+        "subtitle": "",
+        "title": ""
+      }
+    },
+    "c58f4781-5dcf-4227-b0cc-f67411d71c42": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "8cf8f60f-72b5-4b9c-8c1e-507041adffc6": {
+          "type": "Product",
+          "settings": {
+            "product": "oziss-100-cotton-t-shirt-crew-neck-pink-cmrhs-solid-dustpink-xs-m-cmrhs-solid-dustpink-s-m-cmrhs-solid-dustpink-m-m-cmrhs-solid-dustpink-l-m-cmrhs-solid-dustpink-xl-m-cmrhs-solid-dustpink-xxl-m-18123"
+          }
+        },
+        "8b2526ea-2294-410c-a1e0-064d50159a2a": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-pine-green-pima-cotton-round-neck-t-shirt"
+          }
+        },
+        "5b2c9dd4-5bd7-4845-9e4d-378dcb40c983": {
+          "type": "Product",
+          "settings": {
+            "product": "oziss-100-cotton-t-shirt-crew-neck-cloud-white-cmrhs-solid-white-xs-m-cmrhs-solid-white-s-m-cmrhs-solid-white-m-m-cmrhs-solid-white-l-m-cmrhs-solid-white-xl-m-cmrhs-solid-white-xxl-m-18123"
+          }
+        },
+        "b437772a-c067-4aae-b517-3427847a290a": {
+          "type": "Product",
+          "settings": {
+            "product": "oziss-organic-cotton-jogger-pants-lime-sweatpnt-lime-xs-s-m-sweatpnt-lime-m-l-m-sweatpnt-lime-xl-xxl-m-18123"
+          }
+        },
+        "7a87fea8-8e26-438e-87f3-8131961e264b": {
+          "type": "Product",
+          "settings": {
+            "product": "oziss-recycled-cotton-sweatshirt-wide-fit-sage-blue-sweatsh-spruce-xs-s-m-sweatsh-spruce-m-l-m-sweatsh-spruce-xl-xxl-m-18123"
+          }
+        },
+        "41da33df-3f6a-4108-9c9f-b073af65ec11": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-pine-green-pima-cotton-full-sleeve-t-shirt"
+          }
+        },
+        "60e7a560-b104-4845-9087-1801d8564512": {
+          "type": "Product",
+          "settings": {
+            "product": "skin-friendly-military-green-pima-cotton-french-terry-pants"
+          }
+        },
+        "7cf53fe1-a80e-45ab-acc2-683f5a2640aa": {
+          "type": "Product",
+          "settings": {
+            "product": "skin-friendly-stone-grey-pima-cotton-french-terry-pants"
+          }
+        },
+        "67a3a911-fdf4-45f2-b657-cc46f80b8533": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-pine-green-pima-cotton-polo-t-shirt"
+          }
+        },
+        "58c2633e-eb92-44c9-b5be-26562dfa6310": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-port-red-pima-cotton-round-neck-t-shirt"
+          }
+        },
+        "d55369a6-5cd5-44f2-9334-c44bbf8bd345": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "tamaksh-cotton-long-jacket-ikat-print-indigo-db-w-j-b-101122"
+          }
+        }
+      },
+      "block_order": [
+        "8cf8f60f-72b5-4b9c-8c1e-507041adffc6",
+        "8b2526ea-2294-410c-a1e0-064d50159a2a",
+        "5b2c9dd4-5bd7-4845-9e4d-378dcb40c983",
+        "b437772a-c067-4aae-b517-3427847a290a",
+        "7a87fea8-8e26-438e-87f3-8131961e264b",
+        "41da33df-3f6a-4108-9c9f-b073af65ec11",
+        "60e7a560-b104-4845-9087-1801d8564512",
+        "7cf53fe1-a80e-45ab-acc2-683f5a2640aa",
+        "67a3a911-fdf4-45f2-b657-cc46f80b8533",
+        "58c2633e-eb92-44c9-b5be-26562dfa6310",
+        "d55369a6-5cd5-44f2-9334-c44bbf8bd345"
+      ],
+      "settings": {
+        "title1": "Wardrobe",
+        "title2": "staples",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/everyday-wardrobe-staples-men",
+        "button_position": "top"
+      }
+    },
+    "24cdcfbd-63c2-4d37-b749-2b764e6faea7": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "2b4c185f-7b5f-4e5c-9d28-453fa8defe49": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "earthy-route-lyocell-linen-shirt-full-sleeve-grey-fsrc0307s-14323"
+          }
+        },
+        "f68f438c-ca84-4b5d-bf4b-be3c1c1624e8": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "earthy-route-lyocell-linen-shirt-half-sleeve-mint-green-hsrc0305s-14323"
+          }
+        },
+        "f452ebb7-82af-405c-8738-5446c58ce5d5": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "earthy-route-lyocell-linen-shirt-full-sleeve-white-fsrc0502s-14323"
+          }
+        },
+        "b9101317-be3e-4bbe-89b8-b34612bedd93": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "earthy-route-lyocell-linen-shirt-half-sleeve-green-white-hsrc0401s-14323"
+          }
+        },
+        "5ad5f9ad-e473-41c4-ac0f-619cbdd9c324": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "earthy-route-lyocell-linen-shirt-half-sleeve-off-white-hsrc0304s-14323"
+          }
+        },
+        "b8096844-77d4-4956-908e-d7d6c065a662": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "earthy-route-lyocell-linen-shirt-half-sleeve-white-hsrc0301s-14323"
+          }
+        },
+        "fd87c87d-cbb0-4ad8-b220-adec8323920e": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "earthy-route-lyocell-linen-shirt-mandarin-collar-denim-blue-fsmc0307s-14323"
+          }
+        },
+        "1aeac446-4a9d-4be6-99b3-811e5f79fe4f": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "earthy-route-lyocell-linen-shirt-half-sleeve-red-white-hsrc0402s-14323"
+          }
+        },
+        "c0385a10-955f-43c5-82e0-253f1ff5f685": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "earthy-route-lyocell-linen-shirt-half-sleeve-rust-orange-hsrc0306s-14323"
+          }
+        },
+        "cfd727ea-d8ff-4c12-9ace-525bad16850d": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "earthy-route-lyocell-linen-shirt-mandarin-collar-white-fsmc0502s-14323"
+          }
+        },
+        "70c0e657-807e-4bb6-b5f0-d6d17d64e9d3": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "earthy-route-lyocell-linen-shirt-mandarin-collar-off-white-fsmc0303s-14323"
+          }
+        },
+        "2842486f-d8dd-4d4d-bc7f-98c9bd5084a2": {
+          "type": "Product",
+          "settings": {
+            "product": "mati-pure-cotton-co-ord-set-t-shirt-shorts-heart-oatmeal-with-black-stripe-mt-str-t-shirt-set-ta-oatmeal-with-black-str-190423"
+          }
+        },
+        "0e1f184a-bbd0-4e3f-9a4e-79de6545303c": {
+          "type": "Product",
+          "settings": {
+            "product": "mati-pure-cotton-co-ord-set-t-shirt-pants-pink-black-mt-tank-set-l2-pink-str-na-slub-black-190423"
+          }
+        },
+        "2e00835f-2557-41e3-b8f0-0a4eb6733708": {
+          "type": "Product",
+          "settings": {
+            "product": "mati-pure-cotton-co-ord-set-jacket-pants-black-red-mt-bluff-set-ta-oatmeal-with-black-str-ta-sl-red-190423"
+          }
+        },
+        "7a7b4823-c04e-4282-ae84-ab994b4f91e6": {
+          "type": "Product",
+          "settings": {
+            "product": "mati-pure-cotton-co-ord-set-jacket-pants-oatmeal-with-black-stripe-mt-bluff-set-ta-oatmeal-with-black-str-na-sl-black-190423"
+          }
+        },
+        "2f5541f5-5844-4033-90eb-44d4551aba3f": {
+          "type": "Product",
+          "settings": {
+            "product": "mati-cotton-linen-kurta-set-kurta-balloon-pants-oatmeal-mt-pack-set-ta-oatmeal-linen-fl-black-med-str-190423"
+          }
+        },
+        "1e469327-9171-491b-8fad-bfb9ee7f2c1e": {
+          "type": "Product",
+          "settings": {
+            "product": "mati-pure-cotton-overlap-jacket-hearts-oatmeal-with-black-stripe-mt-bluff-jacket-ta-oatmeal-with-black-str-190423"
+          }
+        },
+        "98378c4b-9462-47ed-962f-621291361978": {
+          "type": "Product",
+          "settings": {
+            "product": "mati-pure-cotton-balloon-pants-relaxed-fit-red-mt-balloon-pant-ta-slub-red-190423"
+          }
+        },
+        "4835cde2-0d04-4495-9234-3d844babcbad": {
+          "type": "Product",
+          "settings": {
+            "product": "mati-cotton-linen-co-ord-set-spade-t-shirt-pants-shirt-oatmeal-black-mt-str-jacket-set-3pcs-ta-oatmeal-linen-na-sl-black-str-190423"
+          }
+        },
+        "71979ca5-b056-428a-a0ae-1cebbd25e511": {
+          "type": "Product",
+          "settings": {
+            "product": "mati-cotton-linen-co-ord-set-spade-t-shirt-pants-oatmeal-black-mt-linen-tank-set-ta-oatmeal-na-slub-black-190423"
+          }
+        },
+        "364af1ea-a2cc-4206-b53a-0042a4477610": {
+          "type": "Product",
+          "settings": {
+            "product": "mati-pure-cotton-co-ord-set-t-shirt-pants-pink-black-mt-tank-set-l2-pink-str-na-slub-black-190423"
+          }
+        }
+      },
+      "block_order": [
+        "2b4c185f-7b5f-4e5c-9d28-453fa8defe49",
+        "f68f438c-ca84-4b5d-bf4b-be3c1c1624e8",
+        "f452ebb7-82af-405c-8738-5446c58ce5d5",
+        "b9101317-be3e-4bbe-89b8-b34612bedd93",
+        "5ad5f9ad-e473-41c4-ac0f-619cbdd9c324",
+        "b8096844-77d4-4956-908e-d7d6c065a662",
+        "fd87c87d-cbb0-4ad8-b220-adec8323920e",
+        "1aeac446-4a9d-4be6-99b3-811e5f79fe4f",
+        "c0385a10-955f-43c5-82e0-253f1ff5f685",
+        "cfd727ea-d8ff-4c12-9ace-525bad16850d",
+        "70c0e657-807e-4bb6-b5f0-d6d17d64e9d3",
+        "2842486f-d8dd-4d4d-bc7f-98c9bd5084a2",
+        "0e1f184a-bbd0-4e3f-9a4e-79de6545303c",
+        "2e00835f-2557-41e3-b8f0-0a4eb6733708",
+        "7a7b4823-c04e-4282-ae84-ab994b4f91e6",
+        "2f5541f5-5844-4033-90eb-44d4551aba3f",
+        "1e469327-9171-491b-8fad-bfb9ee7f2c1e",
+        "98378c4b-9462-47ed-962f-621291361978",
+        "4835cde2-0d04-4495-9234-3d844babcbad",
+        "71979ca5-b056-428a-a0ae-1cebbd25e511",
+        "364af1ea-a2cc-4206-b53a-0042a4477610"
+      ],
+      "settings": {
+        "title1": "Newly",
+        "title2": "Launched",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/mati",
+        "button_position": "top"
+      }
+    },
+    "b1ffa630-18e0-40db-91e0-cf69f567f496": {
+      "type": "amala-earth-curation",
+      "blocks": {
+        "1998e114-fc1a-4d3b-82a3-807f280b7ca9": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/men_s_breathable_fashion_banner_website.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/men_s_breathable_banner_mobile.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/breathable-fabric-men"
+          }
+        }
+      },
+      "block_order": [
+        "1998e114-fc1a-4d3b-82a3-807f280b7ca9"
+      ],
+      "settings": {
+        "curation_heading1": "",
+        "curation_sub_heading2": ""
+      }
+    },
+    "7e727bcc-acea-4a68-bf80-27371ae6d902": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "72995800-ecf7-46ec-b2ff-f4be43592e1e": {
+          "type": "Product",
+          "settings": {
+            "product": "funky-kalakar-recycled-leather-backpack-brown-fkh07dbm-15722"
+          }
+        },
+        "31fb0fb1-31fc-4221-b26b-b3e53253464e": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-juruti-wine-wooden-sunglasses"
+          }
+        },
+        "45c49ccf-a090-4093-bc1c-f1fa6114aa75": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-cork-gajji-silk-sandstone-bow-tie"
+          }
+        },
+        "70927f2a-7341-46d8-8531-ecd81dbba1d4": {
+          "type": "Product",
+          "settings": {
+            "product": "upcycled-cotton-envelope-belt-bag"
+          }
+        },
+        "4ae424f7-1f42-4b80-bce9-5d09ddce85db": {
+          "type": "Product",
+          "settings": {
+            "product": "funky-kalakar-recycled-leather-card-holder-black-pocablu-15722"
+          }
+        },
+        "f89fdc97-793b-4a2b-a68b-ff1e73733321": {
+          "type": "Product",
+          "settings": {
+            "product": "cork-travel-kit-black"
+          }
+        },
+        "c94a8c38-f187-4a16-a2b5-729f5dee7b28": {
+          "type": "Product",
+          "settings": {
+            "product": "cork-tie-case-green"
+          }
+        },
+        "998e1a8e-4f30-44c9-b885-e9d98e98f516": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-cork-aquarelle-prussian-blue-belt"
+          }
+        },
+        "2949a5f3-3f55-45cb-86cc-94da59cc202e": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-cork-tuscany-sunglasses-case"
+          }
+        },
+        "afbef3f0-bdcd-4008-b488-2e7e6339bd60": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-navy-jute-canvas-utility-pouch"
+          }
+        },
+        "9f7c1ba7-8aa3-43e4-a1f9-04d705eac2cb": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-asnoti-silver-wooden-sunglasses"
+          }
+        },
+        "b52203d6-b7c0-4ac7-a821-07c92d961fcc": {
+          "type": "Product",
+          "settings": {
+            "product": "funky-kalakar-recycled-leather-laptop-sleeve-brown-armbrw-15722"
+          }
+        },
+        "d98692e5-871b-45bb-bb3e-89d8f26ab856": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-camel-jute-canvas-shoulder-bag"
+          }
+        },
+        "e0bcc89b-3fc7-4860-af55-98c06cdb6e62": {
+          "type": "Product",
+          "settings": {
+            "product": "funky-kalakar-recycled-leather-wallet-black-zorrob-15722"
+          }
+        },
+        "95eaf315-ebf0-4510-bdf7-f43faa920db1": {
+          "type": "Product",
+          "settings": {
+            "product": "sustainable-tan-rozana-laptop-sleeve"
+          }
+        }
+      },
+      "block_order": [
+        "72995800-ecf7-46ec-b2ff-f4be43592e1e",
+        "31fb0fb1-31fc-4221-b26b-b3e53253464e",
+        "45c49ccf-a090-4093-bc1c-f1fa6114aa75",
+        "70927f2a-7341-46d8-8531-ecd81dbba1d4",
+        "4ae424f7-1f42-4b80-bce9-5d09ddce85db",
+        "f89fdc97-793b-4a2b-a68b-ff1e73733321",
+        "c94a8c38-f187-4a16-a2b5-729f5dee7b28",
+        "998e1a8e-4f30-44c9-b885-e9d98e98f516",
+        "2949a5f3-3f55-45cb-86cc-94da59cc202e",
+        "afbef3f0-bdcd-4008-b488-2e7e6339bd60",
+        "9f7c1ba7-8aa3-43e4-a1f9-04d705eac2cb",
+        "b52203d6-b7c0-4ac7-a821-07c92d961fcc",
+        "d98692e5-871b-45bb-bb3e-89d8f26ab856",
+        "e0bcc89b-3fc7-4860-af55-98c06cdb6e62",
+        "95eaf315-ebf0-4510-bdf7-f43faa920db1"
+      ],
+      "settings": {
+        "title1": "Handmade",
+        "title2": "accessories",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/mens-accessories",
+        "button_position": "top"
+      }
+    },
+    "2bd14898-d935-4349-9e83-f4372de58bf7": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "65342066-f6a1-4e0c-8a31-266b1fa66266": {
+          "type": "Product",
+          "settings": {
+            "product": "ecentric-casual-shirt-for-men-pure-hemp-olive-apmcsols-111022"
+          }
+        },
+        "056f647c-c1d7-437e-8233-11c3955d3f53": {
+          "type": "Product",
+          "settings": {
+            "product": "b-label-hemp-resort-shirt-grey-blms401s-gy-100822"
+          }
+        },
+        "faa1f530-a28e-4eb8-8189-0c3ca401d56f": {
+          "type": "Product",
+          "settings": {
+            "product": "ecentric-casual-shirt-for-men-black-apmcscbs-111022"
+          }
+        },
+        "80820f18-87a0-4a91-af2a-5729f89510de": {
+          "type": "Product",
+          "settings": {
+            "product": "men-metamorphosis-white-hemp-kurta"
+          }
+        },
+        "53a0122f-376d-440e-92b6-8d797cb6f8bd": {
+          "type": "Product",
+          "settings": {
+            "product": "hemp-blue-mens-blazer-pants-set"
+          }
+        },
+        "3d2810cb-434f-4ca9-8841-628f6fd11487": {
+          "type": "Product",
+          "settings": {
+            "product": "men-hemp-peach-buttondown-shirt"
+          }
+        },
+        "8c3cff41-4c6b-4efc-8a66-316859c6df69": {
+          "type": "Product",
+          "settings": {
+            "product": "ecentric-slim-fit-hemp-formal-shirt-1"
+          }
+        },
+        "d194d247-0ea7-45dc-9d94-091a6ab4fd9a": {
+          "type": "Product",
+          "settings": {
+            "product": "b-label-hemp-loose-fit-jogger-blue-melange-blmtr401s-bm-100822"
+          }
+        },
+        "5403fbee-a70d-4916-8c28-fea4bfa7478a": {
+          "type": "Product",
+          "settings": {
+            "product": "hemp-blue-mens-blazer"
+          }
+        }
+      },
+      "block_order": [
+        "65342066-f6a1-4e0c-8a31-266b1fa66266",
+        "056f647c-c1d7-437e-8233-11c3955d3f53",
+        "faa1f530-a28e-4eb8-8189-0c3ca401d56f",
+        "80820f18-87a0-4a91-af2a-5729f89510de",
+        "53a0122f-376d-440e-92b6-8d797cb6f8bd",
+        "3d2810cb-434f-4ca9-8841-628f6fd11487",
+        "8c3cff41-4c6b-4efc-8a66-316859c6df69",
+        "d194d247-0ea7-45dc-9d94-091a6ab4fd9a",
+        "5403fbee-a70d-4916-8c28-fea4bfa7478a"
+      ],
+      "settings": {
+        "title1": "Homegrown",
+        "title2": "hemp fabric",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/mens-wear?f_Material=Hemp",
+        "button_position": "top"
+      }
+    },
+    "a1604e37-d042-44e6-9b55-11075920a20e": {
+      "type": "amala-earth-curation",
+      "blocks": {
+        "d29be58d-9a18-4d9c-802c-ce5223ad72f2": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/lookbook_banner_1_1.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/lookbook_banner__mobile_1_1.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/festive-capsule"
+          }
+        },
+        "b5063a29-7aa8-4e07-bc10-0d7af36b505d": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/lookbook_banner_2_1.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/lookbook_banner__mobile_2_1.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/winterwear-capsule"
+          }
+        },
+        "21dd7f79-1fa1-4a22-9659-917723e4de27": {
+          "type": "Banner",
+          "disabled": true,
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/wedding_1.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/wedding_mob_1.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "d29be58d-9a18-4d9c-802c-ce5223ad72f2",
+        "b5063a29-7aa8-4e07-bc10-0d7af36b505d",
+        "21dd7f79-1fa1-4a22-9659-917723e4de27"
+      ],
+      "settings": {
+        "curation_heading1": "Amala Earth",
+        "curation_sub_heading2": "look book"
+      }
+    },
+    "5197c485-96a4-4d12-a1d7-a756d4b39fe6": {
+      "type": "highlighted-brands",
+      "settings": {
+        "select_your_heading1": "Highlighted",
+        "select_your_heading2": "brand",
+        "highlighted_brands_desktop": "shopify:\/\/shop_images\/highlighted_brand_-_desktop_men.jpg",
+        "highlighted_brands": "shopify:\/\/shop_images\/highlighted_brand-mobile_men.jpg",
+        "title": "SAPHED",
+        "anchor_text": "Explore the brand",
+        "url_link": "https:\/\/amala.earth\/collections\/Saphed"
+      }
+    },
+    "c0308d8b-0365-4681-af50-ffdc0d63c61f": {
+      "type": "brands-we-love",
+      "blocks": {
+        "3bcd13ce-366a-4263-8e53-b0d47815bf1a": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_632_b9d9c90b-1f37-4877-91a9-6cbeda8caa7c.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_703_6.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/Paaduks?f_Gender=Men"
+          }
+        },
+        "9cd174a9-503a-4425-b10f-da9ecdc719d0": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/oziss_web.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/oziss_mobile_3a2fcd1b-dd04-4dd6-8b69-6fde82566f13.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/OZiSS"
+          }
+        },
+        "088934a7-5d8a-4ff0-9ab3-a3a192ab9a62": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/sasha_web.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/sasha_mobile.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/SASHA"
+          }
+        },
+        "05984cb3-6681-4a06-be69-98a1e24db634": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/kranium_web_baa0dbf4-4d8f-4005-9b46-4d579e3e5564.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/kranium_mobile.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/Kranium"
+          }
+        },
+        "deceeca7-91f8-4fba-8824-e0d24c3d0a90": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/1._web.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/1._mobile.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/Saphed"
+          }
+        },
+        "16891b45-c1cc-4ea3-8a15-0e45471fd314": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_680_2a9e1a44-193a-4912-9287-558958d2d270.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_710_55514cdb-39bc-496b-a986-460751d2bec4.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/Translate?f_Category=men"
+          }
+        },
+        "c86d9ee4-a443-4369-987f-17c8856e99ad": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_681_9343e104-bf41-40e4-9481-823a31480f49.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_706_6126eb3d-5817-4b2f-93d6-47859abc1c9b.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/malkauns"
+          }
+        },
+        "38234968-9399-4c2a-8f06-53fecc26273e": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_682_c56799bf-1bdc-4b75-a5d0-e2862f3579e9.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_707_3bf5ee78-8671-41a4-bd28-abdd8a85ddd0.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/Ecentric?f_Category=men"
+          }
+        },
+        "318abb6b-bcc3-459f-9b9a-bb4c3073b889": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_683_f0134b06-1a16-4b6f-a5e0-6bb685657ae9.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_708.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/Creatures-of-Habit?f_Category=men"
+          }
+        },
+        "7fb470c1-d504-4423-ab2b-72f354eb4a0b": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_684_41ae2b34-08f3-4584-8eac-3688be637885.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_633_1.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/the-right-cut"
+          }
+        },
+        "075c9c70-fab8-4cd0-98a8-7c382ae22770": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_685_4fb3e1bf-af12-487e-8e55-74cf0c51cbbc.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_705_4.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/B-Label?f_Category=men"
+          }
+        },
+        "e54f33f8-ccee-4ced-a94d-5c20d751f656": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_693_38887b00-1085-4645-bf2a-b1ebd10ce044.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_712_7193f38a-059f-4e7f-bcb1-5775ff60288b.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/studio-beej"
+          }
+        },
+        "8491926f-84ac-42be-af37-ad2adf1deff1": {
+          "type": "brands",
+          "disabled": true,
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/beej_c37e5f9e-61ba-4183-bad4-b1ae144be033.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_636.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/studio-beej"
+          }
+        },
+        "d54543b2-5fff-4954-b191-515a50d5bd27": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/with_n_mobile.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/with_n_mobile_5ef67bf7-6694-4062-ba26-1735f9bc56fa.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/with-N"
+          }
+        },
+        "909f355c-0496-40bc-a210-df4f527f418d": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/lafani_web.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/lafani_mobile.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/Lafaani"
+          }
+        }
+      },
+      "block_order": [
+        "3bcd13ce-366a-4263-8e53-b0d47815bf1a",
+        "9cd174a9-503a-4425-b10f-da9ecdc719d0",
+        "088934a7-5d8a-4ff0-9ab3-a3a192ab9a62",
+        "05984cb3-6681-4a06-be69-98a1e24db634",
+        "deceeca7-91f8-4fba-8824-e0d24c3d0a90",
+        "16891b45-c1cc-4ea3-8a15-0e45471fd314",
+        "c86d9ee4-a443-4369-987f-17c8856e99ad",
+        "38234968-9399-4c2a-8f06-53fecc26273e",
+        "318abb6b-bcc3-459f-9b9a-bb4c3073b889",
+        "7fb470c1-d504-4423-ab2b-72f354eb4a0b",
+        "075c9c70-fab8-4cd0-98a8-7c382ae22770",
+        "e54f33f8-ccee-4ced-a94d-5c20d751f656",
+        "8491926f-84ac-42be-af37-ad2adf1deff1",
+        "d54543b2-5fff-4954-b191-515a50d5bd27",
+        "909f355c-0496-40bc-a210-df4f527f418d"
+      ],
+      "settings": {
+        "heading_one": "Brands",
+        "heading_two": "we love",
+        "btn_text": "",
+        "url_link": ""
+      }
+    },
+    "96083abf-22c9-4296-82c9-e67b18017a11": {
+      "type": "consious-journey",
+      "blocks": {
+        "794d66cc-b338-4821-9f99-aeba19c33753": {
+          "type": "Consious",
+          "settings": {
+            "consious_banner_desktop": "shopify:\/\/shop_images\/Mask_group_2_d8f10a3d-4291-489a-a18a-768f17d71e03.png",
+            "consious_banner_mobile": "shopify:\/\/shop_images\/artisanal.png",
+            "title": "ARTISAN-LED",
+            "url_link": "https:\/\/amala.earth\/collections\/men-artisan-led"
+          }
+        },
+        "ce055ec2-b4a4-4634-ad37-8fa0bdfe4fc0": {
+          "type": "Consious",
+          "disabled": true,
+          "settings": {
+            "consious_banner_desktop": "shopify:\/\/shop_images\/Cruelty-free_07783857-909b-4f12-aad9-556f4bc6e663.png",
+            "consious_banner_mobile": "shopify:\/\/shop_images\/CRUELTY-FREE2.png",
+            "title": "CRUELTY-FREE",
+            "url_link": "https:\/\/amala.earth\/collections\/women-wear-cruelty-free"
+          }
+        },
+        "f7453415-95d8-423d-92e9-b9b903bd2e3b": {
+          "type": "Consious",
+          "settings": {
+            "consious_banner_desktop": "shopify:\/\/shop_images\/Group_567-1.png",
+            "consious_banner_mobile": "shopify:\/\/shop_images\/ZERO-WASTE.png",
+            "title": "ZERO-WASTE",
+            "url_link": "https:\/\/amala.earth\/collections\/men-zero-waste"
+          }
+        },
+        "0bbceefc-fe44-4751-93a4-dd1be7a3f9aa": {
+          "type": "Consious",
+          "disabled": true,
+          "settings": {
+            "consious_banner_desktop": "shopify:\/\/shop_images\/upcycled2.png",
+            "consious_banner_mobile": "shopify:\/\/shop_images\/UPCYCLED2_1.png",
+            "title": "UPCYCLED",
+            "url_link": "https:\/\/amala.earth\/collections\/women-wear-upcycled"
+          }
+        }
+      },
+      "block_order": [
+        "794d66cc-b338-4821-9f99-aeba19c33753",
+        "ce055ec2-b4a4-4634-ad37-8fa0bdfe4fc0",
+        "f7453415-95d8-423d-92e9-b9b903bd2e3b",
+        "0bbceefc-fe44-4751-93a4-dd1be7a3f9aa"
+      ],
+      "settings": {
+        "consious_heading1": "Start Your",
+        "consious_sub_heading2": "conscious journey"
+      }
+    },
+    "599fb9d5-a3b4-4dd1-a141-eef20c6845ef": {
+      "type": "landing-page-recommendation",
+      "disabled": true,
+      "blocks": {
+        "14130e83-6507-434f-b50b-e3373c61191b": {
+          "type": "Product",
+          "settings": {
+            "product": "bow-square-woolen-mens-overshirt-dark-red-bs22wlos0005-131222"
+          }
+        },
+        "688c4a65-86c2-42f4-9334-ed326693da45": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "ewoke-hemp-balloon-sleeves-dress-red-hd009-26822"
+          }
+        },
+        "b64a0e63-5167-4ddc-87e6-a545db26fa90": {
+          "type": "Product",
+          "settings": {
+            "product": "b-label-hemp-button-down-shirt-white-blms404s-wh-100822"
+          }
+        },
+        "e5c71f4c-9ece-4007-9f05-d0726ff0a62e": {
+          "type": "Product",
+          "settings": {
+            "product": "saphed-linen-trousers-pleated-black-060523a-101022"
+          }
+        },
+        "77fd30f6-7039-489c-b5d1-ea93f2ba57f5": {
+          "type": "Product",
+          "settings": {
+            "product": "tann-trim-vegan-leather-backpack-black-small-sipr04085-24822"
+          }
+        },
+        "3b627a98-e96a-4567-a46b-b999aff61fbb": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-cork-woodland-brown-midnight-black-belt"
+          }
+        },
+        "c08f83b7-f2d8-485f-8371-5393fdf26dd3": {
+          "type": "Product",
+          "settings": {
+            "product": "upcycled-vegan-leather-sandals-dark-brown"
+          }
+        },
+        "7f93e4de-8586-40c8-9e23-9fb584271163": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-walong-orange-wooden-sunglasses"
+          }
+        },
+        "13e2cc4d-7f23-41e9-aa75-a1f8a1037324": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "block-printed-hemp-multicolor-floral-print-top"
+          }
+        }
+      },
+      "block_order": [
+        "14130e83-6507-434f-b50b-e3373c61191b",
+        "688c4a65-86c2-42f4-9334-ed326693da45",
+        "b64a0e63-5167-4ddc-87e6-a545db26fa90",
+        "e5c71f4c-9ece-4007-9f05-d0726ff0a62e",
+        "77fd30f6-7039-489c-b5d1-ea93f2ba57f5",
+        "3b627a98-e96a-4567-a46b-b999aff61fbb",
+        "c08f83b7-f2d8-485f-8371-5393fdf26dd3",
+        "7f93e4de-8586-40c8-9e23-9fb584271163",
+        "13e2cc4d-7f23-41e9-aa75-a1f8a1037324"
+      ],
+      "settings": {
+        "title1": "",
+        "title2": "Winter",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": true,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/women?f_Material=Hemp",
+        "button_position": "top"
+      }
+    },
+    "a710b051-3ab4-4eac-90a1-731e2bf80aab": {
+      "type": "landing-page-recommendation",
+      "disabled": true,
+      "blocks": {
+        "2d784abd-393f-4d13-bd85-024717bceaf7": {
+          "type": "Product",
+          "settings": {
+            "product": "saphed-linen-kurta-pajama-set-rust-brown-060724a-101022"
+          }
+        },
+        "dd9451fe-b80d-4bf1-b37d-86e17f9b12fb": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-brown-men-s-multi-strap-flat-sandals"
+          }
+        },
+        "dc762ea9-231d-4cb7-a7ff-be1fda5d63ca": {
+          "type": "Product",
+          "settings": {
+            "product": "upcycled-cotton-discontinuous-lines-pocket-square"
+          }
+        },
+        "ce7035fe-8898-4b4d-aabf-019724e219cb": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-juruti-wine-wooden-sunglasses"
+          }
+        },
+        "99ff50a9-9981-4037-9940-31b5ec8fbd7b": {
+          "type": "Product",
+          "settings": {
+            "product": "funky-kalakar-recycled-leather-wallet-brown-carterab-15722"
+          }
+        }
+      },
+      "block_order": [
+        "2d784abd-393f-4d13-bd85-024717bceaf7",
+        "dd9451fe-b80d-4bf1-b37d-86e17f9b12fb",
+        "dc762ea9-231d-4cb7-a7ff-be1fda5d63ca",
+        "ce7035fe-8898-4b4d-aabf-019724e219cb",
+        "99ff50a9-9981-4037-9940-31b5ec8fbd7b"
+      ],
+      "settings": {
+        "title1": "Festive",
+        "title2": "",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": true,
+        "show_quick_buy": false,
+        "link_title": "View all",
+        "link_url": "",
+        "button_position": "top"
+      }
+    },
+    "a7ea0487-7e3a-4b47-a708-8bb88a506e59": {
+      "type": "blog-posts-carousel",
+      "blocks": {
+        "fa887d1e-fb0a-4cfd-b5bd-85353265e658": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/men_s.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/menswear-essentials-you-will-absolutely-love-casuals-and-formals",
+            "title": "Menswear Essentials You Will Absolutely Love - Casuals and Formals"
+          }
+        },
+        "d755903b-8620-4fbd-a113-8404281f35f1": {
+          "type": "blog",
+          "disabled": true,
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Menswear_Essentials_You_Will_Absolutely_Love_-_Casuals_and_Formals.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/menswear-essentials-you-will-absolutely-love-casuals-and-formals",
+            "title": "Menswear Essentials You Will Absolutely Love - Casuals and Formals"
+          }
+        },
+        "e3bbb9f0-8c3b-4247-9abe-80373ac4a94c": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Sustainable_Footwear_for_Men_and_Women_for_All_Occasions.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/sustainable-footwear-for-men-and-women-for-all-occasions",
+            "title": "Sustainable Footwear for Men and Women for All Occasions"
+          }
+        },
+        "f7883cfd-14da-4a4b-80f6-5418ecdf8110": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/10_eco-friendly_gift_ideas_for_men.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/10-eco-friendly-gift-ideas-for-men",
+            "title": "10 eco-friendly gift ideas for men"
+          }
+        },
+        "2e4f2e1f-0b41-4e0a-81c4-87c6000e864a": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/A_Modern_Man_s_Guide_To_Sustainable_Fashion_31627757-b9dd-4ee3-b71c-cfa16f3205d1.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/a-modern-mans-guide-to-sustainable-fashion",
+            "title": "A Modern Man's Guide To Sustainable Fashion"
+          }
+        },
+        "e030cd63-9da3-4563-864d-74b6b6e62a30": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/What_is_Vegan_Leather__Eco-friendly_Bags_and_Accessories_at_Amala_Earth.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/what-is-vegan-leather-eco-friendly-bags-and-accessories-at-amala-earth",
+            "title": "What is Vegan Leather? Eco-friendly Bags and Accessories at Amala Earth"
+          }
+        },
+        "49bc4d51-8a54-4fa6-9506-b04db4416416": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Sustainable_Fashion_Brands_That_Stand_the_Test_of_Time.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/sustainable-fashion-brands-that-stand-the-test-of-time",
+            "title": "Sustainable Fashion Brands That Stand the Test of Time"
+          }
+        },
+        "f97b7cdf-bff0-48a9-8c92-f5f16852b186": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/The_Ultimate_Guide_To_Earth-Friendly_Yoga_And_Workout_Wear_4aaad349-1cad-4425-8c06-a435621ce1d7.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/the-ultimate-guide-to-earth-friendly-yoga-and-workout-wear",
+            "title": "The Ultimate Guide To Earth-Friendly Yoga And Workout Wear"
+          }
+        },
+        "49516805-9e1a-42ad-9b61-decac6393814": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/A_Modern_Man_s_Guide_To_Sustainable_Fashion.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/a-modern-mans-guide-to-sustainable-fashion",
+            "title": "A Modern Man's Guide To Sustainable Fashion"
+          }
+        }
+      },
+      "block_order": [
+        "fa887d1e-fb0a-4cfd-b5bd-85353265e658",
+        "d755903b-8620-4fbd-a113-8404281f35f1",
+        "e3bbb9f0-8c3b-4247-9abe-80373ac4a94c",
+        "f7883cfd-14da-4a4b-80f6-5418ecdf8110",
+        "2e4f2e1f-0b41-4e0a-81c4-87c6000e864a",
+        "e030cd63-9da3-4563-864d-74b6b6e62a30",
+        "49bc4d51-8a54-4fa6-9506-b04db4416416",
+        "f97b7cdf-bff0-48a9-8c92-f5f16852b186",
+        "49516805-9e1a-42ad-9b61-decac6393814"
+      ],
+      "settings": {
+        "heading_one": "Recent",
+        "heading_two": "blogposts",
+        "view_text": "",
+        "url_link": ""
+      }
+    },
+    "41014bac-ea4d-4b27-8c03-52bef9fe55fe": {
+      "type": "landing-page-video",
+      "blocks": {
+        "9770c9aa-57b2-42fb-89ed-b39443515912": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtube.com\/watch?v=RRQ228NOp84",
+            "image": "shopify:\/\/shop_images\/Men_s_Fashion___Kurtas___Amala_Earth.png",
+            "title": "Men's Fashion | Kurtas | Amala Earth",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "5f1064ed-195f-4b18-a177-6f541dc17ce1": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtube.com\/watch?v=LQmk2ypGF0A",
+            "image": "shopify:\/\/shop_images\/mens_blog_image.jpg",
+            "title": "Handcrafted Ethnic Men's Wear | Amala Earth",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "8ca15421-ba45-427c-8190-b359be131cbc": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtube.com\/watch?v=7q10BK613Fg",
+            "image": "shopify:\/\/shop_images\/imgs_7.jpg",
+            "title": "Earth-friendly Wedding | Indian Wedding | Jewellery",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "84bb1ceb-f46d-41d6-b337-d61f90609772": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtube.com\/watch?v=ioRCn4wEhVY",
+            "image": "shopify:\/\/shop_images\/Why_Wear_Hemp__The_Sustainable_Organic_Fabric.png",
+            "title": "Summer Accessories at Amala Earth",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "880899d6-ad8c-49e9-933e-aada13519725": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtube.com\/watch?v=EQw-WplSVVU",
+            "image": "shopify:\/\/shop_images\/IMG1.jpg",
+            "title": "Loungewear at Amala Earth",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "d268173e-ca11-4947-ae9b-86b41bdc16fe": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtube.com\/watch?v=IumCBSbopBo",
+            "image": "shopify:\/\/shop_images\/IMG2.jpg",
+            "title": "Naturally dyed silk sarees",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "f1cb3db7-79ed-4454-a114-2851e6b9b46a": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/CkwBWCH9TQY",
+            "image": "shopify:\/\/shop_images\/Untitled-1_1.png",
+            "title": "Wedding Wear Collection | Amala Earth",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        }
+      },
+      "block_order": [
+        "9770c9aa-57b2-42fb-89ed-b39443515912",
+        "5f1064ed-195f-4b18-a177-6f541dc17ce1",
+        "8ca15421-ba45-427c-8190-b359be131cbc",
+        "84bb1ceb-f46d-41d6-b337-d61f90609772",
+        "880899d6-ad8c-49e9-933e-aada13519725",
+        "d268173e-ca11-4947-ae9b-86b41bdc16fe",
+        "f1cb3db7-79ed-4454-a114-2851e6b9b46a"
+      ],
+      "settings": {
+        "video_title1": "Video",
+        "video_title2": "blogs",
+        "btn_text": "",
+        "url_link": ""
+      }
+    }
+  },
+  "order": [
+    "3e38aca5-5077-4220-831b-859e274c9a16",
+    "festival-landings-page",
+    "747481e2-8bdd-405b-8460-758c89da4363",
+    "3ce8650f-ee5d-4ec2-8c3e-43b4fde36a2f",
+    "89c358b0-1e8e-4b5c-8b3b-66bbd5a90bab",
+    "7148a954-d95c-483a-9aed-5f0f443b2075",
+    "6524cdb9-0e87-420a-a91a-d4fc14b0cf1b",
+    "68c33a46-c30e-4b8a-84b9-d80dacac4a04",
+    "c58f4781-5dcf-4227-b0cc-f67411d71c42",
+    "24cdcfbd-63c2-4d37-b749-2b764e6faea7",
+    "b1ffa630-18e0-40db-91e0-cf69f567f496",
+    "7e727bcc-acea-4a68-bf80-27371ae6d902",
+    "2bd14898-d935-4349-9e83-f4372de58bf7",
+    "a1604e37-d042-44e6-9b55-11075920a20e",
+    "5197c485-96a4-4d12-a1d7-a756d4b39fe6",
+    "c0308d8b-0365-4681-af50-ffdc0d63c61f",
+    "96083abf-22c9-4296-82c9-e67b18017a11",
+    "599fb9d5-a3b4-4dd1-a141-eef20c6845ef",
+    "a710b051-3ab4-4eac-90a1-731e2bf80aab",
+    "a7ea0487-7e3a-4b47-a708-8bb88a506e59",
+    "41014bac-ea4d-4b27-8c03-52bef9fe55fe"
+  ]
+}

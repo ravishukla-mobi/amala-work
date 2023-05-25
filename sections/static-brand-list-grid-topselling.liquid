@@ -1,0 +1,51 @@
+{% if collection.handle == 'vendors' and collection.products.size == 0 %}
+{% include 'static-brand-list-grid' %}  
+{% endif %} 
+{% schema %}
+{
+    "name": "TopSelling Brand Grid",
+    "class": "static-brand-list-grid-section",
+    "settings": [
+        {
+            "type":"text",
+            "id":"subtitle",
+            "label":"Subheading"
+        },
+        {
+            "type":"text",
+            "id":"title",
+            "label":"Heading"
+        },
+        {
+          "type": "text",
+          "id": "view_title",
+          "label": "View title",
+          "default": "View all",
+          "info":"View all button only show when brand image is greater than 9"
+        },
+        {
+            "type":"color_background",
+            "id":"background",
+            "label":"background color"
+        }
+    ],
+    "blocks":[
+        {
+        "type": "brand-list",
+        "name": "Brand Image Grid",
+        "settings": [
+            {
+                "type":"image_picker",
+                "id":"brand_image",
+                "label":"Image"
+            },
+            {
+                "type":"url",
+                "id":"brand_url",
+                "label":"Link"
+            }
+        ]
+        }
+    ]
+}
+{% endschema %}

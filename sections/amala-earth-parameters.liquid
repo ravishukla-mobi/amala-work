@@ -1,0 +1,470 @@
+<div class="home_parameters_section" style="background:{{section.settings.background}};">
+  <div class="left-block-container">
+    {%- if section.settings.title != blank or section.settings.subtitle != blank -%}
+      <header class="landing_section_header">
+      {% if section.settings.subtitle != blank %}
+      <h5 class="landing_subheading">{{section.settings.subtitle}}</h5>
+      {% endif %}
+      {% if section.settings.title != blank %}
+      <h4 class="landing_heading">{{section.settings.title}}</h4>
+      {% endif %}
+      </header>
+    {%- endif -%}
+    {%- if section.settings.score_image != blank -%}
+    <div class="pscore_image_block">
+      {%- capture supported_sizes -%}{%- render 'image-size', sizes: '200,250,300,400', image: section.settings.score_image -%}{%- endcapture -%}
+      {%- assign image_url = section.settings.score_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+      <img class="lazyload image--fade-in" alt="{{section.settings.title}}" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto">
+      <noscript>
+      <img src="{{ section.settings.score_image | img_url: '200x' }}" alt="{{section.settings.title}}">
+      </noscript>
+    </div>
+    {%- endif -%}
+    {%- if section.settings.text != blank -%}
+    <div class="pscore_text_block">
+      {{section.settings.text}}
+    </div>
+  {%- endif -%}
+  </div>
+  <div class="right-block-container">
+    {% for block in section.blocks %}
+      <div class="parameter_block{% if block.settings.hide_icon %} parameter_block_hide_icon{% endif %}" data-title="{{block.settings.Popup_title}}" data-content="{{block.settings.text}}" data-img="{{ block.settings.image | img_url: 'master' }}">
+        {% if block.settings.show_icon %}
+          <span class="parameter_icon {{block.settings.icon_position}}_icon{% if block.settings.hide_icon %} hide_icon{% endif %}"><img src="{{ section.settings.block_icon | img_url: 'master' }}" alt="{{block.settings.title}}"></span>
+        {%- endif -%}
+        {% if block.settings.title != blank %}<h3>{{block.settings.title}}</h3>{%- endif -%}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+<span class="pp-view-smilar vs-overlay"></span>
+<div id="parameter__popup-{{section.id}}" class="cus-view-smilar home_pop-up-modal parameter__popup-modal">
+  <span class="close-vs">&times;</span>
+  <div class="pop-up-content">
+    <span class="parameter-content scrollable"></span>
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var openParametersPopup = function() {
+      $(`#parameter__popup-{{section.id}}`).addClass("show");
+      $("body").addClass('overflow-hidden');
+      $(".vs-overlay").addClass("show");
+      console.log(newStatePopup);
+      if(navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)) {
+        if(newStatePopup.length == 0) {
+          newStatePopup.push('new-state-exist');
+          window.history.pushState('new-popup-state', null, '');
+        }
+      }
+    }
+    $('.home_parameters_section .parameter_block').on('click',function(){
+      let title = $(this).attr('data-title');
+      let content = $(this).attr('data-content');
+      let img = $(this).attr('data-img');
+      let popupHtml = `<div class="parameter-content-wrapper"><h3>${title}</h3><img src="${img}" alt="${title}"><p>${content}</p></div>`;
+      $(`#parameter__popup-{{section.id}} .parameter-content`).html(popupHtml);
+      setTimeout(function(){openParametersPopup()},100);
+    });
+    $('.parameter__popup-modal .close-vs').on('click', function(e){
+  		$('.parameter__popup-modal').removeClass('show');
+      $("body").removeClass('overflow-hidden');
+      $(".vs-overlay").removeClass("show");
+    });
+    window.addEventListener("popstate", function (event) {
+      newStatePopup.pop();
+      window.history.replaceState("new-popup-state", null, location.href);
+      if ($(`#parameter__popup-{{section.id}}`).hasClass("show")) {
+        $(".vs-overlay").removeClass("show");
+        $("body").removeClass("overflow-hidden");
+        $(`#parameter__popup-{{section.id}}`).removeClass("show");
+      }
+    });
+  });
+</script>
+{% style %}
+.home_parameters_section {
+  padding: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+.home_parameters_section .left-block-container {
+  width: 100%;
+  max-width: 30%;
+  padding-right: 30px;
+}
+.home_parameters_section .right-block-container {
+  width: 100%;
+  max-width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: -40px;
+}
+.home_parameters_section .landing_section_header {
+  margin-top: 0;
+}
+.home_parameters_section .pscore_image_block {
+  max-width: 170px;
+  margin: 45px 0px 35px 30px;
+}
+.home_parameters_section .pscore_image_block img.lazyload {
+  opacity:0;
+}
+.home_parameters_section .pscore_image_block img {
+  width: 100%;
+}
+.home_parameters_section .pscore_text_block {
+  font-size: 18px;
+  margin-left: 30px;
+}
+.right-block-container .parameter_block {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: calc(50% - 20px);
+  background-color: #fff;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+  cursor:pointer;
+  transition:all 0.3s;
+}
+.parameter_block h3 {
+  color: {{section.settings.text_color}};
+  font-size: 24px;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  transition:all 0.3s;
+}
+.right-block-container .parameter_block:hover h3 {
+  padding-left: 70px;
+  color:{{section.settings.text_hover_color}};
+}
+.parameter_block .parameter_icon{
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  width: 100%;
+  max-width: 70px;
+  display: block;
+  line-height:1;
+  transform:scale(0) translateY(-50%);
+  transition:all 0.3s;
+}
+.right-block-container .parameter_block:hover .parameter_icon{
+  transform:scale(1) translateY(-50%);
+}
+.parameter_block .parameter_icon.right_icon img {
+  transform: rotateY(180deg);
+}
+.parameter__popup-modal {
+  position:fixed;
+  bottom:calc(-80vh - 100px);
+  max-height:80vh;
+  max-width: 428px;
+  margin: 0 auto;
+  left:0;
+  right:0;
+  background:#fff;
+  border-radius:15px 15px 0 0;
+  z-index:99;
+  box-shadow:0 0 5px #ccc;
+  transition:all 0.3s ease;
+}
+.parameter__popup-modal.show {
+  z-index: 12;
+  bottom: 0;
+}
+.parameter__popup-modal .pop-up-content {
+    padding: 20px;
+    overflow: hidden;
+}
+.parameter__popup-modal .parameter-content{
+  overflow-y:auto;
+  overflow-x:hidden;
+  height:calc(80vh - 50px);
+}
+.parameter-content-wrapper {
+  position: relative;
+}
+.parameter-content-wrapper:before {
+    position: absolute;
+    content: '';
+    width: 175px;
+    height: 108px;
+    right: -100px;
+    top: -8px;
+    background: url(https://cdn.shopify.com/s/files/1/0523/3252/7770/files/icon_butterfly.png) no-repeat center;
+    background-size: cover !important;
+}
+.parameter-content-wrapper h3 {
+  font-size: 24px;
+  color: #946C56;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+.parameter-content-wrapper img {
+  width: 100%;
+}
+.parameter-content-wrapper p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 15px;
+}
+.close-vs{
+   position:absolute;
+   display:inline-block;
+   width:35px;
+   height:35px;
+   text-align:center;
+   line-height:35px;
+   border-radius:50%;
+   box-shadow:0 0 5px #ccc;
+   background:#fff;
+   top:-45px;
+   left:calc(50% - 17px);
+   font-size:22px;
+  cursor: pointer;
+}
+.vs-overlay{
+    display:none;
+  	position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(0,0,0,0.7);
+    z-index:9
+  }
+  .vs-overlay.show{display:block;}
+@media screen and (max-width:1399px){
+  .home_parameters_section .pscore_image_block {
+    margin-left: 0;
+    max-width: 130px;
+  }
+  .home_parameters_section .pscore_text_block {
+    font-size: 16px;
+    margin-left: 0;
+  }
+  .parameter_block .parameter_icon{
+    max-width:50px;
+  }
+  .parameter_block h3{
+    font-size: 18px;
+  }
+  .right-block-container .parameter_block:hover h3 {
+    padding-left: 50px;
+  }
+}
+@media screen and (max-width:1199px){
+  .home_parameters_section .right-block-container{
+    margin-bottom: -30px;
+  }
+  .home_parameters_section .left-block-container{
+    padding-right: 20px;
+  }
+  .right-block-container .parameter_block{
+    max-width: calc(50% - 15px);
+    margin-bottom: 30px;
+  }
+  .parameter_block .parameter_icon{
+    max-width: 40px;
+  }
+  .parameter_block h3 {
+    font-size: 16px;
+  }
+  .right-block-container .parameter_block:hover h3 {
+    padding-left: 40px;
+  }
+  .home_parameters_section .pscore_text_block{
+    font-size: 14px;
+  }
+  .home_parameters_section .pscore_image_block {
+    max-width: 100px;
+    margin: 30px 0px 20px 0px;
+  }
+}
+@media screen and (max-width:991px){
+  .home_parameters_section .left-block-container {
+    max-width: 100%;
+    padding-right: 0;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .home_parameters_section .right-block-container{
+    max-width:100%;
+  }
+  .home_parameters_section .pscore_image_block{
+    margin: 0 0 10px auto;
+    max-width: 80px;
+  }
+}
+@media screen and (max-width:767px){
+  .home_parameters_section {
+    padding: 30px 20px;
+    margin-bottom: 10px;
+  }
+  .home_parameters_section .right-block-container{
+    margin-bottom:0;
+  }
+  .right-block-container .parameter_block{
+    max-width: calc(50% - 7px);
+    margin-bottom: 15px;
+    padding: 5px;
+  }
+  .parameter_block .parameter_icon {
+    left: 5px;
+    max-width: 27px;
+  }
+  .parameter_block h3{
+    font-size:13px;
+  }
+  .right-block-container .parameter_block:hover h3 {
+    padding-left: 27px;
+  }
+  .right-block-container .parameter_block.parameter_block_hide_icon:hover h3 {
+    padding-left: 0px;
+  }
+  .parameter_block .parameter_icon.hide_icon {
+    display: none;
+  }
+  .parameter_block .parameter_icon.hide_icon+h3 {
+    max-width: 100%;
+  }
+  .parameter-content-wrapper h3{
+    font-size: 18px;
+  }
+  .parameter-content-wrapper:before{
+    width: 135px;
+    height: 80px;
+    top: -3px;
+    right: -70px;
+  }
+}
+@media screen and (max-width:413px){
+  .parameter_block h3{
+    font-size:11px;
+  }
+}
+{% endstyle %}
+{% schema %}
+  {
+    "name": "Home parameters section",
+    "settings": [
+      {
+        "type":"text",
+        "id":"subtitle",
+        "label":"Subheading"
+      },
+      {
+        "type":"text",
+        "id":"title",
+        "label":"Heading"
+      },
+      {
+        "type":"image_picker",
+        "id":"score_image",
+        "label":"Score image"
+      },
+      {
+        "type":"richtext",
+        "id":"text",
+        "label":"content"
+      },
+      {
+        "type":"image_picker",
+        "id":"block_icon",
+        "label":"Block butterfly Icon"
+      },
+      {
+          "type":"color",
+          "id":"background",
+          "label":"background color"
+      },
+      {
+        "type":"color",
+        "id":"text_color",
+        "label":"Block Text color",
+        "default":"#946c56"
+      },
+      {
+        "type":"color",
+        "id":"text_hover_color",
+        "label":"Block Text hover color",
+        "default":"#C07734"
+      }
+    ],
+    "blocks":[
+        {
+        "type": "grid",
+        "name": "grid",
+        "settings": [
+          {
+            "type":"checkbox",
+            "id":"show_icon",
+            "label":"Show butterfly icon",
+            "default":true
+          },
+          {
+            "type": "select",
+            "id": "icon_position",
+            "label": "Butterfly icon position",
+            "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              },
+              {
+                "value": "right",
+                "label": "Right"
+              }
+            ],
+            "default": "left"
+          },
+          {
+            "type":"checkbox",
+            "id":"hide_icon",
+            "label":"Hide icon on mobile",
+            "default":false
+          },
+          {
+            "type":"text",
+            "id":"title",
+            "label":"Heading"
+          },
+          {
+            "type":"header",
+            "content":"Popup content"
+          },
+          {
+            "type":"text",
+            "id":"Popup_title",
+            "label":"Popup Heading"
+          },
+          {
+            "type":"textarea",
+            "id":"text",
+            "label":"content"
+          },
+          {
+            "type":"image_picker",
+            "id":"image",
+            "label":"Image"
+          }
+        ]
+        }
+    ],
+    "presets": [
+      {
+        "name": "Home parameters section",
+        "category": "Custom"
+      }
+    ]
+  }
+{% endschema %}

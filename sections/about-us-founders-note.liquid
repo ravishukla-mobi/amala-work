@@ -1,0 +1,486 @@
+
+<div class="founder_note_cus">
+    <div class="founder_content_parent">
+        <div class="founder_title">
+            <h2 class="founder_primary_title">{{section.settings.founder_primary_title}}</h2>
+            <h1 class="founder_secondary_title">{{section.settings.founder_seconday_title}}</h1>
+        </div>
+        <div class="founder_content">
+            <div class="founder_content_par">
+                <div class="content_para_1">{{section.settings.description_para_1}}</div>
+                <div class="quoted_text">
+                    <div class="quoted_text">
+                        <span class="title-left_quotes">&ldquo;</span><span>{{section.settings.description_couted_text}}</span><span class="title-right_quotes">&rdquo;</span> 
+                    </div>
+                </div>
+                <div class="content_para_2">{{section.settings.description_para_2}}</div>
+                <h2 class="founder_signature founders_signature_desk">
+                    {{section.settings.founder_signature}}
+                </h2>
+                <h2 class="founders_signature_mob">
+                    {{section.settings.founder_signature_mob}}
+                </h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .founder_note_cus{
+        position: relative;
+        background-image: url({{ section.settings.background_desk_img | img_url: 'master'}});
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: {{ section.settings.background_body_color }}
+    }
+
+    
+    /* .quoted_text .title-left_quotes{
+        font-size: 220px;
+        line-height: 0.5;
+        position: relative;
+        top: 67px;
+    }
+    .quoted_text .title-right_quotes{
+        font-size: 220px;
+        position: relative;
+        top: 90px;
+        line-height: 0;
+    } */
+
+    .founders_signature_mob{
+        color: #9F7356;
+    }
+    .founder_content_parent{
+        display: flex;
+    }
+    .background_image_desk{
+        display: block;
+    }
+    .background_image_mob{
+        display: none;
+    }
+    .founder_primary_title{
+        font-family: Poppins,sans-serif;
+        font-size: 41px;
+        font-weight: 400;
+        line-height: 62px;
+        letter-spacing: 0.11em;
+        margin-left: 225px;
+        margin-bottom: 0px;
+    }
+    .founder_secondary_title{
+        font-family: Poppins,sans-serif;
+        font-size: 55px;
+        font-weight: 500;
+        line-height: 83px;
+        margin-left: 225px;
+    }
+    .content_para_1, .content_para_2{
+        font-family: Poppins,sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 36px;
+        letter-spacing: 0em;
+        margin-top: 91px;
+    }
+    .quoted_text{
+        font-family: 'Perpetua';
+        font-size: 55px;
+        font-weight: 500;
+        line-height: 67px;
+        letter-spacing: 0.05em;
+        text-align: left;
+        display: inline-block;
+        color: #9F7356;
+        margin-top: 9px;
+    }
+    .content_para_2 {
+        margin-top: 13px;
+    }
+    .founder_title, .founder_content{
+        width: 50%;
+    }
+    .founder_content .founder_content_par{
+        margin-right: 91px;
+    }
+    .founder_title{
+        color: #9F7356;
+        margin-top: 25%;
+    }
+    .founder_signature{
+        font-family: Poppins,sans-serif;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 48px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #9F7356;
+        margin-top: 36px;
+        margin-bottom: 54px !important;
+    }
+    .founders_signature_mob{
+        display: none;
+    }
+    @media screen and (max-width: 1800px) {
+        .founder_title{
+            margin-top: 31%;
+        }
+        .content_para_1, .content_para_2{
+            font-size: 21px;
+            line-height: 31px;
+        }
+        .quoted_text svg{
+            height: 60px;
+            width: 30px;
+        }
+        .quoted_text {
+            font-size: 45px;
+    line-height: 1;   
+            letter-spacing: 0.03em;
+        }
+        .content_para_1{
+            margin-top: 50px;
+        }
+    }
+    @media screen and (min-width: 800px) {
+        .founder_signature.founders_signature_desk p{
+            margin-bottom: 0;
+        }
+    }
+
+    @media screen and (max-width: 1350px) {
+        .quoted_text {
+    font-size: 35px;
+    line-height: 0.8;}
+    }
+    @media screen and (max-width: 1200px) {
+        .founder_title {
+            margin-top: 47%;
+        }
+        .founder_primary_title{
+            margin-left: 115px;
+        }
+        .founder_secondary_title{
+            margin-left: 115px;
+        }
+        .content_para_1, .content_para_2 {
+            font-size: 17px;
+            line-height: 29px;
+        }
+        .quoted_text {
+            font-size: 35px;
+            line-height: 45px;
+        }
+        .quoted_text svg {
+            height: 40px;
+            width: 30px;
+        }
+        .founder_primary_title {
+            font-size: 35px;
+            line-height: 30px;
+        }
+        .founder_secondary_title {
+            font-size: 45px;
+            line-height: 80px;
+        }
+        .founder_signature{
+            margin-top: 15px;
+            font-size: 27px;
+        }
+    }
+    @media screen and (max-width: 1000px) {
+        .founder_title{
+            width: 40%;
+        }
+        .founder_content{
+            width: 60%;
+        }
+        .founder_primary_title, .founder_secondary_title {
+            margin-left: 80px;
+        }
+        .founder_primary_title{
+            font-size: 30px;
+        }
+        .founder_secondary_title {
+            font-size: 40px;
+        }
+        .founder_title {
+            margin-top: 60%;
+        }
+        .founder_content .founder_content_par {
+            margin-right: 30px;
+            margin-left: 10px;
+        }
+    }
+    @media screen and (max-width: 800px) {
+        .founder_note_cus{
+            position: relative;
+            background-image: url({{ section.settings.background_mob_img | img_url: 'master'}});
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .background_image_desk{
+            display: none;
+        }
+        .background_image_mob{
+            display: block;
+        }
+        .founder_primary_title {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 27px;
+        }
+        .founder_secondary_title {
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 36px;
+        }
+        .founder_content_parent{
+            flex-direction: column;
+            padding: 0px 20px;
+        }
+        .founder_title, .founder_content {
+            width: 100%;
+        }
+        .founder_title{
+            margin-top: 10%;
+        }
+        .founder_content_par {
+            text-align: center;
+        }
+        .content_para_1, .content_para_2 {
+            font-size: 15px;
+            line-height: 24px;
+        }
+        .quoted_text {
+            font-size: 29px;
+            font-weight: 500;
+            line-height: 33px;
+            letter-spacing: 0.05em;
+            text-align: center;
+        }
+        .quoted_text svg {
+            height: 38px;
+            width: 30px;
+        }
+        .founders_signature_mob{
+            display: block;
+            margin-top: 21px;
+            line-height: 22px;
+        }
+        .founders_signature_mob p:last-child{
+            margin-bottom: 46px;
+        }
+        .founders_signature_desk{
+            display: none;
+        }
+        .founders_signature_mob p{
+            margin: 0;
+        }
+        .founder_content .founder_content_par {
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        .founder_primary_title{
+            line-height: 10px;
+            margin-left: 0px;
+        }
+        .founder_secondary_title{
+            margin-left: 0px;
+        }
+        .content_para_1, .content_para_2{
+            text-align: left;
+        }
+        .founders_signature_mob{
+            text-align: end;
+        }
+    }
+    @media screen and (max-width: 500px) {
+    .quoted_text {
+    font-size: 30px;
+    line-height: 0.8;
+}
+    }
+    @media screen and (max-width: 450px) {
+        .founder_title {
+    margin-top: 10.5%;
+}
+.founder_secondary_title{
+    padding-bottom: 17px;
+}
+        .founder_note_cus {
+            background-size: contain;
+        }
+        .founder_content .founder_content_par {
+            margin-right: 0px;
+            margin-left: 0px;
+        }
+        .founder_primary_title, .founder_secondary_title {
+            margin-left: 0;
+        }
+        .content_para_1, .content_para_2 {
+            font-size: 14px;
+            line-height: 21px;
+        }
+        .content_para_1 {
+            margin-top: 21px;
+        }
+        .founder_primary_title, .founder_secondary_title {
+            margin-left: 0;
+        }
+        .content_para_1 {
+            margin-top: 20px;
+        }
+    }
+    @media screen and (max-width: 420px) {
+        .content_para_1, .content_para_2 {
+    font-size: 14px;
+    line-height: 20px;
+}
+.content_para_1 {
+    margin-top: 5px;
+}
+.quoted_text {
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: 0.04em;}
+    .quoted_text svg {
+    height: 30px;
+    width: 30px;
+}
+    }
+    @media screen and (max-width: 390px) {
+        .founders_signature_mob {
+            display: block;
+            margin-top: 8px;
+        }
+        .founders_signature_mob p:last-child {
+            margin-bottom: 30px;
+        }
+        .founder_title {
+            margin-top: 8%;
+        }
+        .content_para_1 {
+            margin-top: 10px;
+        }
+        .quoted_text {
+            font-size: 22px;
+            margin-top: 5px;
+        }
+        .quoted_text svg {
+            height: 20px;
+            width: 30px;
+        }
+        .content_para_1, .content_para_2 {
+            font-size: 12px;
+            line-height: 20px;
+        }
+        .founders_signature_mob p{
+            font-size: 15px;
+        }
+        .philosophy_content .philosophy_left_content {
+            padding-right: 0px;
+            padding-left: 10px;
+        }
+    }
+    @media screen and (max-width: 370px) {
+        .content_para_1, .content_para_2 {
+            line-height: 17px;
+            font-size: 11px;
+            margin-top: 0px;
+        }
+        .founders_signature_mob p {
+            font-size: 14px;
+        }
+        .founder_title {
+            margin-top: 5%;
+        }
+    }
+    @media screen and (max-width: 450px) and (min-width: 420px) {
+        .founder_note_cus {
+            background-size: cover;
+        }
+    }
+    @media screen and (max-width: 390px) and (min-width: 370px) {
+        .founder_note_cus {
+            background-size: cover;
+        }
+    }
+
+    @media screen and (min-width: 340px) and (max-width: 370px) {
+        .content_para_1, .content_para_2 {
+    line-height: 20px;
+    font-size: 13px;}
+    }
+</style>
+
+{% schema %}
+{
+    "name": "Founders Note",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "background_desk_img",
+            "label": "Desktop Background Image"
+        },
+        {
+            "type": "color",
+            "id": "background_body_color",
+            "label": "Body background color",
+            "default": "#F2E5D8"
+        },
+        {
+            "type": "image_picker",
+            "id": "background_mob_img",
+            "label": "Mobile Background Image"
+        },
+        {
+            "type": "text",
+            "id": "founder_primary_title",
+            "label": "Primary Founder Heading",
+            "default": "Note from"
+        },
+        {
+            "type": "text",
+            "id": "founder_seconday_title",
+            "label": "Primary Founder Heading",
+            "default": "our founder"
+        },
+        {
+            "type": "richtext",
+            "id": "description_para_1",
+            "label": "Note Content above quoted text"
+        },
+        {
+            "type": "text",
+            "id": "description_couted_text",
+            "label": "Quoted text",
+            "default": "Transformation is a word that’s close to my heart"
+        },
+        {
+            "type": "richtext",
+            "id": "description_para_2",
+            "label": "Note Content below quoted text"
+        },
+        {
+            "type": "richtext",
+            "id": "founder_signature",
+            "label": "Founder's signature"
+        },
+        {
+            "type": "richtext",
+            "id": "founder_signature_mob",
+            "label": "Founder's signature Mobile view"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Founder Note"
+        }
+    ] 
+}
+{% endschema %}

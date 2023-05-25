@@ -1,0 +1,333 @@
+<section>
+  <div class="container">
+      <div class="login-register-step" id="login_register_step" style="{{login_default_visibility}}">
+        <div class="form-container">
+          <header class="form__header">
+            <h1 class="form__title heading h1">{{ 'customer.login.welcome_title' | t }}</h1>
+          </header>
+          <div class="Login-user-form-wrapper">
+            {%- form 'customer_login',class: 'form form-customer_login' , onsubmit: 'window.Shopify.recaptchaV3.addToken(this, "customer_login"); return false;' -%}
+              <div class="login-option">
+                <h4 style="font-size: 18px; margin-bottom: 15px">{{ 'customer.login.login' | t }}</h4>
+                <div class="otp-err-msg"></div>
+                {%- if form.errors -%}
+                  {{ form.errors | default_errors }}
+                {%- endif -%}
+                <div class="login-with-otp" id="login-with-otp">
+                  <div class="form__input-wrapper form__input-wrapper--labelled phone_input_wrap">
+                    <div id="editPhone" class="hide">{{ 'customer.login.edit' | t }}</div>
+                    <span class="input-prepend">+91</span>
+                    <input
+                      type="number"
+                      id="customer-phonenumber"
+                      class="form__field form__field--text customer-phonenumber"
+                      name="customer-phonenumber"
+                      placeholder="Enter phone number"
+                      oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                      maxlength="10"
+                      autoFocus={true} />
+                  </div>
+                  {% if settings.otp_warning_msg_enable and settings.otp_warning_msg != blank %}
+                    <div class="otp-warning-message"><svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 533 482" width="533" height="482"><defs><linearGradient id="P" gradientUnits="userSpaceOnUse"/><linearGradient id="g1" x1="2.1" y1="474.3" x2="2.1" y2="4.9" href="#P"><stop stop-color="#f5bf00"/><stop offset=".5" stop-color="#ffd028"/><stop offset="1" stop-color="#fff3c4"/></linearGradient></defs><style>.a{fill:url(#g1)}.b{fill:#8c7100}</style><path class="a" d="m77 474.3c-29 0-52.2-11.3-63.6-31-11.4-19.7-9.6-45.4 5-70.6l189.5-328.3c14.5-25.1 35.9-39.5 58.6-39.5 22.8 0 44.1 14.4 58.6 39.5l189.6 328.3c14.5 25.2 16.3 50.9 4.9 70.6-11.3 19.7-34.5 31-63.6 31z"/><path fill-rule="evenodd" class="b" d="m325.1 44.4l189.6 328.3c14.5 25.2 16.3 50.9 4.9 70.6-11.3 19.7-34.5 31-63.6 31h-379c-29 0-52.2-11.3-63.6-31-11.4-19.7-9.6-45.4 5-70.6l189.5-328.3c14.5-25.1 35.9-39.5 58.6-39.5 22.8 0 44.1 14.4 58.6 39.5zm-115.5 1l-189.5 328.3c-14.2 24.5-16 49.5-5 68.6 11 19 33.6 30 61.9 30h379c28.3 0 50.9-11 61.9-30 11-19.1 9.2-44.1-5-68.6l-189.5-328.3c-14.1-24.5-34.9-38.5-56.9-38.5-22 0-42.7 14-56.9 38.5z"/><path fill-rule="evenodd" d="m307.3 54.7l189.6 328.3c22.5 39 4.2 70.7-40.9 70.7h-379c-45.1 0-63.4-31.7-40.8-70.7l94.7-164.1 94.8-164.2c11.3-19.5 26-29.2 40.8-29.2 14.8 0 29.6 9.7 40.8 29.2zm-71.2 6l-189.5 328.3c-8.7 15-10.5 28.5-5 38 5.5 9.5 18.1 14.7 35.4 14.7h379c17.4 0 29.9-5.2 35.4-14.7 5.5-9.5 3.7-23-4.9-38l-189.6-328.3c-8.6-15-19.4-23.2-30.4-23.2-10.9 0-21.7 8.2-30.4 23.2z"/><path  d="m265.9 400.7c-13.1 0-21.9-9.3-21.9-23.2 0-14 8.9-23.1 22.7-23.1 13.7 0 22.1 8.7 22.4 23.3 0 13.9-8.8 23-22.4 23zm-13.2-74l-8.4-173.3c-0.3-6.9 3.9-15.5 10.2-17.5q5.8-1.9 11.7-1.9 6 0 12.2 2c6.6 2.1 11.1 10.8 10.8 17.7l-8.4 173c-0.4 6.9-6.3 12.6-13.2 12.6h-1.7c-7 0-12.9-5.7-13.2-12.6z"/></svg>
+                    {{settings.otp_warning_msg}}</div>
+                  {% endif %}
+                  <div class="form__input-wrapper form__input-wrapper--labelled otpinput hide">
+                    <input
+                      type="number"
+                      id="customer-otp"
+                      class="form__field form__field--text customer-otp"
+                      name="customerOTP"
+                      placeholder="OTP"
+                      oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                      maxlength="{{ settings.login_otp_length }}" />
+                  </div>
+                  <span class="resend-otp-text hide">Didn't get the OTP? Resend in 30 seconds</span>
+                  <button
+                    type="submit"
+                    class="form__submit button button--primary button--full otpbutton"
+                    onclick="sendotp('login_user');">
+                    {{ 'customer.login.get_otp' | t }}
+                  </button>
+                  <button
+                    type="submit"
+                    class="form__submit button button--primary button--full loginbutton hide"
+                    onclick="getlogintoken('login_user');">
+                    {{ 'customer.login.submit' | t }}
+                  </button>
+                  <p class="terms_privacy_link">By continuing, you agree to Amala Earth's <a href="/pages/terms-and-conditions">Terms of Use</a> and <a href="/pages/privacy">Privacy Policy.</a></p>
+                </div>
+              </div>
+            {%- endform -%}
+          </div>
+          <div class="register-user-form-wrapper hide">
+            <h4 style="font-size: 18px; margin-bottom: 15px">{{ 'customer.register.register' | t }}</h4>
+            <div class="otp-err-msg"></div>
+            {% form 'create_customer' %}
+              {{ form.errors | default_errors }}
+              <div class="form__input-wrapper form__input-wrapper--labelled field--half">
+                <input
+                  type="text"
+                  id="customer-first_name"
+                  class="form__field form__field--text"
+                  name="customer[first_name]"
+                  placeholder="First Name"
+                  required="required"/>
+              </div>
+              <div class="form__input-wrapper form__input-wrapper--labelled field--half">
+                <input
+                  type="text"
+                  id="customer-last_name"
+                  class="form__field form__field--text"
+                  name="customer[last_name]"
+                  placeholder="Last Name"
+                  required="required"/>
+              </div>
+              <div class="form__input-wrapper form__input-wrapper--labelled">
+                <input
+                  type="email"
+                  id="customer-email"
+                  class="form__field form__field--text"
+                  name="customer[email]"
+                  placeholder="Email"
+                  required="required"/>
+              </div>
+              <div class="form__input-wrapper form__input-wrapper--labelled phone_input_wrap">
+                <div id="registerEditPhone" class="hide">{{ 'customer.login.edit' | t }}</div>
+                <span class="input-prepend">+91</span>
+                <input
+                  type="text"
+                  id="customer-phone"
+                  class="form__field form__field--text customer-phonenumber"
+                  name="customer[phone]"
+                  placeholder="Phone Number"
+                  required="required"/>
+              </div>
+              <div class="otp-err-msg"></div>
+              <div class="form__input-wrapper form__input-wrapper--labelled otpinput hide">
+                <input
+                  type="number"
+                  id="customer-otp"
+                  class="form__field form__field--text customer-otp"
+                  name="customerOTP"
+                  placeholder="OTP"
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  maxlength="{{ settings.login_otp_length }}"/>
+              </div>
+              <span class="resend-otp-text hide">Didn't get the OTP? Resend in 30 seconds</span>
+              <div class="fieldset-description" data-buyer-accepts-marketing="">
+                <div class="section__content">
+                  <div class="checkbox-wrapper">
+                    <div class="checkbox__input">
+                      <input name="customer[accepts_marketing]" type="hidden" value="0" autocomplete="off">
+                      <input class="input-checkbox" data-email-marketing="true" type="checkbox" value="1" checked="checked" name="customer[accepts_marketing]" id="customer_accepts_marketing">
+                    </div>
+                    <label class="checkbox__label" for="customer_accepts_marketing">
+                      {{ 'customer.register.customer_accepts_marketing' | t }}
+                  </label></div>
+                </div>
+              </div>
+              <p class="disclaimer-text">By continuing, you agree to Amala Earth's <a href="/policies/terms-of-service">Terms of Service</a> and <a href="/policies/privacy-policy">Privacy Policy.</a></p>
+              <button
+                type="button"
+                class="form__submit button button--primary button--full otpbutton"
+                onclick="sendotp('register_user');">
+                {{ 'customer.login.get_otp' | t }}
+              </button>
+              <button
+                type="submit"
+                class="form__submit button button--primary button--full loginbutton hide"
+                onclick="getlogintoken('register_user');">
+                {{ 'customer.register.submit' | t }}
+              </button>
+              <a href="{{ routes.account_login_url }}" class="link link--accented link-go-to-login">{{ 'customer.register.login' | t }}</a>
+            {% endform %}
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+{% style %}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"]{
+  -moz-appearance: textfield;
+}
+.login-register-step .form-container{
+  max-width: 480px;
+  margin:0px auto;
+}
+.input-prepend {
+  position: absolute;
+  border-right: 1px solid gray;
+  padding: 2px 8px;
+  margin: 9px 0;
+  top: 0;
+  left: 0;
+  line-height: 1.2;
+}
+.form__input-wrapper--labelled .form__field {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.customer-phonenumber {
+  padding-left: 52px;
+}
+.active_edit .customer-phonenumber {
+  pointer-events: none;
+}
+.terms_privacy_link {
+  font-size:13px;
+  margin-top: 15px;
+}
+.login-register-step a{
+  text-decoration: none;
+  color: var(--link-color);
+  -webkit-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+.invalid-feedback {
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 12px;
+  color: #dc3545;
+}
+button.form__submit {
+  border-radius: 10px;
+}
+.oxi-social-login {
+  text-align: center;
+}
+#editPhone, #registerEditPhone {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #b89c7d;
+  color: #fff;
+  border-radius: 10px;
+  padding: 0 20px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  z-index: 2;
+  cursor: pointer;
+}
+.form__input-wrapper.field--half {
+  width: 49%;
+  display: inline-block;
+}
+.fieldset-description .checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+p.disclaimer-text {
+  font-size: 12px;
+  margin: 15px 0;
+}
+p.disclaimer-text span {
+  font-size: 12px;
+  color: #b89c7d;
+  font-weight: 500;
+}
+.otp-err-msg {
+  font-size:12px;
+  color: red;
+  margin-bottom: 0.9em;
+}
+.link-go-to-login{
+  cursor: pointer;
+  display: inline-block;
+  color: #b89c7d;
+  margin-top: 14px;
+  font-weight: 500;
+  font-size: 14px;
+}
+.login-register-step form span {
+  font-size: 14px;
+}
+.checkbox__input {
+  padding-right: 0.75em;
+  white-space: nowrap;
+}
+.input-checkbox{
+  width: 18px;
+  height: 18px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  cursor: pointer;
+  vertical-align: -4px;
+  border: 1px solid;
+  background-color: white;
+  border-radius: 4px;
+  padding:0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.input-checkbox:checked{
+    border-color: #cab49e;
+    border-width: 9px;
+}
+.input-checkbox:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: scale(0.2);
+  transform: scale(0.2);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  width: 10px;
+  height: 8px;
+  margin-left: -5px;
+  margin-top: -4px;
+  background-image: url(https://cdn.shopify.com/shopifycloud/shopify/assets/checkout_2021-01-25/checkbox-tick-66a9a39f70a44a226223ef4c61a701d2d10afaa73ba8846a509fbe58a82f3f36.svg),none;
+}
+.input-checkbox:checked:after {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+  opacity: 1;
+}
+.login-register-step{
+  margin-top: 60px;
+  margin-bottom: 70px;
+}
+#login_register_step .form__header{
+  margin-bottom: 10px;
+}
+.oxi_social_wrapper {
+  text-align: center;
+}
+#customer_login+.form__secondary-action {
+    margin-top: 5px;
+}
+input#customer-phonenumber:focus {
+  border-color: var(--text-color);
+  outline: -webkit-focus-ring-color auto 1px;
+}
+@media (max-width:767px){
+  .template-customers-register form#create_customer{padding:0;margin-top: 0;}
+}
+@media (max-width:640px){
+  .login-register-step{
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+  .terms_privacy_link{font-size:12px;}
+  .template-customers-register form#create_customer{padding:0;}
+}
+{% endstyle %}
+<script type="text/javascript" async="" src="{{ 'account-login.js' | asset_url }}"></script>
+<script>
+{% if customer %}
+window.location.replace('/account');
+{% endif %}
+</script>

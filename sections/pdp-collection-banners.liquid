@@ -1,0 +1,88 @@
+{% if product.metafields.custom.collection_banners != blank %}
+{%- capture section_settings -%}
+{
+    "stackable": false,
+    "layout": "vertical",
+    "products_json": "{%- for banner in product.metafields.custom.collection_banners.value -%}{%- for productid in banner.products -%}{% unless productid.id == product.id %}{% if forloop.first %}id:{{productid.id}}{% else %} OR id:{{productid.id}}{% endif %}{% endunless %}{%- endfor -%}{%- endfor -%}"
+}
+{%- endcapture -%}
+{% assign bannertitle = '' %}
+<section class="pdp-banner-and-collection-section section noproductcollection collection_banners-products" data-section-id="{{ section.id }}" data-section-type="collection_banners-products" data-section-settings='{{ section_settings }}'>
+    <div class="container banner-container">
+        {%- for banner in product.metafields.custom.collection_banners.value -%}
+            {%- liquid
+                assign bannerTitles = banner.bannerurl | split: '/'
+
+                if bannerTitles contains 'ikkat-prints'
+                assign bannertitle = 'Ikat'
+                elsif bannerTitles contains 'women-hemp'
+                assign bannertitle = 'Hemp'
+                elsif bannerTitles contains 'the-linen-shop'
+                assign bannertitle = 'Linen'
+                endif
+            -%}
+            {%- if bannertitle != '' and section.settings.banner_title != blank -%}
+            <header class="section__header">
+                <h2 class="section__title heading h3">{{ section.settings.banner_title }} {{bannertitle}}</h2>
+            </header>
+            {%- endif -%}
+            <a href="{{ banner.bannerurl }}" class="pdp_colbanner">
+                {%- if banner.dekstopbanner -%}
+                <div class="custom__banner-img {% if banner.mobilebanner %}show-tablet-and-up{% endif %}">
+                    <img class="lazyload" data-src="{{ banner.dekstopbanner }}" alt="custom banner">
+                </div>
+                {%- if banner.mobilebanner -%}
+                <div class="custom__banner-img hidden-tablet-and-up">
+                    <img class="lazyload" data-src="{{ banner.mobilebanner }}" alt="custom banner">
+                </div>
+                {%- endif -%}
+                {%- endif -%}
+            </a>
+        {%- endfor -%}
+    </div>
+    <div class="container collection_banners_products_slider">
+        <div class="product-related">
+        </div>
+    </div>
+</section>
+<div id="modal-quick-view-{{ section.id }}" class="modal quick-view-product-modal" aria-hidden="true">
+    <div class="modal__dialog modal__dialog--stretch" role="dialog">
+      <button class="modal__close link" data-action="close-modal" title="{{ 'general.accessibility.close' | t | escape }}">
+        {%- render 'icon', icon: 'close' -%}
+      </button>
+
+      <div class="modal__loader">
+        {%- render 'icon', icon: 'search-loader' -%}
+      </div>
+
+      <div class="modal__inner"></div>
+    </div>
+  </div>
+</div>
+{% endif %}
+{% schema %}
+{
+    "name": "PDP Banner and collection",
+    "settings": [
+        {
+            "type": "checkbox",
+            "id": "show_sold_out",
+            "label": "Show Sold out products",
+            "default": false
+        },
+        {
+            "type": "checkbox",
+            "id": "show_quick_buy",
+            "label": "Show quick buy",
+            "default": false,
+            "info": "Only shows if layout is set to vertical"
+        },
+        {
+            "type": "text",
+            "id": "banner_title",
+            "label": "title",
+            "default": "Related Products From"
+        }
+    ]
+}
+{% endschema %}

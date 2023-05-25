@@ -1,0 +1,39 @@
+{% unless collection.handle == 'vendors' and collection.products.size == 0 %}
+{% section 'collection-template' %}
+{% section 'static-promotion-list' %}
+{% section 'amala-recommend' %}
+{% endunless %}
+{% section 'static-vendors-header' %}
+{% section 'static-brand-list-grid-topselling' %}
+{% section 'static-brand-list-grid-Onboarded' %}
+{% section 'static-featured-collection' %}
+{% section 'static-brand-list-grid-all-other' %}
+{% section 'static-recently-viewed-products' %}
+{% section 'blog-posts' %}
+
+<script type="text/javascript">
+  	var tagsobj = [];
+    {% for tag in collection.all_tags %}
+        var tagsdata = {};
+        tagsdata = "{{ tag }}";
+        tagsobj.push(tagsdata);
+    {% endfor %}
+                
+  	$(document).ready(function() {
+      	var weclid = '{{collection.id}}';
+        var weclimage = '{{ collection.image | image_url }}';
+        var wecltitle = '{{collection.title}}';
+        var wecltags = tagsobj;
+        var weclurls = window.location.href;
+        var weclcount = '{{collection.all_products_count}}';
+        
+		webengage.track('Collection Viewed_N', {
+          	'collectionID': weclid,
+          	'collectionImage': weclimage.replace('//', 'https://'),
+          	'collectionName': wecltitle,
+          	'collectionTags': wecltags,
+          	'pageURL': weclurls,
+          	'productCount': parseInt(weclcount),
+    	});
+  	});
+</script>

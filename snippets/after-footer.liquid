@@ -1,0 +1,37 @@
+<strong>Collections Directory: </strong>
+{% for collection in collections %}
+	<a href="{{collection.url}}"> {{ collection.title }}</a>
+	{%- unless forloop.last -%} {{ ' | ' }} {%- endunless -%}
+{% endfor %}
+
+{% assign all_tags = '' %}
+{% assign collection = collections.all %}
+{% paginate collection.products by 1000 %} 
+
+    {% for tag in collection.tags %}
+      {% if tag contains ':' %}
+      	{% assign show_tag = tag | split: ':' | last %}
+      {% elsif tag contains '__' %}
+      	{% assign show_tag = tag | split: ':' | last %}
+      {% elsif tag contains '_' %}
+      	{% assign show_tag = tag | split: '_' | last %}
+      {% else %}
+    	{% assign show_tag = tag  %}
+      {% endif %}
+
+      {% assign show_tag_handle = tag | handle %}
+      {% assign all_tags = all_tags | append: ';' | append: show_tag | append: '::' | append: show_tag_handle | capitalize %}
+    {% endfor %}
+{% endpaginate %}
+
+{% assign all_tags_list = all_tags | split: ';' | sort %}
+
+<div id="footer-tags">
+  <strong> Tags Directory:</strong>
+  {% for item in all_tags_list %}
+    {% if item != blank %}
+  		<a href="collections/all/{{ item | split: '::' | last }}"> {{ item | split: '::' | first | capitalize }}</a>
+  		{%- unless forloop.last -%} {{ ' | ' }}{%- endunless -%}
+    {% endif %}
+  {% endfor %}
+</div>

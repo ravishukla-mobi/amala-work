@@ -1,0 +1,50 @@
+<div id="order-details-model--{{order.id}}" class="pop-up-modal my-account order-details-review">
+    <div class="pop-up__container">
+        <span class="close-button popup-close hide"><img src="{{ 'close-icon.svg' | asset_url }}" alt="X"></span>
+        <div class="pop-up__content-wrapper">
+            <div class="my-account__pop-up-header">
+                <h1 class="heading">Select an item to view details</h1>
+            </div>
+            <div class="my-account__pop-up-content order-details_popup-content">
+                {%- for line_item in order.line_items -%}
+	                <div class="line-item__wrapper">
+		                <div class="my-orders__content-wrapper-popup my-orders__content-wrapper review-trigger" data-product="{{ line_item.product.handle }}" traget="#product-reviews-model">
+		                    <div class="my-orders__image-wrapper">
+		                        <a href="javascript:void(0);">
+		                            <div class="aspect-ratio" style="padding-bottom: 100.0%">
+		                                <img src="{{ line_item.image | img_url: '90x90', scale: 2 }}" alt="{{ line_item.image.alt | escape }}">
+		                            </div>
+		                        </a>
+		                    </div>
+		                    <div class="my-orders__item-wrapper">
+		                        <table class="my-orders__product-info">
+		                            <tr>
+		                                <td colspan="2"><p class="my-orders__product-title ">{{ line_item.title }}</p></td>
+		                            </tr>
+		                            <tr>
+		                                <td class="product-info_label">Qty. </td>
+		                                <td>{{line_item.quantity}}</td>
+		                            </tr>
+		                            <tr>
+		                                <td class="product-info_label">Amount</td>
+		                                <td><span class="price price--highlight">&nbsp;{{ line_item.final_line_price | money }}</td>
+		                            </tr>
+		                        </table>
+		                    </div>
+		                </div>
+		                <div class="product-details"
+		                  product-id="{{ line_item.product.id }}"   
+		                  name="{{ line_item.product.title | escape }}"   
+		                  url="{{ shop.url }}{{ line_item.product.url }}"   
+		                  image-url="{{ line_item.product.featured_image | product_img_url: "large" }}" 
+		                  product-sku="{{line_item.product.handle}}"
+		                  product-type="{{line_item.product.type}}"
+		                  quantity="{{line_item.quantity}}"
+		                  price="{{line_item.final_price}}"
+		                 ></div>
+		              </div>
+                {%- endfor -%}
+            </div>
+        </div>
+    </div>
+</div>

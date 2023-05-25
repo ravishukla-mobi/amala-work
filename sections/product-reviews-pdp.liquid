@@ -1,0 +1,91 @@
+{% if product.metafields.custom.product_reviews != blank %}
+<section class="review-section pdp_review_section">
+  <div class="container">
+    <div class="heading-bx">
+      <h3 class="section__title">{{ section.settings.sec_head }}<span class="line-heading"></span></h3>
+    </div>
+  </div>
+  <div class="review-slider slider-arrow image-with-text-overlay-grid-section">
+   {% for item in product.metafields.custom.product_reviews.value %}
+    <div class="review-cards-item">
+      <div class="review_content_container">
+        <div class="review_inner_content">
+          <h2 class="customer_name">{{ item.namein }}</h2>
+          <h3 class="customer_review_heading">{{ item.reviewheading }}</h3>
+          <div class="rating-bx">
+            <div class="star-rating">
+              <img src="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/filled_star_1.png?v=1680087839" class="review_star" alt="start review image">
+              <img src="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/filled_star_1.png?v=1680087839" class="review_star" alt="start review image">
+              <img src="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/filled_star_1.png?v=1680087839" class="review_star" alt="start review image">
+              <img src="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/filled_star_1.png?v=1680087839" class="review_star" alt="start review image">
+              <img src="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/filled_star_1.png?v=1680087839" class="review_star" alt="start review image">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <p class="customer_review">{{ item.review }}</p>
+      <span class="read_more customer_review" data-title="{{ item.namein }}" data-reviewheading="{{ item.reviewheading }}" data-starrating="5" data-reviewcontent="{{ item.review }}">Read More</span>
+      
+    </div>
+    {% endfor %}
+
+  </div>
+</section>
+<span class="pdp-expert-overlay"></span>
+<div id="product_review_pdp-{{section.id}}" class="cus-view-smilar home_pop-up-modal community__popup-modal">
+  <span class="close-vs">&times;</span>
+  <div class="pop-up-content community-content">
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var openParametersPopup = function() {
+      $(`#product_review_pdp-{{section.id}}`).addClass("show");
+      $(".pdp-expert-overlay").addClass("show");
+      console.log(newStatePopup);
+      if(navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)) {
+        if(newStatePopup.length == 0) {
+          newStatePopup.push('new-state-exist');
+          window.history.pushState('new-popup-state', null, '');
+        }
+      }
+    }
+    $('.pdp_review_section .read_more').on('click',function(){
+      let title = $(this).attr('data-title');
+      let reviewHeading = $(this).attr('data-reviewheading');
+      let starRating = $(this).attr('data-starrating');
+      let reviewContent = $(this).attr('data-reviewcontent');
+      let popupHtml = `<div class="community-content-wrapper review_pdp_popup pdp_review_section"> <div class="review_content_container"><div class="review_inner_content"><h2 class="customer_name">${ title }</h2><h3 class="customer_review_heading">${reviewHeading}</h3><div class="rating-bx"><div class="star-rating"><img src="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/filled_star_1.png?v=1680087839" class="review_star" alt="start rating"><img src="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/filled_star_1.png?v=1680087839" class="review_star" alt="start rating"><img src="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/filled_star_1.png?v=1680087839" class="review_star" alt="start rating"><img src="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/filled_star_1.png?v=1680087839" class="review_star" alt="start rating"><img src="https://cdn.shopify.com/s/files/1/0523/3252/7770/files/filled_star_1.png?v=1680087839" class="review_star" alt="start rating"></div></div></div></div><p class="customer_review">${reviewContent}</p></div>`;
+      $(`#product_review_pdp-{{section.id}} .community-content`).html(popupHtml);
+      setTimeout(function(){openParametersPopup()},100);
+    });
+    $('.community__popup-modal .close-vs,.pdp-expert-overlay').on('click', function(e){
+      $('.community__popup-modal').removeClass('show');
+      $(".pdp-expert-overlay").removeClass("show");
+    });
+    window.addEventListener("popstate", function (event) {
+      newStatePopup.pop();
+      window.history.replaceState("new-popup-state", null, location.href);
+      if ($(`#product_review_pdp-{{section.id}}`).hasClass("show")) {
+        $(".pdp-expert-overlay").removeClass("show");
+        $(`#product_review_pdp-{{section.id}}`).removeClass("show");
+      }
+    });
+  });
+</script>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Reviews PDP",
+    "settings": [
+      {
+        "type" : "text",
+        "id" : "sec_head",
+        "label" : "Section Heading",
+        "default" : "Reviews"
+      }
+    ]
+  }
+{% endschema %}

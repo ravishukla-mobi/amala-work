@@ -1,0 +1,74 @@
+<section class="my-account" data-section-id="account" data-section-type="account">
+    <div class="my-account__header">
+      <a href="#" class="back_link">
+        <img src="{{ 'back_arrow.svg' | asset_url }}" alt="back">
+      </a>
+      <h2 class="heading h2">My Account</h2>
+  	</div>    
+  	<div class="container container--narrow">
+            
+            <div class="my-account__content">
+                <div class="my-account__avatar-block">
+                    <div class="avatar_image">
+                      {% assign first_letter =  customer.first_name | slice: 0 %}
+                       {% assign last_letter =  customer.last_name | slice: 0 %}
+                        <span>{{first_letter | upcase }}{{last_letter| upcase }}</span>
+                    </div>
+                    <div class="avatar_title">
+                        <h3 class="heading ">Hello, {{customer.first_name}} </h3>
+                        <h3>You have <span id="nector-customer-available-coins"></span> Earth Coins </h3>
+                    </div>
+                </div>
+                <div class="my-account__links">
+                    <a href="/account/?view=orders" class="my-account__link">
+                        <span class="my-account__link-label">My Orders</span>
+                        <span class="my-account__link-icons">
+                            <img src="{{ 'My_Orders.svg' | asset_url }}" >
+                            <img src="{{ 'right_arrow.svg' | asset_url }}" alt=">" class="arrow-icon">
+                        </span>
+                    </a>
+                    <a href="/account/addresses/" class="my-account__link">
+                        <span class="my-account__link-label">My Addresses</span>
+                        <span class="my-account__link-icons">
+                            <img src="{{ 'My_Address.svg' | asset_url }}" >
+                            <img src="{{ 'right_arrow.svg' | asset_url }}" alt=">" class="arrow-icon">
+                        </span>
+                    </a>
+                    <a href="/pages/wishlist/" class="my-account__link">
+                        <span class="my-account__link-label">My Wishlist</span>
+                        <span class="my-account__link-icons">
+                            <img src="{{ 'My_wishlist.svg' | asset_url }}">
+                            <img src="{{ 'right_arrow.svg' | asset_url }}" alt=">" class="arrow-icon">
+                        </span>
+                    </a>
+                    <a href="/account/?view=edit" class="my-account__link">
+                        <span class="my-account__link-label">Edit Account</span>
+                        <span class="my-account__link-icons">
+                            <img src="{{ 'Edit_Account.svg' | asset_url }}">
+                            <img src="{{ 'right_arrow.svg' | asset_url }}" alt=">" class="arrow-icon">
+                        </span>
+                    </a>
+                    <a href="/pages/contact-us/" target="_blank" class="my-account__link">
+                        <span class="my-account__link-label">Need Help</span>
+                        <span class="my-account__link-icons">
+                            <img src="{{ 'Need_Help.svg' | asset_url }}">
+                            <img src="{{ 'right_arrow.svg' | asset_url }}" alt=">" class="arrow-icon">
+                        </span>
+                    </a>
+                    <a onclick="return logout();" class="my-account__link" id="logout">
+                        <span class="my-account__link-label">Logout</span>
+                        <span class="my-account__link-icons">
+                            <img src="{{ 'Logout_Icon.png' | asset_url }}">
+                            <img src="{{ 'right_arrow.svg' | asset_url }}" alt=">" class="arrow-icon">
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+<script>
+  function logout() {
+     window.location.href = '/account/logout/';
+   }
+   
+</script>

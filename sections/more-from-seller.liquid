@@ -1,0 +1,81 @@
+{% if section.settings.enable %}
+
+  <!--webkul marketplace code-->
+
+  <!-- <div class='wk-rateit'></div> -->
+  <!--webkul marketplace code-->
+
+  {%- capture section_settings -%}
+  {
+      "stackable": {% if section.settings.layout == 'vertical' and section.settings.stack_products == false %}false{% else %}true{% endif %},
+      "layout": {{ section.settings.layout | json }}
+    }
+  {%- endcapture -%}
+  
+  {%- assign vendor_handle = product.vendor | handle -%}
+  {%- assign collection_for_vendor = collections[vendor_handle] -%}
+  {% assign vendor_logo = collection_for_vendor.image.src %}
+  <section class="section more-from-seller" data-section-id="{{ section.id }}" data-section-type="featured-collection" data-section-settings='{{ section_settings }}'>
+    <div class="container">
+      <div class="inner-seller">
+      <div class="seller-section-row">
+        <h2> {{ section.settings.title }} </h2>
+        <!-- store logo -->
+        <div class="seller-left-block">
+          <div class="wk_seller_store_logo">
+            <a href="{{collection_for_vendor.url}}"><img src="{{ vendor_logo | img_url:'350x'}}" /></a>
+          </div>
+          <!-- seller shop name name -->
+          <div class="seller-info__left">
+            <div class="seller_name">
+              <a href="{{collection_for_vendor.url}}">{{collection_for_vendor.title}}</a>
+            </div>
+            <div id="wk_seller_description">{{collection_for_vendor.description|strip_html}}</div>
+          </div>
+        </div>
+        <div class="seller-right-block">
+          <a href="{% unless collection_for_vendor.empty? %} {{ collection_for_vendor.url }} {% else %}{{ product.vendor | url_for_vendor }} {% endunless %}" type="button" class="btn cutom-button button seller-button">More from this Seller</a>
+        </div>
+      </div>
+
+    </div>
+    </div>
+
+  </section>
+
+{% endif %}
+
+{% schema %}
+  {
+    "name": "More from Seller",
+    "settings": [
+		{
+			"type": "checkbox",
+			"id": "enable",
+			"label": "Enable current section",
+			"default": true
+		},
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Section Title",
+			"default": "More from Seller"
+		}
+	]
+  }
+{% endschema %}
+
+<script>
+  if(vendor_name && main_product){
+    vendor_name = "{{- product.vendor -}}";
+  	main_product = "{{- product.id -}}";
+    //redirect_url = "{% unless collection_for_vendor.empty? %} {{ collection_for_vendor.url }} {% else %}{{ product.vendor | url_for_vendor }} {% endunless %}";
+  }else{
+    var vendor_name = "{{- product.vendor -}}";
+  	var main_product = "{{- product.id -}}";
+    //var redirect_url = "{% unless collection_for_vendor.empty? %} {{ collection_for_vendor.url }} {% else %}{{ product.vendor | url_for_vendor }} {% endunless %}";
+  
+  }
+  
+  
+</script>

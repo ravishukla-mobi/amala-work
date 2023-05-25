@@ -1,0 +1,265 @@
+<section class="section image-with-text-overlay-grid-container">
+  <div class="container">
+    <div class="image_grid image-slider-{{section.id}}">
+      {% for block in section.blocks %}
+        <div class="image_item">
+          <a href="{{ block.settings.url | default: '#' }}">
+            <div class="image-with-text-wrap">
+              {% if block.settings.image != blank %}
+                <div class="image-with-text-img-wrap" style="padding-bottom: {{ 100.0 | divided_by: block.settings.image.aspect_ratio }}%">
+                  {%- capture supported_sizes -%}{%- render 'image-size', sizes: '320,400,500,600,700', image: block.settings.image -%}{%- endcapture -%}
+                  {%- assign image_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                  <img class="image-with-text-img lazyload" alt="{{ block.settings.image.alt | escape }}" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto" width="250" height="250">
+                </div>
+              {% endif %}
+              {% if block.settings.title != blank %}
+                <div class="image-with-text-container-wrap">
+                  <h2>{{ block.settings.title }}</h2>
+                </div>
+              {% endif %}
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<style>
+  .image-with-text-overlay-grid-section .image_grid:not(.slick-initialized){
+    display: flex;
+    overflow: hidden;
+  }
+  .image-with-text-overlay-grid-section .image_grid .image_item{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 30px;
+    flex: none;
+    width: 22.72%;
+  }
+  .image-with-text-overlay-grid-section img.lazyload{opacity:0;}
+  .image-with-text-overlay-grid-section .image-with-text-wrap{
+    position: relative;
+  }
+  .image-with-text-overlay-grid-section .image-with-text-img-wrap{
+    position: relative;
+  }
+  .image-with-text-overlay-grid-section .image-with-text-img-wrap:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #b89c7d;
+    border-radius: 20px;
+    z-index: 1;
+  }
+  .image-with-text-overlay-grid-section .image-with-text-img-wrap img.lazyload{
+    opacity: 0;
+  }
+  .image-with-text-overlay-grid-section .image-with-text-img-wrap img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    object-fit: cover;
+    z-index: 2;
+    border-radius: 20px;
+  }
+  .image-with-text-overlay-grid-section .image-with-text-img-wrap{
+    min-height: 75px;
+  }
+  .image-with-text-overlay-grid-section .image-with-text-img-wrap:after{
+    content:'';
+    background: linear-gradient(182.77deg, rgba(34, 34, 34, 0) 3.83%, rgba(34, 34, 34, 0.3) 39.81%, rgba(34, 34, 34, 0.7) 81.16%);
+    border-radius: 0px 0px 20px 20px;
+    padding-bottom: 14px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 40%;
+    z-index: 3;
+  }
+  .image-with-text-overlay-grid-section .image-with-text-container-wrap{
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+    z-index: 4;
+  }
+  .image-with-text-overlay-grid-section .image-with-text-container-wrap h2{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 21px;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 0.1px;
+    line-height: 1.3;
+    padding: 0 10px;
+  }
+  .image-with-text-overlay-grid-section .slick-arrow{
+    opacity: 0;
+    color: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 99;
+    transition: all 0.3s ease;
+    background-color: #cab49e;
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    left: 0;
+  }
+  .image-with-text-overlay-grid-section .slick-arrow.slick-next{
+    left: unset;
+    right: 0;
+  }
+  .image-with-text-overlay-grid-section .image_grid:hover .slick-arrow{
+    opacity: 1;
+  }
+  .image-with-text-overlay-grid-section .slick-arrow:after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    top: 48%;
+    transform: rotate(45deg) translateY(-50%);
+    left: 13px;
+  }
+  .image-with-text-overlay-grid-section .slick-arrow.slick-next:after{
+    border-left: none;
+    border-bottom: none;
+    border-right: 2px solid #ffffff;
+    border-top: 2px solid #ffffff;
+    left: 9px;
+  }
+  @media only screen and (max-width:1200px) {
+    .image-with-text-overlay-grid-section .image-with-text-container-wrap h2{
+      font-size: 18px;
+    }
+  }
+  @media only screen and (max-width:991px) {
+    .image-with-text-overlay-grid-section .image_grid .image_item{
+      width: 30.30%;
+    }
+  }
+  @media only screen and (max-width:750px) {
+    .image-with-text-overlay-grid-section .image_grid{
+      margin-left: -7px;
+      margin-right: -7px;
+      margin-bottom: -14px;
+    }
+    .image-with-text-overlay-grid-section .image_grid .image_item{
+      padding-left: 7px;
+      padding-right: 7px;
+      padding-bottom: 14px;
+    }
+    .image-with-text-overlay-grid-section .image-with-text-container-wrap h2{
+      font-size: 14px;
+    }
+    .section.image-with-text-overlay-grid-container{
+      padding-bottom: 0;
+    }    
+    .image-with-text-overlay-grid-section .image-with-text-img-wrap img{
+      border-radius: 10px;
+    }
+    .image-with-text-overlay-grid-section .image-with-text-img-wrap:before{
+      border-radius: 10px;
+    }
+    .image-with-text-overlay-grid-section .image-with-text-img-wrap:after{
+      border-radius: 0px 0px 10px 10px;
+    }
+  }
+  @media only screen and (max-width:639px) {
+    .image-with-text-overlay-grid-section .image_grid:not(.slick-initialized){
+      margin-left: -7px;
+      margin-right: -7px;
+    }
+    .image-with-text-overlay-grid-section .section{
+      padding: 25px 0;
+    }
+    .shopify-section.image-with-text-overlay-grid-section + .shopify-section .section.shopbycategory{
+      padding-top: 0;
+    }
+    .image-with-text-overlay-grid-section .image_grid .image_item{
+      width: 43.47%;
+    }
+  }
+</style>
+<script>
+  $(document).ready(function(){
+    $('.image-slider-{{section.id}}').slick({
+      slidesToShow: 4.4,
+      slidesToScroll: 4,
+      arrows:true,
+      dots:false,
+      infinite:false,
+      lazyLoad: 'ondemand',
+      adaptiveHeight: true,
+      responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 3.3,
+            slidesToScroll:3,
+            arrows: false
+          }
+        },
+        {
+          breakpoint:639,
+          settings: {
+            slidesToShow: 2.3,
+            slidesToScroll: 2,
+            arrows: false
+          }
+        }
+      ]
+    });
+  });
+</script>
+{% schema %}
+  {
+    "name": "Image with text grid",
+    "class": "image-with-text-overlay-grid-section",
+    "settings": [
+    ],
+    "blocks":[
+      {
+        "type": "image",
+        "name": "Image",
+        "settings": [
+          {
+            "type":"image_picker",
+            "id":"image",
+            "label":"Image"
+          },
+          {
+            "type":"text",
+            "id":"title",
+            "label":"Heading"
+          },
+          {
+            "type":"url",
+            "id":"url",
+            "label":"Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image width text overlay grid",
+        "category": "Image"
+      }
+    ]
+  }
+{% endschema %}

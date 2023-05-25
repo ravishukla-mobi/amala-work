@@ -1,0 +1,262 @@
+{%- capture section_settings -%}
+{
+  "stackable": {% if section.settings.layout == 'vertical' and section.settings.stack_products == false %}false{% else %}true{% endif %},
+  "layout": {{ section.settings.layout | json }}
+}
+{%- endcapture -%}
+
+{%- if section.blocks.size > 0 -%} 
+  {%- if section.settings.logged_in -%}
+  {%- else -%}
+    <section data-id="shopify-section-{{section.settings.old_section_id}}" class="section noproductcollection {% if section.settings.title != blank %}{{ section.settings.title | downcase | replace: " ", "" }} {% endif %}" data-section-id="{{ section.id }}" data-section-type="featured-collection" data-section-settings='{{ section_settings }}'>
+
+    <div class="container">
+      <header class="section__header">
+        <div class="landing_section_header">
+          {% if section.settings.subtitle != blank %}
+              <h5 class="landing_subheading">{{ section.settings.subtitle }}</h5>
+          {% endif %}
+          {% if section.settings.title != blank %}
+              <h2 class="landing_heading">{{ section.settings.title }}</h2>
+          {% endif %}
+        </div>
+
+        {%- if section.settings.link_title != blank and section.settings.button_position == 'top' -%}
+
+          <a href="{{ section.settings.link_url | default: collection.url | default: '#' }}" class="section__action-link link">{{ section.settings.link_title | escape }} {% render 'icon', icon: 'tail-right' %}</a>
+
+          {%- endif -%}
+      </header>
+    </div>
+      
+    <div class="container {% if section.settings.layout != 'vertical' or section.settings.stack_products %}container--flush{% endif %}">
+      {%- capture product_list -%}
+        <div class="product-list product-list--{{ section.settings.layout }} {% if section.settings.stack_products %}product-list--stackable{% elsif section.settings.layout == 'vertical' %}product-list--scrollable{% endif %}">
+          {%- assign use_placeholder = false -%}
+
+          {%- for block in section.blocks -%}
+          {% if block.type == 'Product' %}
+            {% assign product = block.settings.product %}
+            {% if product.id != '' %}
+              {% if section.settings.show_sold_out or product.available %}
+                {%- if section.settings.layout == 'vertical' -%}
+                  {%- assign products_per_row = section.settings.products_count | at_most: 6 -%}
+
+                  {%- if section.settings.stack_products -%}
+                    {%- capture grid_classes -%}1/2 1/4--lap 1/{{ products_per_row }}--desk 1/{{ products_per_row }}--wide{%- endcapture -%}
+                  {%- else -%}
+                    {%- capture grid_classes -%}1/4--lap 1/{{ products_per_row }}--desk 1/{{ products_per_row }}--wide{%- endcapture -%}
+                  {%- endif -%}
+
+                  {%- if use_placeholder -%}
+                    {%- include 'product-item-placeholder', product: product, grid_classes: grid_classes, show_add_to_cart: section.settings.show_quick_buy -%}
+                  {%- else -%}
+                    {%- include 'product-item', product: product, grid_classes: grid_classes, show_add_to_cart: section.settings.show_quick_buy -%}
+                  {%- endif -%}
+                {%- elsif section.settings.layout == 'horizontal' -%}
+                  {%- if use_placeholder -%}
+                    {%- include 'product-item-placeholder', product: product, horizontal: true, grid_classes: '1/2--tablet 1/3--lap-and-up', show_add_to_cart: false -%}
+                  {%- else -%}
+                    {%- include 'product-item', product: product, horizontal: true, grid_classes: '1/2--tablet 1/3--lap-and-up', show_add_to_cart: false -%}
+                  {%- endif -%}
+                {%- else -%}
+                  {%- assign mod = forloop.index0 | modulo: 3 -%}
+
+                  {%- if mod == 0 -%}
+                    <div class="product-list__column product-list__column--highlight">
+                  {%- elsif mod == 1 -%}
+                    <div class="product-list__column {% if forloop.last %}product-list__column--shrink{% endif %}">
+                  {%- endif -%}
+
+                  {%- if mod == 0 -%}
+                    {%- if use_placeholder -%}
+                      {%- include 'product-item-placeholder', product: product, show_add_to_cart: false -%}
+                    {%- else -%}
+                      {%- include 'product-item', product: product, show_add_to_cart: false -%}
+                    {%- endif -%}
+                  {%- else -%}
+                    {%- if use_placeholder -%}
+                      {%- include 'product-item-placeholder', product: product, horizontal: true, show_add_to_cart: false -%}
+                    {%- else -%}
+                      {%- include 'product-item', product: product, horizontal: true, show_add_to_cart: false -%}
+                    {%- endif -%}
+                  {%- endif -%}
+
+                  {%- if mod == 0 or mod == 2 or forloop.last -%}
+                    </div>
+                  {%- endif -%}
+                {%- endif -%}
+              {%- endif -%}
+            {% endif %} 
+          {% endif %}
+          {%- endfor -%}
+        </div>
+      {%- endcapture -%}
+
+      {%- if section.settings.layout == 'vertical' and section.settings.stack_products == false -%}
+        <div class="scroller">
+          <div class="scroller__inner">
+            {{ product_list }}
+          </div>
+        </div>
+      {%- else -%}
+        {{ product_list }}
+      {%- endif -%}
+    </div>
+
+    {%- comment -%}
+    --------------------------------------------------------------------------------------
+    QUICK VIEW CONTAINER
+    --------------------------------------------------------------------------------------
+    {%- endcomment -%}
+
+    <div id="modal-quick-view-{{ section.id }}" class="modal quick-view-product-modal" aria-hidden="true">
+      <div class="modal__dialog modal__dialog--stretch" role="dialog">
+        <button class="modal__close link" data-action="close-modal" title="{{ 'general.accessibility.close' | t | escape }}">
+          {%- render 'icon', icon: 'close' -%}
+        </button>
+
+        <div class="modal__loader">
+          {%- render 'icon', icon: 'search-loader' -%}
+        </div>
+
+        <div class="modal__inner"></div>
+      </div>
+    </div>
+    </div>
+    {%- if section.settings.link_title != blank and section.settings.button_position == 'bottom' -%}
+     <div class="btn-center">
+          <a href="{{ section.settings.link_url | default: collection.url | default: '#' }}" class="featured-collection__cta button button--floating empty-colletionview">{{ section.settings.link_title | escape }}</a>
+    </div>
+       {%- endif -%}
+  </section>
+  {%- endif -%}
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Amala Recommends",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Recommends"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "subHeading",
+      "default": "Amala Earth"
+    },
+	{
+      "type": "checkbox",
+      "id": "logged_in",
+      "label": "Hide this section if user is logged-in",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "products_count",
+      "label": "Products to show",
+      "min": 2,
+      "max": 100,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "options": [
+        {
+          "value": "vertical",
+          "label": "Vertical"
+        },
+        {
+          "value": "horizontal",
+          "label": "Horizontal"
+        },
+        {
+          "value": "collage",
+          "label": "Collage"
+        }
+      ],
+      "default": "vertical"
+    },
+    {
+      "type": "checkbox",
+      "id": "stack_products",
+      "label": "Stack products",
+      "info": "Only applicable if layout is set to vertical",
+      "default": false
+    },
+	{
+      "type": "checkbox",
+      "id": "show_sold_out",
+      "label": "Show Sold out products",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_quick_buy",
+      "label": "Show quick buy",
+      "default": false,
+      "info": "Only shows if layout is set to vertical"
+    },
+    {
+      "type": "text",
+      "id": "link_title",
+      "label": "Link title",
+      "default": "View all"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL",
+      "info": "If empty, the collection URL is used."
+    },
+	{
+      "type": "select",
+      "id": "button_position",
+      "label": "Button Position",
+      "options": [
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        }
+      ],
+      "default": "top"
+    },
+    {
+      "type": "text",
+      "id": "old_section_id",
+      "label": "Old Section ID for App"
+    }
+  ],
+  "blocks": [
+	{
+		"type": "Product",
+        "name": "product",
+		"settings": [
+          {
+            "id": "product",
+            "type": "product",
+            "label": "Product"
+          }
+         ]
+	}
+  ],
+  "presets": [
+    {
+      "category": "Products",
+      "name": "Featured Products",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

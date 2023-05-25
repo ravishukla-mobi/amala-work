@@ -1,0 +1,50 @@
+{% if settings.enable_tags %}
+	{%- if settings.tags_allowed_on_frontend != blank -%}
+	  {% assign allowed_tags_count  = settings.tags_allowed_count| plus: 0 %} 
+          <div class="product-tags">
+            {%- assign count = 0 -%}
+            {% for tag in product.tags %}
+            	{% unless tag contains '__label:' or tag contains 'price:' or tag contains 'brand:' or tag contains 'bundle' or tag contains 'combo' %}
+                  {% assign tag_label =  tag | downcase | split: '__tag:' | last %}
+                  {% assign show_tag = '' %}
+                  {% if tag contains ':' %}
+                    {% assign show_tag = tag | split: ':' | last %}
+                  {% elsif tag contains '__' %}
+                    {% assign show_tag = tag | split: ':' | last %}
+                  {% elsif tag contains '_' %}
+                    {% assign show_tag = tag | split: '_' | last %}
+                  {% else %}
+                    {% assign show_tag = tag  %}
+                  {% endif %}
+
+                  {% assign excludedtags = '_Duplicate_SKU,leftnav:' | split: ','%}
+                  {% for excluded in excludedtags %}
+                      {% if tag contains excluded %}
+                          {% assign show_tag = '' %}
+                          {% break %}
+                      {% endif %}
+                  {% endfor %}
+
+                  {%- if show_tag == '' -%}
+                  {% else %}
+            		  {% if count < allowed_tags_count %}
+            {% comment %} Edited By ST Team {% endcomment %}
+                          <span class="tag_list"><a href="/collections/all?f_Tags={{ tag | downcase }}">{{ show_tag | capitalize }}</a></span>
+                          {% assign count = count | plus:1 %}
+                      {% elsif count >= allowed_tags_count %}
+                          {% assign show_btn_count = allowed_tags_count | plus: 1 %}
+                          <span class="tag_list_hidden"><a href="/collections/all/{{ tag | handleize }}">{{ show_tag | capitalize }}</a></span>
+                          {% assign count = count | plus:1 %}
+            		  {% endif %}
+            
+            		  {% if forloop.last == true %}
+				            {% if count > allowed_tags_count %}
+            					<span class="tag_show_more"> Show More </span>
+            				{% endif %}
+            		  {% endif %}
+                  {%- endif -%}      
+            	{% endunless %}
+              {% endfor %}
+          </div>
+	{% endif %}
+{% endif %}

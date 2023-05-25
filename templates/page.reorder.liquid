@@ -1,0 +1,60 @@
+<div class="container container--narrow">
+  <header class="page__header page__header--centered">
+    <h1 class="page__title heading h1">{{ page.title }}</h1>
+  </header>
+
+  <div class="page__content rte">
+    {{ page.content }}
+  </div>
+  <div class="reoder-content">
+  	<div class="card">
+          <div class="table-wrapper">
+                <table class="table table--loose">
+                  <thead>
+                    <tr>
+                      <th> </th>
+                      <th>Product</th>
+                      <th>Status</th>
+                      <th class="table__cell--right">Price</th>
+                      
+                    </tr>
+                  </thead>
+
+                  <tbody><tr>
+                        <td><img src="//cdn.shopify.com/s/files/1/0523/3252/7770/products/9QWw5NQyYc_200x.jpg" class="reorder-p-img"/></td>
+                        <td>Plant Based White Kashmir Valley Soap</td>
+                        <td>In Stock</td>
+					
+                        
+                        <td class="table__cell--right"><span class="rupee-symbol">₹</span>455</td>
+                    	
+                      </tr><tr class="disabled">
+                        <td><img src="//cdn.shopify.com/s/files/1/0523/3252/7770/products/9QWw5NQyYc_200x.jpg" class="reorder-p-img"/></td>
+                        <td>Plant Based White Kashmir Valley Soap</td>
+                        <td>Out of Stock</td>
+                        
+                        <td class="table__cell--right"><span class="rupee-symbol">₹</span>100</td>
+                    
+                      </tr></tbody>
+                </table>
+              </div>
+    
+    </div>
+    <div class="text-right checkout-wrap"><a class="button button--primary" href="">Checkout</a></div>
+  </div>
+
+
+{% section 'static-recently-viewed-products' %}
+</div>
+<style>
+  .checkout-wrap{margin:10px 0;text-align:right;}
+  .reorder-p-img{
+  	max-width:70px;
+  }
+  .reoder-content .disabled > *{
+  	background:#f9f9f9;
+    opacity:0.5;
+    pointer-events:none;
+  }
+  .reoder-content table{min-width:650px;}
+</style>

@@ -1,0 +1,834 @@
+<article data-section-id="{{ section.id }}" data-section-type="blog-post">
+  <header class="page__header page__header--stack">
+    <h1 class="page__title heading h1">{{ article.title }}</h1>
+
+    {%- capture page_meta -%}
+      {%- if section.settings.show_category and article.tags.size > 0 -%}
+        <span class="page__meta-item page__meta-item--category"><a href="/blogs/{{ blog.handle }}/tagged/{{ article.tags.first | handle }}" class="link">{{ article.tags.first }}</a></span>
+      {%- endif -%}
+
+      {%- if section.settings.show_author -%}
+        <span class="page__meta-item page__meta-item--author">
+          {% if article.metafields.articles.author != blank %}
+          	{{ 'blog.article.written_by' | t: author: article.metafields.articles.author }}
+          {% else %}
+          	{{ 'blog.article.written_by' | t: author: article.author }}
+          {% endif %}
+        </span>
+      {%- endif -%}
+
+      {%- if section.settings.show_date -%}
+        <time class="page__meta-item page__meta-item--date">{{ article.published_at | date: format: 'short_month_day_year' }}</time>
+      {%- endif -%}
+    {%- endcapture -%}
+
+    {%- if page_meta != blank -%}
+      <div class="page__meta">
+        {{ page_meta }}
+      </div>
+    {%- endif -%}
+  </header>
+
+<!-- <section class="bg-img-first">
+  <div>
+   <section class="section section--isolated section--tight section--text-centered" data-section-id="static-newsletter" data-section-type="newsletter">
+     <div class="rte blog-email-heading">
+            <p>Register to get bonus content <span> right in your inbox!</span></p>
+         </div>
+     <div class="container container--giga-narrow">
+         <h2 class="heading h3"></h2>
+         
+         <div class="newsletter">
+            <form method="post" action="/contact#newsletter-static-newsletter" id="newsletter-static-newsletter" accept-charset="UTF-8" class="form newsletter__form">
+               <input type="hidden" name="form_type" value="customer"><input type="hidden" name="utf8" value="✓"><input type="hidden" name="contact[tags]" value="newsletter">
+               <div class="form__input-row">
+                  <div class="form__input-wrapper form__input-wrapper--labelled">
+                     <input type="email" id="newsletter[contact][email]" name="contact[email]" class="form__field form__field--text form__field--borderless" required="">
+                     <label for="newsletter[contact][email]" class="form__floating-label">Your email</label>
+                  </div>
+                  <button type="submit" class="form__submit button button--primary custom_loading">
+                     Subscribe
+                     <div class="custom-loader-wrap">
+                        <div class="custom-loader"></div>
+                     </div>
+                  </button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </section>   
+  </div>
+</section> -->
+
+
+<!--   <style>
+   .bg-img-first {
+     height:350px;
+     background-image: url(https://cdn.shopify.com/s/files/1/0523/3252/7770/files/subscription-1.jpg?v=1677585363);     
+     background-repeat:no-repeat;
+     background-size:100%;    
+   }
+   
+   .blog-email-heading{
+     color: #fff;
+    font-size: 40px;
+    font-family: perpetua;
+   }
+   .custom_loading{background: #526c37;}
+   .container--giga-narrow {
+    max-width: 720px;
+}
+   .form__field { border-radius:0px !important;}
+   @media (max-width:767px){
+     .bg-img-first {
+     height:200px;
+     background-image: url(https://cdn.shopify.com/s/files/1/0523/3252/7770/files/subscription-11.png?v=1677577707);     
+     background-repeat:no-repeat;
+     background-size:100%;    
+   }
+     p span{display:block;}
+     .blog-email-heading{
+     color: #fff;
+    font-size: 20px;
+    font-family: perpetua;
+    text-align: left;
+    padding-left:20px;
+    line-height: 25px;
+    padding-top: 40px;
+
+   }
+     .form__floating-label{line-height: 30px;}
+     #newsletter-static-newsletter .form__input-wrapper, .blogs_newsletter .form__input-wrapper {
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid #e2e2e2;
+    border-right: 0;
+    border-radius: 30px 0 0 30px;
+    width: 150px;
+}
+     #newsletter-static-newsletter button.form__submit, .blogs_newsletter button.form__submit {
+    padding: 0 9px;
+    font-size: 10px;
+    height: 32px;
+    line-height: 15px;
+    x: ;
+    font-weight: 400;
+    margin: 0;
+    border-radius: 0 30px 30px 0;
+}
+     .form__field {
+    display: block;
+    border-radius:none !important;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    width: 100%;
+    line-height: normal;
+    height: 30px;
+    color: var(--text-color);
+    background: var(--input-background);
+    -webkit-appearance: none;
+    resize: none;
+    font-size: 1rem;
+    font-size: max(1rem,16px);
+    box-shadow: 0 1px rgba(var(--border-color-rgb),.25) inset;
+    transition: border-color .2s ease-in-out,box-shadow .2s ease-in-out,color .2s ease-in-out;
+}
+.section--isolated.section--tight {
+    padding: 0px 0;
+}
+     .form__field--borderless{border-radius:none;}
+     #newsletter-static-newsletter {
+    padding-bottom: 30px;
+}
+   }
+ </style> -->
+
+  
+  {%- if article.image -%}
+    <div class="article__image-wrapper">
+      {%- capture supported_sizes -%}{%- render 'image-size', sizes: '300,400,500,600,700,800,900,1000,1100,1200', image: article.image -%}{%- endcapture -%}
+      {%- assign image_url = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+      <div class="aspect-ratio" style="padding-bottom: {{ 100.0 | divided_by: article.image.aspect_ratio }}%">
+        <img
+          class="lazyload image--fade-in"
+          data-src="{{ image_url }}"
+          data-sizes="auto"
+          data-widths="[{{ supported_sizes }}]"
+          alt="{{ article.image.alt | escape }}"
+        >
+
+        <noscript>
+          <img src="{{ article.image | img_url: '800x' }}" alt="{{ article.image.alt | escape }}">
+        </noscript>
+      </div>
+    </div>
+  {%- endif -%}
+
+  {%- if section.settings.show_share_buttons -%}
+    {%- capture share_buttons -%}
+      {%- assign share_url = shop.url | append: article.url -%}
+      {%- assign twitter_text = article.title | url_param_escape -%}
+      {%- assign pinterest_description = article.excerpt_or_content | strip_html | truncatewords: 15 | url_param_escape -%}
+      {%- assign pinterest_image = article.image | img_url: 'large' | prepend: 'https:' -%}
+
+      <ul class="social-media__item-list list--unstyled" role="list">
+        <li class="social-media__item social-media__item--facebook">
+          <a href="https://www.facebook.com/sharer.php?u={{ share_url }}" target="_blank" rel="noopener" aria-label="{{ 'general.social.facebook_share' | t }}">{%- render 'icon', icon: 'facebook' -%}</a>
+        </li>
+
+        <li class="social-media__item social-media__item--pinterest">
+          <a href="https://pinterest.com/pin/create/button/?url={{ share_url }}{% if pinterest_image != blank %}&media={{ pinterest_image }}{% endif %}&description={{ pinterest_description }}" target="_blank" rel="noopener" aria-label="{{ 'general.social.pinterest_pin' | t }}">{%- render 'icon', icon: 'pinterest' -%}</a>
+        </li>
+
+        <li class="social-media__item social-media__item--twitter">
+          <a href="https://twitter.com/share?{% if twitter_text != blank %}text={{twitter_text}}&{% endif %}url={{ share_url }}" target="_blank" rel="noopener" aria-label="{{ 'general.social.twitter_tweet' | t }}">{%- render 'icon', icon: 'twitter' -%}</a>
+        </li>
+
+        <li class="social-media__item">
+          <a href="mailto:?&subject={{ article.title | escape }}&body={{ share_url }}" aria-label="{{ 'general.social.email_share' | t }}">{% render 'icon', icon: 'email' %}</a>
+        </li>
+        
+        <li class="social-media__item whatsapp">
+          <a href="whatsapp://send?text={{ share_url }}"  rel="noopener" data-msg="{{ share_url }}" class="whatsapp-share-main" aria-label="Share on Whatsapp">{%- render 'icon', icon: 'whatsapp' -%}</a>
+      </li>
+      </ul>
+    {%- endcapture -%}
+  {%- endif -%}
+
+  {%- if section.settings.show_share_buttons or article.comments_enabled? -%}
+    <div class="card hidden-phone">
+      <div class="card__section card__section--tight">
+        <div class="article__toolbar">
+          {%- if section.settings.show_share_buttons -%}
+            <div class="article__toolbar-item">
+              <span class="article__share-label">{{ 'blog.article.share' | t }}</span>
+              {{- share_buttons -}}
+            </div>
+          {%- endif -%}
+
+          {%- if article.comments_enabled? -%}
+            <div class="article__toolbar-item">
+              {% render 'icon', icon: 'bi-comment' %}
+              <a href="#comments" class="article__comments-count link">
+                {{- 'blog.article.comments_count' | t: count: article.comments_count -}}
+              </a>
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+
+  <div class="article__inner">
+    <div class="article__content rte">
+ <div class="article-template__content page-width page-width--narrow rte" itemprop="articleBody" {{ block.shopify_attributes }}>
+        {% assign my_description = article.content | split: '=== split content ==='  %}  
+        {% assign  my_description_size = my_description.size | minus: 2 %}
+
+        {% for desc in my_description %}
+        {% assign  currentDesc = desc | slice: 0,14 %}
+          {% if currentDesc == "(==Products==)" %}
+            {% assign pids = desc | remove:"(==Products==)" %} 
+
+  <div class="fourzerofour_bestselling">
+  <div id="shopify-section-featured-collection" class="shopify-section">
+    <section
+      class="section noproductcollection bestsellingproducts "
+      data-section-id="featured-collection"
+      data-section-type="featured-collection"
+      data-section-settings="
+        {
+        &quot;stackable&quot;: false,
+        &quot;layout&quot;: &quot;vertical&quot;
+        }
+      "
+    >
+     
+      <div class="container ">
+        <div class="scroller">
+          <div class="scroller__inner">
+            <div class="product-list product-list--vertical product-list--scrollable flickity-enabled" tabindex="0">
+          {% paginate collections.blog-post-collectiom.products by 1000 %}
+              {% for product in collections.blog-post-collectiom.products %}
+                {% if pids contains product.id %}
+                  {%- render 'article-products',
+                    product: product,
+                    grid_classes: grid_classes,
+                    show_add_to_cart: true
+                  -%}
+                {% endif %}
+              {% endfor %}
+             {% endpaginate %}
+              <button
+                class="flickity-button flickity-prev-next-button previous"
+                type="button"
+                disabled=""
+                aria-label="Previous"
+              >
+                <svg class="flickity-button-icon" viewBox="0 0 100 100">
+                  <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path>
+                </svg>
+              </button>
+              <button class="flickity-button flickity-prev-next-button next" type="button" aria-label="Next">
+                <svg class="flickity-button-icon" viewBox="0 0 100 100">
+                  <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow" transform="translate(100, 100) rotate(180) "></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="modal-quick-view-featured-collection" class="modal quick-view-product-modal" aria-hidden="true">
+        <div class="modal__dialog modal__dialog--stretch" role="dialog">
+          <button class="modal__close link" data-action="close-modal" title="Close">
+            <svg focusable="false" class="icon icon--close" viewBox="0 0 19 19" role="presentation">
+              <path d="M9.1923882 8.39339828l7.7781745-7.7781746 1.4142136 1.41421357-7.7781746 7.77817459 7.7781746 7.77817456L16.9705627 19l-7.7781745-7.7781746L1.41421356 19 0 17.5857864l7.7781746-7.77817456L0 2.02943725 1.41421356.61522369 9.1923882 8.39339828z" fill="currentColor" fill-rule="evenodd"></path>
+            </svg>
+          </button>
+          <div class="modal__loader">
+            <svg focusable="false" class="icon icon--search-loader" viewBox="0 0 64 64" role="presentation">
+              <path opacity=".4" d="M23.8589104 1.05290547C40.92335108-3.43614731 58.45816642 6.79494359 62.94709453 23.8589104c4.48905278 17.06444068-5.74156424 34.59913135-22.80600493 39.08818413S5.54195825 57.2055303 1.05290547 40.1410896C-3.43602265 23.0771228 6.7944697 5.54195825 23.8589104 1.05290547zM38.6146353 57.1445143c13.8647142-3.64731754 22.17719655-17.89443541 18.529879-31.75914961-3.64743965-13.86517841-17.8944354-22.17719655-31.7591496-18.529879S3.20804604 24.7494569 6.8554857 38.6146353c3.64731753 13.8647142 17.8944354 22.17719655 31.7591496 18.529879z"></path>
+              <path d="M1.05290547 40.1410896l5.80258022-1.5264543c3.64731754 13.8647142 17.89443541 22.17719655 31.75914961 18.529879l1.5264543 5.80258023C23.07664892 67.43614731 5.54195825 57.2055303 1.05290547 40.1410896z"></path>
+            </svg>
+          </div>
+          <div class="modal__inner"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+            
+          {% else %}
+              {{ desc }} 
+          {% endif %}
+        
+      {% endfor %}
+          </div>
+
+    </div>
+
+    {%- if section.settings.show_share_buttons or section.settings.show_tags and article.tags.size > 0 -%}
+      <div class="article__aside">
+        {%- if section.settings.show_tags and article.tags.size > 0 -%}
+          <div class="article__aside-item">
+            <span class="article__tag-label">{{ 'blog.article.tags' | t }}&nbsp;</span>
+
+            {%- for tag in article.tags -%}
+              <a
+                href="/blogs/{{ blog.handle }}/tagged/{{ tag | handle }}"
+                class="link link--accented {% if settings.underline_links %}link--underline{% endif %}"
+              >
+                {{- tag | capitalize -}}
+              </a>
+              {%- unless forloop.last -%},&nbsp;{%- endunless -%}
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+
+        {%- if section.settings.show_share_buttons -%}
+          <div class="article__aside-item">
+            <span class="article__share-label">{{ 'blog.article.share' | t }}</span>
+            {{ share_buttons }}
+          </div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- if blog.previous_article or blog.next_article -%}
+      {%- comment -%}
+        Implementation may look a bit strange here as we're using the "next_article" for the previous button and vice-versa. But we actually found that from
+        a user point of view, it feels "more logical", if you are on the most recent article, to have a button "next article" on the right that goes to the
+        previous article.
+      {%- endcomment -%}
+
+      <div class="article__navigation {% if blog.next_article == nil %}article__navigation--align-right{% endif %}">
+        {%- if blog.next_article -%}
+          <a
+            href="{{ blog.next_article.url }}"
+            class="article__navigation-item article__navigation-item--prev text--strong link"
+            rel="prev"
+          >
+            {%- render 'icon', icon: 'arrow-left' -%}
+            {{- 'blog.article.previous_article' | t -}}
+          </a>
+        {%- endif -%}
+
+        {%- if blog.previous_article -%}
+          <a
+            href="{{ blog.previous_article.url }}"
+            class="article__navigation-item article__navigation-item--next text--strong link"
+            rel="next"
+          >
+            {{- 'blog.article.next_article' | t -}}
+            {%- render 'icon', icon: 'arrow-right' -%}
+          </a>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- if article.comments_enabled? -%}
+      <span id="comments" class="anchor"></span>
+
+      {%- if article.comments_count > 0 -%}
+        <div class="article__comment-list">
+          <p class="article__comment-list-heading heading h2">
+            {{ 'blog.article.comments_count' | t: count: article.comments_count }}
+          </p>
+
+          {%- paginate article.comments by 50 -%}
+            {%- for comment in article.comments -%}
+              <div class="article-comment">
+                {%- if section.settings.show_gravatar -%}
+                  <img
+                    class="article-comment__gravatar"
+                    src="//www.gravatar.com/avatar/{{ comment.email | md5 }}?s=100"
+                    alt="{{ comment.author }}"
+                  >
+                {%- endif -%}
+
+                <div class="article-comment__inner">
+                  <p class="article-comment__author text--strong">{{ comment.author }}</p>
+                  <time class="article-comment__date">
+                    {{- comment.created_at | date: format: 'month_day_year_time' -}}
+                  </time>
+
+                  <div class="article-comment__content rte">
+                    {{- comment.content -}}
+                  </div>
+                </div>
+              </div>
+            {%- endfor -%}
+
+            {%- render 'pagination', paginate: paginate -%}
+          {%- endpaginate -%}
+        </div>
+      {%- endif -%}
+
+      {%- form 'new_comment', article, class: 'article__comment-form form' -%}
+        <p class="article__comment-form-title heading h2">{{ 'blog.comments.leave_comment' | t }}</p>
+
+        {%- if blog.moderated? -%}
+          <p class="article__moderated-note">{{ 'blog.comments.approval_notice' | t }}</p>
+        {%- endif -%}
+
+        <div class="article__comment-form-wrapper">
+          {%- if form.posted_successfully? -%}
+            <p class="alert alert--success">
+              {%- if blog.moderated? -%}
+                {{- 'blog.comments.success_moderated' | t -}}
+              {%- else -%}
+                {{- 'blog.comments.success' | t -}}
+              {%- endif -%}
+            </p>
+          {%- else -%}
+            {%- if form.errors -%}
+              <div class="alert alert--error">
+                <ul class="alert__error-list" role="list">
+                  {%- for field in form.errors -%}
+                    {%- if field == 'form' -%}
+                      <li class="alert__error-item">{{ form.errors.messages[field] }}</li>
+                    {%- else -%}
+                      <li class="alert__error-item">
+                        {{ form.errors.translated_fields[field] | capitalize }}
+                        {{ form.errors.messages[field] }}
+                      </li>
+                    {%- endif -%}
+                  {%- endfor -%}
+                </ul>
+              </div>
+            {%- endif -%}
+          {%- endif -%}
+
+          <div class="form__input-row">
+            <div class="form__input-wrapper form__input-wrapper--labelled">
+              {%- assign form_author = form.author | default: customer.name -%}
+
+              <input
+                id="comment-form-name"
+                type="text"
+                class="form__field form__field--text {% if form_author != blank %}is-filled{% endif %}"
+                name="comment[author]"
+                value="{{ form_author | escape }}"
+                required="required"
+              >
+              <label for="comment-form-name" class="form__floating-label">{{ 'blog.comments.name' | t }}</label>
+            </div>
+
+            <div class="form__input-wrapper form__input-wrapper--labelled">
+              {%- assign form_email = form.email | default: customer.email -%}
+
+              <input
+                id="comment-form-email"
+                type="email"
+                class="form__field form__field--text {% if form_email != blank %}is-filled{% endif %}"
+                name="comment[email]"
+                value="{{ form_email | escape }}"
+                required="required"
+              >
+              <label for="comment-form-email" class="form__floating-label">{{ 'blog.comments.email' | t }}</label>
+            </div>
+          </div>
+
+          <div class="form__input-wrapper form__input-wrapper--labelled">
+            <textarea
+              id="comment-form-body"
+              name="comment[body]"
+              rows="5"
+              class="form__field form__field--textarea {% if form.body != blank %}is-filled{% endif %}"
+              required="required"
+            >{{ form.body }}</textarea>
+            <label for="comment-form-body" class="form__floating-label">{{ 'blog.comments.content' | t }}</label>
+          </div>
+
+          <button type="submit" class="form__submit button button--primary button--min-width">
+            {{ 'blog.comments.submit' | t }}
+          </button>
+        </div>
+      {%- endform -%}
+    {%- endif -%}
+  </div>
+</article>
+
+<section class="bg-img desktop-img mobile-img">
+  <div>
+   <section class="section section--isolated section--tight section--text-centered" data-section-id="static-newsletter" data-section-type="newsletter">
+     <div class="rte blog-email-heading">
+            <p> If you liked this blog,<span>
+              you'll love the bonus content! </span></p>
+         </div>
+     <div class="container container--giga-narrow">
+         <h2 class="heading h3"></h2>
+         
+         <div class="newsletter">
+            <form method="post" action="/contact#newsletter-static-newsletter" id="newsletter-static-newsletter" accept-charset="UTF-8" class="form newsletter__form">
+               <input type="hidden" name="form_type" value="customer"><input type="hidden" name="utf8" value="✓"><input type="hidden" name="contact[tags]" value="newsletter">
+               <div class="form__input-row">
+                  <div class="form__input-wrapper form__input-wrapper--labelled">
+                     <input type="email" id="newsletter[contact][email]" name="contact[email]" class="form__field form__field--text form__field--borderless" required="">
+                     <label for="newsletter[contact][email]" class="form__floating-label">Your email</label>
+                  </div>
+                  <button type="submit" class="form__submit button button--primary custom_loadings">
+                     SUBSCRIBE NOW
+                     <div class="custom-loader-wrap">
+                        <div class="custom-loader"></div>
+                     </div>
+                  </button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </section>   
+  </div>
+</section>
+ <style>
+   .bg-img {
+     height:350px;
+     background-image: url(https://cdn.shopify.com/s/files/1/0523/3252/7770/files/subscription.jpg?v=1677483411);     
+     background-repeat:no-repeat;
+     background-size:100%;    
+   }
+   
+   .blog-email-heading{
+     color: #fff;
+    font-size: 40px;
+    font-family: perpetua;
+   }
+   .custom_loadings{background: #526c37;}
+   .custom_loading{background: #b89c7d;}
+   .container--giga-narrow {
+    max-width: 720px;
+}
+   .form__field { border-radius:0px !important;}
+   .rte ul li::before{left:0px;}
+   ul li span{margin-left:10px;}
+   @media (max-width:767px){
+     .bg-img {
+     height:200px;
+     background-image: url(https://cdn.shopify.com/s/files/1/0523/3252/7770/files/subscription-10.jpg?v=1677585099);     
+     background-repeat:no-repeat;
+     background-size:100%;    
+   }
+     
+     .blog-email-heading{
+     color: #fff;
+    font-size: 20px;
+    font-family: perpetua;
+    text-align: left;
+    padding-left:20px;
+    line-height: 25px;
+    padding-top: 40px;
+
+   }
+     .form__floating-label{line-height: 30px;}
+     #newsletter-static-newsletter .form__input-wrapper, .blogs_newsletter .form__input-wrapper {
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid #e2e2e2;
+    border-right: 0;
+    border-radius: 30px 0 0 30px;
+    width: 150px;
+}
+     #newsletter-static-newsletter button.form__submit, .blogs_newsletter button.form__submit {
+    padding: 0 9px;
+    font-size: 10px;
+    height: 32px;
+    line-height: 15px;
+    x: ;
+    font-weight: 400;
+    margin: 0;
+    border-radius: 0 30px 30px 0;
+}
+     .form__field {
+    display: block;
+    border-radius:none !important;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    width: 100%;
+    line-height: normal;
+    height: 30px;
+    color: var(--text-color);
+    background: var(--input-background);
+    -webkit-appearance: none;
+    resize: none;
+    font-size: 1rem;
+    font-size: max(1rem,16px);
+    box-shadow: 0 1px rgba(var(--border-color-rgb),.25) inset;
+    transition: border-color .2s ease-in-out,box-shadow .2s ease-in-out,color .2s ease-in-out;
+}
+.section--isolated.section--tight {
+    padding: 0px 0;
+}
+     .form__field--borderless{border-radius:none;}
+     #newsletter-static-newsletter {
+    padding-bottom: 30px;
+}
+   }
+ </style> 
+
+{% if article.metafields.custom.blogpostproducts != blank %}
+  {% assign blogProducts = article.metafields.custom.blogpostproducts | replace: 'gid://shopify/Product/', '' %}
+{% endif %}
+
+<div class="fourzerofour_bestselling">
+  <div id="shopify-section-featured-collection" class="shopify-section">
+    <section
+      class="section noproductcollection bestsellingproducts "
+      data-section-id="featured-collection"
+      data-section-type="featured-collection"
+      data-section-settings="
+        {
+        &quot;stackable&quot;: false,
+        &quot;layout&quot;: &quot;vertical&quot;
+        }
+      "
+    >
+      <div class="container">
+        <header class="section__header">
+          <div class="section__header-stack">
+            <h4 class="section__title heading ">Explore more products</h4>
+          </div>
+        </header>
+      </div>
+      <div class="container ">
+        <div class="scroller">
+          <div class="scroller__inner">
+            <div class="product-list product-list--vertical product-list--scrollable flickity-enabled" tabindex="0">
+              {% for product in collections['blog-post-collectiom'].products %}
+                {% if blogProducts contains product.id %}
+                  {%- render 'landing-page-product-item',
+                    product: product,
+                    grid_classes: grid_classes,
+                    show_add_to_cart: true
+                  -%}
+                {% endif %}
+              {% endfor %}
+              <button
+                class="flickity-button flickity-prev-next-button previous"
+                type="button"
+                disabled=""
+                aria-label="Previous"
+              >
+                <svg class="flickity-button-icon" viewBox="0 0 100 100">
+                  <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path>
+                </svg>
+              </button>
+              <button class="flickity-button flickity-prev-next-button next" type="button" aria-label="Next">
+                <svg class="flickity-button-icon" viewBox="0 0 100 100">
+                  <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow" transform="translate(100, 100) rotate(180) "></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="modal-quick-view-featured-collection" class="modal quick-view-product-modal" aria-hidden="true">
+        <div class="modal__dialog modal__dialog--stretch" role="dialog">
+          <button class="modal__close link" data-action="close-modal" title="Close">
+            <svg focusable="false" class="icon icon--close" viewBox="0 0 19 19" role="presentation">
+              <path d="M9.1923882 8.39339828l7.7781745-7.7781746 1.4142136 1.41421357-7.7781746 7.77817459 7.7781746 7.77817456L16.9705627 19l-7.7781745-7.7781746L1.41421356 19 0 17.5857864l7.7781746-7.77817456L0 2.02943725 1.41421356.61522369 9.1923882 8.39339828z" fill="currentColor" fill-rule="evenodd"></path>
+            </svg>
+          </button>
+          <div class="modal__loader">
+            <svg focusable="false" class="icon icon--search-loader" viewBox="0 0 64 64" role="presentation">
+              <path opacity=".4" d="M23.8589104 1.05290547C40.92335108-3.43614731 58.45816642 6.79494359 62.94709453 23.8589104c4.48905278 17.06444068-5.74156424 34.59913135-22.80600493 39.08818413S5.54195825 57.2055303 1.05290547 40.1410896C-3.43602265 23.0771228 6.7944697 5.54195825 23.8589104 1.05290547zM38.6146353 57.1445143c13.8647142-3.64731754 22.17719655-17.89443541 18.529879-31.75914961-3.64743965-13.86517841-17.8944354-22.17719655-31.7591496-18.529879S3.20804604 24.7494569 6.8554857 38.6146353c3.64731753 13.8647142 17.8944354 22.17719655 31.7591496 18.529879z"></path>
+              <path d="M1.05290547 40.1410896l5.80258022-1.5264543c3.64731754 13.8647142 17.89443541 22.17719655 31.75914961 18.529879l1.5264543 5.80258023C23.07664892 67.43614731 5.54195825 57.2055303 1.05290547 40.1410896z"></path>
+            </svg>
+          </div>
+          <div class="modal__inner"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<script type="text/javascript">
+  // Due to the presence of the possible sidebar, we have to move the header outside the section
+  document.querySelector('.blog-container').insertAdjacentElement('beforebegin', document.querySelector('#shopify-section-' + {{ section.id | json }} + ' .page__header'));
+  	$(document).ready(function() {
+    	var weatitle = '{{ article.title }}';
+        var weaauthor = '{{ article.author }}';
+        var weapublished = '{{ article.published_at | date: format: 'short_month_day_year' }}';
+        var weaimage = '{{ article.image | img_url: '800x' }}';
+
+        webengage.track('Read a blog', {
+          	'blog_title': weatitle,
+          	'blog_author': weaauthor,
+          	'blog_published': weapublished,
+          	'blog_image': weaimage
+    	});
+  	});
+</script>
+
+{% schema %}
+{
+  "name": "Blog post page",
+  "class": "shopify-section__article",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_category",
+      "label": "Show category",
+      "info": "The first article's tag will be shown as category.",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_author",
+      "label": "Show author",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_date",
+      "label": "Show date",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_share_buttons",
+      "label": "Show share buttons",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_tags",
+      "label": "Show tags",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_gravatar",
+      "label": "Show comment avatar",
+      "default": true
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+    .product-details{
+    	display:flex;
+      margin: 15px 0 15px -15px;
+    }
+    .product-details .image{
+     	width:350px ;
+      border: 1px solid rgba(0,0,0,.1);
+      margin-right:20px
+    }
+    .product-details .image img{
+    	margin:0 0;
+      width:100%;
+    }
+    .content{display:flex;}
+    .content del{margin:10px;}
+    .product-details .price{
+      color:var(--price-color);
+      margin-bottom:15px;
+    }
+    .product-details .button.cutom-button{
+    	padding:16px 16px
+    }
+      .shopify-section__article{max-width:100% !important}
+
+     @media (max-width:768px){
+      .product-details .image {width:100%;}
+      .product-details{display:block;}
+      .content{display: flex;line-height: 1;margin-top:20px;}
+      .content del{font-size:18px; color:#666;padding-left:10px;padding-top: 5px;margin:0px;}
+    }
+    .rte ul li, .rte ol li {
+      position: relative;
+      list-style:none;
+  }
+  .rte ol li a{text-decoration:underline;color:var(--text-color);}
+   .rte img, .rte .video-wrapper{margin:0;}
+  .rte a:not(.button){text-decoration:underline;color:#b89c7d;}
+</style>
+<script>
+  var testing = true;
+
+  var count = 0;
+  $('.article__content.rte ol > li').each(function(i,v){
+  	count++;
+
+      if($('a',v).length < 1){
+        return true;
+      }
+
+  	var href = $('a',v).attr('href');
+    	// $(this).parent().attr('start',count)
+  	if(href.length > 0){
+  		//check if valid product url
+  		var domain = window.location.protocol + '//' + window.location.host + '/';
+          if(testing === true){
+            domain = 'https://amala.earth/';
+          }
+  		href = href.split(domain)[1].split('/');
+  		if(href.indexOf('products') === -1){
+  			return true;
+  		}
+  		$(v).append('<div class="product-details"></div>');
+  		$.get('/'+href.join('/'),function(response){
+            	var $html = $('<div></div>');
+  			$html = $html.html(response);
+
+  			var img = $('meta[property="og:image"]',$html).attr('content');
+            	var price = $('.dynamic_quantity_actual_price',$html,0).html();
+            	var del = $('.product-form__info-content .price--compare',$html,0).html();
+            	var save = $('.product-form__info-content .product-meta',$html,0).html();
+            	var product = '<div class="image"><img src="'+img+'"/></div>';
+            	if(del === undefined)del='';
+            	if(save === undefined)save='';
+            	product += '<div class="content">';
+            	product += '<div class="price">'+price+'</div>';
+            	product += '<div class="meta">'+del?del:''+save?save:''+'</div>';
+              product += '</div>';
+            	product += '<a href="'+('/'+href.join('/'))+'"><button class="product-form__add-button button button--primary cutom-button">Explore More</button></a>';
+
+  			$('.product-details',v).html(product);
+  		});
+  	}
+  });
+</script>

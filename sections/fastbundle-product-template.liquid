@@ -1,0 +1,348 @@
+{%- capture section_settings -%}
+{
+  "showShippingEstimator": {% if template == 'product.quick-view' or product.available == false %}false{% else %}{{ section.settings.show_shipping_estimator | json }}{% endif %},
+  "showQuantitySelector": {{ section.settings.show_quantity_selector | json }},
+  "showPaymentButton": {% if product.template_suffix == 'pre-order' %}false{% else %}{{ section.settings.show_payment_button | json }}{% endif %},
+  "showInventoryQuantity": {% if product.template_suffix != 'pre-order' %}{{ section.settings.show_inventory_quantity | json }}{% else %}false{% endif %},
+  "lowInventoryThreshold": {{ section.settings.low_inventory_threshold | json }},
+  "galleryTransitionEffect": {{ section.settings.carousel_effect | json }},
+  "enableImageZoom": {% if template == 'product.quick-view' %}false{% else %}{{ section.settings.enable_image_zoom | json }}{% endif %},
+  "zoomEffect": {{ section.settings.zoom_effect | json }},
+  "enableVideoLooping": {{ section.settings.enable_video_looping | json }},
+  "productOptions": {{ product.options | json | escape }},
+  "enableHistoryState": {% if template == 'product.quick-view' %}false{% else %}true{% endif %},
+  "infoOverflowScroll": {% if template == 'product.quick-view' %}false{% else %}true{% endif %},
+  "isQuickView": {% if template == 'product.quick-view' %}true{% else %}false{% endif %},
+  "currentProductId": {{ product.id | json }}
+}
+{%- endcapture -%}
+
+<style>
+  .banner-pdp-newsletter .collection__banner-image{
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .pdp-banner-mob{
+    display: none;
+  }
+  @media screen and (max-width: 768px) {
+    .pdp-banner-desk{
+      display: none;
+    }
+    .pdp-banner-mob{
+      display: block;
+    }
+  }
+  
+</style>
+
+<section data-section-id="{{ section.id }}" data-section-type="product" data-section-settings='{{ section_settings }}'>
+  {%- if template != 'product.quick-view' -%}
+    <div class="container container--flush">
+      <div class="page__sub-header hide-mobile">
+        <nav aria-label="{{ 'general.breadcrumb.title' | t }}" class="breadcrumb">
+          <ol class="breadcrumb__list" role="list">
+            <li class="breadcrumb__item">
+              <a class="breadcrumb__link link" href="{{ routes.root_url }}">{{ 'general.breadcrumb.home' | t }}</a> {%- render 'icon', icon: 'arrow-right' -%}
+            </li>
+
+            <li class="breadcrumb__item">
+              {%- if collection -%}
+                <a class="breadcrumb__link link" href="{{ collection.url }}">{{ collection.title }}</a> {%- render 'icon', icon: 'arrow-right' -%}
+              {%- else -%}
+                <a class="breadcrumb__link link" href="{{ routes.all_products_collection_url }}">{{- 'collection.general.all_products' | t -}}</a> {%- render 'icon', icon: 'arrow-right' -%}
+              {%- endif -%}
+            </li>
+
+            <li class="breadcrumb__item">
+              <span class="breadcrumb__link" aria-current="page">{{ product.title | truncate: 40 }}</span>
+            </li>
+          </ol>
+        </nav>
+
+        {%- if collection.previous_product or collection.next_product -%}
+          <div class="page__navigation hide-mobile">
+            {%- if collection.previous_product -%}
+              <span class="page__navigation-item page__navigation-item--prev">
+                <a href="{{ collection.previous_product.url }}" class="link" rel="prev">{%- render 'icon', icon: 'arrow-left' -%} {{- 'product.general.previous_product' | t -}}</a>
+              </span>
+            {%- endif -%}
+
+            {%- if collection.next_product -%}
+              <span class="page__navigation-item page__navigation-item--next">
+                <a href="{{ collection.next_product.url }}" class="link" rel="next">{{- 'product.general.next_product' | t -}} {%- render 'icon', icon: 'arrow-right' -%}</a>
+              </span>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
+
+      <div class="product-block-list product-block-list--{{ section.settings.image_size }}">
+        <div class="product-block-list__container" >
+          <div class="product-block-list__wrapper">
+            {%- if product.media.size >= 0 -%}
+              <div class="product-block-list__item product-block-list__item--gallery position-relative">
+                 {%- if section.settings.show_share_buttons -%}
+                  {%- capture share_buttons -%}
+                    {%- assign share_url = shop.url | append: product.url -%}
+                    {%- assign twitter_text = product.title | url_param_escape -%}
+                    {%- assign pinterest_description = product.description | strip_html | truncatewords: 15 | url_param_escape -%}
+                    {%- assign pinterest_image = product.featured_media | img_url: '1024x' | prepend: 'https:' -%}
+                    <a href="https://www.facebook.com/sharer.php?u={{ share_url }}" target="_blank" rel="noopener" aria-label="{{ 'general.social.facebook_share' | t }}">{%- render 'icon', icon: 'facebook' -%}</a>
+                    <a href="https://pinterest.com/pin/create/button/?url={{ share_url }}{% if pinterest_image != blank %}&media={{ pinterest_image }}{% endif %}&description={{ pinterest_description }}" target="_blank" rel="noopener" aria-label="{{ 'general.social.pinterest_pin' | t }}">{%- render 'icon', icon: 'pinterest' -%}</a>
+                    <a href="https://twitter.com/share?{% if twitter_text != blank %}text={{twitter_text}}&{% endif %}url={{ share_url }}" target="_blank" rel="noopener" aria-label="{{ 'general.social.twitter_tweet' | t }}">{%- render 'icon', icon: 'twitter' -%}</a>
+                    <a href="mailto:?&subject={{ product.title | escape }}&body={{ share_url }}" aria-label="{{ 'general.social.email_share' | t }}">{% render 'icon', icon: 'email' %}</a>
+                    <a href="whatsapp://send?text={{ share_url }}"  rel="noopener" data-msg="{{ share_url }}" class="whatsapp-share-main" aria-label="Share on Whatsapp">{%- render 'icon', icon: 'whatsapp' -%}</a>
+                  {%- endcapture -%}
+                {%- endif -%}
+                {% comment %}
+           {% if product.options contains 'Size' or product.options contains 'Age' %}
+              {% for image in product.images %}
+                  {% if image.src contains 'sizechart' %} 
+                <div class="similar-view hide-for-desktop">
+                  <div class="m-icon trigger-pop-up btn">
+                      <img src="{{'ruler.png'| asset_img_url}}">
+                  </div>
+                </div>
+                {%endif%}
+                {%endfor%}
+                {%endif%}
+                {% endcomment %}
+                <div class="size-view hide-for-desktop">
+                  <div class="m-icon"><img src="{{'card.png'| asset_img_url}}"></div>
+                </div>
+                {% comment %}
+                <div class="product-gift__block hide-for-desktop">
+                  <ul>
+                    <li class="share-product__row">
+                      <div class="share-button__col">
+                      {%- render 'icon', icon: 'share-icon' -%}
+                      <label>Share</label>
+                      </div>
+                      <div class="share-icon__col">
+                        {%- if section.settings.show_share_buttons -%}
+                        {{ share_buttons }}
+                        {%- endif -%}
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                {% endcomment %}
+                {% render 'product-gallery' %}
+              </div>
+            {%- endif -%}
+
+            <div class="product-block-list__item product-block-list__item--info" data-id="{{ product.id }}">
+              {% render 'product-main-info' %}
+            </div>
+          </div>
+        </div>
+
+        {% if collection.title == "Joyful Home" or collection.title == "Responsible Fashion" %}
+            {% include 'auto-related-products-like' %}
+        {% endif %}
+        {% comment %}
+        <div class="product-tabs__row">
+            <div class="container container--flush">
+              <div class="product-info__tabs">
+
+
+                <!-- Product Product USP tab -->
+
+                {% assign product_usp = 'false' %}
+                {% assign wk_metafields = product.metafields.AE_PROD_DTLS %}
+                {% unless wk_metafields == empty %}
+                   {% for wk_metafield in wk_metafields %} 
+                      {% assign wk_temp_mf = wk_metafield | split : '", "' %}
+                      {% assign key = wk_temp_mf[0] | size | minus: 2 %} 
+                      {% assign value = wk_temp_mf[1] | size | minus:2 %}
+                      {% assign wk_check_mf = wk_temp_mf[1] | slice: 0,value | split : ':' %}
+                      {% assign meta_key = wk_temp_mf[0] | slice: 2,key %}
+                      {% if meta_key != 'Space for Detail1' and meta_key != 'Package preparation days' and meta_key != 'usp' and meta_key != 'Additional Information' and meta_key != 'USP(label:info;label:info)' and  meta_key != 'Short Description(150 char)'  %}
+                          {% assign product_usp = 'true' %}
+                          {% break %}
+                      {% endif %}
+                   {% endfor %}
+                {% endunless %}
+
+                {% if section.settings.show_usp_description and product_usp == 'true' %}
+                  <h2>{{- section.settings.tab2_label -}}</h2>
+                  <div class="product-info__block product-usp__col">
+                    <table class="product-ups__col">
+
+                      {% unless wk_metafields == empty %}
+                        {% for wk_metafield in wk_metafields %}
+                          {% assign wk_temp_mf = wk_metafield | split : '", "' %}
+                          {% assign key = wk_temp_mf[0] | size | minus: 2 %} 
+                          {% assign value = wk_temp_mf[1] | size | minus:2 %}
+                          {% assign wk_check_mf = wk_temp_mf[1] | slice: 0,value | split : ':' %}
+                          {% assign meta_key = wk_temp_mf[0] | slice: 2,key %}
+                          {% if meta_key != 'Space for Detail1' and meta_key != 'usp' and meta_key != 'Additional Information' and meta_key != 'USP(label:info;label:info)' and meta_key != 'Short Description(150 char)'  %}
+                            <tr>
+                              <th>{{ wk_temp_mf[0] | slice: 2,key }}</th>
+                              <td>{{ wk_temp_mf[1] | slice: 0,value }}</td>
+                            </tr>
+                          {% endif %}
+                        {% endfor %}
+                        <tr>
+                          <th>SKU</th>
+                          <td><span class="detail-product-meta__sku-number">{{ product.selected_or_first_available_variant.sku }}</span></td>
+                        </tr>
+                      {% endunless %}
+
+                    </table>
+                  </div>
+                {% elsif product.metafields.AE_PROD_DTLS['usp'] != blank %}
+                    <h2>{{- section.settings.tab2_label -}} </h2>
+                    <div class="product-info__block product-usp__col">
+                    <table class="product-ups__col">
+                      {% assign usps_list = product.metafields.AE_PROD_DTLS['usp'] | split: ';' %}
+                      {% for usp_item in usps_list %}
+                      {% assign usp_title = usp_item | split: ':' %}
+                      <tr>
+                        <th>{{ usp_title[0] }}</th>
+                        <td>{{ usp_title[1] }}</td>
+                      </tr> 
+                      {% endfor %} 
+                    </table>
+                  </div>
+                {% endif %}
+                <!-- Product Sangius fluit tab -->
+
+                <!-- Product discription tab -->
+                 {%- if section.settings.show_expanded_description and product.description != blank  -%}
+                <h2 class="">{{- section.settings.tab1_label -}} </h2>
+                <div class="product-info__block">
+                  {{ product.description | remove: 'data-section-type="product"' }}
+                </div>
+                {%- endif -%}
+                <!-- Product description tab -->
+
+                <!-- Product Space for Detail1 tab -->
+                {%- if section.settings.show_space_for_detail_tab and product.metafields.AE_PROD_DTLS['Additional Information'] != blank -%}
+                  <h2>{{- section.settings.tab3_label -}} </h2>
+                  <div class="product-info__block">
+                    {{ product.metafields.AE_PROD_DTLS['Additional Information'] }}
+                  </div>
+                {% elsif section.settings.show_space_for_detail_tab and product.metafields.AE_PROD_DTLS['Space for Detail1'] != blank %}
+                    <h2>{{- section.settings.tab3_label -}} </h2>
+                  <div class="product-info__block">
+                    {{ product.metafields.AE_PROD_DTLS['Space for Detail1'] }}
+                  </div>
+                {%- endif -%}
+                <!-- Product Excepteur sint tab -->
+
+                <!-- Product Policy tab -->
+                <h2 class="hide-for-desktop">Policy</h2>
+                <div class="product-info__block product-info_policy">
+                  {% render 'product-policy' %}
+                </div>
+
+              </div>
+            </div>
+          </div>
+          {% comment %}
+          <div class="hide-for-desktop mob-policy-section">
+              {% render 'product-policy' %}
+          </div>
+          {% endcomment %}
+      </div>
+      {% endcomment %}
+    </div>
+  
+  
+    {%- if section.settings.show_refunds_policy and shop.refund_policy != blank -%}
+      <div id="modal-refunds-policy" class="modal" aria-hidden="true">
+        <div class="modal__dialog" role="dialog">
+          <header class="modal__header">
+            <h3 class="modal__title heading h2">{{ 'product.general.refund_policy' | t }}</h3>
+            <button class="modal__close link" data-action="close-modal" title="{{ 'general.accessibility.close' | t | escape }}">
+              {%- render 'icon', icon: 'close' -%}
+            </button>
+          </header>
+
+          <div class="modal__content">
+            <div class="rte">
+              {{ shop.refund_policy }}
+            </div>
+          </div>
+        </div>
+      </div>
+    {%- endif -%}
+    {% if section.settings.pdp-banner-imgs-desktop != blank or section.settings.pdp-banner-imgs-mob != blank %}
+      <div class="banner-pdp-newsletter">
+        <div class="collection_subscription_topbanner">
+          <div class="collection_banner_image-wrapper pdp-banner-desk">
+            <div class="collection__banner-image lazyload image--fade-in" data-bg="{{ section.settings.pdp-banner-imgs-desktop | img_url: '1100x' }}" style="padding-top: {{ 1 | divided_by: section.settings.pdp-banner-imgs-desktop.aspect_ratio | times: 100 }}%;"></div>
+          </div>
+          <div class="collection_banner_image-wrapper pdp-banner-mob">
+            <div class="collection__banner-image lazyload image--fade-in" data-bg="{{ section.settings.pdp-banner-imgs-mob | img_url: '1100x' }}" style="padding-top: {{ 1 | divided_by: section.settings.pdp-banner-imgs-mob.aspect_ratio | times: 100 }}%;"></div>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {%- else -%}
+    {%- comment -%}We display the quick view within the product template so we can re-use the same settings{%- endcomment -%}
+    <div class="featured-product">
+      {%- render 'product-gallery' -%}
+      {%- render 'product-quick-view-info' -%}
+    </div>
+  {%- endif -%}
+</section>
+
+<div style="display:none" id="seller_additional_info">
+  <div class="wk_seller_custom_detail clearfix" data-productid ="{{product.id}}" style="display:none; border-bottom:1px solid #ddd; border-top:1px solid #ddd; padding:5px;">
+      {{ product.metafields.manufacturer_details.pickup_pincode }}
+  </div>
+</div>
+
+{% schema %}{"name": "Product page", "settings": [{"type": "checkbox", "id": "show_vendor", "label": "Show vendor", "default": true}, {"type": "checkbox", "id": "show_sku", "label": "Show SKU", "default": false}, {"type": "checkbox", "id": "show_share_buttons", "label": "Show share buttons", "default": true}, {"type": "checkbox", "id": "show_discount", "label": "Show discount label", "default": true}, {"type": "checkbox", "id": "show_taxes_included", "label": "Show price taxes notice", "default": false, "info": "Not in use"}, {"type": "checkbox", "id": "show_short_description", "label": "Show Short Description", "default": true}, {"type": "select", "id": "selector_mode", "label": "Selector type", "options": [{"value": "block", "label": "Block"}, {"value": "dropdown", "label": "Dropdown"}], "default": "block"}, {"type": "select", "id": "color_mode", "label": "Color selector type", "info": "Variant image mode requires that all variant has an associated image. [Learn more](https://help.shopify.com/en/manual/products/product-variant-images#add-images-to-existing-variants)", "options": [{"value": "block", "label": "Block"}, {"value": "dropdown", "label": "Dropdown"}, {"value": "color", "label": "Color swatch"}, {"value": "variant_image", "label": "Variant image"}], "default": "color"}, {"type": "checkbox", "id": "show_quantity_selector", "label": "Show quantity selector", "default": false}, {"type": "checkbox", "id": "show_payment_button", "label": "Show dynamic checkout button", "info": "Each customer will see their preferred payment method from those available on your store, such as PayPal or Apple Pay. [Learn more](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)", "default": false}, {"type": "checkbox", "id": "show_pickup_availability", "label": "Show local pickup availability", "info": "Show customers where they can pick up the product. [Learn more](https://help.shopify.com/en/manual/shipping/setting-up-and-managing-your-shipping/local-methods/local-pickup#show-pickup-availability-to-your-customers)", "default": false}, {"type": "header", "content": "Available Offers"}, {"type": "html", "id": "offers", "label": "Offers list", "info": "For add multiple offers use unorderded list, EX. <ul><li>Offer1</li><li>Offer2</li></ul> OR put this field blank to hide this section "}, {"type": "header", "content": "Media"}, {"type": "paragraph", "content": "Learn more about [media types](https://help.shopify.com/en/manual/products/product-media)"}, {"type": "select", "id": "image_size", "label": "Size", "options": [{"value": "small", "label": "Small"}, {"value": "medium", "label": "Medium"}, {"value": "large", "label": "Large"}], "default": "small"}, {"type": "checkbox", "id": "enable_video_looping", "label": "Enable video looping", "default": false}, {"type": "checkbox", "id": "enable_image_zoom", "label": "Enable image zoom", "default": true}, {"type": "select", "id": "zoom_effect", "label": "Desktop zoom effect", "options": [{"value": "inside", "label": "Inside"}, {"value": "outside", "label": "Outside"}], "default": "outside"}, {"type": "select", "id": "carousel_effect", "label": "Transition effect", "options": [{"value": "fade", "label": "Fade"}, {"value": "slide", "label": "Slide"}], "default": "fade"}, {"type": "header", "content": "Inventory"}, {"type": "paragraph", "content": "You can also add a stock countdown. [Learn more](https://support.maestrooo.com/article/177-product-show-an-stock-countdown-bar)."}, {"type": "checkbox", "id": "show_inventory_quantity", "label": "Show inventory quantity", "default": false}, {"type": "range", "id": "low_inventory_threshold", "label": "Low inventory threshold", "info": "Use low stock color when quantity is below the threshold. Choose 0 to always show in stock.", "min": 0, "max": 100, "step": 1, "default": 0}, {"type": "header", "content": "Content"}, {"type": "paragraph", "content": "You can also add per-product tabs. [Learn more](http://support.maestrooo.com/article/83-product-adding-different-tabs-per-product)."}, {"type": "select", "id": "content_display_mode", "label": "Display mode", "options": [{"value": "show_all", "label": "Show all"}, {"value": "show_all_and_expand_description", "label": "Show all and expand description"}, {"value": "collapse_all", "label": "Collapse all"}, {"value": "collapse_all_except_description", "label": "Collapse all except description"}], "info": "Not in use", "default": "show_all_and_expand_description"}, {"type": "text", "id": "tab1_label", "label": "Tab 1 Heading", "default": "Description"}, {"type": "text", "id": "tab2_label", "label": "Tab 2 Heading", "default": "Product USP"}, {"type": "text", "id": "tab3_label", "label": "Tab 3 Heading", "default": "space for detail"}, {"type": "checkbox", "id": "show_expanded_description", "label": "Show Description after images (tab 1)", "default": true}, {"type": "checkbox", "id": "show_usp_description", "label": "Show USP Tab (tab 2)", "default": true}, {"type": "checkbox", "id": "show_space_for_detail_tab", "label": "Show space for detail tab (tab 3)", "default": true}, {"type": "page", "id": "tab_page_1_handle", "label": "First page"}, {"type": "page", "id": "tab_page_2_handle", "label": "Second page"}, {"type": "page", "id": "tab_page_3_handle", "label": "Third page"}, {"type": "header", "content": "Reviews"}, {"type": "paragraph", "content": "You need to install [Shopify's free Product Reviews](https://apps.shopify.com/product-reviews) app before enabling those options."}, {"type": "checkbox", "id": "enable_reviews", "label": "Enable", "default": false}, {"type": "checkbox", "id": "show_reviews_badge", "label": "Show badge", "default": false}, {"type": "header", "content": "Trust"}, {"type": "text", "id": "trust_title", "label": "Heading", "default": "Payment & Security"}, {"type": "checkbox", "id": "show_payment_icons", "label": "Show payment icons", "default": false}, {"type": "image_picker", "id": "custom_security_badge", "label": "Security badge", "info": "800 x 200px .jpg recommended"}, {"type": "range", "id": "custom_security_badge_width", "min": 100, "max": 500, "step": 10, "unit": "px", "label": "Security badge width", "default": 200}, {"type": "header", "content": "Shipping estimator"}, {"type": "checkbox", "id": "show_shipping_estimator", "label": "Show shipping estimator", "info": "Only show if product is available.", "default": true}, {"type": "text", "id": "shipping_estimator_default_country", "label": "Default country", "info": "If the customer is logged in, the country of their shipping address will be used.", "default": "United States"}, {"type": "checkbox", "id": "show_refunds_policy", "label": "Show refunds policy", "info": "Refund policy must be added into your store policies. [Learn more](https://help.shopify.com/manual/sell-online/checkout-settings/refund-privacy-tos).", "default": true}, {"type": "header", "content": "PDP banner"}, {"type": "image_picker", "id": "pdp-banner-imgs-desktop", "label": "PDP Desktop Banner image"}, {"type": "image_picker", "id": "pdp-banner-imgs-mob", "label": "PDP Mobile Banner image"}], "blocks": [{"name": "Subscription widget", "type": "subscription_widget", "limit": 1, "settings": [{"type": "text", "id": "title", "label": "Heading", "default": "Get 10% OFF"}, {"type": "richtext", "id": "content", "label": "Content", "default": "<p>on your first purchase. Subscribe now and start your earth-friendly journey today!</p>"}, {"type": "header", "content": "Newsletter"}, {"type": "text", "id": "button_text", "label": "Button text", "default": "Get 10% OFF"}, {"type": "text", "id": "thank_you_title", "label": "Thank You Heading", "default": "Thank You!"}, {"type": "richtext", "id": "thank_you_content", "label": "Thank You Text", "default": "<p>Use coupon code WELCOME10 and get 10% discount.</p>"}]}]}{% endschema %}
+<script>
+  var handle = '{{collection.handle}}';
+  var parent_page_label = $('.nav-bar__linklist a[href="/collections/' + handle + '"]').attr('data-parent');
+  var parent_page_href = $('.nav-bar__linklist a[href="/collections/' + handle + '"]').attr('data-parenthandle');
+  if (parent_page_label != undefined) {
+      var html = '<li class="breadcrumb__item"><a class="breadcrumb__link link" href="' + parent_page_href + '">' + parent_page_label + '</a><svg focusable="false" class="icon icon--arrow-right" viewBox="0 0 8 12" role="presentation"><path stroke="currentColor" stroke-width="2" d="M2 2l4 4-4 4" fill="none" stroke-linecap="square"></path></svg></li>';
+      //check if parent's parent exists
+      var ppl = $('.nav-bar__linklist a[href*="' + parent_page_href + '"]').attr('data-parent');
+      var pph = $('.nav-bar__linklist a[href*="' + parent_page_href + '"]').attr('data-parenthandle');
+      if (ppl != undefined) {
+          html = '<li class="breadcrumb__item"><a class="breadcrumb__link link" href="' + pph + '">' + ppl + '</a><svg focusable="false" class="icon icon--arrow-right" viewBox="0 0 8 12" role="presentation"><path stroke="currentColor" stroke-width="2" d="M2 2l4 4-4 4" fill="none" stroke-linecap="square"></path></svg></li>' + html;
+      }
+      $('.breadcrumb__list .breadcrumb__item:nth-child(2)').before(html);
+  }
+  window.addEventListener("DOMContentLoaded", function (event) {
+    var productSku = $.trim($('.product-form [name="id"]').val());
+    addAssuredBadge(productSku);
+    window.addEventListener('variant:changed', function(event) {
+      var variantId = event.detail.variant.id;
+      addAssuredBadge(variantId);
+    });
+
+    function addAssuredBadge(variantId) {
+      getAssuredResponse(variantId, function(response) {
+        var data = $.parseJSON(response);
+        if (data && data.data && data.data.length > 0) {
+          var products = data.data;
+          $.each(products, function(key, product) {
+            $('.product-block-list__item--info .product-form__info-price .assured-delivery-wrapper').html('');
+            if (product.sku == variantId && product.assured) {
+              if ($('.product-block-list__item--info .product-form__info-price .produt-meta__delivery').length == 0) {
+                $('.product-block-list__item--info .product-form__info-price').append('<div class="assured-delivery-wrapper"><span class="product-meta__delivery"><img src="{{ 'pdp-assured-delivery.svg' | asset_url }}"></span><div class="assured-tooltip"><span class="tooltiptext">This product will be shipped within 24 hours of placing the order</span></div></div>');
+              }
+              $('.assured-tooltip').hide();
+              $('.product-meta__delivery').on('mouseover', function() {
+                $('.assured-tooltip').show();
+              }).mouseout(function() {
+                $('.assured-tooltip').hide();
+              }).click(function() {
+                $('.assured-tooltip').show();
+              });
+            }
+          });
+        }
+      });
+    }
+  });
+</script>

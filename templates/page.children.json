@@ -1,0 +1,2061 @@
+{
+  "sections": {
+    "3108d945-e6f1-4cac-ad5a-f4750aee1a9f": {
+      "type": "page-navigation",
+      "settings": {}
+    },
+    "61f7040d-d6dd-4c16-995e-97080aec75db": {
+      "type": "slideshow",
+      "blocks": {
+        "template--16633809273076__61f7040d-d6dd-4c16-995e-97080aec75db-16819742786bf0d580-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner_website_1_1_6d8c5402-00ec-4da0-8ca9-6df04adb1ac5.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/banner_mobile_2_2_629e20aa-7e4e-4b1c-b76a-17f991a8a2b5.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/childrens-2-15-years",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "a444a57e-14a8-4031-8f2f-c5f4c37d6f80": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Banner_1920x600_linen.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/microsite_mobile_kids_linen.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/summer-linen-for-kids",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "c7b444d7-7ff0-4130-9540-3e9b1387081f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Banner_1920x600_1_c1f1c450-a454-48de-b2c6-a917319f52d2.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/banner_mobile_b1bf4aca-74ce-4fe3-b061-242dec5521ec.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/childrens-skin-care",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "614505af-b02d-4af3-abd3-8981b651429b": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner_website_dc3a834d-3060-4636-9a7a-6c820c6d4638.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/banner_mobile_88207393-cdb5-438d-95d2-c9d9c41994e8.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/summer-essentials-for-kids",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "b26a442c-54aa-4317-b163-57395a8e0717": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Banner_1920x6_89ef9023-2f61-4116-9e89-531465e913ab.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/banner_mobile_summer_sleep_wear_1.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/summer-night-suits",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "84f97184-e997-445e-b838-d790e03c0f9f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Banner_1920x600_DOHARS.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/microsite_mobile_dohars.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/conscious-family?f_Type=Swaddles,Blankets+and+Quilts,Bedsheets+%26+Bedcovers",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16633809273076__61f7040d-d6dd-4c16-995e-97080aec75db-16819742786bf0d580-1",
+        "a444a57e-14a8-4031-8f2f-c5f4c37d6f80",
+        "c7b444d7-7ff0-4130-9540-3e9b1387081f",
+        "614505af-b02d-4af3-abd3-8981b651429b",
+        "b26a442c-54aa-4317-b163-57395a8e0717",
+        "84f97184-e997-445e-b838-d790e03c0f9f"
+      ],
+      "settings": {
+        "edge_to_edge": true,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "bada255c-fb18-4904-bf25-a00d26fe238d": {
+      "type": "slider-show",
+      "disabled": true,
+      "blocks": {
+        "ab290677-054a-45f0-b8c9-3c5ad3641326": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Banner_1920x600_kids.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/kids_9e386bde-e9d6-42f0-b4ff-bf2b73067011.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/childrens-2-15-years"
+          }
+        },
+        "template--16633809273076__bada255c-fb18-4904-bf25-a00d26fe238d-16778442154ccb7586-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner_website_1_1_13a971f7-88c1-4f64-9930-ea1c78cfd021.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/banner_mobile_2_2_73d9aaa7-ce21-49f6-9cce-d45c01bb0089.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "shopify:\/\/collections\/childrens-2-15-years"
+          }
+        },
+        "12db1e96-c9d4-4e7e-8a09-03a654c6f713": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Banner_1920x600_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/banner_mobile_7b583f08-a6f4-40ae-ae75-dd2aa37881e1.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "Button",
+            "link": "https:\/\/amala.earth\/collections\/childrens-skin-care"
+          }
+        },
+        "e0d41946-b885-4c9e-974e-e1533e78898c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner_website_de966fad-dd16-4250-9d67-1c44d18eaaff.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/banner_mobile.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/summer-essentials-for-kids"
+          }
+        },
+        "template--16633809273076__bada255c-fb18-4904-bf25-a00d26fe238d-16778442154ccb7586-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/non_toxic_toys_web_2.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/non_toxic_banner_mobile.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/bombay-toy-company"
+          }
+        },
+        "65d22562-b733-4b33-b60e-169ea3274a3d": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Banner_1920x6_1fcdd372-0f20-4979-99c4-13792cad5754.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/banner_mobile_summer_sleep_wear.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/summer-night-suits"
+          }
+        }
+      },
+      "block_order": [
+        "ab290677-054a-45f0-b8c9-3c5ad3641326",
+        "template--16633809273076__bada255c-fb18-4904-bf25-a00d26fe238d-16778442154ccb7586-0",
+        "12db1e96-c9d4-4e7e-8a09-03a654c6f713",
+        "e0d41946-b885-4c9e-974e-e1533e78898c",
+        "template--16633809273076__bada255c-fb18-4904-bf25-a00d26fe238d-16778442154ccb7586-1",
+        "65d22562-b733-4b33-b60e-169ea3274a3d"
+      ],
+      "settings": {
+        "edge_to_edge": true,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "festival-landings-page": {
+      "type": "main-banner",
+      "disabled": true,
+      "settings": {
+        "banner_desktop_image": "shopify:\/\/shop_images\/banner_website_1_1.jpg",
+        "banner_mobile_image": "shopify:\/\/shop_images\/banner_mobile_2_2.jpg",
+        "desktop_banner_title": "",
+        "color_heading": "#ffffff",
+        "desktop_banner_subtitle": "",
+        "color_subheading": "#b89c7d",
+        "desktop_banner_button": "",
+        "color_button": "#ffffff",
+        "button_background": "#9d7242",
+        "desktop_button_url": "https:\/\/amala.earth\/collections\/childrens-2-15-years",
+        "desktop_image_url": "https:\/\/amala.earth\/collections\/childrens-2-15-years"
+      }
+    },
+    "3ce8650f-ee5d-4ec2-8c3e-43b4fde36a2f": {
+      "type": "custom-grid",
+      "blocks": {
+        "bad5f3ff-9274-4267-9c3e-9a6deba99ea1": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/handwoven_clothing.png",
+            "title": "Handwoven clothing",
+            "block_button_url": "https:\/\/amala.earth\/collections\/childrens-western-wear"
+          }
+        },
+        "9d8a0cc5-207d-4537-b54a-dd1666611f34": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/breathable_sleepwear.png",
+            "title": "Breathable sleepwear",
+            "block_button_url": "https:\/\/amala.earth\/collections\/childrens-bedding-sleepwear"
+          }
+        },
+        "cacf62c5-35a7-40d1-9c68-3e0f70c400b7": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/games_and_stationery.png",
+            "title": "Games & stationery",
+            "block_button_url": "https:\/\/amala.earth\/collections\/childrens-books-toys-and-stationery"
+          }
+        },
+        "46dcfbea-f442-422a-8f61-c28429a2d9a2": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/Concern_tiles1_502d9846-ef7d-4fcb-971e-f1270d9e74e3.png",
+            "title": "Artisanal ethnics",
+            "block_button_url": "https:\/\/amala.earth\/collections\/childrens-ethnic-wear"
+          }
+        },
+        "adb9e735-9398-4722-9a2d-a10e739bacf6": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/organic_skincare_8661ec63-d98e-4e6e-9c64-c240c53d5b31.png",
+            "title": "Organic skincare",
+            "block_button_url": "https:\/\/amala.earth\/collections\/childrens-skin-care"
+          }
+        },
+        "2451e93e-58f2-4b39-b366-629e951deb59": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/mindful_eating_736541be-bb41-40ac-abd5-55c0ed84db3e.png",
+            "title": "Mindful food",
+            "block_button_url": "https:\/\/amala.earth\/collections\/childrens-food-and-essentials"
+          }
+        }
+      },
+      "block_order": [
+        "bad5f3ff-9274-4267-9c3e-9a6deba99ea1",
+        "9d8a0cc5-207d-4537-b54a-dd1666611f34",
+        "cacf62c5-35a7-40d1-9c68-3e0f70c400b7",
+        "46dcfbea-f442-422a-8f61-c28429a2d9a2",
+        "adb9e735-9398-4722-9a2d-a10e739bacf6",
+        "2451e93e-58f2-4b39-b366-629e951deb59"
+      ],
+      "settings": {
+        "subtitle": "",
+        "title": ""
+      }
+    },
+    "3fd0b9df-9aa3-4319-8dc4-c003453423f1": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "65c08707-f663-4503-a5ac-8263cc3695dd": {
+          "type": "Product",
+          "settings": {
+            "product": "plumcheeks-cotton-dress-for-girls-yellow-white-gdrs28-060423"
+          }
+        },
+        "e8ff28d8-27bd-4025-ba36-bbf6eaf0f5b3": {
+          "type": "Product",
+          "settings": {
+            "product": "plumcheeks-cotton-shirt-for-boys-orange-ibtop3-060423"
+          }
+        },
+        "3f7a5bb6-5317-4c3e-932a-a154acddd2ef": {
+          "type": "Product",
+          "settings": {
+            "product": "lil-treazures-cotton-linen-hair-bow-clip-for-girls-multicolour-set-of-3-pc-ltbc1223-050423"
+          }
+        },
+        "6ab81d88-68eb-4307-b7bb-bdc9b0c90b98": {
+          "type": "Product",
+          "settings": {
+            "product": "love-the-world-today-cotton-shirt-for-kids-blue-c22d6f1m-010323"
+          }
+        },
+        "b4b7597e-0000-4732-9eec-a6ed1ca85de6": {
+          "type": "Product",
+          "settings": {
+            "product": "earthy-tweens-wooden-toys-for-kids-rainbow-stacker-small-6-pcs-et61-030423"
+          }
+        },
+        "0997fc5a-1f97-4e5f-be73-dca72376dfcd": {
+          "type": "Product",
+          "settings": {
+            "product": "lil-treazures-organic-cotton-linen-hair-band-for-girls-multicolour-set-of-2-pc-lthb0323-140223"
+          }
+        },
+        "755bf7f3-1757-448b-b122-81783f87b1ce": {
+          "type": "Product",
+          "settings": {
+            "product": "aplito-storage-basket-for-baby-quilted-ivory-baby-kids-basketset-bearlove-270323"
+          }
+        },
+        "db798df9-6fe2-46d3-a00c-961c9e249b12": {
+          "type": "Product",
+          "settings": {
+            "product": "miko-lolo-organic-cotton-dress-for-girls-pink-es1p12y-24323"
+          }
+        },
+        "1753e5ca-c394-47be-b5b1-a080b3827732": {
+          "type": "Product",
+          "settings": {
+            "product": "earthy-tweens-cotton-dress-for-girls-orange-cd-gr-0028-9323"
+          }
+        },
+        "0cee35da-c8d4-4703-9673-07a8570deacd": {
+          "type": "Product",
+          "settings": {
+            "product": "shumee-kitchen-play-set-for-kids-little-chef-set-of-5-pp-in-ct-w-3yrs-0078-120323"
+          }
+        },
+        "fb84c371-81f8-41e4-a20f-2ccfb2570f2e": {
+          "type": "Product",
+          "settings": {
+            "product": "little-grabs-healthy-snacks-for-kids-jowar-ragi-sweet-potato-khakhra-100-g-set-of-3-mrt-01-280223"
+          }
+        },
+        "cab7191e-1568-4e72-ac4f-f47dc1b4976e": {
+          "type": "Product",
+          "settings": {
+            "product": "love-the-world-today-cotton-kurta-pajama-set-for-kids-white-n3k1f1612-160123"
+          }
+        },
+        "bd3afb74-1c3b-471f-b668-627e420f5f00": {
+          "type": "Product",
+          "settings": {
+            "product": "shumee-wooden-shelf-for-kids-98-cm-beige-fur-in-lms-213-120323"
+          }
+        },
+        "ef925b3e-955c-4d67-a404-cc2ec823436c": {
+          "type": "Product",
+          "settings": {
+            "product": "shumee-wooden-baby-teether-sun-crochet-dtm-in-sunr-w-6m-228-120323"
+          }
+        }
+      },
+      "block_order": [
+        "65c08707-f663-4503-a5ac-8263cc3695dd",
+        "e8ff28d8-27bd-4025-ba36-bbf6eaf0f5b3",
+        "3f7a5bb6-5317-4c3e-932a-a154acddd2ef",
+        "6ab81d88-68eb-4307-b7bb-bdc9b0c90b98",
+        "b4b7597e-0000-4732-9eec-a6ed1ca85de6",
+        "0997fc5a-1f97-4e5f-be73-dca72376dfcd",
+        "755bf7f3-1757-448b-b122-81783f87b1ce",
+        "db798df9-6fe2-46d3-a00c-961c9e249b12",
+        "1753e5ca-c394-47be-b5b1-a080b3827732",
+        "0cee35da-c8d4-4703-9673-07a8570deacd",
+        "fb84c371-81f8-41e4-a20f-2ccfb2570f2e",
+        "cab7191e-1568-4e72-ac4f-f47dc1b4976e",
+        "bd3afb74-1c3b-471f-b668-627e420f5f00",
+        "ef925b3e-955c-4d67-a404-cc2ec823436c"
+      ],
+      "settings": {
+        "title1": "Newly",
+        "title2": "launched",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/childrens-2-15-years?s=-isActive%2C-created_at%2C-_rank",
+        "button_position": "top"
+      }
+    },
+    "2f4d0c0f-2350-4e1f-aea8-27b9c52bfe92": {
+      "type": "two-grid-section",
+      "blocks": {
+        "b5ea06a8-7563-4bdf-8511-5b6e466fa2a5": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/girl_b6a12199-b66d-4620-a615-cd321b722a6e.png",
+            "title": "Girl",
+            "block_button_url": "https:\/\/amala.earth\/collections\/children-girl"
+          }
+        },
+        "33b762f3-d5c5-40b7-aa14-d5335838c04a": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/boy_175ff1b4-1026-4be6-8052-12f97c4d563b.png",
+            "title": "Boy",
+            "block_button_url": "https:\/\/amala.earth\/collections\/children-boy"
+          }
+        }
+      },
+      "block_order": [
+        "b5ea06a8-7563-4bdf-8511-5b6e466fa2a5",
+        "33b762f3-d5c5-40b7-aa14-d5335838c04a"
+      ],
+      "settings": {
+        "subtitle": "",
+        "title": ""
+      }
+    },
+    "108fed49-0a8d-411d-806f-bbb1c7d077e3": {
+      "type": "landing-page-recommendation",
+      "disabled": true,
+      "blocks": {
+        "88fde44d-f1d2-48fb-96f1-ab7dce0f7b9a": {
+          "type": "Product",
+          "settings": {
+            "product": "upcyclers-lab-gift-for-kids-waste-warriors-board-game-ul-002-21722"
+          }
+        },
+        "4b871cdc-b378-463a-9025-8aef4fcf20d7": {
+          "type": "Product",
+          "settings": {
+            "product": "pilkhan-gift-for-kids-nature-activity-box-autumn-box-edition-ii-phl-nov-071122"
+          }
+        },
+        "27169c63-0370-4bfb-a126-cdc7e0aceb40": {
+          "type": "Product",
+          "settings": {
+            "product": "birch-and-bug-christmas-gift-box-wooden-toys-set-of-6-bbxg0101-81222"
+          }
+        },
+        "0e68a416-43ef-4316-916e-17ba0fc2292a": {
+          "type": "Product",
+          "settings": {
+            "product": "keph-design-gifts-for-children-handcrafted-black-tie-dye-diary-kds-s-wd-ft-cgr-191022"
+          }
+        },
+        "169ae0eb-fe39-4a74-a695-a775c6b6a19c": {
+          "type": "Product",
+          "settings": {
+            "product": "birch-and-bug-wooden-blocks-for-kids-english-alphabets-lower-case-bblc2601-051222"
+          }
+        },
+        "c1a397b9-d7e5-433b-9f93-546c057329c1": {
+          "type": "Product",
+          "settings": {
+            "product": "birch-and-bug-wooden-toys-for-kids-animal-roller-toy-set-bbrt0302-051222"
+          }
+        },
+        "b43c4cdb-1ed2-458a-980b-118da2dca531": {
+          "type": "Product",
+          "settings": {
+            "product": "ecoshi-gift-for-kids-handmade-rust-leaf-print-journal-40-pages-ej-rg-1121-cgr-191022"
+          }
+        },
+        "11029239-418a-463c-9dd0-4527de5ff6c8": {
+          "type": "Product",
+          "settings": {
+            "product": "christmas-santa-theme-diy-canvas-cushion-with-sketch-pens"
+          }
+        }
+      },
+      "block_order": [
+        "88fde44d-f1d2-48fb-96f1-ab7dce0f7b9a",
+        "4b871cdc-b378-463a-9025-8aef4fcf20d7",
+        "27169c63-0370-4bfb-a126-cdc7e0aceb40",
+        "0e68a416-43ef-4316-916e-17ba0fc2292a",
+        "169ae0eb-fe39-4a74-a695-a775c6b6a19c",
+        "c1a397b9-d7e5-433b-9f93-546c057329c1",
+        "b43c4cdb-1ed2-458a-980b-118da2dca531",
+        "11029239-418a-463c-9dd0-4527de5ff6c8"
+      ],
+      "settings": {
+        "title1": "Gift",
+        "title2": "hampers",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": true,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/childrens-gifts-and-returns",
+        "button_position": "top"
+      }
+    },
+    "7e727bcc-acea-4a68-bf80-27371ae6d902": {
+      "type": "landing-page-recommendation",
+      "disabled": true,
+      "blocks": {
+        "72995800-ecf7-46ec-b2ff-f4be43592e1e": {
+          "type": "Product",
+          "settings": {
+            "product": "khela-cotton-chinos-navy-blue-kbp01-16822"
+          }
+        },
+        "31fb0fb1-31fc-4221-b26b-b3e53253464e": {
+          "type": "Product",
+          "settings": {
+            "product": "obori-cotton-shorts-green-ob20110b-19822"
+          }
+        },
+        "45c49ccf-a090-4093-bc1c-f1fa6114aa75": {
+          "type": "Product",
+          "settings": {
+            "product": "100-cotton-sibling-twinning-t-shirt-set-of-2"
+          }
+        },
+        "70927f2a-7341-46d8-8531-ecd81dbba1d4": {
+          "type": "Product",
+          "settings": {
+            "product": "deer-life-organic-cotton-tunic-dress-for-kids-grey-white-el-elan-dress-20922"
+          }
+        },
+        "4ae424f7-1f42-4b80-bce9-5d09ddce85db": {
+          "type": "Product",
+          "settings": {
+            "product": "the-right-cut-birthday-dress-chanderi-silk-dress-for-girls-lavender-trckf01-1-2-y-cgr-191022"
+          }
+        },
+        "f89fdc97-793b-4a2b-a68b-ff1e73733321": {
+          "type": "Product",
+          "settings": {
+            "product": "keva-mother-and-daughter-twinning-nightsuit-set-green-pack-of-4-op04-26922"
+          }
+        },
+        "6cea51e5-a84f-4047-a3b9-f6261f8a7aa2": {
+          "type": "Product",
+          "settings": {
+            "product": "100-cotton-sibling-twinning-t-shirt-set-of-3"
+          }
+        },
+        "2adff8ad-1882-4d1c-8509-740808a590dd": {
+          "type": "Product",
+          "settings": {
+            "product": "handblock-printed-blue-cotton-kaftan-set"
+          }
+        },
+        "c48fc1bc-5aa8-495a-9c7e-080f491621f5": {
+          "type": "Product",
+          "settings": {
+            "product": "kalp-muslin-silk-crop-top-palazzo-with-jacket-for-kids-purple-kk571-31022"
+          }
+        },
+        "3236e110-6734-4bb4-b349-a468b6a2fe78": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "svecha-cloud-baby-play-gym-wooden-toys-for-baby-blue-sve0002-210922"
+          }
+        }
+      },
+      "block_order": [
+        "72995800-ecf7-46ec-b2ff-f4be43592e1e",
+        "31fb0fb1-31fc-4221-b26b-b3e53253464e",
+        "45c49ccf-a090-4093-bc1c-f1fa6114aa75",
+        "70927f2a-7341-46d8-8531-ecd81dbba1d4",
+        "4ae424f7-1f42-4b80-bce9-5d09ddce85db",
+        "f89fdc97-793b-4a2b-a68b-ff1e73733321",
+        "6cea51e5-a84f-4047-a3b9-f6261f8a7aa2",
+        "2adff8ad-1882-4d1c-8509-740808a590dd",
+        "c48fc1bc-5aa8-495a-9c7e-080f491621f5",
+        "3236e110-6734-4bb4-b349-a468b6a2fe78"
+      ],
+      "settings": {
+        "title1": "Conscious",
+        "title2": "Kids collection",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/childrens-2-15-years",
+        "button_position": "top"
+      }
+    },
+    "64e78f4f-6188-4f56-aaf7-5d0e4a609add": {
+      "type": "landing-page-recommendation",
+      "disabled": true,
+      "blocks": {
+        "fcafed0d-ecf8-4a50-b43d-23cbe40e1644": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "organic-red-bamboo-ruffle-neck-top-for-girls"
+          }
+        },
+        "c7d3d3b0-2c22-4e1e-93a1-4701ea59401b": {
+          "type": "Product",
+          "settings": {
+            "product": "obori-cotton-shirt-blue-ob2162-19822"
+          }
+        },
+        "6acea713-80de-43dc-881c-0b0ab376aa0c": {
+          "type": "Product",
+          "settings": {
+            "product": "khela-cotton-shirt-and-waistcoat-set-blue-white-kbes14-16822"
+          }
+        },
+        "2150740f-ee1c-496f-a1ed-04416065ec63": {
+          "type": "Product",
+          "settings": {
+            "product": "bhaakur-cotton-quilt-for-kids-green-fb-b0g-15922"
+          }
+        },
+        "a64a7d74-6d18-451d-ad77-1da46b324e55": {
+          "type": "Product",
+          "settings": {
+            "product": "keva-cotton-nightsuit-for-girls-white-op08-26922"
+          }
+        },
+        "6c0d99b2-dad0-4dc5-8f36-b59e415716fe": {
+          "type": "Product",
+          "settings": {
+            "product": "miko-lolo-cotton-fleece-hoodie-sweatshirt-for-kids-off-white-pf1w12y-011222"
+          }
+        },
+        "fbf7a51a-a33f-40e8-babd-6e0544d5ff07": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "saltpetre-organic-cotton-sweatshirt-and-joggers-set-sibling-sets-pack-of-2-spkw-mtpck-j1-p1-llc-sg-13922"
+          }
+        },
+        "e9deaadb-2431-497a-a517-1be9e1051116": {
+          "type": "Product",
+          "settings": {
+            "product": "masaya-mul-mul-dohar-blanket-for-baby-purple-msycdb0031fpurple-221222"
+          }
+        },
+        "73878297-4d62-4096-af24-cbde5e8a8362": {
+          "type": "Product",
+          "settings": {
+            "product": "pure-cotton-blue-printed-shirt"
+          }
+        },
+        "8ecf5fdc-ee87-4c22-9e5b-9ad6242c0bdf": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-cotton-fruit-print-kids-pajama-sets"
+          }
+        },
+        "e5c550f2-0e5a-4d69-82e4-d375d410b430": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "handwoven-cotton-multicolor-unisex-reversible-jacket"
+          }
+        },
+        "de5e6931-1451-4162-b3e4-4d527d4fb506": {
+          "type": "Product",
+          "settings": {
+            "product": "pink-cotton-orchid-block-printed-baby-quilt"
+          }
+        }
+      },
+      "block_order": [
+        "fcafed0d-ecf8-4a50-b43d-23cbe40e1644",
+        "c7d3d3b0-2c22-4e1e-93a1-4701ea59401b",
+        "6acea713-80de-43dc-881c-0b0ab376aa0c",
+        "2150740f-ee1c-496f-a1ed-04416065ec63",
+        "a64a7d74-6d18-451d-ad77-1da46b324e55",
+        "6c0d99b2-dad0-4dc5-8f36-b59e415716fe",
+        "fbf7a51a-a33f-40e8-babd-6e0544d5ff07",
+        "e9deaadb-2431-497a-a517-1be9e1051116",
+        "73878297-4d62-4096-af24-cbde5e8a8362",
+        "8ecf5fdc-ee87-4c22-9e5b-9ad6242c0bdf",
+        "e5c550f2-0e5a-4d69-82e4-d375d410b430",
+        "de5e6931-1451-4162-b3e4-4d527d4fb506"
+      ],
+      "settings": {
+        "title1": "Winter",
+        "title2": "Essentials",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/childrens-winter-wear",
+        "button_position": "top"
+      }
+    },
+    "97da3e3e-44c7-40a3-accb-3e904f9161e1": {
+      "type": "landing-page-recommendation",
+      "disabled": true,
+      "blocks": {
+        "cd24337b-3ecf-4e2a-ab49-aee61ed20133": {
+          "type": "Product",
+          "settings": {
+            "product": "handmade-wooden-pretend-play-tea-set-15-pcs"
+          }
+        },
+        "ebc0b766-f383-4a02-a1e2-969cc81a107a": {
+          "type": "Product",
+          "settings": {
+            "product": "saltpetre-organic-cotton-t-shirt-for-kids-green-spkw-t2-sgyllw-13922"
+          }
+        },
+        "d4a31494-4272-4f58-bbca-6fe100c12515": {
+          "type": "Product",
+          "settings": {
+            "product": "nestle-in-a-teepee-canvas-kids-play-mat-chevron-rug-black-white-chevrug1-61022"
+          }
+        },
+        "e644026c-c29c-410a-b0cf-62d1a1f8f2e0": {
+          "type": "Product",
+          "settings": {
+            "product": "upcyclers-lab-gift-for-kids-waste-warriors-board-game-set-of-2-ul-bun-002-021222"
+          }
+        },
+        "24a01403-8fc0-463c-aa3b-95fa698b4a50": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-plantable-calendar-2022-with-wooden-stand"
+          }
+        },
+        "f2ba5bc8-cf4b-4891-a557-bed00e6bea36": {
+          "type": "Product",
+          "settings": {
+            "product": "maniams-wooden-toys-for-kids-wooden-leaf-ghoom-toy-pack-of-2-mtg-261022"
+          }
+        },
+        "7b6a5c11-7ff2-4ffe-95de-e000b0026576": {
+          "type": "Product",
+          "settings": {
+            "product": "cocoon-care-organic-cotton-baby-sweatshirt-and-pants-set-red-cc-cods-red-31022"
+          }
+        },
+        "e5d825ac-5026-46ba-b3c4-0c6db8ee217f": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "benditaa-cotton-t-shirt-for-girls-white-bend-sunshine-white-3-221122"
+          }
+        },
+        "79dfd614-fc22-409e-a4db-28f7c79b3e29": {
+          "type": "Product",
+          "settings": {
+            "product": "footprints-organic-cotton-baby-socks-multicolour-pack-of-3-fpks6to12uni1-16922"
+          }
+        },
+        "45d7724b-ed97-4b45-b503-0675e68c6173": {
+          "type": "Product",
+          "settings": {
+            "product": "teeth-a-bit-kids-toothpaste-tablets-cherry-vanilla-mint-60-tabs-tpt-mp-ks-cv-141022"
+          }
+        },
+        "e51c85e0-60b8-4f74-93ba-b649da5e5b1b": {
+          "type": "Product",
+          "settings": {
+            "product": "maniams-wooden-puzzle-kolum-pattern-58-pieces-mtkkn-261022"
+          }
+        },
+        "5fd05fd4-a423-4ba2-9437-35d731946de7": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-jumbo-plantable-stationery-gift-box"
+          }
+        },
+        "17b9536e-e710-4a6b-a293-cda9cf965f15": {
+          "type": "Product",
+          "settings": {
+            "product": "footprints-organic-cotton-socks-for-kids-multicolour-pack-of-6-fpp6starstrip5to8-16922"
+          }
+        }
+      },
+      "block_order": [
+        "cd24337b-3ecf-4e2a-ab49-aee61ed20133",
+        "ebc0b766-f383-4a02-a1e2-969cc81a107a",
+        "d4a31494-4272-4f58-bbca-6fe100c12515",
+        "e644026c-c29c-410a-b0cf-62d1a1f8f2e0",
+        "24a01403-8fc0-463c-aa3b-95fa698b4a50",
+        "f2ba5bc8-cf4b-4891-a557-bed00e6bea36",
+        "7b6a5c11-7ff2-4ffe-95de-e000b0026576",
+        "e5d825ac-5026-46ba-b3c4-0c6db8ee217f",
+        "79dfd614-fc22-409e-a4db-28f7c79b3e29",
+        "45d7724b-ed97-4b45-b503-0675e68c6173",
+        "e51c85e0-60b8-4f74-93ba-b649da5e5b1b",
+        "5fd05fd4-a423-4ba2-9437-35d731946de7",
+        "17b9536e-e710-4a6b-a293-cda9cf965f15"
+      ],
+      "settings": {
+        "title1": "Earth-Friendly",
+        "title2": "offers",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/childrens-2-15-years?f_Discount=1+-+25,25+-+50,50+-+100",
+        "button_position": "top"
+      }
+    },
+    "6ca49bea-c3d2-40e4-a5ea-10204662055a": {
+      "type": "landing-page-recommendation",
+      "disabled": true,
+      "blocks": {
+        "7d37aecf-cd9c-4e59-a466-b78129284d46": {
+          "type": "Product",
+          "settings": {
+            "product": "conscious-food-super-jaggery-powder-100-natural-no-trans-fat-200-g-cons-kids-06-101122"
+          }
+        },
+        "418ee132-5360-4363-91de-096558f45b8f": {
+          "type": "Product",
+          "settings": {
+            "product": "afters-by-healthy-dessert-bite-nutty-cashew-value-pack"
+          }
+        },
+        "f7a00b80-0f8e-4e93-9a39-51c3622b667e": {
+          "type": "Product",
+          "settings": {
+            "product": "satmya-chyawanprash-natural-immunity-booster-225-g-anti-ageing-kids-friendly-satmya_2__ccf-91222"
+          }
+        },
+        "26fab273-1bb5-43b1-8580-6c3371e1194c": {
+          "type": "Product",
+          "settings": {
+            "product": "conscious-food-sprouted-ragi-powder-100-natural-no-sugar-200-g-cons-kids-07-101122"
+          }
+        },
+        "d516797b-5d77-4d49-8dfe-4355219aed10": {
+          "type": "Product",
+          "settings": {
+            "product": "belgian-dark-chocolate-coconut-chips-60gm"
+          }
+        },
+        "9854a874-a4e3-45af-99cc-87485a750011": {
+          "type": "Product",
+          "settings": {
+            "product": "unsweetened-protein-peanut-butter-crunchy-all-natural-gluten-free-vegan-925gm"
+          }
+        },
+        "756ff073-f084-4ea3-8ea7-8e2944d85a1e": {
+          "type": "Product",
+          "settings": {
+            "product": "little-moppet-foods-choco-ragi-carrot-muffin-mix-for-kids-240g-sr3-745808976231-19922"
+          }
+        },
+        "05323fc5-6f84-4dd0-9eda-ed69db1704a9": {
+          "type": "Product",
+          "settings": {
+            "product": "vegan-cranberry-super-grain-granola"
+          }
+        },
+        "f469dbee-6864-444a-a760-8ec467917a82": {
+          "type": "Product",
+          "settings": {
+            "product": "child-care-herbal-supplement-malt-200-gm"
+          }
+        },
+        "79c35b67-fb62-41d9-8752-1993d1a285d8": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-choco-fills-quinoa-ragi-250gm"
+          }
+        },
+        "6c4f4cd6-e91d-4c91-abb0-165caefdd203": {
+          "type": "Product",
+          "settings": {
+            "product": "dark-chocolate-walnut-granola-muesli-250gm"
+          }
+        }
+      },
+      "block_order": [
+        "7d37aecf-cd9c-4e59-a466-b78129284d46",
+        "418ee132-5360-4363-91de-096558f45b8f",
+        "f7a00b80-0f8e-4e93-9a39-51c3622b667e",
+        "26fab273-1bb5-43b1-8580-6c3371e1194c",
+        "d516797b-5d77-4d49-8dfe-4355219aed10",
+        "9854a874-a4e3-45af-99cc-87485a750011",
+        "756ff073-f084-4ea3-8ea7-8e2944d85a1e",
+        "05323fc5-6f84-4dd0-9eda-ed69db1704a9",
+        "f469dbee-6864-444a-a760-8ec467917a82",
+        "79c35b67-fb62-41d9-8752-1993d1a285d8",
+        "6c4f4cd6-e91d-4c91-abb0-165caefdd203"
+      ],
+      "settings": {
+        "title1": "Mindful Food",
+        "title2": "healthy choices",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "",
+        "button_position": "top"
+      }
+    },
+    "7148a954-d95c-483a-9aed-5f0f443b2075": {
+      "type": "landing-page-recommendation",
+      "disabled": true,
+      "blocks": {
+        "6e0e5c61-1147-4b3f-ba76-5f9e71cfcb50": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-cotton-whimsical-print-kids-pajama-sets"
+          }
+        },
+        "9f681c2a-603b-4594-afd1-da87ca3a3620": {
+          "type": "Product",
+          "settings": {
+            "product": "cotton-kurta-pyjama-set-multicolor-1"
+          }
+        },
+        "e5ea912f-2c59-446c-bdeb-3c23b7b35243": {
+          "type": "Product",
+          "settings": {
+            "product": "keva-cotton-nightsuit-for-kids-green-op05-26922"
+          }
+        },
+        "802e2830-0759-41b0-8488-09388b3f6ad9": {
+          "type": "Product",
+          "settings": {
+            "product": "obori-cotton-sleep-suit-white-ob200129-19822"
+          }
+        },
+        "729a8e5c-8f96-4947-8454-93cda30a8fd1": {
+          "type": "Product",
+          "settings": {
+            "product": "cotton-checkered-night-dress-pink"
+          }
+        },
+        "45460b26-6303-4841-9b17-f760ff5f9bf9": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-cotton-fruit-print-kids-pajama-sets"
+          }
+        },
+        "03862697-408f-4596-aa75-5ee796a601d0": {
+          "type": "Product",
+          "settings": {
+            "product": "pure-cotton-blue-jaal-print-nighty"
+          }
+        },
+        "f8d58b91-b19b-4f92-bd6c-240d4a5a162b": {
+          "type": "Product",
+          "settings": {
+            "product": "pure-cotton-white-printed-shirt-pyjama-set-2"
+          }
+        },
+        "7c8ce166-5ed6-43fd-9c5e-4438e69b6580": {
+          "type": "Product",
+          "settings": {
+            "product": "cotton-night-suit-crocodile-print"
+          }
+        },
+        "8eb9e142-ada2-445b-a6d6-076ac597cd49": {
+          "type": "Product",
+          "settings": {
+            "product": "noomie-white-sushi-print-playset-1"
+          }
+        },
+        "a536670b-d426-4311-995d-9d624a4cfec5": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-cotton-wild-print-kids-pajama-sets"
+          }
+        },
+        "059dc22d-bbed-4073-bf89-9afa1c2550f0": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "organic-cotton-whimsical-print-mommy-pajama-sets"
+          }
+        },
+        "3f6f2e98-82f3-4c34-9a74-44c9755b7e88": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "100-organic-cotton-blush-pink-tie-up-nightsuit"
+          }
+        },
+        "b987b0d4-488d-4aca-b210-012bd665435c": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "organic-cotton-multicolor-printed-nightwear-kurta-pyjama-set-1"
+          }
+        },
+        "2a001bf8-0c0a-4e23-b0b9-30d2c6834f96": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "organic-cotton-fruit-print-kids-pajama-sets"
+          }
+        },
+        "9159a88a-8176-4edc-bf3c-b8016c820ee2": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "100-cotton-blue-banana-print-shirt-pyjama-set"
+          }
+        }
+      },
+      "block_order": [
+        "6e0e5c61-1147-4b3f-ba76-5f9e71cfcb50",
+        "9f681c2a-603b-4594-afd1-da87ca3a3620",
+        "e5ea912f-2c59-446c-bdeb-3c23b7b35243",
+        "802e2830-0759-41b0-8488-09388b3f6ad9",
+        "729a8e5c-8f96-4947-8454-93cda30a8fd1",
+        "45460b26-6303-4841-9b17-f760ff5f9bf9",
+        "03862697-408f-4596-aa75-5ee796a601d0",
+        "f8d58b91-b19b-4f92-bd6c-240d4a5a162b",
+        "7c8ce166-5ed6-43fd-9c5e-4438e69b6580",
+        "8eb9e142-ada2-445b-a6d6-076ac597cd49",
+        "a536670b-d426-4311-995d-9d624a4cfec5",
+        "059dc22d-bbed-4073-bf89-9afa1c2550f0",
+        "3f6f2e98-82f3-4c34-9a74-44c9755b7e88",
+        "b987b0d4-488d-4aca-b210-012bd665435c",
+        "2a001bf8-0c0a-4e23-b0b9-30d2c6834f96",
+        "9159a88a-8176-4edc-bf3c-b8016c820ee2"
+      ],
+      "settings": {
+        "title1": "Breathable",
+        "title2": "sleepwear",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/childrens-bedding-sleepwear",
+        "button_position": "top"
+      }
+    },
+    "2bd14898-d935-4349-9e83-f4372de58bf7": {
+      "type": "landing-page-recommendation",
+      "disabled": true,
+      "blocks": {
+        "65342066-f6a1-4e0c-8a31-266b1fa66266": {
+          "type": "Product",
+          "settings": {
+            "product": "bamboo-caramel-brown-stick-and-felt-hobby-horse-toy"
+          }
+        },
+        "68e4fba2-0654-4ebb-aa06-ca75ac5da641": {
+          "type": "Product",
+          "settings": {
+            "product": "ek-taara-cotton-crochet-soft-toy-bubbles-cat-blue-et-amala-10-171022"
+          }
+        },
+        "faa1f530-a28e-4eb8-8189-0c3ca401d56f": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "ek-taara-cotton-crochet-soft-toy-joy-dog-purple-et-amala-4-171022"
+          }
+        },
+        "056f647c-c1d7-437e-8233-11c3955d3f53": {
+          "type": "Product",
+          "settings": {
+            "product": "spring-edition-nature-gift-box-set-of-12"
+          }
+        },
+        "80820f18-87a0-4a91-af2a-5729f89510de": {
+          "type": "Product",
+          "settings": {
+            "product": "recycled-paper-with-seeds-paper-pens-set-of-10"
+          }
+        },
+        "53a0122f-376d-440e-92b6-8d797cb6f8bd": {
+          "type": "Product",
+          "settings": {
+            "product": "alt-retail-wooden-toys-for-kids-rocker-board-arrb-14922"
+          }
+        },
+        "3d2810cb-434f-4ca9-8841-628f6fd11487": {
+          "type": "Product",
+          "settings": {
+            "product": "alt-retail-wooden-toys-for-kids-sewing-lacing-board-arwsb-14922"
+          }
+        },
+        "dd81d6c2-b03a-4387-9f4e-85e9163ea1d5": {
+          "type": "Product",
+          "settings": {
+            "product": "handmade-paper-blue-cotton-binded-penstand-with-photo-frame"
+          }
+        },
+        "921b513b-2d8f-4b96-b6d8-405820cd4e1a": {
+          "type": "Product",
+          "settings": {
+            "product": "christmas-theme-diary-and-1-plantable-pen-combo-set-of-5"
+          }
+        },
+        "d9316e50-997c-4f71-b34f-f532012be4d3": {
+          "type": "Product",
+          "settings": {
+            "product": "handmade-wooden-balancing-santa-game"
+          }
+        },
+        "9edbd3e8-003d-45f7-88ab-4fcec7c532a3": {
+          "type": "Product",
+          "settings": {
+            "product": "brown-box-collection-5-seed-paper-pen-5-seed-pencils-1-seed-diary-1-seed-ball"
+          }
+        }
+      },
+      "block_order": [
+        "65342066-f6a1-4e0c-8a31-266b1fa66266",
+        "68e4fba2-0654-4ebb-aa06-ca75ac5da641",
+        "faa1f530-a28e-4eb8-8189-0c3ca401d56f",
+        "056f647c-c1d7-437e-8233-11c3955d3f53",
+        "80820f18-87a0-4a91-af2a-5729f89510de",
+        "53a0122f-376d-440e-92b6-8d797cb6f8bd",
+        "3d2810cb-434f-4ca9-8841-628f6fd11487",
+        "dd81d6c2-b03a-4387-9f4e-85e9163ea1d5",
+        "921b513b-2d8f-4b96-b6d8-405820cd4e1a",
+        "d9316e50-997c-4f71-b34f-f532012be4d3",
+        "9edbd3e8-003d-45f7-88ab-4fcec7c532a3"
+      ],
+      "settings": {
+        "title1": "Handcrafted",
+        "title2": "games & stationery",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/childrens-books-toys-and-stationery",
+        "button_position": "top"
+      }
+    },
+    "a1604e37-d042-44e6-9b55-11075920a20e": {
+      "type": "amala-earth-curation",
+      "blocks": {
+        "41f6e6e5-7bef-4b43-9c80-9cf32f494d5c": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/Banner_1920x600_KIDS_TRAVEL.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/microsite_mobile_travel_ess.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/travel-essentials-for-kids"
+          }
+        }
+      },
+      "block_order": [
+        "41f6e6e5-7bef-4b43-9c80-9cf32f494d5c"
+      ],
+      "settings": {
+        "curation_heading1": "",
+        "curation_sub_heading2": ""
+      }
+    },
+    "a990a89b-9b9c-4947-9e57-bf2beedba00c": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "2cda58ae-9353-494a-a8bf-e323012478e0": {
+          "type": "Product",
+          "settings": {
+            "product": "cotton-night-suit-leopard-print"
+          }
+        },
+        "494846d7-05f8-4126-b37e-f4c18adc1d66": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-cotton-multicolor-printed-nightwear-kurta-pyjama-set"
+          }
+        },
+        "fb2aad7e-2356-4cd2-99a3-2c37729e5f7c": {
+          "type": "Product",
+          "settings": {
+            "product": "cotton-night-suit-hippo-print"
+          }
+        },
+        "07d73ec3-81f8-4a93-82c3-5ba60554852b": {
+          "type": "Product",
+          "settings": {
+            "product": "cotton-kurta-pyjama-set-multicolor-1"
+          }
+        },
+        "0b9ccb1c-5fe6-466a-84c3-0f12cd1a0e10": {
+          "type": "Product",
+          "settings": {
+            "product": "obori-cotton-sleep-suit-brown-ob200130-19822"
+          }
+        },
+        "1faa80aa-b12f-4520-a82c-b1f5a4cff509": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-cotton-white-grey-printed-nightwear-kurta-pyjama-set"
+          }
+        },
+        "a8c3e280-7c82-4e0c-926b-18311ed6f732": {
+          "type": "Product",
+          "settings": {
+            "product": "cotton-night-suit-excavator-print"
+          }
+        },
+        "7eb689df-f779-4723-a9b7-656955d98978": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-cotton-fruit-print-kids-pajama-sets"
+          }
+        }
+      },
+      "block_order": [
+        "2cda58ae-9353-494a-a8bf-e323012478e0",
+        "494846d7-05f8-4126-b37e-f4c18adc1d66",
+        "fb2aad7e-2356-4cd2-99a3-2c37729e5f7c",
+        "07d73ec3-81f8-4a93-82c3-5ba60554852b",
+        "0b9ccb1c-5fe6-466a-84c3-0f12cd1a0e10",
+        "1faa80aa-b12f-4520-a82c-b1f5a4cff509",
+        "a8c3e280-7c82-4e0c-926b-18311ed6f732",
+        "7eb689df-f779-4723-a9b7-656955d98978"
+      ],
+      "settings": {
+        "title1": "Summer",
+        "title2": "Night Suits",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": true,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/summer-night-suits",
+        "button_position": "top"
+      }
+    },
+    "68c33a46-c30e-4b8a-84b9-d80dacac4a04": {
+      "type": "circular-image-grid",
+      "blocks": {
+        "92774282-274e-4445-aec9-b275fa7c6f5e": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Fine_Linen_1.png",
+            "block_two_subtitle": "Fine",
+            "title": "Linen",
+            "second_block_url": "https:\/\/amala.earth\/collections\/childrens-2-15-years?f_Material=Linen"
+          }
+        },
+        "8ff10c40-b5fb-49fa-ad25-3e5a8b8cdd3e": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Natural_Bamboo_1.png",
+            "block_two_subtitle": "Natural",
+            "title": "Bamboo",
+            "second_block_url": "https:\/\/amala.earth\/collections\/childrens-2-15-years?f_Material=Bamboo"
+          }
+        },
+        "8a6d3a3c-94c0-4179-ad43-af8efd49d07b": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/GOTS_certified_Cotton_1.png",
+            "block_two_subtitle": "GOTS Certified",
+            "title": "Cotton",
+            "second_block_url": "https:\/\/amala.earth\/collections\/childrens-2-15-years?f_Material=GOTS+Certified+Organic+Cotton"
+          }
+        },
+        "2e909473-ebc0-45b7-a5fa-7463a5a4b3ba": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Handmade_Crochet_1.png",
+            "block_two_subtitle": "Handwoven",
+            "title": "Crochet",
+            "second_block_url": "https:\/\/amala.earth\/collections\/childrens-2-15-years?f_Material=Crochet"
+          }
+        },
+        "dfe64664-5b98-41cd-85ad-d3bfffba4906": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Cotton_Muslin_1.png",
+            "block_two_subtitle": "Cotton",
+            "title": "Muslin",
+            "second_block_url": "https:\/\/amala.earth\/collections\/childrens-2-15-years?f_Material=Muslin"
+          }
+        },
+        "88258eae-41cf-4183-8762-a32eb51d4bc0": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Wood_2.png",
+            "block_two_subtitle": "Reclaimed",
+            "title": "Wood",
+            "second_block_url": "https:\/\/amala.earth\/collections\/childrens-2-15-years?f_Material=Wood"
+          }
+        },
+        "9498bd5e-cb81-49b2-8bb3-ba9f7c4ca19d": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Plantable_Seed_paper_1.png",
+            "block_two_subtitle": "Plantable",
+            "title": "Stationery",
+            "second_block_url": "https:\/\/amala.earth\/collections\/stationery?f_Type=Pens+and+Pencils,Stationary+Kit,Notebook+and+Artbooks,Sheets+and+Papers,DIY+Kits,Pens+And+Pencils"
+          }
+        },
+        "8da60efe-7020-4864-85da-93994fd29308": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/baby_non-toxic.png",
+            "block_two_subtitle": "Non-Toxic",
+            "title": "Cleaners",
+            "second_block_url": "https:\/\/amala.earth\/collections\/conscious-family?f_Type=Home+Cleaners+%26+Essentials,Detergents+%26+Fabric+Conditioners"
+          }
+        },
+        "57ff8aac-d518-41e4-b337-6627f65f383e": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/100_pure_cotton_1.png",
+            "block_two_subtitle": "Pure",
+            "title": "Cotton",
+            "second_block_url": "https:\/\/amala.earth\/collections\/childrens-2-15-years?f_Material=Cotton"
+          }
+        }
+      },
+      "block_order": [
+        "92774282-274e-4445-aec9-b275fa7c6f5e",
+        "8ff10c40-b5fb-49fa-ad25-3e5a8b8cdd3e",
+        "8a6d3a3c-94c0-4179-ad43-af8efd49d07b",
+        "2e909473-ebc0-45b7-a5fa-7463a5a4b3ba",
+        "dfe64664-5b98-41cd-85ad-d3bfffba4906",
+        "88258eae-41cf-4183-8762-a32eb51d4bc0",
+        "9498bd5e-cb81-49b2-8bb3-ba9f7c4ca19d",
+        "8da60efe-7020-4864-85da-93994fd29308",
+        "57ff8aac-d518-41e4-b337-6627f65f383e"
+      ],
+      "settings": {
+        "subtitle": "",
+        "title": ""
+      }
+    },
+    "599fb9d5-a3b4-4dd1-a141-eef20c6845ef": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "6b5cf1b3-b2dc-40e6-8307-9487c653665f": {
+          "type": "Product",
+          "settings": {
+            "product": "pink-white-organic-cotton-windy-dress"
+          }
+        },
+        "c60e6769-0f2e-4a23-bda9-c6dca76f17ac": {
+          "type": "Product",
+          "settings": {
+            "product": "love-the-world-today-cotton-top-and-shorts-set-for-kids-grey-c24d5f1112-160123"
+          }
+        },
+        "04c9d2e5-90e5-48fa-aa1d-6f78d9ee986b": {
+          "type": "Product",
+          "settings": {
+            "product": "saltpetre-organic-cotton-hat-for-kids-blue-spacc-kht-cham-13922"
+          }
+        },
+        "e2123251-4e21-4179-a5ca-cf98866c0a99": {
+          "type": "Product",
+          "settings": {
+            "product": "bhaakur-cotton-quilt-for-kids-blue-pg-f0b-15922"
+          }
+        },
+        "c681f11a-ed11-4839-8f6f-4518914d9838": {
+          "type": "Product",
+          "settings": {
+            "product": "masaya-cotton-baby-cot-sheet-beige-msycss007fbeige-221222"
+          }
+        },
+        "77fd30f6-7039-489c-b5d1-ea93f2ba57f5": {
+          "type": "Product",
+          "settings": {
+            "product": "milky-white-dotted-handloom-cotton-dress"
+          }
+        },
+        "e5c71f4c-9ece-4007-9f05-d0726ff0a62e": {
+          "type": "Product",
+          "settings": {
+            "product": "pureclothco-organic-cotton-dress-for-girls-baby-frock-blue-yellow-o023-frk-6m-1yr-251022"
+          }
+        },
+        "a016db69-3833-433e-80b3-c68bfd338abc": {
+          "type": "Product",
+          "settings": {
+            "product": "nestle-in-a-teepee-cotton-play-tent-house-for-kids-teepee-grey-yellow-ikattipi1-61022"
+          }
+        },
+        "14130e83-6507-434f-b50b-e3373c61191b": {
+          "type": "Product",
+          "settings": {
+            "product": "white-red-organic-cotton-flower-printed-dress"
+          }
+        },
+        "3b627a98-e96a-4567-a46b-b999aff61fbb": {
+          "type": "Product",
+          "settings": {
+            "product": "100-organic-cotton-mint-printed-storage-baskets"
+          }
+        },
+        "688c4a65-86c2-42f4-9334-ed326693da45": {
+          "type": "Product",
+          "settings": {
+            "product": "nestle-in-a-teepee-cotton-kids-cushion-lion-mane-cushion-black-white-mane1-61022"
+          }
+        },
+        "b64a0e63-5167-4ddc-87e6-a545db26fa90": {
+          "type": "Product",
+          "settings": {
+            "product": "footprints-organic-cotton-socks-for-kids-multicolour-pack-of-3-fp9to12p3colorstripe-16922"
+          }
+        },
+        "c08f83b7-f2d8-485f-8371-5393fdf26dd3": {
+          "type": "Product",
+          "settings": {
+            "product": "pureclothco-organic-cotton-hair-clips-for-girls-hair-bow-acc-knt-red-blu-251022"
+          }
+        },
+        "7f93e4de-8586-40c8-9e23-9fb584271163": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "100-organic-cotton-sky-blue-fern-quilted-cot-bumper"
+          }
+        },
+        "13e2cc4d-7f23-41e9-aa75-a1f8a1037324": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "organic-muslin-shirt-jogger-pants-set-floral-print"
+          }
+        }
+      },
+      "block_order": [
+        "6b5cf1b3-b2dc-40e6-8307-9487c653665f",
+        "c60e6769-0f2e-4a23-bda9-c6dca76f17ac",
+        "04c9d2e5-90e5-48fa-aa1d-6f78d9ee986b",
+        "e2123251-4e21-4179-a5ca-cf98866c0a99",
+        "c681f11a-ed11-4839-8f6f-4518914d9838",
+        "77fd30f6-7039-489c-b5d1-ea93f2ba57f5",
+        "e5c71f4c-9ece-4007-9f05-d0726ff0a62e",
+        "a016db69-3833-433e-80b3-c68bfd338abc",
+        "14130e83-6507-434f-b50b-e3373c61191b",
+        "3b627a98-e96a-4567-a46b-b999aff61fbb",
+        "688c4a65-86c2-42f4-9334-ed326693da45",
+        "b64a0e63-5167-4ddc-87e6-a545db26fa90",
+        "c08f83b7-f2d8-485f-8371-5393fdf26dd3",
+        "7f93e4de-8586-40c8-9e23-9fb584271163",
+        "13e2cc4d-7f23-41e9-aa75-a1f8a1037324"
+      ],
+      "settings": {
+        "title1": "GOTS-certified",
+        "title2": "cotton",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/childrens-2-15-years?f_Material=GOTS+Certified+Organic+Cotton",
+        "button_position": "top"
+      }
+    },
+    "9c0d2410-3e35-4443-b688-84f68b77ba3d": {
+      "type": "slider-show",
+      "blocks": {
+        "template--16633809273076__9c0d2410-3e35-4443-b688-84f68b77ba3d-167629271572dde810-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/scroll_2.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/scroll_banner_mobile_2.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/weekend-activity-essentials"
+          }
+        },
+        "template--16633809273076__9c0d2410-3e35-4443-b688-84f68b77ba3d-167629271572dde810-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/scroll_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/scroll_banner_mobile_1.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/school-ready"
+          }
+        },
+        "5cabe262-97dd-41d1-9d00-e7b9c641f057": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/scroll_3.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/scroll_banner_mobile_3.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/return-gifts"
+          }
+        }
+      },
+      "block_order": [
+        "template--16633809273076__9c0d2410-3e35-4443-b688-84f68b77ba3d-167629271572dde810-0",
+        "template--16633809273076__9c0d2410-3e35-4443-b688-84f68b77ba3d-167629271572dde810-1",
+        "5cabe262-97dd-41d1-9d00-e7b9c641f057"
+      ],
+      "settings": {
+        "edge_to_edge": false,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "089b474d-a86c-4be9-9f4a-d7397f72f572": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "a71c6302-3818-4718-bb26-2c9099aa7807": {
+          "type": "Product",
+          "settings": {
+            "product": "taal-mell-gift-for-kids-paper-seed-pen-pencils-set-of-10-tmecostationery-cgr-191022"
+          }
+        },
+        "4c90e8a5-af91-4fff-9ad7-4bce80af97bc": {
+          "type": "Product",
+          "settings": {
+            "product": "elrhino-gift-for-kids-yellow-notebook-with-hardbound-banana-bark-cover-100-pages-nb-thari-m-yg-4-5x8-cgr-191022"
+          }
+        },
+        "5a88b57a-95c0-46d9-b8c2-d6263890b240": {
+          "type": "Product",
+          "settings": {
+            "product": "nestle-in-a-teepee-christmas-gifts-canvas-play-tent-house-for-kids-teepee-off-white-conetipi12-chr-051222"
+          }
+        },
+        "2a98602e-50f2-47c1-889a-52c89a517b59": {
+          "type": "Product",
+          "settings": {
+            "product": "upcyclers-lab-gift-for-kids-alphabets-flash-cards-ul-001-21722"
+          }
+        },
+        "d43b3dc1-8420-4fed-982a-457aed462960": {
+          "type": "Product",
+          "settings": {
+            "product": "birch-and-bug-wooden-toys-for-kids-ring-stacker-toy-bbrs0101-051222"
+          }
+        },
+        "c40d1367-1417-4833-9f4c-497b06757f27": {
+          "type": "Product",
+          "settings": {
+            "product": "summer-edition-nature-gift-box-set-of-12"
+          }
+        },
+        "86b80b4a-32a5-441d-a464-f82f044d0633": {
+          "type": "Product",
+          "settings": {
+            "product": "pure-cotton-macrame-diy-craft-kit-table-coasters-off-white"
+          }
+        },
+        "7209e7ca-9b26-43e6-8e41-415e93b28fe8": {
+          "type": "Product",
+          "settings": {
+            "product": "shumee-gifts-for-children-hand-carved-shape-shifter-stamp-exp-in-ihd-ss-w-3yr-0046-cgr-191022"
+          }
+        },
+        "7391d3b4-fda4-4e90-914d-0b056e8b279e": {
+          "type": "Product",
+          "settings": {
+            "product": "shumee-gifts-for-children-jobset-playing-cards-puz-in-ihd-js-w-3yr-0014-cgr-191022"
+          }
+        },
+        "e3b2f705-c46c-4404-8b53-4096575bb25c": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "recycled-paper-pencils-with-plantable-seeds"
+          }
+        }
+      },
+      "block_order": [
+        "a71c6302-3818-4718-bb26-2c9099aa7807",
+        "4c90e8a5-af91-4fff-9ad7-4bce80af97bc",
+        "5a88b57a-95c0-46d9-b8c2-d6263890b240",
+        "2a98602e-50f2-47c1-889a-52c89a517b59",
+        "d43b3dc1-8420-4fed-982a-457aed462960",
+        "c40d1367-1417-4833-9f4c-497b06757f27",
+        "86b80b4a-32a5-441d-a464-f82f044d0633",
+        "7209e7ca-9b26-43e6-8e41-415e93b28fe8",
+        "7391d3b4-fda4-4e90-914d-0b056e8b279e",
+        "e3b2f705-c46c-4404-8b53-4096575bb25c"
+      ],
+      "settings": {
+        "title1": "Birthday gifts",
+        "title2": "and returns",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": true,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/childrens-gifts-and-returns",
+        "button_position": "top"
+      }
+    },
+    "5197c485-96a4-4d12-a1d7-a756d4b39fe6": {
+      "type": "highlighted-brands",
+      "settings": {
+        "select_your_heading1": "Highlighted",
+        "select_your_heading2": "brand",
+        "highlighted_brands_desktop": "shopify:\/\/shop_images\/highlighted_brand_-_desktop_8b507e2a-d1de-44a4-81eb-8d342652f9ea.png",
+        "highlighted_brands": "shopify:\/\/shop_images\/highlighted_brand-mobile_b3d41721-9046-4a27-9cc5-c3ff69904843.png",
+        "title": "Miko Lolo",
+        "anchor_text": "Explore the brand",
+        "url_link": "https:\/\/amala.earth\/collections\/Miko-Lolo"
+      }
+    },
+    "c0308d8b-0365-4681-af50-ffdc0d63c61f": {
+      "type": "brands-we-love",
+      "blocks": {
+        "7fb470c1-d504-4423-ab2b-72f354eb4a0b": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/toy_trunk_web.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/toy_trunk_mobile.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/Toy-Trunk"
+          }
+        },
+        "de9e2fc9-e677-44bc-8769-843d2d77d09b": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/earthy_tweens_web.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/earthy_tweens_mobile.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/conscious-family?f_Brand=Obori"
+          }
+        },
+        "38234968-9399-4c2a-8f06-53fecc26273e": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_716.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_706.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/conscious-family?f_Brand=PlumCheeks"
+          }
+        },
+        "e54f33f8-ccee-4ced-a94d-5c20d751f656": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_722.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_720.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/conscious-family?f_Brand=Liz+Jacob"
+          }
+        },
+        "8491926f-84ac-42be-af37-ad2adf1deff1": {
+          "type": "brands",
+          "disabled": true,
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/1_3_5427c3c5-0e9e-4d7f-99f4-f139e2f994ee.jpg",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_709.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/conscious-family?f_Brand=PureCloth.co"
+          }
+        },
+        "318abb6b-bcc3-459f-9b9a-bb4c3073b889": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_714.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_703_de7c738c-709f-488e-9f67-a618618fcdb3.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/conscious-family?f_Brand=Deer+Life"
+          }
+        },
+        "c86d9ee4-a443-4369-987f-17c8856e99ad": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_711_1.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_711_a0799f50-34ee-4e23-b1ce-fe793b5f2d16.png",
+            "brands_link": "https:\/\/amala.ehttps\/\/amala.earth\/collections\/conscious-family?f_Brand=Tribe+Kidsarth\/collections\/nigh-nigh"
+          }
+        },
+        "3bcd13ce-366a-4263-8e53-b0d47815bf1a": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_628_1_01480793-c2db-411f-963b-a720c805aab5.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_705.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/conscious-family?f_Brand=Fairies+Forever"
+          }
+        },
+        "16891b45-c1cc-4ea3-8a15-0e45471fd314": {
+          "type": "brands",
+          "disabled": true,
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Logo_1_1_2ca5abc4-fdc6-4751-a0f4-a6ad2b2df872.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_701_6c5df34d-5af3-4587-81d5-ffb05807413e.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/conscious-family?f_Brand=Mr.Brat"
+          }
+        },
+        "075c9c70-fab8-4cd0-98a8-7c382ae22770": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_712_1.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_712_72c65345-6164-4c18-91f6-ca8604fb9533.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/conscious-family?f_Brand=Khela"
+          }
+        }
+      },
+      "block_order": [
+        "7fb470c1-d504-4423-ab2b-72f354eb4a0b",
+        "de9e2fc9-e677-44bc-8769-843d2d77d09b",
+        "38234968-9399-4c2a-8f06-53fecc26273e",
+        "e54f33f8-ccee-4ced-a94d-5c20d751f656",
+        "8491926f-84ac-42be-af37-ad2adf1deff1",
+        "318abb6b-bcc3-459f-9b9a-bb4c3073b889",
+        "c86d9ee4-a443-4369-987f-17c8856e99ad",
+        "3bcd13ce-366a-4263-8e53-b0d47815bf1a",
+        "16891b45-c1cc-4ea3-8a15-0e45471fd314",
+        "075c9c70-fab8-4cd0-98a8-7c382ae22770"
+      ],
+      "settings": {
+        "heading_one": "Brands",
+        "heading_two": "we love",
+        "btn_text": "",
+        "url_link": ""
+      }
+    },
+    "a7ea0487-7e3a-4b47-a708-8bb88a506e59": {
+      "type": "blog-posts-carousel",
+      "blocks": {
+        "f97b7cdf-bff0-48a9-8c92-f5f16852b186": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/5_Benefits_of_Warm_And_Soft_Baby_Quilts.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/5-benefits-of-warm-and-soft-baby-quilts",
+            "title": "5 Benefits of Warm And Soft Baby Quilts"
+          }
+        },
+        "49bc4d51-8a54-4fa6-9506-b04db4416416": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Why_are_Wooden_Toys_Better_for_Your_Children.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/childrens-day-gifts-wooden-toys-for-all-round-development",
+            "title": "Why are Wooden Toys Better for Your Children?"
+          }
+        },
+        "e030cd63-9da3-4563-864d-74b6b6e62a30": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/5_Reasons_Why_Copper_Water_Bottles_are_Good_For_Children.jpg",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/5-reasons-why-copper-water-bottles-are-good-for-children",
+            "title": "5 Reasons Why Copper Water Bottles are Good For Children"
+          }
+        },
+        "d755903b-8620-4fbd-a113-8404281f35f1": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Introduce_Your_Child_to_Eco-Friendly_Living_With_Plantable_Pencils.jpg",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/introduce-your-child-to-eco-friendly-living-with-plantable-pencils",
+            "title": "Introduce Your Child to Eco-Friendly Living With Plantable Pencils"
+          }
+        },
+        "f7883cfd-14da-4a4b-80f6-5418ecdf8110": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/The_Best_Sustainable_Christmas_Gifts_for_Kids_Gift_Ideas_by_Age.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/the-best-sustainable-christmas-gifts-for-kids-gift-ideas-by-age",
+            "title": "The Best Sustainable Christmas Gifts for Kids — Gift Ideas by Age"
+          }
+        },
+        "e3bbb9f0-8c3b-4247-9abe-80373ac4a94c": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Beat_The_Back-To-School_Office_Blues_With_Sustainable_and_Plantable_Stationery.jpg",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/beat-the-back-to-school-office-blues-with-sustainable-and-plantable-stationery",
+            "title": "Beat The Back-To-School\/Office Blues With Sustainable and Plantable Stationery"
+          }
+        },
+        "2e4f2e1f-0b41-4e0a-81c4-87c6000e864a": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Sustainable_and_comfortable_ethnic_clothes_to_dress_your_kids_in_this_festive_season_1.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/sustainable-and-comfortable-ethnic-clothes-to-dress-your-kids-in-this-festive-season",
+            "title": "Sustainable and comfortable ethnic clothes to dress your kids in this festive season"
+          }
+        },
+        "49516805-9e1a-42ad-9b61-decac6393814": {
+          "type": "blog",
+          "disabled": true,
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/A_Modern_Man_s_Guide_To_Sustainable_Fashion.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/a-modern-mans-guide-to-sustainable-fashion",
+            "title": "A Modern Man's Guide To Sustainable Fashion"
+          }
+        }
+      },
+      "block_order": [
+        "f97b7cdf-bff0-48a9-8c92-f5f16852b186",
+        "49bc4d51-8a54-4fa6-9506-b04db4416416",
+        "e030cd63-9da3-4563-864d-74b6b6e62a30",
+        "d755903b-8620-4fbd-a113-8404281f35f1",
+        "f7883cfd-14da-4a4b-80f6-5418ecdf8110",
+        "e3bbb9f0-8c3b-4247-9abe-80373ac4a94c",
+        "2e4f2e1f-0b41-4e0a-81c4-87c6000e864a",
+        "49516805-9e1a-42ad-9b61-decac6393814"
+      ],
+      "settings": {
+        "heading_one": "Recent",
+        "heading_two": "blogposts",
+        "view_text": "",
+        "url_link": ""
+      }
+    },
+    "41014bac-ea4d-4b27-8c03-52bef9fe55fe": {
+      "type": "landing-page-video",
+      "blocks": {
+        "9770c9aa-57b2-42fb-89ed-b39443515912": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/t4ZGDcBjmFU",
+            "image": "shopify:\/\/shop_images\/Western_Clothing_for_kids___Handwoven___Amala_Earth.jpg",
+            "title": "Western Clothing for kids | Handwoven",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "8ca15421-ba45-427c-8190-b359be131cbc": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/d--90VAy5BE",
+            "image": "shopify:\/\/shop_images\/Cotton_and_Chanderi_Ethnic_Wear_for_Kids___Amala_Earth.jpg",
+            "title": "Cotton and Chanderi Ethnic Wear for Kids",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "84bb1ceb-f46d-41d6-b337-d61f90609772": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/SX9uQw3k0Ws",
+            "image": "shopify:\/\/shop_images\/Handcrafted_Toys_and_Games_Online___Amala_Earth.jpg",
+            "title": "Handcrafted Toys and Games",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "5f1064ed-195f-4b18-a177-6f541dc17ce1": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/1Q5RJqGxzyo",
+            "image": "shopify:\/\/shop_images\/Zero_Waste_Festive_Decorations_for_Sustainable_Living___Amala_Earth_4b7ff266-866e-49de-8b3c-a7b5ae091f00.png",
+            "title": "Zero Waste Festive Decorations for Sustainable Living | Amala Earth",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "880899d6-ad8c-49e9-933e-aada13519725": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/1kSFAadikCE",
+            "image": "shopify:\/\/shop_images\/Minimising_Waste_at_Home_-_Live_Session_with_Vani_Murthy_and_Jia_Singh_6d337a1b-32f8-45cb-a99a-5bd47ac78934.png",
+            "title": "Minimising Waste at Home - Live Session with Vani Murthy and Jia Singh",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "d268173e-ca11-4947-ae9b-86b41bdc16fe": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtube.com\/watch?v=fYCTdaYSUHE",
+            "image": "shopify:\/\/shop_images\/Table_Set_up_with_Ceramics____Amala_Earth_7f715d24-8fc2-486c-949b-ed8a50514957.png",
+            "title": "Table Set up with Ceramics \/\/ Amala Earth",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "c52f85ba-2571-42d6-9870-78e1d05413a4": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/hhhRgHsamAE",
+            "title": "Shop Organic, Chemical-free Men's Grooming Products Range - Amala Earth.",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        }
+      },
+      "block_order": [
+        "9770c9aa-57b2-42fb-89ed-b39443515912",
+        "8ca15421-ba45-427c-8190-b359be131cbc",
+        "84bb1ceb-f46d-41d6-b337-d61f90609772",
+        "5f1064ed-195f-4b18-a177-6f541dc17ce1",
+        "880899d6-ad8c-49e9-933e-aada13519725",
+        "d268173e-ca11-4947-ae9b-86b41bdc16fe",
+        "c52f85ba-2571-42d6-9870-78e1d05413a4"
+      ],
+      "settings": {
+        "video_title1": "Video",
+        "video_title2": "blogs",
+        "btn_text": "",
+        "url_link": ""
+      }
+    }
+  },
+  "order": [
+    "3108d945-e6f1-4cac-ad5a-f4750aee1a9f",
+    "61f7040d-d6dd-4c16-995e-97080aec75db",
+    "bada255c-fb18-4904-bf25-a00d26fe238d",
+    "festival-landings-page",
+    "3ce8650f-ee5d-4ec2-8c3e-43b4fde36a2f",
+    "3fd0b9df-9aa3-4319-8dc4-c003453423f1",
+    "2f4d0c0f-2350-4e1f-aea8-27b9c52bfe92",
+    "108fed49-0a8d-411d-806f-bbb1c7d077e3",
+    "7e727bcc-acea-4a68-bf80-27371ae6d902",
+    "64e78f4f-6188-4f56-aaf7-5d0e4a609add",
+    "97da3e3e-44c7-40a3-accb-3e904f9161e1",
+    "6ca49bea-c3d2-40e4-a5ea-10204662055a",
+    "7148a954-d95c-483a-9aed-5f0f443b2075",
+    "2bd14898-d935-4349-9e83-f4372de58bf7",
+    "a1604e37-d042-44e6-9b55-11075920a20e",
+    "a990a89b-9b9c-4947-9e57-bf2beedba00c",
+    "68c33a46-c30e-4b8a-84b9-d80dacac4a04",
+    "599fb9d5-a3b4-4dd1-a141-eef20c6845ef",
+    "9c0d2410-3e35-4443-b688-84f68b77ba3d",
+    "089b474d-a86c-4be9-9f4a-d7397f72f572",
+    "5197c485-96a4-4d12-a1d7-a756d4b39fe6",
+    "c0308d8b-0365-4681-af50-ffdc0d63c61f",
+    "a7ea0487-7e3a-4b47-a708-8bb88a506e59",
+    "41014bac-ea4d-4b27-8c03-52bef9fe55fe"
+  ]
+}

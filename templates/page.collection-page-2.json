@@ -1,0 +1,267 @@
+{
+  "sections": {
+    "about-us-banner": {
+      "type": "about-us-banner",
+      "settings": {
+        "about-banner-desk": "shopify:\/\/shop_images\/Group_765_1_1.png",
+        "about-banner-mob": "shopify:\/\/shop_images\/Group_765_1.jpg",
+        "banner-heading": "About Us",
+        "banner-content": "<p>Amala Earth is a way of conscious living built on a foundation rooted deeply in Indian origin. It brings together brands, products, experts and individuals that create a world where all living beings can co-exist harmoniously.<br\/> We hope to make this a collective movement that will be the driving force in creating change in consumer behavioural patterns by providing alternative solutions for a sustainable lifestyle.<\/p>"
+      }
+    },
+    "vision-and-mission": {
+      "type": "about-us-vision-mission",
+      "blocks": {
+        "399e9538-2428-47c6-b89d-1586ab49557a": {
+          "type": "parent-content",
+          "settings": {
+            "container-background-color": "#aa9379",
+            "container-url": "",
+            "vision-heading": "OUR VISION",
+            "vision-content": "<p>To create an earth-friendly community that connects and inspires a way of conscious living.<\/p>",
+            "container-mob-leaves": "shopify:\/\/shop_images\/Mask_group_1_6673684f-60f7-43ca-b123-9efbd1b678f6.png"
+          }
+        },
+        "121c1699-c826-421b-be9c-94f248911067": {
+          "type": "parent-content",
+          "settings": {
+            "container-background-color": "#9f7356",
+            "container-url": "#",
+            "vision-heading": "OUR MISSION",
+            "vision-content": "<p>To build a platform where responsible choices are supported and transformation is embraced.<\/p>",
+            "container-mob-leaves": "shopify:\/\/shop_images\/Mask_group_3_feea4029-8d84-4a41-985e-152f505f0b02.png"
+          }
+        },
+        "4ff3cfc0-dde5-4112-83e6-16b62de596b0": {
+          "type": "parent-content",
+          "settings": {
+            "container-background-color": "#795750",
+            "container-url": "#",
+            "vision-heading": "OUR PHILOSOPHY",
+            "vision-content": "<p>To create, promote and sustain everything earth-friendly.<\/p>",
+            "container-mob-leaves": "shopify:\/\/shop_images\/Mask_group_4.png"
+          }
+        },
+        "046038dd-0b1a-4111-93c6-e5c02c5eab6f": {
+          "type": "parent-content",
+          "settings": {
+            "container-background-color": "#8c593f",
+            "container-url": "",
+            "vision-heading": "OUR ESSENCE",
+            "vision-content": "<p>AMALA is derived from the Sanskrit word amal which means ‘clean and pure’. <\/p>",
+            "container-mob-leaves": "shopify:\/\/shop_images\/Mask_group_5.png"
+          }
+        }
+      },
+      "block_order": [
+        "399e9538-2428-47c6-b89d-1586ab49557a",
+        "121c1699-c826-421b-be9c-94f248911067",
+        "4ff3cfc0-dde5-4112-83e6-16b62de596b0",
+        "046038dd-0b1a-4111-93c6-e5c02c5eab6f"
+      ],
+      "settings": {
+        "container-leaves": "shopify:\/\/shop_images\/Group_764_cfe8eaf5-ed84-4b5d-8796-bd7c3a784683.png"
+      }
+    },
+    "ca52ee8c-787c-45c0-901d-80cac697e7e7": {
+      "type": "about-us-founders-note",
+      "settings": {
+        "background_desk_img": "shopify:\/\/shop_images\/Group_765_2.png",
+        "background_mob_img": "shopify:\/\/shop_images\/Group_765_3_1.png",
+        "founder_primary_title": "Note from",
+        "founder_seconday_title": "our founder",
+        "description_para_1": "<p>Over the last two decades, life has presented a journey of discovery in the way I live my life. From being a young businesswoman to then becoming a young mother, I found myself reflecting even more deeply on my lifestyle. Having always observed my choices, I felt the time had come to share what I had learnt.<\/p>",
+        "description_couted_text": "Transformation is a word that’s close to my heart",
+        "description_para_2": "<p>Slowly but steadily, I explored natural fabrics for my wardrobe, eco-friendly choices for my children, biomaterials for my home, and a wholesome, vegetarian diet to nourish myself and my family. Quite effortlessly, this gave fire to a little spiritual light from within which gave me a deep sense of peace - a connection to myself and a rekindling of my relationship with nature. The transformation had happened.Eventually came the calling, Amala Earth, inspired by the Amala Consciousness which is the ultimate form of purity in Buddhism. Through the world of Amala Earth, I seek to gently introduce the way to conscious living and grow a community of like-minded people.<\/p>",
+        "founder_signature": "<p>-Gunjan Jindal Poddar<\/p><p>Founder, Amala Earth<\/p>",
+        "founder_signature_mob": "<p>-Gunjan Jindal Poddar <\/p><p>Founder, Amala Earth<\/p>"
+      }
+    },
+    "20b227b1-b984-4ff7-bd44-d9edd4cfe622": {
+      "type": "about-us-philosophy",
+      "settings": {
+        "philos_primary_title": "Our",
+        "philos_secondary_title": "Philosophy",
+        "left_content_primary_title": "THE BUTTERFLY EFFECT",
+        "left_content_secondary_title": "Just when the caterpillar thought the world was over, it became a butterfly.",
+        "right_philosophy_content": "<p>Amala Earth believes that there is nothing more powerful than the beauty of transformation. Once developed with its wings fully spread, it is said that the fluttering of a butterfly's wing in one part of the world can cause a cascade of events in another. Like the butterfly effect, our goal is to inspire communities to embrace change and aim for a better world.Small earth-friendly actions can create a difference, but when an entire community makes changes, the effects have far-reaching benefits.<\/p>",
+        "butterfly_image_mob": "shopify:\/\/shop_images\/Group_765_4.png"
+      }
+    },
+    "30f0cc79-e906-4120-aff7-f560f025de6b": {
+      "type": "about-us-ethos",
+      "blocks": {
+        "e40ef839-13bd-4446-a15e-c3f408adcac2": {
+          "type": "card-content",
+          "settings": {
+            "ethos_card_title": "Authentic",
+            "ethos_card_content": "Amala Earth bases itself on the promise to be true and to do our best to offer authenticity to the consumer. We aspire to build the trust of our fellow consumers as a reliable and authentic brand. Ethical practices strengthen the authenticity of our mission.",
+            "card_main_img": "shopify:\/\/shop_images\/Rectangle_135_3_f3ad528f-574a-40a6-8d8e-dfb3d6de26e6.jpg",
+            "card_mob_img": "shopify:\/\/shop_images\/Rectangle_135_5.jpg",
+            "tiles_color_mob": "",
+            "tiles_color_desk": ""
+          }
+        },
+        "bb9ee91f-1de7-485d-81fd-763efb6d1b37": {
+          "type": "card-content",
+          "settings": {
+            "ethos_card_title": "Responsible",
+            "ethos_card_content": "We believe in inspiring and introducing our partners to choose responsibly, whether they are involved in producing, packaging or buying consumer products. We encourage informed choices, ensuring a positive impact on the environment.",
+            "card_main_img": "shopify:\/\/shop_images\/Rectangle_196_1_8f56cf5a-66c3-4f16-b43e-9b28682b89fa.jpg",
+            "card_mob_img": "shopify:\/\/shop_images\/Rectangle_136.jpg",
+            "tiles_color_mob": "",
+            "tiles_color_desk": ""
+          }
+        },
+        "4c19619f-9f45-43bd-8995-3abb09d875b3": {
+          "type": "card-content",
+          "settings": {
+            "ethos_card_title": "Local",
+            "ethos_card_content": "Buying local supports communities at ground level. This is our way of connecting to our Indian heritage and reducing our carbon footprint. The world, today, demands that we look closely at our consumer behavioural patterns across all boards.",
+            "card_main_img": "shopify:\/\/shop_images\/Rectangle_135_1.png",
+            "card_mob_img": "shopify:\/\/shop_images\/Rectangle_137.jpg",
+            "tiles_color_mob": "",
+            "tiles_color_desk": ""
+          }
+        },
+        "5d434b0a-94e8-43d0-95d9-34dd832aedb6": {
+          "type": "card-content",
+          "settings": {
+            "ethos_card_title": "Trustworthy",
+            "ethos_card_content": "Our selection parameters allow us to identify entrepreneurs that are dedicated to delivering quality and building trust whilst moving towards a more earth-friendly approach. We support and guide sellers to work towards a more transparent and trustworthy process in terms of their product and packaging.",
+            "card_main_img": "shopify:\/\/shop_images\/Rectangle_196_2_3cd26d30-90fe-4777-b4f7-99f279ac8a48.jpg",
+            "card_mob_img": "shopify:\/\/shop_images\/Rectangle_138.jpg",
+            "tiles_color_mob": "",
+            "tiles_color_desk": ""
+          }
+        },
+        "87fa2bfe-55ec-49eb-aee1-14c2b58857a5": {
+          "type": "card-content",
+          "settings": {
+            "ethos_card_title": "Conscious Community",
+            "ethos_card_content": "Amala Earth supports and promotes local farmers, artisans, craftsmen and other community clusters who produce handcrafted, handwoven and handmade products. By supporting community-driven and sustainable practices, we all become responsible for the health of our community and the environment.",
+            "card_main_img": "shopify:\/\/shop_images\/Rectangle_196_3_d85d953a-856b-44b3-9141-979eeb4ad47f.jpg",
+            "card_mob_img": "shopify:\/\/shop_images\/Rectangle_139.jpg",
+            "tiles_color_mob": "",
+            "tiles_color_desk": ""
+          }
+        }
+      },
+      "block_order": [
+        "e40ef839-13bd-4446-a15e-c3f408adcac2",
+        "bb9ee91f-1de7-485d-81fd-763efb6d1b37",
+        "4c19619f-9f45-43bd-8995-3abb09d875b3",
+        "5d434b0a-94e8-43d0-95d9-34dd832aedb6",
+        "87fa2bfe-55ec-49eb-aee1-14c2b58857a5"
+      ],
+      "settings": {
+        "ethos_primary_title": "Our",
+        "ethos_secondary_title": "Ethos",
+        "card_design_img": "shopify:\/\/shop_images\/Vector.png"
+      }
+    },
+    "b711ec37-0e22-4c6b-a362-cd41200fd77f": {
+      "type": "about-us-chooseourbrands",
+      "blocks": {
+        "febf83de-b8d1-42b8-9a5d-121e59498a34": {
+          "type": "grid",
+          "settings": {
+            "show_icon": true,
+            "icon_position": "left",
+            "hide_icon": false,
+            "title": "Community-led"
+          }
+        },
+        "3fd4dcfc-b946-4615-8b55-96594b683beb": {
+          "type": "grid",
+          "settings": {
+            "show_icon": true,
+            "icon_position": "left",
+            "hide_icon": false,
+            "title": "Diversity in teams"
+          }
+        },
+        "72de2127-dd65-44cb-a909-86da5e57cd2a": {
+          "type": "grid",
+          "settings": {
+            "show_icon": true,
+            "icon_position": "right",
+            "hide_icon": false,
+            "title": "Small-batch production"
+          }
+        },
+        "2cd4cc92-2704-41df-a0da-0da875494b2c": {
+          "type": "grid",
+          "settings": {
+            "show_icon": true,
+            "icon_position": "right",
+            "hide_icon": false,
+            "title": "Locally sourced"
+          }
+        },
+        "58740af9-d098-4540-a160-b3870cc96c7c": {
+          "type": "grid",
+          "settings": {
+            "show_icon": true,
+            "icon_position": "left",
+            "hide_icon": false,
+            "title": "Natural materials"
+          }
+        },
+        "ce83015e-89b4-4531-96b4-7e6fef8cc1aa": {
+          "type": "grid",
+          "settings": {
+            "show_icon": true,
+            "icon_position": "left",
+            "hide_icon": false,
+            "title": "Wellness-oriented"
+          }
+        },
+        "1fed4b80-c8d5-4f8c-bc1b-c113d998a89a": {
+          "type": "grid",
+          "settings": {
+            "show_icon": true,
+            "icon_position": "right",
+            "hide_icon": false,
+            "title": "Biodegradable packaging"
+          }
+        },
+        "4f68cd78-bd01-4423-bc73-8ee006651337": {
+          "type": "grid",
+          "settings": {
+            "show_icon": true,
+            "icon_position": "right",
+            "hide_icon": false,
+            "title": "Certified & Licensed"
+          }
+        }
+      },
+      "block_order": [
+        "febf83de-b8d1-42b8-9a5d-121e59498a34",
+        "3fd4dcfc-b946-4615-8b55-96594b683beb",
+        "72de2127-dd65-44cb-a909-86da5e57cd2a",
+        "2cd4cc92-2704-41df-a0da-0da875494b2c",
+        "58740af9-d098-4540-a160-b3870cc96c7c",
+        "ce83015e-89b4-4531-96b4-7e6fef8cc1aa",
+        "1fed4b80-c8d5-4f8c-bc1b-c113d998a89a",
+        "4f68cd78-bd01-4423-bc73-8ee006651337"
+      ],
+      "settings": {
+        "subtitle": "How we choose",
+        "title": "our brands",
+        "score_image": "shopify:\/\/shop_images\/butterfly_score_8_dc966f26-6ce5-4a14-b41d-e5e78755fe3e.png",
+        "text": "<p>Amala Earth has developed a mechanism through which each brand gets a score out of 8 based on the following parameters. The system is designed to provide a holistic view of each brand. It helps consumers make informed decisions about what they buy and use.<\/p>",
+        "block_icon": "shopify:\/\/shop_images\/Group_739.png",
+        "background": "#f2e5d8"
+      }
+    }
+  },
+  "order": [
+    "about-us-banner",
+    "vision-and-mission",
+    "ca52ee8c-787c-45c0-901d-80cac697e7e7",
+    "20b227b1-b984-4ff7-bd44-d9edd4cfe622",
+    "30f0cc79-e906-4120-aff7-f560f025de6b",
+    "b711ec37-0e22-4c6b-a362-cd41200fd77f"
+  ]
+}

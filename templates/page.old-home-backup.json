@@ -1,0 +1,2340 @@
+{
+  "sections": {
+    "main": {
+      "type": "slideshow",
+      "blocks": {
+        "ad246efc-4a14-4ff1-b819-6e2f0c0bbb94": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/earth-friendly-living-desktop_7bb32d7b-4ea2-4bf2-8799-f7d7ca5234d5.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/earth-friendly-living-mobile_bd72a7a1-c5ca-4c68-8e3d-cdfd0a87c2ab.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 24,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "rgba(0,0,0,0)",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/pages\/joyful-home",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "2fd63799-d7ef-4136-8a96-7534842ffa30": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/numbers-desktop_3c589e58-c3de-4c7b-9f4b-ba32c05dd2b9.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/numbers-mobile_74b4f44a-b896-43d7-bfe6-0f513e7ac074.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 32,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "rgba(0,0,0,0)",
+            "button_text": "",
+            "link": "shopify:\/\/collections\/all",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "9a2ad273-a77f-4656-b243-4a3cbc9792d0": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner_website_2_9ebade5d-81c7-4d21-8b26-845553f2c84f.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/holi-homepage_571efc3d-30a8-470a-a232-e1aaae745eed.png",
+            "show_overlay": false,
+            "overlay_opacity": 0,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "rgba(0,0,0,0)",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/holi",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "bd799e42-0074-45e2-80a7-a138364c0e56": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Springs_fashion_Banner_1920x600_bed46a49-f0f2-4620-9e08-43c524593815_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/springs_fashion_mobile_banner_2501d4bd-4a9b-4774-8e62-f2ec39b13f1a.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 0,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "rgba(0,0,0,0)",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/women",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "bcb88a58-382e-49d3-99e7-e88b754fc2f9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Immunity_v1_Banner_1920x600_195b56fe-f0d2-4583-b666-2bbec4ac2b61_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Immunity_v1_mobile_banner_fddfcb96-a912-456e-9de0-b0297cfba32c.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 0,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "rgba(0,0,0,0)",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/mindful-eating",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "82e458e2-8717-4069-ad3b-8d688d7c9040": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner_website_micro_666f5e88-e0d2-4801-95ee-3a824f394124_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/home_page_mobile_size_banner_7432e5cd-4b69-4604-8875-e0afab92913f.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "rgba(0,0,0,0)",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/pages\/joyful-home",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "ad246efc-4a14-4ff1-b819-6e2f0c0bbb94",
+        "2fd63799-d7ef-4136-8a96-7534842ffa30",
+        "9a2ad273-a77f-4656-b243-4a3cbc9792d0",
+        "bd799e42-0074-45e2-80a7-a138364c0e56",
+        "bcb88a58-382e-49d3-99e7-e88b754fc2f9",
+        "82e458e2-8717-4069-ad3b-8d688d7c9040"
+      ],
+      "settings": {
+        "edge_to_edge": true,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "ece3b768-7ba0-402d-ab0a-592c5ae6e125": {
+      "type": "image-with-text-overlay-grid",
+      "blocks": {
+        "3b3a06a2-9ea7-40af-986a-2966cf592046": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/home_819e79ff-952d-46fc-90b2-0adcaf59a682.png",
+            "title": "Joyful Home",
+            "url": "https:\/\/amala.earth\/pages\/joyful-home?param=hm_micr_bnr"
+          }
+        },
+        "ccfa3427-0bb2-40c8-a950-afc247a31e69": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/holi_widget_98c2ad07-c595-412c-86b8-56d21a0681a2.png",
+            "title": "Holi",
+            "url": "https:\/\/amala.earth\/pages\/holi"
+          }
+        },
+        "d21f83c1-d9b7-487f-a77b-4c3343a2a577": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1_4662e450-f049-4498-8174-75f93b54bc5d.png",
+            "title": "Mindful Eating",
+            "url": "https:\/\/amala.earth\/pages\/mindful-eating"
+          }
+        },
+        "98b13e19-5429-4c03-8542-04956b40e627": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/beauty_1_f23fc1a7-ea14-4020-9bbd-ea7bef658003.png",
+            "title": "Ethical Beauty",
+            "url": "https:\/\/amala.earth\/pages\/ethical-beauty"
+          }
+        },
+        "76b3bdac-a3f0-4eae-9fd2-2169b0e009dd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Concern_tiles_2_6617cabd-7da6-43bf-a2a7-508c891a4ad8.png",
+            "title": "Responsible Fashion",
+            "url": "https:\/\/amala.earth\/pages\/responsible-fashion-women"
+          }
+        },
+        "51457723-f554-4b0c-b2b2-136fe286d980": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/kids_168468b3-83a9-4074-be89-0387138fa40a.png",
+            "title": "Baby",
+            "url": "https:\/\/amala.earth\/pages\/baby"
+          }
+        },
+        "767b7a5e-2aed-4b42-b9d5-e8ed873765fb": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/kids_1_8e388be8-975a-4817-840c-9a43bfbc86ff.png",
+            "title": "Kids",
+            "url": "https:\/\/amala.earth\/pages\/children"
+          }
+        },
+        "61bd9b2f-3868-4696-86cc-61a0ddfa0b1b": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/wedding_1_948c0a4f-f480-41dd-8086-11895fa43d48.png",
+            "title": "Wedding",
+            "url": "https:\/\/amala.earth\/pages\/wedding"
+          }
+        },
+        "3bd5aa1b-52cd-4ab1-9ce6-e3213096d9b8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/category-images-Offers_595f8068-33ba-43f4-bd7c-23c3eca5fd6e.png",
+            "title": "Earth-Friendly Offers",
+            "url": "https:\/\/amala.earth\/pages\/offer"
+          }
+        },
+        "ade47eca-af3a-4df6-82fb-8d6df5b767dd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gifting_f020e75a-78a7-4f57-9386-a6fb088bd834.jpg",
+            "title": "Purposeful Gifting",
+            "url": "https:\/\/amala.earth\/pages\/gift"
+          }
+        },
+        "ad0d9ea4-9798-4d66-8d5c-b30633395a74": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/valentines_day_05903864-cce4-4793-a9cc-ea924b87c200.jpg",
+            "title": "Valentine's Day",
+            "url": "https:\/\/amala.earth\/collections\/valentines-day"
+          }
+        }
+      },
+      "block_order": [
+        "3b3a06a2-9ea7-40af-986a-2966cf592046",
+        "ccfa3427-0bb2-40c8-a950-afc247a31e69",
+        "d21f83c1-d9b7-487f-a77b-4c3343a2a577",
+        "98b13e19-5429-4c03-8542-04956b40e627",
+        "76b3bdac-a3f0-4eae-9fd2-2169b0e009dd",
+        "51457723-f554-4b0c-b2b2-136fe286d980",
+        "767b7a5e-2aed-4b42-b9d5-e8ed873765fb",
+        "61bd9b2f-3868-4696-86cc-61a0ddfa0b1b",
+        "3bd5aa1b-52cd-4ab1-9ce6-e3213096d9b8",
+        "ade47eca-af3a-4df6-82fb-8d6df5b767dd",
+        "ad0d9ea4-9798-4d66-8d5c-b30633395a74"
+      ],
+      "settings": {}
+    },
+    "60963403-817d-4f52-83df-ce4b162e8803": {
+      "type": "shop-by-category",
+      "blocks": {
+        "template--16694580314356__60963403-817d-4f52-83df-ce4b162e8803-167655043141142d4a-0": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mindfuleating_0200f106-c05d-4e21-8b10-2b38f254bd24.png",
+            "subtitle": "Mindful",
+            "title": "Eating",
+            "link": "shopify:\/\/collections\/mindful-eating"
+          }
+        },
+        "template--16694580314356__60963403-817d-4f52-83df-ce4b162e8803-167655043141142d4a-1": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ethicalbeauty_ec6814fc-88b1-4cf2-a474-540a0443c982.png",
+            "subtitle": "Ethical",
+            "title": "Beauty",
+            "link": "shopify:\/\/collections\/ethical-beauty"
+          }
+        },
+        "template--16694580314356__60963403-817d-4f52-83df-ce4b162e8803-167655043141142d4a-2": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/JoyfulHome_18d1397c-ca82-4b93-ab58-1779c8501402.png",
+            "subtitle": "Joyful",
+            "title": "Home",
+            "link": "shopify:\/\/collections\/joyful-home"
+          }
+        },
+        "template--16694580314356__60963403-817d-4f52-83df-ce4b162e8803-167655043141142d4a-3": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Responsiblefashion_e23504ea-6753-4df8-a6b7-9b0ecec8d35d.png",
+            "subtitle": "Responsible",
+            "title": "Fashion",
+            "link": "shopify:\/\/collections\/responsible-fashion"
+          }
+        },
+        "template--16694580314356__60963403-817d-4f52-83df-ce4b162e8803-167655043141142d4a-4": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Consciousfamily_c4c61e21-9066-4287-9d85-097659855d0b.png",
+            "subtitle": "Conscious",
+            "title": "Family",
+            "link": "shopify:\/\/collections\/conscious-family"
+          }
+        },
+        "template--16694580314356__60963403-817d-4f52-83df-ce4b162e8803-167655043141142d4a-5": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Other_96dc379d-70f3-473e-b5bf-6f1be807d327.png",
+            "subtitle": "Feel-good",
+            "title": "Others",
+            "link": "shopify:\/\/collections\/feel-good-others"
+          }
+        },
+        "e3bf9805-bb86-412e-9333-c2de4141d481": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/holistic_wellness_1_7448c7bb-e6e1-4545-89ec-15132a9c97bf.png",
+            "subtitle": "Holistic",
+            "title": "Wellness",
+            "link": "shopify:\/\/collections\/holistic-wellness"
+          }
+        },
+        "1db1987f-42a0-441e-a2cb-d674ea5e1ea2": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3_1_1_f63cff7d-24af-42a3-98d5-cbf0fc64e0dc.png",
+            "subtitle": "",
+            "title": "Gifts",
+            "link": "shopify:\/\/collections\/gifts"
+          }
+        },
+        "531051e0-f478-4b23-8900-398a6e4cf898": {
+          "type": "collection",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rakhee_Icon_Mobile_Menu_f2be4963-75b6-4e5a-9760-e5fc773b9ec7.jpg",
+            "subtitle": "",
+            "title": "Festivals",
+            "link": "shopify:\/\/collections\/festivals"
+          }
+        }
+      },
+      "block_order": [
+        "template--16694580314356__60963403-817d-4f52-83df-ce4b162e8803-167655043141142d4a-0",
+        "template--16694580314356__60963403-817d-4f52-83df-ce4b162e8803-167655043141142d4a-1",
+        "template--16694580314356__60963403-817d-4f52-83df-ce4b162e8803-167655043141142d4a-2",
+        "template--16694580314356__60963403-817d-4f52-83df-ce4b162e8803-167655043141142d4a-3",
+        "template--16694580314356__60963403-817d-4f52-83df-ce4b162e8803-167655043141142d4a-4",
+        "template--16694580314356__60963403-817d-4f52-83df-ce4b162e8803-167655043141142d4a-5",
+        "e3bf9805-bb86-412e-9333-c2de4141d481",
+        "1db1987f-42a0-441e-a2cb-d674ea5e1ea2",
+        "531051e0-f478-4b23-8900-398a6e4cf898"
+      ],
+      "settings": {
+        "title": "Shop by Category",
+        "link_title": "View all",
+        "link": "shopify:\/\/collections\/all",
+        "show_collection_title": true
+      }
+    },
+    "8da51749-4f2e-46b4-9cc2-7436a3535a8c": {
+      "type": "home-discount-banner",
+      "settings": {
+        "banner_text": "<p>Register to get<strong> 10% OFF <\/strong>on your first order<strong> ACROSS ALL THE CATEGORIES<\/strong><\/p>",
+        "banner_button": "Get 10% OFF",
+        "message_1": "<p>Thanks, order now and <strong>GET 10% <\/strong>instant discount.<\/p>",
+        "message_2": "<p>Thanks, didn’t ordered anything yet? Order now and <strong>GET 10% <\/strong>instant discount.<\/p>",
+        "message_3": "<p>Thanks, order now and <strong>GET 5% <\/strong>instant discount.<\/p>",
+        "bg_color": "#f2e4d7",
+        "color": "#945539"
+      }
+    },
+    "56645500-801d-4f15-88a0-3825787e99e4": {
+      "type": "amala-recommend",
+      "blocks": {
+        "2c8301b0-0278-4f6a-b985-85f5f2c459aa": {
+          "type": "Product",
+          "settings": {
+            "product": "oziss-100-cotton-t-shirt-crew-neck-cloud-white-cmrhs-solid-white-xs-w-cmrhs-solid-white-s-w-cmrhs-solid-white-m-w-cmrhs-solid-white-l-w-cmrhs-solid-white-xl-w-cmrhs-solid-white-xxl-w-18123"
+          }
+        },
+        "6a3c439f-6554-4588-9404-480d309ef458": {
+          "type": "Product",
+          "settings": {
+            "product": "patrika-sunshine-paper-diary-journal-self-love-theme-80-pages-pl-slj-130423"
+          }
+        },
+        "2eda3867-c387-4528-b882-6e1031f9f46e": {
+          "type": "Product",
+          "settings": {
+            "product": "sanctuary-living-linen-table-runner-printed-teal-green-t112-05-011-10423"
+          }
+        },
+        "806beae3-d5cd-4154-b3b3-28ecebb02c4d": {
+          "type": "Product",
+          "settings": {
+            "product": "the-herb-boutique-soap-bar-cucumber-neem-handmade-100-g-hms003-70423"
+          }
+        },
+        "6495e60a-c732-47ef-b4ab-52ba91936583": {
+          "type": "Product",
+          "settings": {
+            "product": "ziddi-cotton-thread-earrings-tassels-pom-poms-blue-pink-zid_er28-310323"
+          }
+        },
+        "7c9d5658-ccdc-46f6-9ccd-b42f4e74cc9d": {
+          "type": "Product",
+          "settings": {
+            "product": "plumcheeks-cotton-pajama-pants-for-kids-yellow-green-blwr3-060423"
+          }
+        },
+        "2182ba72-7ce6-484e-abb6-44e61fb3a294": {
+          "type": "Product",
+          "settings": {
+            "product": "satsuma-deodorant-cream-citrus-grove-30-g-cg-deo-90922"
+          }
+        },
+        "309b1604-33dc-4076-a3a6-e26d18c0cabd": {
+          "type": "Product",
+          "settings": {
+            "product": "mint-ginger-lemon-squash"
+          }
+        },
+        "adb90cc7-9066-45f7-b069-fd134054a148": {
+          "type": "Product",
+          "settings": {
+            "product": "something-sustainable-organic-cotton-dress-natural-dyed-blue-ombre-sos76-s-90323"
+          }
+        },
+        "931b4779-b6c8-406e-983a-e4c2f8100bf8": {
+          "type": "Product",
+          "settings": {
+            "product": "the-modern-tail-pet-grooming-ticked-off-dog-shampoo-80-g-dg-sh-tio-301122"
+          }
+        },
+        "06e2a2d8-2ffd-472b-948f-626b76f5ae0d": {
+          "type": "Product",
+          "settings": {
+            "product": "sanctuary-living-linen-cushion-cover-printed-yellow-c112-03-009-10423"
+          }
+        },
+        "497d6d48-5a14-450f-b9be-f0d6dc60bc4f": {
+          "type": "Product",
+          "settings": {
+            "product": "artless-cotton-linen-shirt-half-sleeves-pink-red-art032-22323"
+          }
+        },
+        "d2e420aa-5816-4c94-be44-e10e57934ed6": {
+          "type": "Product",
+          "settings": {
+            "product": "humanhood-maplitho-paper-fitness-planner-self-care-wellbeing-60-x-2-pages-mbfp-og-13-100123"
+          }
+        },
+        "f9513471-9d5c-4261-aae8-db78fc5b2955": {
+          "type": "Product",
+          "settings": {
+            "product": "plumcheeks-cotton-dress-for-girls-yellow-white-gdrs28-060423"
+          }
+        },
+        "d4c00d5c-6fec-4045-ac9b-1993a83952e4": {
+          "type": "Product",
+          "settings": {
+            "product": "toy-trunk-learning-toys-for-kids-wooden-lacing-beads-beige-blue-set-of-12-ttda004-10423"
+          }
+        },
+        "a21809ce-2da4-4459-a25f-26b997524021": {
+          "type": "Product",
+          "settings": {
+            "product": "earthy-route-lyocell-linen-shirt-half-sleeve-green-white-hsrc0401s-14323"
+          }
+        },
+        "b4120ca7-5963-404b-a80e-e43f1707b95b": {
+          "type": "Product",
+          "settings": {
+            "product": "my-pooja-box-wooden-palo-santo-sticks-spiritual-holy-wood-mpb4828-030423"
+          }
+        }
+      },
+      "block_order": [
+        "2c8301b0-0278-4f6a-b985-85f5f2c459aa",
+        "6a3c439f-6554-4588-9404-480d309ef458",
+        "2eda3867-c387-4528-b882-6e1031f9f46e",
+        "806beae3-d5cd-4154-b3b3-28ecebb02c4d",
+        "6495e60a-c732-47ef-b4ab-52ba91936583",
+        "7c9d5658-ccdc-46f6-9ccd-b42f4e74cc9d",
+        "2182ba72-7ce6-484e-abb6-44e61fb3a294",
+        "309b1604-33dc-4076-a3a6-e26d18c0cabd",
+        "adb90cc7-9066-45f7-b069-fd134054a148",
+        "931b4779-b6c8-406e-983a-e4c2f8100bf8",
+        "06e2a2d8-2ffd-472b-948f-626b76f5ae0d",
+        "497d6d48-5a14-450f-b9be-f0d6dc60bc4f",
+        "d2e420aa-5816-4c94-be44-e10e57934ed6",
+        "f9513471-9d5c-4261-aae8-db78fc5b2955",
+        "d4c00d5c-6fec-4045-ac9b-1993a83952e4",
+        "a21809ce-2da4-4459-a25f-26b997524021",
+        "b4120ca7-5963-404b-a80e-e43f1707b95b"
+      ],
+      "settings": {
+        "title": "Amala Earth Recommends",
+        "subtitle": "Amala Earth",
+        "logged_in": false,
+        "products_count": 20,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "",
+        "link_url": "",
+        "button_position": "top",
+        "old_section_id": "16270390826b873c97"
+      }
+    },
+    "e5f54565-4274-49f0-aa5f-c330985d6da2": {
+      "type": "featured-collection-list",
+      "blocks": {
+        "template--16694580314356__e5f54565-4274-49f0-aa5f-c330985d6da2-16765504221bf73160-0": {
+          "type": "collection",
+          "settings": {
+            "title": "Recyclable Packaging",
+            "image": "shopify:\/\/shop_images\/recycle_faa60890-5080-4893-b5bd-a9370766a5c4.png",
+            "link": "https:\/\/amala.earth\/collections\/recyclable-packaging"
+          }
+        },
+        "template--16694580314356__e5f54565-4274-49f0-aa5f-c330985d6da2-16765504221bf73160-1": {
+          "type": "collection",
+          "settings": {
+            "title": "Locally Sourced",
+            "image": "shopify:\/\/shop_images\/nav-locally-sourced_4347c4e3-1285-4775-9c52-880ea95da937.png",
+            "link": "https:\/\/amala.earth\/collections\/locally-sourced"
+          }
+        },
+        "template--16694580314356__e5f54565-4274-49f0-aa5f-c330985d6da2-16765504221bf73160-2": {
+          "type": "collection",
+          "settings": {
+            "title": "Zero Waste",
+            "image": "shopify:\/\/shop_images\/Zero_waste_1_db0d1a8c-3ba8-498b-8c3c-531a240cb75a.png",
+            "link": "https:\/\/amala.earth\/collections\/zero-waste"
+          }
+        },
+        "template--16694580314356__e5f54565-4274-49f0-aa5f-c330985d6da2-16765504221bf73160-3": {
+          "type": "collection",
+          "settings": {
+            "title": "Fair Trade",
+            "image": "shopify:\/\/shop_images\/nav-coumnity_100417ad-aa0e-4f59-9fcc-ec3af3c0f266.png",
+            "link": "https:\/\/amala.earth\/collections\/fair-trade"
+          }
+        },
+        "template--16694580314356__e5f54565-4274-49f0-aa5f-c330985d6da2-16765504221bf73160-4": {
+          "type": "collection",
+          "settings": {
+            "title": "Artisan Led",
+            "image": "shopify:\/\/shop_images\/astrin_089a17c6-cef8-4272-b638-2eeff0c28220.png",
+            "link": "https:\/\/amala.earth\/collections\/artisan-led"
+          }
+        },
+        "template--16694580314356__e5f54565-4274-49f0-aa5f-c330985d6da2-16765504221bf73160-5": {
+          "type": "collection",
+          "settings": {
+            "title": "Cruelty Free",
+            "image": "shopify:\/\/shop_images\/Cruelty_free_0da03692-9217-48f1-8f55-ef22708fb721.png",
+            "link": "https:\/\/amala.earth\/collections\/cruelty-free"
+          }
+        },
+        "c35205a7-4486-4697-b0cc-7e5391320817": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "title": "Organic",
+            "image": "shopify:\/\/shop_images\/Untitled-2_2204170d-0b7b-4fe6-9fd5-f0a0f512e771.png",
+            "link": "shopify:\/\/collections\/organic"
+          }
+        },
+        "24daf9a0-94a4-4e38-97dc-98ff73a1839b": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "title": "Eco-friendly",
+            "image": "shopify:\/\/shop_images\/ecofrindly_df09017c-8bab-46cc-8bea-ddad927ef5be.png",
+            "link": "shopify:\/\/collections\/eco-friendly"
+          }
+        },
+        "033acc58-88f6-4d33-9d67-ced3401ae1de": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "title": "Community-driven",
+            "image": "shopify:\/\/shop_images\/nav-coumnity_100417ad-aa0e-4f59-9fcc-ec3af3c0f266.png",
+            "link": "shopify:\/\/collections\/community-driven"
+          }
+        },
+        "a3084f35-2531-46c0-a24c-d2ba45128262": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "title": "Ethically Sourced",
+            "image": "shopify:\/\/shop_images\/Ethically_Sourced_3804ef54-72a6-4556-8c53-9545ab52da57.png",
+            "link": "shopify:\/\/collections\/ethically-sourced"
+          }
+        },
+        "ec6f4fab-eab2-4e6b-a94f-e9560d338a12": {
+          "type": "subscription-widget",
+          "settings": {
+            "title": "Get 10% OFF",
+            "content": "<p>on your first purchase. Subscribe now and start your earth-friendly journey today!<\/p>",
+            "button_text": "Get 10% OFF",
+            "thank_you_title": "Thank You!",
+            "thank_you_content": "<p>Use coupon code <strong>WELCOME10<\/strong> and <strong>get 10% discount<\/strong>.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16694580314356__e5f54565-4274-49f0-aa5f-c330985d6da2-16765504221bf73160-0",
+        "template--16694580314356__e5f54565-4274-49f0-aa5f-c330985d6da2-16765504221bf73160-1",
+        "template--16694580314356__e5f54565-4274-49f0-aa5f-c330985d6da2-16765504221bf73160-2",
+        "template--16694580314356__e5f54565-4274-49f0-aa5f-c330985d6da2-16765504221bf73160-3",
+        "template--16694580314356__e5f54565-4274-49f0-aa5f-c330985d6da2-16765504221bf73160-4",
+        "template--16694580314356__e5f54565-4274-49f0-aa5f-c330985d6da2-16765504221bf73160-5",
+        "c35205a7-4486-4697-b0cc-7e5391320817",
+        "24daf9a0-94a4-4e38-97dc-98ff73a1839b",
+        "033acc58-88f6-4d33-9d67-ced3401ae1de",
+        "a3084f35-2531-46c0-a24c-d2ba45128262",
+        "ec6f4fab-eab2-4e6b-a94f-e9560d338a12"
+      ],
+      "settings": {
+        "title": "Shop by Tags",
+        "subtitle": "Shop by",
+        "link_title": "View all",
+        "link": "shopify:\/\/pages\/all-tags",
+        "show_collection_title": true,
+        "show_all_product": false,
+        "old_section_id": "161174908635c9e8d4"
+      }
+    },
+    "75501b68-cabb-4953-ad7d-5557fcdfa024": {
+      "type": "feature-category-with-image",
+      "blocks": {
+        "b5c4aeb9-46e7-4520-b85b-d251d6b2fd6e": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "product": "21fools-holi-gift-hamper-herbal-gulaal-thandai-powder-gujiya-sweets-set-of-12-21fools-holi-3-070223"
+          }
+        },
+        "e662b6cd-9f8a-4f50-a205-688c29dde137": {
+          "type": "product",
+          "settings": {
+            "product": "ochre-organics-tea-gift-box-whole-leaf-tea-test-tubes-set-of-4-oo-ts-ff-01-161222"
+          }
+        },
+        "d4987431-ee21-400c-920a-bd27e9e41ef3": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "product": "sirohi-by-skilled-samaritan-foundation-holi-gift-hamper-holi-gulal-colour-thandai-powder-set-of-8-sir-holi-s-d4-060223"
+          }
+        },
+        "75ac8ab1-ef1a-4063-af40-4b23f8d18027": {
+          "type": "product",
+          "settings": {
+            "product": "the-skin-pantry-gift-for-bridesmaid-smoothie-face-wash-moisturiser-pack-of-2-tsp-08-023-20060-_wgr-031122"
+          }
+        },
+        "f99236fc-ee40-40cc-aec1-a247f32ad204": {
+          "type": "product",
+          "settings": {
+            "product": "calming-ocean-dough-kit-set-of-17"
+          }
+        },
+        "538a6382-60e6-4365-8c04-269074e3717f": {
+          "type": "product",
+          "settings": {
+            "product": "bella-vita-organic-gifts-for-men-luxury-perfumes-gift-set-for-men-20-ml-set-of-4-3870003433979_gfm-101122"
+          }
+        },
+        "9e9108c6-4fd7-4fd8-b602-dae8fbefd5b8": {
+          "type": "product",
+          "settings": {
+            "product": "taal-mell-gift-for-brother-beige-neem-wood-mens-grooming-kit-set-of-6-tmmengrooming_rkg-13722"
+          }
+        },
+        "5dae3072-7425-4f74-9ac0-fa32e09343bb": {
+          "type": "product",
+          "settings": {
+            "product": "housewarming-gifts-white-ceramic-bowl-set-of-2"
+          }
+        },
+        "d961b23c-f4ed-45b5-9b93-5562aa616d98": {
+          "type": "product",
+          "settings": {
+            "product": "the-bare-bar-beauty-gift-hamper-dh6-311022"
+          }
+        },
+        "142ab964-2b49-4b01-b015-ad251a403c15": {
+          "type": "product",
+          "settings": {
+            "product": "vilvah-store-mens-skincare-gift-set-vl-gs-02191022"
+          }
+        },
+        "8ed3aab6-ad97-4374-a6be-a9b21bba6792": {
+          "type": "product",
+          "settings": {
+            "product": "ilearnngrow-wooden-puzzle-game-for-kids-shape-size-ilgstarpuz-21922"
+          }
+        },
+        "e1bb786e-c3f1-4ec4-9cf1-4173033f5c6b": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "product": "the-india-craft-project-copper-goblet-glasses-set-of-2-cb_fm_g01-9922"
+          }
+        }
+      },
+      "block_order": [
+        "b5c4aeb9-46e7-4520-b85b-d251d6b2fd6e",
+        "e662b6cd-9f8a-4f50-a205-688c29dde137",
+        "d4987431-ee21-400c-920a-bd27e9e41ef3",
+        "75ac8ab1-ef1a-4063-af40-4b23f8d18027",
+        "f99236fc-ee40-40cc-aec1-a247f32ad204",
+        "538a6382-60e6-4365-8c04-269074e3717f",
+        "9e9108c6-4fd7-4fd8-b602-dae8fbefd5b8",
+        "5dae3072-7425-4f74-9ac0-fa32e09343bb",
+        "d961b23c-f4ed-45b5-9b93-5562aa616d98",
+        "142ab964-2b49-4b01-b015-ad251a403c15",
+        "8ed3aab6-ad97-4374-a6be-a9b21bba6792",
+        "e1bb786e-c3f1-4ec4-9cf1-4173033f5c6b"
+      ],
+      "settings": {
+        "collection": "",
+        "products_count": 11,
+        "background": "#f8f4f0",
+        "text_color": "#000000",
+        "title": "Purposeful Gifts",
+        "content": "Unique, thoughtful and handmade products ideal for every occasion.",
+        "show_sold_out": true,
+        "button_background": "#b89c7d",
+        "button_text_color": "#ffffff",
+        "button_text": "See More Products",
+        "button_link": "shopify:\/\/collections\/gifts",
+        "old_section_id": "1631544653cd7e2ad4"
+      }
+    },
+    "dd9c547f-7f2c-451b-ae21-1557a1a8e786": {
+      "type": "recommended-products-homepage",
+      "disabled": true,
+      "settings": {
+        "title": "Recommended Products",
+        "products_count": 10,
+        "min_products": 5,
+        "layout": "vertical",
+        "show_sold_out": false,
+        "stack_products": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": ""
+      }
+    },
+    "54c408ec-5364-4f2d-8c09-a57ad8c41d12": {
+      "type": "collection-list",
+      "disabled": true,
+      "blocks": {
+        "template--16694580314356__54c408ec-5364-4f2d-8c09-a57ad8c41d12-16765503824d240b00-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "aromatherapy",
+            "image": "shopify:\/\/shop_images\/cat-01_a63f9d79-c74a-4849-b66d-a689a92fcf4c.png",
+            "link": ""
+          }
+        },
+        "template--16694580314356__54c408ec-5364-4f2d-8c09-a57ad8c41d12-16765503824d240b00-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "baby-food",
+            "image": "shopify:\/\/shop_images\/car-02_d5883b98-bdb1-4dea-97ff-18873817706a.png",
+            "link": ""
+          }
+        },
+        "template--16694580314356__54c408ec-5364-4f2d-8c09-a57ad8c41d12-16765503824d240b00-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "baby-skin-care",
+            "image": "shopify:\/\/shop_images\/cat-03_cabdc103-5d12-4a7f-b7df-3fd51e91c948.png",
+            "link": ""
+          }
+        },
+        "template--16694580314356__54c408ec-5364-4f2d-8c09-a57ad8c41d12-16765503824d240b00-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "baby-toys-and-games",
+            "image": "shopify:\/\/shop_images\/cat-04_ee744394-e561-4ac9-98a2-38fb9598017d.png",
+            "link": ""
+          }
+        },
+        "template--16694580314356__54c408ec-5364-4f2d-8c09-a57ad8c41d12-16765503824d240b00-4": {
+          "type": "collection",
+          "settings": {
+            "collection": "baby-food",
+            "image": "shopify:\/\/shop_images\/cat-05_a795eb13-33a9-49e4-9736-caba310ff868.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16694580314356__54c408ec-5364-4f2d-8c09-a57ad8c41d12-16765503824d240b00-0",
+        "template--16694580314356__54c408ec-5364-4f2d-8c09-a57ad8c41d12-16765503824d240b00-1",
+        "template--16694580314356__54c408ec-5364-4f2d-8c09-a57ad8c41d12-16765503824d240b00-2",
+        "template--16694580314356__54c408ec-5364-4f2d-8c09-a57ad8c41d12-16765503824d240b00-3",
+        "template--16694580314356__54c408ec-5364-4f2d-8c09-a57ad8c41d12-16765503824d240b00-4"
+      ],
+      "settings": {
+        "title": "Shop by category",
+        "link_title": "View all",
+        "link": "shopify:\/\/collections",
+        "round_images": true,
+        "show_collection_title": true
+      }
+    },
+    "99ac7b04-91f0-4ade-8849-accf050686a1": {
+      "type": "feature-category-with-image",
+      "blocks": {
+        "90e35513-e08a-4738-8cd0-bbe19179d6a5": {
+          "type": "product",
+          "settings": {
+            "product": "reistor-tencel-jacket-ocean-blue-rwtobjass2200973600s1-27722"
+          }
+        },
+        "bc76165e-f333-4ad9-aab1-569afa39d414": {
+          "type": "product",
+          "settings": {
+            "product": "the-slow-studio-brass-bracelet-22k-gold-plated-md20br03-080223"
+          }
+        },
+        "2a19df49-ca3c-4b5d-8798-2ea3e55248fe": {
+          "type": "product",
+          "settings": {
+            "product": "oziss-100-cotton-t-shirt-crew-neck-mustard-cmrhs-solid-mustard-xs-w-cmrhs-solid-mustard-s-w-cmrhs-solid-mustard-m-w-cmrhs-solid-mustard-l-w-cmrhs-solid-mustard-xl-w-cmrhs-solid-mustard-xxl-w-18123"
+          }
+        },
+        "1227d672-85d0-4353-8b7b-aafe172447c7": {
+          "type": "product",
+          "settings": {
+            "product": "the-terra-tribe-organic-cotton-hemp-pants-straight-fit-printed-natural-306-np-16123"
+          }
+        },
+        "48185c2b-a9da-4bc4-9736-2e6385d3303d": {
+          "type": "product",
+          "settings": {
+            "product": "zebein-linen-embroidered-dress-pink-zeb22014-26722"
+          }
+        },
+        "be2e9d92-3982-4971-a455-9c06afe8749e": {
+          "type": "product",
+          "settings": {
+            "product": "with-n-organic-cotton-striped-shirt-white-ar-is-iwg-1922"
+          }
+        },
+        "a5b5e8bf-f244-4b7e-8e2c-452dbdb39c45": {
+          "type": "product",
+          "settings": {
+            "product": "ira-handwoven-cotton-saree-with-jamdani-motifs-light-blue-ira064-5922"
+          }
+        },
+        "035dee96-2696-4858-94c5-1d11ad9effeb": {
+          "type": "product",
+          "settings": {
+            "product": "paio-vegan-leather-block-heels-navy-paio-305-35-160822"
+          }
+        },
+        "4db873f3-51d8-4b2a-8c08-6833555612b8": {
+          "type": "product",
+          "settings": {
+            "product": "shop-staple-linen-slit-dress-adjustable-slit-beige-ss04sdbei-14922"
+          }
+        },
+        "4d36f9b0-592b-4513-8d66-8601d9796a15": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "product": "handcrafted-tangerine-tissue-silk-ensemble-with-dual-toned-silk-chanderi-dupatta"
+          }
+        },
+        "66a41b36-882a-4c8f-97eb-4b62c205321f": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "product": "cotton-flared-dress-white-4"
+          }
+        },
+        "e6776131-736b-4a1d-b511-cad6e547c945": {
+          "type": "product",
+          "settings": {
+            "product": "handspun-tencel-yellow-floral-print-top"
+          }
+        },
+        "4b84ac37-896c-40f4-af99-263d6d11cd57": {
+          "type": "product",
+          "settings": {
+            "product": "saphed-festive-wear-for-women-linen-kurta-set-panelled-pink-051325b-s-m-21122"
+          }
+        }
+      },
+      "block_order": [
+        "90e35513-e08a-4738-8cd0-bbe19179d6a5",
+        "bc76165e-f333-4ad9-aab1-569afa39d414",
+        "2a19df49-ca3c-4b5d-8798-2ea3e55248fe",
+        "1227d672-85d0-4353-8b7b-aafe172447c7",
+        "48185c2b-a9da-4bc4-9736-2e6385d3303d",
+        "be2e9d92-3982-4971-a455-9c06afe8749e",
+        "a5b5e8bf-f244-4b7e-8e2c-452dbdb39c45",
+        "035dee96-2696-4858-94c5-1d11ad9effeb",
+        "4db873f3-51d8-4b2a-8c08-6833555612b8",
+        "4d36f9b0-592b-4513-8d66-8601d9796a15",
+        "66a41b36-882a-4c8f-97eb-4b62c205321f",
+        "e6776131-736b-4a1d-b511-cad6e547c945",
+        "4b84ac37-896c-40f4-af99-263d6d11cd57"
+      ],
+      "settings": {
+        "collection": "",
+        "products_count": 12,
+        "background": "#f8f4f0",
+        "text_color": "#000000",
+        "title": "Responsible Fashion",
+        "content": "Made with upcycled, handwoven, natural fabrics, these clothes are comfortable, high quality and a great choice.",
+        "show_sold_out": true,
+        "button_background": "#b89c7d",
+        "button_text_color": "#ffffff",
+        "button_text": "See more products",
+        "button_link": "shopify:\/\/collections\/responsible-fashion",
+        "old_section_id": "16396342995dc2dc5c"
+      }
+    },
+    "12174198-bf04-4258-8053-ef4081f4022c": {
+      "type": "video-slider",
+      "blocks": {
+        "f57977f7-28b7-466b-91ab-927eb664a241": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/rhfyccVxJQA",
+            "image": "shopify:\/\/shop_images\/video_blogs-1_b22e22a0-ef55-4166-a76d-d6848b559942.jpg",
+            "videoHeading": "Sustainable Gifts at Amala Earth",
+            "expspeaks": false
+          }
+        },
+        "0652c950-8388-4f46-a7c1-d03a908851d1": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/-D3zYochPsU",
+            "image": "shopify:\/\/shop_images\/video_blog_-homepage_86ebe1f8-0a58-44cb-b878-bdc501780c30.jpg",
+            "videoHeading": "Start your Eco Friendly Holi Preparation with Amala Earth | Thandai, Festive Wear, Colors",
+            "expspeaks": false
+          }
+        },
+        "42fb03c5-4b5e-4721-ae68-982d1cbb2ee1": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtube.com\/watch?v=BDLhpbvyn_8",
+            "image": "shopify:\/\/shop_images\/jia_fashion_013ac385-0604-4091-a786-ef38d83300c7.jpg",
+            "videoHeading": "Conscious Fashion | Jewellery | Clothing | Accessories",
+            "expspeaks": false
+          }
+        },
+        "d573e220-84fa-4ef0-89f4-3e6644c4c494": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtube.com\/watch?v=D1cgBtXezcY",
+            "image": "shopify:\/\/shop_images\/Gifting_fc716782-cbb8-45b9-b2ff-815a524bfb1d.jpg",
+            "videoHeading": "Wedding Favours | Sustainable Gifting",
+            "expspeaks": false
+          }
+        },
+        "514a8b25-2cda-4e0b-bcac-ba5208be13dd": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/m0NWlmMFK3g",
+            "image": "shopify:\/\/shop_images\/video_blogs-2_e1ceda7b-5745-4dc2-999f-2e5166f19dfa.jpg",
+            "videoHeading": "Eco-Friendly Holi with Amala Earth",
+            "expspeaks": false
+          }
+        },
+        "d32cf762-f713-497f-9bbb-18fe0d35ee4a": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=VAk7PyPYYMg",
+            "image": "shopify:\/\/shop_images\/Chandni_Kumari_1_dec3c0ad-e1c5-4e93-942c-64eb96335a0e.png",
+            "videoHeading": "Handmade Jewellery | Wedding Jewellery | Vintage Jewellery",
+            "expspeaks": false
+          }
+        },
+        "c46b62db-d035-494f-a5ab-5aa064bfa4f6": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtube.com\/watch?v=0iYwZyVm7N0",
+            "image": "shopify:\/\/shop_images\/Immunity_tea_96f78a79-bdc6-4633-b1f3-3fc12fdfef2f.jpg",
+            "videoHeading": "Video Title",
+            "expspeaks": false
+          }
+        },
+        "68b2361f-a3bc-4a16-85d0-b3dfdd39e473": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtube.com\/watch?v=82yXqjyLd88",
+            "image": "shopify:\/\/shop_images\/Untitled-1_9f9ca5b7-396b-4963-9529-e6fa03af2bb8.jpg",
+            "videoHeading": "Video Title",
+            "expspeaks": false
+          }
+        },
+        "3fc5b3f1-56a1-4b35-ba2e-e7ba2bbf5fc5": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/VCuPjxLrxSY",
+            "image": "shopify:\/\/shop_images\/ankita_cover_1eaaec22-222d-4194-816d-cbae66295f3b.jpg",
+            "videoHeading": "Video Title",
+            "expspeaks": false
+          }
+        },
+        "5188d628-f9c9-44b4-86b9-8ed8ce52fbd2": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/PI5zMfcPEmE",
+            "image": "shopify:\/\/shop_images\/BK1A1403_35d06b6d-3ccc-4467-a240-77414cd178d5.jpg",
+            "videoHeading": "Video Title",
+            "expspeaks": false
+          }
+        },
+        "5abeb03a-cc8c-445f-b0b6-c3ddd28cf8d9": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=XYDKXinPlCI",
+            "image": "shopify:\/\/shop_images\/Foot-Soak-Video-2_7262ec74-a35d-4a39-bb35-6d90b20e76b6.jpg",
+            "videoHeading": "A calming self-care foot soak to include in your weekend ritual",
+            "expspeaks": false
+          }
+        },
+        "19bdc057-0994-48c0-b295-bd234fe0f471": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/OxvU4nfqYJo",
+            "image": "shopify:\/\/shop_images\/2_3_9054aec2-2c7c-41de-843d-22bd3689ac85.png",
+            "videoHeading": "Monsoon Poetry with Mansa Jimmy",
+            "expspeaks": false
+          }
+        },
+        "132edee6-3f39-4f3d-ad34-b84c189ff3e2": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=QTYuBTDxFLE",
+            "image": "shopify:\/\/shop_images\/Intention-2-Cover_fd72e109-6ff7-4e6e-92dd-59684a89688a.png",
+            "videoHeading": "Conscious practices for 2022",
+            "expspeaks": false
+          }
+        },
+        "1ee427d0-f7e6-4165-aed6-308f855ec3d4": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/uiSAWDeOn-U",
+            "image": "shopify:\/\/shop_images\/5_794c1b60-0f2b-43d3-95d6-fd310366e863.jpg",
+            "videoHeading": "Monsoon Poetry with Damini Bhist",
+            "expspeaks": false
+          }
+        },
+        "76e4545f-7d66-4a3d-998a-919336b340be": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/BfJpqBp84Fg",
+            "image": "shopify:\/\/shop_images\/Fitness_to_fun_-_Athleisure_c82e0008-36aa-4e09-956f-1df6fb297e00.jpg",
+            "videoHeading": "Fitness to fun - Athleisure",
+            "expspeaks": false
+          }
+        },
+        "c533ba8e-a598-44d1-ad74-66b4f7f8bdbb": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/MqxU5Hz2jj0",
+            "image": "shopify:\/\/shop_images\/self_care_cover_95fb9328-2a90-4339-9e9a-b5fad0674d0d.jpg",
+            "videoHeading": "Handblocked and Handcrafted",
+            "expspeaks": false
+          }
+        },
+        "aa5b953b-580f-4c46-81f6-951089e89904": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=8t47oyqHc1s",
+            "image": "shopify:\/\/shop_images\/Shonali_cover-01_f54a7b07-ac4f-4281-aac3-e29cf53d6968.jpg",
+            "videoHeading": "Kid-friendly superfoods - Nutritionist and gut health expert, Shonali Sabherwal",
+            "expspeaks": false
+          }
+        },
+        "bf29d234-7c5f-4367-944a-0375db27b7e3": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=mHvenLO3G3k",
+            "image": "shopify:\/\/shop_images\/Intentions-Cover_f737e437-4ebb-4064-96f0-1ef13d467ac9.jpg",
+            "videoHeading": "Listen to that inner voice this NEW Year 2022",
+            "expspeaks": false
+          }
+        },
+        "4c894eae-e4f2-440b-b662-b24201787ca9": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=IWw_XyQLLDo",
+            "image": "shopify:\/\/shop_images\/Scent-Video-Cover_daaacaed-efeb-42b6-9120-488c6a572666.jpg",
+            "videoHeading": "The Best Natural and Organic Fragrances",
+            "expspeaks": false
+          }
+        },
+        "72363758-cf87-4727-8cdc-b0ef87407926": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=vowWTR9-XL8",
+            "image": "shopify:\/\/shop_images\/Christmas-Box-Cover_21830198-ac8c-4d01-89b7-2d596d8b7f55.jpg",
+            "videoHeading": "The Amala Earth Mindful Gift Box",
+            "expspeaks": false
+          }
+        },
+        "9b89eb6d-a26b-4910-b4d7-fec1aae558cc": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=grQ0FQCXFAY",
+            "image": "shopify:\/\/shop_images\/Manya-cover_388dff67-8d1e-4e9f-a23a-4ff57a84e534.png",
+            "videoHeading": "Making Christmas Cards Using Natural Colours with Ms. Manya Cherrabuddi",
+            "expspeaks": false
+          }
+        },
+        "09b7da1b-27c0-4170-ba12-aa3261d9cef2": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=xc1w_SSBAEQ",
+            "image": "shopify:\/\/shop_images\/cover-hot-chocolate-video_dcf61f13-dc44-4df5-8bd2-d3e8e711964e.jpg",
+            "videoHeading": "Thick, creamy, spiced hot chocolate is just what the season ordered ☕️",
+            "expspeaks": false
+          }
+        },
+        "7173f4d8-7bac-475b-b352-b0103e5984a5": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=4HRW7ms1gCI",
+            "image": "shopify:\/\/shop_images\/Cover-Amala-Candles-Video_1b2ac9c9-91e1-4d47-a477-8f2ac0d6cd1c.jpg",
+            "videoHeading": "100% Soy Wax Candles For Christmas",
+            "expspeaks": false
+          }
+        },
+        "2ce5f5df-b84c-4f2b-a3c3-9408f129517d": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=ciw77_sqaq0",
+            "image": "shopify:\/\/shop_images\/Cover-Christmas_Calendars_21aa398b-8fd5-4fc3-b0ab-d74b7f398033.jpg",
+            "videoHeading": "Seed paper calendars are the best gift for your loved ones to start the New Year",
+            "expspeaks": false
+          }
+        },
+        "9c54625c-5319-46d9-9861-562e8bdd6b93": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=dRQtU5bRl1A",
+            "image": "shopify:\/\/shop_images\/Cover-image-Upcycled-Heart_ea292587-51e5-4b4d-90c2-39d68cc69978.jpg",
+            "videoHeading": "Best Eco-friendly Gifts For Christmas | Upcycled Hearts",
+            "expspeaks": false
+          }
+        },
+        "692f5645-9b55-4746-a88b-4168a641d477": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=82yXqjyLd88",
+            "image": "shopify:\/\/shop_images\/Chywanprash-cover_d1f91c7c-58f0-4aaa-94cf-de917f8feaf0.jpg",
+            "videoHeading": "Handmade Natural Chywanprash to Boost Your Immunity",
+            "expspeaks": false
+          }
+        },
+        "932d820c-fc05-40fe-8410-9dcc6fafd04a": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=1ARvKobDTx8",
+            "image": "shopify:\/\/shop_images\/cover-vasudha_333f8b62-bf61-4564-bf17-956023a31185.jpg",
+            "videoHeading": "Building Skincare & Selfcare Rituals with Vasudha Rai",
+            "expspeaks": false
+          }
+        },
+        "74154cd4-935d-41b6-abd5-7d45b32aa78e": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=IumCBSbopBo",
+            "image": "shopify:\/\/shop_images\/Slik-Linen_aa78505e-f144-4813-bc58-ed633e1f6983.jpg",
+            "videoHeading": "Naturally Dyed Earth-Friendly Silk Sarees for Winter Festivities",
+            "expspeaks": false
+          }
+        },
+        "a4f66288-d52f-43a1-ab35-51d13f128c1a": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=DruND7J6GWY",
+            "image": "shopify:\/\/shop_images\/Unwind_d6c404e3-2828-4c3c-80a9-57aadb01f398.jpg",
+            "videoHeading": "Unwinding Rituals in Linen Sarees",
+            "expspeaks": false
+          }
+        },
+        "adcd80f1-950f-4231-b5a4-989ad49bcfb2": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=P0RdbauHesM",
+            "image": "shopify:\/\/shop_images\/hemp-seed-cover_c47ab344-3cea-48c0-9f0c-e6dd3015c98f.jpg",
+            "videoHeading": "Buy Hemp Products Online in India",
+            "expspeaks": false
+          }
+        },
+        "c8be093b-ed42-48f9-83ca-26961c96de69": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=ioRCn4wEhVY",
+            "image": "shopify:\/\/shop_images\/Hemp_fabric_1325e601-16b7-45a8-82c3-91df329fbc79.jpg",
+            "videoHeading": "Why Wear Hemp? The Benefits Of Wearing Hemp Clothing",
+            "expspeaks": false
+          }
+        },
+        "7e373ab6-dae7-478d-91cd-0cf86dff5354": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=ROK0WJwK2no",
+            "image": "shopify:\/\/shop_images\/Kids_-_mobile_banner_5dc347e3-3726-4aea-8d27-aa9f2d8dec5a.jpg",
+            "videoHeading": "Eco-friendly Gifts for Babies and Kids That Moms Will Love Too",
+            "expspeaks": false
+          }
+        },
+        "5a891841-9075-4774-a981-bded35a09bb6": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=Ov36FVJ1DIw",
+            "image": "shopify:\/\/shop_images\/Ladoo_Cover_Image_13d23817-01a7-4c3f-8592-fa945075d6cf.jpg",
+            "videoHeading": "Dates Ladoos Recipe for a healthy festive season!",
+            "expspeaks": false
+          }
+        },
+        "05bdef93-a9ce-4851-a585-e8791ed693cd": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=1Q5RJqGxzyo",
+            "image": "shopify:\/\/shop_images\/250822298_4784062318305555_4073082512983222532_n_557cd91d-8d0e-4d83-be76-27c99491652c.jpg",
+            "videoHeading": "Low waste style Diwali decoration - Live session Sneha Singhi with Mala Barua",
+            "expspeaks": false
+          }
+        },
+        "2ad38f3f-a9c6-4c03-8720-cf0d932271b7": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=VYrIr2-xflA",
+            "image": "shopify:\/\/shop_images\/Amala-Earth-Gift-Boxes_397e3f45-a7c5-4c1a-99dc-230038364bbb.jpg",
+            "videoHeading": "Amala Earth Eco-friendly Diwali Gift Boxes",
+            "expspeaks": false
+          }
+        },
+        "ff81d05b-a43c-4957-829f-07d1fe6eae04": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=T3EUAtFdvDU",
+            "image": "shopify:\/\/shop_images\/Live_cover_62d6d7f8-5b1d-42f6-8209-c610365c7616.jpg",
+            "videoHeading": "Live with co founder & head designer of P-tal, Ms. Kirti Goel",
+            "expspeaks": true
+          }
+        },
+        "01fcc968-736b-43e8-9774-fece4024fba6": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=bT8en0RZjPQ",
+            "image": "shopify:\/\/shop_images\/Plantable-Anar_eb85aeac-2fe4-45d2-91ac-4623d6be9af1.jpg",
+            "videoHeading": "Plantable seed crackers - Eco-friendly Diwali Gifts",
+            "expspeaks": false
+          }
+        },
+        "1ed5547d-51d0-4bd2-9084-03ea7da7112b": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=4X80TvbcmSc",
+            "image": "shopify:\/\/shop_images\/Candle-Cover_bddb5844-c266-490f-ad8d-f143246a547f.jpg",
+            "videoHeading": "Amala Earth - 100% organic and pure soy wax candles",
+            "expspeaks": false
+          }
+        },
+        "06eeb2da-790e-407e-9bec-3ef996814778": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=B4rVGPAGedk",
+            "image": "shopify:\/\/shop_images\/Diwal-Gift-Box-Plantable-Ganesha-img_1d19cc25-3d2e-48cb-a12d-a8647445c09c.jpg",
+            "videoHeading": "Sow-and-grow handcrafted Ganesha idols",
+            "expspeaks": false
+          }
+        },
+        "3e7acfab-3b05-4ba5-86e6-7b902f93c2b6": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=fEJr--i6H7k",
+            "image": "shopify:\/\/shop_images\/Oili-routine_6af70f6d-d2bc-4d7b-9bd4-c031175672b8.jpg",
+            "videoHeading": "Hair oiling routine - Organic hair oils and natural hair care products",
+            "expspeaks": false
+          }
+        },
+        "50c504b1-92dc-4203-92fd-fe0433a9f7ec": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=1kSFAadikCE",
+            "image": "shopify:\/\/shop_images\/Live_cover_b5d9edc1-d462-4e0a-903e-a076da9588b4.jpg",
+            "videoHeading": "Minimising Waste at Home - Live Session with Vani Murthy and Jia Singh",
+            "expspeaks": false
+          }
+        },
+        "edcf20a7-9857-4c72-b28a-95f034aaa34a": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=ZJGu4rTdZq4",
+            "image": "shopify:\/\/shop_images\/make-up_e1dba491-edcf-4570-962e-1a05999b4f30.jpg",
+            "videoHeading": "Natural & cruelty-free makeup",
+            "expspeaks": false
+          }
+        },
+        "9f1fbf34-d376-4c19-bf28-9e6903ac546f": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=hhnugSOC26g",
+            "image": "shopify:\/\/shop_images\/Foot-soak_b111cf15-0470-4d88-83ca-9c4709497df1.jpg",
+            "videoHeading": "Foot care at home",
+            "expspeaks": false
+          }
+        },
+        "ead2ff6b-8457-4527-8b52-3cd38b660f21": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/Jmw3j2nOE60",
+            "image": "shopify:\/\/shop_images\/maxresdefault_9cc8b4a2-15b4-4a4d-afdb-6dc3f89a26e9.jpg",
+            "videoHeading": "Natural and earth-friendly self-care routine",
+            "expspeaks": false
+          }
+        },
+        "2e1dc897-7b53-44e3-91f5-71bc3397dda7": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=Snpxxbr21go",
+            "image": "shopify:\/\/shop_images\/pancakes_compressed_e389a197-cf26-428b-9b82-2511f7536700.jpg",
+            "videoHeading": "Recipe - Beetroot & oats pancakes with eucalyptus honey 🥞",
+            "expspeaks": false
+          }
+        },
+        "93227a9b-34d3-40d0-bcf9-ae3a36f0d3a0": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=igCaoB_2bSA",
+            "image": "shopify:\/\/shop_images\/Body-Scrub_5aafc8fb-9200-4697-a633-e213631e9fea.jpg",
+            "videoHeading": "DIY body scrub | Easy recipe to exfoliate your skin",
+            "expspeaks": false
+          }
+        },
+        "b67f98f9-7fad-40ee-9016-59f04ca1b561": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=JbCpQYQ9dJ8",
+            "image": "shopify:\/\/shop_images\/Mala-Cheese_Making_fa586952-cfa4-43cf-8a89-880ef34cc82f.png",
+            "videoHeading": "Vegan cheese making workshop with Mala Barua",
+            "expspeaks": false
+          }
+        },
+        "97de8164-4ac5-4bb0-8f89-a68265ead3b0": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=vnQozwTx8kc",
+            "image": "shopify:\/\/shop_images\/Cheese_platter_compressed_ea95811a-a06a-4f5e-b910-0f7c7d8588f6.jpg",
+            "videoHeading": "Vegan cheese recipe",
+            "expspeaks": false
+          }
+        },
+        "55a7b0f9-7ddc-45d1-93a2-7c4efffb2fc2": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=b8YNeKox1F8",
+            "image": "shopify:\/\/shop_images\/Rose_cake_compressed_8f96cb8b-0498-43e1-bb2e-a02374e1abed.jpg",
+            "videoHeading": "Try this easy-to-follow rose cake recipe today! 🥮",
+            "expspeaks": false
+          }
+        },
+        "7482dbdc-a443-472d-b9f0-1a894e199b5e": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=megr3-gpNok",
+            "image": "shopify:\/\/shop_images\/Triphala_smoothie_compressed_b1f2df5a-788d-496f-8462-7ec89117c6a0.jpg",
+            "videoHeading": "Triphala smoothie recipe",
+            "expspeaks": false
+          }
+        }
+      },
+      "block_order": [
+        "f57977f7-28b7-466b-91ab-927eb664a241",
+        "0652c950-8388-4f46-a7c1-d03a908851d1",
+        "42fb03c5-4b5e-4721-ae68-982d1cbb2ee1",
+        "d573e220-84fa-4ef0-89f4-3e6644c4c494",
+        "514a8b25-2cda-4e0b-bcac-ba5208be13dd",
+        "d32cf762-f713-497f-9bbb-18fe0d35ee4a",
+        "c46b62db-d035-494f-a5ab-5aa064bfa4f6",
+        "68b2361f-a3bc-4a16-85d0-b3dfdd39e473",
+        "3fc5b3f1-56a1-4b35-ba2e-e7ba2bbf5fc5",
+        "5188d628-f9c9-44b4-86b9-8ed8ce52fbd2",
+        "5abeb03a-cc8c-445f-b0b6-c3ddd28cf8d9",
+        "19bdc057-0994-48c0-b295-bd234fe0f471",
+        "132edee6-3f39-4f3d-ad34-b84c189ff3e2",
+        "1ee427d0-f7e6-4165-aed6-308f855ec3d4",
+        "76e4545f-7d66-4a3d-998a-919336b340be",
+        "c533ba8e-a598-44d1-ad74-66b4f7f8bdbb",
+        "aa5b953b-580f-4c46-81f6-951089e89904",
+        "bf29d234-7c5f-4367-944a-0375db27b7e3",
+        "4c894eae-e4f2-440b-b662-b24201787ca9",
+        "72363758-cf87-4727-8cdc-b0ef87407926",
+        "9b89eb6d-a26b-4910-b4d7-fec1aae558cc",
+        "09b7da1b-27c0-4170-ba12-aa3261d9cef2",
+        "7173f4d8-7bac-475b-b352-b0103e5984a5",
+        "2ce5f5df-b84c-4f2b-a3c3-9408f129517d",
+        "9c54625c-5319-46d9-9861-562e8bdd6b93",
+        "692f5645-9b55-4746-a88b-4168a641d477",
+        "932d820c-fc05-40fe-8410-9dcc6fafd04a",
+        "74154cd4-935d-41b6-abd5-7d45b32aa78e",
+        "a4f66288-d52f-43a1-ab35-51d13f128c1a",
+        "adcd80f1-950f-4231-b5a4-989ad49bcfb2",
+        "c8be093b-ed42-48f9-83ca-26961c96de69",
+        "7e373ab6-dae7-478d-91cd-0cf86dff5354",
+        "5a891841-9075-4774-a981-bded35a09bb6",
+        "05bdef93-a9ce-4851-a585-e8791ed693cd",
+        "2ad38f3f-a9c6-4c03-8720-cf0d932271b7",
+        "ff81d05b-a43c-4957-829f-07d1fe6eae04",
+        "01fcc968-736b-43e8-9774-fece4024fba6",
+        "1ed5547d-51d0-4bd2-9084-03ea7da7112b",
+        "06eeb2da-790e-407e-9bec-3ef996814778",
+        "3e7acfab-3b05-4ba5-86e6-7b902f93c2b6",
+        "50c504b1-92dc-4203-92fd-fe0433a9f7ec",
+        "edcf20a7-9857-4c72-b28a-95f034aaa34a",
+        "9f1fbf34-d376-4c19-bf28-9e6903ac546f",
+        "ead2ff6b-8457-4527-8b52-3cd38b660f21",
+        "2e1dc897-7b53-44e3-91f5-71bc3397dda7",
+        "93227a9b-34d3-40d0-bcf9-ae3a36f0d3a0",
+        "b67f98f9-7fad-40ee-9016-59f04ca1b561",
+        "97de8164-4ac5-4bb0-8f89-a68265ead3b0",
+        "55a7b0f9-7ddc-45d1-93a2-7c4efffb2fc2",
+        "7482dbdc-a443-472d-b9f0-1a894e199b5e"
+      ],
+      "settings": {
+        "pdp-banner-imgs-desktops": "shopify:\/\/shop_images\/Collection_page_subscription_banner_desktop_1200x_79663f47-274f-4115-bb5c-b98bf683adfa.jpg",
+        "pdp-banner-imgs-mobs": "shopify:\/\/shop_images\/collection-page-subscription-banner-desktop_1_800x_22d5c4e5-0ef5-4aaf-bb4d-d4b0b20f433d.jpg",
+        "title": "Video Blogs",
+        "subtitle": "Video",
+        "btn_text": "View all",
+        "video_link": "https:\/\/www.youtube.com\/channel\/UCsOUCPJYqGa4-lfPwOq8gEA\/videos",
+        "old_section_id": "1632982418c8f90198"
+      }
+    },
+    "738b9468-20f3-455f-824f-8ec6a9323575": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "bestselling-products",
+        "title": "Bestselling products",
+        "subtitle": "Products",
+        "logged_in": false,
+        "products_count": 10,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "",
+        "button_position": "top",
+        "old_section_id": "1542984811767"
+      }
+    },
+    "6fc85731-f769-481b-96d5-5d0ca1aa4661": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "new-arrivals",
+        "title": "Just in!",
+        "subtitle": "Products",
+        "logged_in": false,
+        "products_count": 10,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "",
+        "button_position": "top",
+        "old_section_id": "16118118216b5a31c5"
+      }
+    },
+    "488eadba-72cc-4c76-88e9-b2b275eb7771": {
+      "type": "collection-flat",
+      "blocks": {
+        "template--16694580314356__488eadba-72cc-4c76-88e9-b2b275eb7771-16765520384602f7c0-0": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection_text": "Herbal Gulaal",
+            "image": "shopify:\/\/shop_images\/holi_widgets-7_5b37e71e-1aef-4fd5-b020-9aeed6e2db46.jpg",
+            "link": "https:\/\/amala.earth\/collections\/gulaal",
+            "collection": "gulaal"
+          }
+        },
+        "template--16694580314356__488eadba-72cc-4c76-88e9-b2b275eb7771-16765520384602f7c0-1": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection_text": "Holi Gift Hampers",
+            "image": "shopify:\/\/shop_images\/holi_widgets-5_c4d8d098-1f3b-4b72-8933-51251b427c0c.jpg",
+            "link": "https:\/\/amala.earth\/collections\/holi-hampers",
+            "collection": "holi-hampers"
+          }
+        },
+        "template--16694580314356__488eadba-72cc-4c76-88e9-b2b275eb7771-16765520384602f7c0-2": {
+          "type": "collection",
+          "settings": {
+            "collection_text": "Handwoven Whites",
+            "image": "shopify:\/\/shop_images\/holi_widgets-1_7c8cbcd8-61ad-4340-9a34-7c38297ad76f.jpg",
+            "link": "https:\/\/amala.earth\/collections\/white-clothing",
+            "collection": "white-clothing"
+          }
+        },
+        "template--16694580314356__488eadba-72cc-4c76-88e9-b2b275eb7771-16765520384602f7c0-3": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection_text": "Holi-ready Skin",
+            "image": "shopify:\/\/shop_images\/holi_widgets-3_204d06ae-7df6-4f8b-b868-e4abb398df2a.jpg",
+            "link": "https:\/\/amala.earth\/collections\/skincare-hair-care",
+            "collection": "skincare-hair-care"
+          }
+        },
+        "template--16694580314356__488eadba-72cc-4c76-88e9-b2b275eb7771-16765520384602f7c0-4": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection_text": "Holika Pujan",
+            "image": "shopify:\/\/shop_images\/holi_widgets-4_203c320a-2b58-43a3-8ec6-32f9e1174d16.jpg",
+            "link": "https:\/\/amala.earth\/collections\/holika-pujan",
+            "collection": "holika-pujan"
+          }
+        },
+        "template--16694580314356__488eadba-72cc-4c76-88e9-b2b275eb7771-16765520384602f7c0-5": {
+          "type": "collection",
+          "settings": {
+            "collection_text": "Organic Food and Drinks",
+            "image": "shopify:\/\/shop_images\/holi_widgets-2_b6379874-50ba-4da0-bcce-75a53f9cb1e6.jpg",
+            "link": "https:\/\/amala.earth\/collections\/food-and-drinks",
+            "collection": "food-and-drinks"
+          }
+        }
+      },
+      "block_order": [
+        "template--16694580314356__488eadba-72cc-4c76-88e9-b2b275eb7771-16765520384602f7c0-0",
+        "template--16694580314356__488eadba-72cc-4c76-88e9-b2b275eb7771-16765520384602f7c0-1",
+        "template--16694580314356__488eadba-72cc-4c76-88e9-b2b275eb7771-16765520384602f7c0-2",
+        "template--16694580314356__488eadba-72cc-4c76-88e9-b2b275eb7771-16765520384602f7c0-3",
+        "template--16694580314356__488eadba-72cc-4c76-88e9-b2b275eb7771-16765520384602f7c0-4",
+        "template--16694580314356__488eadba-72cc-4c76-88e9-b2b275eb7771-16765520384602f7c0-5"
+      ],
+      "settings": {
+        "title": "Earth-friendly Holi",
+        "link_title": "View all",
+        "link": "shopify:\/\/collections\/valentines-day",
+        "round_images": false,
+        "show_collection_title": true,
+        "old_section_id": "16354151529a91ebb2"
+      }
+    },
+    "246a980e-89ff-409a-9c32-6093d49dfc3b": {
+      "type": "collection-with-image",
+      "blocks": {
+        "7af62e5a-815d-4307-aef8-1c677a3c873f": {
+          "type": "Collection",
+          "disabled": true,
+          "settings": {
+            "collection": "",
+            "products_count": 3,
+            "background": "#f8f4f0",
+            "text_color": "#000000",
+            "title": "Immunity-Boosting Teas",
+            "content": "Did you know that your favourite steaming cup of happiness can boost your immunity to keep common ailments at bay? Our hand-picked range of immunity-boosting teas have natural ingredients that protect and provide relief with every sip while recharging your body",
+            "show_sold_out": true,
+            "button_background": "#b89c7d",
+            "button_text_color": "#ffffff",
+            "button_text": "See more products",
+            "button_link": "shopify:\/\/pages\/immunity-boosting-teas",
+            "product1": "arabian-nights-moroccan-mint-green-tea",
+            "product2": "black-forest-dessert-tea",
+            "product3": "chamomile-calming-tea",
+            "product4": "",
+            "product5": "",
+            "product6": ""
+          }
+        },
+        "17e9b9e5-3154-4873-b0b5-b0a14c0b1183": {
+          "type": "Collection",
+          "disabled": true,
+          "settings": {
+            "collection": "",
+            "products_count": 3,
+            "image": "shopify:\/\/shop_images\/Collection_Category_Banners-03_2.png",
+            "background": "#f8f4f0",
+            "text_color": "#000000",
+            "title": "Self Care Essentials",
+            "content": "Self Care Essentials",
+            "show_sold_out": true,
+            "button_background": "#b89c7d",
+            "button_text_color": "#ffffff",
+            "button_text": "See more products",
+            "button_link": "",
+            "product1": "cheerleader-9-free-breathable-lacquer-nail-polish",
+            "product2": "baesic-9-free-breathable-lacquer-nail-polish",
+            "product3": "",
+            "product4": "",
+            "product5": "",
+            "product6": ""
+          }
+        }
+      },
+      "block_order": [
+        "7af62e5a-815d-4307-aef8-1c677a3c873f",
+        "17e9b9e5-3154-4873-b0b5-b0a14c0b1183"
+      ],
+      "settings": {}
+    },
+    "e6c810c7-9e79-4eea-b80d-d87f0adc38fa": {
+      "type": "feature-category-with-image",
+      "blocks": {
+        "1cfffb9f-de7d-4367-b0c0-e738cf070200": {
+          "type": "product",
+          "settings": {
+            "product": "belle-vita-organic-skincare-rituals-gift-box-pack-of-7-8906150342279-90922"
+          }
+        },
+        "51257cc9-0b22-4ca8-9387-33dd346db931": {
+          "type": "product",
+          "settings": {
+            "product": "maati-petrichor-organic-attar-fragrance-3ml"
+          }
+        },
+        "5c49bcdf-27ba-4505-8e9e-a2fa24ece757": {
+          "type": "product",
+          "settings": {
+            "product": "conscious-chemist-clear-shield-sunscreen-sun-protection-50-ml-pack-of-2-cccs02-301122"
+          }
+        },
+        "e54b9a0c-d170-410a-ad62-6e1d73a0fe8a": {
+          "type": "product",
+          "settings": {
+            "product": "juicy-chemistry-hair-oil-chilly-horsetail-black-seed-hair-growth-controls-hair-fall30-ml-jc0703-201222"
+          }
+        },
+        "8338ee0e-6931-4d10-bcd2-14f35950c3a4": {
+          "type": "product",
+          "settings": {
+            "product": "just-herbs-8-in-1-eyeshadow-lidsticks-herbi-wore-12-g-8906107054361-151122"
+          }
+        },
+        "bee85e69-1370-42c2-9184-19fbd1afa098": {
+          "type": "product",
+          "settings": {
+            "product": "vilvah-store-sunscreen-lotion-spf-30-pa-50-ml-vl-sc-67-130123"
+          }
+        },
+        "5b07921c-1104-429a-b25a-9b8cb40a702d": {
+          "type": "product",
+          "settings": {
+            "product": "ohria-ayurveda-netra-sudhi-copper-eye-cups-relaxes-tired-eye-muscles-eye-strain-eyc089-221122"
+          }
+        },
+        "d3e7ccca-d1dc-4dcb-9afa-c2b48ffb48cb": {
+          "type": "product",
+          "settings": {
+            "product": "daivik-moringa-rose-quartz-mushroom-gua-sha-stress-and-anxiety-mus-jad-ros_1-131022"
+          }
+        },
+        "b14a1bb5-041a-4532-849b-af6d6619a40f": {
+          "type": "product",
+          "settings": {
+            "product": "ayurvedic-lipstick-kit-paraben-silicon-free-nudes-browns-set-of-5"
+          }
+        },
+        "dffd6b6f-498d-4ce3-ae1b-80c0e7be204e": {
+          "type": "product",
+          "settings": {
+            "product": "vilvah-hair-removal-powder-smoother-skin-100-g-260922"
+          }
+        },
+        "f30b2ab2-f5fc-48e7-b923-a93dd66d15cd": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "product": "brillare-oil-shots-hair-fall-control-reduce-seasonal-hair-fall-6-ml-pack-of-8-hfcos8-111022"
+          }
+        },
+        "42f14ed1-13cf-485f-a11a-395ce78e29b0": {
+          "type": "product",
+          "settings": {
+            "product": "rubys-organics-mascara-hair-growth-black-6-5-ml-758277398664-221122"
+          }
+        },
+        "465e9b1c-75e5-4b44-ab11-e0a42d572cd7": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "product": "conscious-chemist-acne-control-kit-cleanser-mask-serum-anti-acne-pack-of-3-ccfff01-301122"
+          }
+        }
+      },
+      "block_order": [
+        "1cfffb9f-de7d-4367-b0c0-e738cf070200",
+        "51257cc9-0b22-4ca8-9387-33dd346db931",
+        "5c49bcdf-27ba-4505-8e9e-a2fa24ece757",
+        "e54b9a0c-d170-410a-ad62-6e1d73a0fe8a",
+        "8338ee0e-6931-4d10-bcd2-14f35950c3a4",
+        "bee85e69-1370-42c2-9184-19fbd1afa098",
+        "5b07921c-1104-429a-b25a-9b8cb40a702d",
+        "d3e7ccca-d1dc-4dcb-9afa-c2b48ffb48cb",
+        "b14a1bb5-041a-4532-849b-af6d6619a40f",
+        "dffd6b6f-498d-4ce3-ae1b-80c0e7be204e",
+        "f30b2ab2-f5fc-48e7-b923-a93dd66d15cd",
+        "42f14ed1-13cf-485f-a11a-395ce78e29b0",
+        "465e9b1c-75e5-4b44-ab11-e0a42d572cd7"
+      ],
+      "settings": {
+        "collection": "",
+        "products_count": 16,
+        "background": "#f8f4f0",
+        "text_color": "#000000",
+        "title": "Ethical Beauty",
+        "content": "Dedicated to products that include naturally sourced ingredients that make you look good and feel good.",
+        "show_sold_out": false,
+        "button_background": "#b89c7d",
+        "button_text_color": "#ffffff",
+        "button_text": "See more products",
+        "button_link": "shopify:\/\/collections\/ethical-beauty",
+        "old_section_id": "1627043555ca6795e0"
+      }
+    },
+    "66122b11-fd44-4b45-b6ee-937bd878d76a": {
+      "type": "feature-category-with-image",
+      "blocks": {
+        "97697395-145c-40aa-8e2a-bd0daadc2d6a": {
+          "type": "product",
+          "settings": {
+            "product": "copper-bedside-jar-navy-blue-850-ml"
+          }
+        },
+        "f69e4e1b-947b-43ac-a08c-b07cb0dff427": {
+          "type": "product",
+          "settings": {
+            "product": "nestroots-teak-wood-stainless-steel-enamel-masala-box-grey-brown-nrpmb2c-160822"
+          }
+        },
+        "e3052426-1aab-4f3e-ae31-06a901da08d5": {
+          "type": "product",
+          "settings": {
+            "product": "handcrafted-coconut-shell-tea-cup-set-of-2"
+          }
+        },
+        "bc4e2683-a9f9-403f-8fdf-5944ec37c4d9": {
+          "type": "product",
+          "settings": {
+            "product": "sustainable-kansa-plate-set"
+          }
+        },
+        "21271d6a-f718-4c92-a3ee-3179917fdf43": {
+          "type": "product",
+          "settings": {
+            "product": "handmade-terracotta-clay-water-tumblers-set-of-4"
+          }
+        },
+        "3cb76163-c307-4cfb-9c31-4ee02ea7c818": {
+          "type": "product",
+          "settings": {
+            "product": "p-tal-brass-cookware-kadhai-br-ka-m-65-16922"
+          }
+        },
+        "6e130cd9-a4e0-4240-970a-cf1aa0ce408e": {
+          "type": "product",
+          "settings": {
+            "product": "sunira-home-living-chapati-box-moonj-grass-gold-sunira001-151222"
+          }
+        },
+        "2635f59d-b2e1-4142-8a82-9a8eb1125b33": {
+          "type": "product",
+          "settings": {
+            "product": "the-organic-livings-organic-cotton-bedsheet-with-pillow-cover-king-size-yellow-ayurk001-24123"
+          }
+        },
+        "d05b95e4-6f35-4f23-9633-22a8a69e5e5c": {
+          "type": "product",
+          "settings": {
+            "product": "sustainable-clay-sauce-pan"
+          }
+        },
+        "6f2665cb-244e-40a9-bfbb-6d19e0edb4b6": {
+          "type": "product",
+          "settings": {
+            "product": "upcycled-plastic-large-laundry-basket-white-gold"
+          }
+        }
+      },
+      "block_order": [
+        "97697395-145c-40aa-8e2a-bd0daadc2d6a",
+        "f69e4e1b-947b-43ac-a08c-b07cb0dff427",
+        "e3052426-1aab-4f3e-ae31-06a901da08d5",
+        "bc4e2683-a9f9-403f-8fdf-5944ec37c4d9",
+        "21271d6a-f718-4c92-a3ee-3179917fdf43",
+        "3cb76163-c307-4cfb-9c31-4ee02ea7c818",
+        "6e130cd9-a4e0-4240-970a-cf1aa0ce408e",
+        "2635f59d-b2e1-4142-8a82-9a8eb1125b33",
+        "d05b95e4-6f35-4f23-9633-22a8a69e5e5c",
+        "6f2665cb-244e-40a9-bfbb-6d19e0edb4b6"
+      ],
+      "settings": {
+        "collection": "",
+        "products_count": 12,
+        "background": "#f8f4f0",
+        "text_color": "#000000",
+        "title": "Joyful Home",
+        "content": "To create a sense of positivity in our everyday spaces, our options of conscious home products are made from restorative, reclaimed and materials sourced from natural elements.",
+        "show_sold_out": true,
+        "button_background": "#b89c7d",
+        "button_text_color": "#ffffff",
+        "button_text": "See more products",
+        "button_link": "shopify:\/\/collections\/joyful-home",
+        "old_section_id": "1631544470ae25b516"
+      }
+    },
+    "e7c15471-932e-443f-9492-995864d50530": {
+      "type": "feature-category-with-image",
+      "blocks": {
+        "03e267f5-c6c9-4a75-affb-85229dd53fdf": {
+          "type": "product",
+          "settings": {
+            "product": "natural-amla-brahmi-and-aloe-vera-drink-100-ml"
+          }
+        },
+        "51272f11-9767-4775-8fb2-9fa55f04b232": {
+          "type": "product",
+          "settings": {
+            "product": "ayurvedic-apricot-moisturiser-i-200-ml"
+          }
+        },
+        "c3443721-2f62-432b-b5e2-6c99309661be": {
+          "type": "product",
+          "settings": {
+            "product": "organic-moringa-seeds-cold-pressed-oil-100-ml"
+          }
+        },
+        "394d383a-9139-400f-8863-d41a1b127b4a": {
+          "type": "product",
+          "settings": {
+            "product": "atulya-pure-cold-pressed-black-seed-kalonji-oil-100-ml-at-0019-19722"
+          }
+        },
+        "78105f43-8401-4d8c-996a-fb7036875593": {
+          "type": "product",
+          "settings": {
+            "product": "100-pure-gir-bilona-a2-cow-ghee-500ml"
+          }
+        },
+        "1e372d90-3c8f-42f8-8d4f-71fbe4232ce4": {
+          "type": "product",
+          "settings": {
+            "product": "dream-tea-relaxes-mind-20-tea-bags"
+          }
+        },
+        "b43a1d0f-fd24-4dd5-a452-633b633bf457": {
+          "type": "product",
+          "settings": {
+            "product": "mint-ginger-lemon-squash"
+          }
+        },
+        "a5c23f1b-a7fa-4678-9cea-ea08133704a8": {
+          "type": "product",
+          "settings": {
+            "product": "butterfly-ayurveda-ratri-chai-night-time-tea-herbal-infusion-for-relaxation-and-detoxification-40-g-barc-03-311022"
+          }
+        },
+        "4996ad17-8b63-4353-90d1-6b98d2f53d1f": {
+          "type": "product",
+          "settings": {
+            "product": "organic-nutrition-moringa-powder-100g"
+          }
+        }
+      },
+      "block_order": [
+        "03e267f5-c6c9-4a75-affb-85229dd53fdf",
+        "51272f11-9767-4775-8fb2-9fa55f04b232",
+        "c3443721-2f62-432b-b5e2-6c99309661be",
+        "394d383a-9139-400f-8863-d41a1b127b4a",
+        "78105f43-8401-4d8c-996a-fb7036875593",
+        "1e372d90-3c8f-42f8-8d4f-71fbe4232ce4",
+        "b43a1d0f-fd24-4dd5-a452-633b633bf457",
+        "a5c23f1b-a7fa-4678-9cea-ea08133704a8",
+        "4996ad17-8b63-4353-90d1-6b98d2f53d1f"
+      ],
+      "settings": {
+        "collection": "",
+        "products_count": 8,
+        "background": "#f8f4f0",
+        "text_color": "#000000",
+        "title": "Ayurvedic Food and Self-care",
+        "content": "A curation of Ayurvedic products that work wonders for your health and well-being.",
+        "show_sold_out": false,
+        "button_background": "#b89c7d",
+        "button_text_color": "#ffffff",
+        "button_text": "See more products",
+        "button_link": "shopify:\/\/collections\/ayurvedic-food-skin",
+        "old_section_id": "1627044427d1305f29"
+      }
+    },
+    "223d25e3-dcec-4a4c-bf2e-eef014bc9706": {
+      "type": "previously-ordered",
+      "settings": {
+        "title": "Previously purchased",
+        "products_count": 10,
+        "limit_diff_prodct": 0,
+        "layout": "vertical",
+        "show_sold_out": false,
+        "stack_products": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/account"
+      }
+    },
+    "d578298d-61f7-417e-8188-de987821f25b": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "title": "Recently viewed",
+        "subtitle": "",
+        "products_count": 10,
+        "show_quick_buy": true
+      }
+    },
+    "d0923ccf-93d0-4235-bdd8-923a432d69f0": {
+      "type": "logo-list",
+      "blocks": {
+        "template--16694580314356__d0923ccf-93d0-4235-bdd8-923a432d69f0-16765574140370a267-0": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Logo_2_61aa2ad8-13be-49e5-8f97-81463ffab7e4.png",
+            "link": "shopify:\/\/collections\/dressfolk"
+          }
+        },
+        "template--16694580314356__d0923ccf-93d0-4235-bdd8-923a432d69f0-16765574140370a267-1": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Green_Heirloom_Logo_d10e854a-1ba4-4e3e-86f0-1e40cdda35fb.png",
+            "link": "shopify:\/\/collections\/green-heirloom"
+          }
+        },
+        "template--16694580314356__d0923ccf-93d0-4235-bdd8-923a432d69f0-16765574140370a267-2": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Vaaya_Logo_443914db-105f-4fb7-a6ba-8b823fbad835.jpg",
+            "link": "shopify:\/\/collections\/vaaya"
+          }
+        },
+        "template--16694580314356__d0923ccf-93d0-4235-bdd8-923a432d69f0-16765574140370a267-3": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/KEqBlCMOGN_940c47e9-0fd8-4952-9e1a-3b754719eabd.png",
+            "link": "shopify:\/\/collections\/true-elements"
+          }
+        },
+        "template--16694580314356__d0923ccf-93d0-4235-bdd8-923a432d69f0-16765574140370a267-4": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PAIO_Logo_05fe5334-e8f2-4fc0-a612-28dc940df670.png",
+            "link": "shopify:\/\/collections\/paio"
+          }
+        },
+        "template--16694580314356__d0923ccf-93d0-4235-bdd8-923a432d69f0-16765574140370a267-5": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Poochmate_logo_001720e4-ddaa-4d8d-86df-15b8bc53a779.png",
+            "link": "shopify:\/\/collections\/poochmate"
+          }
+        },
+        "249c0b18-0168-49df-a79b-49252c537cf7": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Kronkare_fe8b5c06-0a76-4bed-b8e4-d52f4628d07b.jpg",
+            "link": "shopify:\/\/collections\/kronokare"
+          }
+        },
+        "821c453e-f60c-438e-aa3e-47c320907ca2": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mezmo_logo_e75fc7a9-1725-48b7-b635-ab993b413414.png",
+            "link": "shopify:\/\/collections\/mezmo"
+          }
+        },
+        "4645c3f7-ec77-43f6-a493-002622879f4d": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HALO_7b1c3f05-952d-441d-81be-e914596eddc6.png",
+            "link": "shopify:\/\/collections\/halo"
+          }
+        },
+        "0733f3be-7a9b-4e92-90c9-48d6880febd6": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Just_organik_075eadf4-b7d8-4e9b-82cb-ff01803a94bb.png",
+            "link": "shopify:\/\/collections\/just-organik"
+          }
+        },
+        "2651871d-935e-49f5-819b-609fc8be213b": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Namaq_Cheeni_ad139100-2d60-4f37-bdbd-e49fa17acd49.png",
+            "link": "shopify:\/\/collections\/namaq-cheeni"
+          }
+        },
+        "6db1cf25-3c6d-43d3-9c6a-bae0d748ce17": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Nourish_You_6baf2575-89c9-4eec-8bb9-24ef6456369d.png",
+            "link": "shopify:\/\/collections\/nourish-you"
+          }
+        },
+        "7c529a81-a84f-4747-859f-b689889524b1": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Nutty_Yogi_119dc56d-dca9-46eb-ae40-9d3c59526355.png",
+            "link": "shopify:\/\/collections\/nutty-yogi"
+          }
+        },
+        "364c4f21-bd0b-4598-b737-873af03698a7": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sadev_241aedd1-2946-4675-81dc-ba07e6c6924a.png",
+            "link": "shopify:\/\/collections\/sadhev"
+          }
+        },
+        "0a95e52c-8505-4f4c-a59f-2562a38e5a15": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/theoni_cc9a0f46-d9d4-4a67-aa2d-354dcec70373.png",
+            "link": "shopify:\/\/collections\/theoni"
+          }
+        },
+        "edc1d7e2-c2fe-47a6-9e38-ffd677ec6226": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Whitewater_Kids_a3b5b4f2-2748-4781-b680-9309d5c318a5.jpg",
+            "link": "shopify:\/\/collections\/white-water-kids"
+          }
+        },
+        "f6c08cb0-e909-4744-97f8-b845aab83b1b": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/02_9efd9fa4-cd7e-4e73-901d-50fc30e32009.jpg",
+            "link": "https:\/\/amala.earth\/collections\/aplito"
+          }
+        },
+        "16e11571-1d1e-4d71-b1f0-ad942a676de0": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/18_a0c339e4-2339-4ab3-8cdc-945cd0e89a07.jpg",
+            "link": "https:\/\/amala.earth\/collections\/silkwaves"
+          }
+        },
+        "2faca11a-3810-4405-88f7-815e00a3b8a3": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Jungly_Logo_Green_f7acd89d-fce8-41f9-a6d9-efb4c9a99288.png",
+            "link": "https:\/\/amala.earth\/collections\/jungly-delights"
+          }
+        },
+        "fb9aa72a-3a03-4e0b-9e9c-143d2436afd5": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gulco_0557f4ae-bccd-4d0e-ba8a-b7fa5e133163.jpg",
+            "link": "https:\/\/amala.earth\/collections\/gulco"
+          }
+        },
+        "b1ebd0ff-090a-43b3-a491-1138d25f09f0": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/06_556c2863-cbe6-4dc9-af9f-f6bc89afbe25.jpg",
+            "link": "https:\/\/amala.earth\/collections\/boond-fragrances"
+          }
+        },
+        "ff34dc03-b133-4fc3-a38f-70a8294e71d3": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/01_3b7e6be4-07b3-4a59-ab52-92536a8241d7.jpg",
+            "link": "https:\/\/amala.earth\/collections\/earthinspired-communities-p-l"
+          }
+        },
+        "5cf7177d-9109-4faf-8a32-d2a0773356dd": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/04_f79b1ab1-7d31-4e83-a942-a7c344fc1a42.jpg",
+            "link": "https:\/\/amala.earth\/collections\/baby-jalebi"
+          }
+        },
+        "7694eaa9-54b0-484f-90ba-6993725910a6": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/20_49bffd8d-0762-4fd3-901a-ed4ef7b3c0cb.jpg",
+            "link": "https:\/\/amala.earth\/collections\/the-greige-warp"
+          }
+        },
+        "42142e11-1eec-4f7c-9bf8-7da3b3041614": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/13_7b32297e-79f0-475f-823d-9689b53df852.jpg",
+            "link": "https:\/\/amala.earth\/collections\/juicy-chemistry"
+          }
+        },
+        "efe730a6-a439-4578-b208-22167198ccd3": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/08_e01d5b03-f215-49e4-bd66-2a01a9e10482.jpg",
+            "link": "https:\/\/amala.earth\/collections\/shop-staple"
+          }
+        },
+        "1cd56917-4c01-4376-a41c-f4c0056e3a01": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/orange_lemons_c5697fbc-bb03-4699-9f12-b582afaf2e39.jpg",
+            "link": "https:\/\/amala.earth\/collections\/oranges-lemons"
+          }
+        }
+      },
+      "block_order": [
+        "template--16694580314356__d0923ccf-93d0-4235-bdd8-923a432d69f0-16765574140370a267-0",
+        "template--16694580314356__d0923ccf-93d0-4235-bdd8-923a432d69f0-16765574140370a267-1",
+        "template--16694580314356__d0923ccf-93d0-4235-bdd8-923a432d69f0-16765574140370a267-2",
+        "template--16694580314356__d0923ccf-93d0-4235-bdd8-923a432d69f0-16765574140370a267-3",
+        "template--16694580314356__d0923ccf-93d0-4235-bdd8-923a432d69f0-16765574140370a267-4",
+        "template--16694580314356__d0923ccf-93d0-4235-bdd8-923a432d69f0-16765574140370a267-5",
+        "249c0b18-0168-49df-a79b-49252c537cf7",
+        "821c453e-f60c-438e-aa3e-47c320907ca2",
+        "4645c3f7-ec77-43f6-a493-002622879f4d",
+        "0733f3be-7a9b-4e92-90c9-48d6880febd6",
+        "2651871d-935e-49f5-819b-609fc8be213b",
+        "6db1cf25-3c6d-43d3-9c6a-bae0d748ce17",
+        "7c529a81-a84f-4747-859f-b689889524b1",
+        "364c4f21-bd0b-4598-b737-873af03698a7",
+        "0a95e52c-8505-4f4c-a59f-2562a38e5a15",
+        "edc1d7e2-c2fe-47a6-9e38-ffd677ec6226",
+        "f6c08cb0-e909-4744-97f8-b845aab83b1b",
+        "16e11571-1d1e-4d71-b1f0-ad942a676de0",
+        "2faca11a-3810-4405-88f7-815e00a3b8a3",
+        "fb9aa72a-3a03-4e0b-9e9c-143d2436afd5",
+        "b1ebd0ff-090a-43b3-a491-1138d25f09f0",
+        "ff34dc03-b133-4fc3-a38f-70a8294e71d3",
+        "5cf7177d-9109-4faf-8a32-d2a0773356dd",
+        "7694eaa9-54b0-484f-90ba-6993725910a6",
+        "42142e11-1eec-4f7c-9bf8-7da3b3041614",
+        "efe730a6-a439-4578-b208-22167198ccd3",
+        "1cd56917-4c01-4376-a41c-f4c0056e3a01"
+      ],
+      "settings": {
+        "title": "Brands We Love",
+        "link_title": "",
+        "link": "",
+        "old_section_id": "161001793655f9a4f7"
+      }
+    },
+    "d71bb3a5-cd8e-4635-b0c8-7ab4fda11661": {
+      "type": "blog-posts-carousel",
+      "disabled": true,
+      "blocks": {
+        "688dbd88-badc-480d-8c7a-19915cf8cbed": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/blogs_for_holi_microsite_563a7628-3080-44ba-9551-e481d5b569f6.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/enjoy-wearing-hues-of-white-this-holi",
+            "title": "Enjoy Wearing Hues Of White This Holi"
+          }
+        },
+        "f90008c9-cc01-4f1a-9d5b-b1798b1f2e92": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/blogs_for_holi_microsite-2_7a05e7db-d646-4411-8d77-e8da55bcf190.jpg",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/holi-s-dos-and-donts",
+            "title": "Holi’s Dos and Don'ts"
+          }
+        },
+        "ed1cc400-e846-4dcd-ab27-ceca1600422c": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/blogs_for_holi_microsite-1_91ec122f-e714-4be5-b1aa-6954b9433e13.jpg",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/holika-dahan-with-campfire-all-you-need-to-know",
+            "title": "Holika Dahan With Campfire - All You Need To Know"
+          }
+        }
+      },
+      "block_order": [
+        "688dbd88-badc-480d-8c7a-19915cf8cbed",
+        "f90008c9-cc01-4f1a-9d5b-b1798b1f2e92",
+        "ed1cc400-e846-4dcd-ab27-ceca1600422c"
+      ],
+      "settings": {
+        "heading_one": "Recent Blog Posts",
+        "heading_two": "",
+        "view_text": "View All",
+        "url_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog"
+      }
+    },
+    "2a03e0f7-24dd-4207-b3f2-89f1e4e6fb13": {
+      "type": "blog-posts",
+      "disabled": true,
+      "settings": {
+        "blog": "amala-earth-blog",
+        "blog_posts_count": 3,
+        "title": "Recent Blog Posts",
+        "link_title": "View all",
+        "show_category": false,
+        "show_author": false,
+        "show_date": false,
+        "show_excerpt": true,
+        "stack_mobile": false
+      }
+    },
+    "be078971-7585-407d-b34e-9a11bd9469e7": {
+      "type": "slider-with-text",
+      "blocks": {
+        "template--16694580314356__be078971-7585-407d-b34e-9a11bd9469e7-16765583014c2996d7-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Amala_Homepage_-_About_Us_72385448-9f23-4e1f-878d-94c89f80fdea.png",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#000000",
+            "title": "About Us",
+            "subtitle": "",
+            "content": "Amala Earth is a way of conscious living built on a foundation rooted deeply in the Indian origin. It brings together brands, products, experts and individuals that create a world where all living beings can co-exist harmoniously.",
+            "content_position": "middle_center",
+            "button_background": "#b89c7d",
+            "button_text_color": "#ffffff",
+            "button_text1": "\/pages\/about-us",
+            "button_text2": "\/pages\/founders-note",
+            "button_text3": "\/pages\/philosophy",
+            "button_text": "Learn More",
+            "link": "shopify:\/\/pages\/about-us"
+          }
+        }
+      },
+      "block_order": [
+        "template--16694580314356__be078971-7585-407d-b34e-9a11bd9469e7-16765583014c2996d7-0"
+      ],
+      "settings": {
+        "edge_to_edge": false,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "fade",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ece3b768-7ba0-402d-ab0a-592c5ae6e125",
+    "60963403-817d-4f52-83df-ce4b162e8803",
+    "8da51749-4f2e-46b4-9cc2-7436a3535a8c",
+    "56645500-801d-4f15-88a0-3825787e99e4",
+    "e5f54565-4274-49f0-aa5f-c330985d6da2",
+    "75501b68-cabb-4953-ad7d-5557fcdfa024",
+    "dd9c547f-7f2c-451b-ae21-1557a1a8e786",
+    "54c408ec-5364-4f2d-8c09-a57ad8c41d12",
+    "99ac7b04-91f0-4ade-8849-accf050686a1",
+    "12174198-bf04-4258-8053-ef4081f4022c",
+    "738b9468-20f3-455f-824f-8ec6a9323575",
+    "6fc85731-f769-481b-96d5-5d0ca1aa4661",
+    "488eadba-72cc-4c76-88e9-b2b275eb7771",
+    "246a980e-89ff-409a-9c32-6093d49dfc3b",
+    "e6c810c7-9e79-4eea-b80d-d87f0adc38fa",
+    "66122b11-fd44-4b45-b6ee-937bd878d76a",
+    "e7c15471-932e-443f-9492-995864d50530",
+    "223d25e3-dcec-4a4c-bf2e-eef014bc9706",
+    "d578298d-61f7-417e-8188-de987821f25b",
+    "d0923ccf-93d0-4235-bdd8-923a432d69f0",
+    "d71bb3a5-cd8e-4635-b0c8-7ab4fda11661",
+    "2a03e0f7-24dd-4207-b3f2-89f1e4e6fb13",
+    "be078971-7585-407d-b34e-9a11bd9469e7"
+  ]
+}

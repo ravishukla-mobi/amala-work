@@ -1,0 +1,223 @@
+<div class="shopby-concerntemplate">
+  <div class="top-details">
+      <div class="banner-shoptemp banner-section1">
+     <div class="container">
+        <div class="page__sub-header">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <ol class="breadcrumb__list" role="list">
+          <li class="breadcrumb__item">
+            <a class="breadcrumb__link link" href="/">Home</a><svg focusable="false" class="icon icon--arrow-right" viewBox="0 0 8 12" role="presentation">
+      <path stroke="currentColor" stroke-width="2" d="M2 2l4 4-4 4" fill="none" stroke-linecap="square"></path>
+    </svg></li>
+
+          <li class="breadcrumb__item"><span class="breadcrumb__link" aria-current="page">{{ section.settings.title }}</span></li></ol>
+      </nav>
+    </div>
+       <div class="banner-shop">
+         <div class="bann-img">
+    			<img src="{{ section.settings.banner_img | img_url: 'master' }}">
+           <h1 class="section__title heading h1">{{ section.settings.title }}</h1>
+         </div>
+         <div class="page-details">
+        <h1> {{ section.settings.title }} 
+        </h1>
+        <p> {{ section.settings.description }} </p>
+    </div>
+       </div>
+    </div>
+  
+  </div>
+  </div>
+  
+  <div class="products-listing shop-block">
+    <div class="container">
+      <div class="pagetemplate-top">
+       <header class="section__header">
+        <h4 class="section__title heading ">Related Products</h4>
+      </header>
+      <div class="collection__toolbar-item collection__toolbar-item--layout">
+        <button type="button" class="collection__layout-button is-selected link touch-area" aria-label="{{ 'collection.layout.grid' | t }}" data-action="change-layout" data-layout-mode="grid">{% render 'icon', icon: 'grid' %}</button>
+        <button type="button" class="collection__layout-button link touch-area" aria-label="{{ 'collection.layout.list' | t }}" data-action="change-layout" data-layout-mode="list">{% render 'icon', icon: 'list' %}</button>
+      </div>
+      </div>
+
+      {% assign product_count = 0 %}
+      {%- assign product_tag = section.settings.related_tag | strip -%}
+       <div class="product-list product-list--scrollable">
+         {% paginate collections.all.products by 10000 %}
+            {%- for product in collections.all.products limit:10000 -%}
+                  {%- if product.tags contains product_tag -%}
+         			  {% assign product_count = product_count | plus:1 %}
+         			
+         			  {% if product_count > 16 %}
+         			  	{%- capture grid_classes -%}hide-product-item 1/3--tablet 1/{{ section.settings.products_per_row }}--lap-and-up{%- endcapture -%}
+                      {% else %} 
+         				{%- capture grid_classes -%}show-product-item 1/3--tablet 1/{{ section.settings.products_per_row }}--lap-and-up{%- endcapture -%}
+         			  {% endif %}
+         
+         			  {% assign show_load = 'no' %}
+         			  {% if product_count > 1 %}
+                          {% assign mod_value = product_count | modulo: 16 %}
+                          {% if mod_value == 1 %}
+                            	{% assign show_load = 'yes' %}
+                          {% endif %}
+         			   {% endif %}
+         
+         			  {% if show_load == 'yes' %}
+         				<span class="load-more no-display"> <span>Load more</span> </span>
+         			  {% endif %}
+         			
+         			  {%- render 'product-item', product: product, list: false, grid_classes: grid_classes,reviews_allowed: 'no' -%}
+                  {%- endif -%} 
+           {%- endfor -%}
+        {% endpaginate %} 
+      </div>
+  </div>
+  </div>
+  {% assign have_blogs = 'false' %}
+  {% for article in blogs['amala-earth-blog'].articles %}
+        {% if article.tags contains section.settings.related_blog_tag %}
+  				{% assign have_blogs = 'true' %}
+  				{% break %}
+        {% endif %}
+  {% endfor %}
+  {% if have_blogs == 'true' %}
+    <div class="blog-listing shop-block">
+      <div class="container">
+        <header class="section__header">
+          <h4 class="section__title heading ">Related  Blogs </h4>
+        </header>
+        <div class="scroller scroller--flush">
+          <div class="scroller__inner">
+         <div class="block-list block-list--loose main-carousel" data-flickity='{ "cellAlign": "left", "contain": true,"pageDots": false,"watchCSS": true,"groupCells": true}'>
+
+            {% for article in blogs['amala-earth-blog'].articles %}
+              {% if article.tags contains section.settings.related_blog_tag %}
+                <div class="block-list__item 1/2--tablet 1/3--lap-and-up ">
+                  {%- render 'article-item', article: article, featured: true -%}
+                </div>
+              {% endif %}
+            {% endfor %}
+        </div>
+      </div>
+          </div>
+      </div>
+    </div>
+  {% endif %}
+  
+  {% assign have_videos = 'false' %}
+  {% for block in section.blocks %}
+        {% if block.type == 'video' %}
+  			{% assign have_videos = 'true' %}
+            {% break %}
+        {% endif %}
+  {% endfor %}
+  
+  {% if have_videos == 'true' %}
+    <div class="video-listing shop-block">
+      <div class="container">
+        <header class="section__header">
+          <h4 class="section__title heading h4">Related  Videos </h4>
+        </header>
+         <div class="scroller scroller--flush">
+          <div class="scroller__inner">
+         <div class="block-list block-list--loose main-carousel" data-flickity='{ "cellAlign": "left", "contain": true,"pageDots": false,"watchCSS": true,"groupCells": true}'>
+        {% for block in section.blocks %}
+          {% if block.type == 'video' %}
+             <div class="block-list__item 1/2--tablet 1/3--lap-and-up ">
+              {% assign video_link = block.settings.video_url %}        
+               <iframe width="100%" height="260" src=" {{ video_link }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+               </iframe>
+             </div>
+          {% endif %}
+        {% endfor %}
+        </div>
+             </div>
+      </div>
+      </div>
+    </div>
+  {% endif %}
+  
+</div>
+<footer>
+  <div class="container">
+    <p><a href="/">amala.earth</a></p>
+    <a href="/blogs/amala-earth-blog">Blog</a>
+  </div>
+</footer>
+  
+
+
+{% schema %}
+  {
+    "name": "Page Data",
+    "settings": [
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Page title"
+		},
+		{
+			"type": "image_picker",
+			"id": "banner_img",
+			"label": "Banner Image"
+		},
+		{
+			"type": "textarea",
+			"id": "description",
+			"label": "Description Text"
+		},
+  		{
+			"type": "text",
+			"id": "related_tag",
+			"label": "Collection tag",
+  			"default": "Organic"
+		},
+  		{
+			"type": "text",
+			"id": "related_blog_tag",
+			"label": "Blog Article tag",
+  			"default": "Ayurvedic"
+		},
+  		{
+			"type": "checkbox",
+			"id": "show_author",
+			"label": "Show author"
+		},
+  		{
+			"type": "checkbox",
+			"id": "show_category",
+			"label": "Show Category"
+		},
+  		{
+			"type": "checkbox",
+			"id": "show_excerpt",
+			"label": "Show Excerpt"
+		},
+  		{
+			"type": "checkbox",
+			"id": "show_date",
+			"label": "Show Date"
+		}
+	],
+    "blocks": [
+	  {
+        "type": "video",
+        "name": "Video",
+        "settings": [
+          {
+            "id": "video_url",
+            "type": "url",
+            "label": "Video URL"
+          }
+        ]
+      }
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

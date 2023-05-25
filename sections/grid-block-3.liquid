@@ -1,0 +1,131 @@
+<section class="container grid-container">
+    {% for block in section.blocks %}
+        {% if block.type == 'grid-section' %}
+    
+        <a href="{{ block.settings.url_link }}">
+        <div class="grid-section-image grid-img-desktop ">
+            <img src="{{ block.settings.grid-img-desktop | img_url: 'master' }}">
+        </div>
+        <div class="grid-section-image grid-img-mobile">
+            <img src="{{ block.settings.grid-img-mobile | img_url: 'master' }}">
+       </div>
+        </a>
+    {% endif %}
+{% endfor %}
+</section>
+
+
+
+<style>
+    .grid-section-image img{
+        width:100%
+    }
+    .grid-container{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-column-gap: 20px;
+        margin-top:100px;
+    }
+    .grid-container .grid-section-image{
+        position: relative;
+    }
+    .grid-container .grid-section-image img{
+        border-radius: 10px;
+    }
+    .grid-container .grid-section-image h2{
+        position: absolute;
+        bottom:0;
+        width: 100%;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17.623px;
+        line-height: 26px;
+        text-align: center;
+        color: #FFFFFF;
+        text-shadow: 0px 1.95811px 19.5811px rgb(0 0 0 / 25%);
+        margin-bottom: 14px;
+    }
+    .grid-block-container{
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto auto auto auto;
+        grid-column-gap: 20px;
+        margin-top: 50px;
+        text-align: center;
+    }
+  
+    .grid-img-mobile{
+      display:none;
+    }
+    .grid-img-desktop{
+      display:block;
+    }
+    @media only screen and (max-width:1024px) {
+        .grid-container{
+            grid-template-columns: auto auto auto;
+            grid-row-gap: 20px;
+        }
+        .grid-block-container{
+            grid-template-columns: auto auto auto auto;
+        }
+        
+      }
+      @media only screen and (max-width:768px) {
+      .grid-img-mobile{
+      display:block;
+    }
+    .grid-img-desktop{
+      display:none;
+    }
+      }
+      @media only screen and (max-width:592px) {
+        .grid-container{
+            grid-template-columns: auto auto;
+            margin-top: 16px;
+            grid-column-gap: 15px;
+            grid-row-gap: 15px;
+        }
+        .grid-block-container{
+            grid-template-columns: auto auto auto;
+            grid-column-gap: 15px;
+            grid-row-gap: 15px;
+        }
+      }
+</style>
+
+
+
+
+{% schema %}
+  {
+    "name": "custom-grid",
+    "blocks":[
+        {
+              "type": "grid-section",
+              "name": "Grid",
+              "settings": [
+                  {
+                  "type":"image_picker",
+                  "id":"grid-img-desktop",
+                  "label":"Desktop Image"
+                },
+                {
+                  "type":"image_picker",
+                  "id":"grid_img_mobile",
+                  "label":"Mobile Image"
+                    },
+                
+                {
+        "type":"url",
+        "id":"url_link",
+        "label":"Link"
+      }]}
+    ],
+    "presets": [
+{
+"name": "Grid Block",
+"category": "Custom"
+}
+]
+  }
+{% endschema %}

@@ -1,0 +1,444 @@
+<div class="about_ethos_container">
+    <div class="ethos_heading landing_section_header">
+        <div class="landing_subheading">{{ section.settings.ethos_primary_title }}</div>
+        <div class="landing_heading">{{ section.settings.ethos_secondary_title }}</div>
+    </div>
+    <div class="card_maincontainer">
+        {% for block in section.blocks %}
+            <div class="ethos_card_container ethos_colo_mob_{{block.id}} ethos_colo_{{block.id}}">
+                <img src="{{ section.settings.card_design_img | img_url: 'master' }}" alt="" class="card_designleaves">
+                <div class="ethos_content">
+                    <div class="ethos_img_container">
+                        <div class="ethos_title">
+                            {{ block.settings.ethos_card_title }}
+                        </div>
+                        <div class="card_main_images">
+                            <img src="{{ block.settings.card_main_img | img_url: 'master' }}" alt="card image" class="ethos_card_img {% if block.settings.card_mob_img %}ethos_desk_img{% endif %}" >
+                            {% if block.settings.card_mob_img != blank %}
+                                <img src="{{ block.settings.card_mob_img | img_url: 'master' }}" alt="ethos card image" class="ethos_card_img ethos_mob_img">
+                            {% endif %}
+                        </div>
+                    </div>
+                    <p class="ethos_container_body ethos_desk_content">{{ block.settings.ethos_card_content }}</p>
+                    <p class="ethos_container_body ethos_mob_content">{{ block.settings.ethos_card_content_mob }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% style %}
+{% for block in section.blocks %}
+    .ethos_colo_{{block.id}}.ethos_card_container{
+        background-color: {{block.settings.tiles_color_desk}};
+    }
+{% endfor %}
+@media screen and (max-width: 767px) {
+    {% for block in section.blocks %}
+        .ethos_colo_mob_{{block.id}}.ethos_card_container{
+            background-color: {{block.settings.tiles_color_mob}};
+        }
+    {% endfor %}
+}
+{% endstyle %}
+
+<style>
+    .ethos_heading{
+        color: #9F7356;
+        margin-left: 4.47%;
+        margin-bottom: 39px;
+        font-family: Poppins;
+        margin-top: 108px;
+    }
+    .ethos_main_heading{
+        font-size: 41px;
+        font-weight: 300;
+        line-height: 62px;
+        letter-spacing: 0.11em;
+    }
+    .ethos_secondary_heading{
+        font-size: 55px;
+        font-weight: 500;
+        line-height: 83px;
+        letter-spacing: 0em;
+    }
+    .ethos_title{
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 54px;
+        letter-spacing: 0em;
+        margin-top: 37px;
+        margin-bottom: 34px;  
+        white-space: nowrap;  
+    }
+
+    .ethos_content{
+        display: flex;
+        justify-content: space-between;
+        padding-left: 52px;
+        padding-right: 52px;
+    }
+    .ethos_card_img{
+        width: auto;
+        border-radius: 25px;
+    }
+    .ethos_container_body{
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 36px;
+        letter-spacing: 0em;
+        max-width: 50%;
+        margin-top: 125px;
+        padding-bottom: 15px;
+        z-index: 1;
+    }
+    .ethos_img_container{
+        width: 316px;
+        max-width: 50%;
+        padding-bottom: 51px;
+        padding-right: 15px;
+    }
+    .ethos_card_container {
+        width: 48.4%;
+        background-color: #E6DFD7;
+        position: relative;
+        border-radius: 32px;
+    }
+    .ethos_card_container:nth-child(even){
+        margin-left: 1.6%;
+    }
+    .ethos_card_container:nth-child(odd){
+        margin-right: 1.6%;
+    }
+    .ethos_card_container:not(:last-child){
+        margin-bottom: 65px;
+    }
+    .card_maincontainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: auto 80px;
+    }
+    img.card_designleaves {
+        position: absolute;
+        bottom: 0;
+        right: 10px;
+    }
+    .about_ethos_container{
+        margin-bottom: 81px;
+    }
+    .ethos_mob_img{
+        display: none;
+    }
+    .ethos_desk_content{
+        display: block;
+    }
+    .ethos_mob_content{
+        display: none;
+    }
+    @media screen and (min-width: 1450px) {
+        .ethos_heading.landing_section_header .landing_subheading{
+            font-size: 41px;
+        }
+        .ethos_heading.landing_section_header .landing_heading{
+            font-size: 51px;
+        }
+    }
+    @media screen and (max-width: 1450px) {
+        .ethos_container_body{
+            font-size: 18px;
+            line-height: 25px;
+            margin-bottom: 20px;
+        }
+        .ethos_content {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 25px;
+            padding-right: 25px;
+        } 
+    }
+    @media screen and (max-width: 1200px) {
+        .ethos_heading{
+            margin-top: 60px;
+        }
+        .ethos_img_container {
+            width: 100%;
+            max-width: 50%;
+            padding-bottom: 51px;
+        }
+        .ethos_container_body {
+            font-size: 16px;
+            line-height: 27px;
+        }
+    }
+
+    @media screen and (min-width: 901px) and (max-width: 1400px) {
+        .ethos_title {
+    font-size: 29px;
+    line-height: 54px;
+    margin-top: 15px;
+    margin-bottom: 4px;
+}
+.ethos_container_body{
+    margin-top: 68px;
+    line-height: 21px;
+}
+.ethos_content{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+    }
+
+    @media screen and (max-width: 900px) {
+        .ethos_main_heading{
+            font-size: 30px;
+        }
+        .ethos_secondary_heading{
+            font-size: 40px;
+        }
+        .ethos_main_heading {
+            line-height: 10px;
+        }
+        .card_maincontainer {
+            margin: auto 40px;
+        }
+        .ethos_content {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        .ethos_img_container{
+            margin-left: 8px;
+        }
+        .ethos_title {
+            font-size: 20px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        .ethos_container_body{
+            margin-top: 50px;
+            font-size: 13px;
+            line-height: 19px;
+        }
+        .ethos_heading{
+            margin-bottom: 20px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .ethos_container_body{
+            text-align: left;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+    .ethos_card_container:nth-child(even) .ethos_mob_content{
+        padding-right: 15px;
+        text-align: right;
+    }
+    
+        img.card_designleaves{
+            max-height: 133px;
+        }
+        .ethos_desk_content{
+        display: none;
+    }
+    .ethos_mob_content{
+        display: block;
+    }
+
+        .ethos_heading {
+            margin-top: 50px;
+        }
+        .ethos_desk_img{
+            display: none;
+        }
+        .ethos_mob_img{
+            display: block;
+        }
+        .about_ethos_container{
+        margin-bottom: 44px;
+    }
+        .card_maincontainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .ethos_card_container{
+            width: 65%;
+        }
+        .ethos_card_container:not(:last-child) {
+            margin-bottom: 20px;
+        }
+        .ethos_card_container:nth-child(odd) {
+            margin-right: 0;
+        }
+        .ethos_card_container:nth-child(even) {
+            margin-left: 0;
+        }
+        .ethos_img_container{
+            margin-left: 0;
+        }
+        .ethos_content {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .ethos_card_container:nth-child(even) .ethos_content{
+            flex-direction: row-reverse;
+        }
+        .ethos_card_container:nth-child(even) .ethos_img_container {
+            /* margin-left: 8px; */
+            padding-right: 0px;
+        }
+        .ethos_card_container:nth-child(even) img.card_designleaves {
+            left: 10px;
+            transform: rotateY(180deg);
+        }
+        .ethos_main_heading {
+            font-size: 18px;
+        }
+        .ethos_secondary_heading {
+            font-size: 55px;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+        .ethos_img_container{
+            padding-bottom: 24px;
+        }
+        .ethos_container_body{
+            padding-bottom: 7px !important;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        .ethos_card_container {
+            width: 90%;
+        }
+    }
+    @media screen and (max-width: 530px) {
+        .ethos_card_container {
+            width: 100%;
+        }
+        .card_maincontainer{
+            margin: auto 0;
+        }
+        .ethos_heading{
+            margin-left: 0;
+        }
+        .about_ethos_container{
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 1px;
+        }
+    }
+    @media screen and (max-width: 430px) {
+        .ethos_content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .ethos_heading {
+    margin-top: 45px;
+}
+    
+    }
+    @media screen and (max-width: 420px) {
+        .ethos_content {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    @media screen and (max-width: 390px) {
+        .ethos_container_body {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+    @media screen and (max-width: 370px) {
+        .ethos_content {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.ethos_card_container:nth-child(even) .ethos_mob_content {
+    padding-right: 12px;
+}
+.ethos_img_container {
+    padding-right: 12px;
+}
+    }
+</style>
+
+{% schema %}
+{
+    "name": "About-us Ethos",
+    "settings": [
+        {
+            "type": "text",
+            "id": "ethos_primary_title",
+            "label": "Ethos Primary Heading",
+            "default": "Our"
+        },
+        {
+            "type": "text",
+            "id": "ethos_secondary_title",
+            "label": "Ethos Secondary Heading",
+            "default": "Ethos"
+        },
+        {
+            "type": "image_picker",
+            "id": "card_design_img",
+            "label": "Card Design Image"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "card-content",
+            "name": "Ethos Card content",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "ethos_card_title",
+                    "label": "Ethos Card Heading",
+                    "default": "Authentic"
+                },
+                {
+                    "type": "text",
+                    "id": "ethos_card_content",
+                    "label": "Ethos Card Content",
+                    "default": "Amala Earth bases itself on the promise to be true and to do our best to offer authenticity to the consumer. We aspire to build the trust of our fellow consumers as a reliable and authentic brand. Ethical practices strengthen the authenticity of our mission."
+                },
+                {
+                    "type": "text",
+                    "id": "ethos_card_content_mob",
+                    "label": "Ethos Mobile Card Content",
+                    "default": "Amala Earth bases itself on the promise to be true and to do our best to offer authenticity to the consumer. We aspire to build the trust of our fellow consumers as a reliable and authentic brand. Ethical practices strengthen the authenticity of our mission."
+                },
+                {
+                    "type": "image_picker",
+                    "id": "card_main_img",
+                    "label": "Card Desktop Image"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "card_mob_img",
+                    "label": "Card Mobile Image"
+                },
+                {
+                    "type": "color_background",
+                    "id": "tiles_color_mob",
+                    "label": "Background color Mobile"
+                },
+                {
+                    "type": "color_background",
+                    "id": "tiles_color_desk",
+                    "label": "Background color Desktop"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Our Ethos"
+        }
+    ] 
+}
+{% endschema %}

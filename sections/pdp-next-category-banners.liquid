@@ -1,0 +1,462 @@
+{%- capture section_settings -%}
+{
+  "autoPlay": {{ section.settings.autoplay | json }},
+  "pageDots": {% if section.blocks.size > 1 %}true{% else %}false{% endif %},
+  "cycleSpeed": {{ section.settings.cycle_speed | times: 1000 | json }}
+}
+{%- endcapture -%}
+{%- liquid
+    assign show_section = false
+    assign collection_handle = collection.handle
+    assign allCol = product.collections | sort: 'published_at'
+    assign global_mindful_eating = settings.global_mindful_eating-list | split: ','
+    assign global_ethical_beauty = settings.global_ethical_beauty-list | split: ','
+    assign global_joyful_home = settings.global_joyful_home-list | split: ','
+    assign global_mens_fashion = settings.global_mens_fashion-list | split: ','
+    assign global_womens_fashion = settings.global_womens_fashion-list | split: ','
+    assign count = 0
+    assign category_col = ''
+    if collection.handle == blank
+      for col in allCol
+        if col.handle != 'all' and col.handle != 'new-arrivals' and col.handle != 'bestselling-products' or col.handle != 'responsible-fashion'
+          assign collection_handle = col.handle
+          break
+        endif
+      endfor
+      for col in allCol
+        if col.handle == 'mens-wear'
+          assign collection_handle = col.handle
+          break
+        endif
+        if col.handle == 'women'
+          assign collection_handle = col.handle
+          break
+        endif
+      endfor
+    endif
+    assign categorylayout = 'other'
+    if global_mindful_eating contains collection_handle
+      assign categorylayout = 'food'
+      assign category_col = global_mindful_eating
+    elsif global_ethical_beauty contains collection_handle
+      assign categorylayout = 'beauty'
+      assign category_col = global_ethical_beauty
+    elsif global_joyful_home contains collection_handle
+      assign categorylayout = 'home'
+      assign category_col = global_joyful_home
+    endif
+    if allCol contains 'mens-wear'
+    assign category_col = global_mens_fashion
+    assign categorylayout = 'fashion'
+    endif
+    if allCol contains 'women'
+    assign category_col = global_womens_fashion
+    assign categorylayout = 'fashion'
+    endif
+    for block in section.blocks
+      if block.settings.layout == categorylayout
+        assign show_section = true
+      endif
+    endfor
+
+    assign show_category = ''
+    assign add_cate = false
+    for col in category_col
+      if forloop.first == true
+        continue
+      endif
+      if count == 6
+        assign add_cate = false
+        break
+      endif
+      if add_cate
+        assign count = count | plus: 1
+        if show_category == ''
+          assign show_category = col
+        else
+          assign show_category = show_category | append: ', ' | append: col
+        endif
+      endif
+      if col == collection_handle
+        assign add_cate = true
+      endif
+      if forloop.last == true
+        if count != 6
+          for sub_col in category_col
+            if forloop.first == true
+              continue
+            endif
+            if count == 6
+              assign add_cate = false
+              break
+            endif
+            if add_cate
+              assign count = count | plus: 1
+              if show_category == ''
+                assign show_category = sub_col
+              else
+                assign show_category = show_category | append: ', ' | append: sub_col
+              endif
+            endif
+          endfor
+        endif
+      endif
+    endfor
+-%}
+{%- if show_section -%}
+<div class="section collection-banners_section pdp-next-category-banners_section" data-test="{{show_category}}" data-section-id="{{ section.id }}" data-section-type="collection-banners-carousel" data-section-settings='{{ section_settings }}'>
+  <div class="container">
+    <div class="collection-banners_slider">
+    {%- for block in section.blocks -%}
+      {%- capture block_data -%}
+        {%- if block.settings.mobile_image -%}
+          {%- capture mobile_size -%}{{ block.settings.mobile_image.width | at_most: 600 }}x{{ block.settings.mobile_image.height | at_most: 800 }}{%- endcapture -%}
+          {%- capture bgset -%}{{ block.settings.mobile_image | img_url: mobile_size, crop: 'center' }} [--phone] | {{ block.settings.image | img_url: '800x' }} 800w, {{ block.settings.image | img_url: '1000x' }} 1000w, {{ block.settings.image | img_url: '1200x' }} 1200w, {{ block.settings.image | img_url: '1400x' }} 1400w, {{ block.settings.image | img_url: '1600x' }} 1600w, {{ block.settings.image | img_url: '1800x' }} 1800w{%- endcapture -%}
+        {%- else -%}
+          {%- capture mobile_size -%}{{ block.settings.image.width | at_most: 600 }}x{{ block.settings.image.height | at_most: 800 }}{%- endcapture -%}
+          {%- capture bgset -%}{{ block.settings.image | img_url: mobile_size, crop: 'center' }} [--phone] | {{ block.settings.image | img_url: '800x' }} 800w, {{ block.settings.image | img_url: '1000x' }} 1000w, {{ block.settings.image | img_url: '1200x' }} 1200w, {{ block.settings.image | img_url: '1400x' }} 1400w, {{ block.settings.image | img_url: '1600x' }} 1600w, {{ block.settings.image | img_url: '1800x' }} 1800w{%- endcapture -%}
+        {%- endif -%}
+        <a href="{{ block.settings.link }}" class="colbanner__slide{% if block.settings.show_overlay %} colbanner__slide--overlay{% endif %}" id="block-{{ block.id }}" data-sub-cate="{{block.settings.sub_category}}" data-block-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
+          <div class="colbanner__slide-inner lazyload image--fade-in" {% if block.settings.image %}data-bgset="{{ bgset }}" data-sizes="auto"{% endif %} >
+            {%- if block.settings.image -%}
+              {%- capture supported_sizes -%}{%- render 'image-size', sizes: '800,900,1000', image: block.settings.image -%}{%- endcapture -%}
+              {%- assign image_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+              <div class="aspect-ratio {% if block.settings.mobile_image %}hidden-phone{% endif %}" style="padding-bottom: {{ 100.0 | divided_by: block.settings.image.aspect_ratio }}%">
+                <img class="colbanner__image lazyload image--fade-in" alt="{{ block.settings.image.alt | escape }}" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto">
+
+                <noscript>
+                <img src="{{ block.settings.image | img_url: '1200x' }}" alt="{{ block.settings.image.alt | escape }}">
+                </noscript>
+              </div>
+
+              {%- if block.settings.mobile_image -%}
+                {%- capture supported_sizes -%}{%- render 'image-size', sizes: '400,500,600,700,800', image: block.settings.mobile_image -%}{%- endcapture -%}
+                {%- assign image_url = block.settings.mobile_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+              <div class="aspect-ratio hidden-tablet-and-up" style="padding-bottom: {{ 100.0 | divided_by: block.settings.mobile_image.aspect_ratio }}%">
+              <img class="colbanner__image lazyload image--fade-in" alt="{{ block.settings.mobile_image.alt | escape }}" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto">
+
+              <noscript>
+                <img src="{{ block.settings.mobile_image | img_url: '800x' }}" alt="{{ block.settings.mobile_image.alt | escape }}">
+              </noscript>
+              </div>
+              {%- endif -%}
+            {%- endif -%}
+          </div>
+          {%- if block.settings.title != blank -%}
+          <div class="colbanner__slide-content">
+            {%- if block.settings.title != blank -%}
+            <h2 class="heading">{{ block.settings.title | escape }}</h2>
+            {%- endif -%}
+          </div>
+          {%- endif -%}
+        </a>
+      {%- endcapture -%}
+        {%- if show_category != '' -%}
+          {%- if show_category contains block.settings.sub_category -%}
+            {{ block_data }}
+          {%- endif -%}
+        {%- else -%}
+          {%- if block.settings.layout == categorylayout -%}
+            {{ block_data }}
+          {%- endif -%}
+        {%- endif -%}
+    {%- endfor -%}
+    </div>
+  </div>
+</div>
+{% style %}
+.collection-banners_section{
+  overflow: hidden;
+}
+.collection-banners_slider{
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  margin: 0 -15px;
+  z-index: 1;
+  padding-bottom: 50px;
+}
+.collection-banners_slider:not(.flickity-enabled){
+  width:100%;
+  overflow-y:auto;
+  flex-wrap:nowrap;
+}
+.collection-banners_slider:after {
+  content: 'flickity';
+  display: none; /* hide :after */
+}
+.collection-banners_slider:not(.flickity-enabled) .colbanner__slide{
+  min-width: 50%;
+}
+.collection-banners_slider .colbanner__slide {
+  position: relative;
+  width: 50%;
+  padding: 0 15px;
+}
+.colbanner__slide .colbanner__slide-content {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  padding:35px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.colbanner__slide-content .heading {
+    font-size: 35px;
+    line-height: 1.2;
+    margin-bottom: 0px;
+    font-weight:500;
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.21em;
+    text-shadow: 0px 5.89451px 5.89451px rgba(0, 0, 0, 0.25);
+}
+.colbanner__slide--overlay .colbanner__slide-content::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: calc(100% - 30px);
+  left: 50%;
+  transform:translateX(-50%);
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+{% unless section.blocks.size > 2 %}
+.collection-banners_slider .flickity-page-dots{
+  display:none;
+}
+{% endunless %}
+.collection-banners_slider .flickity-prev-next-button {
+    top: calc(50% - 50px);
+}
+.collection-banners_slider .flickity-page-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.collection-banners_slider .flickity-page-dots .dot{
+    width: 14px;
+    height: 14px;
+    margin: 0 5px;
+    background: rgba(217, 217, 217,0.6);
+    border: 1px solid rgba(217, 217, 217,0.6);
+}
+.collection-banners_slider .flickity-page-dots .dot.is-selected{
+    width: 21px;
+    height: 21px;
+    background: #fff;
+    border: 1px solid #9F7356;
+}
+{%- for block in section.blocks -%}
+#block-{{ block.id }} .heading,#block-{{ block.id }} .subheading{
+  color:{{block.settings.text_color}};
+}
+{%- if block.settings.show_overlay -%}
+  #block-{{ block.id }}.colbanner__slide--overlay .colbanner__slide-content::before {
+    {%- assign overlay_opacity = block.settings.overlay_opacity | divided_by: 100.0 -%}
+    background: {{ block.settings.background_color | color_modify: 'alpha', overlay_opacity }};
+  }
+{%- endif -%}
+{%- endfor -%}
+@media screen and (min-width:992px){
+  .pdp-next-category-banners_section {
+    margin-top: 60px;
+  }
+}
+@media screen and (max-width:1199px){
+    .colbanner__slide-content .heading{
+        font-size:24px;
+    }
+}
+@media screen and (max-width:991px){
+    .colbanner__slide-content .heading{
+        font-size:20px;
+    }
+}
+@media screen and (max-width:767px){
+  .collection-banners_slider .colbanner__slide {
+    width: 100%;
+    padding: 0;
+  }
+  .collection-banners_slider:not(.flickity-enabled) .colbanner__slide{
+    min-width:  100%;
+  }
+  .colbanner__slide--overlay .colbanner__slide-content::before{
+    width: 100%;
+  }
+  .colbanner__slide--overlay::before{width: 100%;}
+  .collection-banners_slider {
+    margin: 0;
+    padding-bottom: 0px;
+  }
+  .collection-banners_section .container {
+    padding: 0;
+  }
+  .collection-banners_slider .flickity-page-dots {
+    bottom: 15px;
+    display:block;
+  }
+  .colbanner__slide .colbanner__slide-content{
+    padding: 25px 10px;
+  }
+  .colbanner__slide-content .heading{
+    font-size:24px;
+  }
+  .colbanner__slide-content .subheading {
+    font-size: 13px;
+  }
+  .collection-banners_section .flickity-prev-next-button.previous {
+    left: 10px;
+  }
+  .collection-banners_section .flickity-prev-next-button.next{
+    right: 10px;
+  }
+  .collection-banners_slider .flickity-prev-next-button {
+    top: calc(50% - 25px);
+    transform: scale(.7) !important;
+  }
+  .collection-banners_slider .flickity-page-dots .dot,
+  .collection-banners_slider .flickity-page-dots .dot.is-selected{
+    width:8px;
+    height:8px;
+    margin: 0 7px;
+    background:rgba(170, 147, 121,0.5);
+    border-color:rgba(170, 147, 121,0.5);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .collection-banners_slider .flickity-page-dots .dot.is-selected{
+    background:#8C593F;
+    border-color:#8C593F;
+  }
+}
+@media screen and (max-width:640px){
+  .collection-banners_section {
+    padding-top: 40px;
+  }
+}
+{% endstyle %}
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Next Category banners",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Auto rotate between slides",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "cycle_speed",
+      "min": 3,
+      "max": 8,
+      "step": 1,
+      "unit": "sec",
+      "label": "Change slides every",
+      "default": 5
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "select",
+          "id": "layout",
+          "label": "category",
+          "options": [
+            {
+              "value": "food",
+              "label": "Food"
+            },
+            {
+              "value": "beauty",
+              "label": "Beauty"
+            },
+            {
+              "value": "fashion",
+              "label": "Fashion"
+            },
+            {
+              "value": "home",
+              "label": "Home"
+            },
+            {
+              "value": "other",
+              "label": "Other"
+            }
+          ],
+          "default": "other"
+        },
+        {
+          "type": "text",
+          "id": "sub_category",
+          "label": "sub category"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "1920 x 600px .jpg recommended"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile image",
+          "info": "414 x 270px .jpg recommended. If none is set, desktop image will be used."
+        },
+        {
+          "type": "checkbox",
+          "id": "show_overlay",
+          "label": "Show overlay",
+          "info": "Increase text readability on busy images.",
+          "default": false
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity",
+          "label": "Overlay opacity",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "default": 50
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Slide title"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text",
+          "default": "#ffffff"
+        },
+		    {
+          "type": "color",
+          "id": "background_color",
+          "label": "Slide Background Color",
+          "default": "#fff"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link",
+          "info": "If no text is set for button, the whole image becomes clickable."
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,77 @@
+<div id="product-reviews-model" class="pop-up-modal my-account order-reviews">
+	<div class="pop-up__container">
+		<span class="close-button modal-close"><img src="{{ 'close-icon.svg' | asset_url }}" alt="X"></span>
+		<div class="pop-up__content-wrapper">
+			<div class="my-account__pop-up-header">
+        <h1 class="heading">Write a review</h1>
+      </div>
+      <div class="my-orders__content-wrapper-popup my-orders__content-wrapper ">
+      </div>
+      <div class="content-wrapper-reviews_forms">
+      </div>
+    </div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	var ShowPproducts = false;
+	$(document).on('click','.review-trigger', function(e){
+    e.preventDefault();
+    console.log($(this).parents('.line-item__wrapper').siblings('.line-item__wrapper').length);
+    if($(this).parents('.pop-up-modal').length > 0 && $(this).parents('.line-item__wrapper').siblings('.line-item__wrapper').length > 0) {
+    	ShowPproducts = true;
+    }
+    $('.pop-up-modal').removeClass("show-pop-up");
+    var target = $(this).attr('traget');
+    var productData = $(this).siblings('.product-details');
+    $(target).find('.my-orders__content-wrapper').html('');
+    if($(this).hasClass('my-orders__content-wrapper')){
+    	$(target).find('.my-orders__content-wrapper').append($(this).html());
+		$(this).parent('.line-item__wrapper').remove();
+    } else {
+    	$(target).find('.my-orders__content-wrapper').append($(this).parents('.my-orders__item-review').siblings('.my-orders__content-wrapper').html());
+    }
+    
+    $('#product-reviews-model .content-wrapper-reviews_forms').html( "<div  id='stamped-main-widget' "+
+		"data-widget-style='standard' "+
+		"data-product-id='"+ productData.attr('product-id') +"' "+  
+		"data-name='"+ productData.attr('name') +"' "+  
+		"data-url='"+ productData.attr('url') +"' "+  
+		"data-image-url='"+ productData.attr('image-url') +"' "+
+		"data-product-sku='"+ productData.attr('product-sku') +"'"+
+		"data-product-type='"+ productData.attr('product-type') +"'> "+
+		"</div>" );
+    $("body").addClass('is-locked');
+    $(target).addClass("show-pop-up");
+    StampedFn.reloadUGC();
+    return false;
+  });
+  $(document).on('click', '.pop-up__container .close-button',function(){
+	$('.pop-up-modal').removeClass("show-pop-up");
+  });
+	function addEventListenerStamped(el, eventName, handler) { 
+		if (el.addEventListener) { el.addEventListener(eventName, handler); }
+		else { el.attachEvent('on' + eventName, function () { handler.call(el); }); } 
+	}
+
+	addEventListenerStamped(document, 'stamped:reviews:loaded', function(e) {
+		StampedFn.toggleForm('review');
+		$('.stamped-form-contact-name input[name="author"]').val('{{customer.name}}');
+		$('.stamped-form-contact-email input[name="email"]').val('{{customer.email}}');
+	});
+	addEventListenerStamped(document, 'stamped:reviews:submitted', function(e) {
+	//$(document).on('click','.modal-close', function(e){
+	  $('.pop-up-modal').removeClass("show-pop-up");
+	  $('#thank-you-modal').addClass("show-pop-up");
+	});
+	$(document).on('click', '#thank-you-modal .thank-you-close-button',function(e){
+		e.preventDefault();
+		$('#thank-you-modal').removeClass("show-pop-up");
+		if($('#thank-you-modal').attr('data-traget') != ''){
+			let dataTraget = $('#thank-you-modal').attr('data-traget');
+			$(dataTraget).addClass("show-pop-up");
+			$(`${dataTraget} .close-button`).removeClass('hide');
+			$('#thank-you-modal').attr('data-traget','');
+		}
+	});
+</script>

@@ -1,0 +1,1102 @@
+{
+  "sections": {
+    "1de4fa5f-841e-48a3-ad94-a958bc0b9988": {
+      "type": "page-navigation",
+      "settings": {}
+    },
+    "festival-landings-page": {
+      "type": "main-banner",
+      "settings": {
+        "banner_desktop_image": "shopify:\/\/shop_images\/top_banner_web.jpg",
+        "banner_mobile_image": "shopify:\/\/shop_images\/top_banner_mobile.jpg",
+        "desktop_banner_title": "",
+        "color_heading": "#ffffff",
+        "desktop_banner_subtitle": "",
+        "color_subheading": "#b89c7d",
+        "desktop_banner_button": "",
+        "color_button": "#ffffff",
+        "button_background": "#9d7242",
+        "desktop_button_url": "https:\/\/amala.earth\/collections\/gifts",
+        "desktop_image_url": "https:\/\/amala.earth\/collections\/gifts"
+      }
+    },
+    "b6599171-b429-4f08-9c86-5d05b9a06f07": {
+      "type": "custom-grid",
+      "blocks": {
+        "1e8cd72e-ceb1-46e3-b7fc-6a2bbb68a6be": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/Rectangle_165_5_b0acc01e-c913-430f-a4cb-6756bd18167c.png",
+            "title": "Personalised Gifts",
+            "block_button_url": "https:\/\/amala.earth\/collections\/gifts?f_Category=gifts+for+men,gifts+for+women,anniversary+hampers"
+          }
+        },
+        "79d19bc7-6b4d-49a2-b249-4bb1f481425d": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/Rectangle_165_6.png",
+            "title": "Wedding Gifts",
+            "block_button_url": "https:\/\/amala.earth\/collections\/wedding-gifting"
+          }
+        }
+      },
+      "block_order": [
+        "1e8cd72e-ceb1-46e3-b7fc-6a2bbb68a6be",
+        "79d19bc7-6b4d-49a2-b249-4bb1f481425d"
+      ],
+      "settings": {
+        "subtitle": "",
+        "title": ""
+      }
+    },
+    "2382b5b4-3928-48ea-be56-137457587cb9": {
+      "type": "circular-image-grid",
+      "blocks": {
+        "a0f4cb92-d41f-49ac-9651-597cbb8d4f4f": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/mother.jpg",
+            "block_two_subtitle": "",
+            "title": "Mother",
+            "second_block_url": "https:\/\/amala.earth\/collections\/gifts-for-mother"
+          }
+        },
+        "706fe8bf-2da1-4299-8d78-3884c4ede935": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/father.jpg",
+            "block_two_subtitle": "",
+            "title": "Father",
+            "second_block_url": "https:\/\/amala.earth\/collections\/gifts-for-father"
+          }
+        },
+        "68ac895b-2433-4cbb-ad32-1408b7fcfd04": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/brother.jpg",
+            "block_two_subtitle": "",
+            "title": "Brother",
+            "second_block_url": "https:\/\/amala.earth\/collections\/gifts-for-brother"
+          }
+        },
+        "1eb904dd-a4eb-416b-8436-4d9edb8c1233": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/sister.jpg",
+            "block_two_subtitle": "",
+            "title": "Sister",
+            "second_block_url": "https:\/\/amala.earth\/collections\/gifts-for-sister"
+          }
+        },
+        "08102b7f-3837-469b-bb90-71a3aba3f031": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/wife.jpg",
+            "block_two_subtitle": "",
+            "title": "Wife",
+            "second_block_url": "https:\/\/amala.earth\/collections\/gifts-for-wife"
+          }
+        },
+        "a8d7613f-01cd-4521-bb7f-883bac2cfc67": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/husband.jpg",
+            "block_two_subtitle": "",
+            "title": "Husband",
+            "second_block_url": "https:\/\/amala.earth\/collections\/gifts-for-husband-1"
+          }
+        },
+        "e3101c3f-d217-4e93-b4d7-700ace279e5b": {
+          "type": "block-2",
+          "disabled": true,
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/friend.jpg",
+            "block_two_subtitle": "",
+            "title": "Friend",
+            "second_block_url": "https:\/\/amala.earth\/collections\/gifts-for-friend"
+          }
+        },
+        "9eab33e5-5e60-4004-9c50-d40f32a9d1a5": {
+          "type": "block-2",
+          "disabled": true,
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/collegue.jpg",
+            "block_two_subtitle": "",
+            "title": "Colleague",
+            "second_block_url": "https:\/\/amala.earth\/collections\/gifts-for-colleague"
+          }
+        },
+        "09a4f4ec-ed86-4283-b2f2-db4488f9d421": {
+          "type": "block-2",
+          "disabled": true,
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/son.jpg",
+            "block_two_subtitle": "",
+            "title": "Kids",
+            "second_block_url": "https:\/\/amala.earth\/collections\/gifts-for-kids"
+          }
+        },
+        "0a8b892f-eff4-4eb5-9d18-4db7711d58b6": {
+          "type": "block-2",
+          "disabled": true,
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/detox.jpg",
+            "block_two_subtitle": "",
+            "title": "Detox",
+            "second_block_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "a0f4cb92-d41f-49ac-9651-597cbb8d4f4f",
+        "706fe8bf-2da1-4299-8d78-3884c4ede935",
+        "68ac895b-2433-4cbb-ad32-1408b7fcfd04",
+        "1eb904dd-a4eb-416b-8436-4d9edb8c1233",
+        "08102b7f-3837-469b-bb90-71a3aba3f031",
+        "a8d7613f-01cd-4521-bb7f-883bac2cfc67",
+        "e3101c3f-d217-4e93-b4d7-700ace279e5b",
+        "9eab33e5-5e60-4004-9c50-d40f32a9d1a5",
+        "09a4f4ec-ed86-4283-b2f2-db4488f9d421",
+        "0a8b892f-eff4-4eb5-9d18-4db7711d58b6"
+      ],
+      "settings": {
+        "subtitle": "Gifts for",
+        "title": "loved ones"
+      }
+    },
+    "ec9d466e-dacd-4ea0-b25d-6be5f0bb921e": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "aff0cc26-2daa-4703-a273-6c5ee01b1576": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-gifts-zero-waste-minimalist-starter-gift-box"
+          }
+        },
+        "d5aec9fb-63da-49f5-b9a3-22e1a3b9a61f": {
+          "type": "Product",
+          "settings": {
+            "product": "ochre-organics-tea-gift-hamper-whole-leaf-tea-soy-wax-candle-affirmation-books-oo-ts-sc-05-161222"
+          }
+        },
+        "b1e36873-0d02-47fd-89e7-838565ee71c2": {
+          "type": "Product",
+          "settings": {
+            "product": "think-artly-anniversary-gifts-for-husband-wooden-plaque-ta-126"
+          }
+        },
+        "4cc8494e-2bf7-4bf5-acf7-b91fd2a4ee07": {
+          "type": "Product",
+          "settings": {
+            "product": "gifts-for-him-musk-perfume-amber-regal-fragrance-saffron-infused-50ml"
+          }
+        },
+        "e2b3f2e4-403e-4087-b5de-598c794c04de": {
+          "type": "Product",
+          "settings": {
+            "product": "housewarming-gifts-moga-ceramic-bowls-set-of-2"
+          }
+        },
+        "f3d366ad-2b80-4059-b7fe-2ab848f8350b": {
+          "type": "Product",
+          "settings": {
+            "product": "isvara-herb-basket-tea-box-with-tea-filter-honey-40-g-gb03-25722"
+          }
+        },
+        "c99e2149-9fa0-4d58-afc1-059fcb1050e2": {
+          "type": "Product",
+          "settings": {
+            "product": "natural-vibes-glow-getter-skin-care-gift-combo-nv_gift_rose_guasha_oils-270922"
+          }
+        },
+        "2f0f5c38-8650-4930-9f40-607f0b04d19f": {
+          "type": "Product",
+          "settings": {
+            "product": "birthday-gifts-eco-friendly-super-gift-box"
+          }
+        },
+        "b48f7212-4eaf-4901-974d-92f294d502cc": {
+          "type": "Product",
+          "settings": {
+            "product": "rakhi-gifts-handmade-grey-ceramic-soy-wax-candles-gift-box"
+          }
+        },
+        "af6601aa-7c7f-4fde-987e-740e7c342e6f": {
+          "type": "Product",
+          "settings": {
+            "product": "healthy-gifts-natural-evening-hazelnut-hamper-set-of-5"
+          }
+        }
+      },
+      "block_order": [
+        "aff0cc26-2daa-4703-a273-6c5ee01b1576",
+        "d5aec9fb-63da-49f5-b9a3-22e1a3b9a61f",
+        "b1e36873-0d02-47fd-89e7-838565ee71c2",
+        "4cc8494e-2bf7-4bf5-acf7-b91fd2a4ee07",
+        "e2b3f2e4-403e-4087-b5de-598c794c04de",
+        "f3d366ad-2b80-4059-b7fe-2ab848f8350b",
+        "c99e2149-9fa0-4d58-afc1-059fcb1050e2",
+        "2f0f5c38-8650-4930-9f40-607f0b04d19f",
+        "b48f7212-4eaf-4901-974d-92f294d502cc",
+        "af6601aa-7c7f-4fde-987e-740e7c342e6f"
+      ],
+      "settings": {
+        "title1": "Gifts for all",
+        "title2": "occasions",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/gifts",
+        "button_position": "top"
+      }
+    },
+    "3ce8650f-ee5d-4ec2-8c3e-43b4fde36a2f": {
+      "type": "custom-grid",
+      "blocks": {
+        "46dcfbea-f442-422a-8f61-c28429a2d9a2": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/Birthday_concern_tiles_441ae214-b4ea-4e2a-b434-24be454deb4b.jpg",
+            "title": "For Birthday",
+            "block_button_url": "https:\/\/amala.earth\/collections\/birthday-gifts"
+          }
+        },
+        "adb9e735-9398-4722-9a2d-a10e739bacf6": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/Rectangle_165_8.png",
+            "title": "For Housewarming",
+            "block_button_url": "https:\/\/amala.earth\/collections\/housewarming-hampers"
+          }
+        },
+        "9f57f552-0ea6-4e2b-8b7a-a4f12d36551b": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/Rectangle_165_9.png",
+            "title": "For Anniversary",
+            "block_button_url": "https:\/\/amala.earth\/collections\/anniversary-hampers"
+          }
+        },
+        "9d8a0cc5-207d-4537-b54a-dd1666611f34": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/Rectangle_165_14.png",
+            "title": "For Baby shower",
+            "block_button_url": "https:\/\/amala.earth\/collections\/baby-shower-hampers"
+          }
+        },
+        "4ba4ea05-4dcd-44b1-8e66-b2e11c1d8eca": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/Rectangle_165_12.png",
+            "title": "For Children",
+            "block_button_url": "https:\/\/amala.earth\/collections\/childrens-gifts-and-returns"
+          }
+        },
+        "bad5f3ff-9274-4267-9c3e-9a6deba99ea1": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/Rectangle_165_13.png",
+            "title": "For Wedding",
+            "block_button_url": "https:\/\/amala.earth\/collections\/wedding-gifting"
+          }
+        }
+      },
+      "block_order": [
+        "46dcfbea-f442-422a-8f61-c28429a2d9a2",
+        "adb9e735-9398-4722-9a2d-a10e739bacf6",
+        "9f57f552-0ea6-4e2b-8b7a-a4f12d36551b",
+        "9d8a0cc5-207d-4537-b54a-dd1666611f34",
+        "4ba4ea05-4dcd-44b1-8e66-b2e11c1d8eca",
+        "bad5f3ff-9274-4267-9c3e-9a6deba99ea1"
+      ],
+      "custom_css": [],
+      "settings": {
+        "subtitle": "",
+        "title": ""
+      }
+    },
+    "d6601d7a-0e9d-48f7-ba85-9b82ebb7ffb1": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "de8104e0-9110-4ae4-9334-24ddd26005da": {
+          "type": "Product",
+          "settings": {
+            "product": "gifts-for-kids-wooden-peg-dolls-birch-natural-folk-set-of-6"
+          }
+        },
+        "8e6388cc-9038-490b-aa64-7a1ddb13fa64": {
+          "type": "Product",
+          "settings": {
+            "product": "bombay-toy-company-gifts-for-children-dough-pods-100-g-dpbox1-cgr-191022"
+          }
+        },
+        "311efd92-f192-4520-b338-ae62231b58a3": {
+          "type": "Product",
+          "settings": {
+            "product": "ilearnngrow-educational-toys-for-kids-cognitive-skill-workbook-ilgcsw-170123"
+          }
+        },
+        "6f58abfe-26a1-4eeb-9c84-7c0e271343ac": {
+          "type": "Product",
+          "settings": {
+            "product": "ilearnngrow-educational-toys-for-kids-shut-the-box-ilgstb-170123"
+          }
+        },
+        "434ce223-cf34-4cce-ba3f-fc2fed487dc0": {
+          "type": "Product",
+          "settings": {
+            "product": "ilearnngrow-educational-toys-for-kids-montessori-motor-skill-cube-ilgmscube-170123"
+          }
+        },
+        "3fa33613-395b-48ef-beef-af106a54162e": {
+          "type": "Product",
+          "settings": {
+            "product": "nature-activity-box-summer-edition-ii"
+          }
+        },
+        "95954531-84a0-4ea4-948c-65842b7c6936": {
+          "type": "Product",
+          "settings": {
+            "product": "almitra-sustainables-gifts-for-children-seed-pencils-pack-of-10-assp-0001-cgr-191022"
+          }
+        },
+        "27553f33-e313-4efa-8755-cf91c961523b": {
+          "type": "Product",
+          "settings": {
+            "product": "esya-birthday-outfits-linen-ruffled-skirt-for-kids-indigo-twirl-high-waist-bubble-1-2-y-cgr-191022"
+          }
+        },
+        "4e896e88-8986-41c9-9ea2-1c37dbfe2b55": {
+          "type": "Product",
+          "settings": {
+            "product": "esya-birthday-outfits-linen-jumpsuit-for-kids-yellow-lil-girls-dainty-daisy-jumpsuit-1-2-y-cgr-191022"
+          }
+        }
+      },
+      "block_order": [
+        "de8104e0-9110-4ae4-9334-24ddd26005da",
+        "8e6388cc-9038-490b-aa64-7a1ddb13fa64",
+        "311efd92-f192-4520-b338-ae62231b58a3",
+        "6f58abfe-26a1-4eeb-9c84-7c0e271343ac",
+        "434ce223-cf34-4cce-ba3f-fc2fed487dc0",
+        "3fa33613-395b-48ef-beef-af106a54162e",
+        "95954531-84a0-4ea4-948c-65842b7c6936",
+        "27553f33-e313-4efa-8755-cf91c961523b",
+        "4e896e88-8986-41c9-9ea2-1c37dbfe2b55"
+      ],
+      "settings": {
+        "title1": "Children",
+        "title2": "return gifts",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/childrens-gifts-and-returns",
+        "button_position": "top"
+      }
+    },
+    "515a285f-1f2f-41de-87ce-b729d3ea3f3c": {
+      "type": "amala-earth-curation",
+      "disabled": true,
+      "blocks": {
+        "d5afe327-cfaf-4d75-82b6-7b3815cc9081": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/Bulk_gifting_desktop_banner.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/Bulk_gifting_mobile_banner.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/bulk-gifting"
+          }
+        }
+      },
+      "block_order": [
+        "d5afe327-cfaf-4d75-82b6-7b3815cc9081"
+      ],
+      "settings": {
+        "curation_heading1": "<h3 style=\"text-decoration:underline;font-size:24px;color:#946c56;\"><a href=\"https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSe5Vhr2MqfvQ0v3dV2vbg2qxyQmwa_orBlSM3aSxTjwYfrqiw\/viewform?vc=0&c=0&w=1&flr=0\">Fill the form and let us know your requirement<\/a><\/h3>",
+        "curation_sub_heading2": "Bulk gifting"
+      }
+    },
+    "043dbc50-e2c7-4d12-ac7c-0a770e360627": {
+      "type": "curation-template-new",
+      "disabled": true,
+      "blocks": {
+        "0cae433b-5f10-444f-88c3-c664cf8df598": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/bulk_gifting_banner_web.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/bulk_gifting_mobile_banner_fdf1ffef-9d01-4d02-8af8-3ad4f88b363c.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/bulk-gifting"
+          }
+        }
+      },
+      "block_order": [
+        "0cae433b-5f10-444f-88c3-c664cf8df598"
+      ],
+      "custom_css": [
+        ".landing_heading {text-decoration: underline;}"
+      ],
+      "settings": {
+        "curation_heading1": "Bulk gifting",
+        "curation_sub_heading2": "<a href=\"https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSe5Vhr2MqfvQ0v3dV2vbg2qxyQmwa_orBlSM3aSxTjwYfrqiw\/viewform?vc=0&c=0&w=1&flr=0\">Fill the form and let us know your requirement<\/a>"
+      }
+    },
+    "9d2319e0-af45-4a6f-8b12-b2da2ab94a1c": {
+      "type": "slider-show",
+      "blocks": {
+        "template--16671376244980__9d2319e0-af45-4a6f-8b12-b2da2ab94a1c-1678077641fc7c7168-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bulk_gifting_banner_web.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/bulk_gifting_mobile_banner_fdf1ffef-9d01-4d02-8af8-3ad4f88b363c.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSe5Vhr2MqfvQ0v3dV2vbg2qxyQmwa_orBlSM3aSxTjwYfrqiw\/viewform?vc=0&c=0&w=1&flr=0"
+          }
+        },
+        "template--16671376244980__9d2319e0-af45-4a6f-8b12-b2da2ab94a1c-1678077641fc7c7168-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mindful_gifting_banner_web.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/mindful_gifting_mobile.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/corporate-gifting-made-easy-with-amala-earth-1"
+          }
+        },
+        "7141aa27-8134-4b2c-98d0-dc570cf368c0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/blog_banner_corporate_gifting_web.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/blog_banner_corporate_gifting_mobile.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSe5Vhr2MqfvQ0v3dV2vbg2qxyQmwa_orBlSM3aSxTjwYfrqiw\/viewform?vc=0&c=0&w=1&flr=0"
+          }
+        }
+      },
+      "block_order": [
+        "template--16671376244980__9d2319e0-af45-4a6f-8b12-b2da2ab94a1c-1678077641fc7c7168-0",
+        "template--16671376244980__9d2319e0-af45-4a6f-8b12-b2da2ab94a1c-1678077641fc7c7168-1",
+        "7141aa27-8134-4b2c-98d0-dc570cf368c0"
+      ],
+      "settings": {
+        "edge_to_edge": false,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "f92aca91-3963-453f-ba5e-15afaf3059b6": {
+      "type": "circular-image-grid",
+      "disabled": true,
+      "blocks": {
+        "708ddc1b-cf3e-4adf-a24e-03fef59e6a0f": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Final_Category_Icons-02_1_1_a1684d9b-dde7-47d2-ac8f-96a6bf4dc937.png",
+            "block_two_subtitle": "Corporate",
+            "title": "Gifts",
+            "second_block_url": "https:\/\/amala.earth\/collections\/corporate-hampers"
+          }
+        },
+        "36371603-682a-4c58-b710-154326a84016": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Category-01_1_ff9f50c5-7b49-4227-a24f-faa7164b7262.png",
+            "block_two_subtitle": "Wedding",
+            "title": "Favours",
+            "second_block_url": "https:\/\/amala.earth\/collections\/wedding-gifting"
+          }
+        },
+        "b10272b2-4815-4527-96c5-9608bb68555f": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Final_Category_Icons-02_1_2_dbc7c898-1c0b-4000-ab5c-142c4fc92e63.png",
+            "block_two_subtitle": "Children's",
+            "title": "Return Gifts",
+            "second_block_url": "https:\/\/amala.earth\/collections\/childrens-gifts-and-returns"
+          }
+        }
+      },
+      "block_order": [
+        "708ddc1b-cf3e-4adf-a24e-03fef59e6a0f",
+        "36371603-682a-4c58-b710-154326a84016",
+        "b10272b2-4815-4527-96c5-9608bb68555f"
+      ],
+      "settings": {
+        "subtitle": "",
+        "title": ""
+      }
+    },
+    "6d8a7fc8-8cc0-4d37-924f-edc410d4ccea": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "584fd94f-0d56-4006-969b-2470f8b7a725": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-plantable-mega-stationery-gift-set"
+          }
+        },
+        "914d6ce5-bfbe-4679-b97f-4cd26eaa2e86": {
+          "type": "Product",
+          "settings": {
+            "product": "handmade-kulhar-wooden-journal-coaster-set-of-3"
+          }
+        },
+        "02afbce5-9d3a-46d0-a628-64de5a939cb4": {
+          "type": "Product",
+          "settings": {
+            "product": "minimalist-eco-friendly-unisex-gift-box"
+          }
+        },
+        "4cda2724-b0bf-454b-bbd7-513c957a4e15": {
+          "type": "Product",
+          "settings": {
+            "product": "paperdom-stationery-kit-abundance-gift-hamper-green-pack-of-18-vij-ah-g-19922"
+          }
+        },
+        "647739f2-73c9-450e-ba47-2a83e727074a": {
+          "type": "Product",
+          "settings": {
+            "product": "diy-gardening-kit-of-zinnia"
+          }
+        },
+        "329a7220-bacb-4d4e-af3a-ce2701c5d0a3": {
+          "type": "Product",
+          "settings": {
+            "product": "unalome-handmade-paper-diary-notebook-50-pages-un-dr-01-211022"
+          }
+        },
+        "f1fe4bb6-5a30-4745-939c-6f9f0e194452": {
+          "type": "Product",
+          "settings": {
+            "product": "isvara-tea-positive-gift-set-gb01-25722"
+          }
+        },
+        "85a54763-cfb6-4374-8f13-ad43cdc979a9": {
+          "type": "Product",
+          "settings": {
+            "product": "healthy-gift-hampers-wellness-immunity-boosting-sampler-gift-box"
+          }
+        },
+        "44e5cef4-eb94-49f6-b632-032c9883aeab": {
+          "type": "Product",
+          "settings": {
+            "product": "natural-festive-hamper-crimson-red-chocolate-dates-chocolates-12-pcs"
+          }
+        },
+        "fb6f07ee-232f-4436-92e5-0672f5221825": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-beeswax-tea-light-candles-with-wooden-holder-set-of-4"
+          }
+        }
+      },
+      "block_order": [
+        "584fd94f-0d56-4006-969b-2470f8b7a725",
+        "914d6ce5-bfbe-4679-b97f-4cd26eaa2e86",
+        "02afbce5-9d3a-46d0-a628-64de5a939cb4",
+        "4cda2724-b0bf-454b-bbd7-513c957a4e15",
+        "647739f2-73c9-450e-ba47-2a83e727074a",
+        "329a7220-bacb-4d4e-af3a-ce2701c5d0a3",
+        "f1fe4bb6-5a30-4745-939c-6f9f0e194452",
+        "85a54763-cfb6-4374-8f13-ad43cdc979a9",
+        "44e5cef4-eb94-49f6-b632-032c9883aeab",
+        "fb6f07ee-232f-4436-92e5-0672f5221825"
+      ],
+      "settings": {
+        "title1": "Bulk",
+        "title2": "gifting",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/bulk-gifting",
+        "button_position": "top"
+      }
+    },
+    "f0d2ee3f-8b6d-4365-b2cc-8b28f07e148f": {
+      "type": "amala-earth-curation",
+      "blocks": {
+        "5c6b5f42-f6b8-42f0-b8a3-676c3b8f4beb": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/Wellness_hampers_banner_web_a0bb1449-d5e5-42d6-9216-5e6f680bea9d.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/wellness-hamper-obile_70d59e01-968c-4a2e-9752-e20a151d0596.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/health-hampers"
+          }
+        }
+      },
+      "block_order": [
+        "5c6b5f42-f6b8-42f0-b8a3-676c3b8f4beb"
+      ],
+      "settings": {
+        "curation_heading1": "",
+        "curation_sub_heading2": ""
+      }
+    },
+    "68c33a46-c30e-4b8a-84b9-d80dacac4a04": {
+      "type": "circular-image-grid",
+      "disabled": true,
+      "blocks": {
+        "8a6d3a3c-94c0-4179-ad43-af8efd49d07b": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/detox_827e1161-0d40-4043-8ed7-1ec4c1cfd8fa.jpg",
+            "block_two_subtitle": "",
+            "title": "Destress",
+            "second_block_url": "https:\/\/amala.earth\/collections\/beauty-hampers-and-bundles"
+          }
+        },
+        "2e909473-ebc0-45b7-a5fa-7463a5a4b3ba": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/destress_d2a3301d-e7ee-442a-b846-286a4402691c.jpg",
+            "block_two_subtitle": "",
+            "title": "Detox",
+            "second_block_url": "https:\/\/amala.earth\/collections\/health-hampers"
+          }
+        },
+        "dfe64664-5b98-41cd-85ad-d3bfffba4906": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/ayurveda_29525b82-1bc2-4f3a-a0d9-b3ebfbcb80f4.jpg",
+            "block_two_subtitle": "",
+            "title": "Ayurveda",
+            "second_block_url": "https:\/\/amala.earth\/collections\/festivals"
+          }
+        }
+      },
+      "block_order": [
+        "8a6d3a3c-94c0-4179-ad43-af8efd49d07b",
+        "2e909473-ebc0-45b7-a5fa-7463a5a4b3ba",
+        "dfe64664-5b98-41cd-85ad-d3bfffba4906"
+      ],
+      "settings": {
+        "subtitle": "",
+        "title": ""
+      }
+    },
+    "11a78fc2-c64d-42b4-b0dc-ab3bd9b7d792": {
+      "type": "consious-journey",
+      "blocks": {
+        "0624eece-4eef-48b5-965e-9aef16d64750": {
+          "type": "Consious",
+          "settings": {
+            "consious_banner_desktop": "shopify:\/\/shop_images\/image_7_fe964e76-6755-44b6-8c1f-669cca73d6e1.png",
+            "consious_banner_mobile": "shopify:\/\/shop_images\/Diwali_home_page_v3_mobile_banner_1_9f158c53-9936-49ff-9af4-99c68d866c26.png",
+            "title": "GARDENING KITS",
+            "url_link": "https:\/\/amala.earth\/collections\/gardening-kits"
+          }
+        },
+        "9f5de606-d58d-43c2-b094-c305c286f385": {
+          "type": "Consious",
+          "settings": {
+            "consious_banner_desktop": "shopify:\/\/shop_images\/image_7_a1d9cb94-0b6b-4462-bcbc-8199c4f1ff7d.png",
+            "consious_banner_mobile": "shopify:\/\/shop_images\/Khadi_gandhi_jayanti_v5_mobile_Banner_1_df09668d-a6b9-419e-a200-486b30b8f206.png",
+            "title": "PLANTERS & VASES",
+            "url_link": "https:\/\/amala.earth\/collections\/planters-and-vases"
+          }
+        },
+        "6b22b2cc-b5a4-45ec-8e19-55e3da4617b9": {
+          "type": "Consious",
+          "settings": {
+            "consious_banner_desktop": "shopify:\/\/shop_images\/image_7_1dcf3334-a320-4474-935b-57da1321851f.png",
+            "consious_banner_mobile": "shopify:\/\/shop_images\/Diwali_home_page_v3_mobile_banner_1_2.png",
+            "title": "<h1 style=\"font-size:23px;\">PLANTABLE STATIONERY<\/h1>",
+            "url_link": "https:\/\/amala.earth\/collections\/eco-friendly-gifts"
+          }
+        },
+        "31d36c17-287b-4197-a23b-fbbfedb78d6b": {
+          "type": "Consious",
+          "settings": {
+            "consious_banner_desktop": "shopify:\/\/shop_images\/image_7_8175016e-5732-4680-ae2d-245ee775ec24.png",
+            "consious_banner_mobile": "shopify:\/\/shop_images\/Diwali_home_page_v3_mobile_banner_1_3.png",
+            "title": "EARTH-FRIENDLY HAMPERS",
+            "url_link": "https:\/\/amala.earth\/collections\/earth-friendly-hampers"
+          }
+        }
+      },
+      "block_order": [
+        "0624eece-4eef-48b5-965e-9aef16d64750",
+        "9f5de606-d58d-43c2-b094-c305c286f385",
+        "6b22b2cc-b5a4-45ec-8e19-55e3da4617b9",
+        "31d36c17-287b-4197-a23b-fbbfedb78d6b"
+      ],
+      "settings": {
+        "consious_heading1": "Curated",
+        "consious_sub_heading2": "Green Gifting"
+      }
+    },
+    "232d2f5d-5639-4fe8-9923-205fc61866dd": {
+      "type": "amala-earth-curation",
+      "disabled": true,
+      "blocks": {
+        "dc6be583-0653-4358-bd99-4611778ddde1": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/wrap_your_gifts_web_1.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/428x272_wrap_your_gifts_1.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/eco-friendly-packaging"
+          }
+        }
+      },
+      "block_order": [
+        "dc6be583-0653-4358-bd99-4611778ddde1"
+      ],
+      "settings": {
+        "curation_heading1": "Eco-friendly",
+        "curation_sub_heading2": "packaging"
+      }
+    },
+    "a7ea0487-7e3a-4b47-a708-8bb88a506e59": {
+      "type": "blog-posts-carousel",
+      "blocks": {
+        "e030cd63-9da3-4563-864d-74b6b6e62a30": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Exclusive_Corporate_Gift_Hampers_for_Christmas_-_Amala_Eart.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/exclusive-corporate-gift-hampers-for-christmas-amala-earth",
+            "title": "Exclusive Corporate Gift Hampers for Christmas - Amala Earth"
+          }
+        },
+        "d755903b-8620-4fbd-a113-8404281f35f1": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/The_Ultimate_Guide_to_Thoughtful_and_Sustainable_Return_Gifts.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/the-ultimate-guide-to-thoughtful-and-sustainable-return-gifts",
+            "title": "The Ultimate Guide to Thoughtful and Sustainable Return Gifts"
+          }
+        },
+        "e3bbb9f0-8c3b-4247-9abe-80373ac4a94c": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/An_Easy_Guide_to_Baby_Shower_Gifts_and_Hampers.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/an-easy-guide-to-baby-shower-gifts-and-hampers",
+            "title": "An Easy Guide to Baby Shower Gifts and Hampers"
+          }
+        },
+        "f7883cfd-14da-4a4b-80f6-5418ecdf8110": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/10_Unique_Meaningful_Earth-friendly_Birthday_Gifts.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/10-unique-meaningful-earth-friendly-birthday-gifts",
+            "title": "10 Unique, Meaningful & Earth-friendly Birthday Gifts"
+          }
+        },
+        "2e4f2e1f-0b41-4e0a-81c4-87c6000e864a": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Unique_and_Super_Cool_Stationery_Products_for_Gifting_1.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/unique-and-super-cool-stationery-products-for-gifting",
+            "title": "Unique and Super Cool Stationery Products for Gifting"
+          }
+        },
+        "49bc4d51-8a54-4fa6-9506-b04db4416416": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Corporate_Gifting_Made_Easy_With_Amala_Earth.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/corporate-gifting-made-easy-with-amala-earth-1",
+            "title": "Corporate Gifting Made Easy With Amala Earth"
+          }
+        },
+        "f97b7cdf-bff0-48a9-8c92-f5f16852b186": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Looking_for_Unique_Gifts_This_Festive_Season__Choose_Upcycled_Gifts_from_Amala_Earth_1.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/looking-for-unique-gifts-this-festive-season-choose-upcycled-gifts-from-amala-earth",
+            "title": "Looking for Unique Gifts This Festive Season? Choose Upcycled Gifts from Amala Earth"
+          }
+        },
+        "49516805-9e1a-42ad-9b61-decac6393814": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/10_eco-friendly_gift_ideas_for_men_2.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/10-eco-friendly-gift-ideas-for-men",
+            "title": "10 eco-friendly gift ideas for men"
+          }
+        }
+      },
+      "block_order": [
+        "e030cd63-9da3-4563-864d-74b6b6e62a30",
+        "d755903b-8620-4fbd-a113-8404281f35f1",
+        "e3bbb9f0-8c3b-4247-9abe-80373ac4a94c",
+        "f7883cfd-14da-4a4b-80f6-5418ecdf8110",
+        "2e4f2e1f-0b41-4e0a-81c4-87c6000e864a",
+        "49bc4d51-8a54-4fa6-9506-b04db4416416",
+        "f97b7cdf-bff0-48a9-8c92-f5f16852b186",
+        "49516805-9e1a-42ad-9b61-decac6393814"
+      ],
+      "settings": {
+        "heading_one": "Recent",
+        "heading_two": "blogposts",
+        "view_text": "",
+        "url_link": ""
+      }
+    },
+    "81678379-36a1-40da-a090-c1c9462730af": {
+      "type": "video-slider",
+      "disabled": true,
+      "blocks": {
+        "e20889c9-3742-41df-86fb-1cb7a8afafe2": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=F5p6yUl0xIM",
+            "image": "shopify:\/\/shop_images\/Rectangle_65.jpg",
+            "videoHeading": "Exclusive Range of Eco-Friendly Birthday Gifts Options - Amala Earth",
+            "expspeaks": false
+          }
+        },
+        "fc61c910-d5c2-4748-95ee-b6cc4f686fb7": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=ROK0WJwK2no",
+            "image": "shopify:\/\/shop_images\/Rectangle_65_1.png",
+            "videoHeading": "Eco-friendly Gifts for Babies and Kids | Amala Earth",
+            "expspeaks": false
+          }
+        },
+        "027535a3-688e-4b86-aa67-975ae97b9d79": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=E_JfvBd219k",
+            "image": "shopify:\/\/shop_images\/Rectangle_65_3.png",
+            "videoHeading": "Eco-friendly Christmas Gift Box | Amala Earth",
+            "expspeaks": false
+          }
+        },
+        "93af3de4-fc34-4bf9-9281-0ced5abdf028": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=vowWTR9-XL8",
+            "image": "shopify:\/\/shop_images\/Rectangle_65_5.png",
+            "videoHeading": "The Amala Earth Mindful Gift Box",
+            "expspeaks": false
+          }
+        },
+        "a23a67f0-52a5-46a5-9aad-61d7fc2996af": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=rnijlPeYKSM",
+            "image": "shopify:\/\/shop_images\/Rectangle_65_4.png",
+            "videoHeading": "Mindful and earth-friendly Rakhi gifts for her. Shop at Amala Earth.",
+            "expspeaks": false
+          }
+        }
+      },
+      "block_order": [
+        "e20889c9-3742-41df-86fb-1cb7a8afafe2",
+        "fc61c910-d5c2-4748-95ee-b6cc4f686fb7",
+        "027535a3-688e-4b86-aa67-975ae97b9d79",
+        "93af3de4-fc34-4bf9-9281-0ced5abdf028",
+        "a23a67f0-52a5-46a5-9aad-61d7fc2996af"
+      ],
+      "settings": {
+        "title": "Videos",
+        "subtitle": "Video",
+        "btn_text": "View all",
+        "video_link": "",
+        "old_section_id": ""
+      }
+    },
+    "050c4fce-5822-40dc-88c0-88464abe66ad": {
+      "type": "landing-page-video",
+      "blocks": {
+        "e518759f-dfaf-4b21-96a7-bb5f69d6952e": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=F5p6yUl0xIM",
+            "image": "shopify:\/\/shop_images\/Rectangle_65.jpg",
+            "title": "Exclusive Range of Eco-Friendly Birthday Gifts Options - Amala Earth",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "5f56882e-eb09-4273-b757-008adcf8e096": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=ROK0WJwK2no",
+            "image": "shopify:\/\/shop_images\/Rectangle_65_1.png",
+            "title": "Eco-friendly Gifts for Babies and Kids | Amala Earth",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "c0a631fb-294c-4c13-b0c4-a354f486bb61": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=E_JfvBd219k",
+            "image": "shopify:\/\/shop_images\/Rectangle_65_3.png",
+            "title": "Eco-friendly Christmas Gift Box | Amala Earth",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "dfaa95cd-2a63-4d16-92ae-8e8a9e0229fc": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=vowWTR9-XL8",
+            "image": "shopify:\/\/shop_images\/Rectangle_65_5.png",
+            "title": "The Amala Earth Mindful Gift Box",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "aeb8f5e2-e160-4b2d-9552-cc64fbed05e7": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=rnijlPeYKSM",
+            "image": "shopify:\/\/shop_images\/Rectangle_65_4.png",
+            "title": "Mindful and earth-friendly Rakhi gifts for her. Shop at Amala Earth.",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        }
+      },
+      "block_order": [
+        "e518759f-dfaf-4b21-96a7-bb5f69d6952e",
+        "5f56882e-eb09-4273-b757-008adcf8e096",
+        "c0a631fb-294c-4c13-b0c4-a354f486bb61",
+        "dfaa95cd-2a63-4d16-92ae-8e8a9e0229fc",
+        "aeb8f5e2-e160-4b2d-9552-cc64fbed05e7"
+      ],
+      "settings": {
+        "video_title1": "Video",
+        "video_title2": "blogs",
+        "btn_text": "",
+        "url_link": ""
+      }
+    },
+    "b0af5da9-5b0b-4272-ad0a-d701a4816a1e": {
+      "type": "circular-image-heading-grid",
+      "disabled": true,
+      "blocks": {
+        "3c722f8c-01fe-43ba-a938-1dd910cb5177": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Final_Category_Icons-02_1_3_2e768b17-54d7-4ea7-a379-3912d13a7590.png",
+            "block_two_subtitle": "Corporate",
+            "title": "Gifts",
+            "second_block_url": "https:\/\/amala.earth\/collections\/corporate-hampers"
+          }
+        },
+        "c639c6d0-dcde-497d-b80f-433bcf0f8701": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Category-01_1_2_de616710-272a-4e6c-b4fe-9f408770e78e.png",
+            "block_two_subtitle": "Wedding",
+            "title": "Favours",
+            "second_block_url": "https:\/\/amala.earth\/collections\/wedding-gifting"
+          }
+        },
+        "8fd05d2e-84f0-4907-87af-7c65968b2d39": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Final_Category_Icons-02_1_2_dbc7c898-1c0b-4000-ab5c-142c4fc92e63.png",
+            "block_two_subtitle": "Return Gifts",
+            "title": "for Children",
+            "second_block_url": "https:\/\/amala.earth\/collections\/childrens-gifts-and-returns"
+          }
+        }
+      },
+      "block_order": [
+        "3c722f8c-01fe-43ba-a938-1dd910cb5177",
+        "c639c6d0-dcde-497d-b80f-433bcf0f8701",
+        "8fd05d2e-84f0-4907-87af-7c65968b2d39"
+      ],
+      "settings": {
+        "subtitle": "",
+        "title": ""
+      }
+    }
+  },
+  "order": [
+    "1de4fa5f-841e-48a3-ad94-a958bc0b9988",
+    "festival-landings-page",
+    "b6599171-b429-4f08-9c86-5d05b9a06f07",
+    "2382b5b4-3928-48ea-be56-137457587cb9",
+    "ec9d466e-dacd-4ea0-b25d-6be5f0bb921e",
+    "3ce8650f-ee5d-4ec2-8c3e-43b4fde36a2f",
+    "d6601d7a-0e9d-48f7-ba85-9b82ebb7ffb1",
+    "515a285f-1f2f-41de-87ce-b729d3ea3f3c",
+    "043dbc50-e2c7-4d12-ac7c-0a770e360627",
+    "9d2319e0-af45-4a6f-8b12-b2da2ab94a1c",
+    "f92aca91-3963-453f-ba5e-15afaf3059b6",
+    "6d8a7fc8-8cc0-4d37-924f-edc410d4ccea",
+    "f0d2ee3f-8b6d-4365-b2cc-8b28f07e148f",
+    "68c33a46-c30e-4b8a-84b9-d80dacac4a04",
+    "11a78fc2-c64d-42b4-b0dc-ab3bd9b7d792",
+    "232d2f5d-5639-4fe8-9923-205fc61866dd",
+    "a7ea0487-7e3a-4b47-a708-8bb88a506e59",
+    "81678379-36a1-40da-a090-c1c9462730af",
+    "050c4fce-5822-40dc-88c0-88464abe66ad",
+    "b0af5da9-5b0b-4272-ad0a-d701a4816a1e"
+  ]
+}

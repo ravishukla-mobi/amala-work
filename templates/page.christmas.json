@@ -1,0 +1,1122 @@
+{
+  "sections": {
+    "9b27a570-d5a5-4fdb-809d-7eb9b70c5848": {
+      "type": "page-navigation",
+      "settings": {}
+    },
+    "festival-landings-page": {
+      "type": "main-banner",
+      "settings": {
+        "banner_desktop_image": "shopify:\/\/shop_images\/christmas_desktop_banner_854a78fe-2fde-4d75-9cef-6592fbcff5b6.jpg",
+        "banner_mobile_image": "shopify:\/\/shop_images\/christmas_mobile_banner.jpg",
+        "desktop_banner_title": "",
+        "color_heading": "#ffffff",
+        "desktop_banner_subtitle": "",
+        "color_subheading": "#b89c7d",
+        "desktop_banner_button": "",
+        "color_button": "#ffffff",
+        "button_background": "#9d7242",
+        "desktop_button_url": "https:\/\/amala.earth\/collections\/christmas",
+        "desktop_image_url": "https:\/\/amala.earth\/collections\/christmas"
+      }
+    },
+    "3ce8650f-ee5d-4ec2-8c3e-43b4fde36a2f": {
+      "type": "custom-grid",
+      "blocks": {
+        "9d8a0cc5-207d-4537-b54a-dd1666611f34": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/christmas_decor.jpg",
+            "title": "Christmas decor",
+            "block_button_url": "https:\/\/amala.earth\/collections\/christmas-decor"
+          }
+        },
+        "bad5f3ff-9274-4267-9c3e-9a6deba99ea1": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/Christmas_Gifting.png",
+            "title": "Christmas gifting",
+            "block_button_url": "https:\/\/amala.earth\/collections\/christmas-gifting"
+          }
+        },
+        "46dcfbea-f442-422a-8f61-c28429a2d9a2": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/clothing.jpg",
+            "title": "Party wear",
+            "block_button_url": "https:\/\/amala.earth\/collections\/christmas-party-wear"
+          }
+        },
+        "4ba4ea05-4dcd-44b1-8e66-b2e11c1d8eca": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/party_makeup.jpg",
+            "title": "Clean beauty",
+            "block_button_url": "https:\/\/amala.earth\/collections\/christmas-natural-makeup"
+          }
+        },
+        "adb9e735-9398-4722-9a2d-a10e739bacf6": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/party_serveware.jpg",
+            "title": "Party  serveware",
+            "block_button_url": "https:\/\/amala.earth\/collections\/christmas-party-serveware"
+          }
+        },
+        "9f57f552-0ea6-4e2b-8b7a-a4f12d36551b": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/christmas_beverage_and_food.jpg",
+            "title": "Party snacks",
+            "block_button_url": "https:\/\/amala.earth\/collections\/christmas-food"
+          }
+        },
+        "c9c242d3-130c-4a92-9a15-a6f1f7b54fbb": {
+          "type": "second-section",
+          "disabled": true,
+          "settings": {
+            "title": "",
+            "block_button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "9d8a0cc5-207d-4537-b54a-dd1666611f34",
+        "bad5f3ff-9274-4267-9c3e-9a6deba99ea1",
+        "46dcfbea-f442-422a-8f61-c28429a2d9a2",
+        "4ba4ea05-4dcd-44b1-8e66-b2e11c1d8eca",
+        "adb9e735-9398-4722-9a2d-a10e739bacf6",
+        "9f57f552-0ea6-4e2b-8b7a-a4f12d36551b",
+        "c9c242d3-130c-4a92-9a15-a6f1f7b54fbb"
+      ],
+      "settings": {
+        "subtitle": "",
+        "title": ""
+      }
+    },
+    "53f38fdc-7bb3-4eac-8293-2df22ed9482b": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "04fa1e4f-ef63-4b30-8a2c-fed29934205e": {
+          "type": "Product",
+          "settings": {
+            "product": "the-good-route-christmas-ornaments-soy-wax-ornaments-white-grcco03-091122"
+          }
+        },
+        "619a003f-1183-4db9-9e82-6b821dbde053": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-multi-christmas-balls-set-of-2"
+          }
+        },
+        "9a22eb41-5f6d-486f-8280-4c115e01e8ee": {
+          "type": "Product",
+          "settings": {
+            "product": "birch-and-bug-ivory-wood-christmas-trees-set-of-3-bbxt0301-81222"
+          }
+        },
+        "1f69bd99-e41e-4568-8b63-0c1b703c6a44": {
+          "type": "Product",
+          "settings": {
+            "product": "dried-preserved-natural-pine-set-of-6"
+          }
+        },
+        "5125c6cf-a11d-4404-b86c-8bea2bc44456": {
+          "type": "Product",
+          "settings": {
+            "product": "the-good-route-christmas-ornaments-metal-ornaments-golden-grcco04-091122"
+          }
+        },
+        "a8112204-54fd-4b84-adf7-311743e824b7": {
+          "type": "Product",
+          "settings": {
+            "product": "amaryn-by-svatanya-christmas-ornaments-christmas-tree-star-heart-candy-pack-of-4-sac-shcct-23-221122"
+          }
+        },
+        "08709d56-2dde-470d-b349-cbdfc9f44bd4": {
+          "type": "Product",
+          "settings": {
+            "product": "oh-scrap-christmas-ornaments-set-medium-multicolour-set-of-3-os-xmaso-set1-m-grm-151122"
+          }
+        },
+        "bd576ea3-5c52-4439-a0cb-f0e60073a1cb": {
+          "type": "Product",
+          "settings": {
+            "product": "birch-and-bug-christmas-gifts-beachwood-christmas-ornaments-set-of-6-bbxo0601-81222"
+          }
+        },
+        "4851558e-e806-4216-87cb-b406120a51aa": {
+          "type": "Product",
+          "settings": {
+            "product": "think-artly-christmas-ornaments-merry-christmas-set-of-8-ta-190-121222"
+          }
+        },
+        "25677bc0-6d06-4466-b6d9-73aaec13490b": {
+          "type": "Product",
+          "settings": {
+            "product": "birch-and-bug-christmas-gifts-beachwood-christmas-ornaments-set-of-6-bbxo0601-81222"
+          }
+        },
+        "1b39533b-287a-4e5a-9ccf-27204002fd7d": {
+          "type": "Product",
+          "settings": {
+            "product": "think-artly-christmas-decoration-3d-house-beige-ta-191-121222"
+          }
+        },
+        "3b5b4011-0e0f-4f07-9f23-bf56943f8282": {
+          "type": "Product",
+          "settings": {
+            "product": "oh-scrap-christmas-wreath-christmas-decoration-multicolour-os-xmas-wreath-mc-131222"
+          }
+        },
+        "f74d9319-60e5-4118-b41b-20ee4678f43b": {
+          "type": "Product",
+          "settings": {
+            "product": "think-artly-pine-wood-christmas-tree-decor-beige-brown-ta-109-16722"
+          }
+        }
+      },
+      "block_order": [
+        "04fa1e4f-ef63-4b30-8a2c-fed29934205e",
+        "619a003f-1183-4db9-9e82-6b821dbde053",
+        "9a22eb41-5f6d-486f-8280-4c115e01e8ee",
+        "1f69bd99-e41e-4568-8b63-0c1b703c6a44",
+        "5125c6cf-a11d-4404-b86c-8bea2bc44456",
+        "a8112204-54fd-4b84-adf7-311743e824b7",
+        "08709d56-2dde-470d-b349-cbdfc9f44bd4",
+        "bd576ea3-5c52-4439-a0cb-f0e60073a1cb",
+        "4851558e-e806-4216-87cb-b406120a51aa",
+        "25677bc0-6d06-4466-b6d9-73aaec13490b",
+        "1b39533b-287a-4e5a-9ccf-27204002fd7d",
+        "3b5b4011-0e0f-4f07-9f23-bf56943f8282",
+        "f74d9319-60e5-4118-b41b-20ee4678f43b"
+      ],
+      "settings": {
+        "title1": "Christmas",
+        "title2": "decor",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": true,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/christmas-decor",
+        "button_position": "top"
+      }
+    },
+    "7148a954-d95c-483a-9aed-5f0f443b2075": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "059dc22d-bbed-4073-bf89-9afa1c2550f0": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-scented-belief-soy-wax-pillar-candles-set-of-3"
+          }
+        },
+        "3f6f2e98-82f3-4c34-9a74-44c9755b7e88": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-soy-wax-heart-pillar-candles-set-of-2"
+          }
+        },
+        "e25f1a39-5dac-40fc-aa8a-5b04ab68f931": {
+          "type": "Product",
+          "settings": {
+            "product": "rad-living-secret-santa-gifts-natural-soy-wax-scented-candle-jars-with-lid-set-of-2-xm11090-chr-051222"
+          }
+        },
+        "6e0e5c61-1147-4b3f-ba76-5f9e71cfcb50": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-soy-wax-ornament-candles-set-of-3"
+          }
+        },
+        "c0a8ac80-aaa4-4d14-bc5e-9f4bc296e49c": {
+          "type": "Product",
+          "settings": {
+            "product": "rad-living-christmas-soy-wax-scented-candle-pillar-candles-set-of-9-xm11112-21222"
+          }
+        },
+        "2a001bf8-0c0a-4e23-b0b9-30d2c6834f96": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-soy-wax-youre-such-a-prick-candle-set-of-2"
+          }
+        },
+        "b987b0d4-488d-4aca-b210-012bd665435c": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-bergamot-vanilla-soy-wax-scented-candles-set-of-4"
+          }
+        },
+        "843fd419-bfe4-4677-b32c-b9336119e581": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-scented-soy-wax-votive-candles-set-of-4"
+          }
+        },
+        "21cce285-b2b0-4dc4-8a8a-87db376f5e99": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-cinnamon-roll-soy-wax-scented-candles-set-of-4"
+          }
+        },
+        "0dd1d6cf-211f-4420-8b5a-a5410306434f": {
+          "type": "Product",
+          "settings": {
+            "product": "antique-iron-hanging-t-light-set-2-pieces-1"
+          }
+        },
+        "f8d58b91-b19b-4f92-bd6c-240d4a5a162b": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-soy-wax-mogra-scented-candle"
+          }
+        },
+        "7c8ce166-5ed6-43fd-9c5e-4438e69b6580": {
+          "type": "Product",
+          "settings": {
+            "product": "the-good-route-soy-was-diwali-diya-scented-candles-winter-spice-set-of-2-grcan02-27922"
+          }
+        },
+        "8eb9e142-ada2-445b-a6d6-076ac597cd49": {
+          "type": "Product",
+          "settings": {
+            "product": "soy-wax-scented-pillar-candles-aquatique-set-of-3"
+          }
+        },
+        "a536670b-d426-4311-995d-9d624a4cfec5": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-neroli-soy-wax-scented-candle"
+          }
+        }
+      },
+      "block_order": [
+        "059dc22d-bbed-4073-bf89-9afa1c2550f0",
+        "3f6f2e98-82f3-4c34-9a74-44c9755b7e88",
+        "e25f1a39-5dac-40fc-aa8a-5b04ab68f931",
+        "6e0e5c61-1147-4b3f-ba76-5f9e71cfcb50",
+        "c0a8ac80-aaa4-4d14-bc5e-9f4bc296e49c",
+        "2a001bf8-0c0a-4e23-b0b9-30d2c6834f96",
+        "b987b0d4-488d-4aca-b210-012bd665435c",
+        "843fd419-bfe4-4677-b32c-b9336119e581",
+        "21cce285-b2b0-4dc4-8a8a-87db376f5e99",
+        "0dd1d6cf-211f-4420-8b5a-a5410306434f",
+        "f8d58b91-b19b-4f92-bd6c-240d4a5a162b",
+        "7c8ce166-5ed6-43fd-9c5e-4438e69b6580",
+        "8eb9e142-ada2-445b-a6d6-076ac597cd49",
+        "a536670b-d426-4311-995d-9d624a4cfec5"
+      ],
+      "settings": {
+        "title1": "Christmas",
+        "title2": "candles",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": true,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/candles-and-aromatherapy",
+        "button_position": "top"
+      }
+    },
+    "91734891-4a5f-48e7-b4d1-0c0bb39f5ca1": {
+      "type": "amala-earth-curation",
+      "blocks": {
+        "a267e046-7e34-464b-a51e-68a54cef1cde": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/gifting_desk_1_d8b46321-641e-4ca5-a507-bedd710f20aa.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/gifting_mobile_3_c679e359-fd43-4e53-b1d3-e05a50f9502f.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/christmas-gifting"
+          }
+        }
+      },
+      "block_order": [
+        "a267e046-7e34-464b-a51e-68a54cef1cde"
+      ],
+      "settings": {
+        "curation_heading1": "",
+        "curation_sub_heading2": ""
+      }
+    },
+    "b7175b1e-effc-4624-969d-134c3bd7bedc": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "51f5efde-b361-48ab-8729-9bd5ecda60e4": {
+          "type": "Product",
+          "settings": {
+            "product": "sukoon-christmas-gifts-scented-candles-gift-box-floral-oud-fragrance-pack-of-2-gft23_chrg071122"
+          }
+        },
+        "f7460750-ead3-44d9-b522-43875efcd874": {
+          "type": "Product",
+          "settings": {
+            "product": "the-good-route-christmas-decor-soy-wax-christmas-ornaments-set-of-4-grcco05-231122"
+          }
+        },
+        "9bb20712-21ad-409f-9d5c-1f449b96e32f": {
+          "type": "Product",
+          "settings": {
+            "product": "ecoshi-christmas-gifts-for-women-hair-accessories-stationary-kit-pack-of-5-ec-ptgb-522_chrg071122"
+          }
+        },
+        "d8ce5a9a-4548-4b7c-a535-5bd108b4dcea": {
+          "type": "Product",
+          "settings": {
+            "product": "birch-and-bug-christmas-gifts-gingerbread-house-play-set-wooden-toys-for-kids-bbgh0101-81222"
+          }
+        },
+        "88efed84-7d6c-46e5-a6bb-1736d6b1f55c": {
+          "type": "Product",
+          "settings": {
+            "product": "sow-and-grow-christmas-ornaments-christmas-decoration-plantable-seeds-xmas-01-gifts-chr-051222"
+          }
+        },
+        "8263f4e6-c2d7-4c11-a7ac-863d03e9797e": {
+          "type": "Product",
+          "settings": {
+            "product": "bombay-toy-company-wooden-christmas-snowman-white-brown-snowman-231122"
+          }
+        },
+        "1c0057ad-a702-45b6-a910-7214d469de35": {
+          "type": "Product",
+          "settings": {
+            "product": "urban-creative-christmas-gifts-kashmir-lavender-rosewood-scented-wax-tablet-set-of-2-2swt_klrw_chrg071122"
+          }
+        },
+        "dde4b323-4678-4c7d-9b32-d59124b061b3": {
+          "type": "Product",
+          "settings": {
+            "product": "rad-living-christmas-gifts-scented-candles-gift-set-natural-soy-wax-set-of-4-ny11062_chrg071122"
+          }
+        },
+        "8b05cf42-61e2-4305-a90c-f2285ca3c1ba": {
+          "type": "Product",
+          "settings": {
+            "product": "bare-necessities-christmas-gifts-eco-friendly-gifts-festive-zero-waste-gift-bundle-bne143-gifts-chr-051222"
+          }
+        },
+        "a13b248c-5e4a-4d4e-a828-62e8801b87a4": {
+          "type": "Product",
+          "settings": {
+            "product": "paperdom-stationery-kit-abundance-gift-hamper-brown-pack-of-18-vij-ah-b-19922"
+          }
+        }
+      },
+      "block_order": [
+        "51f5efde-b361-48ab-8729-9bd5ecda60e4",
+        "f7460750-ead3-44d9-b522-43875efcd874",
+        "9bb20712-21ad-409f-9d5c-1f449b96e32f",
+        "d8ce5a9a-4548-4b7c-a535-5bd108b4dcea",
+        "88efed84-7d6c-46e5-a6bb-1736d6b1f55c",
+        "8263f4e6-c2d7-4c11-a7ac-863d03e9797e",
+        "1c0057ad-a702-45b6-a910-7214d469de35",
+        "dde4b323-4678-4c7d-9b32-d59124b061b3",
+        "8b05cf42-61e2-4305-a90c-f2285ca3c1ba",
+        "a13b248c-5e4a-4d4e-a828-62e8801b87a4"
+      ],
+      "settings": {
+        "title1": "Christmas",
+        "title2": "gifting",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": true,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/christmas-gifting",
+        "button_position": "top"
+      }
+    },
+    "a4dc7a08-d87a-459e-a486-68f3d4407085": {
+      "type": "amala-earth-curation",
+      "blocks": {
+        "d1ef853a-d568-469b-aca7-19dc6b001f0e": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/desktop_1.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/curation_mobile_0ac055fd-236c-4e78-9438-bc40be5a6423.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/christmas-all-things-x-mas"
+          }
+        }
+      },
+      "block_order": [
+        "d1ef853a-d568-469b-aca7-19dc6b001f0e"
+      ],
+      "settings": {
+        "curation_heading1": "",
+        "curation_sub_heading2": ""
+      }
+    },
+    "8df16da2-9a92-49b3-8a6a-8851b3fde1d1": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "cb8fc0f8-cf09-4a71-9670-34ff073c302e": {
+          "type": "Product",
+          "settings": {
+            "product": "greendeer-organic-cotton-sweater-for-baby-red-40001000145-23922"
+          }
+        },
+        "25ea0b5e-253a-4c88-a217-cc829ebf648e": {
+          "type": "Product",
+          "settings": {
+            "product": "warm-red-flax-linen-maxi-dress"
+          }
+        },
+        "2b8fdd0f-5a4b-49e3-a97e-aa301dd8702a": {
+          "type": "Product",
+          "settings": {
+            "product": "white-light-elements-upcycled-fabric-wood-earring-wle-jw-hc-er-03-191022"
+          }
+        },
+        "692a44a5-7050-42bd-8e54-1fd14767177f": {
+          "type": "Product",
+          "settings": {
+            "product": "cotton-wooden-beaded-necklace-red-beige"
+          }
+        },
+        "52c8e31e-5c9b-4335-8a40-6dbd15b9b519": {
+          "type": "Product",
+          "settings": {
+            "product": "handwoven-eri-silk-red-scarf-1"
+          }
+        },
+        "897dc7bd-2c6f-4495-8563-8ca7db87f74c": {
+          "type": "Product",
+          "settings": {
+            "product": "pure-linen-red-dress-2"
+          }
+        },
+        "5d576778-8916-451c-80df-32c2abb7e27e": {
+          "type": "Product",
+          "settings": {
+            "product": "pureclothco-organic-cotton-hair-band-for-girls-red-ao10-hb-kid-251022"
+          }
+        },
+        "066532a4-f3d2-4acb-bdfb-206e477ac2b6": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-cotton-multicolor-natural-dyed-elisa-dress"
+          }
+        },
+        "d8a3c91c-3750-47aa-b817-375b4ac8ceda": {
+          "type": "Product",
+          "settings": {
+            "product": "the-august-co-cotton-dress-for-girls-block-print-orange-ak10037aa-30922"
+          }
+        },
+        "923ffac4-0fdb-45b9-87a6-451b7099eda5": {
+          "type": "Product",
+          "settings": {
+            "product": "footprints-organic-cotton-socks-for-baby-girl-pink-pack-of-5-fpks6to12p5pink-16922"
+          }
+        },
+        "365ff306-9033-4923-a29d-af93127fbc2f": {
+          "type": "Product",
+          "settings": {
+            "product": "the-august-co-cotton-top-skirt-set-for-kids-red-ak10009aa-30922"
+          }
+        },
+        "66ef75bd-cf95-4aee-b184-b48a0505af6a": {
+          "type": "Product",
+          "settings": {
+            "product": "bow-square-linen-short-kurta-for-men-red-bskuhln0006-38-wgr-281022"
+          }
+        },
+        "36c3689d-105e-4b34-b63e-777226a12f3e": {
+          "type": "Product",
+          "settings": {
+            "product": "molik-cotton-coconut-leather-women-wallet-garnet-red-14042022-7922"
+          }
+        },
+        "133e92a0-dd0f-4940-9bdc-317e1b79ea07": {
+          "type": "Product",
+          "settings": {
+            "product": "cotton-printed-criss-cross-dress-maroon"
+          }
+        }
+      },
+      "block_order": [
+        "cb8fc0f8-cf09-4a71-9670-34ff073c302e",
+        "25ea0b5e-253a-4c88-a217-cc829ebf648e",
+        "2b8fdd0f-5a4b-49e3-a97e-aa301dd8702a",
+        "692a44a5-7050-42bd-8e54-1fd14767177f",
+        "52c8e31e-5c9b-4335-8a40-6dbd15b9b519",
+        "897dc7bd-2c6f-4495-8563-8ca7db87f74c",
+        "5d576778-8916-451c-80df-32c2abb7e27e",
+        "066532a4-f3d2-4acb-bdfb-206e477ac2b6",
+        "d8a3c91c-3750-47aa-b817-375b4ac8ceda",
+        "923ffac4-0fdb-45b9-87a6-451b7099eda5",
+        "365ff306-9033-4923-a29d-af93127fbc2f",
+        "66ef75bd-cf95-4aee-b184-b48a0505af6a",
+        "36c3689d-105e-4b34-b63e-777226a12f3e",
+        "133e92a0-dd0f-4940-9bdc-317e1b79ea07"
+      ],
+      "settings": {
+        "title1": "Merry",
+        "title2": "Red",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": true,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/christmas-merry-red",
+        "button_position": "top"
+      }
+    },
+    "31a6a8ee-55fd-4a1b-943a-04c832a7cdac": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "82065042-66ad-49a9-8425-4f76580d7093": {
+          "type": "Product",
+          "settings": {
+            "product": "rad-living-christmas-soy-wax-scented-candles-mahogany-shea-taper-candle-set-of-4-xm11628-21222"
+          }
+        },
+        "c121ddf4-a096-4351-ba2b-90fc6f5ec3d0": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-linen-white-dress-with-embroidered-yoke-and-back-straps"
+          }
+        },
+        "3c3c3287-ebb0-4a97-82d3-12de8d284479": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-cotton-asymmetrical-dress-green"
+          }
+        },
+        "4b26ce9a-eca1-4d35-8f1d-9aef0e289b37": {
+          "type": "Product",
+          "settings": {
+            "product": "bishop-sleeves-organic-cotton-top"
+          }
+        },
+        "e7a319a0-b612-4467-bc99-fe33e8877797": {
+          "type": "Product",
+          "settings": {
+            "product": "obori-cotton-dress-green-ob20075-19822"
+          }
+        },
+        "eafa9f61-991f-4b94-a777-cf88c940a567": {
+          "type": "Product",
+          "settings": {
+            "product": "kalp-cotton-shirt-dress-green-kk-s19-233-121022"
+          }
+        },
+        "09d051e1-bb9e-4d8f-9c4c-7721f2787c51": {
+          "type": "Product",
+          "settings": {
+            "product": "pure-cotton-green-frill-skirt"
+          }
+        },
+        "faf13207-5582-4b1a-a588-92dd0a234d8d": {
+          "type": "Product",
+          "settings": {
+            "product": "obori-cotton-jumpsuit-green-o20079g-19822"
+          }
+        },
+        "61a24578-079b-44dd-83a1-130378ff0d32": {
+          "type": "Product",
+          "settings": {
+            "product": "ecentric-casual-shirt-for-men-pure-hemp-olive-stripes-apmcsoss-111022"
+          }
+        },
+        "1dbc3305-cca4-4702-91db-58bc6e008b9c": {
+          "type": "Product",
+          "settings": {
+            "product": "mhysa-cotton-top-skirt-set-for-girls-green-my-srt-003-021122"
+          }
+        },
+        "f10ce824-c73a-40ee-adf6-92fc28b83f69": {
+          "type": "Product",
+          "settings": {
+            "product": "doodlage-upcycled-cotton-dress-floral-drape-style-green-blue-dl22-dr-030u-111022"
+          }
+        },
+        "8760d0fb-0561-4507-962a-d9384726f56a": {
+          "type": "Product",
+          "settings": {
+            "product": "liz-jacob-cotton-silk-kids-lehenga-choli-set-white-green-lj-am-020-121022"
+          }
+        },
+        "e07feea6-038a-48fa-917b-281e7899d118": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-100-cotton-green-schiffli-embroidered-boho-top"
+          }
+        },
+        "13447963-6ab1-4af8-be0d-10f71aaa2b64": {
+          "type": "Product",
+          "settings": {
+            "product": "pure-cotton-green-printed-short-kurta-set"
+          }
+        }
+      },
+      "block_order": [
+        "82065042-66ad-49a9-8425-4f76580d7093",
+        "c121ddf4-a096-4351-ba2b-90fc6f5ec3d0",
+        "3c3c3287-ebb0-4a97-82d3-12de8d284479",
+        "4b26ce9a-eca1-4d35-8f1d-9aef0e289b37",
+        "e7a319a0-b612-4467-bc99-fe33e8877797",
+        "eafa9f61-991f-4b94-a777-cf88c940a567",
+        "09d051e1-bb9e-4d8f-9c4c-7721f2787c51",
+        "faf13207-5582-4b1a-a588-92dd0a234d8d",
+        "61a24578-079b-44dd-83a1-130378ff0d32",
+        "1dbc3305-cca4-4702-91db-58bc6e008b9c",
+        "f10ce824-c73a-40ee-adf6-92fc28b83f69",
+        "8760d0fb-0561-4507-962a-d9384726f56a",
+        "e07feea6-038a-48fa-917b-281e7899d118",
+        "13447963-6ab1-4af8-be0d-10f71aaa2b64"
+      ],
+      "settings": {
+        "title1": "Green & White",
+        "title2": "christmas",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": true,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/christmas-merry-green",
+        "button_position": "top"
+      }
+    },
+    "a1604e37-d042-44e6-9b55-11075920a20e": {
+      "type": "amala-earth-curation",
+      "blocks": {
+        "d29be58d-9a18-4d9c-802c-ce5223ad72f2": {
+          "type": "Banner",
+          "disabled": true,
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/desktop.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/curation_mobile.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/christmas-all-things-x-mas"
+          }
+        },
+        "b5063a29-7aa8-4e07-bc10-0d7af36b505d": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/christmas_dinner_essentials_4.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/christmas_dinner_essentials_3.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/christmas-party-serveware"
+          }
+        },
+        "21dd7f79-1fa1-4a22-9659-917723e4de27": {
+          "type": "Banner",
+          "disabled": true,
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/gifting_desk_1.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/gifting_mobile_3.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/christmas-gifting"
+          }
+        },
+        "eb3595d7-9946-4af9-bd46-ac30ac307648": {
+          "type": "Banner",
+          "disabled": true,
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/christmas_daywear_1.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/christmas_daywear_2d1f2943-afe2-4f45-b8a8-a9542fd0ca77.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/christmas-day-wear"
+          }
+        }
+      },
+      "block_order": [
+        "d29be58d-9a18-4d9c-802c-ce5223ad72f2",
+        "b5063a29-7aa8-4e07-bc10-0d7af36b505d",
+        "21dd7f79-1fa1-4a22-9659-917723e4de27",
+        "eb3595d7-9946-4af9-bd46-ac30ac307648"
+      ],
+      "settings": {
+        "curation_heading1": "",
+        "curation_sub_heading2": ""
+      }
+    },
+    "2d02320f-9bef-4123-a808-c3358f5acbcc": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "36c9e1ce-83d9-4c86-8e00-23a2c5f34b9c": {
+          "type": "Product",
+          "settings": {
+            "product": "travel-friendly-wooden-cake-stand"
+          }
+        },
+        "62d1c982-5530-405c-a137-03ec75378226": {
+          "type": "Product",
+          "settings": {
+            "product": "nakshikathaa-brass-rectangular-tray-blue-nckdrctrbl030-19822"
+          }
+        },
+        "d3a564f3-fa8b-467b-91bc-141326a60eef": {
+          "type": "Product",
+          "settings": {
+            "product": "maroon-green-cotton-handblock-printed-table-cover"
+          }
+        },
+        "ae14fb3c-6f14-4fb7-bdfd-5a3e46e83db4": {
+          "type": "Product",
+          "settings": {
+            "product": "manor-house-aluminium-metal-bowl-red-mh-173-6822"
+          }
+        },
+        "d2abf609-9ce1-48ce-8896-5000581c14df": {
+          "type": "Product",
+          "settings": {
+            "product": "copper-bedside-jar-blue-pink-850-ml"
+          }
+        },
+        "534bb047-e101-4b4c-8655-d53912fe097a": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "copper-bedside-jar-blue-pink-850-ml"
+          }
+        },
+        "74c395bc-19b0-4d27-bd64-4eb4f5d81c14": {
+          "type": "Product",
+          "settings": {
+            "product": "tann-trim-brass-stirrer-windmill-gold-caasa-home-decor-brass-01-16-221122"
+          }
+        },
+        "2987f783-ee51-4c4a-be17-ee1a989c5e78": {
+          "type": "Product",
+          "settings": {
+            "product": "white-hill-studio-ceramic-bowls-ivory-red-set-of-6-mimsk06-241122"
+          }
+        },
+        "4951f445-de2f-48d4-b487-3a3babcb2e4b": {
+          "type": "Product",
+          "settings": {
+            "product": "the-india-craft-project-copper-goblet-glasses-set-of-2-cb_fm_g02-9922"
+          }
+        },
+        "a3b69ea2-03d9-439b-aafa-965b5f71b26e": {
+          "type": "Product",
+          "settings": {
+            "product": "suite-no-8-copper-baking-mould-christmas-tree-pnt-crtms-cpr-23922"
+          }
+        },
+        "272161a8-2f09-4187-8af9-0a213e47c1a7": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-stoneware-pink-snacks-plate"
+          }
+        }
+      },
+      "block_order": [
+        "36c9e1ce-83d9-4c86-8e00-23a2c5f34b9c",
+        "62d1c982-5530-405c-a137-03ec75378226",
+        "d3a564f3-fa8b-467b-91bc-141326a60eef",
+        "ae14fb3c-6f14-4fb7-bdfd-5a3e46e83db4",
+        "d2abf609-9ce1-48ce-8896-5000581c14df",
+        "534bb047-e101-4b4c-8655-d53912fe097a",
+        "74c395bc-19b0-4d27-bd64-4eb4f5d81c14",
+        "2987f783-ee51-4c4a-be17-ee1a989c5e78",
+        "4951f445-de2f-48d4-b487-3a3babcb2e4b",
+        "a3b69ea2-03d9-439b-aafa-965b5f71b26e",
+        "272161a8-2f09-4187-8af9-0a213e47c1a7"
+      ],
+      "settings": {
+        "title1": "Dinner",
+        "title2": "Essentials",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": true,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/christmas-party-serveware",
+        "button_position": "top"
+      }
+    },
+    "96083abf-22c9-4296-82c9-e67b18017a11": {
+      "type": "consious-journey",
+      "blocks": {
+        "ce055ec2-b4a4-4634-ad37-8fa0bdfe4fc0": {
+          "type": "Consious",
+          "settings": {
+            "consious_banner_desktop": "shopify:\/\/shop_images\/gifting_desktop_2.jpg",
+            "consious_banner_mobile": "shopify:\/\/shop_images\/decor_mobile_2.jpg",
+            "title": "ARTISANAL DECOR",
+            "url_link": "https:\/\/amala.earth\/collections\/christmas-decor"
+          }
+        },
+        "794d66cc-b338-4821-9f99-aeba19c33753": {
+          "type": "Consious",
+          "settings": {
+            "consious_banner_desktop": "shopify:\/\/shop_images\/purposeful_gifting_0b7072c3-917b-40a9-9a43-613e268fc198.jpg",
+            "consious_banner_mobile": "shopify:\/\/shop_images\/1_1_cd8e40bc-4cd0-40b3-9593-1c8846704179.jpg",
+            "title": "MINDFUL GIFTING",
+            "url_link": "https:\/\/amala.earth\/collections\/christmas-gifting"
+          }
+        },
+        "f7453415-95d8-423d-92e9-b9b903bd2e3b": {
+          "type": "Consious",
+          "disabled": true,
+          "settings": {
+            "consious_banner_desktop": "shopify:\/\/shop_images\/Group_567-1.png",
+            "consious_banner_mobile": "shopify:\/\/shop_images\/ZERO-WASTE.png",
+            "title": "ZERO-WASTE",
+            "url_link": "https:\/\/amala.earth\/collections\/women-wear-zero-waste"
+          }
+        },
+        "0bbceefc-fe44-4751-93a4-dd1be7a3f9aa": {
+          "type": "Consious",
+          "disabled": true,
+          "settings": {
+            "consious_banner_desktop": "shopify:\/\/shop_images\/upcycled2.png",
+            "consious_banner_mobile": "shopify:\/\/shop_images\/UPCYCLED2_1.png",
+            "title": "UPCYCLED",
+            "url_link": "https:\/\/amala.earth\/collections\/women-wear-upcycled"
+          }
+        }
+      },
+      "block_order": [
+        "ce055ec2-b4a4-4634-ad37-8fa0bdfe4fc0",
+        "794d66cc-b338-4821-9f99-aeba19c33753",
+        "f7453415-95d8-423d-92e9-b9b903bd2e3b",
+        "0bbceefc-fe44-4751-93a4-dd1be7a3f9aa"
+      ],
+      "settings": {
+        "consious_heading1": "Start Your",
+        "consious_sub_heading2": "conscious journey"
+      }
+    },
+    "a7ea0487-7e3a-4b47-a708-8bb88a506e59": {
+      "type": "blog-posts-carousel",
+      "blocks": {
+        "d755903b-8620-4fbd-a113-8404281f35f1": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/5_1.jpg",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/mindful-gifting-a-sustainable-holiday-gift-guide-for-christmas-1",
+            "title": "Mindful Gifting: A Sustainable Holiday Gift Guide for Christmas"
+          }
+        },
+        "e3bbb9f0-8c3b-4247-9abe-80373ac4a94c": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/4_1.jpg",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/10-tips-for-a-waste-free-christmas",
+            "title": "10 Tips For A Waste-Free Christmas"
+          }
+        },
+        "f7883cfd-14da-4a4b-80f6-5418ecdf8110": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/3_1.jpg",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/the-best-sustainable-christmas-gifts-for-kids-gift-ideas-by-age-2",
+            "title": "The Best Sustainable Christmas Gifts for Kids — Gift Ideas by Age"
+          }
+        },
+        "2e4f2e1f-0b41-4e0a-81c4-87c6000e864a": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/2_2_30088642-608c-44d5-8e43-7c943fa56986.jpg",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/10-must-try-sweet-and-savoury-almond-recipes",
+            "title": "10 Must-try Sweet and Savoury Almond Recipes"
+          }
+        },
+        "e030cd63-9da3-4563-864d-74b6b6e62a30": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/1_2.jpg",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/soy-wax-candles-for-a-better-tomorrow",
+            "title": "Soy Wax Candles for a Better Tomorrow"
+          }
+        },
+        "49bc4d51-8a54-4fa6-9506-b04db4416416": {
+          "type": "blog",
+          "disabled": true,
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/6_Responsible_Fashion_Brands_We_Are_Sure_You_Will_Love.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/7-responsible-fashion-brands-we-are-sure-you-will-love",
+            "title": "6 Responsible Fashion Brands We Are Sure You Will Love!"
+          }
+        },
+        "f97b7cdf-bff0-48a9-8c92-f5f16852b186": {
+          "type": "blog",
+          "disabled": true,
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Why_Should_You_Choose_Sustainable_Ethical_Sleepwear.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/why-should-you-choose-sustainable-ethical-sleepwear",
+            "title": "Why Should You Choose Sustainable, Ethical Sleepwear?"
+          }
+        },
+        "49516805-9e1a-42ad-9b61-decac6393814": {
+          "type": "blog",
+          "disabled": true,
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/A_Modern_Man_s_Guide_To_Sustainable_Fashion.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/a-modern-mans-guide-to-sustainable-fashion",
+            "title": "A Modern Man's Guide To Sustainable Fashion"
+          }
+        }
+      },
+      "block_order": [
+        "d755903b-8620-4fbd-a113-8404281f35f1",
+        "e3bbb9f0-8c3b-4247-9abe-80373ac4a94c",
+        "f7883cfd-14da-4a4b-80f6-5418ecdf8110",
+        "2e4f2e1f-0b41-4e0a-81c4-87c6000e864a",
+        "e030cd63-9da3-4563-864d-74b6b6e62a30",
+        "49bc4d51-8a54-4fa6-9506-b04db4416416",
+        "f97b7cdf-bff0-48a9-8c92-f5f16852b186",
+        "49516805-9e1a-42ad-9b61-decac6393814"
+      ],
+      "settings": {
+        "heading_one": "Recent",
+        "heading_two": "blogposts",
+        "view_text": "",
+        "url_link": ""
+      }
+    },
+    "41014bac-ea4d-4b27-8c03-52bef9fe55fe": {
+      "type": "landing-page-video",
+      "blocks": {
+        "9770c9aa-57b2-42fb-89ed-b39443515912": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/4HRW7ms1gCI",
+            "image": "shopify:\/\/shop_images\/1_3.jpg",
+            "title": "100% Soy Wax Candles For Christmas",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "8ca15421-ba45-427c-8190-b359be131cbc": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/E_JfvBd219k",
+            "image": "shopify:\/\/shop_images\/4_2.jpg",
+            "title": "Eco-friendly Christams Gift Box | Amala Earth",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "84bb1ceb-f46d-41d6-b337-d61f90609772": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/grQ0FQCXFAY",
+            "image": "shopify:\/\/shop_images\/3_2.jpg",
+            "title": "Making Christmas Cards Using Natural Colours with Ms. Manya Cherrabuddi",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "5f1064ed-195f-4b18-a177-6f541dc17ce1": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/xc1w_SSBAEQ",
+            "image": "shopify:\/\/shop_images\/2_3.jpg",
+            "title": "A warm hug in a mug! Thick, creamy, spiced hot chocolate is just what the season ordered ☕️",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "880899d6-ad8c-49e9-933e-aada13519725": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtube.com\/watch?v=EQw-WplSVVU",
+            "image": "shopify:\/\/shop_images\/IMG1.jpg",
+            "title": "Loungewear at Amala Earth",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "d268173e-ca11-4947-ae9b-86b41bdc16fe": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtube.com\/watch?v=IumCBSbopBo",
+            "image": "shopify:\/\/shop_images\/IMG2.jpg",
+            "title": "Naturally dyed silk sarees",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        }
+      },
+      "block_order": [
+        "9770c9aa-57b2-42fb-89ed-b39443515912",
+        "8ca15421-ba45-427c-8190-b359be131cbc",
+        "84bb1ceb-f46d-41d6-b337-d61f90609772",
+        "5f1064ed-195f-4b18-a177-6f541dc17ce1",
+        "880899d6-ad8c-49e9-933e-aada13519725",
+        "d268173e-ca11-4947-ae9b-86b41bdc16fe"
+      ],
+      "settings": {
+        "video_title1": "Video",
+        "video_title2": "blogs",
+        "btn_text": "",
+        "url_link": ""
+      }
+    }
+  },
+  "order": [
+    "9b27a570-d5a5-4fdb-809d-7eb9b70c5848",
+    "festival-landings-page",
+    "3ce8650f-ee5d-4ec2-8c3e-43b4fde36a2f",
+    "53f38fdc-7bb3-4eac-8293-2df22ed9482b",
+    "7148a954-d95c-483a-9aed-5f0f443b2075",
+    "91734891-4a5f-48e7-b4d1-0c0bb39f5ca1",
+    "b7175b1e-effc-4624-969d-134c3bd7bedc",
+    "a4dc7a08-d87a-459e-a486-68f3d4407085",
+    "8df16da2-9a92-49b3-8a6a-8851b3fde1d1",
+    "31a6a8ee-55fd-4a1b-943a-04c832a7cdac",
+    "a1604e37-d042-44e6-9b55-11075920a20e",
+    "2d02320f-9bef-4123-a808-c3358f5acbcc",
+    "96083abf-22c9-4296-82c9-e67b18017a11",
+    "a7ea0487-7e3a-4b47-a708-8bb88a506e59",
+    "41014bac-ea4d-4b27-8c03-52bef9fe55fe"
+  ]
+}

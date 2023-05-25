@@ -1,0 +1,756 @@
+{
+  "sections": {
+    "1de4fa5f-841e-48a3-ad94-a958bc0b9988": {
+      "type": "page-navigation",
+      "settings": {}
+    },
+    "festival-landings-page": {
+      "type": "main-banner",
+      "settings": {
+        "banner_desktop_image": "shopify:\/\/shop_images\/banner_website_2.jpg",
+        "banner_mobile_image": "shopify:\/\/shop_images\/Group_707_1.jpg",
+        "desktop_banner_title": "",
+        "color_heading": "#ffffff",
+        "desktop_banner_subtitle": "",
+        "color_subheading": "#b89c7d",
+        "desktop_banner_button": "",
+        "color_button": "#ffffff",
+        "button_background": "#9d7242",
+        "desktop_button_url": "https:\/\/amala.earth\/collections\/holi",
+        "desktop_image_url": "https:\/\/amala.earth\/collections\/holi"
+      }
+    },
+    "3ce8650f-ee5d-4ec2-8c3e-43b4fde36a2f": {
+      "type": "custom-grid",
+      "blocks": {
+        "46dcfbea-f442-422a-8f61-c28429a2d9a2": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/Herbal_Holi_Colours.png",
+            "title": "Herbal Gulaal",
+            "block_button_url": "https:\/\/amala.earth\/collections\/gulaal"
+          }
+        },
+        "9d8a0cc5-207d-4537-b54a-dd1666611f34": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/Curated_Gift_Hampers.png",
+            "title": "Holi Gift Hampers",
+            "block_button_url": "https:\/\/amala.earth\/collections\/holi-hampers"
+          }
+        },
+        "bad5f3ff-9274-4267-9c3e-9a6deba99ea1": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/holi_pooja_widget.png",
+            "title": "Eco-friendly Puja Essentials",
+            "block_button_url": "https:\/\/amala.earth\/collections\/holika-pujan"
+          }
+        },
+        "adb9e735-9398-4722-9a2d-a10e739bacf6": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/Rectangle_165_8ae0980d-279b-44a7-8f98-5649beed5d5f.png",
+            "title": "Chemical-free Skin & Hair Care",
+            "block_button_url": "https:\/\/amala.earth\/collections\/skincare-hair-care"
+          }
+        },
+        "9f57f552-0ea6-4e2b-8b7a-a4f12d36551b": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/Organic_Food_Drinks.png",
+            "title": "Organic Food & Drinks",
+            "block_button_url": "https:\/\/amala.earth\/collections\/food-and-drinks"
+          }
+        },
+        "4ba4ea05-4dcd-44b1-8e66-b2e11c1d8eca": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/Handwoven_Festive_Wear.png",
+            "title": "Holi clothing and Accessories",
+            "block_button_url": "https:\/\/amala.earth\/collections\/holi-clothing"
+          }
+        }
+      },
+      "block_order": [
+        "46dcfbea-f442-422a-8f61-c28429a2d9a2",
+        "9d8a0cc5-207d-4537-b54a-dd1666611f34",
+        "bad5f3ff-9274-4267-9c3e-9a6deba99ea1",
+        "adb9e735-9398-4722-9a2d-a10e739bacf6",
+        "9f57f552-0ea6-4e2b-8b7a-a4f12d36551b",
+        "4ba4ea05-4dcd-44b1-8e66-b2e11c1d8eca"
+      ],
+      "settings": {
+        "subtitle": "",
+        "title": ""
+      }
+    },
+    "d6601d7a-0e9d-48f7-ba85-9b82ebb7ffb1": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "48ca5dab-0e55-4014-bf04-bfe0b1670401": {
+          "type": "Product",
+          "settings": {
+            "product": "my-pooja-box-holi-gift-hamper-natural-herbal-gulaal-pooja-diyas-set-of-4-mpb5923-210223"
+          }
+        },
+        "249dc7dc-c8e7-49da-923d-95f4ddcd4205": {
+          "type": "Product",
+          "settings": {
+            "product": "sirohi-by-skilled-samaritan-foundation-holi-hamper-holi-gulal-colour-storage-box-set-of-5-sir-holi-s-d2-01-060223"
+          }
+        },
+        "41559035-e2c8-4651-8a57-506626f5bf3a": {
+          "type": "Product",
+          "settings": {
+            "product": "nirmalaya-organic-gulaal-colour-for-holi-blue-nir-hol-btbl-q1-070223"
+          }
+        },
+        "97236abb-1438-4964-8aaf-869cd121e13d": {
+          "type": "Product",
+          "settings": {
+            "product": "gulco-holi-gulal-gift-box-corn-starch-set-of-3-gu002-120123"
+          }
+        },
+        "f1187f11-2e5f-4aea-9c5a-d44b399acef4": {
+          "type": "Product",
+          "settings": {
+            "product": "21fools-holi-hampers-herbal-gulal-for-holi-set-of-4-21fools-holi-2-070223"
+          }
+        },
+        "9eb85f0e-c612-4c54-b15f-e7750eb88033": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-colorful-holi-gulal-gift-box"
+          }
+        },
+        "a4ccfab5-09bb-44ef-b457-7b422a1e9791": {
+          "type": "Product",
+          "settings": {
+            "product": "sacred-life-natural-herbal-gulal-pack-of-5"
+          }
+        },
+        "5d551050-f7de-4877-9218-0e7ac30fb7c1": {
+          "type": "Product",
+          "settings": {
+            "product": "gulco-holi-gulal-colour-blue-jasmine-gu006-120123"
+          }
+        },
+        "ae21848d-515a-416e-ba78-8831c86536b8": {
+          "type": "Product",
+          "settings": {
+            "product": "sacred-life-natural-herbal-gulal-yellow-pack-of-2"
+          }
+        },
+        "417879ae-b2fa-46e0-b7fe-4bae96cd9b35": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-colorful-holi-gulal-pack-of-2"
+          }
+        },
+        "59bd1cdd-dfef-44ef-9674-bbcede12dbcd": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "organic-assorted-colorful-holi-gulal-gift-box"
+          }
+        },
+        "9a4a0043-a883-4247-966c-6c3eb89da4bc": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "sacred-life-natural-herbal-gulal-yellow-pack-of-2"
+          }
+        },
+        "435a6699-76fa-403f-b356-913652c62130": {
+          "type": "Product",
+          "settings": {
+            "product": "gulco-holi-gulal-colour-light-green-lemongrass-gu011-120123"
+          }
+        }
+      },
+      "block_order": [
+        "48ca5dab-0e55-4014-bf04-bfe0b1670401",
+        "249dc7dc-c8e7-49da-923d-95f4ddcd4205",
+        "41559035-e2c8-4651-8a57-506626f5bf3a",
+        "97236abb-1438-4964-8aaf-869cd121e13d",
+        "f1187f11-2e5f-4aea-9c5a-d44b399acef4",
+        "9eb85f0e-c612-4c54-b15f-e7750eb88033",
+        "a4ccfab5-09bb-44ef-b457-7b422a1e9791",
+        "5d551050-f7de-4877-9218-0e7ac30fb7c1",
+        "ae21848d-515a-416e-ba78-8831c86536b8",
+        "417879ae-b2fa-46e0-b7fe-4bae96cd9b35",
+        "59bd1cdd-dfef-44ef-9674-bbcede12dbcd",
+        "9a4a0043-a883-4247-966c-6c3eb89da4bc",
+        "435a6699-76fa-403f-b356-913652c62130"
+      ],
+      "settings": {
+        "title1": "Herbal",
+        "title2": "Gulaal",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/gulaal",
+        "button_position": "top"
+      }
+    },
+    "6d8a7fc8-8cc0-4d37-924f-edc410d4ccea": {
+      "type": "landing-page-recommendation",
+      "disabled": true,
+      "blocks": {
+        "02afbce5-9d3a-46d0-a628-64de5a939cb4": {
+          "type": "Product",
+          "settings": {
+            "product": "sirohi-by-skilled-samaritan-foundation-holi-gift-hamper-holi-gulal-colour-storage-basket-set-of-3-sir-holi-s-d1-01-060223"
+          }
+        },
+        "b8b4a4c2-2da5-4d8d-82ab-c1b232b3f3a3": {
+          "type": "Product",
+          "settings": {
+            "product": "my-pooja-box-holi-gift-box-natural-herbal-gulaal-gujiya-sweets-box-set-of-5-mpb5938-210223"
+          }
+        },
+        "dd5f2559-d393-4c37-842c-0b537a90fc20": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "nutty-gritties-celebration-special-dry-fruits-gift-box-ng33011-191022"
+          }
+        },
+        "584fd94f-0d56-4006-969b-2470f8b7a725": {
+          "type": "Product",
+          "settings": {
+            "product": "nirmalaya-holi-gifts-organic-gulaal-set-of-4-nir-hol-ccs-q4-070223"
+          }
+        },
+        "647739f2-73c9-450e-ba47-2a83e727074a": {
+          "type": "Product",
+          "settings": {
+            "product": "tassyam-organics-luxury-gift-set-mamra-chilgoza-roasted-munakka-tea-chocolates-pack-of-7-g-f-gift-lux-mmr-pin-bhmk-121022"
+          }
+        },
+        "b136ca04-062c-44e3-8b6d-3e9f3340f555": {
+          "type": "Product",
+          "settings": {
+            "product": "21fools-holi-gift-hamper-herbal-gulaal-thandai-powder-set-of-12-21fools-holi-1-070223"
+          }
+        },
+        "44e5cef4-eb94-49f6-b632-032c9883aeab": {
+          "type": "Product",
+          "settings": {
+            "product": "dink-gondh-laddoo-250-g-jnm"
+          }
+        },
+        "f1fe4bb6-5a30-4745-939c-6f9f0e194452": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "tassyam-organics-diwali-dry-fruit-tray-box-200-g-g-f-gift-box-red-200-121022"
+          }
+        },
+        "85a54763-cfb6-4374-8f13-ad43cdc979a9": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "tassyam-organics-cashews-almonds-pistachios-gift-set-pack-of-3-ptm-cshwrs-amndrs-pistrs-121022"
+          }
+        },
+        "4cda2724-b0bf-454b-bbd7-513c957a4e15": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "sacred-life-natural-herbal-gulal-yellow-pack-of-2"
+          }
+        },
+        "914d6ce5-bfbe-4679-b97f-4cd26eaa2e86": {
+          "type": "Product",
+          "settings": {
+            "product": "gulco-holi-gulal-gift-pack-corn-starch-set-of-3-gc001-120123"
+          }
+        },
+        "fb6f07ee-232f-4436-92e5-0672f5221825": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "gulco-holi-gulal-colour-light-green-lemongrass-gu011-120123"
+          }
+        },
+        "51c2dde0-2ea1-481c-9d55-b09bb59e1fa1": {
+          "type": "Product",
+          "settings": {
+            "product": "healthy-gifts-natural-evening-hazelnut-hamper-set-of-7"
+          }
+        },
+        "c6f75d9a-f02b-4b58-9f57-6edcd76ba135": {
+          "type": "Product",
+          "settings": {
+            "product": "tassyam-organics-happiness-gift-box-salted-cashew-pistachios-pack-of-2-g-f-gift-box-blue-cshwrs-pistrs-121022"
+          }
+        }
+      },
+      "block_order": [
+        "02afbce5-9d3a-46d0-a628-64de5a939cb4",
+        "b8b4a4c2-2da5-4d8d-82ab-c1b232b3f3a3",
+        "dd5f2559-d393-4c37-842c-0b537a90fc20",
+        "584fd94f-0d56-4006-969b-2470f8b7a725",
+        "647739f2-73c9-450e-ba47-2a83e727074a",
+        "b136ca04-062c-44e3-8b6d-3e9f3340f555",
+        "44e5cef4-eb94-49f6-b632-032c9883aeab",
+        "f1fe4bb6-5a30-4745-939c-6f9f0e194452",
+        "85a54763-cfb6-4374-8f13-ad43cdc979a9",
+        "4cda2724-b0bf-454b-bbd7-513c957a4e15",
+        "914d6ce5-bfbe-4679-b97f-4cd26eaa2e86",
+        "fb6f07ee-232f-4436-92e5-0672f5221825",
+        "51c2dde0-2ea1-481c-9d55-b09bb59e1fa1",
+        "c6f75d9a-f02b-4b58-9f57-6edcd76ba135"
+      ],
+      "settings": {
+        "title1": "Holi",
+        "title2": "Hampers",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/holi-hampers",
+        "button_position": "top"
+      }
+    },
+    "1590333d-ea00-4213-bead-f4242b11f945": {
+      "type": "curation-template-new",
+      "blocks": {
+        "b8961109-278d-4d53-8947-29a5edb12cad": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/Personal_gifting_banner_desktop.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/Gifts-mobile_1.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/personal-holi-gifting-1"
+          }
+        }
+      },
+      "block_order": [
+        "b8961109-278d-4d53-8947-29a5edb12cad"
+      ],
+      "settings": {
+        "curation_heading1": "Holi",
+        "curation_sub_heading2": "Gifting"
+      }
+    },
+    "d1ea69a5-32ac-406d-a11b-c51c990d4cb6": {
+      "type": "curation-template-new",
+      "blocks": {
+        "49451826-0a1c-43e1-9e74-50b1ace4cc0c": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/Bulk_holi_gifting_desktop.png",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/Bulk-mobile.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/bulk-holi-gifting-1"
+          }
+        }
+      },
+      "block_order": [
+        "49451826-0a1c-43e1-9e74-50b1ace4cc0c"
+      ],
+      "settings": {
+        "curation_heading1": "Bulk",
+        "curation_sub_heading2": "<a href=\"https:\/\/docs.google.com\/forms\/d\/e\/1FAIpQLSe5Vhr2MqfvQ0v3dV2vbg2qxyQmwa_orBlSM3aSxTjwYfrqiw\/viewform?vc=0&c=0&w=1&flr=0\" style=\"text-decoration:underline;\">Fill the form and let us know your requirement<\/a>"
+      }
+    },
+    "25ca2829-115a-4195-a34a-20c09187d2f6": {
+      "type": "curation-template-new",
+      "blocks": {
+        "1a63e819-7010-44de-83f6-72b6adaa8df7": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/microsite_banners_Holi_2.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/microsite_banners_mobile_Holi_1_a8761e2e-b0a9-4929-b04c-47025ee17f0e.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/holi"
+          }
+        }
+      },
+      "block_order": [
+        "1a63e819-7010-44de-83f6-72b6adaa8df7"
+      ],
+      "settings": {
+        "curation_heading1": "Offers",
+        "curation_sub_heading2": "For You"
+      }
+    },
+    "ec9d466e-dacd-4ea0-b25d-6be5f0bb921e": {
+      "type": "landing-page-recommendation",
+      "disabled": true,
+      "blocks": {
+        "aff0cc26-2daa-4703-a273-6c5ee01b1576": {
+          "type": "Product",
+          "settings": {
+            "product": "ikeda-designs-cotton-kurta-pyjama-set-for-girls-peach-idfg106p-15722"
+          }
+        },
+        "1a2ecf5a-86e1-4e11-95de-8017060b6609": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "ikeda-designs-cotton-kurta-pyjama-set-for-girls-peach-idfg106p-15722"
+          }
+        },
+        "c99e2149-9fa0-4d58-afc1-059fcb1050e2": {
+          "type": "Product",
+          "settings": {
+            "product": "100-cotton-white-happy-face-print-t-shirt"
+          }
+        },
+        "d5aec9fb-63da-49f5-b9a3-22e1a3b9a61f": {
+          "type": "Product",
+          "settings": {
+            "product": "moms-home-organic-cotton-baby-romper-full-length-beige-pink-set-of-2-mhromyloduckorngcat70-110123"
+          }
+        },
+        "b1e36873-0d02-47fd-89e7-838565ee71c2": {
+          "type": "Product",
+          "settings": {
+            "product": "handwoven-linen-ombre-saree"
+          }
+        },
+        "2f0f5c38-8650-4930-9f40-607f0b04d19f": {
+          "type": "Product",
+          "settings": {
+            "product": "intense-damage-repair-frizz-control-kit-with-shampoo-hair-mask"
+          }
+        },
+        "b48f7212-4eaf-4901-974d-92f294d502cc": {
+          "type": "Product",
+          "settings": {
+            "product": "handwoven-yellow-pure-linen-labanya-saree"
+          }
+        },
+        "4cc8494e-2bf7-4bf5-acf7-b91fd2a4ee07": {
+          "type": "Product",
+          "settings": {
+            "product": "moms-home-cotton-muslin-baby-swaddle-wrapper-animal-print-white-pack-of-2-mhmus100p2pandaelep-10822"
+          }
+        },
+        "a3eb1cb5-c8f5-4aa7-9712-f3cb5be854fb": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "cotton-reusable-baby-diaper-5-7-kg-12"
+          }
+        },
+        "f3d366ad-2b80-4059-b7fe-2ab848f8350b": {
+          "type": "Product",
+          "settings": {
+            "product": "100-cotton-white-printed-t-shirt"
+          }
+        },
+        "e2b3f2e4-403e-4087-b5de-598c794c04de": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "tiny-lane-gift-for-newborn-baby-bamboo-cotton-gift-set-pack-of-12-tlgscombo04"
+          }
+        }
+      },
+      "block_order": [
+        "aff0cc26-2daa-4703-a273-6c5ee01b1576",
+        "1a2ecf5a-86e1-4e11-95de-8017060b6609",
+        "c99e2149-9fa0-4d58-afc1-059fcb1050e2",
+        "d5aec9fb-63da-49f5-b9a3-22e1a3b9a61f",
+        "b1e36873-0d02-47fd-89e7-838565ee71c2",
+        "2f0f5c38-8650-4930-9f40-607f0b04d19f",
+        "b48f7212-4eaf-4901-974d-92f294d502cc",
+        "4cc8494e-2bf7-4bf5-acf7-b91fd2a4ee07",
+        "a3eb1cb5-c8f5-4aa7-9712-f3cb5be854fb",
+        "f3d366ad-2b80-4059-b7fe-2ab848f8350b",
+        "e2b3f2e4-403e-4087-b5de-598c794c04de"
+      ],
+      "settings": {
+        "title1": "Holi",
+        "title2": "Offers",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/baby-0-2-years?f_Discount=1+-+25,25+-+50,50+-+100",
+        "button_position": "top"
+      }
+    },
+    "7400b275-6e82-4ab7-a8d1-46620a742050": {
+      "type": "consious-journey",
+      "blocks": {
+        "de661aea-5c6f-4210-98e4-0fb5fb0912c2": {
+          "type": "Consious",
+          "settings": {
+            "consious_banner_desktop": "shopify:\/\/shop_images\/image_7_a83556f0-6039-4d9b-bb74-2ba9e8515b5f.png",
+            "consious_banner_mobile": "shopify:\/\/shop_images\/HANDWOVEN_WHITES_image.png",
+            "title": "HANDWOVEN WHITES",
+            "url_link": "https:\/\/amala.earth\/collections\/white-clothing"
+          }
+        },
+        "6dffb384-44e5-499f-8dbd-faf4be2ab2bd": {
+          "type": "Consious",
+          "settings": {
+            "consious_banner_desktop": "shopify:\/\/shop_images\/image_7_b22219e7-2f65-4cb2-b535-e5f57fd1090d.png",
+            "consious_banner_mobile": "shopify:\/\/shop_images\/HOLI-READY_SKIN_image.png",
+            "title": "HOLI-READY SKIN",
+            "url_link": "https:\/\/amala.earth\/collections\/skincare-hair-care"
+          }
+        }
+      },
+      "block_order": [
+        "de661aea-5c6f-4210-98e4-0fb5fb0912c2",
+        "6dffb384-44e5-499f-8dbd-faf4be2ab2bd"
+      ],
+      "settings": {
+        "consious_heading1": "Earth-friendly",
+        "consious_sub_heading2": "Holi"
+      }
+    },
+    "a7ea0487-7e3a-4b47-a708-8bb88a506e59": {
+      "type": "blog-posts-carousel",
+      "blocks": {
+        "056cc631-c1f7-4d95-b783-074a7e2ed613": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/blogs_for_holi_microsite.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/enjoy-wearing-hues-of-white-this-holi",
+            "title": "Enjoy Wearing Hues Of White This Holi"
+          }
+        },
+        "b2c5a8ef-f94d-450b-81fc-3780e0afd781": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/blogs_for_holi_microsite-2.jpg",
+            "recent_blog_post_link": "",
+            "title": "Holi’s Dos and Don'ts"
+          }
+        },
+        "ce7088c1-d009-407a-9f2b-ef79adc42288": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/blogs_for_holi_microsite-1.jpg",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/holika-dahan-with-campfire-all-you-need-to-know",
+            "title": "Holika Dahan With Campfire - All You Need To Know "
+          }
+        },
+        "e3bbb9f0-8c3b-4247-9abe-80373ac4a94c": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/The_Best_Moisturizing_Products_for_the_Winter_Skin.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/the-best-moisturizing-products-for-the-winter-skin",
+            "title": "The Best Moisturizing Products for the Winter Skin"
+          }
+        },
+        "d755903b-8620-4fbd-a113-8404281f35f1": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Handpicked__5_Best_Sulfate-free_Shampoos_for_Winter.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/handpicked-five-best-sulfate-free-shampoos-for-winter-this-year",
+            "title": "Handpicked: 5 Best Sulfate-free Shampoos for Winter"
+          }
+        },
+        "e030cd63-9da3-4563-864d-74b6b6e62a30": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Baby_Skincare_-_Safe_Natural_Ingredients_to_Look_For.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/baby-skincare-safe-natural-ingredients-to-look-for",
+            "title": "Baby Skincare - Safe, Natural Ingredients to Look For"
+          }
+        },
+        "f7883cfd-14da-4a4b-80f6-5418ecdf8110": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/How_To_Use_Rosemary_Oil_For_Hair.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/how-to-use-rosemary-oil-for-hair",
+            "title": "How To Use Rosemary Oil For Hair"
+          }
+        },
+        "2e4f2e1f-0b41-4e0a-81c4-87c6000e864a": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Menswear_Essentials_You_Will_Absolutely_Love_-_Casuals_and_Formals_e71818e7-9e7f-4ebf-8f92-f0246bdb4e4e.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/sustainable-and-comfortable-ethnic-clothes-to-dress-your-kids-in-this-festive-season",
+            "title": "Menswear Essentials You Will Absolutely Love - Casuals and Formals"
+          }
+        },
+        "49bc4d51-8a54-4fa6-9506-b04db4416416": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Sustainable_and_comfortable_ethnic_clothes_to_dress_your_kids_in_this_festive_season.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/sustainable-and-comfortable-ethnic-clothes-to-dress-your-kids-in-this-festive-season",
+            "title": "Sustainable and comfortable ethnic clothes to dress your kids in this festive season"
+          }
+        },
+        "f97b7cdf-bff0-48a9-8c92-f5f16852b186": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/5_Healthy_Dessert_Recipes_for_a_Guilt-Free_Diwali.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/5-healthy-dessert-recipes-for-a-guilt-free-diwali",
+            "title": "5 Healthy Dessert Recipes for a Guilt-Free Diwali"
+          }
+        },
+        "49516805-9e1a-42ad-9b61-decac6393814": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Mindful_Eating_During_The_Festive_Season__It_Is_Possible_-_Here_s_How.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/mindful-eating-during-the-festive-season-it-is-possible-here-s-how",
+            "title": "Mindful Eating During The Festive Season? It Is Possible - Here’s How"
+          }
+        }
+      },
+      "block_order": [
+        "056cc631-c1f7-4d95-b783-074a7e2ed613",
+        "b2c5a8ef-f94d-450b-81fc-3780e0afd781",
+        "ce7088c1-d009-407a-9f2b-ef79adc42288",
+        "e3bbb9f0-8c3b-4247-9abe-80373ac4a94c",
+        "d755903b-8620-4fbd-a113-8404281f35f1",
+        "e030cd63-9da3-4563-864d-74b6b6e62a30",
+        "f7883cfd-14da-4a4b-80f6-5418ecdf8110",
+        "2e4f2e1f-0b41-4e0a-81c4-87c6000e864a",
+        "49bc4d51-8a54-4fa6-9506-b04db4416416",
+        "f97b7cdf-bff0-48a9-8c92-f5f16852b186",
+        "49516805-9e1a-42ad-9b61-decac6393814"
+      ],
+      "settings": {
+        "heading_one": "Recent",
+        "heading_two": "blogposts",
+        "view_text": "",
+        "url_link": ""
+      }
+    },
+    "41014bac-ea4d-4b27-8c03-52bef9fe55fe": {
+      "type": "landing-page-video",
+      "blocks": {
+        "186337f3-d545-4597-bb5f-f6c090a000d5": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/-D3zYochPsU?t=6",
+            "image": "shopify:\/\/shop_images\/video_blog_-holi_3ae15a79-7de4-4b63-8356-22a819e6628f.jpg",
+            "title": "Start your Eco Friendly Holi Preparation with Amala Earth | Thandai, Festive Wear, Colors",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "8ca15421-ba45-427c-8190-b359be131cbc": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=IMgvfP0A_A4",
+            "image": "shopify:\/\/shop_images\/Shampoo_Bars_-_Switching_to_shampoo_bars_has_to_be_one_of_the_best_beauty_switches.jpg",
+            "title": "Shampoo Bars - Switching to shampoo bars has to be one of the best beauty switches",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "9770c9aa-57b2-42fb-89ed-b39443515912": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtube.com\/watch?v=miIKipgMEBU",
+            "image": "shopify:\/\/shop_images\/Ayurvedic_Skin_care___Skin_care_Tips___Amala_Earth.png",
+            "title": "Ayurvedic Skin care",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "84bb1ceb-f46d-41d6-b337-d61f90609772": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=8-bqT3xoyc4",
+            "image": "shopify:\/\/shop_images\/Get_Natural_Essential_Oils_for_Healing_Calming_and_Relaxing___Face___Body_-_Amala_Earth.png",
+            "title": "Get Natural Essential Oils for Healing, Calming and Relaxing | Face | Body",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "880899d6-ad8c-49e9-933e-aada13519725": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=-l2WdUf5qjo",
+            "image": "shopify:\/\/shop_images\/Minimising_Waste_at_Home_-_Live_Session_with_Vani_Murthy_and_Jia_Singh_6d337a1b-32f8-45cb-a99a-5bd47ac78934.png",
+            "title": "Minimising Waste at Home - Live Session with Vani Murthy and Jia Singh",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "d268173e-ca11-4947-ae9b-86b41bdc16fe": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=DyAx6a8y4Dw",
+            "image": "shopify:\/\/shop_images\/Shop_Plant-based_Natural_Hair_Care_Products_-_Amala_Earth.png",
+            "title": "Shop Plant-based Natural Hair Care Products",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "c52f85ba-2571-42d6-9870-78e1d05413a4": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/hhhRgHsamAE",
+            "title": "Shop Organic, Chemical-free Men's Grooming Products Range - Amala Earth.",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        }
+      },
+      "block_order": [
+        "186337f3-d545-4597-bb5f-f6c090a000d5",
+        "8ca15421-ba45-427c-8190-b359be131cbc",
+        "9770c9aa-57b2-42fb-89ed-b39443515912",
+        "84bb1ceb-f46d-41d6-b337-d61f90609772",
+        "880899d6-ad8c-49e9-933e-aada13519725",
+        "d268173e-ca11-4947-ae9b-86b41bdc16fe",
+        "c52f85ba-2571-42d6-9870-78e1d05413a4"
+      ],
+      "settings": {
+        "video_title1": "Video",
+        "video_title2": "blogs",
+        "btn_text": "",
+        "url_link": ""
+      }
+    }
+  },
+  "order": [
+    "1de4fa5f-841e-48a3-ad94-a958bc0b9988",
+    "festival-landings-page",
+    "3ce8650f-ee5d-4ec2-8c3e-43b4fde36a2f",
+    "d6601d7a-0e9d-48f7-ba85-9b82ebb7ffb1",
+    "6d8a7fc8-8cc0-4d37-924f-edc410d4ccea",
+    "1590333d-ea00-4213-bead-f4242b11f945",
+    "d1ea69a5-32ac-406d-a11b-c51c990d4cb6",
+    "25ca2829-115a-4195-a34a-20c09187d2f6",
+    "ec9d466e-dacd-4ea0-b25d-6be5f0bb921e",
+    "7400b275-6e82-4ab7-a8d1-46620a742050",
+    "a7ea0487-7e3a-4b47-a708-8bb88a506e59",
+    "41014bac-ea4d-4b27-8c03-52bef9fe55fe"
+  ]
+}

@@ -1,0 +1,299 @@
+{{ 'myaccount.css' | asset_url | stylesheet_tag }}
+{%- assign collectionsToShow = section.settings.collection_list | split:"," -%}
+
+<div id="reorder-list-model" class="pop-up-modal my-account modal-template-bottom">
+  <div class="pop-up__container">
+    <span class="close-button popup-close"><img src="{{ 'close-icon.svg' | asset_url }}" alt="X"></span>
+    <div class="pop-up__content-wrapper">
+      <div class="my-account__pop-up-header">
+        <h1 class="heading">Reorder from previously purchased</h1>
+      </div>
+      <div class="my-account__pop-up-content order-details_popup-content">
+        <div class="reorder-item-list">
+        {%- assign line_item_list = '' -%}
+        {%- paginate customer.orders by 30 -%}
+          {%- for order in customer.orders -%}
+            {%- for line_item in order.line_items -%}
+              {%- if line_item_list contains line_item.variant_id -%}
+              {% else if line_item.variant.available and line_item.variant.inventory_quantity > 0 %}
+                {%- for collection in line_item.product.collections -%}
+                  {% if collectionsToShow contains collection.handle %}
+                    {% assign line_item_list = line_item_list | append: ',' | append: line_item.variant_id %}
+                    <label for="order-item--{{line_item.product.selected_or_first_available_variant.id}}" class="my-orders__content-wrapper reorder-item"  data-id="{{ line_item.variant_id }}" data-qty="1">
+                      <span class="form-control order-item-selector" >
+                        <input type="checkbox" name="order-item--{{ line_item.variant_id }}" id="order-item--{{ line_item.variant_id }}" class="order-item-selector-input" />
+                      </span>
+                      <div class="my-orders__image-wrapper">
+                        <div class="aspect-ratio" style="padding-bottom: 100.0%">
+                          <img src="{{ line_item.image | img_url: '90x90', scale: 2 }}" alt="{{ line_item.image.alt | escape }}">
+                        </div>
+                      </div>
+                      <div class="my-orders__item-wrapper">
+                        <table class="my-orders__product-info">
+                          <tr>
+                            {% liquid
+                              assign variant_count = 0
+                              for variant in line_item.product.variants
+                              assign variant_count = variant_count | plus: 1
+                              endfor
+                              unless variant_count > 1
+                              assign item_product_title = line_item.product.title
+                              else
+                              assign item_product_title = line_item.title
+                              endunless
+                            %}
+                            <td colspan="2"><div class="my-orders__product-title ">{{ item_product_title }}</div></td>
+                          </tr>
+                          {%- unless line_item.properties == blank -%}
+                            {%- for property in line_item.properties -%}
+                              {%- assign first_character_in_key = property.first | truncate: 1, '' -%}
+                              {%- if property.last == blank or first_character_in_key == '_' -%}
+                                {%- continue -%}
+                              {%- endif -%}
+                              <tr>
+                                <td class="product-info_label">{{ property.first }}</td>
+                                <td> {{ property.last }}</td>
+                              </tr>
+                            {%- endfor -%}
+                          {%- endunless -%}
+                          <tr>
+                            <td class="product-info_label">Qty. </td>
+                            <td>
+                              <div class="product-form__info-item product-form__info-item--quantity">
+                                <div class="product-form__info-content">
+                                  <div class="quantity-selector">
+                                    {%- if line_item.variant.inventory_management and line_item.variant.inventory_policy == 'deny' -%}
+                                      {%- assign max_val = line_item.variant.inventory_quantity -%}
+                                    {%- endif -%}
+                                    <button type="button" class="quantity-selector__button" data-action="decrease-picker-quantity" aria-label="{{ 'cart.items.decrease_quantity' | t }}" title="{{ 'cart.items.decrease_quantity' | t }}">{% render 'icon', icon: 'minus' %}</button>
+                                    <input name="quantity" aria-label="{{ 'product.form.quantity' | t }}" class="quantity-selector__value" inputmode="numeric" value="1" size="3" max="{{ max_val }}">
+                                    <button type="button" class="quantity-selector__button" data-action="increase-picker-quantity" aria-label="{{ 'cart.items.increase_quantity' | t }}" title="{{ 'cart.items.increase_quantity' | t }}" >{% render 'icon', icon: 'plus' %}</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="product-info_label">Amount</td>
+                            <td><span class="price price--highlight">&nbsp;{{ line_item.product.price | money }}</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </label>
+                    {% break %}
+                  {% endif %}
+                {%- endfor -%}
+              {% endif %}
+            {% endfor %}
+          {%- endfor -%}
+        {%- endpaginate -%}
+        </div>
+        <div class="reorder-button-block">
+          <span class="amala-tooltip">Please select one or more items</span>
+          <button onclick="location.href = './cart';" class="btn btn-default" id="btn-view-cart" disabled>View Cart</button>
+          <button type="submit" class="btn btn-default" id="reorder-submit" disabled>Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Reorder products popup",
+  "settings": [
+    {
+      "type": "range",
+      "id": "popup_delay",
+      "default": 8,
+      "label": "Show reorder popup after x seconds",
+      "min": 5,
+      "max": 20
+    },
+    {
+      "type": "text",
+      "id": "collection_list",
+      "default": "mindful-eating",
+      "label": "Collection list from which products needs to be shown"
+    }
+  ]
+}
+{% endschema %}
+
+<style type="text/css">
+  .modal-template-bottom .pop-up__container {
+    position: fixed;
+    bottom: 0;
+    height: 80vh;
+    left: 0;
+    right: 0;
+    /* background: #fff; */
+    border-radius: 15px 15px 0 0;
+    z-index: 99;
+    padding: 15px;
+    box-shadow: 0 0 5px #ccc;
+    transition: all 0.3s ease;
+    text-align: left;
+    margin: 0 auto;
+  }
+  .modal-template-bottom .close-button {
+    position: absolute;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #ccc;
+    background: #fff;
+    top: -45px;
+    left: calc(50% - 17px);
+    font-size: 22px;
+    cursor: pointer;
+    padding: 7px;
+  }
+  .modal-template-bottom .close-button img {
+    width: 20px;
+    height: 20px;
+  }
+  .reorder-button-block .btn {
+    text-align: center;
+    margin: 0 5px;
+  }
+  .success-alert {
+    color: #368B48;
+    background: #D1F1D9;
+    border: 1px solid #368B48;
+    padding: 4px 10px;
+    font-size: 12px;
+    line-height: 18px;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  .success-alert + .reorder-item-list {
+    max-height: calc(80vh - 200px);
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var getReorderPopupValue = localStorage.getItem("reorderPopup");
+    if (!getReorderPopupValue) {
+      setTimeout(function(){
+        if ($('.my-account__pop-up-content .reorder-item').length > 0) {
+          $("#reorder-list-model").addClass("show-pop-up");       
+          $('html').addClass('is-locked');   
+        }
+      },{{ section.settings.popup_delay | times: 1000 }})
+    }
+    $('button[data-action="increase-picker-quantity"]').on('click',function(){
+        var $qty=$(this).siblings("input[name='quantity']");
+        var currentVal = parseInt($qty.val());
+        if (!isNaN(currentVal) && $qty.attr('max') > currentVal ) {
+          $qty.val(currentVal + 1);
+          if($qty.val() == $qty.attr('max')) {
+            $(this).attr({
+              disabled:"disabled", 
+              "aria-label":"No more stock",
+              "data-tooltip":"No more stock",
+              "data-tooltip-position":"bottom-left"
+            });
+          }
+        }
+    });
+
+    $('button[data-action="decrease-picker-quantity"]').on('click',function(){
+        var $qty=$(this).siblings("input[name='quantity']");
+        var currentVal = parseInt($qty.val());
+        if (!isNaN(currentVal) && currentVal > 1) {
+            $qty.val(currentVal - 1);
+
+            $(this).siblings('button[data-action="increase-picker-quantity"]').removeAttr(
+              'disabled aria-label data-tooltip data-tooltip-position');
+        }
+    });
+
+    $('.order-item-selector-input').change(function(){
+      $('.reorder-item').removeClass('has-error');
+      $('.reorder-button-block').removeClass('has-error');
+      $('#reorder-list-model .error-msg').remove();
+
+      if ($(".order-item-selector-input:checked").length > 0) {
+        $("#reorder-submit").removeAttr('disabled');
+      } else {
+        $("#reorder-submit").attr('disabled', 'disabled');
+      }
+      
+    });
+    $("#reorder-list-model .popup-close").on("click", function(e) {
+      $("body").removeClass("modal-open");
+      $(this).closest(".pop-up-modal").removeClass("show-pop-up");
+      $('html').removeClass('is-locked');
+      localStorage.setItem("reorderPopup", true);
+    });
+
+    $("#reorder-submit").on('click', function(e) {
+      
+      var items = [];
+      document.querySelectorAll('.reorder-item').forEach(function(node) {
+        var checkbox = document.getElementById('order-item--' + node.getAttribute('data-id'));
+        if (checkbox.checked) {
+          data = {quantity: $('input[name="quantity"]').val(), id: node.getAttribute('data-id')};
+          items.push(data);
+        }
+      });
+
+      if (items.length > 0) {
+        if (!$(this).attr('disabled')) {
+          $(this).attr('disabled', true);
+          addoverlay();
+          addProductsInCart(items);
+        }
+      } else {
+        if($('.my-account__pop-up-header').siblings('.error-msg').length == 0) {
+          $('<p class="error-msg"></p>').insertAfter('.my-account__pop-up-header');
+        }
+        $('.reorder-item').addClass('has-error');
+        $('.reorder-button-block').addClass('has-error');
+      }
+    });
+
+    function getCartCount() {
+      fetch(window.Shopify.routes.root + 'cart.js', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(response => {
+        response.json().then(data => {
+          $('.header__cart-count ').text(data.item_count);
+        });
+      })
+      .catch((error) => {});
+    }
+
+    function addProductsInCart(items) {
+      fetch(window.Shopify.routes.root + 'cart/add.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({'items': items})
+      })
+      .then(response => {
+        response.json().then(data => {
+          $("#btn-view-cart").removeAttr('disabled');
+          localStorage.setItem("reorderPopup", true);
+          $('.reorder-success').remove();
+          $( "<p class='reorder-success success-alert'>Selected products have been added to cart.</p>" ).insertBefore( ".reorder-item-list" );
+          $('.order-item-selector-input').prop('checked', false); 
+          removeoverlay();
+          getCartCount();
+        });
+      })
+      .catch((error) => {});
+    }
+  });
+</script>

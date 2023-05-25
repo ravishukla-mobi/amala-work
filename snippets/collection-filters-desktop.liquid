@@ -1,0 +1,227 @@
+{%- assign has_filters = true -%}
+{%- assign quick_links_menu = linklists[section.settings.quick_links] -%}
+
+{%- if has_filters -%}
+  {%- capture grid_classes -%}1/3--tablet-and-up 1/{{ section.settings.products_per_row }}--desk{%- endcapture -%}
+{%- else -%}
+  {%- capture grid_classes -%}1/3--tablet 1/{{ section.settings.products_per_row }}--lap-and-up{%- endcapture -%}
+{%- endif -%}
+
+
+<div class="layout__section layout__section--secondary hidden-pocket">
+   <h3 class="article-item__title heading ">Filter by</h3>
+          <div class="card">
+             {%- if section.settings.show_sub_collection -%}
+               {%- assign sub_collection_title = section.settings.sub_collection_title -%}
+               {% render 'sub-collection', sub_collection_title: sub_collection_title, linklists: quick_links_menu %}             
+            {%- endif -%}
+           
+            
+            {%- if section.settings.show_filters and has_filters -%}
+            	{% assign displayed_block = 0 %}
+            	{% for block in section.blocks %}
+            
+            		{% if block.settings.hide %}
+                    {% else %}
+            
+                      {% comment %}
+                      {% if displayed_block == 2 %}
+
+                        {%- if quick_links_menu.links.size > 0 -%}
+                          <div class="card__section card__section--tight">
+                            <button class="collection__filter-group-name link link--secondary text--strong" data-action="toggle-collapsible" aria-controls="{{ link_id }}" data-close-siblings="false" data-collapsible-force-overflow="true" aria-expanded="true">
+                                Filter by Categories {%- render 'icon', icon: 'arrow-bottom' -%}
+                            </button>
+
+                            <div id="{{ link_id }}" class="collection__filter-collapsible" aria-hidden="false" style="height: auto; overflow: visible">
+                              <ul class="collection__filter-linklist" role="list">
+                                {%- for link in quick_links_menu.links -%}
+                                  <li>
+                                    {%- if link.links.size > 0 -%}
+                                      {%- capture link_id -%}filter-{% increment link_id %}{%- endcapture -%}
+                                      <a href="{{ link.url }}" class="collection__filter-link link link--primary {% if link.active %}is-active{% endif %}">{{ link.title }} {% if link.type == 'collection_link' and section.settings.quick_links_show_products_count %}({{ link.object.products_count }}){% endif %}</a>
+                                      <button class="collection__filter-link link link--primary {% if link.active or link.child_active %}is-active{% endif %}" data-action="toggle-collapsible" aria-controls="{{ link_id }}" aria-expanded="{% if link.active or link.child_active %}true{% else %}false{% endif %}">
+                                         {%- render 'icon', icon: 'arrow-bottom' -%}
+                                      </button>
+
+                                      <div id="{{ link_id }}" class="collection__filter-collapsible" {% if link.active or link.child_active %}aria-hidden="false" style="height: auto"{% else %}aria-hidden="true"{% endif %}>
+                                        <ul class="collection__filter-linklist" role="list">
+                                          {%- for sub_link in link.links -%}
+                                            <li>
+                                              <a href="{{ sub_link.url }}" class="collection__filter-link link link--primary {% if sub_link.active %}is-active{% endif %}">{{ sub_link.title }} {% if sub_link.type == 'collection_link' and section.settings.quick_links_show_products_count %}({{ sub_link.object.products_count }}){% endif %}</a>
+                                            </li>
+                                          {%- endfor -%}
+                                        </ul>
+                                      </div>
+                                    {%- else -%}
+                                      <a href="{{ link.url }}" class="collection__filter-link link link--primary {% if link.active %}is-active{% endif %}">{{ link.title }} {% if link.type == 'collection_link' and section.settings.quick_links_show_products_count %}({{ link.object.products_count }}){% endif %}</a>
+                                    {%- endif -%}
+                                  </li>
+                                {%- endfor -%}
+                                {%- capture link_id -%}filter-{% increment link_id %}{%- endcapture -%}
+                                {% assign displayed_block = displayed_block | plus:1 %}
+                              </ul>
+                            </div>
+                          </div>
+                        {%- endif -%}
+                      {% endif %}
+                      {% endcomment %}
+
+                      {% if block.settings.filter_global %}
+                         {% assign displayed_block = displayed_block | plus: 1 %}
+                         {%- assign global_tags = block.settings.filter_tag_list | split: ',' -%}
+                         {% assign global_tags_handle = global_tags | handlize %}
+            
+            			{%- assign group_settings = block.settings.filter_tag | strip -%}
+            			{%- assign group = block.settings.filter_tag | append : ':' | strip -%}
+            			  {%- assign have_filter = false -%}
+            			 {% if group_settings != blank %}
+                          {%- for tag in collection.all_tags -%}
+                             {%- if tag contains group -%}
+                                {%- assign have_filter = true -%}
+                                {%- break -%}
+                             {%- endif -%}
+                          {%- endfor -%}
+                         {% endif %}
+
+                          <div class="card__section card__section--tight">
+                               {%- if section.settings.filter_type == 'group' -%}
+                                <div class="collection__filter-group-list">
+                                  {%- assign has_active_tag_from_group = false -%}
+                                  {%- assign group_downcase = block.settings.filter_tag_list | downcase -%}
+                                  {%- for tag in current_tags -%}
+                                    {%- if global_tags_handle contains tag -%}
+                                      {%- assign has_active_tag_from_group = true -%}
+                                      {%- break -%}
+                                    {%- endif -%}
+                                  {%- endfor -%}
+                                  {%- capture link_id -%}filter-{% increment link_id %}{%- endcapture -%}
+                                  <button class="collection__filter-group-name link link--secondary text--strong" data-action="toggle-collapsible" aria-controls="{{ link_id }}" data-close-siblings="false" data-collapsible-force-overflow="true" aria-expanded="{% if has_active_tag_from_group or block.settings.filter_expand %}true{% else %}false{% endif %}">
+                                    {{ block.settings.title }}
+                                    {%- render 'icon', icon: 'arrow-bottom' -%}
+                                  </button>
+                                  <div id="{{ link_id }}" class="collection__filter-collapsible" {% if has_active_tag_from_group or block.settings.filter_expand %}aria-hidden="false" style="height: auto; overflow: visible"{% else %}aria-hidden="true"{% endif %}>
+                                    <ul class="collection__filter-checkbox-list filter__content-{{ group_downcase }}" role="list">
+                                      {% assign search_items_allowed = section.settings.filters_search_items | plus: 0 %}
+                                      {%- if section.settings.show_filters_search and search_allowed_count >= search_items_allowed -%}            
+                                        <input id="search-filter-content_{{ group_downcase }}" type="text" class="form-control" placeholder="Search {{ group }}">                               
+                                        <script type="text/javascript">
+                                          $(document).ready(function($){
+                                            $("input#search-filter-content_{{ group_downcase }}").quicksearch(".filter__content-{{ group_downcase }} .collection__filter-checkbox");
+                                              });
+                                        </script>
+                                      {%- endif -%}
+                                      {%- for tag in global_tags -%}
+
+                                          <li class="collection__filter-checkbox">
+                                            <div class="checkbox-wrapper">
+                                              <input type="checkbox" class="checkbox" id="{{ link_id }}-tag-{{ tag | handle }}" name="tag-{{ tag }}" data-action="toggle-tag" data-tag="{{ tag | handle }}" data-tag-user="{{ tag }}" {% if current_tags contains tag %}checked="checked"{% endif %}>
+                                              {% render 'icon', icon: 'check' %}
+                                            </div>
+                                            <label for="{{ link_id }}-tag-{{ tag | handle }}">{{ tag }}</label>
+                                          </li>
+                                      {%- endfor -%}
+                                      {%- for tag in collection.all_tags -%}
+                                        {%- if tag contains group -%}
+                                         {%- assign tag_parts = tag | split: ':' -%}
+
+                                          <li class="collection__filter-checkbox">
+                                            <div class="checkbox-wrapper">
+                                              <input type="checkbox" class="checkbox" id="{{ link_id }}-tag-{{ tag | handle }}" name="tag-{{ tag_parts.first | handle }}" data-action="toggle-tag" data-tag="{{ tag | handle }}" data-tag-user="{{ tag_parts.last | escape }}" {% if current_tags contains tag %}checked="checked"{% endif %}>
+                                              {% render 'icon', icon: 'check' %}
+                                            </div>
+                                            <label for="{{ link_id }}-tag-{{ tag | handle }}">{{ tag_parts.last }}</label>
+                                          </li>
+                                        {%- endif -%}
+                                      {%- endfor -%}
+                                    </ul>
+                                  </div>
+                              </div>
+                               {%- endif -%}
+                            </div> 
+
+                      {% else %}
+                          {%- assign group = block.settings.filter_tag | append : ':' | strip -%}
+            			  {%- assign group_settings = block.settings.filter_tag | strip -%}
+                          {%- assign have_filter = false -%}
+            			  {% if group_settings != blank %}
+                            {%- for tag in collection.all_tags -%}
+                               {%- if tag contains group -%}
+                                  {%- assign have_filter = true -%}
+                                  {%- break -%}
+                               {%- endif -%}
+                            {%- endfor -%}
+            			  {% endif %}
+
+                          {% if have_filter %}
+                            {% assign displayed_block = displayed_block | plus:1 %}
+                            <div class="card__section card__section--tight">
+                               {%- if section.settings.filter_type == 'group' -%}
+                                <div class="collection__filter-group-list">
+                                  {%- assign has_active_tag_from_group = false -%}
+                                  {%- assign group_downcase = block.settings.filter_tag | downcase -%}
+                                  {%- for tag in current_tags -%}
+                                    {%- assign current_tag_parts = tag | split: ':' | first | downcase -%}
+                                    {%- if group_downcase == current_tag_parts -%}
+                                      {%- assign has_active_tag_from_group = true -%}
+                                      {%- break -%}
+                                    {%- endif -%}
+                                  {%- endfor -%}
+                                  {%- capture link_id -%}filter-{% increment link_id %}{%- endcapture -%}
+                                  <button class="collection__filter-group-name link link--secondary text--strong" data-action="toggle-collapsible" aria-controls="{{ link_id }}" data-close-siblings="false" data-collapsible-force-overflow="true" aria-expanded="{% if has_active_tag_from_group or block.settings.filter_expand %}true{% else %}false{% endif %}">
+                                    {{ block.settings.title }}
+                                    {%- render 'icon', icon: 'arrow-bottom' -%}
+                                  </button>
+                                  <div id="{{ link_id }}" class="collection__filter-collapsible" {% if has_active_tag_from_group or block.settings.filter_expand %}aria-hidden="false" style="height: auto; overflow: visible"{% else %}aria-hidden="true"{% endif %}>
+                                    <ul class="collection__filter-checkbox-list filter__content-{{ group_downcase }}" role="list">
+                                      {% assign search_items_allowed = section.settings.filters_search_items | plus: 0 %}
+                                      {%- if section.settings.show_filters_search and search_allowed_count >= search_items_allowed -%}            
+                                        <input id="search-filter-content_{{ group_downcase }}" type="text" class="form-control" placeholder="Search {{ group }}">                               
+                                        <script type="text/javascript">
+                                          $(document).ready(function($){
+                                            $("input#search-filter-content_{{ group_downcase }}").quicksearch(".filter__content-{{ group_downcase }} .collection__filter-checkbox");
+                                              });
+                                        </script>
+                                      {%- endif -%}
+                                      {%- for tag in collection.all_tags -%}
+                                        {%- if tag contains group -%}
+                                         {%- assign tag_parts = tag | split: ':' -%}
+
+                                          <li class="collection__filter-checkbox">
+                                            <div class="checkbox-wrapper">
+                                              <input type="checkbox" class="checkbox" id="{{ link_id }}-tag-{{ tag | handle }}" name="tag-{{ tag_parts.first | handle }}" data-action="toggle-tag" data-tag="{{ tag | handle }}" data-tag-user="{{ tag_parts.last | escape }}" {% if current_tags contains tag %}checked="checked"{% endif %}>
+                                              {% render 'icon', icon: 'check' %}
+                                            </div>
+                                            <label for="{{ link_id }}-tag-{{ tag | handle }}">{{ tag_parts.last }}</label>
+                                          </li>
+                                        {%- endif -%}
+                                      {%- endfor -%}
+                                    </ul>
+                                  </div>
+                              </div>
+                               {%- endif -%}
+                            </div> 
+                          {% endif %}
+                       {% endif %}
+            		{% endif %}
+                {% endfor %}
+            {%- endif -%}
+            
+            <!-- Active Filters -->
+            <div class="collection__active-filters">
+              {%- for tag in current_tags -%}
+              <div class="collection__active-filter-item">
+                <button class="collection__active-filter-cross" data-action="toggle-tag" data-tag="{{ tag | handle }}">{% render 'icon', icon: 'close' %}</button>
+                {%- if section.settings.filter_type == 'group' -%}
+                	{{- tag | split: ':' | last | capitalize -}}
+                {%- else -%}
+                	{{- tag -}}
+                {%- endif -%}
+              </div>
+              {%- endfor -%}
+              {%- if current_tags != blank and current_tags.size > 1 -%}
+              <button class="collection__clear-filter button button--small button--transparent button--full" data-action="clear-tags">Clear All</button>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>

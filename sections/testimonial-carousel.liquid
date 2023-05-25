@@ -1,0 +1,344 @@
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<section class="container testimonial_container">
+  <header>
+      <div class="expert_recommendation_text">
+          {% if section.settings.sub_heading != blank or section.settings.heading != blank %}
+            <div class="landing_section_header">
+              {% if section.settings.sub_heading != blank %}
+                  <h2 class="landing_heading">{{ section.settings.sub_heading }}</h2>
+              {% endif %}
+              {% if section.settings.heading != blank %}
+                  <h3 class="landing_subheading">{{ section.settings.heading }}</h3>
+              {% endif %}
+            </div>
+          {% endif %}
+          <div class="expert_recommendation_btn">
+              {% if section.settings.btn_text != blank %}
+                  <a href="{{ section.settings.url_link }}">{{ section.settings.btn_text }}</a>
+              {% endif %}
+          </div>
+      </div>
+  </header>
+  <div class="expert_container">
+      {% for block in section.blocks %}
+          <div>
+              <div class="expert-contener1">
+                  <div class="expert-contener">
+                      {% if block.settings.fiveth_block_slider != blank %}
+                          <div>
+                              <img src="{{ block.settings.fiveth_block_slider | img_url:'master' }}"></div>
+                          {% endif %}
+                          <div class="expert-text">
+                              {% if block.settings.expert_yours != blank %}
+                                  <h3>{{ block.settings.expert_yours }}</h3>
+                              {% endif %}
+                              <div class="expert-desc">
+                                  {% if block.settings.title != blank %}
+                                      <h2>{{ block.settings.title }}</h2>
+                                  {% endif %}
+                                  {% if block.settings.expert_desc != blank %}
+                                      <h3>{{ block.settings.expert_desc }}</h3>
+                                  {% endif %}
+                              </div>
+                          </div>
+                      </div>
+                      {% if block.settings.anchor_text != blank %}
+                          <div class="explore-button">
+                              <a href="{{ block.settings.url_link }}">{{ block.settings.anchor_text }}</a>
+                          </div>
+                      {% endif %}
+                  </div>
+              </div>
+          {% endfor %}
+      </div>
+  </section>
+  <script>
+    $(document).ready(function(){
+        $('.expert_container').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows:true,
+        dots:false,
+        nfinite:false,
+        adaptiveHeight: true,
+        responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint:592,
+        settings: {
+          slidesToShow: 1,
+          infinite:false,
+          slidesToScroll: 1
+        }
+      }
+    ]
+      });
+    });
+</script>
+
+<style>
+
+
+
+.testimonial_container{
+  padding-bottom:50px;
+}
+.expert-contener1{
+  padding-bottom: 35px;
+}
+    {%- comment -%} expert css starts here {%- endcomment -%}
+
+    .expert_recommendation_text{
+    display: flex;
+    justify-content: space-between;
+    align-items:end;
+    margin-bottom: 15px;
+    margin-top: 50px;
+    }
+    .expert_recommendation_btn a{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight:500;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0.03em;
+    color: #946C56;
+    }
+    .container.expert_container{
+      margin-top:100px;
+    }
+.expert-desc{
+  width:92%;
+  margin-left: auto;
+  margin-top: 18px;
+}
+.expert-desc h2{
+  margin: 0;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #222222;
+}
+.expert-desc h3{
+  margin: 0;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  color: #222222;
+}
+.expert-desc p{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  color: #222222;
+}
+.expert-text h3{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14.2908px;
+  line-height: 21px;
+  color: #222222;
+  margin: 0;
+}
+.expert-contener{
+  display: flex;
+  gap: 10px;
+  margin: 0 20px;
+}
+.explore-button{
+    background: linear-gradient(180deg, #9A6F57 0%, #7B523B 100%);
+    box-shadow: 0px 4px 25px rgb(0 0 0 / 25%);
+    border-radius: 8px;
+    max-width: 210px;
+    margin: auto;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top: 35px;
+}
+.explore-button a{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+.expert-desc p{
+  margin:0px;
+}
+.expert_container{
+  display: flex;
+}
+
+.expert_container .explore-button:hover{
+        transform: translate3D(0,-1px,0) scale(1.03); /* move up slightly and zoom in */
+        box-shadow: 8px 28px 50px rgba(39,44,49,.07), 1px 6px 12px rgba(39,44,49,.04);
+        transition: all .4s ease; /* zoom in */
+        cursor: pointer;
+}
+
+{%- comment -%} expert css ends here {%- endcomment -%}
+
+
+.expert_container  .slick-arrow,.explore-collection-section .slick-arrow{opacity:1;color:transparent; position:absolute;top:50%; transform:translateY(-50%);z-index:99;transition:all 0.3s ease;}
+.expert_container:hover  .slick-arrow,.explore-collection-section:hover  .slick-arrow{
+    opacity:1;
+}
+.expert_container  .slick-arrow:before,.explore-collection-section .slick-arrow:before{
+    content:'';
+  position:absolute;
+  width:32px;
+  height:32px;
+  background-color:#cab49e;
+  border-radius: 6.88689px;
+}
+.expert_container  .slick-arrow:after,.explore-collection-section .slick-arrow:after{
+    content:'';
+  position:absolute;
+  width:8px;
+  height:8px;
+  border-left:3px solid #fff;
+  border-bottom:3px solid #fff;
+  top:55%;
+  transform:rotate(45deg) translateY(-50%);
+}
+.expert_container  .slick-arrow.slick-prev,.explore-collection-section  .slick-arrow.slick-prev{
+left:0;
+}
+.expert_container  .slick-arrow.slick-prev:after,.explore-collection-section  .slick-arrow.slick-prev:after{
+left:8px;
+}
+.expert_container  .slick-arrow.slick-next,.explore-collection-section  .slick-arrow.slick-next{
+right:5px;
+}
+.expert_container  .slick-arrow.slick-next:after,.explore-collection-section  .slick-arrow.slick-next:after{
+right:15px;
+top:12px;
+transform:rotate(225deg) translateY(0%);
+}
+.brands-slider-box{
+margin:15px;
+overflow:hidden;
+border-radius:10px;
+position:relative;
+}
+.slick-dots{list-style:none;text-align:center;}
+.slick-dots  button{display:none;}
+.slick-dots li{display:inline-block;margin:5px;width:8px;height:8px;border-radius:50%;border:1px solid #b89c7d;}
+.slick-dots li.slick-active{background-color:#b89c7d;}
+
+
+
+    @media only screen and (max-width:768px) {
+      
+      }
+      @media only screen and (max-width:592px) {
+        .third-block-sec img{
+          padding-right: 10px;
+        }
+        .container.expert_container{
+          margin-top:50px;
+        }
+        .expert-contener{
+          margin: 0px;
+        }
+      }
+
+
+</style>
+  {% schema %}
+  {
+    "name": "Brand Carousel",
+    "class": "brand-carousel-section",
+    "settings": [
+      {
+        "type":"text",
+        "id":"sub_heading",
+        "label":"Heading"
+      },
+      {
+        "type":"text",
+        "id":"heading",
+        "label":"Sub Heading"
+      },
+      {
+        "type":"text",
+        "id":"btn_text",
+        "label":"View Text"
+      },
+      {
+        "type":"url",
+        "id":"url_link",
+        "label":"Link"
+      }
+    ],
+    "name": "Testimonial Carousel",
+    "blocks":[
+        {
+        "type": "block-5",
+        "name": "Testimonial Carousel",
+        "settings": [
+          {
+        "type":"image_picker",
+        "id":"fiveth_block_slider",
+        "label":"select your image"
+          },
+          {
+        "type":"text",
+        "id":"expert_yours",
+        "label":"Heading"
+      },
+      {
+        "type":"text",
+        "id":"title",
+        "label":"Title Name"
+      },
+      {
+        "type":"richtext",
+        "id":"expert_desc",
+        "label":"Description"
+      },
+      {
+        "type":"text",
+        "id":"anchor_text",
+        "label":"Button Text"
+      },
+      {
+        "type":"url",
+        "id":"url_link",
+        "label":"Link"
+      }
+        ]
+      }
+    ],
+    "presets": [
+{
+"name": "Testimonial Carousel",
+"category": "Custom"
+}
+]
+  }
+{% endschema %}

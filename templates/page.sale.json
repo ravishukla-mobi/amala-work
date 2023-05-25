@@ -1,0 +1,1379 @@
+{
+  "sections": {
+    "f0190690-f05e-4c13-8196-9c696058743d": {
+      "type": "slideshow",
+      "blocks": {
+        "template--16658758107380__f0190690-f05e-4c13-8196-9c696058743d-16819959060783cda5-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Flat500_Banner_1920x600_1_924e6914-35fe-4fe2-8663-6eead1b9283e.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Flat500_Mobile_banner_2x_1_1d0cb734-f60e-4cf6-9bb0-2697242ea34e.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/all",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "43a60549-cf3f-416d-b7a5-3f11673a0682": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ruby_organics_Banner_1920x600_a1c0b907-6e33-43b3-b8eb-68285cb17ed3.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Ruby_organics_banner-microsite-mobile_43b77000-f52e-4d90-8a08-7d3a921e9934.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/ethical-beauty?f_Brand=Ruby%27s+Organics",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "f865270a-c324-4abe-a968-231d06f3912a": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/sale-page-nat-habit-desktop-2.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/sale-page-nat-habit-mobile-2.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/nat-habit",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "template--16658758107380__f0190690-f05e-4c13-8196-9c696058743d-16819959060783cda5-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner_website_24hr_delivery_2_1_774da88b-3160-440b-8e8f-50cf04ecf254.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/banner_mobile_24hr_delivery_2_1_63c86fcd-025e-4c12-8c54-61a1d4959155.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/sale",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "c9fc9187-fb5a-49f0-a1cd-004824a43156": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Lightening-deal-Desktop.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Lightening-deal-mobile.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/sale",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16658758107380__f0190690-f05e-4c13-8196-9c696058743d-16819959060783cda5-0",
+        "43a60549-cf3f-416d-b7a5-3f11673a0682",
+        "f865270a-c324-4abe-a968-231d06f3912a",
+        "template--16658758107380__f0190690-f05e-4c13-8196-9c696058743d-16819959060783cda5-1",
+        "c9fc9187-fb5a-49f0-a1cd-004824a43156"
+      ],
+      "settings": {
+        "edge_to_edge": true,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "c27d7334-0241-4024-9104-1af8d1515832": {
+      "type": "home-conscious-journey",
+      "blocks": {
+        "ba12293a-e213-4820-bc13-b30c325499b9": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/6_fbf0a9cf-f02c-43fe-8f8d-0544ad465949.png",
+            "link": "https:\/\/amala.earth\/products\/greendigo-organic-cotton-baby-girl-dress-white-1000002390-200223"
+          }
+        },
+        "8e5bc312-de26-4a7a-8afb-c509ba8b828b": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3_2_f67ffd09-7829-4fbd-9323-87a8eb93dda4.png",
+            "link": "https:\/\/amala.earth\/collections\/joyful-home\/products\/sunira-home-living-chapati-box-moonj-grass-gold-sunira001-151222"
+          }
+        },
+        "c24721b2-b5a3-4c8a-87da-e54ba4bcb2ab": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/5_2_2c992dc6-9ba8-4959-840b-9110555c0bf5.png",
+            "link": "https:\/\/amala.earth\/collections\/pooja-essentials\/products\/my-pooja-box-brass-pooja-box-pooja-samagri-box-lotus-design-mpb554-160523"
+          }
+        },
+        "6d134206-8c1a-4047-a99d-550e9ad54b23": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2_3_1b49e29a-ce45-4140-86ac-e654625fd185.png",
+            "link": "https:\/\/amala.earth\/collections\/mindful-eating\/products\/mint-ginger-lemon-squash"
+          }
+        },
+        "d82e4c86-0cf9-4e3b-8afb-8631ceb825a7": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/4_3_a88a9fe1-9b1c-4ebc-ac64-0ce1d80c7763.png",
+            "link": "https:\/\/amala.earth\/collections\/responsible-fashion\/products\/moora-mulmul-cotton-saree-dabu-hand-block-print-indigo-sr-mc-be-0055-120423"
+          }
+        },
+        "6d5fd8bd-87fe-4ee3-b3ad-a5694ef664fb": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1_2_be562261-efa3-417e-b5e0-f599d736cecc.png",
+            "link": "https:\/\/amala.earth\/products\/natural-vibes-kansa-hair-comb-reduce-hair-fall-growth-circulation-stress-relief-nv_kansa_comb-140223"
+          }
+        },
+        "042bcff1-2375-48fe-96da-4c097ec4ee79": {
+          "type": "banner",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/17-05.png",
+            "link": "https:\/\/amala.earth\/collections\/ohria-ayurveda\/products\/ohria-ayurveda-natural-deodorant-amaltas-khus-50-ml-ad051-221122"
+          }
+        }
+      },
+      "block_order": [
+        "ba12293a-e213-4820-bc13-b30c325499b9",
+        "8e5bc312-de26-4a7a-8afb-c509ba8b828b",
+        "c24721b2-b5a3-4c8a-87da-e54ba4bcb2ab",
+        "6d134206-8c1a-4047-a99d-550e9ad54b23",
+        "d82e4c86-0cf9-4e3b-8afb-8631ceb825a7",
+        "6d5fd8bd-87fe-4ee3-b3ad-a5694ef664fb",
+        "042bcff1-2375-48fe-96da-4c097ec4ee79"
+      ],
+      "custom_css": [
+        ".blog-post-link a {font-family: \"Poppins\"; font-style: normal; font-weight: 500; font-size: 15px; line-height: 27px; letter-spacing: 0.03em; color: #946c56; text-decoration: underline;}"
+      ],
+      "settings": {
+        "subtitle": "",
+        "title": "Deal of the day",
+        "view_text": "View all",
+        "url_link": "https:\/\/amala.earth\/collections\/sale"
+      }
+    },
+    "2bd14898-d935-4349-9e83-f4372de58bf7": {
+      "type": "landing-page-recommendation",
+      "disabled": true,
+      "blocks": {
+        "bb39bc62-71ef-4043-aac6-f7114fcbc1d2": {
+          "type": "Product",
+          "settings": {
+            "product": "bagrrys-muesli-crunchy-fruit-nut-high-fibre-375-g-8902710506044-150323"
+          }
+        },
+        "bb2f8146-f205-43a1-ad84-c027b8c7bff6": {
+          "type": "Product",
+          "settings": {
+            "product": "maati-petrichor-organic-attar-fragrance-3ml"
+          }
+        },
+        "2d5a4e68-ab8b-48ee-b9e6-5bcccf2caa24": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-bromma-brown-wooden-sunglasses-1"
+          }
+        },
+        "5ace0851-d260-4ca8-99e2-ca2e03181a23": {
+          "type": "Product",
+          "settings": {
+            "product": "nestroots-teak-wood-iron-teak-wood-cutlery-holder-with-cane-brown-black-nrfc111-3-160822"
+          }
+        },
+        "adf5a40e-958a-48b3-8e61-fed75e274b6f": {
+          "type": "Product",
+          "settings": {
+            "product": "nat-habit-ginger-maricha-body-massage-oil-cellulite-fat-reduction-200-ml-bc-ma-gm-200-160922"
+          }
+        },
+        "c3da0c44-297e-494e-9951-c2ff48f40467": {
+          "type": "Product",
+          "settings": {
+            "product": "100-organic-cotton-brown-large-muslin-wrap"
+          }
+        },
+        "053c0385-5003-4a53-98e7-c5bfc1f7177e": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "windmill-baby-natural-hand-wash-liquid-coco-shea-450-ml-b0b4gnzcqz-211122"
+          }
+        },
+        "9604b3ec-76fe-494c-a52a-038faec02771": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "maati-petrichor-organic-attar-fragrance-3ml"
+          }
+        },
+        "bcf5e22f-0a93-4a6f-8241-3e5c911bad00": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "manor-house-iron-plastic-gramophone-showpiece-gold-finish-mh-165-6822"
+          }
+        },
+        "59c733f4-b5e3-43b0-904a-7ab5f362f45f": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "eco-friendly-liquid-laundry-detergent-500-ml-pack-of-2"
+          }
+        },
+        "09ed7f5f-5b7f-43b6-89a8-e644062011c6": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "mango-wood-enamel-masala-box-grey"
+          }
+        },
+        "67f6a825-2bcb-4a59-97c4-390bda2006fe": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "plain-copper-bottle-1-l"
+          }
+        },
+        "cfcc3f48-532c-46de-ad4a-a4a6503dad01": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "jaipur-dohar-mulmul-cotton-dohar-ac-blanket-blue-purple-blue-purple-plant-131022"
+          }
+        },
+        "735c96e7-b9db-44ce-b91a-259b11ad5cc6": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "petal-home-cotton-cushion-covers-multicolour-set-of-2-ph-pcc-011-acd-0125-s2-29722"
+          }
+        },
+        "77128b2f-ef7c-48c7-9570-f5e306bac2c2": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "teak-wood-enamel-chapatti-box-grey"
+          }
+        },
+        "9150a8da-0c5a-4826-b618-00450ed600d9": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "copper-bottle-black-650-ml"
+          }
+        },
+        "b179063a-8cef-408e-bacf-93c47e825dda": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "nestroots-acacia-wood-serving-bowl-set-of-3-brown-nrsbwdb0701-160822"
+          }
+        }
+      },
+      "block_order": [
+        "bb39bc62-71ef-4043-aac6-f7114fcbc1d2",
+        "bb2f8146-f205-43a1-ad84-c027b8c7bff6",
+        "2d5a4e68-ab8b-48ee-b9e6-5bcccf2caa24",
+        "5ace0851-d260-4ca8-99e2-ca2e03181a23",
+        "adf5a40e-958a-48b3-8e61-fed75e274b6f",
+        "c3da0c44-297e-494e-9951-c2ff48f40467",
+        "053c0385-5003-4a53-98e7-c5bfc1f7177e",
+        "9604b3ec-76fe-494c-a52a-038faec02771",
+        "bcf5e22f-0a93-4a6f-8241-3e5c911bad00",
+        "59c733f4-b5e3-43b0-904a-7ab5f362f45f",
+        "09ed7f5f-5b7f-43b6-89a8-e644062011c6",
+        "67f6a825-2bcb-4a59-97c4-390bda2006fe",
+        "cfcc3f48-532c-46de-ad4a-a4a6503dad01",
+        "735c96e7-b9db-44ce-b91a-259b11ad5cc6",
+        "77128b2f-ef7c-48c7-9570-f5e306bac2c2",
+        "9150a8da-0c5a-4826-b618-00450ed600d9",
+        "b179063a-8cef-408e-bacf-93c47e825dda"
+      ],
+      "settings": {
+        "title1": "",
+        "title2": "Deal of the day",
+        "logged_in": false,
+        "products_count": 7,
+        "layout": "vertical",
+        "stack_products": true,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all Sale",
+        "link_url": "https:\/\/amala.earth\/collections\/sale",
+        "button_position": "top"
+      }
+    },
+    "7e0dd887-3571-4be8-af40-c08572e6090a": {
+      "type": "custom-square-carousel",
+      "blocks": {
+        "7c844e42-eebb-49bd-b68f-9a11426026a3": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/nest_roots.png",
+            "title": "",
+            "url_link": "https:\/\/amala.earth\/collections\/nestroots?f_Discount=1+-+100"
+          }
+        },
+        "68c3def8-8a07-4985-8a90-838b424d11bb": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/concious_chemist.png",
+            "title": "",
+            "url_link": "https:\/\/amala.earth\/collections\/Conscious-Chemist"
+          }
+        },
+        "2dc02a03-6b4e-451b-b92a-dfa0bad26014": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/saltpetre.png",
+            "title": "",
+            "url_link": "https:\/\/amala.earth\/collections\/saltpetre?f_Type=Tops+%26+T-Shirts,Co-Ords,Lounge+Set,Dresses,Pants,Shirts,Winter+Wear,Skirts,Kurtas,Jumpsuits,Blazercomma+Jackets+%26+Coats"
+          }
+        },
+        "4ca075c1-d06c-4889-b482-af897e386e90": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/jungly_delight.png",
+            "title": "",
+            "url_link": "https:\/\/amala.earth\/collections\/Jungly-Delights"
+          }
+        },
+        "f2f06306-390a-4595-80ba-f1da31021dd8": {
+          "type": "block-3",
+          "disabled": true,
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/clever_fox.png",
+            "title": "",
+            "url_link": "https:\/\/amala.earth\/collections\/the-clever-fox"
+          }
+        },
+        "07c321d1-0e4f-49ab-b9b4-30102d62df13": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/Petal_home.png",
+            "title": "",
+            "url_link": "https:\/\/amala.earth\/collections\/petal-home?f_Discount=1+-+100"
+          }
+        },
+        "b0fe0f55-2a71-41ab-8281-35a5b5db7522": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/dressfolk_17261860-a6c6-439a-88a0-a9842436859a.png",
+            "title": "",
+            "url_link": "https:\/\/amala.earth\/collections\/dressfolk"
+          }
+        },
+        "2d4a1421-62c3-46a7-ba75-cddf73d0dab0": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/juicy_chemistry.png",
+            "title": "",
+            "url_link": "https:\/\/amala.earth\/collections\/Juicy-Chemistry"
+          }
+        },
+        "16da5d53-80d0-4697-bec4-d2f4f8ef12f6": {
+          "type": "block-3",
+          "disabled": true,
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/greendeer.png",
+            "title": "",
+            "url_link": ""
+          }
+        },
+        "fcb08a78-a43d-44c7-9fe2-099ac4f1921c": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/naturally_yours.png",
+            "title": "",
+            "url_link": "https:\/\/amala.earth\/collections\/Naturally-Yours"
+          }
+        },
+        "93df9417-c2ed-4e82-a514-a08816b650d0": {
+          "type": "block-3",
+          "settings": {
+            "third_block_slider": "shopify:\/\/shop_images\/nestle_in_a_teepee.png",
+            "title": "",
+            "url_link": "https:\/\/amala.earth\/collections\/Nestle-in-a-Teepee"
+          }
+        }
+      },
+      "block_order": [
+        "7c844e42-eebb-49bd-b68f-9a11426026a3",
+        "68c3def8-8a07-4985-8a90-838b424d11bb",
+        "2dc02a03-6b4e-451b-b92a-dfa0bad26014",
+        "4ca075c1-d06c-4889-b482-af897e386e90",
+        "f2f06306-390a-4595-80ba-f1da31021dd8",
+        "07c321d1-0e4f-49ab-b9b4-30102d62df13",
+        "b0fe0f55-2a71-41ab-8281-35a5b5db7522",
+        "2d4a1421-62c3-46a7-ba75-cddf73d0dab0",
+        "16da5d53-80d0-4697-bec4-d2f4f8ef12f6",
+        "fcb08a78-a43d-44c7-9fe2-099ac4f1921c",
+        "93df9417-c2ed-4e82-a514-a08816b650d0"
+      ],
+      "settings": {
+        "heading_one": "",
+        "heading_two": "Brands in focus"
+      }
+    },
+    "a4471818-737e-42de-8771-4ca1aea7b36b": {
+      "type": "slider-show",
+      "disabled": true,
+      "blocks": {
+        "924051fc-4940-4446-a331-db57dde8d1b9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/homepage_web_size_196ab30e-ebd1-45dd-9f4b-18e74b212d62.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/homepage_mobile_size_d8a7eb70-8d63-440c-b6a1-73c033a68366.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/sale"
+          }
+        },
+        "template--16658758107380__a4471818-737e-42de-8771-4ca1aea7b36b-1681188779782a470f-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Dia_mirza_banner-microsite-website_04c586e5-7854-4369-a813-a41266d43a16.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Dia_mirza_banner-microsite-mobile_b2b31707-c6f1-45ed-962c-0cf293975194.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/pages\/celebrity-collaborations"
+          }
+        },
+        "template--16658758107380__a4471818-737e-42de-8771-4ca1aea7b36b-1681188779782a470f-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner_website_24hr_delivery_2_1_a4c63759-f424-499f-a752-753c09af6913.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/banner_mobile_24hr_delivery_2_1_fd6d79a9-38e2-40f2-956e-11d1291ec6a3.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/sale"
+          }
+        }
+      },
+      "block_order": [
+        "924051fc-4940-4446-a331-db57dde8d1b9",
+        "template--16658758107380__a4471818-737e-42de-8771-4ca1aea7b36b-1681188779782a470f-0",
+        "template--16658758107380__a4471818-737e-42de-8771-4ca1aea7b36b-1681188779782a470f-1"
+      ],
+      "settings": {
+        "edge_to_edge": true,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "festival-landings-page": {
+      "type": "main-banner",
+      "disabled": true,
+      "settings": {
+        "banner_desktop_image": "shopify:\/\/shop_images\/banner_website_24hr_delivery_2_1.jpg",
+        "banner_mobile_image": "shopify:\/\/shop_images\/banner_mobile_24hr_delivery_2_1.jpg",
+        "desktop_banner_title": "",
+        "color_heading": "#ffffff",
+        "desktop_banner_subtitle": "",
+        "color_subheading": "#b89c7d",
+        "desktop_banner_button": "",
+        "color_button": "#ffffff",
+        "button_background": "#9d7242",
+        "desktop_button_url": "https:\/\/amala.earth\/collections\/sale",
+        "desktop_image_url": "https:\/\/amala.earth\/collections\/sale"
+      }
+    },
+    "7148a954-d95c-483a-9aed-5f0f443b2075": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "607f87c9-db23-40d0-9a9c-6a5df431776c": {
+          "type": "Product",
+          "settings": {
+            "product": "plain-copper-bottle-1-l"
+          }
+        },
+        "ae34c107-02d9-4c01-a88b-307e17bb8d6f": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-navy-bamboo-round-neck-t-shirt-for-mens"
+          }
+        },
+        "da60a7ca-05e4-4665-8cf7-78707c832393": {
+          "type": "Product",
+          "settings": {
+            "product": "sasha-sunglasses-for-menbromma-brown-wooden-handcrafted-sg-719_m-100223"
+          }
+        },
+        "f2286647-e486-4684-aa8e-840bf894c662": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-quinoa-500g"
+          }
+        },
+        "47bcc8b4-33eb-433a-b1e5-ce034a9be081": {
+          "type": "Product",
+          "settings": {
+            "product": "bamboo-hair-paddle-brush"
+          }
+        },
+        "acf27c5d-e072-495d-8a4a-b2a8d4bd2ada": {
+          "type": "Product",
+          "settings": {
+            "product": "vilvah-hair-removal-powder-smoother-skin-100-g-260922"
+          }
+        },
+        "493b0be2-dc78-4ef7-82c9-c0252ff54c23": {
+          "type": "Product",
+          "settings": {
+            "product": "reusable-red-sanitary-cloth-panty-liners-pack-of-3"
+          }
+        },
+        "d0c5afdd-8904-47fb-8df1-f0adfd3b2e2f": {
+          "type": "Product",
+          "settings": {
+            "product": "natural-bamboo-toothbrush"
+          }
+        },
+        "9a91355b-0047-43a8-82d9-f7a5efe4b883": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "pure-copper-tongue-cleaner-pack-of-2"
+          }
+        },
+        "aa6cae76-6b1c-4104-a8f0-a85bc8d3c407": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "handwoven-pink-pure-linen-durga-saree"
+          }
+        },
+        "cda2cd36-2552-4e52-8b27-5396ba245fba": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "upcycled-cork-brown-men-s-sandals"
+          }
+        },
+        "613e9d37-bd24-4039-97c5-13327791e9df": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "women-solid-hemp-lounge-pant-4"
+          }
+        },
+        "02653600-fcc1-4f56-aeaa-c8b225e36fdc": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "cotton-checkered-saree-white"
+          }
+        }
+      },
+      "block_order": [
+        "607f87c9-db23-40d0-9a9c-6a5df431776c",
+        "ae34c107-02d9-4c01-a88b-307e17bb8d6f",
+        "da60a7ca-05e4-4665-8cf7-78707c832393",
+        "f2286647-e486-4684-aa8e-840bf894c662",
+        "47bcc8b4-33eb-433a-b1e5-ce034a9be081",
+        "acf27c5d-e072-495d-8a4a-b2a8d4bd2ada",
+        "493b0be2-dc78-4ef7-82c9-c0252ff54c23",
+        "d0c5afdd-8904-47fb-8df1-f0adfd3b2e2f",
+        "9a91355b-0047-43a8-82d9-f7a5efe4b883",
+        "aa6cae76-6b1c-4104-a8f0-a85bc8d3c407",
+        "cda2cd36-2552-4e52-8b27-5396ba245fba",
+        "613e9d37-bd24-4039-97c5-13327791e9df",
+        "02653600-fcc1-4f56-aeaa-c8b225e36fdc"
+      ],
+      "settings": {
+        "title1": "",
+        "title2": "",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/easy-switch?f_Discount=1+-+25,25+-+50,50+-+100",
+        "button_position": "top"
+      }
+    },
+    "e1c7b760-e1ce-4a80-bd62-6923da1c44a3": {
+      "type": "amala-earth-curation",
+      "disabled": true,
+      "blocks": {
+        "e44777aa-567f-4120-aa73-9b0d6c0f165f": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/banner_website_24hr_delivery_2.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/banner_mobile_24hr_delivery_2.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/express-delivery?f_Discount=1+-+25,25+-+50"
+          }
+        }
+      },
+      "block_order": [
+        "e44777aa-567f-4120-aa73-9b0d6c0f165f"
+      ],
+      "settings": {
+        "curation_heading1": "",
+        "curation_sub_heading2": ""
+      }
+    },
+    "7e727bcc-acea-4a68-bf80-27371ae6d902": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "72995800-ecf7-46ec-b2ff-f4be43592e1e": {
+          "type": "Product",
+          "settings": {
+            "product": "belle-vita-organic-skincare-rituals-gift-box-pack-of-7-8906150342279-90922"
+          }
+        },
+        "70927f2a-7341-46d8-8531-ecd81dbba1d4": {
+          "type": "Product",
+          "settings": {
+            "product": "kesarco-kashmiri-walnut-kernels-150-g-300822"
+          }
+        },
+        "96ea6b75-f379-4342-8f43-cd9d66a062cf": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-b-jade-roller-gua-sha-combo-set-of-2-jade-guasha-30122"
+          }
+        },
+        "45c49ccf-a090-4093-bc1c-f1fa6114aa75": {
+          "type": "Product",
+          "settings": {
+            "product": "jungly-delights-superfood-bars-chocolate-with-moringa-190-g-pack-of-5-jd-ch-03-111022"
+          }
+        },
+        "f89fdc97-793b-4a2b-a68b-ff1e73733321": {
+          "type": "Product",
+          "settings": {
+            "product": "kansa-gua-sha-face-massage-tool-for-fine-lines-glowing-skin-144gm"
+          }
+        },
+        "f8dd921c-23c3-472d-aa87-37f33a702c44": {
+          "type": "Product",
+          "settings": {
+            "product": "cocoa-turmeric-latte-herb-mix-gluten-free-100-g"
+          }
+        },
+        "4ae424f7-1f42-4b80-bce9-5d09ddce85db": {
+          "type": "Product",
+          "settings": {
+            "product": "vilvah-store-skin-brightening-serum-spf-50-sunscreen-combo-set-of-2-vl-kt-34-130123"
+          }
+        },
+        "31fb0fb1-31fc-4221-b26b-b3e53253464e": {
+          "type": "Product",
+          "settings": {
+            "product": "juicy-chemistry-deodorant-stick-grapefruit-patchouli-70-g-jc0301-201222"
+          }
+        },
+        "c96ac50e-216c-43db-9326-1a2bea946567": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-lipstick-lip-nourishing-cremey-matte-velvety-rose-4-2-g"
+          }
+        }
+      },
+      "block_order": [
+        "72995800-ecf7-46ec-b2ff-f4be43592e1e",
+        "70927f2a-7341-46d8-8531-ecd81dbba1d4",
+        "96ea6b75-f379-4342-8f43-cd9d66a062cf",
+        "45c49ccf-a090-4093-bc1c-f1fa6114aa75",
+        "f89fdc97-793b-4a2b-a68b-ff1e73733321",
+        "f8dd921c-23c3-472d-aa87-37f33a702c44",
+        "4ae424f7-1f42-4b80-bce9-5d09ddce85db",
+        "31fb0fb1-31fc-4221-b26b-b3e53253464e",
+        "c96ac50e-216c-43db-9326-1a2bea946567"
+      ],
+      "settings": {
+        "title1": "",
+        "title2": "",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "",
+        "link_url": "",
+        "button_position": "top"
+      }
+    },
+    "f1a96239-ab55-4829-9846-f6acf5cbaa4b": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "226f5640-2842-41a3-a9b8-e983edc0e65d": {
+          "type": "Product",
+          "settings": {
+            "product": "handloom-blue-orange-striped-cotton-nemo-yoga-mat"
+          }
+        },
+        "28eff391-71b7-4ab4-b56e-637e5d9f551d": {
+          "type": "Product",
+          "settings": {
+            "product": "linen-on-me-pure-linen-duvet-cover-set-mint-green-133-single-140922"
+          }
+        },
+        "e7865269-e15f-4c95-84a3-b3556c088892": {
+          "type": "Product",
+          "settings": {
+            "product": "recycled-paper-self-reflection-notepad-30-pages"
+          }
+        },
+        "d1d8fb57-3ec5-4fec-818b-f957ec464dbc": {
+          "type": "Product",
+          "settings": {
+            "product": "nakshikathaa-studio-pottery-fumer-with-handle-yellow-ncwdspfuhyl017-5922"
+          }
+        },
+        "c5591281-11ff-4cb9-b3f3-5d6bf02ba72b": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "nestroots-teak-wood-iron-teak-wood-cutlery-holder-brown-gold-nrfc111-160822"
+          }
+        },
+        "b56a6800-6073-4799-a3d7-fe08aa425d1a": {
+          "type": "Product",
+          "settings": {
+            "product": "balance-yoga-cork-block"
+          }
+        },
+        "b9681b24-d0f9-45ed-95cf-8161cd5f323f": {
+          "type": "Product",
+          "settings": {
+            "product": "anahata-brass-conch-shell-pooja-shankh-brass-ornate-conch-29922"
+          }
+        },
+        "75b87722-1e87-42c8-9b81-b44b21a583a1": {
+          "type": "Product",
+          "settings": {
+            "product": "mini-havan-kit-samidha-powder-with-burner-brown"
+          }
+        },
+        "5d3589db-7323-432f-87e0-f6842afc06ae": {
+          "type": "Product",
+          "settings": {
+            "product": "bioq-eco-friendly-plantable-mega-grow-kit-pack-of-40-bg-35-bulk-40-22922"
+          }
+        }
+      },
+      "block_order": [
+        "226f5640-2842-41a3-a9b8-e983edc0e65d",
+        "28eff391-71b7-4ab4-b56e-637e5d9f551d",
+        "e7865269-e15f-4c95-84a3-b3556c088892",
+        "d1d8fb57-3ec5-4fec-818b-f957ec464dbc",
+        "c5591281-11ff-4cb9-b3f3-5d6bf02ba72b",
+        "b56a6800-6073-4799-a3d7-fe08aa425d1a",
+        "b9681b24-d0f9-45ed-95cf-8161cd5f323f",
+        "75b87722-1e87-42c8-9b81-b44b21a583a1",
+        "5d3589db-7323-432f-87e0-f6842afc06ae"
+      ],
+      "settings": {
+        "title1": "",
+        "title2": "",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "",
+        "link_url": "",
+        "button_position": "top"
+      }
+    },
+    "7ee97a9e-fbf9-485d-9e4b-8438b6e22dd9": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "71f538c0-3d1b-474a-98de-54b911756d81": {
+          "type": "Product",
+          "settings": {
+            "product": "hemp-white-solid-women-crop-shirt"
+          }
+        },
+        "a32245e4-1096-4d83-820d-25fd7b060893": {
+          "type": "Product",
+          "settings": {
+            "product": "greendigo-organic-cotton-baby-girl-top-green-1000002405-200223"
+          }
+        },
+        "a22549ed-e5b6-483a-b290-606eaa524763": {
+          "type": "Product",
+          "settings": {
+            "product": "ikeda-designs-birthday-dress-cotton-printed-dress-for-girls-yellow-idg108g-1-2-y-cgr-191022"
+          }
+        },
+        "1a8cc347-76c1-421b-b63f-4955b8df29a0": {
+          "type": "Product",
+          "settings": {
+            "product": "raamae-printed-kids-cotton-quilt-powder-blue-4-8-years-bq-moa-211022"
+          }
+        },
+        "be6740dd-8e42-480c-b38f-1eee36785a95": {
+          "type": "Product",
+          "settings": {
+            "product": "ek-taara-cotton-crochet-soft-toy-smiley-monkey-blue-et-amala-7-171022"
+          }
+        },
+        "e8bcd466-ee15-4d5e-80e9-61388adf3fe5": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-cotton-multicolor-natural-dyed-elisa-dress"
+          }
+        },
+        "738d71b2-b7cc-4d54-af64-8166ef78fd09": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-linen-nova-full-sleeves-shirt"
+          }
+        },
+        "139dc48c-fac1-47dc-800f-a7b5f7bcb418": {
+          "type": "Product",
+          "settings": {
+            "product": "kranium-organic-cotton-harem-pants-olive-hp2003-131222"
+          }
+        },
+        "c74d41ee-b99b-4597-bfd8-bbe129c432cf": {
+          "type": "Product",
+          "settings": {
+            "product": "pink-moon-crop-top"
+          }
+        },
+        "98bb1509-fc5b-401a-9114-daee6ab474eb": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "organic-ashwagandha-powder-100-g"
+          }
+        }
+      },
+      "block_order": [
+        "71f538c0-3d1b-474a-98de-54b911756d81",
+        "a32245e4-1096-4d83-820d-25fd7b060893",
+        "a22549ed-e5b6-483a-b290-606eaa524763",
+        "1a8cc347-76c1-421b-b63f-4955b8df29a0",
+        "be6740dd-8e42-480c-b38f-1eee36785a95",
+        "e8bcd466-ee15-4d5e-80e9-61388adf3fe5",
+        "738d71b2-b7cc-4d54-af64-8166ef78fd09",
+        "139dc48c-fac1-47dc-800f-a7b5f7bcb418",
+        "c74d41ee-b99b-4597-bfd8-bbe129c432cf",
+        "98bb1509-fc5b-401a-9114-daee6ab474eb"
+      ],
+      "settings": {
+        "title1": "",
+        "title2": "",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "",
+        "link_url": "",
+        "button_position": "top"
+      }
+    },
+    "cf801a1b-20bf-411d-aca4-870a7ec37549": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "bd346c0f-7add-4084-b091-a5e8e702a851": {
+          "type": "Product",
+          "settings": {
+            "product": "bella-vita-organic-gifts-for-men-luxury-perfumes-gift-set-for-men-20-ml-set-of-4-3870003433979_gfm-101122"
+          }
+        },
+        "22829458-fa52-43c1-8a95-2651e8a1c45b": {
+          "type": "Product",
+          "settings": {
+            "product": "paperdom-gift-for-kids-stationery-kit-abundance-gift-hamper-pink-pack-of-18-vij-ah-p-cgr-191022"
+          }
+        },
+        "8bb25fa9-f52a-468a-81a9-856882e8e496": {
+          "type": "Product",
+          "settings": {
+            "product": "vilvah-store-gifts-for-him-mens-grooming-kit-set-of-5-vl-gs-02_gifts-140223"
+          }
+        },
+        "65634213-e1a4-4e18-b755-d8df8eddd98c": {
+          "type": "Product",
+          "settings": {
+            "product": "anahata-gifts-for-diwali-aromatherapy-kit-pack-of-4-arsb-41022"
+          }
+        },
+        "fb88d1e2-4d21-45c1-8505-d1099223a74c": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "nirmalaya-holi-gifts-organic-gulaal-thandai-powder-chandan-ka-tika-set-of-4-nir-hol-ct-q4-070223"
+          }
+        },
+        "23442ee4-fbc3-4cdf-b8fd-698c3c6e300c": {
+          "type": "Product",
+          "settings": {
+            "product": "nutty-gritties-celebration-special-dry-fruits-gift-box-ng33011-191022"
+          }
+        },
+        "8b1b4009-b6b3-422c-aef2-b20114f5aea9": {
+          "type": "Product",
+          "settings": {
+            "product": "tassyam-organics-happiness-gift-box-salted-cashew-raisins-pack-of-2-g-f-gift-box-blue-cshwrs-yrsn-121022"
+          }
+        },
+        "625f4b16-cc8a-4782-94d0-0956285ad7fa": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "nirmalaya-holi-hampers-organic-gulaal-set-of-4-nir-hol-ccb-q4-070223"
+          }
+        },
+        "9c528698-5986-4643-b194-cc0ffc196ebc": {
+          "type": "Product",
+          "settings": {
+            "product": "tassyam-organics-luxury-gift-set-mamra-chilgoza-roasted-munakka-tea-chocolates-pack-of-7-g-f-gift-lux-mmr-pin-bhmk-121022"
+          }
+        },
+        "b4821dd3-55dd-4650-9968-99268afbb9ea": {
+          "type": "Product",
+          "settings": {
+            "product": "rad-living-christmas-candles-scented-soy-wax-candles-pillar-candles-faith-set-of-3-xm11111_chr-021222"
+          }
+        },
+        "1b47320d-1134-4d4f-a448-c2260ad02325": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "cotton-reusable-baby-diaper-5-7-kg-12"
+          }
+        },
+        "d5e75567-e980-44b4-a9b3-7c4187949ae2": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "superbottoms-cotton-reusable-diaper-cloth-diaper-free-size-basvp-04-07-11-13-16-det45-111022"
+          }
+        },
+        "9279a5e9-a1c6-46b1-a54a-cbf181392cce": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "tiny-snooze-baby-gifts-organic-cotton-baby-swaddles-feeding-accessories-green-pack-of-9-gs4-1-5922"
+          }
+        }
+      },
+      "block_order": [
+        "bd346c0f-7add-4084-b091-a5e8e702a851",
+        "22829458-fa52-43c1-8a95-2651e8a1c45b",
+        "8bb25fa9-f52a-468a-81a9-856882e8e496",
+        "65634213-e1a4-4e18-b755-d8df8eddd98c",
+        "fb88d1e2-4d21-45c1-8505-d1099223a74c",
+        "23442ee4-fbc3-4cdf-b8fd-698c3c6e300c",
+        "8b1b4009-b6b3-422c-aef2-b20114f5aea9",
+        "625f4b16-cc8a-4782-94d0-0956285ad7fa",
+        "9c528698-5986-4643-b194-cc0ffc196ebc",
+        "b4821dd3-55dd-4650-9968-99268afbb9ea",
+        "1b47320d-1134-4d4f-a448-c2260ad02325",
+        "d5e75567-e980-44b4-a9b3-7c4187949ae2",
+        "9279a5e9-a1c6-46b1-a54a-cbf181392cce"
+      ],
+      "settings": {
+        "title1": "",
+        "title2": "",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "",
+        "button_position": "top"
+      }
+    },
+    "032d68c6-dd3a-4da2-b939-93cd0a014d05": {
+      "type": "landing-page-recommendation",
+      "disabled": true,
+      "blocks": {
+        "7a05b2c3-ef75-497e-a486-10ef78c16114": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-cotton-purple-natural-dyed-petunia-dress"
+          }
+        },
+        "cf494a93-dc9e-47df-9796-7fe23355de19": {
+          "type": "Product",
+          "settings": {
+            "product": "handmade-wooden-tree-slices-50-pcs"
+          }
+        },
+        "4be328a1-27b3-44ac-a3a4-05f60cf59c5c": {
+          "type": "Product",
+          "settings": {
+            "product": "teeth-a-bit-kids-toothpaste-tablets-strawberry-mint-60-tabs-tpt-mp-ks-sm-141022"
+          }
+        },
+        "62ed659b-d655-4a6a-b66b-0334ded5acbd": {
+          "type": "Product",
+          "settings": {
+            "product": "amaryn-by-svatanya-upcycled-figurine-laxmi-ganesh-sdt-gnlm-05-12922"
+          }
+        },
+        "6eed42dd-73fa-4e87-b054-7383150208cc": {
+          "type": "Product",
+          "settings": {
+            "product": "love-the-world-today-birthday-dress-cotton-silk-dress-for-baby-girl-green-c23d15f603-cgr-191022"
+          }
+        },
+        "56f5a1e4-acd4-4cf3-a2a6-e859bd164d11": {
+          "type": "Product",
+          "settings": {
+            "product": "handmade-wooden-pretend-play-tea-set-15-pcs"
+          }
+        },
+        "802eca72-0c08-4de7-9684-6ce3d080d96c": {
+          "type": "Product",
+          "settings": {
+            "product": "cocoon-care-organic-cotton-baby-sweatshirt-and-pants-set-red-cc-cods-red-31022"
+          }
+        },
+        "ea97e057-f450-45c0-9790-fd25d09305e6": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-instant-millet-dosa-200gm"
+          }
+        },
+        "f7b459d6-95eb-4b2d-8903-4b4dba0fbd81": {
+          "type": "Product",
+          "settings": {
+            "product": "inllo-wooden-toys-for-kids-toy-train-set-in-trs-01-20922"
+          }
+        },
+        "56fb23ae-706a-46af-a960-bdb218df6027": {
+          "type": "Product",
+          "settings": {
+            "product": "gluten-free-candy-gift-box-pack-of-3"
+          }
+        },
+        "b7ee9608-e4e7-4dbd-9bea-49a824cc221a": {
+          "type": "Product",
+          "settings": {
+            "product": "handmade-wooden-handle-metal-gardening-tools-kit"
+          }
+        },
+        "74f186f8-0cb4-4771-8774-cc32d37ad393": {
+          "type": "Product",
+          "settings": {
+            "product": "maniams-wooden-toys-for-kids-wooden-leaf-ghoom-toy-pack-of-2-mtg-261022"
+          }
+        },
+        "7e3e3f31-9e24-4cf0-bd0b-3663ff4d903b": {
+          "type": "Product",
+          "settings": {
+            "product": "upcyclers-lab-gift-for-kids-waste-warriors-board-game-set-of-2-ul-bun-002-021222"
+          }
+        },
+        "ed718ce4-ded9-4ef4-8dc0-173cfd9bf83b": {
+          "type": "Product",
+          "settings": {
+            "product": "footprints-organic-cotton-socks-for-kids-multicolour-pack-of-6-fpp6starstrip0to6-16922"
+          }
+        },
+        "d2e3a9f6-f661-471c-a602-b9d4209ca967": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-jumbo-plantable-stationery-gift-box"
+          }
+        }
+      },
+      "block_order": [
+        "7a05b2c3-ef75-497e-a486-10ef78c16114",
+        "cf494a93-dc9e-47df-9796-7fe23355de19",
+        "4be328a1-27b3-44ac-a3a4-05f60cf59c5c",
+        "62ed659b-d655-4a6a-b66b-0334ded5acbd",
+        "6eed42dd-73fa-4e87-b054-7383150208cc",
+        "56f5a1e4-acd4-4cf3-a2a6-e859bd164d11",
+        "802eca72-0c08-4de7-9684-6ce3d080d96c",
+        "ea97e057-f450-45c0-9790-fd25d09305e6",
+        "f7b459d6-95eb-4b2d-8903-4b4dba0fbd81",
+        "56fb23ae-706a-46af-a960-bdb218df6027",
+        "b7ee9608-e4e7-4dbd-9bea-49a824cc221a",
+        "74f186f8-0cb4-4771-8774-cc32d37ad393",
+        "7e3e3f31-9e24-4cf0-bd0b-3663ff4d903b",
+        "ed718ce4-ded9-4ef4-8dc0-173cfd9bf83b",
+        "d2e3a9f6-f661-471c-a602-b9d4209ca967"
+      ],
+      "settings": {
+        "title1": "Children",
+        "title2": "",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/childrens-2-15-years?f_Discount=1+-+25,50+-+100,25+-+50",
+        "button_position": "top"
+      }
+    },
+    "96ecc9ac-fe7c-4b03-858b-f30a19996606": {
+      "type": "landing-page-recommendation",
+      "disabled": true,
+      "blocks": {
+        "0447aee8-67d2-43cd-9802-2f917a58c953": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-scented-belief-soy-wax-pillar-candles-set-of-3"
+          }
+        },
+        "7d08c366-f1bc-49c3-aa20-508c7d562522": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-gifts-ultimate-gift-box-for-men"
+          }
+        },
+        "aef642e2-bd68-4809-bfe0-04a393d407da": {
+          "type": "Product",
+          "settings": {
+            "product": "gifts-for-her-luxury-perfume-gift-set-skai-fresh-white-oud-patchouli-set-of-5"
+          }
+        },
+        "545d2e9d-cca3-453b-95ac-7a1ab056fd64": {
+          "type": "Product",
+          "settings": {
+            "product": "healthy-gift-hampers-zero-preservative-shell-cappuccino-hamper"
+          }
+        },
+        "e4c7fc07-946b-4040-8dcf-903aab5f2b12": {
+          "type": "Product",
+          "settings": {
+            "product": "paperdom-gift-for-kids-stationary-set-myriad-gift-hamper-pink-pack-of-8-vij-mh-p-cgr-191022"
+          }
+        },
+        "a44ac9a3-4ea9-4fdc-9e3c-1dd5eb0b9cf5": {
+          "type": "Product",
+          "settings": {
+            "product": "gifts-for-men-gulab-attar-perfume-3-ml"
+          }
+        },
+        "d326372f-55bf-4efd-91db-19bfc83bab46": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-bergamot-vanilla-soy-wax-scented-candles-set-of-4"
+          }
+        },
+        "a1e89c2f-5a11-49b5-8953-6454d4b729d9": {
+          "type": "Product",
+          "settings": {
+            "product": "vilvah-store-mens-skincare-gift-set-vl-gs-02191022"
+          }
+        },
+        "43bf5747-ea84-456f-8467-107aa27c849e": {
+          "type": "Product",
+          "settings": {
+            "product": "natural-vibes-glow-getter-gift-set-jade-face-roller-gua-sha-flower-oil-pack-of-3-nv_gift_jade_toolcombo_oil-270922"
+          }
+        },
+        "7324241b-7af9-4f7b-800d-fd9994f2816a": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-gifts-minimalist-starter-gift-box"
+          }
+        },
+        "370a5487-e49b-4084-b23c-b50d97902ac6": {
+          "type": "Product",
+          "settings": {
+            "product": "gift-hamper-zero-preservative-miniature-chutney-9-pcs"
+          }
+        },
+        "dad74cd7-3309-4f44-82f8-953f1d397c27": {
+          "type": "Product",
+          "settings": {
+            "product": "gifts-for-sister-petrichor-attar-perfume-rain-smell-organic-3-ml-maati"
+          }
+        },
+        "8e3b7bb0-4c1a-4ac6-97f8-cd41058b0de7": {
+          "type": "Product",
+          "settings": {
+            "product": "teej-gifts-camel-milk-chocolate-gift-box-roasted-almonds-70-g-pack-of-3"
+          }
+        },
+        "2703a449-897a-4278-a5a1-4325fdd801c3": {
+          "type": "Product",
+          "settings": {
+            "product": "ecoshi-christmas-gifts-for-women-hair-accessories-stationary-kit-pack-of-5-ec-mgb-122_chrg071122"
+          }
+        },
+        "4df2ec4c-8098-4a8b-a609-be2cc4c7167d": {
+          "type": "Product",
+          "settings": {
+            "product": "gifts-for-women-petrichor-attar-perfume-rain-smell-and-organic-3-ml-maati"
+          }
+        },
+        "e2d84ef7-dfcf-4430-bd5c-90b722417dcf": {
+          "type": "Product",
+          "settings": {
+            "product": "taal-mell-gift-for-brother-beige-neem-wood-mens-grooming-kit-set-of-6-tmmengrooming_rkg-13722"
+          }
+        },
+        "2b7de705-b6d0-4443-9b5e-b87626a71502": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-copper-finish-pinapple-shape-condiment-set-4-pieces"
+          }
+        },
+        "3c9dc0f0-9a60-47bd-ba6c-fff34fbf6a64": {
+          "type": "Product",
+          "settings": {
+            "product": "gifts-for-kids-rakhi-gift-idea-mini-planting-stationery-combo-set"
+          }
+        },
+        "e05f699d-8756-4ee3-abb5-ae799701c3b6": {
+          "type": "Product",
+          "settings": {
+            "product": "gifts-for-her-white-oud-eau-de-soft-oudh-long-lasting-20-ml-1"
+          }
+        },
+        "fd02589b-4dbb-4ccc-83cb-51363e3f74ba": {
+          "type": "Product",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "0447aee8-67d2-43cd-9802-2f917a58c953",
+        "7d08c366-f1bc-49c3-aa20-508c7d562522",
+        "aef642e2-bd68-4809-bfe0-04a393d407da",
+        "545d2e9d-cca3-453b-95ac-7a1ab056fd64",
+        "e4c7fc07-946b-4040-8dcf-903aab5f2b12",
+        "a44ac9a3-4ea9-4fdc-9e3c-1dd5eb0b9cf5",
+        "d326372f-55bf-4efd-91db-19bfc83bab46",
+        "a1e89c2f-5a11-49b5-8953-6454d4b729d9",
+        "43bf5747-ea84-456f-8467-107aa27c849e",
+        "7324241b-7af9-4f7b-800d-fd9994f2816a",
+        "370a5487-e49b-4084-b23c-b50d97902ac6",
+        "dad74cd7-3309-4f44-82f8-953f1d397c27",
+        "8e3b7bb0-4c1a-4ac6-97f8-cd41058b0de7",
+        "2703a449-897a-4278-a5a1-4325fdd801c3",
+        "4df2ec4c-8098-4a8b-a609-be2cc4c7167d",
+        "e2d84ef7-dfcf-4430-bd5c-90b722417dcf",
+        "2b7de705-b6d0-4443-9b5e-b87626a71502",
+        "3c9dc0f0-9a60-47bd-ba6c-fff34fbf6a64",
+        "e05f699d-8756-4ee3-abb5-ae799701c3b6",
+        "fd02589b-4dbb-4ccc-83cb-51363e3f74ba"
+      ],
+      "settings": {
+        "title1": "Gifting",
+        "title2": "",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/gifts?f_Discount=1+-+25,50+-+100,25+-+100",
+        "button_position": "top"
+      }
+    }
+  },
+  "order": [
+    "f0190690-f05e-4c13-8196-9c696058743d",
+    "c27d7334-0241-4024-9104-1af8d1515832",
+    "2bd14898-d935-4349-9e83-f4372de58bf7",
+    "7e0dd887-3571-4be8-af40-c08572e6090a",
+    "a4471818-737e-42de-8771-4ca1aea7b36b",
+    "festival-landings-page",
+    "7148a954-d95c-483a-9aed-5f0f443b2075",
+    "e1c7b760-e1ce-4a80-bd62-6923da1c44a3",
+    "7e727bcc-acea-4a68-bf80-27371ae6d902",
+    "f1a96239-ab55-4829-9846-f6acf5cbaa4b",
+    "7ee97a9e-fbf9-485d-9e4b-8438b6e22dd9",
+    "cf801a1b-20bf-411d-aca4-870a7ec37549",
+    "032d68c6-dd3a-4da2-b939-93cd0a014d05",
+    "96ecc9ac-fe7c-4b03-858b-f30a19996606"
+  ]
+}

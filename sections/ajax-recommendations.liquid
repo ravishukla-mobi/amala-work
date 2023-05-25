@@ -1,0 +1,71 @@
+{%- capture section_settings -%}
+{
+  "stackable": false,
+  "layout": "vertical",
+  "productId": {{ product.id | json }},
+  "recommendationsCount": 10
+}
+{%- endcapture -%}
+
+
+      <div class="product-related">
+          <div class="scroller">
+            <div class="scroller__inner">
+              <div class="product-list product-list--vertical product-list--scrollable flickity-enabled">
+                 {% for product in recommendations.products %}
+                	{% if product.available %}
+                        {%- render 'product-item', product: product, show_add_to_cart:true -%}
+                	{% endif %}
+                  {%- endfor -%}
+              </div>
+            </div>
+          </div>
+      </div>
+   
+
+    <div id="modal-quick-view-{{ section.id }}" class="modal quick-view-product-modal" aria-hidden="true">
+      <div class="modal__dialog modal__dialog--stretch" role="dialog">
+        <button class="modal__close link" data-action="close-modal" title="{{ 'general.accessibility.close' | t | escape }}">
+          {%- render 'icon', icon: 'close' -%}
+        </button>
+
+        <div class="modal__loader">
+          {%- render 'icon', icon: 'search-loader' -%}
+        </div>
+
+        <div class="modal__inner"></div>
+      </div>
+    </div>
+
+{% schema %}
+{
+  "name": "Related Products",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_related_products",
+      "label": "Show dynamic Related Products",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "You may also like"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_quick_buy",
+      "label": "Show quick buy",
+      "default": true
+    },
+	{
+      "type": "checkbox",
+      "id": "show_sold_out",
+      "label": "Show Sold out Products",
+      "default": true,
+	 "info": "show sold out items also"
+    }
+  ]
+}
+{% endschema %}

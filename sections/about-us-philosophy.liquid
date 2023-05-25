@@ -1,0 +1,415 @@
+<div class="our_philosophy_container">
+    <div class="philosophy_headin landing_section_header">
+        <div class="landing_subheading">{{ section.settings.philos_primary_title }}</div>
+        <div class="landing_heading">{{ section.settings.philos_secondary_title }}</div>
+    </div>
+    <div class="philosophy_content">
+        <div class="philosophy_left_content">
+            <div class="left_content_heading">{{ section.settings.left_content_primary_title }}</div>
+            <span class="left_quoted_text">
+                <span class="title_desk_quotes"><span class="title-left_quotes">&ldquo;</span>{{ section.settings.left_content_secondary_title }}<span class="title-right_quotes">&rdquo;</span></span>
+            </span>
+        </div>
+        <div class="philosophy_right_content">
+            <div class="right_philosophy_content">{{ section.settings.right_philosophy_content }}</div>
+        </div>
+    </div>
+    {% if section.settings.butterfly_image_mob != blank %}
+        <img src="{{ section.settings.butterfly_image_mob | img_url: 'master' }}" alt="butterfly image" class="butterfly_design_img">
+    {% endif %}
+    
+</div>
+
+<style>
+    .title-left_quotes{
+        font-size: 220px;
+        line-height: 0.5;
+        position: relative;
+        top: 67px;
+    }
+    .title-right_quotes{
+        font-size: 220px;
+        position: relative;
+        top: 90px;
+        line-height: 0;
+    }
+    .title_desk_quotes{
+        font-size: 60px;
+    }
+    .left_content_heading{
+        margin-bottom: 0px !important;
+    }
+    @media screen and (max-width: 1500px) {
+        .title-left_quotes {
+    font-size: 165px;
+    line-height: 0.5;
+    position: relative;
+    top: 52px;
+}
+.title-right_quotes {
+    font-size: 165px;
+    position: relative;
+    top: 75px;
+    line-height: 0;
+}
+        .title_desk_quotes {
+            font-size: 45px;
+            line-height: 1.2;
+        }
+    }
+    @media screen and (max-width: 950px) {
+
+        .title-left_quotes {
+    font-size: 110px;
+    line-height: 0.5;
+    position: relative;
+    top: 33px;
+}
+.title-right_quotes {
+    font-size: 110px;
+    position: relative;
+    top: 53px;
+    line-height: 0;
+}
+.title_desk_quotes {
+    font-size: 35px;
+    line-height: 1.2;
+}
+
+    }
+
+    @media screen and (max-width: 767px) {
+
+        .title-left_quotes {
+    font-size: 87px;
+    line-height: 0.5;
+    position: relative;
+    top: 25px;
+}
+.title-right_quotes {
+    font-size: 87px;
+    position: relative;
+    top: 45px;
+    line-height: 0;
+}
+.title_desk_quotes {
+    font-size: 30px;
+    line-height: 1.15;
+}
+.title_desk_quotes{
+    margin-top: 0px;
+}
+
+}
+
+
+    .philosophy_headin{
+        color: #9F7356;
+        margin-bottom: 92px;
+    }
+    .our_philosophy_container{
+        font-family: Poppins;
+        margin: 63px 4.68%;
+        position: relative;
+    }
+    .philosophy_primary_heading{
+        font-size: 41px;
+        font-weight: 300;
+        line-height: 62px;
+        letter-spacing: 0.11em;
+    }
+    .philosophy_secondary_heading{
+        font-size: 55px;
+        font-weight: 500;
+        line-height: 83px;
+        letter-spacing: 0em;
+    }
+    .philosophy_left_content{
+        color: #9F7356;
+        width: 50%;
+        padding: 0 50px;
+    }
+    .left_content_heading{
+        font-size: 29px;
+        font-weight: 400;
+        line-height: 43px;
+        letter-spacing: 0.23em;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .left_quoted_text{
+        font-size: 49px;
+        font-weight: 500;
+        line-height: 1.4;
+        letter-spacing: 0.05em;
+        text-align: center;
+        position: relative;
+    }
+    .left_quoted_text .left_quotes{
+        position: absolute;
+        left: -8%;
+    top: -20px;
+    }
+    .left_quoted_text .right_quotes{
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+    }
+    .title_desk_quotes{
+        display: block;
+        max-width: 98%;
+        font-family: 'Perpetua';
+    }
+    .philosophy_right_content{
+        width: 50%;
+    }
+    .right_philosophy_content{
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 36px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+    .philosophy_content{
+        display: flex;
+    }
+    .butterfly_design_img{
+        display: none;
+    }
+    @media screen and (min-width: 1910px) {
+        .left_quoted_text .right_quotes{
+            right: -50px;
+        } 
+    }
+    @media screen and (min-width: 1500px) {
+        .left_quoted_text .right_quotes{
+            right: -40px;
+    bottom: -14px;
+        }
+    }
+    @media screen and (min-width: 1450px) {
+        .philosophy_headin.landing_section_header .landing_subheading{
+            font-size: 41px;
+        }
+
+        .philosophy_headin.landing_section_header .landing_heading{
+            font-size: 51px;
+        }
+    }
+    @media screen and (max-width: 1500px) {
+        .left_quoted_text svg{
+            height: 40px;
+        }
+        .left_quoted_text {
+            font-size: 33px;
+        }
+        .philosophy_left_content {
+            padding-right: 55px;
+            padding-left: 15px;
+        }
+        .right_philosophy_content {
+            font-size: 20px;
+        }
+        .philosophy_headin{
+            margin-bottom: 60px;
+        }
+    }
+    @media screen and (min-width: 1250px) and (max-width: 1300px) {
+        .right_quotes {
+    right: -40px;
+    bottom: -10px;
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        .philosophy_left_content {
+            padding-right: 25px;
+            padding-left: 15px;
+        }
+        .left_quoted_text svg {
+            height: 30px;
+        }
+        .left_quoted_text .left_quotes {
+            left: -7%;
+            top: -10px;
+        }
+        .philosophy_primary_heading{
+            line-height: 40px;
+        }
+        .philosophy_secondary_heading {
+            font-size: 48px;
+        }
+        .left_content_heading {
+            font-size: 25px;
+            letter-spacing: 0.18em;
+        }
+    }
+    @media screen and (max-width: 900px) {
+        .our_philosophy_container {
+            margin: 45px 3%;
+        }
+        .philosophy_primary_heading {
+            font-size: 30px;
+        }
+        .philosophy_secondary_heading {
+            font-size: 40px;
+            line-height: 55px;
+        }
+        .left_quoted_text {
+            font-size: 24px;
+        }
+        .left_quoted_text .left_quotes {
+            left: -11%;
+            top: -16px;
+        }
+        .left_quoted_text svg {
+            height: 20px;
+        }
+        .left_quoted_text .right_quotes {
+    right: -9%;
+    bottom: -19px;
+}
+.left_content_heading {
+    font-size: 20px;
+    letter-spacing: 0.12em;
+    margin-bottom: 20px;
+}
+.right_philosophy_content {
+    font-size: 16px;
+    line-height: 25px;
+}
+.philosophy_headin {
+    margin-bottom: 20px;
+}
+    }
+    @media screen and (max-width: 767px) {
+        .butterfly_design_img{
+            display: block;
+            position: absolute;
+            top: 80%;
+            left: 0;
+        }
+    }
+    @media screen and (max-width: 700px) {
+        .our_philosophy_container {
+            margin: 20px 0;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+        }
+        .philosophy_content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .philosophy_primary_heading {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 27px;
+            letter-spacing: 0.11em;
+            text-align: left;
+        }
+        .philosophy_secondary_heading {
+            font-size: 24px;
+            line-height: 36px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+        .left_content_heading {
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.23em;
+        text-align: left;
+        }
+        .left_quoted_text {
+    font-size: 18px;
+    letter-spacing: 0.06em;
+    text-align: left;
+}
+.right_philosophy_content {
+    font-size: 14px;
+    line-height: 21px;
+    text-align: left;
+}
+.title_desk_quotes {
+    margin-bottom: 30px;
+    margin-top: 0px;
+}
+.left_quoted_text .right_quotes {
+    right: -8%;
+    bottom: -4px;
+}
+.philosophy_right_content {
+    width: 90%;
+}
+.philosophy_left_content {
+    width: 90%;
+}
+}
+@media screen and (max-width: 450px) {
+    .philosophy_right_content {
+    width: 100%;
+}
+.philosophy_left_content {
+    width: 100%;
+}
+.butterfly_design_img {
+    top: 85%;
+}
+.philosophy_left_content{
+    padding-left: 7px;
+}
+}
+
+@media screen and (max-width: 370px) {
+    .butterfly_design_img {
+    top: 85%;
+}
+} 
+</style>
+
+{% schema %}
+{
+    "name": "About-us Philosophy",
+    "settings": [
+        {
+            "type": "text",
+            "id": "philos_primary_title",
+            "label": "Philosophy Primary Heading",
+            "default": "Our"
+        },
+        {
+            "type": "text",
+            "id": "philos_secondary_title",
+            "label": "Philosophy Secondary Heading",
+            "default": "philosophy"
+        },
+        {
+            "type": "text",
+            "id": "left_content_primary_title",
+            "label": "Philosophy Left Heading",
+            "default": "The Butterfly Effect"
+        },
+        {
+            "type": "text",
+            "id": "left_content_secondary_title",
+            "label": "Philosophy Left Content",
+            "default": "Just when the caterpillar thought the world was over, it became a butterfly."
+        },
+        {
+            "type": "richtext",
+            "id": "right_philosophy_content",
+            "label": "Philosophy Content"
+        },
+        {
+            "type": "image_picker",
+            "id": "butterfly_image_mob",
+            "label": "Butterfly Mobile image"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Our Philosophy"
+        }
+    ] 
+}
+{% endschema %}

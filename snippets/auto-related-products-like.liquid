@@ -1,0 +1,131 @@
+{%- capture section_settings -%}
+{
+  "stackable": false,
+  "layout": "vertical",
+  "productId": {{ product.id | json }},
+  "recommendationsCount": 10
+}
+{%- endcapture -%}
+
+{% assign current_collection = '' %}
+{% assign product_list = '' %}
+
+		{% assign collection_array = '' %}
+		{% for collection in product.collections %}
+			{% if collection.handle != 'all' %}
+				{% if collection_array == '' %}
+					{% assign collection_array = collection.handle %}
+                {% else %}
+					{% assign collection_array = collection_array | append: ',' | append:collection.handle %}
+				{% endif %}
+			{% endif %}
+		{% endfor %}
+
+		{% for collection in product.collections %}
+			{% if collection.handle != 'all' and collection.handle != 'new-arrivals' and collection.handle != 'bestselling-products' %}
+              {% assign current_collection = collection.handle %}
+              {% for product_related in collections[current_collection].products %}
+					{% assign col_count = 0 %}
+					{% for related_collection in product_related.collections %}
+						{% if collection_array contains related_collection.handle %}
+							{% assign col_count = col_count | plus: 1 %}
+						{% endif %}
+              		{% endfor %}
+					{% if col_count > 0 %}
+						{% if product_list == '' %}
+                            {% assign product_list = product_related.handle %}
+                            {% assign product_list_count = col_count %}
+                        {% elsif product_list contains product_related.handle %}
+                        {% else %}
+                            {% assign product_list = product_list | append: ',' | append:product_related.handle %}
+                            {% assign product_list_count = product_list_count | append: ',' | append: col_count %}
+                        {% endif %}
+					{% endif %}
+              {% endfor %}
+			{% endif %}
+		{% endfor %}
+
+{% assign product_list = product_list | remove: product.handle %}
+{% assign product_list_array =  product_list | split: ',' %}
+
+{% assign product_count_array =  product_list_count | split: ',' %}
+
+{% assign max = 0 %}
+{% for item in product_count_array  %}
+  {% assign item_val = item | plus: 0 %}
+  {% if item_val > max %}
+    {% assign max = item_val %}
+  {% endif %}
+{% endfor %}
+
+{% assign product_items = '' %}
+{% for i in (1..max) %}
+  {% unless max == 0 %}
+
+    {% for item in product_count_array %}
+        {% assign item_val = item | plus: 0 %}
+        {% if max == item_val %}
+            {% assign index = forloop.index | minus: 1 %}
+      {% if product_items == '' %}
+              {% assign product_items = product_list_array[index] %}
+      {% else %}
+        {% assign product_items = product_items | append: ';' | append: product_list_array[index] %}
+      {% endif %}
+        {% endif %}
+    {% endfor %}
+  {% endunless %}
+  {% assign max = max | minus: 1 %}
+{% endfor %}
+{% assign product_items = product_items | split: ';' %}
+{% assign minimum_limit = section.settings.min_products %}
+
+  <section class="section" data-section-id="{{ section.id }}" data-section-type="product-recommendations" data-section-settings='{{ section_settings }}'>
+    <div class="container">
+        <header class="section__header">
+          <h2 class="section__title heading h3" style="text-transform: none;">You may also like</h2>
+        </header>
+
+      <div class="product-related">
+          <div class="scroller">
+            <div class="scroller__inner">
+              <div class="product-list product-list--vertical product-list--scrollable">
+				  {% assign products_count = 0 %}
+                  {%- for item in product_items -%}
+                	{% if products_count == 10 %}
+                		{% break %}
+					{% endif %}
+                		{% assign item_handle = item | strip %}
+                        {%- assign related_product = all_products[item_handle] -%}
+                        {% if related_product.available %}
+                          {%- unless related_product.empty? -%}
+                			{% assign products_count = products_count | plus: 1 %}
+                            {%- render 'product-item', product: related_product, grid_classes: '1/4--lap 1/5--desk 1/5--wide', show_add_to_cart: true -%}
+                          {%- endunless -%}
+                        {% endif %}
+                  {%- endfor -%}
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    {%- comment -%}
+    --------------------------------------------------------------------------------------
+    QUICK VIEW CONTAINER
+    --------------------------------------------------------------------------------------
+    {%- endcomment -%}
+
+    <div id="modal-quick-view-{{ section.id }}" class="modal quick-view-product-modal" aria-hidden="true">
+      <div class="modal__dialog modal__dialog--stretch" role="dialog">
+        <button class="modal__close link" data-action="close-modal" title="{{ 'general.accessibility.close' | t | escape }}">
+          {%- render 'icon', icon: 'close' -%}
+        </button>
+
+        <div class="modal__loader">
+          {%- render 'icon', icon: 'search-loader' -%}
+        </div>
+
+        <div class="modal__inner"></div>
+      </div>
+    </div>
+  </section>

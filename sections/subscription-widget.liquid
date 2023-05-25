@@ -1,0 +1,107 @@
+{% capture posted_successfully_text %}
+{%- if section.settings.thank_you_title != blank -%}
+    <h5 class="popup-newsletter__title heading thank_you_title">{{ section.settings.thank_you_title | escape }}</h5>
+{%- endif -%}
+
+{%- if section.settings.thank_you_content != blank -%}
+    <div class="popup-newsletter__content rte">
+    {{ section.settings.thank_you_content }}
+    </div>
+{%- endif -%}
+{% endcapture %}
+{% assign hide_widget = false %}
+{% if section.settings.hide_widget and customer %}
+  {% assign hide_widget = true %}
+{% endif %}
+{% capture subscription_section %}subscription_widget_form-{{section.id}}{% endcapture %}
+{% unless hide_widget %}
+<div class="subscription_widget_section" {% if customer %} style="display: none;"{% endif %}>
+    <div class="container">
+        <div class="product_subscription_widget">
+        {%- form 'customer', id: subscription_section, class: 'form subscription-widget__form' -%}
+            <div class="newsletter_form_posted_successfully{% unless form.posted_successfully? %} hide{% endunless %}">
+            {{ posted_successfully_text }}
+            </div>
+            {%- unless form.posted_successfully? -%}
+            {%- if section.settings.title != blank -%}
+            <h5 class="popup-newsletter__title heading">{{ section.settings.title | escape }}</h5>
+            {%- endif -%}
+            {%- if section.settings.content != blank -%}
+            <div class="popup-newsletter__content rte">
+                {{ section.settings.content }}
+            </div>
+            {%- endif -%}
+            {%- endunless -%}
+            <input type="hidden" name="contact[tags]" value="newsletter">
+            <div class="form__input-wrapper form__input-wrapper--labelled">
+                <input id="subscription-widget-popup[email]" type="text" class="form__field form__field--text" name="contact[email]">
+                <label for="subscription-widget-popup[email]" class="form__floating-label">{{ 'general.popup.email_placeholder' | t }}</label>
+                <span class="form_error"></span>
+            </div>
+            <div class="form__input-wrapper form__input-wrapper--labelled phone_input_wrap">
+                <span class="input-prepend">+91</span>
+                <input id="subscription-widget-popup[phone]" type="text" class="form__field form__field--text customer-phonenumber" name="contact[phone]" placeholder="{{ 'general.popup.phone_placeholder' | t }}" maxlength="10" onkeypress="return onlyNumberKey(event)">
+                <span class="form_error"></span>
+            </div>
+            <button class="button button--primary button--full newsletter_subscription_button custom_loading" type="submit">{{ section.settings.button_text }}<span class="custom-loader-wrap"><span class="custom-loader"></span></span></button>
+            {% if form.errors %}
+                <div class="error_sameemail">{{ form.errors | default_errors }}</div>
+            {% endif %}  
+        {%- endform -%}
+        </div>
+    </div>
+</div>
+{% endunless %}
+{% schema %}
+{
+  "name": "Subscription widget",
+  "settings": [
+    {
+      "type":"checkbox",
+      "id":"hide_widget",
+      "label":"Hide after customer login",
+      "default":false
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Get 10% OFF"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content",
+      "default":"<p>on your first purchase. Subscribe now and start your earth-friendly journey today!</p>"
+    },
+    {
+      "type": "header",
+      "content": "Newsletter"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Get 10% OFF"
+    },
+    {
+      "type": "text",
+      "id": "thank_you_title",
+      "label": "Thank You Heading",
+      "default": "Thank You!"
+    },
+    {
+      "type": "richtext",
+      "id": "thank_you_content",
+      "label": "Thank You Text",
+      "default": "<p>Use coupon code WELCOME10 and get 10% discount.</p>"
+    }
+   ],
+   "presets": [
+     {
+       "category": "Image",
+       "name": "Subscription widget"
+     }
+   ]
+}
+{% endschema %}

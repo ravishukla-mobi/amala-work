@@ -1,0 +1,73 @@
+{
+  "sections": {
+    "a476b33f-ae01-4c0f-a996-29a3c6c1f2c6": {
+      "type": "main-banner-without-padding",
+      "settings": {
+        "banner_desktop_image": "shopify:\/\/shop_images\/desktop_01_01.jpg",
+        "banner_mobile_image": "shopify:\/\/shop_images\/mobile_01.jpg",
+        "desktop_banner_title": "",
+        "color_heading": "#000000",
+        "desktop_banner_subtitle": "",
+        "color_subheading": "#000000",
+        "desktop_banner_button": "",
+        "color_button": "#000000",
+        "button_background": "#000000",
+        "desktop_button_url": "",
+        "desktop_image_url": ""
+      }
+    },
+    "9042711e-f52d-4f1a-8351-04656e20cae5": {
+      "type": "main-banner-without-padding",
+      "settings": {
+        "banner_desktop_image": "shopify:\/\/shop_images\/desktop_01_02.jpg",
+        "banner_mobile_image": "shopify:\/\/shop_images\/mobile_02.jpg",
+        "desktop_banner_title": "",
+        "color_heading": "#000000",
+        "desktop_banner_subtitle": "",
+        "color_subheading": "#000000",
+        "desktop_banner_button": "",
+        "color_button": "#000000",
+        "button_background": "#000000",
+        "desktop_button_url": "",
+        "desktop_image_url": ""
+      }
+    },
+    "8a61d26f-71df-43fb-8928-451bf1d881e5": {
+      "type": "main-banner-without-padding",
+      "settings": {
+        "banner_desktop_image": "shopify:\/\/shop_images\/desktop_01_03.jpg",
+        "banner_mobile_image": "shopify:\/\/shop_images\/mobile_03.jpg",
+        "desktop_banner_title": "",
+        "color_heading": "#000000",
+        "desktop_banner_subtitle": "",
+        "color_subheading": "#000000",
+        "desktop_banner_button": "",
+        "color_button": "#000000",
+        "button_background": "#000000",
+        "desktop_button_url": "https:\/\/forms.gle\/n3Fd4ajJ3jWSs7PP9",
+        "desktop_image_url": "https:\/\/forms.gle\/n3Fd4ajJ3jWSs7PP9"
+      }
+    },
+    "65474973-f1b4-48a3-9ad7-dd5fab92731e": {
+      "type": "main-banner-without-padding",
+      "settings": {
+        "banner_mobile_image": "shopify:\/\/shop_images\/mobile_04.jpg",
+        "desktop_banner_title": "",
+        "color_heading": "#000000",
+        "desktop_banner_subtitle": "",
+        "color_subheading": "#000000",
+        "desktop_banner_button": "",
+        "color_button": "#000000",
+        "button_background": "#000000",
+        "desktop_button_url": "https:\/\/forms.gle\/n3Fd4ajJ3jWSs7PP9",
+        "desktop_image_url": "https:\/\/forms.gle\/n3Fd4ajJ3jWSs7PP9"
+      }
+    }
+  },
+  "order": [
+    "a476b33f-ae01-4c0f-a996-29a3c6c1f2c6",
+    "9042711e-f52d-4f1a-8351-04656e20cae5",
+    "8a61d26f-71df-43fb-8928-451bf1d881e5",
+    "65474973-f1b4-48a3-9ad7-dd5fab92731e"
+  ]
+}

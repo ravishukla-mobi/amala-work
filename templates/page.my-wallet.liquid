@@ -1,0 +1,22 @@
+<div class="container container--narrow wishlist-page-section">
+   {%- if customer -%}
+  		{%- render 'my-account-breadcrumbs' -%}
+   {%- endif -%}
+<!--   <header class="page__header page__header--centered">
+    <h1 class="page__title heading h1">{{ page.title }}</h1>
+  </header> -->
+
+  <div class="page__content  layout {% if customer %} logged-in {% else %} not-logged-in {% endif %}">
+     {%- if customer -%}
+     	{%- render 'my-account-sidebar.liquid' -%}
+     {%- endif -%}
+    <div class="layout__section">
+      <div class="card">
+        <div class="card__section card__section--tight">
+            <h1 class="heading h1">{{ page.title }}</h1>
+          </div>
+    		<div id = "wk_wallet" customer_id="{{ customer.id }}" customer_email = "{{ customer.email }}" customer_tag = "{{ customer.tags }}"></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,380 @@
+<div class="home_parameters_section" style="background:{{section.settings.background}};">
+    <div class="left-block-container">
+      {%- if section.settings.title != blank or section.settings.subtitle != blank -%}
+        <header class="landing_section_header">
+        {% if section.settings.subtitle != blank %}
+        <h3 class="landing_subheading">{{section.settings.subtitle}}</h3>
+        {% endif %}
+        {% if section.settings.title != blank %}
+        <h2 class="landing_heading">{{section.settings.title}}</h2>
+        {% endif %}
+        </header>
+      {%- endif -%}
+      {%- if section.settings.score_image != blank -%}
+      <div class="pscore_image_block">
+        <img src="{{ section.settings.score_image | img_url: 'master' }}" alt="{{section.settings.title}}">
+      </div>
+      {%- endif -%}
+      {%- if section.settings.text != blank -%}
+      <div class="pscore_text_block">
+        {{section.settings.text}}
+      </div>
+    {%- endif -%}
+    </div>
+    <div class="right-block-container">
+      {% for block in section.blocks %}
+        <div class="parameter_block">
+          {% if block.settings.show_icon %}
+            <span class="parameter_icon {{block.settings.icon_position}}_icon{% if block.settings.hide_icon %} hide_icon{% endif %}"><img src="{{ section.settings.block_icon | img_url: 'master' }}" alt="{{block.settings.title}}"></span>
+          {%- endif -%}
+          {% if block.settings.title != blank %}<h3>{{block.settings.title}}</h3>{%- endif -%}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  
+  {% style %}
+  .home_parameters_section .right-block-container .parameter_block {
+    margin-bottom: 20px;
+    }
+  .home_parameters_section {
+    padding: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+  .home_parameters_section .left-block-container {
+    width: 100%;
+    max-width: 30%;
+    padding-right: 30px;
+  }
+  .home_parameters_section .right-block-container {
+    width: 100%;
+    max-width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: -20px;
+  }
+  .home_parameters_section .landing_section_header {
+    margin-top: 0;
+  }
+  .home_parameters_section .pscore_image_block {
+    max-width: 170px;
+    margin: 45px 0px 35px 30px;
+  }
+  .home_parameters_section .pscore_text_block {
+    font-size: 24px;
+    margin-left: 30px;
+    line-height: 36px;
+  }
+  .right-block-container .parameter_block {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: calc(50% - 20px);
+    margin-bottom: 40px;
+    padding: 10px;
+  }
+  .parameter_block h3 {
+      color: #8C593F;
+      font-size: 32px;
+      width: 100%;
+      max-width: calc(100% - 70px);
+      text-align: left;
+      margin-left: 25px;
+  }
+  .parameter_block .parameter_icon{
+    width: 100%;
+    max-width: 70px;
+    display: flex;
+  }
+  .parameter_block .parameter_icon.right_icon img {
+      transform: rotateY(180deg);
+  }
+  .parameter__popup-modal {
+    position:fixed;
+    bottom:calc(-80vh - 100px);
+    max-height:80vh;
+    max-width: 428px;
+    margin: 0 auto;
+    left:0;
+    right:0;
+    background:#fff;
+    border-radius:15px 15px 0 0;
+    z-index:99;
+    box-shadow:0 0 5px #ccc;
+    transition:all 0.3s ease;
+  }
+  .parameter__popup-modal.show {
+    z-index: 12;
+    bottom: 0;
+  }
+  .parameter__popup-modal .pop-up-content {
+      padding: 20px;
+      overflow: hidden;
+  }
+  .parameter__popup-modal .parameter-content{
+    overflow-y:auto;
+    overflow-x:hidden;
+    height:calc(80vh - 50px);
+  }
+  .parameter-content-wrapper {
+    position: relative;
+  }
+  .parameter-content-wrapper:before {
+      position: absolute;
+      content: '';
+      width: 175px;
+      height: 108px;
+      right: -60px;
+      top: -8px;
+      background: url(https://cdn.shopify.com/s/files/1/0523/3252/7770/files/icon_butterfly.png) no-repeat center;
+      background-size: cover !important;
+  }
+  .parameter-content-wrapper h3 {
+    font-size: 24px;
+    color: #946C56;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+  .parameter-content-wrapper img {
+    width: 100%;
+  }
+  .parameter-content-wrapper p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 15px;
+  }
+  .close-vs{
+     position:absolute;
+     display:inline-block;
+     width:35px;
+     height:35px;
+     text-align:center;
+     line-height:35px;
+     border-radius:50%;
+     box-shadow:0 0 5px #ccc;
+     background:#fff;
+     top:-45px;
+     left:calc(50% - 17px);
+     font-size:22px;
+    cursor: pointer;
+  }
+  .vs-overlay{
+      display:none;
+        position:fixed;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      background:rgba(0,0,0,0.7);
+      z-index:9
+    }
+    .vs-overlay.show{display:block;}
+    @media screen and (min-width: 1450px){
+        .landing_section_header .landing_subheading{
+            font-size: 41px;
+        }
+        .landing_section_header .landing_heading{
+            font-size: 51px;
+        }
+    }
+  @media screen and (max-width:1399px){
+    .home_parameters_section .pscore_image_block {
+      margin-left: 0;
+      max-width: 130px;
+    }
+    .home_parameters_section .pscore_text_block {
+      font-size: 16px;
+      margin-left: 0;
+    }
+    .parameter_block .parameter_icon{
+      max-width:50px;
+    }
+    .parameter_block h3{
+      font-size: 18px;
+      max-width: calc(100% - 50px);
+    }
+  }
+  @media screen and (max-width:1199px){
+    .home_parameters_section .right-block-container{
+      margin-bottom: -30px;
+    }
+    .home_parameters_section .left-block-container{
+      padding-right: 20px;
+    }
+    .right-block-container .parameter_block{
+      max-width: calc(50% - 15px);
+      margin-bottom: 30px;
+    }
+    .parameter_block .parameter_icon{
+      max-width: 40px;
+    }
+    .parameter_block h3 {
+      font-size: 16px;
+      max-width: calc(100% - 40px);
+    }
+    .home_parameters_section .pscore_text_block{
+      font-size: 14px;
+    }
+    .home_parameters_section .pscore_image_block {
+      max-width: 100px;
+      margin: 30px 0px 20px 0px;
+    }
+  }
+  @media screen and (max-width:991px){
+    .home_parameters_section .left-block-container {
+      max-width: 100%;
+      padding-right: 0;
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .home_parameters_section .right-block-container{
+      max-width:100%;
+    }
+    .home_parameters_section .pscore_image_block{
+      margin: 0 0 10px auto;
+      max-width: 80px;
+    }
+  }
+  @media screen and (max-width:767px){
+    .home_parameters_section {
+      padding: 30px 20px;
+    }
+    .home_parameters_section .right-block-container{
+      margin-bottom:0;
+    }
+    .home_parameters_section .right-block-container .parameter_block{
+      max-width: calc(50% - 7px);
+      margin-bottom: 5px;
+      padding: 5px;
+    }
+    .parameter_block .parameter_icon {
+      max-width: 35px;
+    }
+    .parameter_block h3{
+        font-size: 15px;
+        max-width: 100%;
+        margin-left: 10px;
+        line-height: 1.5;
+    }
+    .parameter_block .parameter_icon.hide_icon {
+      display: none;
+    }
+    .parameter_block .parameter_icon.hide_icon+h3 {
+      max-width: 100%;
+    }
+    .parameter-content-wrapper h3{
+      font-size: 18px;
+    }
+    .parameter-content-wrapper:before{
+      width: 135px;
+      height: 80px;
+      top: -3px;
+    }
+    .home_parameters_section .pscore_text_block{
+      line-height: 22.5px;
+    }
+    
+  }
+
+  @media screen and (max-width: 600px){
+    .parameter_block h3 {
+      font-size: 13px;
+      max-width: 100%;
+      margin-left: 9px;
+      line-height: 1;
+    }
+  }
+  @media screen and (max-width:413px){
+    .parameter_block h3{
+      font-size:11px;
+    }
+  }
+  {% endstyle %}
+  {% schema %}
+    {
+      "name": "Home parameters section",
+      "settings": [
+        {
+          "type":"text",
+          "id":"subtitle",
+          "label":"Subheading"
+        },
+        {
+          "type":"text",
+          "id":"title",
+          "label":"Heading"
+        },
+        {
+          "type":"image_picker",
+          "id":"score_image",
+          "label":"Score image"
+        },
+        {
+          "type":"richtext",
+          "id":"text",
+          "label":"content"
+        },
+        {
+          "type":"image_picker",
+          "id":"block_icon",
+          "label":"Block butterfly Icon"
+        },
+        {
+            "type":"color",
+            "id":"background",
+            "label":"background color"
+        }
+      ],
+      "blocks":[
+          {
+          "type": "grid",
+          "name": "grid",
+          "settings": [
+            {
+              "type":"checkbox",
+              "id":"show_icon",
+              "label":"Show butterfly icon",
+              "default":true
+            },
+            {
+              "type": "select",
+              "id": "icon_position",
+              "label": "Butterfly icon position",
+              "options": [
+                {
+                  "value": "left",
+                  "label": "Left"
+                },
+                {
+                  "value": "right",
+                  "label": "Right"
+                }
+              ],
+              "default": "left"
+            },
+            {
+              "type":"checkbox",
+              "id":"hide_icon",
+              "label":"Hide icon on mobile",
+              "default":false
+            },
+            {
+              "type":"text",
+              "id":"title",
+              "label":"Heading"
+            }
+          ]
+          }
+      ],
+      "presets": [
+        {
+          "name": "About us - Brand Choice",
+          "category": "Custom"
+        }
+      ]
+    }
+  {% endschema %}

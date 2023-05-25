@@ -1,0 +1,23 @@
+<div class="value-picker__choice-list">
+  <button class="value-picker__choice-item link {% if 'price-ascending' == collection_sort_by %}is-selected{% endif %}" data-action="select-value" data-value="price-ascending">
+    Price, low to high
+  </button>
+  <button class="value-picker__choice-item link {% if 'price-descending' == collection_sort_by %}is-selected{% endif %}" data-action="select-value" data-value="price-descending">
+    Price, high to low
+  </button>
+  <button class="value-picker__choice-item link {% if 'title-ascending' == collection_sort_by %}is-selected{% endif %}" data-action="select-value" data-value="title-ascending">
+    Name A - Z
+  </button>
+  <button class="value-picker__choice-item link {% if 'title-descending' == collection_sort_by %}is-selected{% endif %}" data-action="select-value" data-value="title-descending">
+    Name Z - A
+  </button>
+  <button class="value-picker__choice-item link {% if 'best-selling' == collection_sort_by %}is-selected{% endif %}" data-action="select-value" data-value="best-selling">
+   Popularity
+  </button>
+  <button class="value-picker__choice-item link {% if 'manual' == collection_sort_by %}is-selected{% endif %}" data-action="select-value" data-value="manual">
+   Expert Picks
+  </button>
+  <button class="value-picker__choice-item link {% if 'created-descending' == collection_sort_by %}is-selected{% endif %}" data-action="select-value" data-value="created-descending">
+   New Products
+  </button>
+</div>

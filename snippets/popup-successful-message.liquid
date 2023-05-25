@@ -1,0 +1,36 @@
+<div id="successful-message" class="pop-up-modal my-account">
+  <div class="pop-up__container">
+    <span class="close-button popup-close" ><img src="{{ 'close-icon.svg' | asset_url }}" alt="X"></span>
+    <div class="pop-up__content-wrapper">
+      <div class="my-account__pop-up-header">
+        <h1 class="heading">
+          <img src="{{ 'check-mark.png' | asset_url }}" alt="" class="arrow-check">
+          Request Submitted</h1>
+      </div>
+      <div class="my-account__pop-up-content successful-message-content">
+        <div class="message-content">
+          <p>Thank you for sharing your concern.</p>
+          <p>We have received your request, we will get back to you soon with an update.</p>
+        </div>
+        <button class="btn btn-default btn-ok">OK</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="successful-cancel-message" class="pop-up-modal my-account">
+  <div class="pop-up__container">
+    <div class="pop-up__content-wrapper">
+      <div class="my-account__pop-up-header">
+        <h1 class="heading">
+          <img src="{{ 'check-mark.png' | asset_url }}" alt="" class="arrow-check">
+          Request Submitted</h1>
+      </div>
+      <div class="my-account__pop-up-content successful-message-content">
+        <div class="message-content">
+          <p>{{settings.myaccount_cancel_order_successful_message}}</p>
+        </div>
+        <button class="btn btn-default btn-ok">OK</a>
+      </div>
+    </div>
+  </div>
+</div>

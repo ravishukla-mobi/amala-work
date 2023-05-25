@@ -1,0 +1,260 @@
+<section class="container curation_section_container">
+  {% if section.settings.curation_heading1 != blank or section.settings.curation_sub_heading2 != blank %}
+  <header class="landing_section_header">
+    {% if section.settings.curation_heading1 != blank %}
+        <h3 class="landing_subheading">{{ section.settings.curation_heading1 }}</h3>
+    {% endif %}
+    {% if section.settings.curation_sub_heading2 != blank %}
+        <h2 class="landing_heading">{{ section.settings.curation_sub_heading2 }}</h2>
+    {% endif %}
+  </header>
+  {% endif %}
+  {%- for block in section.blocks -%}
+      {%- if block.settings.curation_banner_desktop != blank -%}
+      <div class="container_desktop_container">
+        <a href="{{ block.settings.url_link }}">
+          <div>
+            {%- capture supported_sizes -%}{%- render 'image-size', sizes: '300,400,500,600,700,800,1000,1400,1600,1800,1900,2000', image: block.settings.curation_banner_desktop -%}{%- endcapture -%}
+            {%- assign image_url = block.settings.curation_banner_desktop | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+            <img class="lazyload image--fade-in" data-src="{{ image_url }}" data-sizes="auto" data-widths="[{{ supported_sizes }}]" alt="{{ block.settings.curation_banner_desktop.alt | escape }}">
+          </div>
+          <div class="container_desktop_text">
+            {% if block.settings.title != blank %}
+                <h2 style="color: {{ block.settings.color_heading1 }}">{{ block.settings.title }}</h2>
+            {% endif %}
+            {% if block.settings.curation_sub_heading != blank %}
+                <h3 style="color: {{ block.settings.color_heading2 }}">{{ block.settings.curation_sub_heading }}</h3>
+            {% endif %}
+            {% if block.settings.btn_text != blank %}
+                <div class="container_desktop_anchor" style="background-color: {{ block.settings.button_background }}">
+                        <h2 style="color: {{ block.settings.color_heading3 }}">{{ block.settings.btn_text }}</h2>
+                </div>
+            {% endif %}
+          </div>
+        </a>
+      </div>
+      {%- endif -%}
+      {%- if block.settings.curation_banner_mobile != blank -%}
+      <div class="container_mobile_container">
+        <a href="{{ block.settings.url_link }}">
+          <div class="curation_mobile_image">
+            {%- capture supported_sizes -%}{%- render 'image-size', sizes: '300,400,500,600,700,800', image: block.settings.curation_banner_mobile -%}{%- endcapture -%}
+            {%- assign image_url = block.settings.curation_banner_mobile | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+            <img class="lazyload image--fade-in" data-src="{{ image_url }}" data-sizes="auto" data-widths="[{{ supported_sizes }}]" alt="{{ block.settings.curation_banner_mobile.alt | escape }}">
+          </div>
+          <div class="container_desktop_text">
+            {% if block.settings.title != blank %}
+                <h2 style="color: {{ block.settings.color_heading1 }}">{{ block.settings.title }}</h2>
+            {% endif %}
+            {% if block.settings.curation_sub_heading != blank %}
+                <h3 style="color: {{ block.settings.color_heading2 }}">{{ block.settings.curation_sub_heading }}</h3>
+            {% endif %}
+            {% if block.settings.btn_text != blank %}
+              <div class="container_desktop_anchor" style="background-color: {{ block.settings.button_background }}">
+                  <a href="{{ block.settings.url_link }}">
+                      <h2 style="color: {{ block.settings.color_heading3 }}">{{ block.settings.btn_text }}</h2>
+                  </a>
+              </div>
+            {% endif %}
+          </div>
+        </a>
+      </div>
+      {%- endif -%}
+      {% endfor %}
+      </section>
+
+<style>
+  .container_desktop_container{
+    position: relative;
+  }
+  .container_desktop_text{
+    position: absolute;
+    top: 50%;
+    left:80%;
+    transform: translate(-50%,-70%);
+    width: 80%;
+    padding-right: 10%;
+    text-align: center;
+  }
+  .container_desktop_text h2{
+    color: white;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight:600;
+    font-size:24px;
+    line-height:24px;
+    text-align: center;
+    margin: 0;
+  }
+  .container_desktop_text h3{
+    color: white;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size:22px;
+    line-height: 28px;
+    margin: 0;
+    margin-top: 10px;
+  }
+    .curation_header_section{
+    padding-top:50px;
+    }
+
+    .container_desktop_anchor{
+      width:20%;
+      margin: auto;
+      margin-top:10px;
+      border-radius: 4px;
+    }
+    .container_desktop_anchor h2{
+    color: white;
+    box-shadow: 0px 4px 25px rgb(0 0 0 / 25%);
+    border-radius:4px;
+    text-align: center;
+    padding:8px;
+    font-size:16px;
+    }
+    .container_mobile_container{
+        display: none;
+    }
+    .container_desktop_container img{
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    .container_desktop_container img.lazyload{opacity:0;}
+    .container_desktop_anchor:hover{
+    transform: translate3D(0,-1px,0) scale(1.03);
+    box-shadow: 8px 28px 50px rgb(39 44 49 / 7%), 1px 6px 12px rgb(39 44 49 / 4%);
+    transition: all .4s ease;
+    cursor: pointer;
+    }
+    @media only screen and (max-width:768px) {
+        .curation_header_section{
+            padding-left: 20px;
+            padding-top: 36px;
+            }
+        .curation_section_container{
+            padding: 0;
+        }
+        .container_desktop_container{
+            display: none;
+        }
+        .container_mobile_container{
+            display:block;
+            position: relative;
+        }
+        .container_mobile_container img{
+            width: 100%;
+            padding-bottom: 10px;
+            padding-bottom: 7px;
+        }
+        .container_desktop_anchor{
+          width:40%;
+          margin: auto;
+          margin-top:12px;
+        }
+        .container_desktop_text h2{
+          font-size: 20px;
+        }
+        .container_desktop_text h3{
+          font-size: 14px;
+          margin-top:0px;
+        }
+        .container_desktop_anchor h2{
+          padding: 4px;
+          font-size: 14px;
+        }
+        .container_desktop_text{
+          position: absolute;
+          top: 50%;
+          left:70%;
+          transform: translate(-50%,-70%);
+          width: 80%;
+          padding-right: 10%;
+          text-align: center;
+        }
+    }
+</style>
+
+{% schema %}
+  {
+    "name": "Curation Banner",
+    "settings": [
+      {
+        "type":"text",
+        "id":"curation_heading1",
+        "label":"Title"
+      },
+      {
+        "type":"text",
+        "id":"curation_sub_heading2",
+        "label":"Sub Title"
+      }
+    ],
+    "name": "Curation Banner",
+  "blocks": [
+    {
+      "type": "Banner",
+      "name": "Curation Banner",
+      "settings": [
+        {
+            "type":"image_picker",
+            "id":"curation_banner_desktop",
+            "label":"Desktop Image"
+        },
+        {
+            "type":"image_picker",
+            "id":"curation_banner_mobile",
+            "label":"Mobile Image"
+        },
+        {
+        "type":"text",
+        "id":"title",
+        "label":"Title"
+      },
+      {
+  "type": "color",
+  "id": "color_heading1",
+  "label": "Title"
+},
+      {
+        "type":"text",
+        "id":"curation_sub_heading",
+        "label":"Sub Title"
+      },
+      {
+  "type": "color",
+  "id": "color_heading2",
+  "label": "Sub Title"
+},
+      {
+        "type":"text",
+        "id":"btn_text",
+        "label":"Button Text"
+      },
+      {
+  "type": "color",
+  "id": "color_heading3",
+  "label": "Button Text"
+},
+{
+  "type": "color",
+  "id": "button_background",
+  "label": "Button Background"
+},
+      {
+        "type":"url",
+        "id":"url_link",
+        "label":"Link"
+      }
+      ]
+    }
+    ],
+    "presets": [
+{
+"name": "Curation Banner",
+"category": "Custom"
+}
+]
+  }
+{% endschema %}

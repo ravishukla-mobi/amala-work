@@ -1,0 +1,43 @@
+ {%- capture product_labels -%}
+  {% assign newtag_applied = 0 %} 
+  	{%- if latest_products contains product.id and product.available -%}
+  		{% assign newtag_applied = 1 %}  
+  		 <span class="product-label product-label--custom1">New</span>
+    {%- endif-%}
+  	{%- if product.available == false  -%}
+  		 <span class="product-label product-label--custom1 notify-me">Notify me</span>
+    {%- endif-%}
+  
+    {%- for tag in product.tags -%}
+  	  {%- if product.available == false  -%}
+          {%- break -%}
+  	   {%- endif -%}
+  	   {%- if newtag_applied == 1 -%}
+          {%- break -%}
+  	   {%- endif -%}
+  	  {% assign current_tag_label = tag | split: '__label:' | last | downcase  %}
+  	  {%- if current_tag_label == "new" -%}
+  		{%- continue -%}
+  	  {%- endif -%}
+      {%- if tag contains '__label:' -%}
+        <span class="product-label product-label--custom1 {% if current_tag_label == "expert pick" %} expert-pick{% endif %}">{{ tag | split: '__label:' | last }}</span>
+  		{%- break -%}
+      {%- endif -%}
+
+      {%- if tag contains '__label1:' -%}
+        <span class="product-label product-label--custom1 {% if current_tag_label == "expert pick" %} expert-pick{% endif %}">{{ tag | split: '__label1:' | last }}</span>
+  		{%- break -%}
+      {%- endif -%}
+
+      {%- if tag contains '__label2:' -%}
+        <span class="product-label product-label--custom2 {% if current_tag_label == "expert pick" %} expert-pick{% endif %}">{{ tag | split: '__label2:' | last }}</span>
+  		{%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endcapture -%}
+
+  {%- if product_labels != blank -%}
+    <div class="product-item__label-list">
+      {{- product_labels -}}
+    </div>
+  {%- endif -%}

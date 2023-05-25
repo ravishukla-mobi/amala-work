@@ -1,0 +1,52 @@
+{% section 'cart-template' %}
+{% section "cartpage-featured-collection" %}
+{% unless cart.item_count > 0 or customer %}
+  {% section "featured-collection" %}
+{% endunless %}
+{%- if cart.item_count > 0 -%}
+  {% section 'static-recently-viewed-products' %}
+{%- endif -%}
+{% if cart.item_count == 0 and customer %}
+  {% section 'previously-ordered' %}
+{% endif %}
+{% section 'about-text-icons' %}
+
+<script type="text/javascript">
+  	var productsOBJ = [];
+    {% for item in cart.items %}
+        var productsDATA = {};
+        productsDATA['id'] = "{{ item.product.id }}";
+        productsDATA['title'] = "{{ item.product.title }}";
+        productsDATA['image'] = "{{ item.product.featured_image | image_url }}".replace('//', 'https://');
+        productsDATA['url'] = "https://amala.earth{{ item.product.url }}";
+        productsDATA['brand'] = "{{ item.product.vendor }}";
+        productsDATA['quantity'] = parseInt("{{ item.quantity }}");
+        var tagsOBJ = [];
+        {% for tag in item.product.tags %}
+            var tagsDATA = {};
+            tagsDATA = "{{ tag }}";
+            tagsOBJ.push(tagsDATA);
+        {% endfor %}
+  		productsDATA['tags'] = tagsOBJ;
+  		var collectionsOBJ = [];
+        {% for collection in item.product.collections %}
+            var collectionsDATA = {};
+            collectionsDATA = "{{ collection.title }}";
+            collectionsOBJ.push(collectionsDATA);
+        {% endfor %}
+  		productsDATA['collections'] = collectionsOBJ;
+        productsOBJ.push(productsDATA);
+    {% endfor %}
+  	$(document).ready(function() {
+      	var wecarttotalprice = '{{ cart.total_price | divided_by: 100 }}';
+        var wecarttotaldiscount = '{{ cart.total_discount | divided_by: 100 }}';
+        var wecarttotalitems = '{{ cart.item_count }}';
+        
+		webengage.track('Cart Viewed_N', {
+            'totalPrice': parseFloat(wecarttotalprice),
+            'totalDiscount': parseFloat(wecarttotaldiscount),
+            'totalItems': parseInt(wecarttotalitems),
+          	'products': productsOBJ
+    	});
+  	});
+</script>

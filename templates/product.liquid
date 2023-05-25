@@ -1,0 +1,132 @@
+{%- comment -%}
+If the product contains the special __gift tag, we prevent it to be completely accessible by redirecting to the home page
+{%- endcomment -%}
+
+{{ 'custompdp.js' | asset_url | script_tag }}
+{{ 'custompdp.css' | asset_url | stylesheet_tag }}
+
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+<style>
+  #shopify-section-about-text-icons {display:none}
+</style>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+{%- if product.tags contains '__gift' -%}
+  <script>
+    window.location.href = '/';
+  </script>
+{%- else -%}
+
+  {% section 'product-template' %}
+
+  {% section 'pdp-circular-image-grid' %}
+
+  {% section 'pdp-subscription-banner-top' %}
+
+  {% render 'pdp-product-description' %}
+  {% section 'pdp-next-category-banners' %}
+  <div class="cbb-frequently-bought-section_append"></div>
+  {% section 'pdp-mindful-eating-banner' %}
+
+  {% section 'relevant-product-pdp' %}
+
+  {% section 'pdp-shopbyconcern' %}
+  
+  {% section 'pdp-collection-banners' %}
+  {% section 'pdp-banner-and-collection' %}
+
+  {% section 'pdp-videoslider-recipes' %}
+  {% section 'pdp-expert-section' %}
+  {% section 'pdp-curated-collection' %}
+
+  {% section 'auto-related-products' %}
+
+  {% section 'amala-shopify-recommendations' %}
+  {% comment %} {% section 'view-similar-section' %} {% endcomment %}
+
+  {% comment %} {% section 'pdp-samebrand' %} {% endcomment %}
+  {% comment %} {% section 'pdp-same-brandname' %} {% endcomment %}
+  
+  {% section 'product-reviews-pdp' %}
+
+  {%- if product.metafields.custom.key_ingredients != blank or product.metafields.custom.how_to_use_steps != blank or product.metafields.custom.pdp_how_to_use_video != blank -%}
+  <div class="ingredient_style_container pdp_revamp_container">
+    {% section 'key-ingredient-section' %}
+    {%- if product.metafields.custom.key_ingredients != blank and product.metafields.custom.how_to_use_steps != blank or product.metafields.custom.pdp_how_to_use_video != blank -%}
+    <hr class="ingredient_style_partition">
+    {%- endif -%}
+    {% section 'howtostyle' %}
+  </div>
+  {%- endif -%}
+  
+  {% comment %} {% section 'key-ingredient-section' %} {% endcomment %}
+
+  {% comment %} {% section 'howtostyle' %} {% endcomment %}
+
+  {% section 'recommend-section-pdp' %}
+  {% section 'video-gallery-pdp' %}
+
+  {% section 'pdp-videoslider-healthyrecipes' %}
+
+  {% section 'related-blog-posts-new' %}
+  {% section 'pdp-faqs' %}
+  
+  {% section 'view-similar' %}
+  {% comment %} {% section 'view-similar-auto' %} {% endcomment %}
+  {% section 'view-you-can-also-buy' %}
+  <div class="pdp_nectorcustom_review_list">
+  {% render 'nectorcustom_review_list', product: product, customer: customer, shop: shop %}
+  </div>
+
+  <script type="text/javascript">
+        window.ShopifyXR=window.ShopifyXR||function(){(ShopifyXR.q=ShopifyXR.q||[]).push(arguments)};
+        ShopifyXR('addModels', {{ product.media | where: 'media_type', 'model' | json }});
+          
+            var tagsobj = [];
+            {% for tag in product.tags %}
+                var tagsdata = {};
+                tagsdata = "{{ tag }}";
+                tagsobj.push(tagsdata);
+            {% endfor %}
+
+            var collectionsobj = [];
+            {% for collection in product.collections %}
+                var collectionsdata = {};
+                collectionsdata = "{{ collection.title }}";
+                collectionsobj.push(collectionsdata);
+            {% endfor %}
+      
+        $(document).ready(function() {
+                var wepid = '{{ product.id }}';
+                var wepurl = window.location.href;
+                var weptitle = '{{ product.title }}';
+                var wepbrand = '{{ product.vendor }}';
+                var wepimage = '{{ product.featured_image  | image_url }}';
+                var wepprice = '{{ product.price | divided_by: 100 }}';
+                var wepmrp = '{{ product.price_max | divided_by: 100 }}';
+                var weptags = tagsobj;
+                var wecollections = collectionsobj;
+
+                webengage.track('Product Viewed_N', {
+                    'productID': wepid,
+                    'pageURL': wepurl,
+                    'productName': weptitle,
+                    'productBrand': wepbrand,
+                    'productImage': wepimage.replace('//', 'https://'),
+                    'productPrice': parseFloat(wepprice),
+                    'productMRP': parseFloat(wepmrp),
+                    'productTags': weptags,
+                    'productCollections': wecollections
+                });
+                });
+        {% if product.type == 'Donation' %}
+          if (!window.history.back()) { 
+            window.location.href = routes.rootUrl;
+          }else{
+            window.history.back();
+          }
+        {% endif %}
+  </script>
+{%- endif -%}

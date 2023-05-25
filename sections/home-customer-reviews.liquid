@@ -1,0 +1,305 @@
+<div class="home_customer_review_section section" data-section-id="{{ section.id }}" data-section-type="home-customer-review">
+    <div class="container">
+        {%- if section.settings.title != blank or section.settings.subtitle != blank -%}
+        <header class="landing_section_header">
+        {% if section.settings.subtitle != blank %}
+        <h5 class="landing_subheading">{{section.settings.subtitle}}</h5>
+        {% endif %}
+        {% if section.settings.title != blank %}
+        <h4 class="landing_heading">{{section.settings.title}}</h4>
+        {% endif %}
+        </header>
+        {%- endif -%}
+        <div class="home_customer_review_silder">
+            {%- for block in section.blocks -%}
+            <div id="block_{{block.id}}" class="review_block">
+                <div class="review_header">
+                    {% if block.settings.customer_name != blank %}
+                    <span class="customer_name">{{block.settings.customer_name}}</span>
+                    {% endif %}
+                    {% if block.settings.review_heading != blank %}
+                    <span class="review_heading">{{block.settings.review_heading}}</span>
+                    {% endif %}
+                    <span class="rating">
+                        {% if block.settings.rating == 1 %}
+                        {% render 'filled-star' %}{% render 'empty-star' %}{% render 'empty-star' %}{% render 'empty-star' %}{% render 'empty-star' %}
+                        {% elsif block.settings.rating == 2 %}
+                        {% render 'filled-star' %}{% render 'filled-star' %}{% render 'empty-star' %}{% render 'empty-star' %}{% render 'empty-star' %}
+                        {% elsif block.settings.rating == 3 %}
+                        {% render 'filled-star' %}{% render 'filled-star' %}{% render 'filled-star' %}{% render 'empty-star' %}{% render 'empty-star' %}
+                        {% elsif block.settings.rating == 4 %}
+                        {% render 'filled-star' %}{% render 'filled-star' %}{% render 'filled-star' %}{% render 'filled-star' %}{% render 'empty-star' %}
+                        {% elsif block.settings.rating == 5 %}
+                        {% render 'filled-star' %}{% render 'filled-star' %}{% render 'filled-star' %}{% render 'filled-star' %}{% render 'filled-star' %}
+                        {% endif %}
+                    </span>
+                </div>
+                <div class="review_image">
+                {%- if block.settings.image != blank -%}
+                {%- capture supported_sizes -%}{%- render 'image-size', sizes: '100,150,200,250,300', image: block.settings.image -%}{%- endcapture -%}
+                {%- capture supported_sizes2 -%}{{ supported_sizes }}x{%- endcapture -%}
+                {%- assign image_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                    {%- if block.settings.link != blank -%}
+                    <a href="{{ block.settings.link }}" class="customer-image_wrapper" style="padding-bottom: {{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%;">
+                    {% else %}
+                    <span class="customer-image_wrapper" style="padding-bottom: {{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%;">
+                    {%- endif -%}
+                        <img class="amala-customer_image lazyload image--fade-in" alt="{{ block.settings.image.alt | escape }}" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto">
+                        <noscript>
+                        <img src="{{ block.settings.image | img_url: '200x' }}" alt="{{ block.settings.image.alt | escape }}">
+                        </noscript>
+                    {%- if block.settings.link != blank -%}</a>{% else %}</span>{%- endif -%}
+                {%- endif -%}
+                </div>
+                {%- if block.settings.review_content != blank -%}
+                <div class="review_content">
+                    {{block.settings.review_content}}
+                </div>
+                {%- endif -%}
+            </div>
+            {%- endfor -%}
+        </div>
+    </div>
+</div>
+
+{% style %}
+#shopify-section-{{ section.id }} .home_customer_review_section{
+    background-color:{{section.settings.bg_color}};
+}
+.home_customer_review_section {
+    display: flex;
+    padding-bottom: 60px;
+}
+.home_customer_review_section .container {
+    width: 100%;
+}
+.home_customer_review_silder{
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    z-index: 1;
+}
+.home_customer_review_silder:not(.flickity-enabled){
+    overflow-y:auto;
+}
+.home_customer_review_silder:after {
+  content: 'flickity';
+  display: none; /* hide :after */
+}
+.review_block{
+    flex: none;
+    width:calc(32% - 20px);
+    margin-right:20px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.review_block .review_header {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 60%;
+    height: max-content;
+    padding-right: 10px;
+}
+.review_header .customer_name, .review_header .review_heading {
+    font-size: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+.review_header .customer_name {
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+.review_header .review_heading {
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+.review_header .rating {
+    display: flex;
+}
+.review_header .rating svg {
+    width: 28px;
+    height: auto;
+    display: inline-flex;
+    margin-right: 5px;
+}
+.review_image{
+    width: 100%;
+    max-width: 40%;
+}
+.customer-image_wrapper {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+.customer-image_wrapper:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #b89c7d;
+    z-index: 1;
+}
+.customer-image_wrapper img{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    z-index:2;
+}
+.review_block .review_content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    margin-top: 10px;
+    min-height: 120px;
+}
+@media screen and (max-width:1399px){
+    .review_header .customer_name, .review_header .review_heading{
+        font-size:17px;
+    }
+    .review_header .review_heading{
+        margin-bottom:15px;
+    }
+    .review_header .rating svg{
+        width:26px;
+    }
+    .review_block .review_content {
+        font-size: 14px;
+        min-height: 105px;
+    }
+}
+@media screen and (max-width:1199px){
+    .review_block{
+        width: calc(40% - 20px);
+    }
+}
+@media screen and (max-width:991px){
+    .review_block{padding:15px;}
+    .review_header .rating svg {
+        width: 20px;
+        margin-right: 3px;
+    }
+    .review_header .customer_name, .review_header .review_heading {
+        font-size: 13px;
+    }
+    .review_header .customer_name{margin-bottom:6px;}
+    .review_header .review_heading {
+        margin-bottom: 12px;
+    }
+    .review_block .review_content {
+        font-size: 12px;
+        min-height: 90px;
+    }
+}
+@media screen and (max-width:767px){
+    .home_customer_review_section{
+        padding-top: 40px;
+    }
+.home_customer_review_section .container {
+    padding-right: 0;
+}
+.review_block {
+    width: calc(55% - 20px);
+}
+}
+@media screen and (max-width:640px){
+.home_customer_review_section {
+    padding: 20px 0 35px;
+    margin: 10px 0;
+}
+.review_block{
+    width:calc(82% - 15px);
+    margin-right:15px;
+}
+}
+{% endstyle %}
+{% schema %}
+    {
+      "name": "Home customer reviews",
+      "settings": [
+        {
+          "type":"text",
+          "id":"subtitle",
+          "label":"Subheading",
+          "default":"Customer"
+        },
+        {
+          "type":"text",
+          "id":"title",
+          "label":"Heading",
+          "default":"Reviews"
+        },
+        {
+          "type":"color",
+          "id":"bg_color",
+          "label":"Background color",
+          "default":"#F2E5D8"
+        }
+      ],
+      "blocks":[
+        {
+          "type": "review",
+          "name": "review",
+          "settings": [
+            {
+              "type":"text",
+              "id":"customer_name",
+              "label":"Customer name",
+              "default":"Customer name"
+            },
+            {
+              "type":"text",
+              "id":"review_heading",
+              "label":"Review heading",
+              "default":"Review heading"
+            },
+            {
+              "type":"image_picker",
+              "id":"image",
+              "label":"Image"
+            },
+            {
+              "type": "range",
+              "id": "rating",
+              "min": 1,
+              "max": 5,
+              "step": 1,
+              "label": "Rating",
+              "default": 5
+            },
+            {
+              "type":"textarea",
+              "id":"review_content",
+              "label":"Review content",
+              "default":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
+            },
+            {
+              "type":"url",
+              "id":"link",
+              "label":"link"
+            }
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "Home customer reviews",
+          "category": "Custom"
+        }
+      ]
+    }
+  {% endschema %}

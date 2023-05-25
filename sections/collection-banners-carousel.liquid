@@ -1,0 +1,274 @@
+{%- capture section_settings -%}
+{
+  "autoPlay": {{ section.settings.autoplay | json }},
+  "pageDots": {% if section.blocks.size > 1 %}true{% else %}false{% endif %},
+  "cycleSpeed": {{ section.settings.cycle_speed | times: 1000 | json }}
+}
+{%- endcapture -%}
+
+<div class="collection-banners_section" data-section-id="{{ section.id }}" data-section-type="collection-banners-carousel" data-section-settings='{{ section_settings }}'>
+  <div class="container">
+    <div class="collection-banners_slider">
+    {%- for block in section.blocks -%}
+        <a href="{{ block.settings.link }}" class="colbanner__slide{% if block.settings.show_overlay %} colbanner__slide--overlay{% endif %}" id="block-{{ block.id }}" data-block-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
+            <div class="colbanner__slide-inner">
+                {%- if block.settings.image -%}
+                {%- capture supported_sizes -%}{%- render 'image-size', sizes: '800,900,1000,1100,1200,1300,1400,1600,1800,2000,2200', image: block.settings.image -%}{%- endcapture -%}
+                {%- assign image_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+                <div class="aspect-ratio {% if block.settings.mobile_image %}hidden-phone{% endif %}" style="padding-bottom: {{ 100.0 | divided_by: block.settings.image.aspect_ratio }}%">
+                    <img class="colbanner__image lazyload image--fade-in" alt="{{ block.settings.image.alt | escape }}" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto">
+
+                    <noscript>
+                    <img src="{{ block.settings.image | img_url: '1200x' }}" alt="{{ block.settings.image.alt | escape }}">
+                    </noscript>
+                </div>
+
+                {%- if block.settings.mobile_image -%}
+                    {%- capture supported_sizes -%}{%- render 'image-size', sizes: '600,700,800,900,1000,1100,1200', image: block.settings.mobile_image -%}{%- endcapture -%}
+                    {%- assign image_url = block.settings.mobile_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+                <div class="aspect-ratio hidden-tablet-and-up" style="padding-bottom: {{ 100.0 | divided_by: block.settings.mobile_image.aspect_ratio }}%">
+                <img class="colbanner__image lazyload image--fade-in" alt="{{ block.settings.mobile_image.alt | escape }}" data-src="{{ image_url }}" data-widths="[{{ supported_sizes }}]" data-sizes="auto">
+
+                <noscript>
+                    <img src="{{ block.settings.mobile_image | img_url: '800x' }}" alt="{{ block.settings.mobile_image.alt | escape }}">
+                </noscript>
+                </div>
+                {%- endif -%}
+                {%- endif -%}
+            </div>
+            {%- if block.settings.title != blank or block.settings.subtitle != blank -%}
+            <div class="colbanner__slide-content">
+                {%- if block.settings.title != blank -%}
+                <h2 class="heading">{{ block.settings.title | escape }}</h2>
+                {%- endif -%}
+                {%- if block.settings.subtitle != blank -%}
+                <h2 class="subheading">{{ block.settings.subtitle | escape }}</h2>
+                {%- endif -%}
+            </div>
+            {%- endif -%}
+        </a>
+    {%- endfor -%}
+    </div>
+  </div>
+</div>
+{% style %}
+.collection-banners_section{
+  overflow: hidden;
+}
+.collection-banners_slider{
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  margin: 0 -15px;
+  z-index: 1;
+}
+.collection-banners_slider:not(.flickity-enabled){
+  overflow-y:auto;
+}
+.collection-banners_slider:after {
+  content: 'flickity';
+  display: none; /* hide :after */
+}
+.collection-banners_slider:not(.flickity-enabled) .colbanner__slide {
+  min-width: 50%;
+}
+.collection-banners_slider .colbanner__slide {
+  position: relative;
+  width: 50%;
+  padding: 0 15px;
+}
+.colbanner__slide .colbanner__slide-content {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  top: 60%;
+  padding: 0 15px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.colbanner__slide .colbanner__slide-content:before{
+  content:'';
+  position: absolute;
+  width:50%;
+  height:1px;
+  background:#fff;
+  display:block;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  transition:all 0.3s;
+}
+.colbanner__slide:hover .colbanner__slide-content:before{
+  width:70%;
+}
+.colbanner__slide-content .heading {
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  font-weight:500;
+}
+.colbanner__slide--overlay::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: calc(100% - 30px);
+  left: 50%;
+  transform:translateX(-50%);
+  top: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  z-index: 1;
+}
+{% unless section.blocks.size > 2 %}
+.collection-banners_slider .flickity-page-dots{
+  display:none;
+}
+{% endunless %}
+{%- for block in section.blocks -%}
+#block-{{ block.id }} .heading,#block-{{ block.id }} .subheading{
+  color:{{block.settings.text_color}};
+}
+{%- if block.settings.show_overlay -%}
+  #block-{{ block.id }}.colbanner__slide--overlay::before {
+    {%- assign overlay_opacity = block.settings.overlay_opacity | divided_by: 100.0 -%}
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), {{ '#000000' | color_modify: 'alpha', overlay_opacity }});
+  }
+{%- endif -%}
+{%- endfor -%}
+@media screen and (max-width:767px){
+  .collection-banners_slider:not(.flickity-enabled) .colbanner__slide {
+    min-width: 100%;
+  }
+  .collection-banners_slider .colbanner__slide {
+    width: 100%;
+    padding: 0;
+  }
+  .colbanner__slide--overlay::before{width: 100%;}
+  .collection-banners_slider {
+    margin: 0;
+  }
+  .collection-banners_section .container {
+    padding: 0;
+  }
+  .collection-banners_slider .flickity-page-dots {
+    bottom: 15px;
+    display:block;
+  }
+  .colbanner__slide-content .heading{
+    font-size:16px;
+  }
+  .colbanner__slide-content .subheading {
+    font-size: 13px;
+  }
+  .collection-banners_section .flickity-prev-next-button.previous {
+    left: 0;
+  }
+  .collection-banners_section .flickity-prev-next-button.next{
+    right: 0;
+  }
+}
+@media screen and (max-width:640px){
+  .collection-banners_section {
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+{% endstyle %}
+{% schema %}
+{
+  "name": "Home Collection banners",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Auto rotate between slides",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "cycle_speed",
+      "min": 3,
+      "max": 8,
+      "step": 1,
+      "unit": "sec",
+      "label": "Change slides every",
+      "default": 5
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "1920 x 600px .jpg recommended"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile image",
+          "info": "414 x 270px .jpg recommended. If none is set, desktop image will be used."
+        },
+        {
+          "type": "checkbox",
+          "id": "show_overlay",
+          "label": "Show overlay",
+          "info": "Increase text readability on busy images.",
+          "default": false
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity",
+          "label": "Overlay opacity",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "default": 30
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Slide title"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Sub Heading",
+          "default": "Slide title"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text",
+          "default": "#ffffff"
+        },
+		{
+          "type": "color",
+          "id": "background_color",
+          "label": "Slide Background Color",
+          "default": "#fff"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link",
+          "info": "If no text is set for button, the whole image becomes clickable."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Image",
+      "name": "Home Collection banner"
+    }
+  ]
+}
+{% endschema %}

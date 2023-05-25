@@ -1,0 +1,18 @@
+<script type="text/javascript">
+	$(document).on('click', '[name="checkout"]', function(e) {
+		let form = e.target.form;
+		let sessionId = webengage.user.getAnonymousId()+'-'+webengage.getLicenseCode()+'-'+webengage.state.getSession().suid;
+		let luid = webengage.user.getAnonymousId();
+		let licenseCode = webengage.getLicenseCode();
+		let inputs = `<input type="hidden" name="attributes[LUID]" value="${luid}" id="hidden_luid">
+					  <input type="hidden" name="attributes[SESSION_ID]" value="${sessionId}" id="hidden_session_Id">
+					  <input type="hidden" name="attributes[LICENSE_CODE]" value="${licenseCode}" id="hidden_license_code">`;
+		if($(form).find('#hidden_luid').length > 0)
+		$(form).find('#hidden_luid').remove();
+		if($(form).find('#hidden_session_Id').length > 0)
+		$(form).find('#hidden_session_Id').remove();
+		if($(form).find('#hidden_license_code').length > 0)
+		$(form).find('#hidden_license_code').remove();
+		$(form).append(inputs);
+	});
+</script>

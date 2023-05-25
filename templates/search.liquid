@@ -1,0 +1,9 @@
+{% comment %} Commented By ST Team
+{% section 'search-template' %}
+{%- if search.performed -%}
+      {%- if search.results_count == 0 -%}
+		{% section 'featured-collection' %}
+      {%- endif -%}
+{%- endif -%}
+{% section 'static-promotion-list' %}
+{% endcomment %}

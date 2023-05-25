@@ -1,0 +1,135 @@
+{%- capture section_settings -%}
+{
+  "stackable": false,
+  "layout": "vertical",
+  "productId": {{ product.id | json }},
+  "recommendationsCount": 10
+}
+{%- endcapture -%}
+
+  <section class="section" data-section-id="{{ section.id }}" data-section-type="product-recommendation-you-may-like" data-section-settings='{{ section_settings }}'>
+    <div class="container">
+      {%- if section.settings.heading != blank -%}
+        <header class="section__header">
+          <h4 class="section__title heading ">{{ section.settings.heading | escape }}</h4>
+        </header>
+      {%- endif -%}
+
+      <div class="product-related product-related-you_may_like">
+        {%- if template.name == 'search' -%}
+          <div class="scroller">
+            <div class="scroller__inner">
+              <div class="product-list product-list--vertical product-list--scrollable">
+
+                {%- liquid
+                  assign parsed_terms = search.terms | split: ' OR '
+                  assign products_count = 0 
+
+                  for parsed_term in parsed_terms
+                    assign id = parsed_term | split: 'id:' | last | times: 1
+                      if products_count == section.settings.products_count 
+                        break 
+                      endif 
+                    for product in search.results
+                      if products_count == section.settings.products_count 
+                        break 
+                      endif 
+                      if product.id == id
+                        if section.settings.show_sold_out or product.available 
+                        assign products_count = products_count | plus: 1 
+                          render 'product-item', product: product, grid_classes: '1/4--lap 1/5--desk 1/5--wide', show_add_to_cart: section.settings.show_quick_buy
+                          break
+                        endif 
+                      endif
+                    endfor
+                  endfor
+                -%}
+              </div>
+          </div>
+        </div>
+      {%- endif -%}
+      </div>
+    
+    </div>
+
+    {%- comment -%}
+    --------------------------------------------------------------------------------------
+    QUICK VIEW CONTAINER
+    --------------------------------------------------------------------------------------
+    {%- endcomment -%}
+
+    <div id="modal-quick-view-{{ section.id }}" class="modal quick-view-product-modal" aria-hidden="true">
+      <div class="modal__dialog modal__dialog--stretch" role="dialog">
+        <button class="modal__close link" data-action="close-modal" title="{{ 'general.accessibility.close' | t | escape }}">
+          {%- render 'icon', icon: 'close' -%}
+        </button>
+
+        <div class="modal__loader">
+          {%- render 'icon', icon: 'search-loader' -%}
+        </div>
+
+        <div class="modal__inner"></div>
+      </div>
+    </div>
+  </section>
+  {%- if template.name != 'search' or search.results_count == 0 -%}
+    <style>
+      /* By default the section is hidden as we do not know if there are product yet */
+      #shopify-section-{{ section.id }} {
+        display: none;
+      }
+    </style>
+  {%- endif -%}
+
+{% schema %}
+
+{
+  "name": "Auto Related Products",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_related_products",
+      "label": "Show dynamic Related Products",
+      "default": true
+    },
+	{
+      "type": "range",
+      "id": "products_count",
+      "label": "Products to show",
+      "min": 2,
+      "max": 20,
+      "step": 1,
+      "default": 10
+    },
+	{
+      "type": "range",
+      "id": "min_products",
+      "label": "Minimum products to show",
+      "min": 2,
+      "max": 10,
+      "step": 1,
+      "default": 5,
+	  "info": "If the products for this section have less than this count, then this section will not be displayed."
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "You may also like"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_quick_buy",
+      "label": "Show quick buy",
+      "default": true
+    },
+	{
+      "type": "checkbox",
+      "id": "show_sold_out",
+      "label": "Show Sold out Products",
+      "default": true,
+	 "info": "show sold out items also"
+    }
+  ]
+}
+{% endschema %}

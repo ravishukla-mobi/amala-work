@@ -1,0 +1,52 @@
+{%- liquid 
+  assign current_collection = ''
+  assign collection_array = ''
+  assign break_at = 20
+  assign col_count = 0
+  assign product_items = ''
+  assign current_product = product
+  assign common_col_list = settings.common_collection_handle_list
+
+  for collection in product.collections
+    if collection.handle != 'all'
+      if collection_array == ''
+        assign collection_array = collection.handle
+      else
+        assign collection_array = collection_array | append: ',' | append:collection.handle
+      endif
+    endif
+  endfor
+
+  for collection in product.collections
+    unless common_col_list contains collection.handle
+      assign current_collection = collection.handle
+      assign col_productsarr = collections[current_collection].products
+      paginate col_productsarr by 100
+        for product_related in col_productsarr
+          unless product_related.handle == current_product.handle
+          if product.type == product_related.type
+              if product_items == '' 
+                assign product_items = product_related.handle
+                assign col_count = col_count | plus: 1 
+              elsif product_list contains product_related.handle
+              else
+                assign product_items = product_items | append: ',' | append: product_related.handle
+                assign col_count = col_count | plus: 1 
+              endif 
+              if col_count == break_at
+                break
+              endif
+          endif
+          endunless
+        endfor
+      endpaginate
+    endunless
+    if col_count == break_at
+      break
+    endif
+  endfor
+  
+  assign product_items = product_items | split: ','
+  assign minimum_limit = section.settings.min_products
+    
+-%}

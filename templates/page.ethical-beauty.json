@@ -1,0 +1,1710 @@
+{
+  "sections": {
+    "37e3938c-1ec6-4afc-864f-133b5ddc7bc6": {
+      "type": "page-navigation",
+      "settings": {}
+    },
+    "5c5af5b3-31b6-4503-8c9d-83a656ed198a": {
+      "type": "subscription-banner",
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "banner_image_desktop": "shopify:\/\/shop_images\/Collection_page_subscription_banner_desktopPDP.jpg",
+        "banner_image_mob": "shopify:\/\/shop_images\/collection-page-subscription-banner-desktop_1.jpg"
+      }
+    },
+    "9248411d-d71b-498e-839b-0e22ca66ed0d": {
+      "type": "slideshow",
+      "blocks": {
+        "template--16615862042868__9248411d-d71b-498e-839b-0e22ca66ed0d-1678169220264f3c81-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Beauty_Banner_1920x600_1_3445febd-e7aa-412c-a664-5458aece03db.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Beauty_banner-microsite-mobile_ff430cb9-a202-4b33-b315-5e6e4d090bd4.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/ethical-beauty",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "f5efa5eb-57f1-48fd-9ab2-39519767bae1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ruby_organics_Banner_1920x600_fad4d8aa-43b2-4844-a6fe-c76d16803149.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Ruby_organics_banner-microsite-mobile_dcc2f502-1560-4170-b7d7-d4037310bd98.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/ethical-beauty?f_Brand=Ruby%27s+Organics",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "2437845c-beb4-484a-bc28-7a7f483a7c8b": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Banner_1920x600_beauty_843f9020-14c4-4cd7-b777-4af833b06a4f.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Banner_mobile_beauty.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/beauty-and-bath-essentials?f_Type=Face+%26+Body+Tools",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "1ef3bfc0-5d25-4e3a-9570-4dbdbe40fb16": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Banner_1920x600_beauty.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/beauty_793fdb81-9526-4262-ba72-8933cf26eaf9.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/ethical-beauty",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "template--16615862042868__9248411d-d71b-498e-839b-0e22ca66ed0d-1678169220264f3c81-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/express-delivery-desktop-beauty.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/express-delivery-mobile-beauty.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/warehouse-inventory?f_Category=ethical+beauty",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16615862042868__9248411d-d71b-498e-839b-0e22ca66ed0d-1678169220264f3c81-0",
+        "f5efa5eb-57f1-48fd-9ab2-39519767bae1",
+        "2437845c-beb4-484a-bc28-7a7f483a7c8b",
+        "1ef3bfc0-5d25-4e3a-9570-4dbdbe40fb16",
+        "template--16615862042868__9248411d-d71b-498e-839b-0e22ca66ed0d-1678169220264f3c81-1"
+      ],
+      "settings": {
+        "edge_to_edge": true,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "festival-landings-page": {
+      "type": "main-banner",
+      "disabled": true,
+      "settings": {
+        "banner_desktop_image": "shopify:\/\/shop_images\/banner-microsite-Website_Beauty.jpg",
+        "banner_mobile_image": "shopify:\/\/shop_images\/banner-microsite-mobile_Beauty.jpg",
+        "desktop_banner_title": "",
+        "color_heading": "#ffffff",
+        "desktop_banner_subtitle": "",
+        "color_subheading": "#b89c7d",
+        "desktop_banner_button": "",
+        "color_button": "#ffffff",
+        "button_background": "#9d7242",
+        "desktop_button_url": "https:\/\/amala.earth\/collections\/women",
+        "desktop_image_url": "https:\/\/amala.earth\/collections\/ethical-beauty"
+      }
+    },
+    "68c33a46-c30e-4b8a-84b9-d80dacac4a04": {
+      "type": "circular-image-grid",
+      "blocks": {
+        "2e909473-ebc0-45b7-a5fa-7463a5a4b3ba": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/1_Concern_tiles_round.png",
+            "block_two_subtitle": "Cruelty-free",
+            "title": "Makeup",
+            "second_block_url": "https:\/\/amala.earth\/collections\/makeup-and-nails"
+          }
+        },
+        "8a6d3a3c-94c0-4179-ad43-af8efd49d07b": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/2_Concern_tiles_round_1.png",
+            "block_two_subtitle": "Fresh",
+            "title": "Fragrances",
+            "second_block_url": "https:\/\/amala.earth\/collections\/fragrances"
+          }
+        },
+        "8da60efe-7020-4864-85da-93994fd29308": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/3_Concern_tiles_round.png",
+            "block_two_subtitle": "Ayurvedic",
+            "title": "Haircare",
+            "second_block_url": "https:\/\/amala.earth\/collections\/hair-care"
+          }
+        },
+        "9498bd5e-cb81-49b2-8bb3-ba9f7c4ca19d": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/5_Concern_tiles_round.png",
+            "block_two_subtitle": "Essential",
+            "title": "Oils",
+            "second_block_url": "https:\/\/amala.earth\/collections\/essential-oils"
+          }
+        },
+        "8ff10c40-b5fb-49fa-ad25-3e5a8b8cdd3e": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/natural_skin_care_3.jpg",
+            "block_two_subtitle": "Natural",
+            "title": "Skincare",
+            "second_block_url": "https:\/\/amala.earth\/collections\/natural-skincare"
+          }
+        },
+        "88258eae-41cf-4183-8762-a32eb51d4bc0": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/4_Concern_tiles_round.png",
+            "block_two_subtitle": "Essentials for",
+            "title": "Bathing",
+            "second_block_url": "https:\/\/amala.earth\/collections\/natural-skincare?f_Type=Body+Wash+and+Cleansers"
+          }
+        },
+        "57ff8aac-d518-41e4-b337-6627f65f383e": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/7_Concern_tiles_round.png",
+            "block_two_subtitle": "Zero-waste",
+            "title": "Oral care",
+            "second_block_url": "https:\/\/amala.earth\/collections\/oral-care"
+          }
+        },
+        "92774282-274e-4445-aec9-b275fa7c6f5e": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/10_Concern_tiles_round.png",
+            "block_two_subtitle": "Herbal",
+            "title": "Serums",
+            "second_block_url": "https:\/\/amala.earth\/collections\/serums-skin-oils-and-supplements"
+          }
+        },
+        "dfe64664-5b98-41cd-85ad-d3bfffba4906": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/6_Concern_tiles_round.png",
+            "block_two_subtitle": "Sustainable",
+            "title": "Grooming",
+            "second_block_url": "https:\/\/amala.earth\/collections\/mens-grooming"
+          }
+        }
+      },
+      "block_order": [
+        "2e909473-ebc0-45b7-a5fa-7463a5a4b3ba",
+        "8a6d3a3c-94c0-4179-ad43-af8efd49d07b",
+        "8da60efe-7020-4864-85da-93994fd29308",
+        "9498bd5e-cb81-49b2-8bb3-ba9f7c4ca19d",
+        "8ff10c40-b5fb-49fa-ad25-3e5a8b8cdd3e",
+        "88258eae-41cf-4183-8762-a32eb51d4bc0",
+        "57ff8aac-d518-41e4-b337-6627f65f383e",
+        "92774282-274e-4445-aec9-b275fa7c6f5e",
+        "dfe64664-5b98-41cd-85ad-d3bfffba4906"
+      ],
+      "settings": {
+        "subtitle": "",
+        "title": ""
+      }
+    },
+    "9517eac8-58a2-4d75-9ed2-29b892f20cbd": {
+      "type": "amala-earth-curation",
+      "blocks": {
+        "31f20906-240e-41b0-be61-b08981c3baa4": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/Ruby_organics_Banner_1920x600_e14b1626-62bc-4aba-9a1f-d7057129459d.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/Ruby_organics_banner-microsite-mobile_3a409b0b-2c2b-47c9-a871-0a5c3b8dfadf.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/ethical-beauty?f_Brand=Ruby%27s+Organics"
+          }
+        }
+      },
+      "block_order": [
+        "31f20906-240e-41b0-be61-b08981c3baa4"
+      ],
+      "settings": {
+        "curation_heading1": "",
+        "curation_sub_heading2": ""
+      }
+    },
+    "f7f09ee2-9fd6-4b55-b81f-dd69a1745cb1": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "b10ae80a-e728-4be1-8234-d925b696cc67": {
+          "type": "Product",
+          "settings": {
+            "product": "sweet-cocoa-lip-kit-15gm"
+          }
+        },
+        "299dcc49-1348-4535-a881-116006f4e6f0": {
+          "type": "Product",
+          "settings": {
+            "product": "juicy-chemistry-body-soap-lime-ginger-skin-brightening-tan-removal-100-g-jc1006-201222"
+          }
+        },
+        "35717b4d-3bbe-404d-93da-8a1eee82379c": {
+          "type": "Product",
+          "settings": {
+            "product": "brillare-face-serum-vitamin-c-glowing-skin-30-ml-vcfs30-170323"
+          }
+        },
+        "58b91e08-9dbf-4de9-b684-35f537628eea": {
+          "type": "Product",
+          "settings": {
+            "product": "tac-the-ayurveda-co-roll-on-deo-deodorant-oudh-aloe-deodorizes-lightens-50-ml-8904422900042-231222"
+          }
+        },
+        "0b8fc86c-3363-40c5-a7e1-21ce2bb31afc": {
+          "type": "Product",
+          "settings": {
+            "product": "sunscreen-for-all-skin-spf-60-100-g"
+          }
+        },
+        "db66e4a4-4199-4fd8-a0f4-d09a78233985": {
+          "type": "Product",
+          "settings": {
+            "product": "shikakai-leaf-hair-powder-prevents-split-ends-pack-of-2"
+          }
+        },
+        "1ce59b90-c898-4f5a-a249-7be05c5c36c5": {
+          "type": "Product",
+          "settings": {
+            "product": "conscious-chemist-sun-drink-sun-protection-50-ml-ccsd01-301122"
+          }
+        },
+        "8497ed0b-d1fd-4273-ac81-1bfe690984d6": {
+          "type": "Product",
+          "settings": {
+            "product": "kuntal-care-hair-spa-face-clean-up-hair-skin-care-combo"
+          }
+        },
+        "0aa6ceb6-bba9-45c2-98a7-c7ff17fb9e6f": {
+          "type": "Product",
+          "settings": {
+            "product": "nat-habit-henna-paste-hair-color-dark-brown-220-g-pack-of-2-hr-he-ra2-250-160922"
+          }
+        },
+        "d59baf37-6f0f-4988-833c-eea4911a0683": {
+          "type": "Product",
+          "settings": {
+            "product": "khadi-essentials-aloe-vera-hair-conditioner-shine-strength-bhringraj-shikakai-200-ml-8904422900028-281222"
+          }
+        },
+        "52e296d3-066e-4ee1-a731-74c5ff8b8342": {
+          "type": "Product",
+          "settings": {
+            "product": "saffron-and-kumkumadi-thailam-aloe-vera-gel"
+          }
+        },
+        "108dead1-3942-4c36-9ca1-cb855da73195": {
+          "type": "Product",
+          "settings": {
+            "product": "body-shower-gel-cruelty-free-cucumber-aloe-vera-250-ml"
+          }
+        },
+        "0ee3ef99-f9fd-46d1-aa19-c78aa0a935d9": {
+          "type": "Product",
+          "settings": {
+            "product": "juicy-chemistry-deodorant-stick-blood-orange-geranium-70-g-jc0302-201222"
+          }
+        },
+        "59e2ed6e-4aae-447f-bf4e-ad6f5e0d48cb": {
+          "type": "Product",
+          "settings": {
+            "product": "atulya-aloe-vera-soap-value-pack-500-g-c-at-024-19722"
+          }
+        },
+        "99b030e9-f917-4584-8772-63b98e33b396": {
+          "type": "Product",
+          "settings": {
+            "product": "shankara-deep-cleanse-facial-ubtan-120-g-290722"
+          }
+        },
+        "627f224f-ef11-4dd9-a310-e3b59fe251c4": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-face-serum-with-broccoli-aloe-vera-30-ml"
+          }
+        },
+        "560a9fe2-9d9e-42b2-b35c-aa94fdf7fee2": {
+          "type": "Product",
+          "settings": {
+            "product": "vilvah-anti-acne-combo-face-cleanser-aloe-vera-gel-vl-kt-15-250722"
+          }
+        }
+      },
+      "block_order": [
+        "b10ae80a-e728-4be1-8234-d925b696cc67",
+        "299dcc49-1348-4535-a881-116006f4e6f0",
+        "35717b4d-3bbe-404d-93da-8a1eee82379c",
+        "58b91e08-9dbf-4de9-b684-35f537628eea",
+        "0b8fc86c-3363-40c5-a7e1-21ce2bb31afc",
+        "db66e4a4-4199-4fd8-a0f4-d09a78233985",
+        "1ce59b90-c898-4f5a-a249-7be05c5c36c5",
+        "8497ed0b-d1fd-4273-ac81-1bfe690984d6",
+        "0aa6ceb6-bba9-45c2-98a7-c7ff17fb9e6f",
+        "d59baf37-6f0f-4988-833c-eea4911a0683",
+        "52e296d3-066e-4ee1-a731-74c5ff8b8342",
+        "108dead1-3942-4c36-9ca1-cb855da73195",
+        "0ee3ef99-f9fd-46d1-aa19-c78aa0a935d9",
+        "59e2ed6e-4aae-447f-bf4e-ad6f5e0d48cb",
+        "99b030e9-f917-4584-8772-63b98e33b396",
+        "627f224f-ef11-4dd9-a310-e3b59fe251c4",
+        "560a9fe2-9d9e-42b2-b35c-aa94fdf7fee2"
+      ],
+      "settings": {
+        "title1": "Summer",
+        "title2": "skincare essentials",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/summer-skincare",
+        "button_position": "top"
+      }
+    },
+    "fbd8009f-1ee0-4a6a-8ff7-65b9174218f4": {
+      "type": "amala-earth-curation",
+      "blocks": {
+        "06b0dc12-25c2-4e84-9c3b-8f7472e0b132": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/clean-beauty-banner.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/clean_beauty_banner-mobile_b6a15487-d4fe-4390-b431-dc8eac424853.png",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/uf-eb"
+          }
+        },
+        "f9304783-95b9-408f-aa41-66b194d5b114": {
+          "type": "Banner",
+          "disabled": true,
+          "settings": {
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "06b0dc12-25c2-4e84-9c3b-8f7472e0b132",
+        "f9304783-95b9-408f-aa41-66b194d5b114"
+      ],
+      "settings": {
+        "curation_heading1": "",
+        "curation_sub_heading2": ""
+      }
+    },
+    "599fb9d5-a3b4-4dd1-a141-eef20c6845ef": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "e5c71f4c-9ece-4007-9f05-d0726ff0a62e": {
+          "type": "Product",
+          "settings": {
+            "product": "maati-petrichor-organic-attar-fragrance-3ml"
+          }
+        },
+        "3b627a98-e96a-4567-a46b-b999aff61fbb": {
+          "type": "Product",
+          "settings": {
+            "product": "ohria-ayurveda-natural-deodorant-amaltas-khus-50-ml-ad051-221122"
+          }
+        },
+        "b64a0e63-5167-4ddc-87e6-a545db26fa90": {
+          "type": "Product",
+          "settings": {
+            "product": "luxury-perfumes-gift-set-for-men-20-ml-set-of-4"
+          }
+        },
+        "77fd30f6-7039-489c-b5d1-ea93f2ba57f5": {
+          "type": "Product",
+          "settings": {
+            "product": "saffron-infused-in-musk-amber-regal-fragrance-50ml"
+          }
+        },
+        "14130e83-6507-434f-b50b-e3373c61191b": {
+          "type": "Product",
+          "settings": {
+            "product": "attar-perfume-sandali-mitti-sandalwood-based-mitti-attar-6-ml"
+          }
+        },
+        "c08f83b7-f2d8-485f-8371-5393fdf26dd3": {
+          "type": "Product",
+          "settings": {
+            "product": "just-herbs-perfume-eau-de-parfum-hints-of-spices-flowers-unisex-20-ml-8906107054255-110123"
+          }
+        },
+        "688c4a65-86c2-42f4-9334-ed326693da45": {
+          "type": "Product",
+          "settings": {
+            "product": "juicy-chemistry-deodorant-stick-blood-orange-geranium-70-g-jc0302-201222"
+          }
+        },
+        "7f93e4de-8586-40c8-9e23-9fb584271163": {
+          "type": "Product",
+          "settings": {
+            "product": "a-regal-indulgence-white-oud-fragrance-8ml"
+          }
+        },
+        "13e2cc4d-7f23-41e9-aa75-a1f8a1037324": {
+          "type": "Product",
+          "settings": {
+            "product": "deo-shot-grapefruit-ylang-ylang-20-g"
+          }
+        }
+      },
+      "block_order": [
+        "e5c71f4c-9ece-4007-9f05-d0726ff0a62e",
+        "3b627a98-e96a-4567-a46b-b999aff61fbb",
+        "b64a0e63-5167-4ddc-87e6-a545db26fa90",
+        "77fd30f6-7039-489c-b5d1-ea93f2ba57f5",
+        "14130e83-6507-434f-b50b-e3373c61191b",
+        "c08f83b7-f2d8-485f-8371-5393fdf26dd3",
+        "688c4a65-86c2-42f4-9334-ed326693da45",
+        "7f93e4de-8586-40c8-9e23-9fb584271163",
+        "13e2cc4d-7f23-41e9-aa75-a1f8a1037324"
+      ],
+      "settings": {
+        "title1": "Fresh",
+        "title2": "fragrances",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/fragrances",
+        "button_position": "top"
+      }
+    },
+    "526e67bb-2f95-49e3-850c-de71d1b24577": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "912b04c9-3cb2-4070-a354-898180688d0c": {
+          "type": "Product",
+          "settings": {
+            "product": "conscious-chemist-radiance-de-tan-face-mask-for-dull-skin-50-ml-pack-of-2-ccfb02-301122"
+          }
+        },
+        "77550771-828e-470a-a758-5b15c3cd3321": {
+          "type": "Product",
+          "settings": {
+            "product": "pureearth-mitti-raw-honey-face-masque-100-ml-t-mhm-100-180822"
+          }
+        },
+        "b2c9eeaa-d6e8-4709-bd94-6bdb407907e6": {
+          "type": "Product",
+          "settings": {
+            "product": "essential-oils-hair-conditioner-bar"
+          }
+        },
+        "da0ae1c5-d2f9-4c36-8966-36e9965fd84e": {
+          "type": "Product",
+          "settings": {
+            "product": "just-herbs-hydrating-skin-tint-sun-protection-with-spf-15-almond-40-ml-jh-st-8-51122"
+          }
+        },
+        "18dc5aa6-07af-4852-ada9-f59781b10318": {
+          "type": "Product",
+          "settings": {
+            "product": "gush-beauty-3-in-1-multi-purpose-face-palette-6-9-gsiyf-01w2w-200922"
+          }
+        },
+        "d70e8e5c-c084-4faf-a565-1a92fbf29ead": {
+          "type": "Product",
+          "settings": {
+            "product": "mellow-jval-face-pack-sandalwood-turmeric-reduce-acne-scars-50-g-jval-pack-30323"
+          }
+        },
+        "a3f4a0eb-7c98-4f1a-b24b-28c3731cb151": {
+          "type": "Product",
+          "settings": {
+            "product": "trudiance-creme-lipstick-boosts-collagen-calla-lily-4-g-clcl01-180423"
+          }
+        },
+        "b80ee0c8-5bf0-4556-aec3-40dfe8d5b69f": {
+          "type": "Product",
+          "settings": {
+            "product": "souvenir-perfume-eau-de-parfum-de-paradise-for-women-long-lasting-strong-100-ml-sdpw-290323"
+          }
+        },
+        "51397116-0961-4179-8e18-3bb12b17db02": {
+          "type": "Product",
+          "settings": {
+            "product": "just-herbs-perfume-eau-de-parfum-hints-of-berries-flowers-forest-wood-100-ml-8906107053715-110123"
+          }
+        },
+        "d3cd9d03-5eb8-496a-bf2d-c190d36b5b36": {
+          "type": "Product",
+          "settings": {
+            "product": "rubys-organics-hydra-concealer-blemishes-redness-6-5-ml-611851951238-221122"
+          }
+        },
+        "b9bdb733-3835-40a1-ac8e-c8d9eccec553": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "teeth-a-bit-clove-cinnamon-mint-toothpaste-tablets-60-tabs-tpt-mp-as-cc-141022"
+          }
+        },
+        "a3684743-8e71-40bc-9c28-172b207c465a": {
+          "type": "Product",
+          "settings": {
+            "product": "vilvah-milk-mud-mask-instant-brightness-glow-face-50-ml-vl-sc-69-231122"
+          }
+        },
+        "a7c88fd2-682d-4b5c-9863-72ae0e10be83": {
+          "type": "Product",
+          "settings": {
+            "product": "just-herbs-8-in-1-eyeshadow-lidsticks-infinity-and-beyond-12-g-8906107054378-151122"
+          }
+        },
+        "9c26b8b8-2bf5-454d-90d5-204654a5c213": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "conscious-chemist-hydro-moisturiser-serum-skin-hydration-pack-of-2-cchpsm-301122"
+          }
+        },
+        "e2726a06-e70d-4011-b040-5c56ac12d60c": {
+          "type": "Product",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "912b04c9-3cb2-4070-a354-898180688d0c",
+        "77550771-828e-470a-a758-5b15c3cd3321",
+        "b2c9eeaa-d6e8-4709-bd94-6bdb407907e6",
+        "da0ae1c5-d2f9-4c36-8966-36e9965fd84e",
+        "18dc5aa6-07af-4852-ada9-f59781b10318",
+        "d70e8e5c-c084-4faf-a565-1a92fbf29ead",
+        "a3f4a0eb-7c98-4f1a-b24b-28c3731cb151",
+        "b80ee0c8-5bf0-4556-aec3-40dfe8d5b69f",
+        "51397116-0961-4179-8e18-3bb12b17db02",
+        "d3cd9d03-5eb8-496a-bf2d-c190d36b5b36",
+        "b9bdb733-3835-40a1-ac8e-c8d9eccec553",
+        "a3684743-8e71-40bc-9c28-172b207c465a",
+        "a7c88fd2-682d-4b5c-9863-72ae0e10be83",
+        "9c26b8b8-2bf5-454d-90d5-204654a5c213",
+        "e2726a06-e70d-4011-b040-5c56ac12d60c"
+      ],
+      "settings": {
+        "title1": "Newly",
+        "title2": "launched",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "",
+        "button_position": "top"
+      }
+    },
+    "3ce8650f-ee5d-4ec2-8c3e-43b4fde36a2f": {
+      "type": "custom-grid",
+      "blocks": {
+        "9f57f552-0ea6-4e2b-8b7a-a4f12d36551b": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/summer_essentials_1.png",
+            "title": "Summer essentials",
+            "block_button_url": "https:\/\/amala.earth\/collections\/summer-skincare"
+          }
+        },
+        "bad5f3ff-9274-4267-9c3e-9a6deba99ea1": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/Teeth-powder-L-2-_1.png",
+            "title": "Oral-Care",
+            "block_button_url": "https:\/\/amala.earth\/collections\/oral-care"
+          }
+        },
+        "4ba4ea05-4dcd-44b1-8e66-b2e11c1d8eca": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/Dry_oily_skin-desktop.jpg",
+            "title": "Dry & oily skin",
+            "block_button_url": "https:\/\/amala.earth\/collections\/natural-skincare?f_Skin%20Concern=Dry+Skin,Oil+Control"
+          }
+        },
+        "46dcfbea-f442-422a-8f61-c28429a2d9a2": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/Rectangle_165-4.png",
+            "title": "Odour control",
+            "block_button_url": "https:\/\/amala.earth\/collections\/fragrances"
+          }
+        },
+        "9d8a0cc5-207d-4537-b54a-dd1666611f34": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/Sunprotection_2.png",
+            "title": "Sun protection",
+            "block_button_url": "https:\/\/amala.earth\/collections\/natural-skincare?f_Type=Sunscreen,Face+Masks+and+Scrub"
+          }
+        },
+        "adb9e735-9398-4722-9a2d-a10e739bacf6": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/hairfall_1.png",
+            "title": "Hairfall",
+            "block_button_url": "https:\/\/amala.earth\/collections\/hair-care?f_Hair%20Concern=Hairfall+%26+Thinning,Hair+Growth"
+          }
+        }
+      },
+      "block_order": [
+        "9f57f552-0ea6-4e2b-8b7a-a4f12d36551b",
+        "bad5f3ff-9274-4267-9c3e-9a6deba99ea1",
+        "4ba4ea05-4dcd-44b1-8e66-b2e11c1d8eca",
+        "46dcfbea-f442-422a-8f61-c28429a2d9a2",
+        "9d8a0cc5-207d-4537-b54a-dd1666611f34",
+        "adb9e735-9398-4722-9a2d-a10e739bacf6"
+      ],
+      "settings": {
+        "subtitle": "Shop by",
+        "title": "concern"
+      }
+    },
+    "7e727bcc-acea-4a68-bf80-27371ae6d902": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "31fb0fb1-31fc-4221-b26b-b3e53253464e": {
+          "type": "Product",
+          "settings": {
+            "product": "honey-fix-face-cleanser-100-ml"
+          }
+        },
+        "45c49ccf-a090-4093-bc1c-f1fa6114aa75": {
+          "type": "Product",
+          "settings": {
+            "product": "nat-habit-kaolin-aparajita-face-pack-mask-clears-marks-tan-40-g-fc-kl-ka-040-160922"
+          }
+        },
+        "72995800-ecf7-46ec-b2ff-f4be43592e1e": {
+          "type": "Product",
+          "settings": {
+            "product": "juicy-chemistry-facial-oil-rosehip-anti-scarring-pigmentation-control-10-ml-jc0618-201222"
+          }
+        },
+        "3236e110-6734-4bb4-b349-a468b6a2fe78": {
+          "type": "Product",
+          "settings": {
+            "product": "glycolic-salicylic-acid-serum-15-ml"
+          }
+        },
+        "2adff8ad-1882-4d1c-8509-740808a590dd": {
+          "type": "Product",
+          "settings": {
+            "product": "anti-pollution-kit"
+          }
+        },
+        "6cea51e5-a84f-4047-a3b9-f6261f8a7aa2": {
+          "type": "Product",
+          "settings": {
+            "product": "nat-habit-neem-ajwain-face-pack-mask-removes-blackheads-40-g-fc-kl-na-040-160922"
+          }
+        },
+        "c48fc1bc-5aa8-495a-9c7e-080f491621f5": {
+          "type": "Product",
+          "settings": {
+            "product": "ayurvedic-anti-aging-face-oil-i-10-ml"
+          }
+        },
+        "70927f2a-7341-46d8-8531-ecd81dbba1d4": {
+          "type": "Product",
+          "settings": {
+            "product": "under-eye-cream-dark-circle-control-20-ml"
+          }
+        },
+        "4ee9fc76-081b-4464-b9d5-8c5446466468": {
+          "type": "Product",
+          "settings": {
+            "product": "sohmya-sandalwood-de-tan-face-pack-50-g-smf050gm004-50922"
+          }
+        }
+      },
+      "block_order": [
+        "31fb0fb1-31fc-4221-b26b-b3e53253464e",
+        "45c49ccf-a090-4093-bc1c-f1fa6114aa75",
+        "72995800-ecf7-46ec-b2ff-f4be43592e1e",
+        "3236e110-6734-4bb4-b349-a468b6a2fe78",
+        "2adff8ad-1882-4d1c-8509-740808a590dd",
+        "6cea51e5-a84f-4047-a3b9-f6261f8a7aa2",
+        "c48fc1bc-5aa8-495a-9c7e-080f491621f5",
+        "70927f2a-7341-46d8-8531-ecd81dbba1d4",
+        "4ee9fc76-081b-4464-b9d5-8c5446466468"
+      ],
+      "settings": {
+        "title1": "Concern",
+        "title2": "base",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/hair-care?f_Hair%20Concern=Dandruff",
+        "button_position": "top"
+      }
+    },
+    "2bd14898-d935-4349-9e83-f4372de58bf7": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "cfa4c56f-99a3-44dd-bf10-6ecfcd15f9a5": {
+          "type": "Product",
+          "settings": {
+            "product": "lip-balm-mauve-pink-cruelty-free-3-2-ml"
+          }
+        },
+        "65342066-f6a1-4e0c-8a31-266b1fa66266": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-lipstick-kit-enriched-ayurvedic-matte-deep-reds-set-of-5"
+          }
+        },
+        "dd81d6c2-b03a-4387-9f4e-85e9163ea1d5": {
+          "type": "Product",
+          "settings": {
+            "product": "color-chemistry-cream-concealer-matte-finish-lightweight-tundra-co07-2-98-g-cc0102-270223"
+          }
+        },
+        "d760c1ea-653e-4cae-9837-878a318fc89b": {
+          "type": "Product",
+          "settings": {
+            "product": "rubys-organics-mascara-hair-growth-black-6-5-ml-758277398664-221122"
+          }
+        },
+        "b1a77b35-304f-457b-b1a2-c39c726e486e": {
+          "type": "Product",
+          "settings": {
+            "product": "just-herbs-natural-9-in-1-eyeshadow-palette-sunshine-day-palette-9-g-8906107054170-110123"
+          }
+        },
+        "d9316e50-997c-4f71-b34f-f532012be4d3": {
+          "type": "Product",
+          "settings": {
+            "product": "velvet-glow-multistick-highlighter"
+          }
+        },
+        "056f647c-c1d7-437e-8233-11c3955d3f53": {
+          "type": "Product",
+          "settings": {
+            "product": "mini-creme-lipstick"
+          }
+        },
+        "d7926a33-817c-4fa5-bd0d-7d47e84f6770": {
+          "type": "Product",
+          "settings": {
+            "product": "blush-natural-glow-talc-free-vegan-peach-2-3-g"
+          }
+        },
+        "80820f18-87a0-4a91-af2a-5729f89510de": {
+          "type": "Product",
+          "settings": {
+            "product": "rubys-organics-skin-tint-foundation-cruelty-free-light-medium-30-ml-758277398619-221122"
+          }
+        },
+        "53a0122f-376d-440e-92b6-8d797cb6f8bd": {
+          "type": "Product",
+          "settings": {
+            "product": "just-herbs-concealer-mango-butter-liqourice-brightening-correcting-beige-6-ml-8906107055184-220323"
+          }
+        },
+        "06faf630-3377-4d17-ac4a-17d4706a1b4a": {
+          "type": "Product",
+          "settings": {
+            "product": "gush-beauty-liquid-lipstick-multipurpose-4-in-1-stack-nuditude-8-4-g-ss-nd-10323"
+          }
+        },
+        "3d2810cb-434f-4ca9-8841-628f6fd11487": {
+          "type": "Product",
+          "settings": {
+            "product": "herbal-eyeliner-kajal-paraben-free"
+          }
+        },
+        "589a627e-b03c-4828-b365-caf75de093f1": {
+          "type": "Product",
+          "settings": {
+            "product": "amayra-naturals-skin-liquid-tint-chandani-cruelty-free-4-g-anmcst01-210223"
+          }
+        }
+      },
+      "block_order": [
+        "cfa4c56f-99a3-44dd-bf10-6ecfcd15f9a5",
+        "65342066-f6a1-4e0c-8a31-266b1fa66266",
+        "dd81d6c2-b03a-4387-9f4e-85e9163ea1d5",
+        "d760c1ea-653e-4cae-9837-878a318fc89b",
+        "b1a77b35-304f-457b-b1a2-c39c726e486e",
+        "d9316e50-997c-4f71-b34f-f532012be4d3",
+        "056f647c-c1d7-437e-8233-11c3955d3f53",
+        "d7926a33-817c-4fa5-bd0d-7d47e84f6770",
+        "80820f18-87a0-4a91-af2a-5729f89510de",
+        "53a0122f-376d-440e-92b6-8d797cb6f8bd",
+        "06faf630-3377-4d17-ac4a-17d4706a1b4a",
+        "3d2810cb-434f-4ca9-8841-628f6fd11487",
+        "589a627e-b03c-4828-b365-caf75de093f1"
+      ],
+      "settings": {
+        "title1": "Cruelty-free",
+        "title2": "makeup",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/makeup-and-nails",
+        "button_position": "top"
+      }
+    },
+    "86f09998-5ddc-4f04-bac9-68f3b0ef81b9": {
+      "type": "amala-earth-curation",
+      "blocks": {
+        "203fcfe2-2443-49c8-badd-db8bb8e63d0e": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/vegan-banner.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/vegan-banner-mobile.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/pages\/vegan"
+          }
+        }
+      },
+      "block_order": [
+        "203fcfe2-2443-49c8-badd-db8bb8e63d0e"
+      ],
+      "settings": {
+        "curation_heading1": "",
+        "curation_sub_heading2": ""
+      }
+    },
+    "f08b6ff6-e74b-481a-a7f4-283ef888d23b": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "921f281e-b989-44c8-9210-d4ce6aebd7ea": {
+          "type": "Product",
+          "settings": {
+            "product": "natural-vibes-kansa-hair-comb-reduce-hair-fall-growth-circulation-stress-relief-nv_kansa_comb-140223"
+          }
+        },
+        "1702361d-5b53-40ce-8ab5-6f4fc5bb1b94": {
+          "type": "Product",
+          "settings": {
+            "product": "indus-hemp-hair-oil-tea-tree-eucalyptus-oil-reduces-hair-fall-200-ml-8906146170237-170323"
+          }
+        },
+        "30c1bf27-d117-4201-b317-f606cac47595": {
+          "type": "Product",
+          "settings": {
+            "product": "nat-habit-hibiscus-hair-mask-hairfall-control-40-g-pack-of-2-hr-nm-hb2-040-160922"
+          }
+        },
+        "deef6cff-a4c7-4685-bea4-4fb1281c1c6b": {
+          "type": "Product",
+          "settings": {
+            "product": "bhimal-black-onion-seed-hair-oil-100-ml"
+          }
+        },
+        "b7697578-bc1a-4085-9390-7f6f964d10c5": {
+          "type": "Product",
+          "settings": {
+            "product": "natural-vibes-tea-tree-shampoo-controls-dandruff-hairfall-150-ml-nv_teatree_shampoo_150ml-270922"
+          }
+        },
+        "d15fa4ee-5936-4bb4-8832-2c94cb13c81d": {
+          "type": "Product",
+          "settings": {
+            "product": "hair-growth-oil-sulphates-free-100-ml"
+          }
+        },
+        "307bb18a-a3be-40f7-9d25-d6bce8888450": {
+          "type": "Product",
+          "settings": {
+            "product": "vikarah-hibiscus-khus-kesah-thailam-hair-oil-hairfall-control-100ml-vhbrholchk02024-271022"
+          }
+        },
+        "798c70c4-2704-4711-adf1-a14130aa31c2": {
+          "type": "Product",
+          "settings": {
+            "product": "tac-the-ayurveda-co-methi-hair-shampoo-hairfall-dandruff-control-200-ml-724049782191-231222"
+          }
+        },
+        "d069811b-05c6-4d4a-ac0c-8f414005f4ea": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-hairfall-control-shampoo-500-ml"
+          }
+        },
+        "c3e597ec-ba77-4421-9b59-0241efbd2465": {
+          "type": "Product",
+          "settings": {
+            "product": "khadi-essentials-sandalwood-shampoo-hairfall-control-strengthens-roots-200-ml-734439060440-14722"
+          }
+        },
+        "09525c45-5fe8-4f27-87bf-ea722287a03c": {
+          "type": "Product",
+          "settings": {
+            "product": "revive-therapeutic-anti-hairfall-oil-50ml"
+          }
+        },
+        "ff3f60f4-a46b-47ad-803a-6d0eae431ba9": {
+          "type": "Product",
+          "settings": {
+            "product": "sohmya-hibiscus-rich-hair-vitalizer-reduces-hairfall-100-ml-smh100ml017-50922"
+          }
+        }
+      },
+      "block_order": [
+        "921f281e-b989-44c8-9210-d4ce6aebd7ea",
+        "1702361d-5b53-40ce-8ab5-6f4fc5bb1b94",
+        "30c1bf27-d117-4201-b317-f606cac47595",
+        "deef6cff-a4c7-4685-bea4-4fb1281c1c6b",
+        "b7697578-bc1a-4085-9390-7f6f964d10c5",
+        "d15fa4ee-5936-4bb4-8832-2c94cb13c81d",
+        "307bb18a-a3be-40f7-9d25-d6bce8888450",
+        "798c70c4-2704-4711-adf1-a14130aa31c2",
+        "d069811b-05c6-4d4a-ac0c-8f414005f4ea",
+        "c3e597ec-ba77-4421-9b59-0241efbd2465",
+        "09525c45-5fe8-4f27-87bf-ea722287a03c",
+        "ff3f60f4-a46b-47ad-803a-6d0eae431ba9"
+      ],
+      "settings": {
+        "title1": "Remedies",
+        "title2": "for hairfall ",
+        "logged_in": false,
+        "products_count": 38,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/hair-care?f_Hair%20Concern=Hairfall+%26+Thinning,Hair+Growth",
+        "button_position": "top"
+      }
+    },
+    "99562c33-2413-46de-993c-de993a3a2132": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "f9e5079d-8bfe-4bff-980c-f9a386a88dad": {
+          "type": "Product",
+          "settings": {
+            "product": "vilvah-store-mens-skincare-gift-set-vl-gs-02191022"
+          }
+        },
+        "4f75eb1d-2158-468b-82d2-96646cda2720": {
+          "type": "Product",
+          "settings": {
+            "product": "belle-vita-organic-skincare-rituals-gift-box-pack-of-7-8906150342279-90922"
+          }
+        },
+        "98e4fd1c-607d-486b-b22d-2895ea2e9406": {
+          "type": "Product",
+          "settings": {
+            "product": "natural-vibes-skin-care-gift-set-face-roller-gua-sha-flower-oil-pack-of-3-nv_gift_rose_toolcombo_oil-270922"
+          }
+        },
+        "54113b8a-173e-4908-92bc-241531870c8f": {
+          "type": "Product",
+          "settings": {
+            "product": "earthhium-whipped-cream-soap-paraben-free-pack-of-3-e-035-290922"
+          }
+        },
+        "32116399-1f97-41dd-a3e7-6efe93a25723": {
+          "type": "Product",
+          "settings": {
+            "product": "beige-neem-wood-grooming-kit-set-of-6"
+          }
+        },
+        "9830a20d-360d-4165-9bee-53d741fca76e": {
+          "type": "Product",
+          "settings": {
+            "product": "myra-veda-beauty-care-gift-hamper-pack-of-12-mvgh-012-131022"
+          }
+        },
+        "9086d3b0-a928-4225-b312-bd25338e55ed": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-sitara-fragrance-gift-box"
+          }
+        },
+        "bb432cb4-335e-4546-b9f4-be40dbad20cc": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-hand-and-body-care-indulgence-oil-gift-box"
+          }
+        },
+        "153300da-c915-4743-b719-b96b2dbc0aff": {
+          "type": "Product",
+          "settings": {
+            "product": "vilvah-store-skincare-gift-box-kit-vl-gs-03191022"
+          }
+        }
+      },
+      "block_order": [
+        "f9e5079d-8bfe-4bff-980c-f9a386a88dad",
+        "4f75eb1d-2158-468b-82d2-96646cda2720",
+        "98e4fd1c-607d-486b-b22d-2895ea2e9406",
+        "54113b8a-173e-4908-92bc-241531870c8f",
+        "32116399-1f97-41dd-a3e7-6efe93a25723",
+        "9830a20d-360d-4165-9bee-53d741fca76e",
+        "9086d3b0-a928-4225-b312-bd25338e55ed",
+        "bb432cb4-335e-4546-b9f4-be40dbad20cc",
+        "153300da-c915-4743-b719-b96b2dbc0aff"
+      ],
+      "settings": {
+        "title1": "Gift",
+        "title2": "hampers",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "",
+        "button_position": "top"
+      }
+    },
+    "5197c485-96a4-4d12-a1d7-a756d4b39fe6": {
+      "type": "highlighted-brands",
+      "settings": {
+        "select_your_heading1": "Highlighted",
+        "select_your_heading2": "brand",
+        "highlighted_brands_desktop": "shopify:\/\/shop_images\/highlighted_brand_-_desktop_ellement_co.png",
+        "highlighted_brands": "shopify:\/\/shop_images\/highlighted_brand-mobile_ellement_co.png",
+        "title": "ELLEMENT.CO",
+        "anchor_text": "Explore the brand",
+        "url_link": "https:\/\/amala.earth\/collections\/Ellement-Co"
+      }
+    },
+    "c0308d8b-0365-4681-af50-ffdc0d63c61f": {
+      "type": "brands-we-love",
+      "blocks": {
+        "38234968-9399-4c2a-8f06-53fecc26273e": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_628_5465dd8c-2108-4e7b-aa00-62fc1a853868.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_664.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/ellement-co"
+          }
+        },
+        "e54f33f8-ccee-4ced-a94d-5c20d751f656": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_663.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_670_96c85d5f-f525-49aa-836e-728159e3f2df.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/ethical-beauty?f_Brand=Vilvah+Store"
+          }
+        },
+        "8491926f-84ac-42be-af37-ad2adf1deff1": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_660.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_667.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/ethical-beauty?f_Brand=Just+Herbs"
+          }
+        },
+        "318abb6b-bcc3-459f-9b9a-bb4c3073b889": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_634_e81cd4b1-8443-4245-a6df-8714fac9ccb6.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_665.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/ethical-beauty?f_Brand=Anahata"
+          }
+        },
+        "075c9c70-fab8-4cd0-98a8-7c382ae22770": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_659_ead51903-14a9-48bd-ab11-6b8ab8a16811.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_669_67c12126-fa1e-404a-a176-bddaeaf4a8dc.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/ethical-beauty?f_Brand=mCaffeine"
+          }
+        },
+        "c86d9ee4-a443-4369-987f-17c8856e99ad": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_655_cd49cb46-d9a5-47d0-918f-e4f34d0afe23.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_671_b773f64d-c2cb-4641-89be-4ee0ec92c003.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/ethical-beauty?f_Brand=Amrutam"
+          }
+        },
+        "3bcd13ce-366a-4263-8e53-b0d47815bf1a": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_661.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_672_707c25b5-3b1a-45d6-b2be-5d8e766e16e0.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/bare-necessities"
+          }
+        },
+        "16891b45-c1cc-4ea3-8a15-0e45471fd314": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_662.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_668.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/disguise-cosmetics"
+          }
+        },
+        "7fb470c1-d504-4423-ab2b-72f354eb4a0b": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_656.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_666.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/ethical-beauty?f_Brand=Nat+Habit"
+          }
+        },
+        "de9e2fc9-e677-44bc-8769-843d2d77d09b": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_658.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_673_82dd2d24-4fd1-46e6-8531-c58f1a2c36af.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/ethical-beauty?f_Brand=Bella+Vita+Organic"
+          }
+        }
+      },
+      "block_order": [
+        "38234968-9399-4c2a-8f06-53fecc26273e",
+        "e54f33f8-ccee-4ced-a94d-5c20d751f656",
+        "8491926f-84ac-42be-af37-ad2adf1deff1",
+        "318abb6b-bcc3-459f-9b9a-bb4c3073b889",
+        "075c9c70-fab8-4cd0-98a8-7c382ae22770",
+        "c86d9ee4-a443-4369-987f-17c8856e99ad",
+        "3bcd13ce-366a-4263-8e53-b0d47815bf1a",
+        "16891b45-c1cc-4ea3-8a15-0e45471fd314",
+        "7fb470c1-d504-4423-ab2b-72f354eb4a0b",
+        "de9e2fc9-e677-44bc-8769-843d2d77d09b"
+      ],
+      "settings": {
+        "heading_one": "Brands",
+        "heading_two": "we love",
+        "btn_text": "",
+        "url_link": ""
+      }
+    },
+    "e586631e-24fe-48b7-b70f-893baaef04d1": {
+      "type": "product-carousel",
+      "blocks": {
+        "5262cd1b-749f-492a-9480-62d575ab6448": {
+          "type": "combo",
+          "settings": {
+            "combo_image_desktop": "shopify:\/\/shop_images\/Group_676_b970ab0d-235d-48f7-b70b-319f46a0188e.png",
+            "combo_image_mobile": "shopify:\/\/shop_images\/Group_696.png",
+            "combo_link": "https:\/\/amala.earth\/products\/vilvah-chocomint-lip-balm-lip-scrub-combo-vl-kt-08-250722",
+            "title": "Lip balm & scrub"
+          }
+        },
+        "b0e9e0ea-0c20-45c1-9da0-e3d9696e0060": {
+          "type": "combo",
+          "settings": {
+            "combo_image_desktop": "shopify:\/\/shop_images\/Group_679_f90ffd72-e120-4826-b0f4-98df4312bcdc.png",
+            "combo_image_mobile": "shopify:\/\/shop_images\/Group_700.png",
+            "combo_link": "https:\/\/amala.earth\/products\/gush-beauty-face-palette-glow-better-moisturiser-pack-of-2bn-ggs-200922",
+            "title": "Pack of Make-up kit"
+          }
+        },
+        "8e916a88-c445-4971-994a-9b44f45cff23": {
+          "type": "combo",
+          "settings": {
+            "combo_image_desktop": "shopify:\/\/shop_images\/Group_677_4a47f618-2e9c-45ac-8bf5-431c31884c23.png",
+            "combo_image_mobile": "shopify:\/\/shop_images\/Group_697.png",
+            "combo_link": "https:\/\/amala.earth\/products\/handcrafted-maati-petrichor-motiya-jasmine-gulabi-indian-rose-fragrance-set-of-3",
+            "title": "Set of 3 Attar Perfume"
+          }
+        },
+        "4b49745b-946b-4bba-b044-58c071ede4d0": {
+          "type": "combo",
+          "settings": {
+            "combo_image_desktop": "shopify:\/\/shop_images\/Group_674_c14b071a-12ff-4867-9b1a-13d46e311d52.png",
+            "combo_image_mobile": "shopify:\/\/shop_images\/Group_694_67123a7b-af33-49cf-8495-7a6408024af3.png",
+            "combo_link": "https:\/\/amala.earth\/products\/belle-vita-organic-skin-care-combo-gift-box-pack-of-5-8906150342224-90922",
+            "title": "Skin Care Combo "
+          }
+        },
+        "fec80874-19fc-4719-a1a5-1af69e2bde33": {
+          "type": "combo",
+          "settings": {
+            "combo_image_desktop": "shopify:\/\/shop_images\/Group_712.png",
+            "combo_image_mobile": "shopify:\/\/shop_images\/Group_701.png",
+            "combo_link": "https:\/\/amala.earth\/products\/vilvah-frizz-free-hair-combo-set-of-3-vl-kt-19-250722",
+            "title": "Set of 3  Hair Combo"
+          }
+        },
+        "8f9f93ec-49e0-4bcd-82b3-c667b8164c9a": {
+          "type": "combo",
+          "settings": {
+            "combo_image_desktop": "shopify:\/\/shop_images\/Group_678_acdca231-f8f6-4ef5-a650-c40d51144ae9.png",
+            "combo_image_mobile": "shopify:\/\/shop_images\/Group_699.png",
+            "combo_link": "https:\/\/amala.earth\/products\/earthhium-luxury-skin-care-gift-box-matcha-facial-jar-saffron-face-toner-pack-of-2-e-021-290922",
+            "title": "Skin Care Combo"
+          }
+        },
+        "a028319c-811d-44b1-89ca-da5b7e0ce579": {
+          "type": "combo",
+          "settings": {
+            "combo_image_desktop": "shopify:\/\/shop_images\/Group_680_b0de9ea1-2ec5-4d9d-ba6c-7a5bc32c7ee2.png",
+            "combo_image_mobile": "shopify:\/\/shop_images\/Group_698.png",
+            "combo_link": "https:\/\/amala.earth\/products\/shampoo-combo-kuntal-care-herbal-shampoo-a-bhringraj-hair-therapy",
+            "title": "Shampoo with Conditioner"
+          }
+        },
+        "9c6b812d-dbf8-4265-8c11-40262aacc0d1": {
+          "type": "combo",
+          "settings": {
+            "combo_image_desktop": "shopify:\/\/shop_images\/Group_710.png",
+            "combo_image_mobile": "shopify:\/\/shop_images\/Group_703.png",
+            "combo_link": "",
+            "title": "Pack of 3  Natural Nail Polish"
+          }
+        },
+        "79cf8644-71e4-4ee0-900f-0c625edc81b1": {
+          "type": "combo",
+          "settings": {
+            "combo_image_desktop": "shopify:\/\/shop_images\/Group_675_505a3b25-2fc3-41bc-987b-ae47df96ab44.png",
+            "combo_image_mobile": "shopify:\/\/shop_images\/Group_695.png",
+            "combo_link": "https:\/\/amala.earth\/products\/aloe-intense-cleanse-pack-hair-growth-420-ml",
+            "title": "Hair Cleanser Combo"
+          }
+        },
+        "9548ab0f-1419-462c-ac18-70a2475e682c": {
+          "type": "combo",
+          "settings": {
+            "combo_image_desktop": "shopify:\/\/shop_images\/Group_711.png",
+            "combo_image_mobile": "shopify:\/\/shop_images\/Group_702.png",
+            "combo_link": "",
+            "title": "Set of 3  Face Pack"
+          }
+        }
+      },
+      "block_order": [
+        "5262cd1b-749f-492a-9480-62d575ab6448",
+        "b0e9e0ea-0c20-45c1-9da0-e3d9696e0060",
+        "8e916a88-c445-4971-994a-9b44f45cff23",
+        "4b49745b-946b-4bba-b044-58c071ede4d0",
+        "fec80874-19fc-4719-a1a5-1af69e2bde33",
+        "8f9f93ec-49e0-4bcd-82b3-c667b8164c9a",
+        "a028319c-811d-44b1-89ca-da5b7e0ce579",
+        "9c6b812d-dbf8-4265-8c11-40262aacc0d1",
+        "79cf8644-71e4-4ee0-900f-0c625edc81b1",
+        "9548ab0f-1419-462c-ac18-70a2475e682c"
+      ],
+      "settings": {
+        "heading_one": "Curated",
+        "heading_two": "combos",
+        "btn_text": "",
+        "url_link": ""
+      }
+    },
+    "a7ea0487-7e3a-4b47-a708-8bb88a506e59": {
+      "type": "blog-posts-carousel",
+      "blocks": {
+        "3efd4656-239f-4d9c-8c26-c3ef56205f20": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/natural-summer-skincare.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/natural-summer-skincare-rituals",
+            "title": "Natural Summer Skincare Rituals"
+          }
+        },
+        "d755903b-8620-4fbd-a113-8404281f35f1": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Skincare-1.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/winter-skin-care-essentials-how-to-get-rid-of-dry-skin",
+            "title": "Winter Skin Care Essentials: How to Get Rid of Dry Skin"
+          }
+        },
+        "e3bbb9f0-8c3b-4247-9abe-80373ac4a94c": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Skincare-2.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/what-do-aha-and-bha-mean-in-skincare-why-is-it-important-to-consider-it",
+            "title": "What do AHA and BHA mean in skincare? Why is it important to consider it?"
+          }
+        },
+        "f7883cfd-14da-4a4b-80f6-5418ecdf8110": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Nailpaint.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/vegan-nail-paint-yes-now-nail-it-with-cruelty-free-and-non-toxic-nail-paint",
+            "title": "Vegan Nail Paint? Yes! Now Nail It With Cruelty-Free And Non-Toxic Nail Paint"
+          }
+        },
+        "2e4f2e1f-0b41-4e0a-81c4-87c6000e864a": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Oralcare.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/breath-of-fresh-air-the-best-sustainable-oral-care-products",
+            "title": "Breath of Fresh Air: The Best Sustainable Oral Care Products"
+          }
+        },
+        "e030cd63-9da3-4563-864d-74b6b6e62a30": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Oral_care.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/how-to-gradually-adopt-a-clean-beauty-routine",
+            "title": "How to Gradually Adopt A Clean Beauty Routine"
+          }
+        },
+        "49bc4d51-8a54-4fa6-9506-b04db4416416": {
+          "type": "blog",
+          "disabled": true,
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/6_Responsible_Fashion_Brands_We_Are_Sure_You_Will_Love.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/7-responsible-fashion-brands-we-are-sure-you-will-love",
+            "title": "6 Responsible Fashion Brands We Are Sure You Will Love!"
+          }
+        },
+        "f97b7cdf-bff0-48a9-8c92-f5f16852b186": {
+          "type": "blog",
+          "disabled": true,
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Why_Should_You_Choose_Sustainable_Ethical_Sleepwear.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/why-should-you-choose-sustainable-ethical-sleepwear",
+            "title": "Why Should You Choose Sustainable, Ethical Sleepwear?"
+          }
+        },
+        "49516805-9e1a-42ad-9b61-decac6393814": {
+          "type": "blog",
+          "disabled": true,
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/A_Modern_Man_s_Guide_To_Sustainable_Fashion.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/a-modern-mans-guide-to-sustainable-fashion",
+            "title": "A Modern Man's Guide To Sustainable Fashion"
+          }
+        }
+      },
+      "block_order": [
+        "3efd4656-239f-4d9c-8c26-c3ef56205f20",
+        "d755903b-8620-4fbd-a113-8404281f35f1",
+        "e3bbb9f0-8c3b-4247-9abe-80373ac4a94c",
+        "f7883cfd-14da-4a4b-80f6-5418ecdf8110",
+        "2e4f2e1f-0b41-4e0a-81c4-87c6000e864a",
+        "e030cd63-9da3-4563-864d-74b6b6e62a30",
+        "49bc4d51-8a54-4fa6-9506-b04db4416416",
+        "f97b7cdf-bff0-48a9-8c92-f5f16852b186",
+        "49516805-9e1a-42ad-9b61-decac6393814"
+      ],
+      "settings": {
+        "heading_one": "Recent",
+        "heading_two": "blogposts",
+        "view_text": "",
+        "url_link": ""
+      }
+    },
+    "41014bac-ea4d-4b27-8c03-52bef9fe55fe": {
+      "type": "landing-page-video",
+      "blocks": {
+        "6352311a-ebe2-4cbb-9437-472906319c9e": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=-l2WdUf5qjo",
+            "image": "shopify:\/\/shop_images\/shampoo-bars-thumbnail.jpg",
+            "title": "Shampoo Bars | Vegan | Amala Earth",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "c52f85ba-2571-42d6-9870-78e1d05413a4": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/hhhRgHsamAE",
+            "image": "shopify:\/\/shop_images\/V1.png",
+            "title": "Men's Grooming Products Range",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "84bb1ceb-f46d-41d6-b337-d61f90609772": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/DyAx6a8y4Dw",
+            "image": "shopify:\/\/shop_images\/v.png",
+            "title": "Plant-based Hair Care Products",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "5f1064ed-195f-4b18-a177-6f541dc17ce1": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/am2wMIIafl0",
+            "image": "shopify:\/\/shop_images\/Beauty_bf88ac90-4080-4dca-819f-18e66719f523.jpg",
+            "title": "Natural Makeup Products Online",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "880899d6-ad8c-49e9-933e-aada13519725": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/-l2WdUf5qjo",
+            "image": "shopify:\/\/shop_images\/V4.png",
+            "title": "Shampoo Bars | Vegan",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "d268173e-ca11-4947-ae9b-86b41bdc16fe": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/8-bqT3xoyc4",
+            "image": "shopify:\/\/shop_images\/Beauty-1.jpg",
+            "title": "Natural Essential Oils for Face & Body",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "9770c9aa-57b2-42fb-89ed-b39443515912": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtube.com\/watch?v=VEdpYp0QceU",
+            "image": "shopify:\/\/shop_images\/vasudha_rai_2.png",
+            "title": "Beauty Rituals Ft. Vasudha Rai",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "8ca15421-ba45-427c-8190-b359be131cbc": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/rPc-WfHkaIw",
+            "title": "HOW TO WEAR MAKEUP WITH GLASSES UPDATED | Nikol Johnson",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        }
+      },
+      "block_order": [
+        "6352311a-ebe2-4cbb-9437-472906319c9e",
+        "c52f85ba-2571-42d6-9870-78e1d05413a4",
+        "84bb1ceb-f46d-41d6-b337-d61f90609772",
+        "5f1064ed-195f-4b18-a177-6f541dc17ce1",
+        "880899d6-ad8c-49e9-933e-aada13519725",
+        "d268173e-ca11-4947-ae9b-86b41bdc16fe",
+        "9770c9aa-57b2-42fb-89ed-b39443515912",
+        "8ca15421-ba45-427c-8190-b359be131cbc"
+      ],
+      "settings": {
+        "video_title1": "Video",
+        "video_title2": "blogs",
+        "btn_text": "",
+        "url_link": ""
+      }
+    },
+    "5dc00baa-6529-4a0c-9dbf-540bbfa62059": {
+      "type": "subscription-widget",
+      "settings": {
+        "hide_widget": false,
+        "title": "Get 10% OFF",
+        "content": "<p>on your first purchase. Subscribe now and start your earth-friendly journey today!<\/p>",
+        "button_text": "Get 10% OFF",
+        "thank_you_title": "Thank You!",
+        "thank_you_content": "<p>Use coupon code <strong>WELCOME10<\/strong> and <strong>get 10% discount<\/strong>.<\/p>"
+      }
+    },
+    "29ffb572-5d2d-49ea-99c9-724cdef627a2": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "bestselling-products",
+        "title": "Bestselling Products",
+        "subtitle": "Products",
+        "logged_in": false,
+        "products_count": 10,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "shopify:\/\/collections\/bestselling-products",
+        "button_position": "top",
+        "old_section_id": ""
+      }
+    },
+    "4bcf5237-b7b4-4f52-8120-c02769da93e6": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "title": "Recently viewed",
+        "subtitle": "",
+        "products_count": 10,
+        "show_quick_buy": true
+      }
+    },
+    "c73f325b-d0ed-4aa8-82a7-e1e1aa8d3764": {
+      "type": "landing-page-recommendation",
+      "disabled": true,
+      "blocks": {
+        "4e07acac-9bc7-4ca9-ae05-6da3f9d49b7a": {
+          "type": "Product",
+          "settings": {
+            "product": "goat-milk-shampoo-200-ml"
+          }
+        },
+        "20511b74-17bc-4eb5-bdcd-612ce3072310": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-goat-milk-honey-oats-face-and-body-bar"
+          }
+        },
+        "45cd40fb-d9f0-49d0-b4c8-9ec005796359": {
+          "type": "Product",
+          "settings": {
+            "product": "ayurvedic-bathing-soap-with-olive-oil-and-goat-milk-125-gm"
+          }
+        },
+        "b155d87c-ea8a-4ba9-97b4-deb38d3ef6f5": {
+          "type": "Product",
+          "settings": {
+            "product": "honey-oatmeal-and-goats-milk-glycerin-soap-100gm"
+          }
+        },
+        "31684f77-26bc-4c78-8a14-5978508ddd78": {
+          "type": "Product",
+          "settings": {
+            "product": "goat-milk-jojoba-butter-depigmentation-bathing-bar"
+          }
+        },
+        "2cda7e0a-8c2d-48c6-9400-570f219aed1e": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-goat-milk-lavender-moisturizing-soap"
+          }
+        }
+      },
+      "block_order": [
+        "4e07acac-9bc7-4ca9-ae05-6da3f9d49b7a",
+        "20511b74-17bc-4eb5-bdcd-612ce3072310",
+        "45cd40fb-d9f0-49d0-b4c8-9ec005796359",
+        "b155d87c-ea8a-4ba9-97b4-deb38d3ef6f5",
+        "31684f77-26bc-4c78-8a14-5978508ddd78",
+        "2cda7e0a-8c2d-48c6-9400-570f219aed1e"
+      ],
+      "settings": {
+        "title1": "Featured Products",
+        "title2": "Featured Products",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": true,
+        "show_quick_buy": false,
+        "link_title": "View all",
+        "link_url": "",
+        "button_position": "top"
+      }
+    }
+  },
+  "order": [
+    "37e3938c-1ec6-4afc-864f-133b5ddc7bc6",
+    "5c5af5b3-31b6-4503-8c9d-83a656ed198a",
+    "9248411d-d71b-498e-839b-0e22ca66ed0d",
+    "festival-landings-page",
+    "68c33a46-c30e-4b8a-84b9-d80dacac4a04",
+    "9517eac8-58a2-4d75-9ed2-29b892f20cbd",
+    "f7f09ee2-9fd6-4b55-b81f-dd69a1745cb1",
+    "fbd8009f-1ee0-4a6a-8ff7-65b9174218f4",
+    "599fb9d5-a3b4-4dd1-a141-eef20c6845ef",
+    "526e67bb-2f95-49e3-850c-de71d1b24577",
+    "3ce8650f-ee5d-4ec2-8c3e-43b4fde36a2f",
+    "7e727bcc-acea-4a68-bf80-27371ae6d902",
+    "2bd14898-d935-4349-9e83-f4372de58bf7",
+    "86f09998-5ddc-4f04-bac9-68f3b0ef81b9",
+    "f08b6ff6-e74b-481a-a7f4-283ef888d23b",
+    "99562c33-2413-46de-993c-de993a3a2132",
+    "5197c485-96a4-4d12-a1d7-a756d4b39fe6",
+    "c0308d8b-0365-4681-af50-ffdc0d63c61f",
+    "e586631e-24fe-48b7-b70f-893baaef04d1",
+    "a7ea0487-7e3a-4b47-a708-8bb88a506e59",
+    "41014bac-ea4d-4b27-8c03-52bef9fe55fe",
+    "5dc00baa-6529-4a0c-9dbf-540bbfa62059",
+    "29ffb572-5d2d-49ea-99c9-724cdef627a2",
+    "4bcf5237-b7b4-4f52-8120-c02769da93e6",
+    "c73f325b-d0ed-4aa8-82a7-e1e1aa8d3764"
+  ]
+}

@@ -1,0 +1,161 @@
+{% if section.settings.enable and product.available %}
+
+  {%- capture section_settings -%}
+  {
+      "stackable": {% if section.settings.layout == 'vertical' and section.settings.stack_products == false %}false{% else %}true{% endif %},
+      "layout": {{ section.settings.layout | json }}
+    }
+  {%- endcapture -%}
+
+  {%- if product.metafields.wk_custom_field.bought_together != blank or product.metafields.customAttribute.bought_together != blank -%}
+    <section class="section" data-section-id="{{ section.id }}" data-section-type="featured-collection" data-section-settings='{{ section_settings }}'>
+     <div class="container">
+        {%- if section.settings.title != blank -%}
+          <header class="section__header">
+            <h4 class="section__title heading ">{{ section.settings.title | escape }}</h4>
+          </header>
+        {%- endif -%}
+       </div>
+      
+    {% if product.metafields.wk_custom_field.bought_together != blank %}
+    	{% assign bought_items_all = product.metafields.wk_custom_field.bought_together | split: ';' | uniq %}
+    {% elsif  product.metafields.customAttribute.bought_together != blank %}
+      	{% assign bought_items_all = product.metafields.customAttribute.bought_together | split: ';' | uniq %}
+    {% endif %}
+
+    {% assign bought_together_product = '' %}
+
+    <!-- Show minor products -->
+      <div class="container {% if section.settings.layout != 'vertical' or section.settings.stack_products %}container--flush{% endif %}">
+       {%- form 'product', product, class: 'product-form-fbt', id: 'fbt_form' -%}
+
+         <div class="frequently-bought-together">
+           <div class="frequently-left">
+             <div class="scroller">
+               <div class="scroller__inner">
+                 <div class="product-list product-list--vertical product-list--scrollable">
+                   {%- capture product_list-%}
+                     {%- include 'product-item-fbt', product: product, grid_classes: '1/4--lap 1/5--desk 1/5--wide', show_add_to_cart: false -%}
+                    {% assign total_fbt = 0 %} 
+                   	{% for item in bought_items_all %}
+                       {% if item != product.handle and total_fbt < 3 %}
+                          {% assign product_data = all_products[item] %}
+                          {% if product_data.available %}
+                              {% assign total_fbt = total_fbt | plus: 1 %}
+                               <span class="frequently-bought-together-plus">+</span>
+                              {%- include 'product-item-fbt', product: product_data, grid_classes: '1/4--lap 1/5--desk 1/5--wide', show_add_to_cart: false -%}
+                          {% endif %}
+                   		{% endif %}
+                     {% endfor %}
+                   {%- endcapture -%}
+
+                   {{- product_list -}}
+                 </div>
+               </div>
+             </div>
+             
+             <div class="frequently-product-list {% if product.selected_or_first_available_variant.available %} {% else %} disabled {% endif %}">
+               
+               <div class="frequently-product_detail-row fbt-main">
+                 <span class="fbt_title">
+                   <input name="fbt_check" type="checkbox" class="fbt_check" data-price="{% if product.selected_or_first_available_variant.available %}{{product.selected_or_first_available_variant.price}} {% else %} 0{% endif %}" checked value="1" />
+                   <label>{{ product.title | prepend: 'This item: '}}</label>
+                 </span>
+                 {%- unless product.has_only_default_variant -%}
+             	<span class="fbt_variants">
+                    <input type="hidden" name="id" class="fbt_product" data-product-id="{{product.id}}" value="{{ product.selected_or_first_available_variant.id}}">
+                  <span class="comma-diff">, </span><span class="variant_name">{{ product.selected_or_first_available_variant.title }}</span>
+                 </span>
+                 {% endunless %}
+                 <span class="fbt_price"> {{ product.selected_or_first_available_variant.price | money }} </span> </div>
+
+               <div class="frequently-product-row">
+                 {% assign total_fbt = 0 %}
+                 {% for item_title in bought_items_all %}
+                   {% if item_title != product.handle and total_fbt < 3 %}
+                 	 {% assign item_handle = item_title | strip %}
+                     {% assign product_data = all_products[item_handle] %}
+                 	 {% if product_data.available %}
+                       {% assign total_fbt = total_fbt | plus: 1 %}
+                       <div class="frequently-product_detail-row">
+                         <span class="fbt_title">
+                           <input name="fbt_check" type="checkbox" class="fbt_check"  data-price="{% if product_data.selected_or_first_available_variant.available %}{{product_data.selected_or_first_available_variant.price}} {% else %}0{% endif %}" value="{{product_data.selected_or_first_available_variant.id}}" {% if product.selected_or_first_available_variant.available %} {% else %} disabled {% endif %}/>
+                           <label>{{ product_data.title }}</label>
+                         </span>
+                         <span class="fbt_variants" {% if product_data.has_only_default_variant %} style="display:none" {% endif %}>
+                           {%- for option in product_data.options_with_values -%}
+                             {%- capture option_name -%}{{ section.id }}-{{ product_data.id }}-{{ forloop.index }}{%- endcapture -%}
+                           <div class="fbt--variants__block">
+                           <label for="{{ option_name }}" class="product-form__option-name text--strong"><span class="comma-diff">,</span> {{ option.name }} {%comment%}<span class="product-form__selected-value">{{ option.selected_value }}</span>{%endcomment%}</label>
+
+                             <div class="select-wrapper select-wrapper--primary">
+                               {%- render 'icon', icon: 'select-left' -%}
+
+                               <select class="product-form__single-selector" name="{{ option_name }}" id="{{ option_name }}" data-option-position="{{ option.position }}">
+                                 {%- for value in option.values -%}
+                                    <option value="{{ value | escape }}" {% if value == option.selected_value %}selected="selected"{% endif %}>{{ value }}</option>
+                                 {%- endfor -%}
+                               </select>
+                             </div>
+                           </div>
+                           {%- endfor -%}
+
+                           <div class="no-js product-form__option">
+                              <label for="product-select-{{ product_data.id }}">{{ 'product.form.variant' | t }}</label>
+                              <div class="select-wrapper select-wrapper--primary">
+                                <select id="product-select-{{ product_data.id }}" class="single-option-selector" name="id">
+                                  {%- for pVariant in product_data.variants -%}
+                                    <option {% if pVariant == product_data.selected_or_first_available_variant %}selected="selected"{% endif %} value="{{ pVariant.id }}" data-option1="{{ pVariant.option1 }}" data-option2="{{ pVariant.option2 }}" data-option3="{{ pVariant.option3 }}" data-actual-price="{% if pVariant.available %}{{pVariant.price}} {% else %}0{% endif %}" data-price='{% if pVariant.available %}{{pVariant.price | money }}{% else %} Sold Out{% endif %}' data-sku="{{ pVariant.sku }}">{{ pVariant.title }} - {{ pVariant.price | money }}</option>
+                                  {%- endfor -%}
+                                </select>
+                              </div>
+                          </div>
+                           <span class="fbt_price"> {{product_data.price | money }} </span>
+                         </span>
+                       </div>
+                 	  {% endif %}
+                   {% endif %}
+                 {% endfor %}
+               </div>
+             </div>
+           </div>
+           <div class="frequently-right">
+             <div class="fbt_right">
+               <div class="fbt-price-col">
+                 <span class="total_price">Total Price: </span>
+                 <strong>{{product.selected_or_first_available_variant.price | money }}</strong>
+               </div>
+               <button type="submit" {% if product.selected_or_first_available_variant.available %} {% else %} disabled {% endif %} class="button button--primary cutom-button" data-action="add-to-cart">Add selection to Cart</button>
+             </div>
+           </div>
+         </div>
+        {%- endform -%}
+      </div>
+</section>
+{%- endif -%}
+{%- endif -%}
+
+{% schema %}
+  {
+    "name": "Frequently Brought",
+    "settings": [
+		{
+			"type": "checkbox",
+			"id": "enable",
+			"label": "Enable current section",
+			"default": true
+		},
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Section Title",
+			"default": "Frequently Bought Together"
+		}
+	]
+  }
+{% endschema %}
+
+<script>
+  
+  
+</script>

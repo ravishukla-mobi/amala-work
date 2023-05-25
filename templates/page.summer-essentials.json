@@ -1,0 +1,1153 @@
+{
+  "sections": {
+    "f5741734-9fa3-49d3-a8f5-49165d1bf3cb": {
+      "type": "page-navigation",
+      "settings": {}
+    },
+    "0f1e1f06-d309-4d56-9c23-11024e8c76a2": {
+      "type": "subscription-banner",
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "banner_image_mob": "shopify:\/\/shop_images\/collection-page-subscription-banner-desktop_1.jpg"
+      }
+    },
+    "2f256555-4c79-429c-ac8f-515482e74054": {
+      "type": "slider-show",
+      "disabled": true,
+      "blocks": {
+        "template--16741241749748__2f256555-4c79-429c-ac8f-515482e74054-1683195819180fc915-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/01-1-Main-Summer-Desktop.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Main-Summer-mobile_1.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/summer-essentials"
+          }
+        },
+        "template--16741241749748__2f256555-4c79-429c-ac8f-515482e74054-1683195819180fc915-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Blog-1-desktop_92e182ed-4e17-457d-89ea-d5d2c0f8b2ab.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Blog-1-mobile_1.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/sustainable-jute-tote-bags-are-the-best-choice-this-summer"
+          }
+        },
+        "f7454a8d-5435-4d5d-aa6f-f1b40c08a417": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Blog-2-desktop_4a6c713a-2787-4f03-99e5-bc3d398cbaa4.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Blog-3-mobile_f5847556-7ce8-4982-9715-97a2108db332.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/trending-whites-for-your-sustainable-summer-wardrobe"
+          }
+        },
+        "5f814c08-38ce-4b83-888b-2addaaef5363": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Blog-3-desktop_4db9816e-058b-4d40-8843-68d24c3a1157.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Blog-2-mobile_f9e2a3b0-e611-4168-bb08-fb5ea61480f6.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/benefits-of-neem-in-summer-skincare"
+          }
+        }
+      },
+      "block_order": [
+        "template--16741241749748__2f256555-4c79-429c-ac8f-515482e74054-1683195819180fc915-0",
+        "template--16741241749748__2f256555-4c79-429c-ac8f-515482e74054-1683195819180fc915-1",
+        "f7454a8d-5435-4d5d-aa6f-f1b40c08a417",
+        "5f814c08-38ce-4b83-888b-2addaaef5363"
+      ],
+      "custom_css": [
+        ".collection-scrollabale-menu {padding-bottom: 0px;}"
+      ],
+      "settings": {
+        "edge_to_edge": true,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "0cd79f78-7ec3-466f-a59b-6833f75a540a": {
+      "type": "slideshow",
+      "blocks": {
+        "034c2a73-bda7-430c-8e68-6a977e582d18": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/01-1-Main-Summer-Desktop.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/01-1Main-Summer-mobile.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/summer-essentials",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "c4da7054-cd4b-4f2a-8739-94f0d346e57a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Blog-1-desktop.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Blog-1-mobile_1.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/sustainable-jute-tote-bags-are-the-best-choice-this-summer",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "cde11821-f85e-4d32-b957-51a044772cd3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Blog-2-desktop_4a6c713a-2787-4f03-99e5-bc3d398cbaa4.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Blog-3-mobile_f5847556-7ce8-4982-9715-97a2108db332.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/trending-whites-for-your-sustainable-summer-wardrobe",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "61e672d6-cd66-43b6-ba81-bc67cd3bf4ff": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Blog-3-desktop_4db9816e-058b-4d40-8843-68d24c3a1157.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Blog-2-mobile_f9e2a3b0-e611-4168-bb08-fb5ea61480f6.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/benefits-of-neem-in-summer-skincare",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "034c2a73-bda7-430c-8e68-6a977e582d18",
+        "c4da7054-cd4b-4f2a-8739-94f0d346e57a",
+        "cde11821-f85e-4d32-b957-51a044772cd3",
+        "61e672d6-cd66-43b6-ba81-bc67cd3bf4ff"
+      ],
+      "custom_css": [],
+      "settings": {
+        "edge_to_edge": true,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "68c33a46-c30e-4b8a-84b9-d80dacac4a04": {
+      "type": "circular-image-grid",
+      "blocks": {
+        "88258eae-41cf-4183-8762-a32eb51d4bc0": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Food_301b68e9-ed7a-4773-8ada-ccaf78e2cc0d.png",
+            "block_two_subtitle": "",
+            "title": "Food",
+            "second_block_url": "https:\/\/amala.earth\/collections\/summer-food"
+          }
+        },
+        "2e909473-ebc0-45b7-a5fa-7463a5a4b3ba": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Home_fb32f180-7151-4624-a826-d4893072aff2.png",
+            "block_two_subtitle": "",
+            "title": "Home",
+            "second_block_url": "https:\/\/amala.earth\/collections\/summer-home-essentials"
+          }
+        },
+        "8ff10c40-b5fb-49fa-ad25-3e5a8b8cdd3e": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Beauty_d0c052a2-5d9d-4d56-a25a-0e02e5e7c332.png",
+            "block_two_subtitle": "",
+            "title": "Beauty",
+            "second_block_url": "https:\/\/amala.earth\/collections\/summer-skincare"
+          }
+        },
+        "92774282-274e-4445-aec9-b275fa7c6f5e": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/fashion_bc689bc5-9ee9-45d1-8314-52b271970deb.png",
+            "block_two_subtitle": "",
+            "title": "Fashion",
+            "second_block_url": "https:\/\/amala.earth\/collections\/summer-fashion-for-women"
+          }
+        },
+        "8a6d3a3c-94c0-4179-ad43-af8efd49d07b": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Kids_58defb39-5b79-4abb-8e77-72589377f58e.png",
+            "block_two_subtitle": "",
+            "title": "Kids",
+            "second_block_url": "https:\/\/amala.earth\/collections\/summer-essentials-for-kids"
+          }
+        },
+        "dfe64664-5b98-41cd-85ad-d3bfffba4906": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/travel.png",
+            "block_two_subtitle": "",
+            "title": "Travel",
+            "second_block_url": "https:\/\/amala.earth\/collections\/travel-essentials-for-summer"
+          }
+        },
+        "57ff8aac-d518-41e4-b337-6627f65f383e": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/wellness_2a942f5a-582a-453c-86ee-5e231d2d4c1c.png",
+            "block_two_subtitle": "",
+            "title": "Wellness",
+            "second_block_url": "https:\/\/amala.earth\/collections\/health-and-wellness-for-summer"
+          }
+        },
+        "8da60efe-7020-4864-85da-93994fd29308": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/baby_8ba0c91f-af61-4d3a-8bae-003eefcdb8b5.png",
+            "block_two_subtitle": "",
+            "title": "Baby",
+            "second_block_url": "https:\/\/amala.earth\/collections\/summer-essentials-for-baby"
+          }
+        },
+        "9498bd5e-cb81-49b2-8bb3-ba9f7c4ca19d": {
+          "type": "block-2",
+          "disabled": true,
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Wax.png",
+            "block_two_subtitle": "100% Soy",
+            "title": "Wax",
+            "second_block_url": "https:\/\/amala.earth\/collections\/joyful-home-wax"
+          }
+        }
+      },
+      "block_order": [
+        "88258eae-41cf-4183-8762-a32eb51d4bc0",
+        "2e909473-ebc0-45b7-a5fa-7463a5a4b3ba",
+        "8ff10c40-b5fb-49fa-ad25-3e5a8b8cdd3e",
+        "92774282-274e-4445-aec9-b275fa7c6f5e",
+        "8a6d3a3c-94c0-4179-ad43-af8efd49d07b",
+        "dfe64664-5b98-41cd-85ad-d3bfffba4906",
+        "57ff8aac-d518-41e4-b337-6627f65f383e",
+        "8da60efe-7020-4864-85da-93994fd29308",
+        "9498bd5e-cb81-49b2-8bb3-ba9f7c4ca19d"
+      ],
+      "custom_css": [
+        ".circular-image-grid-section .second-block-container {display: flex;}"
+      ],
+      "settings": {
+        "subtitle": "",
+        "title": ""
+      }
+    },
+    "a3b7f103-6f2c-4405-b731-221e2062101e": {
+      "type": "amala-earth-curation",
+      "blocks": {
+        "825fd9c4-5b4d-488f-9627-4ca273bc9a31": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/02-Travel-banner-desktop.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/summer-travel-mobile_1.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/travel-essentials-for-summer"
+          }
+        }
+      },
+      "block_order": [
+        "825fd9c4-5b4d-488f-9627-4ca273bc9a31"
+      ],
+      "settings": {
+        "curation_heading1": "",
+        "curation_sub_heading2": ""
+      }
+    },
+    "7e727bcc-acea-4a68-bf80-27371ae6d902": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "6cea51e5-a84f-4047-a3b9-f6261f8a7aa2": {
+          "type": "Product",
+          "settings": {
+            "product": "vilvah-store-sunscreen-spf-30-sunscreen-spf-50-combo-set-of-2-vl-kt-35-130123"
+          }
+        },
+        "72995800-ecf7-46ec-b2ff-f4be43592e1e": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-bromma-brown-wooden-sunglasses-1"
+          }
+        },
+        "31fb0fb1-31fc-4221-b26b-b3e53253464e": {
+          "type": "Product",
+          "settings": {
+            "product": "the-terra-tribe-organic-cotton-hemp-shorts-deep-brown-304-db-16123"
+          }
+        },
+        "9cea60a7-6501-4dcc-a902-6cb5b03ddabe": {
+          "type": "Product",
+          "settings": {
+            "product": "everything-beautiful-copper-bottle-grey-500-ml-ebmp-322-24323"
+          }
+        },
+        "45c49ccf-a090-4093-bc1c-f1fa6114aa75": {
+          "type": "Product",
+          "settings": {
+            "product": "insect-repellent-set-of-2-7mlx2"
+          }
+        },
+        "69afb2c8-919f-47d0-be83-6840e4271561": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-cotton-canvas-sling-bag"
+          }
+        },
+        "70927f2a-7341-46d8-8531-ecd81dbba1d4": {
+          "type": "Product",
+          "settings": {
+            "product": "bamboo-bathroom-essentials-travel-kit-set-of-10"
+          }
+        },
+        "4ae424f7-1f42-4b80-bce9-5d09ddce85db": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "modern-art-pink-copper-bottle-1-l"
+          }
+        },
+        "7c43c668-5fc6-4110-9a53-44ce85e9f6a6": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "everything-beautiful-copper-bottle-glass-set-grey-bottle-900-ml-glass-270-ml-each-ebmp-134-140323"
+          }
+        },
+        "f89fdc97-793b-4a2b-a68b-ff1e73733321": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "copper-bottle-white-1-l"
+          }
+        },
+        "2adff8ad-1882-4d1c-8509-740808a590dd": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "handcrafted-copper-yellow-printed-bottle-500ml"
+          }
+        },
+        "1a9e582d-eca8-44ab-bee8-2d9915d9b8ed": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "everything-beautiful-copper-bottle-slim-white-blue-750-ml-ebmp-239-140323"
+          }
+        },
+        "c48fc1bc-5aa8-495a-9c7e-080f491621f5": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "copy-of-copper-bottle-blue-950-ml"
+          }
+        },
+        "3236e110-6734-4bb4-b349-a468b6a2fe78": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "antique-iron-hanging-t-light-set-2-pieces-1"
+          }
+        }
+      },
+      "block_order": [
+        "6cea51e5-a84f-4047-a3b9-f6261f8a7aa2",
+        "72995800-ecf7-46ec-b2ff-f4be43592e1e",
+        "31fb0fb1-31fc-4221-b26b-b3e53253464e",
+        "9cea60a7-6501-4dcc-a902-6cb5b03ddabe",
+        "45c49ccf-a090-4093-bc1c-f1fa6114aa75",
+        "69afb2c8-919f-47d0-be83-6840e4271561",
+        "70927f2a-7341-46d8-8531-ecd81dbba1d4",
+        "4ae424f7-1f42-4b80-bce9-5d09ddce85db",
+        "7c43c668-5fc6-4110-9a53-44ce85e9f6a6",
+        "f89fdc97-793b-4a2b-a68b-ff1e73733321",
+        "2adff8ad-1882-4d1c-8509-740808a590dd",
+        "1a9e582d-eca8-44ab-bee8-2d9915d9b8ed",
+        "c48fc1bc-5aa8-495a-9c7e-080f491621f5",
+        "3236e110-6734-4bb4-b349-a468b6a2fe78"
+      ],
+      "settings": {
+        "title1": "Summer",
+        "title2": "travel essentials",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/travel-essentials-for-summer",
+        "button_position": "top"
+      }
+    },
+    "1ded6b38-fa96-4ac2-87e3-67bc1224ddf3": {
+      "type": "amala-earth-curation",
+      "blocks": {
+        "58753b44-d0bb-4d76-bc70-b96bdabeb5b7": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/03-rose-desktop.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/rose-mobile_bb1aca74-9793-421a-b11d-ee989a611dae.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/rose-products-for-summer"
+          }
+        }
+      },
+      "block_order": [
+        "58753b44-d0bb-4d76-bc70-b96bdabeb5b7"
+      ],
+      "custom_css": [
+        ".curation_mobile_image {margin-top: 50px;}"
+      ],
+      "settings": {
+        "curation_heading1": "",
+        "curation_sub_heading2": ""
+      }
+    },
+    "d6647946-fc06-4f6f-9e3f-ec55360acf47": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "e3b34f04-9f2c-49d9-a1ab-96cd2e7cd6a2": {
+          "type": "Product",
+          "settings": {
+            "product": "niana-diwali-candle-handcrafted-soy-wax-wild-rose-scented-candle-nia_wr-16922"
+          }
+        },
+        "87346256-1235-459f-b3c5-b915cd4d075e": {
+          "type": "Product",
+          "settings": {
+            "product": "boketto-life-camphor-bhimseni-kapoor-rose-150-g-cam-2-a11010523"
+          }
+        },
+        "37f5159c-dc00-49c3-928d-16023178a01f": {
+          "type": "Product",
+          "settings": {
+            "product": "ayurvedic-gulkand-rose-petals-jam-400-gm"
+          }
+        },
+        "33787a22-2373-4cc1-9834-1366f8e9fd53": {
+          "type": "Product",
+          "settings": {
+            "product": "100-vegan-rose-petals-powder-100gm"
+          }
+        },
+        "67cd67d3-7197-4429-a898-de4e29deb688": {
+          "type": "Product",
+          "settings": {
+            "product": "cotton-eco-printed-rose-petals-dress-pink"
+          }
+        },
+        "c0a0996b-f501-47a9-a05f-65b2337f80ce": {
+          "type": "Product",
+          "settings": {
+            "product": "rakhi-gift-natural-perfume-mint-infused-in-rose-lemon-fragrance-50ml"
+          }
+        },
+        "6e709b04-04ee-4770-be37-08a17d3a8daa": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-rose-face-moisturizing-oil"
+          }
+        },
+        "c16da899-29df-4950-8a7a-99b5290d9b63": {
+          "type": "Product",
+          "settings": {
+            "product": "rose-soak-calming-bath-salt-100-gm"
+          }
+        },
+        "fe84c84b-d1e8-4b91-bcd1-e3c3c69adb62": {
+          "type": "Product",
+          "settings": {
+            "product": "novo-koyo-incense-sticks-charcoal-free-musk-rose-70-sticks-wooden-star-mris00127122"
+          }
+        },
+        "2aff7fce-b3fc-4e95-9fc9-2de25b59d48b": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "eco-friendly-pure-bronze-saute-pan"
+          }
+        },
+        "abbf5896-4dc1-4f97-a617-6c3ffa0bddd4": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "codesustain-cast-iron-fry-pan-toxin-free-14-inch-csloha006-160223"
+          }
+        }
+      },
+      "block_order": [
+        "e3b34f04-9f2c-49d9-a1ab-96cd2e7cd6a2",
+        "87346256-1235-459f-b3c5-b915cd4d075e",
+        "37f5159c-dc00-49c3-928d-16023178a01f",
+        "33787a22-2373-4cc1-9834-1366f8e9fd53",
+        "67cd67d3-7197-4429-a898-de4e29deb688",
+        "c0a0996b-f501-47a9-a05f-65b2337f80ce",
+        "6e709b04-04ee-4770-be37-08a17d3a8daa",
+        "c16da899-29df-4950-8a7a-99b5290d9b63",
+        "fe84c84b-d1e8-4b91-bcd1-e3c3c69adb62",
+        "2aff7fce-b3fc-4e95-9fc9-2de25b59d48b",
+        "abbf5896-4dc1-4f97-a617-6c3ffa0bddd4"
+      ],
+      "settings": {
+        "title1": "Rose Essentials",
+        "title2": "for summer",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": true,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/rose-products-for-summer",
+        "button_position": "top"
+      }
+    },
+    "773c3db5-d894-4b94-98a6-a9b7708d3a3f": {
+      "type": "amala-earth-curation",
+      "blocks": {
+        "5e241a63-e7e6-4a6e-9464-b798d395d5c0": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/sandalwood-desktop.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/sandalwood-mobile_2.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/summer-sandalwood-products"
+          }
+        }
+      },
+      "block_order": [
+        "5e241a63-e7e6-4a6e-9464-b798d395d5c0"
+      ],
+      "custom_css": [
+        ".curation_mobile_image {margin-top: 50px;}"
+      ],
+      "settings": {
+        "curation_heading1": "",
+        "curation_sub_heading2": ""
+      }
+    },
+    "a6bc6a73-d308-4dd1-9bcf-87d3c94f23b6": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "4ad0f5a1-ae78-41fd-8863-1bca74b9a851": {
+          "type": "Product",
+          "settings": {
+            "product": "natural-sandalwood-rose-saffron-ubtan-skin-cleanser-250gm"
+          }
+        },
+        "ff1ee4f0-24cf-4a33-84b6-c812024e05ba": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-mysore-sandalwood-20-dhoop-stick-with-1-havan-cup"
+          }
+        },
+        "1fe444d6-3aec-4437-a257-48048040dab6": {
+          "type": "Product",
+          "settings": {
+            "product": "the-organic-livings-organic-cotton-bedsheet-with-pillow-cover-king-size-peach-ayurk002-24123"
+          }
+        },
+        "839443c1-2d35-44de-963f-6b2182dec6b2": {
+          "type": "Product",
+          "settings": {
+            "product": "atulya-sandalwood-essential-oil-15-ml-at-0026-19722"
+          }
+        },
+        "af4f8320-e9e0-4e42-9572-00b433153581": {
+          "type": "Product",
+          "settings": {
+            "product": "nat-habit-soothing-sandalwood-soap-natural-ayurvedic-125-g-pack-of-2-bc-cps-ss2-125-160922"
+          }
+        },
+        "e7323322-9efd-427c-aa72-fbe739d0eb51": {
+          "type": "Product",
+          "settings": {
+            "product": "shankara-hydrating-body-silk-shea-butter-sandalwood-30-ml-290722"
+          }
+        },
+        "3ed33520-dee4-4136-b960-0cc881ec41ea": {
+          "type": "Product",
+          "settings": {
+            "product": "koparo-air-freshener-sandalwood-saffron-no-parabens-300-ml-af-ss-130922"
+          }
+        },
+        "e6c073f3-906a-459d-908d-15564dd5f0b9": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "sanctuary-living-linen-table-mats-ruffled-grey-set-of-2-t113-07-003-10423"
+          }
+        },
+        "9a0252cc-8db2-41aa-86b5-b2ea851138e5": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "sanctuary-living-cotton-blanket-knitted-grey-b121-10-002-10423"
+          }
+        },
+        "6c90960c-8880-482d-af91-36f5c8d5c532": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "courtyard-glass-carafe-with-wooden-knob-l-6xw-6xh-7-95-inch-crt-neerpitcher-007-90323"
+          }
+        },
+        "d515dd83-3b2e-4c42-957a-47b932d2228f": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "courtyard-wood-ceramic-tea-pot-green-crt-stvikteapot-01-90323"
+          }
+        },
+        "fd9d5ccf-86bf-4f43-a634-cf3c652199d2": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "courtyard-papier-meche-metal-tlight-holder-off-white-gold-crt-gulfam-ecomixtlight-001-90323"
+          }
+        },
+        "0ef8c1a5-696d-4f5c-8d33-e43e52b85748": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "courtyard-brass-wood-trinket-box-4-partitions-gold-brown-crt-br-stvksheesham-mkwas-001-90323"
+          }
+        },
+        "62e3cd8c-fd50-4ac1-91f2-27a517c7120a": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "courtyard-borosilicate-glass-wood-bottle-white-l-2-5xw-2-5xh-12-5-inch-crt-indusbtl-01-90323"
+          }
+        }
+      },
+      "block_order": [
+        "4ad0f5a1-ae78-41fd-8863-1bca74b9a851",
+        "ff1ee4f0-24cf-4a33-84b6-c812024e05ba",
+        "1fe444d6-3aec-4437-a257-48048040dab6",
+        "839443c1-2d35-44de-963f-6b2182dec6b2",
+        "af4f8320-e9e0-4e42-9572-00b433153581",
+        "e7323322-9efd-427c-aa72-fbe739d0eb51",
+        "3ed33520-dee4-4136-b960-0cc881ec41ea",
+        "e6c073f3-906a-459d-908d-15564dd5f0b9",
+        "9a0252cc-8db2-41aa-86b5-b2ea851138e5",
+        "6c90960c-8880-482d-af91-36f5c8d5c532",
+        "d515dd83-3b2e-4c42-957a-47b932d2228f",
+        "fd9d5ccf-86bf-4f43-a634-cf3c652199d2",
+        "0ef8c1a5-696d-4f5c-8d33-e43e52b85748",
+        "62e3cd8c-fd50-4ac1-91f2-27a517c7120a"
+      ],
+      "custom_css": [],
+      "settings": {
+        "title1": "Summer Sandalwood",
+        "title2": "essentials",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": true,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/summer-sandalwood-products",
+        "button_position": "top"
+      }
+    },
+    "a1604e37-d042-44e6-9b55-11075920a20e": {
+      "type": "amala-earth-curation",
+      "blocks": {
+        "d29be58d-9a18-4d9c-802c-ce5223ad72f2": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/05-CLAY-desktop.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/Clay-mobile.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/summer-clay-cooling-products"
+          }
+        },
+        "b5063a29-7aa8-4e07-bc10-0d7af36b505d": {
+          "type": "Banner",
+          "disabled": true,
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/living_room_web_2.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/living_room_mobile.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/living-room"
+          }
+        },
+        "21dd7f79-1fa1-4a22-9659-917723e4de27": {
+          "type": "Banner",
+          "disabled": true,
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/KITCHEN_WEB.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/KITCHEN_MOBILE.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/kitchen"
+          }
+        },
+        "41f6e6e5-7bef-4b43-9c80-9cf32f494d5c": {
+          "type": "Banner",
+          "disabled": true,
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/bathroom_web.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/bathroom_mobile_..jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/bathroom"
+          }
+        }
+      },
+      "block_order": [
+        "d29be58d-9a18-4d9c-802c-ce5223ad72f2",
+        "b5063a29-7aa8-4e07-bc10-0d7af36b505d",
+        "21dd7f79-1fa1-4a22-9659-917723e4de27",
+        "41f6e6e5-7bef-4b43-9c80-9cf32f494d5c"
+      ],
+      "custom_css": [
+        ".curation_mobile_image {margin-top: 50px;}"
+      ],
+      "settings": {
+        "curation_heading1": "",
+        "curation_sub_heading2": ""
+      }
+    },
+    "599fb9d5-a3b4-4dd1-a141-eef20c6845ef": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "14130e83-6507-434f-b50b-e3373c61191b": {
+          "type": "Product",
+          "settings": {
+            "product": "handmade-terracotta-clay-water-kulhar-set-of-4"
+          }
+        },
+        "688c4a65-86c2-42f4-9334-ed326693da45": {
+          "type": "Product",
+          "settings": {
+            "product": "sustainable-clay-urali-pot-with-lid"
+          }
+        },
+        "b64a0e63-5167-4ddc-87e6-a545db26fa90": {
+          "type": "Product",
+          "settings": {
+            "product": "getkitch-clay-kalchatti-pot-brown-cp2502-120423"
+          }
+        },
+        "e5c71f4c-9ece-4007-9f05-d0726ff0a62e": {
+          "type": "Product",
+          "settings": {
+            "product": "aranya-earthcraft-papier-mache-cotton-thread-necklace-natural-clay-nckl002-130123"
+          }
+        },
+        "77fd30f6-7039-489c-b5d1-ea93f2ba57f5": {
+          "type": "Product",
+          "settings": {
+            "product": "the-herb-boutique-soap-bar-pink-clay-lotus-handmade-100-g-hms001-70423"
+          }
+        },
+        "3b627a98-e96a-4567-a46b-b999aff61fbb": {
+          "type": "Product",
+          "settings": {
+            "product": "handmade-black-audra-terracotta-planter"
+          }
+        },
+        "c08f83b7-f2d8-485f-8371-5393fdf26dd3": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "sustainable-bronze-uniappam-pan"
+          }
+        },
+        "7f93e4de-8586-40c8-9e23-9fb584271163": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "eco-friendly-kansa-katori-set"
+          }
+        },
+        "13e2cc4d-7f23-41e9-aa75-a1f8a1037324": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "eco-friendly-bronze-sauce-pan"
+          }
+        }
+      },
+      "block_order": [
+        "14130e83-6507-434f-b50b-e3373c61191b",
+        "688c4a65-86c2-42f4-9334-ed326693da45",
+        "b64a0e63-5167-4ddc-87e6-a545db26fa90",
+        "e5c71f4c-9ece-4007-9f05-d0726ff0a62e",
+        "77fd30f6-7039-489c-b5d1-ea93f2ba57f5",
+        "3b627a98-e96a-4567-a46b-b999aff61fbb",
+        "c08f83b7-f2d8-485f-8371-5393fdf26dd3",
+        "7f93e4de-8586-40c8-9e23-9fb584271163",
+        "13e2cc4d-7f23-41e9-aa75-a1f8a1037324"
+      ],
+      "custom_css": [
+        ".product-list--scrollable {padding-bottom: 25px;}"
+      ],
+      "settings": {
+        "title1": "Summer Clay",
+        "title2": "cooling products",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/summer-clay-cooling-products",
+        "button_position": "top"
+      }
+    },
+    "7148a954-d95c-483a-9aed-5f0f443b2075": {
+      "type": "landing-page-recommendation",
+      "disabled": true,
+      "blocks": {
+        "7c8ce166-5ed6-43fd-9c5e-4438e69b6580": {
+          "type": "Product",
+          "settings": {
+            "product": "purecult-eco-friendly-handwash-with-refill-sweet-orange-lemon-set-of-2-hw-2-250-750-230123"
+          }
+        },
+        "dd758219-94bb-4980-9332-96c6b72222c2": {
+          "type": "Product",
+          "settings": {
+            "product": "born-good-dish-washer-gel-plant-based-bottle-500-ml-dwg_500ml_bottle100423"
+          }
+        },
+        "8eb9e142-ada2-445b-a6d6-076ac597cd49": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-disinfectant-toilet-bathroom-cleaner-5-litres"
+          }
+        },
+        "a536670b-d426-4311-995d-9d624a4cfec5": {
+          "type": "Product",
+          "settings": {
+            "product": "koparo-floor-cleaner-lime-lemon-grass-500-ml-fc-lime-130922"
+          }
+        },
+        "0c1ce103-270f-4968-a3c8-3f8d26183f53": {
+          "type": "Product",
+          "settings": {
+            "product": "born-good-fabric-wrinkle-remover-plant-based-zero-toxin-500-ml-fabric_wrinkle_remover_500ml100423"
+          }
+        },
+        "9159a88a-8176-4edc-bf3c-b8016c820ee2": {
+          "type": "Product",
+          "settings": {
+            "product": "100-recycled-unbleached-toilet-roll-single"
+          }
+        },
+        "6e0e5c61-1147-4b3f-ba76-5f9e71cfcb50": {
+          "type": "Product",
+          "settings": {
+            "product": "koparo-new-mum-home-care-gift-box-500-ml-each-pack-of-5-nmhcb-130922"
+          }
+        },
+        "3f6f2e98-82f3-4c34-9a74-44c9755b7e88": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-geranium-lavender-laundry-detergent-500-ml"
+          }
+        },
+        "1da2dab9-c48a-4ca5-ac9e-bcd761f54fff": {
+          "type": "Product",
+          "settings": {
+            "product": "born-good-fabric-conditioner-plant-based-cypress-fragrance-refill-1-l-fab_1l_refill100423"
+          }
+        },
+        "059dc22d-bbed-4073-bf89-9afa1c2550f0": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-dishwash-liquid-refill-500-750-ml-pack-of-2"
+          }
+        },
+        "f8d58b91-b19b-4f92-bd6c-240d4a5a162b": {
+          "type": "Product",
+          "settings": {
+            "product": "genie-in-a-bottle-neem-and-lemon-surface-cleaner-220ml"
+          }
+        },
+        "b987b0d4-488d-4aca-b210-012bd665435c": {
+          "type": "Product",
+          "settings": {
+            "product": "neem-lemongrass-multipurpose-cleaner-250-g"
+          }
+        },
+        "2a001bf8-0c0a-4e23-b0b9-30d2c6834f96": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-ylang-ylang-lavender-tap-shower-cleaner-500-ml"
+          }
+        }
+      },
+      "block_order": [
+        "7c8ce166-5ed6-43fd-9c5e-4438e69b6580",
+        "dd758219-94bb-4980-9332-96c6b72222c2",
+        "8eb9e142-ada2-445b-a6d6-076ac597cd49",
+        "a536670b-d426-4311-995d-9d624a4cfec5",
+        "0c1ce103-270f-4968-a3c8-3f8d26183f53",
+        "9159a88a-8176-4edc-bf3c-b8016c820ee2",
+        "6e0e5c61-1147-4b3f-ba76-5f9e71cfcb50",
+        "3f6f2e98-82f3-4c34-9a74-44c9755b7e88",
+        "1da2dab9-c48a-4ca5-ac9e-bcd761f54fff",
+        "059dc22d-bbed-4073-bf89-9afa1c2550f0",
+        "f8d58b91-b19b-4f92-bd6c-240d4a5a162b",
+        "b987b0d4-488d-4aca-b210-012bd665435c",
+        "2a001bf8-0c0a-4e23-b0b9-30d2c6834f96"
+      ],
+      "settings": {
+        "title1": "Easy Switches",
+        "title2": "non-toxic  cleaners ",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/household-cleaning-and-essentials",
+        "button_position": "top"
+      }
+    },
+    "0100e566-4a5b-4474-a448-25fa80755f32": {
+      "type": "subscription-widget",
+      "settings": {
+        "hide_widget": false,
+        "title": "Get 10% OFF",
+        "content": "<p>on your first purchase. Subscribe now and start your earth-friendly journey today!<\/p>",
+        "button_text": "Get 10% OFF",
+        "thank_you_title": "Thank You!",
+        "thank_you_content": "<p>Use coupon code <strong>WELCOME10<\/strong> and get <strong>10% discount<\/strong>.<\/p>"
+      }
+    },
+    "e1688203-6815-4248-a61f-3fcbe3a8c7c3": {
+      "type": "blog-posts-carousel",
+      "disabled": true,
+      "blocks": {
+        "129dc886-1116-45dc-84d1-f3d3fdfa7289": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/01-2-Blog-1-mobile.jpg",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/sustainable-jute-tote-bags-are-the-best-choice-this-summer",
+            "title": ""
+          }
+        },
+        "edcc7d7e-fe99-4016-ac23-8a91c56f1bcf": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/01-4-Blog-2-mobile.jpg",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/trending-whites-for-your-sustainable-summer-wardrobe",
+            "title": ""
+          }
+        },
+        "1056cc84-79c4-4a09-9cb3-9d43aad2b9be": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/01-3-Blog-3-mobile.jpg",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/benefits-of-neem-in-summer-skincare",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "129dc886-1116-45dc-84d1-f3d3fdfa7289",
+        "edcc7d7e-fe99-4016-ac23-8a91c56f1bcf",
+        "1056cc84-79c4-4a09-9cb3-9d43aad2b9be"
+      ],
+      "settings": {
+        "heading_one": "",
+        "heading_two": "",
+        "view_text": "",
+        "url_link": ""
+      }
+    },
+    "261c0464-10ba-4b7c-83ac-058e7786e96a": {
+      "type": "home-related-blog",
+      "disabled": true,
+      "blocks": {
+        "8067741d-6900-4921-bb00-70305702dfea": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/01-2-Blog-1-mobile.jpg",
+            "recent_blog_post_link": "",
+            "title": ""
+          }
+        },
+        "7361861f-3da3-4959-9959-bd7db73f66ca": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/01-4-Blog-2-mobile.jpg",
+            "recent_blog_post_link": "",
+            "title": ""
+          }
+        },
+        "d684a3f1-4a43-44e1-983a-f463f3cbec88": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/01-3-Blog-3-mobile.jpg",
+            "recent_blog_post_link": "",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "8067741d-6900-4921-bb00-70305702dfea",
+        "7361861f-3da3-4959-9959-bd7db73f66ca",
+        "d684a3f1-4a43-44e1-983a-f463f3cbec88"
+      ],
+      "settings": {
+        "heading_one": "",
+        "heading_two": "",
+        "view_text": "",
+        "url_link": ""
+      }
+    }
+  },
+  "order": [
+    "f5741734-9fa3-49d3-a8f5-49165d1bf3cb",
+    "0f1e1f06-d309-4d56-9c23-11024e8c76a2",
+    "2f256555-4c79-429c-ac8f-515482e74054",
+    "0cd79f78-7ec3-466f-a59b-6833f75a540a",
+    "68c33a46-c30e-4b8a-84b9-d80dacac4a04",
+    "a3b7f103-6f2c-4405-b731-221e2062101e",
+    "7e727bcc-acea-4a68-bf80-27371ae6d902",
+    "1ded6b38-fa96-4ac2-87e3-67bc1224ddf3",
+    "d6647946-fc06-4f6f-9e3f-ec55360acf47",
+    "773c3db5-d894-4b94-98a6-a9b7708d3a3f",
+    "a6bc6a73-d308-4dd1-9bcf-87d3c94f23b6",
+    "a1604e37-d042-44e6-9b55-11075920a20e",
+    "599fb9d5-a3b4-4dd1-a141-eef20c6845ef",
+    "7148a954-d95c-483a-9aed-5f0f443b2075",
+    "0100e566-4a5b-4474-a448-25fa80755f32",
+    "e1688203-6815-4248-a61f-3fcbe3a8c7c3",
+    "261c0464-10ba-4b7c-83ac-058e7786e96a"
+  ]
+}

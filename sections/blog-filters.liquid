@@ -1,0 +1,72 @@
+<div class="blog-filter">
+ <h3 class="article-item__title heading ">Filter by  
+   <span class="blogfilter">
+   <svg focusable="false" class="icon icon--filter" viewBox="0 0 19 20" role="presentation">
+      <path d="M17.0288086 4.01391602L11 9v7.0072021l-4 2.008545V9L1.01306152 4.01391602V1H17.0288086z" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="square"></path>
+    </svg>
+   </span>
+  </h3>
+  <div class="filter-ul">
+       <span class="cross-blogfilter">Filters 
+    <svg focusable="false" class="icon icon--close" viewBox="0 0 19 19" role="presentation">
+      <path d="M9.1923882 8.39339828l7.7781745-7.7781746 1.4142136 1.41421357-7.7781746 7.77817459 7.7781746 7.77817456L16.9705627 19l-7.7781745-7.7781746L1.41421356 19 0 17.5857864l7.7781746-7.77817456L0 2.02943725 1.41421356.61522369 9.1923882 8.39339828z" fill="currentColor" fill-rule="evenodd"></path>
+    </svg>
+  </span>
+<ul>
+
+  {% assign base_url = blog.url %}
+  {% assign current_tag_count = 0 %}
+  {% if current_tags != blank %}
+  	{% for current_tag in current_tags %}
+  		{% assign current_tag_count = current_tag_count | plus: 1 %}
+  		{% assign current_tag_handle = current_tag | handleize %}
+  		{% if base_url contains '/tagged/' %}
+  			{% assign base_url = base_url | append: '+' | append: current_tag_handle %}
+        {% else %}
+  			{% assign base_url = base_url |  append: '/tagged/' | append: current_tag_handle %}
+        {% endif %}
+    {% endfor %}
+  {% endif %}
+  {% for tag in blog.all_tags %}
+      <li class="{% if current_tags contains tag %} selected {% endif %}">
+         {% assign tag_handle = tag | handleize %}
+        {% if current_tags contains tag %}
+        	{% if current_tag_count == 1 %}
+        		{% assign blog_url = blog.url %}
+        	{% else %}
+        		{% assign blog_url = base_url | remove: tag_handle %}
+        	{% endif %}
+        {% else %}
+        	{% if current_tags != blank %}
+        		{% assign blog_url = base_url | append: '+' | append: tag_handle %}
+            {% else %}
+                {% assign blog_url = base_url | append: '/tagged/' | append: tag_handle %}
+            {% endif %}
+        {% endif %}
+       <a href="{{ blog_url }}">{{ tag }}</a>
+      </li>
+  {% endfor %}
+</ul>
+    
+    {% if current_tags != blank %}
+    <span class="collection__clear-filter button button--small button--transparent button--full"> <a href="{{ blog.url }}">Clear all</a></span>
+    {% endif %}
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Filters",
+    "settings": []
+  }
+{% endschema %}
+
+<script>
+$(document).ready(function(){
+  $(".blogfilter").click(function(){
+    $("#shopify-section-blog-filters").addClass("showfilters");
+  });
+   $(".cross-blogfilter").click(function(){
+    $("#shopify-section-blog-filters").removeClass("showfilters");
+  });
+});
+</script>

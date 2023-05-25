@@ -1,0 +1,51 @@
+{% if linklists.links.size > 0 %}  
+  <div class="card__section card__section--tight">
+    {% for link in linklists.links %}
+      {% assign show_menu = 'false' %}  
+      {% if link.title == collection.title %}  
+        {% assign show_menu = 'true' %}
+      {% else %}
+        	{% for sub_link in link.links %}
+        		{% if sub_link.title == collection.title %}
+        			{% assign show_menu = 'true' %}
+        		{% endif %}
+        	{% endfor %}
+        {% endif %}
+        
+        {% if show_menu == 'true' %}
+      <p class="card__title--small heading"></p>
+      <ul class="collection__filter-linklist sub-filter" role="list">
+      <li>
+        {%- if link.links.size > 0 -%}
+        {%- capture link_id -%}filter-{% increment link_id %}{%- endcapture -%}
+		
+        <a class="collection__filter-link link link--primary sub-main-ninja {% if link.active or link.child_active %}is-active{% endif %}" data-action="toggle-collapsible" aria-controls="{{ link_id }}" aria-expanded="{% if link.active or link.child_active %}true{% else %}false{% endif %}">
+          Sub categories {% if link.type == 'collection_link' and section.settings.quick_links_show_products_count %}({{ link.object.products_count }}){% endif %} {%- render 'icon', icon: 'arrow-bottom' -%}
+        </a>
+		
+        <div id="{{ link_id }}" class="collection__filter-collapsible" {% if link.active or link.child_active %}aria-hidden="false" style="height: auto"{% else %}aria-hidden="true"{% endif %}>
+          <ul class="collection__filter-linklist" role="list">
+            {%- for sub_link in link.links -%}
+            <li>
+              <a href="{{ sub_link.url }}" class="collection__filter-link link link--primary {% if sub_link.active %}is-active{% endif %}">{{ sub_link.title }} {% if sub_link.type == 'collection_link' and section.settings.quick_links_show_products_count %}({{ sub_link.object.products_count }}){% endif %}</a>
+            </li>
+            {%- endfor -%}
+          </ul>
+        </div>
+        {%- else -%}
+        <a href="{{ link.url }}" class="collection__filter-link link link--primary {% if link.active %}is-active{% endif %}">{{ link.title }} {% if link.type == 'collection_link' and section.settings.quick_links_show_products_count %}({{ link.object.products_count }}){% endif %}</a>
+        {%- endif -%}
+      </li>
+           </ul>
+           {% break %}
+        {% endif %}
+      {%- endfor -%}
+  </div>
+{% endif %}
+<style>
+  @media(max-width:1000px){
+    .sub-filter{padding:10px 25px;}
+    .sub-main-ninja{display:block !important; color:#945539 !important;font-weight:500 !important;position:relative;}
+    .sub-main-ninja svg{position:absolute;right:0;top:50%;transform:translateY(-50%);}
+  }
+</style>

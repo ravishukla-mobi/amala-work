@@ -1,0 +1,626 @@
+{% liquid
+
+  assign order_cancellation_until = order.created_at | date: "%Y-%m-%d %H:%M"
+  assign seconds = 1 | times: 24 | times: 60 | times: 60
+  assign order_cancellation_until = order_cancellation_until | date: "%s" | plus: seconds
+  assign today_date = 'now' | date: '%s' | plus:0
+  assign order_return_until = order.created_at | date: "%Y-%m-%d %H:%M"
+  assign seconds = 7 | times: 24 | times: 60 | times: 60
+  assign order_return_until = order_cancellation_until | date: "%s" | plus: seconds
+
+  assign itemCount = 0
+
+  assign item_name = ''
+  for item in order.line_items
+    assign variant_count = 0
+    for variant in line_item.product.variants
+      assign variant_count = variant_count | plus: 1
+    endfor
+    unless variant_count > 1
+      assign item_name = item.product.title
+    else
+      assign item_name = item.title
+    endunless
+    assign handle = item.product.handle
+    assign product = item.product
+    assign item_id = item.product.id
+    assign item_price = item.final_line_price | money_without_currency
+    assign itemCount = itemCount | plus: 1
+  endfor
+  
+%}
+
+<section class="my-account" data-section-id="account" data-section-type="account">
+  		<div class="my-account__header">
+          <a href="/account/?view=orders" class="back_link">
+            <img src="{{ 'back_arrow.svg' | asset_url }}" alt="back">
+          </a>
+          <h2 class="heading h2">My Orders </h2>
+        </div>
+        <div class="container container--narrow">
+            <div class="my-account__content">
+              <div class="my-orders__item-list" data-id="{{order.id}}">
+                <div class="my-order__single my-orders__item ">
+                    <div class="my-orders__header-wrapper">
+                        <div><a href="{{ order.customer_url }}">Order ID {{order.name}}</a></div>
+                        <!-- color of the order status depends on class of span as below
+                            status              class
+                            -------------------------------------------
+                            Confirmed:          status-Confirmed
+                            Out For Delivery:   status-OutForDelivery
+                            Delivered:          status-Delivered
+                            Expired:            status-Expired
+                         -->
+                        <div class="status-label text-right"><span class="status-Confirmed">{% if order.cancelled %}Cancelled {% else %} {{ order.fulfillment_status_label }} {% endif %}</span></div>
+                        <div id="ordered_on">Ordered on {{ order.created_at | date: format: 'month_day_year_time' }}</div>
+                      
+                    </div>
+                  
+                    {%- for line_item in order.line_items -%}
+                    <div data-tracking="{{line_item.fulfillment.tracking_number}}" class="{% if itemCount > 1 %} hide {% endif %} my-orders__content-wrapper line_item_{{line_item.id}}" item-id="{{line_item.id}}" handle="{{line_item.product.handle}}">
+                        <div class="my-orders__image-wrapper">
+                            <a href="javascript:void(0);">
+                                <div class="aspect-ratio" style="padding-bottom: 100.0%">
+                                    <img src="{{ line_item.image | img_url: '75x75', scale: 1 }}" alt="{{ line_item.image.alt | escape }}" width=75>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="my-orders__item-wrapper">
+                            <table class="my-orders__product-info">
+                                <tr>
+                                  {% liquid
+                                    assign variant_count = 0
+                                    for variant in line_item.product.variants
+                                    assign variant_count = variant_count | plus: 1
+                                    endfor
+                                    unless variant_count > 1
+                                    assign item_product_title = line_item.product.title
+                                    else
+                                    assign item_product_title = line_item.title
+                                    endunless
+                                  %}
+                                  <td colspan="2"><a href="{{ line_item.url }}" class="my-orders__product-title">{{item_product_title}}</a></td>
+                                </tr>
+                                
+                              
+                              {%- unless line_item.properties == blank -%}
+     
+                              {%- for property in line_item.properties -%}
+                                {%- assign first_character_in_key = property.first | truncate: 1, '' -%}
+
+                                {%- if property.last == blank or first_character_in_key == '_' -%}
+                                  {%- continue -%}
+                                {%- endif -%}
+								<tr>
+                                    <td class="product-info_label">{{ property.first }} </td>
+                                    <td> {{ property.last }}</td>
+                                </tr>
+                               
+                              {%- endfor -%}
+                          {%- endunless -%}
+                                
+                                <tr>
+                                    <td class="product-info_label">Amount </td>
+                                    <td><span class="price price--highlight">{{ order.total_price | money }}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                  {% endfor %}
+                    <div class="my-orders__price-line">
+                        <table class="my-orders__price-line-table">
+                            <tr>
+                                <td>{{ 'customer.order.subtotal' | t }}</td>
+                                <td class="text-right">{{ order.line_items_subtotal_price | money }}</td>
+                            </tr>
+                          {%- for shipping_method in order.shipping_methods -%}
+                            <tr>
+                                <td>{{ 'customer.order.shipping' | t }}</td>
+                                <td class="text-right">{{ shipping_method.price | money }}</td>
+                            </tr>
+                         {% endfor %}
+                         {%- if order.total_tip != 0 -%}
+                         <tr>
+                            <td>{{ 'customer.order.tip' | t }}</td>
+                            <td class="text-right" data-tip="{{order.total_tip}}">{{ order.total_tip | money }}</td>
+                         </tr>
+                        {%- endif -%}
+                          {%- for discount_application in order.cart_level_discount_applications -%}
+                            <tr>
+                                <td>{{ 'customer.order.discount' | t }}</td>
+                                <td class="text-right">{{ discount_application.total_allocated_amount | money }}</td>
+                            </tr>
+                           {% endfor %} 
+                            <tr class="my-orders__price-line_highlight">
+                                <td style="text-transform: uppercase;">{{ 'customer.order.total' | t }}</td>
+                                <td class="text-right">{{ order.total_price | money }}</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="my-orders__item-actions hide" id="review_block">
+                        
+                    </div>
+                    <div class="my-orders__status-track">
+                        <h2 class="heading">Order Status</h2>
+                        <ul class="my-orders__track-list">
+                          {%- if order.cancelled -%}
+                          <li class="my-orders__track-list-item">
+                            <label>Cancelled - {{ order.cancelled_at | date: format: 'month_day_year_time' }} </label>
+                          </li>
+                          {%- else -%}
+                          <li class="my-orders__track-list-item">
+                            <label>In-preparation - {{ order.created_at | date: format: 'month_day_year_time' }}</label>
+                          </li>
+                          {%- endif -%}
+                        </ul>
+                    </div>
+                    {% unless order.cancelled %}
+                      <div class="est_deliver_date_wrap">
+                        <div class="hide arrival-label"> Estimated Arrival </div>
+                        <div class="est_deliver_date" id="edt-estimation">Calculating..</div>
+                      </div>
+                    {% endunless %}
+                    <div class="my-orders__address">
+                        <h2 class="heading">Delivery Address</h2>
+                        <label>{{ 'customer.order.shipping_address' | t }}</label>
+                        {%- if order.shipping_address -%}
+                  {{- order.shipping_address | format_address -}}
+                {%- else -%}
+                  <p>{{ 'customer.order.no_shipping_address' | t }}</p>
+                {%- endif -%}
+                    </div>
+                    
+                </div>
+                <div class="my-orders__item-actions">
+
+                        <button href="#!" class="my-orders__item-actions-link popup-trigger" traget="#selectable-order-details-model">
+                            Reorder
+                            <img src="{{ 'right_arrow.svg' | asset_url }}" alt=">" class="arrow-icon">
+                        </button>
+                        <button class="my-orders__item-actions-link popup-trigger view-similar-model-trigger{% if order.line_items.size > 1 %} hide{% endif %}" data-product="{{handle}}" data-product-id="{{item_id}}">
+                            View Similar
+                            <img src="{{ 'right_arrow.svg' | asset_url }}" alt=">" class="arrow-icon">
+                        </button>
+                 
+                  {% if order.cancelled %}
+                  
+                  {% else %}
+                  
+                        <button class="my-orders__item-actions-link popup-trigger return-cta hide" traget="#return-exchange-model">
+                          {% if product.metafields.AE_PROD_DTLS['Return Policy'] %}
+                          {{product.metafields.AE_PROD_DTLS['Return Policy']}}
+                          {% else %}
+                            Return/Exchange, only eligible for Exchange, within 7 days of delivery, in an unlikely event of damaged, defective, size issue, wrong item delivered to you.
+                          {% endif %}
+                            <img src="{{ 'right_arrow.svg' | asset_url }}" alt=">" class="arrow-icon">
+                        </button>
+                     
+                       <button href="#!" class="my-orders__item-actions-link my-orders__item-actions-link-disabled return-cta-na hide">
+                          {% if product.metafields.AE_PROD_DTLS['Return Policy'] %}
+                          {{product.metafields.AE_PROD_DTLS['Return Policy']}}
+                          {% else %}
+                          Return/Exchange, only eligible for Exchange, within 7 days of delivery, in an unlikely event of damaged, defective, size issue, wrong item delivered to you.
+                          {% endif %}
+                        </button>
+                 {% endif %}
+                    
+                 
+                  {% if order.cancelled %}
+                  
+                  {% else %}
+                    {% if today_date < order_cancellation_until %}
+                      <button  class="my-orders__item-actions-link popup-trigger cancellation-cta" traget="#cancle-order-model">
+                        {{settings.myaccount_cancel_order_message}}
+                        <img src="{{ 'right_arrow.svg' | asset_url }}" alt=">" class="arrow-icon">
+                      </button>
+                    {% else %}
+                      <button href="#!" class="my-orders__item-actions-link my-orders__item-actions-link-disabled cancellation-cta-na">
+                        {{settings.myaccount_cancel_order_message}}
+                      </button>
+                    {% endif %}
+                 {% endif %}
+                  
+                  
+                  {% if order.cancelled %}
+                  
+                  {% else %}
+                 
+                      <button onclick="javascript:process('invoice_form', event);" class="my-orders__item-actions-link my-orders__item-actions-invoice">
+                            Download Invoice
+                            <img src="{{ 'right_arrow.svg' | asset_url }}" alt=">" class="arrow-icon">
+	                  </button>
+                 	{% endif %}
+                        <a href="/pages/contact-us" class="my-orders__item-actions-link">
+                            Need Help
+                            <img src="{{ 'right_arrow.svg' | asset_url }}" alt=">" class="arrow-icon">
+                        </a>
+                    </div>
+              </div>
+            </div>
+        </div>
+        {% assign curr_id_order = order.id %}
+    </section>
+<form name="invoice_form" id="invoice_form">
+    <input type="hidden" value="invoice" name="action" id="action">
+    <input type="hidden" value="{{item_id}}" name="item_id" id="item_id">
+    <input type="hidden" value="{{handle}}" name="item_handle" id="handle">
+    <input type="hidden" value="{{item_name}}" name="item_name" id="item_name">
+    <input type="hidden" value="{{item_price}}" name="item_price" id="item_price">
+    <input type="hidden" name="order_id" value="{{order.order_number}}">
+    <input type="hidden" name="order_status" value="{{order.fulfillment_status_label}}">
+    <input type="hidden" name="customer_id" value="{{customer.id}}">
+    <input type="hidden" name="customer_name" value="{{customer.name}}">
+    <input type="hidden" name="customer_email" value="{{customer.email}}">
+</form>
+
+
+
+{% render 'popup-cancel' with order, item_id:item_id, item_name:item_name, handle:handle, item_price:item_price %} 
+{% render 'popup-reorder' with order, item_id:item_id, item_name:item_name, handle:handle, item_price:item_price %} 
+{% render 'popup-return' with order, item_id:item_id, item_name:item_name, handle:handle, item_price:item_price %} 
+{% render 'popup-successful-message.liquid' %}
+<div id="view-similar-product-popup">
+  <span class="cus-view-smilar vs-overlay"></span>
+  <div class="cus-view-smilar view-similar-product-wrapper position-relative" id="view-similar-product-wrapper">
+    <span class="close-vs">&#10006;</span>
+      <div class="view-similar-product-wrapper__inner">
+        <div class="vs-header">
+            <h3>View Similar Products</h3>
+        </div>
+        <div class="product-list scrollable product-related" id="similar-products">
+        </div>
+      </div>
+  </div>
+</div>
+<div id="modal-quick-view-product-template_view_similar" class="modal quick-view-product-modal" aria-hidden="true">
+  <div class="modal__dialog modal__dialog--stretch" role="dialog">
+    <button class="modal__close link" data-action="close-modal" title="{{ 'general.accessibility.close' | t | escape }}">
+      {%- render 'icon', icon: 'close' -%}
+    </button>
+
+    <div class="modal__loader">
+      {%- render 'icon', icon: 'search-loader' -%}
+    </div>
+
+    <div class="modal__inner"></div>
+  </div>
+</div>
+
+<style type="text/css">
+  .custom-overlay {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: #000;
+    opacity: 0.8;
+    z-index: 1111;
+  }
+  .custom-overlay .overlay__inner {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  .custom-overlay .overlay__content {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .custom-overlay .spinner {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border-width: 2px;
+    border-color: rgba(255, 255, 255, 0.05);
+    border-top-color: #fff;
+    animation: spin 1s infinite linear;
+    border-radius: 100%;
+    border-style: solid;
+  }
+  @keyframes spin {
+      100% {
+        transform: rotate(360deg);
+      }
+  }
+  .vs-overlay{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(0,0,0,0.7);
+    z-index:9
+  }
+  .vs-overlay.show{display:block;}
+    .view-similar-product-wrapper{
+    position:fixed;
+    bottom:calc(-80vh - 100px);
+    height:80vh;
+    left:0;
+    right:0;
+    background:#fff;
+    border-radius:15px 15px 0 0;
+    z-index:99;
+    padding:15px;
+    box-shadow:0 0 5px #ccc;
+    transition:all 0.3s ease;
+    }
+    .view-similar-product-wrapper.show{
+    bottom:0;
+    }
+    .view-similar-product-wrapper .product-list{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    border:0;
+    overflow-y:auto;
+    height: auto;
+    max-height: calc(80vh - 50px);
+    }
+    .close-vs{
+    position:absolute;
+    display:inline-block;
+    width:35px;
+    height:35px;
+    text-align:center;
+    line-height:35px;
+    border-radius:50%;
+    box-shadow:0 0 5px #ccc;
+    background:#fff;
+    top:-45px;
+    left:calc(50% - 17px);
+    font-size:22px;
+  cursor: pointer;
+    }
+  .overflow-hidden{
+    overflow:hidden;
+    height:100vh;
+  }
+  .my-orders__item-actions-link-disabled {
+    pointer-events: none;
+  }
+</style>
+
+<script>
+    $(document).ready(function(){
+      $(document).on('click', '.view-similar-model-trigger', function() {
+        let product_id = $(this).attr('data-product-id');
+        addoverlay();
+        let items = [];
+        fetch(`${theme.apiUrl}/versions/v1/pdp/similar-products?productID=${product_id}`)
+        .then((response) => response.json())
+        .then((data) => {
+          if(data.status == false){
+            let NofoundHtml = `<div class="vs-header"><h3 style="text-align: center;margin: 0 auto;">Sorry, no similar product available</h3></div>`;
+            $("#view-similar-product-popup .view-similar-product-wrapper .view-similar-product-wrapper__inner").html(NofoundHtml);
+            openViewSimilarPopup();
+            $('.custom-overlay').remove();
+          }else{
+            data.products.forEach(function(e){
+              items.push(e.id);
+            })
+            let queryString = items.map(function (item) {return "id:" + item;}).join(" OR ");
+            if (queryString === "") {
+              return;
+            }
+            let template = "view-similar-popup";
+            fetch("".concat(window.routes.searchUrl, "?view=").concat(template, "&type=product&q=").concat(queryString),{credentials: "same-origin", method: "GET",})
+            .then(function (response) {
+              response.text().then(function (content) {
+                var tempElement = document.createElement("div");
+                tempElement.innerHTML = content; // Set the content
+                $("#view-similar-product-popup .product-related").html(tempElement.querySelector('.pdp_viewsimilar_widgets').innerHTML);
+                openViewSimilarPopup();
+                $('.custom-overlay').remove();
+              });
+            });
+          }
+        }).catch((error) => {
+          console.log(error);
+          $('.custom-overlay').remove();
+        });;
+      });
+      var openViewSimilarPopup = function() {
+        $(".view-similar-product-wrapper").addClass("show");
+        $("body").addClass('overflow-hidden');
+        $(".vs-overlay").addClass("show");
+        if(navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)) {
+          if(newStatePopup.length == 0) {
+            newStatePopup.push('new-state-exist');
+            window.history.pushState('new-popup-state', null, '');
+          }
+        }
+      }
+      $(document.body).on('click','.close-vs', function(e) {
+        $(".view-similar-product-wrapper").removeClass("show");
+        $("body").removeClass('overflow-hidden');
+        $(".vs-overlay").removeClass("show");
+      });
+    })
+ </script>
+
+
+{% if itemCount > 1 %}
+
+ {% render 'popup-order-details',  order: order %} 
+
+<script>
+
+$('.my-orders__content-wrapper-popup').on('click', function(){
+    item_id = $(this).attr('item-id');
+    handle = $(this).attr('handle');
+    item_name = $(this).attr('item_name');
+    item_price = $(this).attr('item_price');
+    item_product_id = $(this).attr('product-id');
+  
+    $('#item_id').val(item_id);
+    $('#handle').val(handle);
+    $('#item_name').val(item_name);
+    $('#item_price').val(item_price);
+    // $('#review_href').attr('href', '/a/review/write?product='+handle);
+    $('.view-similar-model-trigger').attr('data-product', handle);
+    $('.view-similar-model-trigger').attr('data-product-id', item_product_id);
+    $('.view-similar-model-trigger').removeClass('hide');
+    $('.line_item_'+item_id).removeClass('hide');
+  
+    finaltimelineOrder(item_product_id);
+  
+    $('#order-details-model').removeClass('show-pop-up');
+});
+</script>
+
+{% endif %}
+
+ <script src="{{ 'account.js' | asset_url }}"></script>
+
+
+
+<script>
+    function addoverlay() {
+                $('<div class="custom-overlay"><div class="overlay__inner"><div class="overlay__content"><span class="spinner"></span></div></div></div>').appendTo(document.body);
+            };
+
+            function removeoverlay() {
+                $('.custom-overlay').remove();
+            };
+  
+    addoverlay();
+ 	let process = (formid, event) => {
+      	event.preventDefault();
+      console.log($('#'+formid)[0]);
+    	$.ajax({
+            url: theme.apiUrl+'/sendemails.php',
+            type: 'POST',
+            dataType: 'JSON',
+            data: new FormData($('#'+formid)[0]),
+          	processData: false,
+            contentType: false,
+            success: function(response) {
+              	if(response.status == true) {
+                	$('#successful-message').addClass('show-pop-up');
+                } else {
+                 	alert(response.message);
+                }
+            }, error: function(xhr) {
+                alert('something went wrong, please try again.');
+              	window.location.reload();
+            }
+        });
+  	};
+</script>
+
+{% if order.cancelled %}
+
+{% else %}
+
+<script>
+  var order_ids = "{{curr_id_order}}";
+  console.log(order_ids, "order id check");
+  $.ajax({
+      url: theme.apiUrl+'/fetchorderstatus.php',
+      type: 'POST',
+      dataType: 'JSON',
+      data: {
+          order_id: order_ids,
+          code: 'D0A8M2A1L5A*'
+      },
+      success: function(response) {
+          order_id = response.order_id;
+          $('.status-Confirmed').text(response.message);
+      }, error: function(xhr) {
+          $('.status-Confirmed').text('In-preparation');
+      }
+  });
+
+  order_id = $('.my-orders__item-list').attr('data-id');
+var http_new = new XMLHttpRequest();
+  var url = theme.apiUrl+'/webetd.php';
+  var params = 'order_id='+order_id+'&code=D0A8M2A1L5A*';
+http_new.open('POST', url, true);
+
+//Send the proper header information along with the request
+http_new.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+http_new.onreadystatechange = function() {//Call a function when the state changes.
+  console.log(http_new);
+    if(http_new.readyState == 4 && http_new.status == 200) {
+       response =  JSON.parse(http_new.responseText);
+      console.log(response.status);
+      if(response.status) {
+    
+        $('.arrival-label').removeClass('hide');
+      	$('#edt-estimation').text('On '+response.message);
+   
+      }
+      else {
+        $('#edt-estimation').text('response awaited');
+      }
+  	
+   }
+  else {
+          //  $('#edt-estimation').text('response awaited');
+  }
+  
+}
+http_new.send(params);
+</script>
+<script>
+var finaltimeline = '';
+var http = new XMLHttpRequest();
+var url = theme.apiUrl+'/orderfetchstatus.php';
+var params = 'order_id='+$('.my-orders__item-list').attr('data-id')+'&code=D0A8M2A1L5A*';
+http.open('POST', url, true);
+
+//Send the proper header information along with the request
+http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+http.onreadystatechange = function() {//Call a function when the state changes.
+    if(http.readyState == 4 && http.status == 200) {
+         response =  JSON.parse(http.responseText);
+         if(response.status) {
+             finaltimeline = response.timeline;
+         }
+         {% unless itemCount > 1 %}finaltimelineOrder({{item_id}});{%- endunless -%}
+         removeoverlay();
+         $('#order-details-model').addClass('show-pop-up');
+    }
+}
+http.send(params);
+ 
+function finaltimelineOrder(item_product_id){
+  var timelinekey = 'prod_'+item_product_id;
+  if(finaltimeline[timelinekey]) {
+      for(i = 0; i < finaltimeline[timelinekey].length; i++) {
+          $('.my-orders__track-list').append('<li class="my-orders__track-list-item"><label>'+finaltimeline[timelinekey][i].status+' - '+finaltimeline[timelinekey][i].date +'</label></li>');
+      }
+  }
+
+  if(finaltimeline[timelinekey] && finaltimeline[timelinekey].length > 0) {
+      events = finaltimeline[timelinekey];
+      last_status = events.slice(-1)[0];
+      $('.status-Confirmed').text(last_status.status);
+      if(last_status.status == 'Delivered') {
+          // $('#review_block').removeClass('hide');
+          $('#edt-estimation').addClass('hide');
+          $('.arrival-label').addClass('hide');
+          delived_date = last_status.date;
+          var date = new Date(delived_date)
+          return_date = date.setDate(date.getDate() + 7);
+        
+          if(Date.now() > return_date) {
+              $('.return-cta-na').removeClass('hide');
+          } else {
+              $('.return-cta').removeClass('hide');
+         }
+      }
+  } else {
+      $('.status-Confirmed').text('In-preparation');
+  }
+}
+</script>
+{% endif %}

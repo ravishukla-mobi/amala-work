@@ -1,0 +1,105 @@
+{% if template.name == 'page' %}
+  {% assign coll = page.url %}
+{% elsif template.name == 'collection' %}
+  {% assign coll = collection.url %}
+{% elsif template.name == 'product' %}
+  {% assign coll = product.url %}
+{% endif %}
+<div class="hide-for-desktop col-menu-wrapper">
+{% unless page.handle == "christmas" %}
+<ul class="collection-scrollabale-menu">
+{% for link in linklists.main-menu.links %}
+  {% assign linkurl = link.url | remove:'https://amala.earth' %}
+  {% assign semiurl = link.url | remove:'https://amala.earth' %}
+  {% if link.links.size > 0 %}
+    {% for semi_link in link.links %}
+      {% assign semi_link_url = semi_link.url | remove:'https://amala.earth' %}
+      {% if semi_link_url == coll %}
+          {% assign semiurl = semi_link_url %}
+          {% break %}
+      {% endif %}
+      {% for grand_child_link in semi_link.links %}
+        {% if grand_child_link.url == coll %}
+            {% assign semiurl = grand_child_link.url | remove:'https://amala.earth' %}
+            {% break %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  {% endif %}
+  <li class="collection-menu-item {%if coll == semiurl %}show {% endif %}{%if coll == linkurl %} active{% endif %} {{ link.title | handle}}"><a href= "{{ link.url }}">{{ link.title }}</a>
+    <ul class="collection-scrollabale-submenu">
+      {% if link.links.size > 0 %}
+        {% assign childLinkDislay = false %}
+        {% for semi_link in link.links %}
+          {% assign semiLinkurl = semi_link.url | remove:'https://amala.earth' %}
+          {% if coll == semiLinkurl or coll == linkurl %}
+            {% assign childLinkDislay = true %}
+          {% endif %}
+        {% endfor %}
+        {% for semi_link in link.links %}
+          {% assign grandChildLinkDislay = false %}
+          {% for grand_child_link in semi_link.links %}
+            {% assign grandChildLinkurl = grand_child_link.url | remove:'https://amala.earth' %}
+            {% if coll == grandChildLinkurl %}
+              {% assign grandChildLinkDislay = true %}
+            {% endif %}
+          {% endfor %}
+          {% assign semiLinkurl = semi_link.url | remove:'https://amala.earth' %}
+          <li class="collection-submenu-item {%if coll == semiLinkurl %}active{% endif %}{% if semi_link.links.size > 0 and grandChildLinkDislay == false and childLinkDislay == false %} hide{% endif %}" data-title="{{ semi_link.title | handle}}"><a href="{{semi_link.url}}">{{semi_link.title}}</a></li>
+          {% if semi_link.links.size > 0 %}
+            <ul class="collection-scrollabale-submenu{% if semi_link.links.size > 0 and grandChildLinkDislay == false %} hide{% endif %}">
+              {% for grand_child_link in semi_link.links %}
+                {% assign grandChildLinkurl = grand_child_link.url | remove:'https://amala.earth' %}
+                <li class="collection-submenu-item {%if coll == grandChildLinkurl %}active{% endif %}" data-title="{{ grand_child_link.title | handle}}"><a href="{{grand_child_link.url}}">{{grand_child_link.title}}</a></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    </ul>
+    </li>
+{% endfor %}
+</ul>
+{% endunless %}
+</div>
+<style>
+  
+  .collection-menu-item:not(.show){display:none;}
+  :where(.collection-scrollabale-submenu, .collection-scrollabale-menu){list-style:none;}
+  .collection-scrollabale-menu{overflow:hidden;}
+  .collection-scrollabale-menu{overflow-x:auto;padding-bottom: 4px;}
+  .collection-menu-item{display:flex}
+  .collection-scrollabale-submenu{display:flex;}
+  .collection-menu-item a{display:block;padding:5px 10px; white-space:nowrap; color:#777;}
+  .collection-menu-item.active > a{color:#111; border-bottom:3px solid #b89c7d;font-weight:bold;}
+  .collection-menu-item li.active a{color:#111; border-bottom:3px solid #b89c7d;font-weight:bold;}
+  .collection-scrollabale-menu::-webkit-scrollbar {
+    display: none;
+  }
+  @media(max-width:768px){
+    .header_sticky .col-menu-wrapper {
+      background-color: #fff;
+      position: fixed;
+      top: 52px;
+      z-index: 4;
+      left: 0;
+      right: 0;
+    }
+    .collection header .collection__meta .collection__title{font-size:18px; font-weight:500;}
+    .collection header .collection__description{font-size:12px;}
+  }
+</style>
+{% schema %}
+{
+  "name": "Page Navigation",
+  "class": "page-navigation-section",
+  "settings": [],
+  "presets": [
+    {
+      "category": "Navigation",
+      "name": "Page Navigation",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

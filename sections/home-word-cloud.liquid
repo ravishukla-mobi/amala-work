@@ -1,0 +1,338 @@
+<div class="home_word_cloud_section section" data-section-id="{{ section.id }}" data-section-type="home-word-cloud">
+    <div class="container">
+        {%- if section.settings.title != blank or section.settings.subtitle != blank -%}
+        <header class="landing_section_header{% if section.settings.show_only_mobi_titles %} hidden-tablet-and-up{% endif %}">
+        {% if section.settings.subtitle != blank %}
+        <h5 class="landing_subheading">{{section.settings.subtitle}}</h5>
+        {% endif %}
+        {% if section.settings.title != blank %}
+        <h4 class="landing_heading">{{section.settings.title}}</h4>
+        {% endif %}
+        </header>
+        {%- endif -%}
+        <div class="home_word_cloud-wrapper">
+            {%- for block in section.blocks -%}
+            {% case block.type %}
+                {% when 'word' %}
+                <div id="wc_block_{{forloop.index}}" class="wc_block">
+                    {% if block.settings.title != blank %}
+                    <div class="wc_content text-{{block.settings.text_align}}">
+                        {{block.settings.title}}
+                    </div>
+                    {% endif %}
+                </div>
+                {% when 'blank' %}
+                <div class="wc_blank_block"> </div>
+                {% when 'mob_blank' %}
+                <div class="wc_mob_blank_block"> </div>
+            {% endcase %}
+            {%- endfor -%}
+        </div>
+    </div>
+</div>
+
+{% style %}
+#shopify-section-{{section.id}} .home_word_cloud_section{
+    background:{{section.settings.bg_color}};
+}
+#shopify-section-{{section.id}} .wc_content{
+    color:{{section.settings.text_color}};
+    transition:all 0.3s;
+}
+#shopify-section-{{section.id}} .wc_content:hover{
+    color:{{section.settings.text_hover_color}};
+}
+.home_word_cloud_section {
+    padding: 40px 0;
+    overflow:hidden;
+}
+.home_word_cloud-wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.home_word_cloud-wrapper .wc_blank_block {
+    width: 100%;
+}
+.home_word_cloud-wrapper .wc_block {
+    padding: 15px;
+}
+.home_word_cloud-wrapper .wc_content {
+    font-size: 34px;
+    line-height: 1.3;
+    position:relative;
+    cursor: pointer;
+}
+.home_word_cloud-wrapper .wc_content:before {
+    position: absolute;
+    content: '';
+    width: 120%;
+    height: 120%;
+    padding-top: 120%;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%,-50%) scale(0);
+    border-radius: 100%;
+    background-color: #F5C763;
+    opacity: 0.3;
+    transition:all 0.3s;
+}
+.home_word_cloud-wrapper .wc_content:hover:before{
+    transform:translate(-50%,-50%) scale(1);
+}
+.home_word_cloud-wrapper .wc_content strong {
+    font-weight: 600;
+    display: block;
+}
+.text-center{text-align:center;}
+.text-left{text-align:left;}
+.text-right{text-align:right;}
+@media screen and (max-width:1399px){
+    .home_word_cloud-wrapper .wc_content{
+        font-size:25px;
+    }
+    .home_word_cloud-wrapper .wc_block {
+        padding: 12px 15px;
+    }
+}
+@media screen and (max-width:1199px){
+    .home_word_cloud-wrapper .wc_content{
+        font-size:20px;
+    }
+}
+@media screen and (max-width:991px){
+    .home_word_cloud-wrapper .wc_block {
+        padding: 10px;
+    }
+    .home_word_cloud-wrapper .wc_content{
+        font-size:18px;
+    }
+}
+@media screen and (max-width:767px){
+    .home_word_cloud-wrapper .wc_block {
+        padding: 7px;
+    }
+    .home_word_cloud-wrapper .wc_content{
+        font-size:14px;
+    }
+}
+@media screen and (max-width:640px){
+    .home_word_cloud_section {
+        padding: 20px 0;
+        margin: 30px 0 20px;
+    }
+    .home_word_cloud_section .container {
+        padding: 0 10px;
+    }
+    .home_word_cloud-wrapper .wc_blank_block {
+        display: none;
+    }
+    .home_word_cloud-wrapper .wc_mob_blank_block {
+        width: 100%;
+    }
+    .home_word_cloud-wrapper .wc_block {
+        padding: 3px;
+    }
+    .home_word_cloud-wrapper .wc_content{
+        font-size:13px;
+    }
+    .home_word_cloud-wrapper #wc_block_1 {
+        margin-right: 7px;
+    }
+    .home_word_cloud-wrapper #wc_block_2 {
+        margin-left: 7px;
+    }
+    .home_word_cloud-wrapper #wc_block_4 {
+        margin-top: 5px;
+        margin-right: 20px;
+    }
+    .home_word_cloud-wrapper #wc_block_5 {
+        margin-top: 20px;
+    }
+    .home_word_cloud-wrapper #wc_block_7 {
+        margin-left: 20px;
+    }
+    .home_word_cloud-wrapper #wc_block_9 {
+        margin-top: 8px;
+        margin-right: 8px;
+    }
+    .home_word_cloud-wrapper #wc_block_10 {
+        margin-top: 20px;
+        margin-right: 10px;
+    }
+    .home_word_cloud-wrapper #wc_block_11 {
+        margin-top: 7px;
+    }
+    .home_word_cloud-wrapper #wc_block_12 {
+        margin-top: 25px;
+        margin-left: 5px;
+    }
+    .home_word_cloud-wrapper #wc_block_14 {
+        margin-top: 10px;
+        margin-left: 8px;
+        margin-right: 10px;
+    }
+    .home_word_cloud-wrapper #wc_block_16 {
+        margin-left: 10px;
+    }
+    .home_word_cloud-wrapper #wc_block_17 {
+        margin: 5px 35px 0;
+    }
+    .home_word_cloud-wrapper #wc_block_18 {
+        margin-top: 5px;
+        margin-right: 14px;
+    }
+    .home_word_cloud-wrapper #wc_block_20 {
+        margin-top: 5px;
+    }
+    .home_word_cloud-wrapper #wc_block_21 {
+        margin: 20px 45px -30px;
+    }
+    .home_word_cloud-wrapper #wc_block_25 {
+        margin-top: 5px;
+        margin-right: 40px;
+    }
+    .home_word_cloud-wrapper #wc_block_26 {
+        margin-left: 40px;
+    }
+    .home_word_cloud-wrapper #wc_block_28 {
+        margin-right: 7px;
+    }
+    .home_word_cloud-wrapper #wc_block_29 {
+        margin-left: 7px;
+    }
+}
+@media screen and (max-width:369px){
+    .home_word_cloud-wrapper .wc_content {
+        font-size: 12px;
+    }
+    .home_word_cloud-wrapper #wc_block_4 {
+        margin-right: 5px;
+    }
+    .home_word_cloud-wrapper #wc_block_5 {
+        margin-top: 15px;
+    }
+    .home_word_cloud-wrapper #wc_block_7 {
+        margin-left: 10px;
+    }
+    .home_word_cloud-wrapper #wc_block_9 {
+        margin-top: 2px;
+    }
+    .home_word_cloud-wrapper #wc_block_10 {
+        margin-top: 20px;
+        margin-right: 0;
+    }
+    .home_word_cloud-wrapper #wc_block_12 {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+    .home_word_cloud-wrapper #wc_block_14 {
+        margin-top: 15px;
+        margin-right: 5px;
+    }
+    .home_word_cloud-wrapper #wc_block_17 {
+        margin: 10px 20px 0;
+    }
+    .home_word_cloud-wrapper #wc_block_25 {
+        margin: 10px 20px 0;
+    }
+}
+{% endstyle %}
+{% schema %}
+    {
+      "name": "Home Word Cloud",
+      "settings": [
+        {
+          "type":"text",
+          "id":"subtitle",
+          "label":"Subheading"
+        },
+        {
+          "type":"text",
+          "id":"title",
+          "label":"Heading"
+        },
+        {
+          "type":"checkbox",
+          "id":"show_only_mobi_titles",
+          "label":"Show Heading only in mobile"
+        },
+        {
+          "type":"color",
+          "id":"bg_color",
+          "label":"Background color",
+          "default":"#F2E5D8"
+        },
+        {
+          "type":"color",
+          "id":"text_color",
+          "label":"Text color",
+          "default":"#946C56"
+        },
+        {
+          "type":"color",
+          "id":"text_hover_color",
+          "label":"Text hover color",
+          "default":"#000"
+        },
+        {
+          "type":"color",
+          "id":"circle_hover_color",
+          "label":"circle hover color",
+          "default":"#F5C763"
+        }
+      ],
+      "blocks":[
+        {
+          "type": "word",
+          "name": "Word",
+          "settings": [
+            {
+              "type":"richtext",
+              "id":"title",
+              "label":"content"
+            },
+            {
+              "type": "select",
+              "id": "text_align",
+              "label": "Text align",
+              "options": [
+                {
+                  "value": "center",
+                  "label": "center"
+                },
+                {
+                  "value": "left",
+                  "label": "left"
+                },
+                {
+                  "value": "right",
+                  "label": "right"
+                }
+              ],
+              "default": "center"
+            }
+          ]
+        },
+        {
+          "type": "blank",
+          "name": "Empty Block",
+          "settings": [
+          ]
+        },
+        {
+          "type": "mob_blank",
+          "name": "Mobile Empty Block",
+          "settings": [
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "Home Word Cloud",
+          "category": "Custom"
+        }
+      ]
+    }
+  {% endschema %}

@@ -1,0 +1,1961 @@
+{
+  "sections": {
+    "f5741734-9fa3-49d3-a8f5-49165d1bf3cb": {
+      "type": "page-navigation",
+      "settings": {}
+    },
+    "0f1e1f06-d309-4d56-9c23-11024e8c76a2": {
+      "type": "subscription-banner",
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "banner_image_mob": "shopify:\/\/shop_images\/collection-page-subscription-banner-desktop_1.jpg"
+      }
+    },
+    "0cd79f78-7ec3-466f-a59b-6833f75a540a": {
+      "type": "slideshow",
+      "blocks": {
+        "template--16619175280884__0cd79f78-7ec3-466f-a59b-6833f75a540a-167818956432fccc6a-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/summer_ready_banner_web.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/banner_mobile_summer_ready.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/joyful-home",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "template--16619175280884__0cd79f78-7ec3-466f-a59b-6833f75a540a-167818956432fccc6a-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Dohar_Banner_1920x600_dd07010a-eaa3-425d-9361-44e0205b51fe.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Dohar_Home_banner-microsite-mobile_1.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/dohar-blankets",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "034c2a73-bda7-430c-8e68-6a977e582d18": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/kitchen_essentials_web_banner_0818494b-303c-404f-8e98-9eb9e0591305.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/kitchen_essentials_mobile_banner_5ea8f0b8-7a58-4b9c-a710-32eef0ae02a2.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/Nestroots?f_Type=Crockery%20and%20Serveware%2CKitchen%20Storage%20and%20Containers%2CCutlery%20Sets%2CCupscomma%20Mugs%20%26%20Glasses",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "1d0f19e4-254a-472b-b3dc-c9e108d05b03": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Amalfi_Banner_1920x600_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Amalfi_Home_banner-microsite-mobile_1.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/Amalfiee-Ceramics",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "b10fec77-71df-4a93-afae-0b0ad4862d28": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Santuary_living_Banner_1920x600_e7544023-0d6d-48de-bfa9-d6f2ab4fe2d8.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Santuary_living_Home_banner-microsite-mobile.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/Sanctuary-Living",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        },
+        "36e47f0b-ea5f-4236-af39-5ab9b6ea41fd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner_website_micro_c850fc94-6a35-447f-9346-257056651044.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/banner_mobile_micro_1_aca02648-e58f-45d2-b811-e1ce34959a23.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/joyful-home",
+            "collectionName": "",
+            "plpTitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16619175280884__0cd79f78-7ec3-466f-a59b-6833f75a540a-167818956432fccc6a-1",
+        "template--16619175280884__0cd79f78-7ec3-466f-a59b-6833f75a540a-167818956432fccc6a-0",
+        "034c2a73-bda7-430c-8e68-6a977e582d18",
+        "1d0f19e4-254a-472b-b3dc-c9e108d05b03",
+        "b10fec77-71df-4a93-afae-0b0ad4862d28",
+        "36e47f0b-ea5f-4236-af39-5ab9b6ea41fd"
+      ],
+      "settings": {
+        "edge_to_edge": true,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "3ce8650f-ee5d-4ec2-8c3e-43b4fde36a2f": {
+      "type": "custom-grid",
+      "blocks": {
+        "9f57f552-0ea6-4e2b-8b7a-a4f12d36551b": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/natural_bedding_9ef9d625-1f94-4c20-9b88-7f472de609a6.png",
+            "title": "Natural bedding",
+            "block_button_url": "https:\/\/amala.earth\/collections\/bedding-cushions-and-throws"
+          }
+        },
+        "adb9e735-9398-4722-9a2d-a10e739bacf6": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/handmade_serveware_7be7d303-874e-491d-8232-125d3a5d5c5b.png",
+            "title": "Handmade serveware",
+            "block_button_url": "https:\/\/amala.earth\/collections\/crockery-and-cutlery"
+          }
+        },
+        "9d8a0cc5-207d-4537-b54a-dd1666611f34": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/Handpoured_candles_91f4509b-d6ed-4a40-8433-ff1d8d49b6ce.png",
+            "title": "Handpoured candles",
+            "block_button_url": "https:\/\/amala.earth\/collections\/candles-and-aromatherapy"
+          }
+        },
+        "4ba4ea05-4dcd-44b1-8e66-b2e11c1d8eca": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/traditional_cookware_cfdd0ce3-0401-4775-ad8a-1080ee7bd49b.png",
+            "title": "Traditional cookware",
+            "block_button_url": "https:\/\/amala.earth\/collections\/cookware"
+          }
+        },
+        "46dcfbea-f442-422a-8f61-c28429a2d9a2": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/garden_and_outdoors_43648500-2c62-4739-b0a9-08ee1cc251e5.png",
+            "title": "Garden and outdoors",
+            "block_button_url": "https:\/\/amala.earth\/collections\/garden-and-outdoors"
+          }
+        },
+        "bad5f3ff-9274-4267-9c3e-9a6deba99ea1": {
+          "type": "second-section",
+          "settings": {
+            "second_section_image": "shopify:\/\/shop_images\/cleaners.png",
+            "title": "Non-toxic cleaning",
+            "block_button_url": "https:\/\/amala.earth\/collections\/household-cleaning-and-essentials"
+          }
+        }
+      },
+      "block_order": [
+        "9f57f552-0ea6-4e2b-8b7a-a4f12d36551b",
+        "adb9e735-9398-4722-9a2d-a10e739bacf6",
+        "9d8a0cc5-207d-4537-b54a-dd1666611f34",
+        "4ba4ea05-4dcd-44b1-8e66-b2e11c1d8eca",
+        "46dcfbea-f442-422a-8f61-c28429a2d9a2",
+        "bad5f3ff-9274-4267-9c3e-9a6deba99ea1"
+      ],
+      "settings": {
+        "subtitle": "",
+        "title": ""
+      }
+    },
+    "00ba892f-b43a-450f-a1a8-94b6f228aa58": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "8ba694ac-f751-41fe-983c-3d5ac6598ef6": {
+          "type": "Product",
+          "settings": {
+            "product": "courtyard-borosilicate-glass-cocktail-glass-purple-set-of-2-dia-3-inchxh-5-85-inch-crt-jamuni-cocktailglsset2-003a-90323"
+          }
+        },
+        "4b9b782b-94f7-4697-80ed-e140639a7e95": {
+          "type": "Product",
+          "settings": {
+            "product": "minimal-indian-stoneware-coasters-handpainted-set-of-4-ivory-mitw632ctr-10323"
+          }
+        },
+        "f3618f32-389a-4945-ba37-82eb6f29413e": {
+          "type": "Product",
+          "settings": {
+            "product": "sustainable-kansa-plate-set"
+          }
+        },
+        "f990fb06-bc7d-45e6-8df2-f840bb0b36cc": {
+          "type": "Product",
+          "settings": {
+            "product": "the-wishing-chair-ceramic-mug-285-ml-blue-set-of-2-14703-130423"
+          }
+        },
+        "f823a59e-4459-4658-91c2-49861b4a357d": {
+          "type": "Product",
+          "settings": {
+            "product": "courtyard-wooden-tray-with-bread-holders-butter-spreader-l-9-5xh-3-75-inch-crt-baghtoastrack-01-90323"
+          }
+        },
+        "0a169d67-0024-410b-8760-c8d66d8609ca": {
+          "type": "Product",
+          "settings": {
+            "product": "courtyard-borosilicate-glass-wood-bottle-white-l-2-5xw-2-5xh-12-5-inch-crt-indusbtl-01-90323"
+          }
+        },
+        "cdab8dd1-5f31-4ad7-a372-6b9b757aad71": {
+          "type": "Product",
+          "settings": {
+            "product": "amalfiee-ceramics-ceramic-pasta-bowls-yellow-pina001pb6-110423"
+          }
+        },
+        "2c1b23c7-6ab3-4c1c-a503-fbd5a6376938": {
+          "type": "Product",
+          "settings": {
+            "product": "mango-wood-glass-dome-cake-stand-brown"
+          }
+        },
+        "68e3cc49-5ef3-47c6-8d05-dc7caa78a2b0": {
+          "type": "Product",
+          "settings": {
+            "product": "vata-living-stoneware-dessert-bowls-white-blue-set-of-4-vtcr206-21323"
+          }
+        },
+        "892e2bef-9364-4792-982f-83d83fa61d60": {
+          "type": "Product",
+          "settings": {
+            "product": "wooden-plates-brown-set-of-4"
+          }
+        },
+        "340a902a-0622-4f1b-b54c-f553b5efccf7": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "100-linen-chrome-striped-bedsheet-set"
+          }
+        },
+        "682473b2-4c3e-46d3-87a6-aec3600ba41f": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "100-linen-pink-herringbone-throw"
+          }
+        }
+      },
+      "block_order": [
+        "8ba694ac-f751-41fe-983c-3d5ac6598ef6",
+        "4b9b782b-94f7-4697-80ed-e140639a7e95",
+        "f3618f32-389a-4945-ba37-82eb6f29413e",
+        "f990fb06-bc7d-45e6-8df2-f840bb0b36cc",
+        "f823a59e-4459-4658-91c2-49861b4a357d",
+        "0a169d67-0024-410b-8760-c8d66d8609ca",
+        "cdab8dd1-5f31-4ad7-a372-6b9b757aad71",
+        "2c1b23c7-6ab3-4c1c-a503-fbd5a6376938",
+        "68e3cc49-5ef3-47c6-8d05-dc7caa78a2b0",
+        "892e2bef-9364-4792-982f-83d83fa61d60",
+        "340a902a-0622-4f1b-b54c-f553b5efccf7",
+        "682473b2-4c3e-46d3-87a6-aec3600ba41f"
+      ],
+      "settings": {
+        "title1": "Handcrafted",
+        "title2": "Crockery & Serveware",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/crockery-and-cutlery",
+        "button_position": "top"
+      }
+    },
+    "7e727bcc-acea-4a68-bf80-27371ae6d902": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "6cea51e5-a84f-4047-a3b9-f6261f8a7aa2": {
+          "type": "Product",
+          "settings": {
+            "product": "hammered-copper-bottle-1-l"
+          }
+        },
+        "72995800-ecf7-46ec-b2ff-f4be43592e1e": {
+          "type": "Product",
+          "settings": {
+            "product": "copper-bottle-navy-blue-650-ml"
+          }
+        },
+        "31fb0fb1-31fc-4221-b26b-b3e53253464e": {
+          "type": "Product",
+          "settings": {
+            "product": "plain-copper-bottle-1-l"
+          }
+        },
+        "9cea60a7-6501-4dcc-a902-6cb5b03ddabe": {
+          "type": "Product",
+          "settings": {
+            "product": "everything-beautiful-copper-bottle-white-black-900-ml-ebmp-209-140323"
+          }
+        },
+        "45c49ccf-a090-4093-bc1c-f1fa6114aa75": {
+          "type": "Product",
+          "settings": {
+            "product": "copper-bottle-black-850-ml"
+          }
+        },
+        "69afb2c8-919f-47d0-be83-6840e4271561": {
+          "type": "Product",
+          "settings": {
+            "product": "sarveda-copper-water-bottle-7-chakra-engraved-1-l-svh_d_039-230922"
+          }
+        },
+        "70927f2a-7341-46d8-8531-ecd81dbba1d4": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-brown-wooden-copper-bottle-500ml"
+          }
+        },
+        "4ae424f7-1f42-4b80-bce9-5d09ddce85db": {
+          "type": "Product",
+          "settings": {
+            "product": "modern-art-pink-copper-bottle-1-l"
+          }
+        },
+        "7c43c668-5fc6-4110-9a53-44ce85e9f6a6": {
+          "type": "Product",
+          "settings": {
+            "product": "everything-beautiful-copper-bottle-glass-set-grey-bottle-900-ml-glass-270-ml-each-ebmp-134-140323"
+          }
+        },
+        "f89fdc97-793b-4a2b-a68b-ff1e73733321": {
+          "type": "Product",
+          "settings": {
+            "product": "copper-bottle-white-1-l"
+          }
+        },
+        "2adff8ad-1882-4d1c-8509-740808a590dd": {
+          "type": "Product",
+          "settings": {
+            "product": "handcrafted-copper-yellow-printed-bottle-500ml"
+          }
+        },
+        "1a9e582d-eca8-44ab-bee8-2d9915d9b8ed": {
+          "type": "Product",
+          "settings": {
+            "product": "everything-beautiful-copper-bottle-slim-white-blue-750-ml-ebmp-239-140323"
+          }
+        },
+        "c48fc1bc-5aa8-495a-9c7e-080f491621f5": {
+          "type": "Product",
+          "settings": {
+            "product": "copy-of-copper-bottle-blue-950-ml"
+          }
+        },
+        "3236e110-6734-4bb4-b349-a468b6a2fe78": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "antique-iron-hanging-t-light-set-2-pieces-1"
+          }
+        }
+      },
+      "block_order": [
+        "6cea51e5-a84f-4047-a3b9-f6261f8a7aa2",
+        "72995800-ecf7-46ec-b2ff-f4be43592e1e",
+        "31fb0fb1-31fc-4221-b26b-b3e53253464e",
+        "9cea60a7-6501-4dcc-a902-6cb5b03ddabe",
+        "45c49ccf-a090-4093-bc1c-f1fa6114aa75",
+        "69afb2c8-919f-47d0-be83-6840e4271561",
+        "70927f2a-7341-46d8-8531-ecd81dbba1d4",
+        "4ae424f7-1f42-4b80-bce9-5d09ddce85db",
+        "7c43c668-5fc6-4110-9a53-44ce85e9f6a6",
+        "f89fdc97-793b-4a2b-a68b-ff1e73733321",
+        "2adff8ad-1882-4d1c-8509-740808a590dd",
+        "1a9e582d-eca8-44ab-bee8-2d9915d9b8ed",
+        "c48fc1bc-5aa8-495a-9c7e-080f491621f5",
+        "3236e110-6734-4bb4-b349-a468b6a2fe78"
+      ],
+      "settings": {
+        "title1": "Easy Switches",
+        "title2": "copper bottles",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/crockery-and-cutlery?f_Type=Bottles&f_Material=Copper",
+        "button_position": "top"
+      }
+    },
+    "cafcba3a-6e9f-4dc1-b8d9-8abff3c264ca": {
+      "type": "slider-test",
+      "blocks": {
+        "31acc38a-0b89-4f12-8dbf-39895d5a815d": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner_website_multipurpose_organisers.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/microsite_mobile_multipurpose_organiser.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/declutter-your-space"
+          }
+        },
+        "template--16619175280884__cafcba3a-6e9f-4dc1-b8d9-8abff3c264ca-1676899090f6f84dd9-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner_website_bamboo_towels_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/banner_Mobile_bamboo_towels.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/pure-cotton-bath-towels"
+          }
+        },
+        "fbeb8f17-ed64-40ee-8486-2f114edb787b": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner_website_home.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/banner_Mobile_home.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#fff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/summer-fabric-essentials"
+          }
+        },
+        "e3563dda-b5bf-4473-9d95-e4fd4537dec7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/from_the_baker_web_banner.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/from_the_baker_mobile_banner.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/for-the-baker-in-you"
+          }
+        },
+        "28ee98fd-5d6a-45bf-a061-79782e6b32fe": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mug_Warmer_Banner_1100x347_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/Mug_warmer_580x626_Microsite_banner_1_bfe0edec-abd4-466b-87ef-c5e22b5ffd2e.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/high-tea-serveware"
+          }
+        },
+        "template--16619175280884__cafcba3a-6e9f-4dc1-b8d9-8abff3c264ca-1676899090f6f84dd9-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/linen_banner_website_1_c3a1882f-7ecd-4a86-8c1f-dff90c1b1aed.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/linen_banner_mobile_1_d0f8995a-9c6e-4d21-a7cd-39e4f54151fb.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/joyful-home-linen"
+          }
+        }
+      },
+      "block_order": [
+        "31acc38a-0b89-4f12-8dbf-39895d5a815d",
+        "template--16619175280884__cafcba3a-6e9f-4dc1-b8d9-8abff3c264ca-1676899090f6f84dd9-0",
+        "fbeb8f17-ed64-40ee-8486-2f114edb787b",
+        "e3563dda-b5bf-4473-9d95-e4fd4537dec7",
+        "28ee98fd-5d6a-45bf-a061-79782e6b32fe",
+        "template--16619175280884__cafcba3a-6e9f-4dc1-b8d9-8abff3c264ca-1676899090f6f84dd9-1"
+      ],
+      "custom_css": [
+        ".homeslider {margin-top: 40px;}"
+      ],
+      "settings": {
+        "edge_to_edge": false,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "a6bc6a73-d308-4dd1-9bcf-87d3c94f23b6": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "af4f8320-e9e0-4e42-9572-00b433153581": {
+          "type": "Product",
+          "settings": {
+            "product": "sanctuary-living-linen-cushion-cover-printed-off-white-c112-03-008-10423"
+          }
+        },
+        "839443c1-2d35-44de-963f-6b2182dec6b2": {
+          "type": "Product",
+          "settings": {
+            "product": "sanctuary-living-linen-table-runner-printed-teal-green-t112-05-011-10423"
+          }
+        },
+        "1fe444d6-3aec-4437-a257-48048040dab6": {
+          "type": "Product",
+          "settings": {
+            "product": "sanctuary-living-linen-table-napkins-printed-green-t112-06-017-10423"
+          }
+        },
+        "4ad0f5a1-ae78-41fd-8863-1bca74b9a851": {
+          "type": "Product",
+          "settings": {
+            "product": "sanctuary-living-cotton-round-cushion-quilted-green-c122-03-023-10423"
+          }
+        },
+        "e7323322-9efd-427c-aa72-fbe739d0eb51": {
+          "type": "Product",
+          "settings": {
+            "product": "sanctuary-living-cotton-throw-for-sofa-peach-b121-09-001-10423"
+          }
+        },
+        "ff1ee4f0-24cf-4a33-84b6-c812024e05ba": {
+          "type": "Product",
+          "settings": {
+            "product": "sanctuary-living-cotton-bedsheet-with-pillow-covers-king-size-peach-b121-08-003-10423"
+          }
+        },
+        "3ed33520-dee4-4136-b960-0cc881ec41ea": {
+          "type": "Product",
+          "settings": {
+            "product": "sanctuary-living-cotton-cushion-cover-striped-green-c122-03-031-10423"
+          }
+        },
+        "e6c073f3-906a-459d-908d-15564dd5f0b9": {
+          "type": "Product",
+          "settings": {
+            "product": "sanctuary-living-linen-table-mats-ruffled-grey-set-of-2-t113-07-003-10423"
+          }
+        },
+        "9a0252cc-8db2-41aa-86b5-b2ea851138e5": {
+          "type": "Product",
+          "settings": {
+            "product": "sanctuary-living-cotton-blanket-knitted-grey-b121-10-002-10423"
+          }
+        },
+        "6c90960c-8880-482d-af91-36f5c8d5c532": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "courtyard-glass-carafe-with-wooden-knob-l-6xw-6xh-7-95-inch-crt-neerpitcher-007-90323"
+          }
+        },
+        "d515dd83-3b2e-4c42-957a-47b932d2228f": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "courtyard-wood-ceramic-tea-pot-green-crt-stvikteapot-01-90323"
+          }
+        },
+        "fd9d5ccf-86bf-4f43-a634-cf3c652199d2": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "courtyard-papier-meche-metal-tlight-holder-off-white-gold-crt-gulfam-ecomixtlight-001-90323"
+          }
+        },
+        "0ef8c1a5-696d-4f5c-8d33-e43e52b85748": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "courtyard-brass-wood-trinket-box-4-partitions-gold-brown-crt-br-stvksheesham-mkwas-001-90323"
+          }
+        },
+        "62e3cd8c-fd50-4ac1-91f2-27a517c7120a": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "courtyard-borosilicate-glass-wood-bottle-white-l-2-5xw-2-5xh-12-5-inch-crt-indusbtl-01-90323"
+          }
+        }
+      },
+      "block_order": [
+        "af4f8320-e9e0-4e42-9572-00b433153581",
+        "839443c1-2d35-44de-963f-6b2182dec6b2",
+        "1fe444d6-3aec-4437-a257-48048040dab6",
+        "4ad0f5a1-ae78-41fd-8863-1bca74b9a851",
+        "e7323322-9efd-427c-aa72-fbe739d0eb51",
+        "ff1ee4f0-24cf-4a33-84b6-c812024e05ba",
+        "3ed33520-dee4-4136-b960-0cc881ec41ea",
+        "e6c073f3-906a-459d-908d-15564dd5f0b9",
+        "9a0252cc-8db2-41aa-86b5-b2ea851138e5",
+        "6c90960c-8880-482d-af91-36f5c8d5c532",
+        "d515dd83-3b2e-4c42-957a-47b932d2228f",
+        "fd9d5ccf-86bf-4f43-a634-cf3c652199d2",
+        "0ef8c1a5-696d-4f5c-8d33-e43e52b85748",
+        "62e3cd8c-fd50-4ac1-91f2-27a517c7120a"
+      ],
+      "settings": {
+        "title1": "Newly",
+        "title2": "launched",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/Sanctuary-Living",
+        "button_position": "top"
+      }
+    },
+    "68c33a46-c30e-4b8a-84b9-d80dacac4a04": {
+      "type": "circular-image-grid",
+      "blocks": {
+        "88258eae-41cf-4183-8762-a32eb51d4bc0": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Cotton_01cdb5c4-b8a7-4775-947a-2e61e2c40abf.png",
+            "block_two_subtitle": "Indian",
+            "title": "Cotton",
+            "second_block_url": "https:\/\/amala.earth\/collections\/joyful-home-cotton"
+          }
+        },
+        "2e909473-ebc0-45b7-a5fa-7463a5a4b3ba": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Linen_97fa19dc-ebed-4d4c-9755-730c3625759d.png",
+            "block_two_subtitle": "Fine",
+            "title": "Linen",
+            "second_block_url": "https:\/\/amala.earth\/collections\/joyful-home-linen"
+          }
+        },
+        "8ff10c40-b5fb-49fa-ad25-3e5a8b8cdd3e": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/wooden_bowl.jpg",
+            "block_two_subtitle": "Reclaimed",
+            "title": "Wood",
+            "second_block_url": "https:\/\/amala.earth\/collections\/joyful-home-wood"
+          }
+        },
+        "92774282-274e-4445-aec9-b275fa7c6f5e": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Hemp_ba704a51-ad9a-4dfc-8b9a-77bf99eefcd1.png",
+            "block_two_subtitle": "Homegrown",
+            "title": "Hemp",
+            "second_block_url": "https:\/\/amala.earth\/collections\/joyful-home-hemp"
+          }
+        },
+        "8a6d3a3c-94c0-4179-ad43-af8efd49d07b": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Clay.png",
+            "block_two_subtitle": "Earthy",
+            "title": "Clay",
+            "second_block_url": "https:\/\/amala.earth\/collections\/joyful-home-clay"
+          }
+        },
+        "dfe64664-5b98-41cd-85ad-d3bfffba4906": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/1_5.jpg",
+            "block_two_subtitle": "Timeless",
+            "title": "Bronze",
+            "second_block_url": "https:\/\/amala.earth\/collections\/joyful-home-bronze"
+          }
+        },
+        "57ff8aac-d518-41e4-b337-6627f65f383e": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Copper.png",
+            "block_two_subtitle": "Traditional",
+            "title": "Copper",
+            "second_block_url": "https:\/\/amala.earth\/collections\/joyful-home-copper"
+          }
+        },
+        "8da60efe-7020-4864-85da-93994fd29308": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Bamboo_37220e98-6fe4-4f7d-9225-dd5551e91257.png",
+            "block_two_subtitle": "Natural",
+            "title": "Bamboo",
+            "second_block_url": "https:\/\/amala.earth\/collections\/joyful-home-bamboo"
+          }
+        },
+        "9498bd5e-cb81-49b2-8bb3-ba9f7c4ca19d": {
+          "type": "block-2",
+          "settings": {
+            "product_slider": "shopify:\/\/shop_images\/Wax.png",
+            "block_two_subtitle": "100% Soy",
+            "title": "Wax",
+            "second_block_url": "https:\/\/amala.earth\/collections\/joyful-home-wax"
+          }
+        }
+      },
+      "block_order": [
+        "88258eae-41cf-4183-8762-a32eb51d4bc0",
+        "2e909473-ebc0-45b7-a5fa-7463a5a4b3ba",
+        "8ff10c40-b5fb-49fa-ad25-3e5a8b8cdd3e",
+        "92774282-274e-4445-aec9-b275fa7c6f5e",
+        "8a6d3a3c-94c0-4179-ad43-af8efd49d07b",
+        "dfe64664-5b98-41cd-85ad-d3bfffba4906",
+        "57ff8aac-d518-41e4-b337-6627f65f383e",
+        "8da60efe-7020-4864-85da-93994fd29308",
+        "9498bd5e-cb81-49b2-8bb3-ba9f7c4ca19d"
+      ],
+      "settings": {
+        "subtitle": "",
+        "title": ""
+      }
+    },
+    "1ded6b38-fa96-4ac2-87e3-67bc1224ddf3": {
+      "type": "amala-earth-curation",
+      "blocks": {
+        "6b3f79a5-80c5-4947-a75c-24f71c4f18cc": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/banner_website_cast_iron.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/microsite_mobile_cookware.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/cast-iron-cookware"
+          }
+        },
+        "58753b44-d0bb-4d76-bc70-b96bdabeb5b7": {
+          "type": "Banner",
+          "disabled": true,
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/scrool_banner_website_cookware.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/scrool_banner_mobile_cookware.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/cookware"
+          }
+        }
+      },
+      "block_order": [
+        "6b3f79a5-80c5-4947-a75c-24f71c4f18cc",
+        "58753b44-d0bb-4d76-bc70-b96bdabeb5b7"
+      ],
+      "settings": {
+        "curation_heading1": "",
+        "curation_sub_heading2": ""
+      }
+    },
+    "d6647946-fc06-4f6f-9e3f-ec55360acf47": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "c0a0996b-f501-47a9-a05f-65b2337f80ce": {
+          "type": "Product",
+          "settings": {
+            "product": "brass-kadhai"
+          }
+        },
+        "6e709b04-04ee-4770-be37-08a17d3a8daa": {
+          "type": "Product",
+          "settings": {
+            "product": "sustainable-clay-sauce-pan"
+          }
+        },
+        "e3b34f04-9f2c-49d9-a1ab-96cd2e7cd6a2": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-grey-stoneware-mortar-and-pestle-big"
+          }
+        },
+        "67cd67d3-7197-4429-a898-de4e29deb688": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-black-cast-iron-dosa-tawa-12-inch"
+          }
+        },
+        "87346256-1235-459f-b3c5-b915cd4d075e": {
+          "type": "Product",
+          "settings": {
+            "product": "brass-patila-topia-5ltr"
+          }
+        },
+        "c16da899-29df-4950-8a7a-99b5290d9b63": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-blackened-clay-urali-pot-large"
+          }
+        },
+        "37f5159c-dc00-49c3-928d-16023178a01f": {
+          "type": "Product",
+          "settings": {
+            "product": "earthbound-cast-iron-kadai-black-8-inch-cik8-030822"
+          }
+        },
+        "fe84c84b-d1e8-4b91-bcd1-e3c3c69adb62": {
+          "type": "Product",
+          "settings": {
+            "product": "sustainable-bronze-brass-ring"
+          }
+        },
+        "33787a22-2373-4cc1-9834-1366f8e9fd53": {
+          "type": "Product",
+          "settings": {
+            "product": "sustainable-clay-curry-pot"
+          }
+        },
+        "2aff7fce-b3fc-4e95-9fc9-2de25b59d48b": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-pure-bronze-saute-pan"
+          }
+        },
+        "abbf5896-4dc1-4f97-a617-6c3ffa0bddd4": {
+          "type": "Product",
+          "settings": {
+            "product": "codesustain-cast-iron-fry-pan-toxin-free-14-inch-csloha006-160223"
+          }
+        }
+      },
+      "block_order": [
+        "c0a0996b-f501-47a9-a05f-65b2337f80ce",
+        "6e709b04-04ee-4770-be37-08a17d3a8daa",
+        "e3b34f04-9f2c-49d9-a1ab-96cd2e7cd6a2",
+        "67cd67d3-7197-4429-a898-de4e29deb688",
+        "87346256-1235-459f-b3c5-b915cd4d075e",
+        "c16da899-29df-4950-8a7a-99b5290d9b63",
+        "37f5159c-dc00-49c3-928d-16023178a01f",
+        "fe84c84b-d1e8-4b91-bcd1-e3c3c69adb62",
+        "33787a22-2373-4cc1-9834-1366f8e9fd53",
+        "2aff7fce-b3fc-4e95-9fc9-2de25b59d48b",
+        "abbf5896-4dc1-4f97-a617-6c3ffa0bddd4"
+      ],
+      "settings": {
+        "title1": "Non-toxic",
+        "title2": "Cookware",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/cookware",
+        "button_position": "top"
+      }
+    },
+    "599fb9d5-a3b4-4dd1-a141-eef20c6845ef": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "14130e83-6507-434f-b50b-e3373c61191b": {
+          "type": "Product",
+          "settings": {
+            "product": "sustainable-kansa-plate-set"
+          }
+        },
+        "688c4a65-86c2-42f4-9334-ed326693da45": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-bronze-tadka-pan"
+          }
+        },
+        "b64a0e63-5167-4ddc-87e6-a545db26fa90": {
+          "type": "Product",
+          "settings": {
+            "product": "kansa-luxury-matte-plate"
+          }
+        },
+        "e5c71f4c-9ece-4007-9f05-d0726ff0a62e": {
+          "type": "Product",
+          "settings": {
+            "product": "handmade-kansa-plate-set-of-2"
+          }
+        },
+        "77fd30f6-7039-489c-b5d1-ea93f2ba57f5": {
+          "type": "Product",
+          "settings": {
+            "product": "sustainable-bronze-kadai"
+          }
+        },
+        "3b627a98-e96a-4567-a46b-b999aff61fbb": {
+          "type": "Product",
+          "disabled": true,
+          "settings": {
+            "product": "sustainable-bronze-brass-spoon-and-fork"
+          }
+        },
+        "c08f83b7-f2d8-485f-8371-5393fdf26dd3": {
+          "type": "Product",
+          "settings": {
+            "product": "sustainable-bronze-uniappam-pan"
+          }
+        },
+        "7f93e4de-8586-40c8-9e23-9fb584271163": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-kansa-katori-set"
+          }
+        },
+        "13e2cc4d-7f23-41e9-aa75-a1f8a1037324": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-bronze-sauce-pan"
+          }
+        }
+      },
+      "block_order": [
+        "14130e83-6507-434f-b50b-e3373c61191b",
+        "688c4a65-86c2-42f4-9334-ed326693da45",
+        "b64a0e63-5167-4ddc-87e6-a545db26fa90",
+        "e5c71f4c-9ece-4007-9f05-d0726ff0a62e",
+        "77fd30f6-7039-489c-b5d1-ea93f2ba57f5",
+        "3b627a98-e96a-4567-a46b-b999aff61fbb",
+        "c08f83b7-f2d8-485f-8371-5393fdf26dd3",
+        "7f93e4de-8586-40c8-9e23-9fb584271163",
+        "13e2cc4d-7f23-41e9-aa75-a1f8a1037324"
+      ],
+      "settings": {
+        "title1": "Timeless",
+        "title2": "bronze",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": true,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/joyful-home?f_Material=Bronze",
+        "button_position": "top"
+      }
+    },
+    "975f2eaf-c0d9-48f8-8bee-4bf58bd72a8f": {
+      "type": "slider-test",
+      "blocks": {
+        "template--16619175280884__975f2eaf-c0d9-48f8-8bee-4bf58bd72a8f-16786893269921aeed-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner_website_copper_bottle.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/mobile_copper_bottles.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/copper-bottles"
+          }
+        },
+        "template--16619175280884__975f2eaf-c0d9-48f8-8bee-4bf58bd72a8f-16786893269921aeed-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner_website_Aesthetic_planters.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/microsite_mobile_asthetic_planters_1.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/indoor-and-outdoor-planters"
+          }
+        },
+        "f92678b6-b677-432e-be67-c8869321ed78": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/web.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/mobile_1.jpg",
+            "show_overlay": false,
+            "overlay_opacity": 30,
+            "text_color": "#ffffff",
+            "title": "",
+            "subtitle": "",
+            "content": "",
+            "content_position": "middle_center",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "background_color": "#ffffff",
+            "button_text": "",
+            "link": "https:\/\/amala.earth\/collections\/bedding-cushions-and-throws?s=-isActive%2Cdiscounted_price%2C-_rank&f_Type=Bedsheets%20and%20Bedcovers&f_Material=Linen"
+          }
+        }
+      },
+      "block_order": [
+        "template--16619175280884__975f2eaf-c0d9-48f8-8bee-4bf58bd72a8f-16786893269921aeed-1",
+        "template--16619175280884__975f2eaf-c0d9-48f8-8bee-4bf58bd72a8f-16786893269921aeed-0",
+        "f92678b6-b677-432e-be67-c8869321ed78"
+      ],
+      "settings": {
+        "edge_to_edge": false,
+        "section_size": "preserve_ratio",
+        "carousel_effect": "slide",
+        "autoplay": true,
+        "cycle_speed": 5
+      }
+    },
+    "a3b7f103-6f2c-4405-b731-221e2062101e": {
+      "type": "amala-earth-curation",
+      "disabled": true,
+      "blocks": {
+        "825fd9c4-5b4d-488f-9627-4ca273bc9a31": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/scroll_banner_website_ceramic.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/scroll_banner_mobile_ceramic.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/crockery-and-cutlery?f_Material=Ceramic"
+          }
+        }
+      },
+      "block_order": [
+        "825fd9c4-5b4d-488f-9627-4ca273bc9a31"
+      ],
+      "settings": {
+        "curation_heading1": "",
+        "curation_sub_heading2": ""
+      }
+    },
+    "2bd14898-d935-4349-9e83-f4372de58bf7": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "faa1f530-a28e-4eb8-8189-0c3ca401d56f": {
+          "type": "Product",
+          "settings": {
+            "product": "100-linen-solid-bedsheet-set"
+          }
+        },
+        "53a0122f-376d-440e-92b6-8d797cb6f8bd": {
+          "type": "Product",
+          "settings": {
+            "product": "100-cotton-solid-bedsheet-set-grey"
+          }
+        },
+        "056f647c-c1d7-437e-8233-11c3955d3f53": {
+          "type": "Product",
+          "settings": {
+            "product": "saphed-linen-bedsheet-flat-sheet-indigo-blue-010105b-190123"
+          }
+        },
+        "d9316e50-997c-4f71-b34f-f532012be4d3": {
+          "type": "Product",
+          "settings": {
+            "product": "linen-on-me-pure-linen-bedsheet-with-pillowcases-grey-329-queen-140922"
+          }
+        },
+        "3d2810cb-434f-4ca9-8841-628f6fd11487": {
+          "type": "Product",
+          "settings": {
+            "product": "live-linen-pure-linen-bedsheet-with-pillow-covers-red-livbr001-310123"
+          }
+        },
+        "80820f18-87a0-4a91-af2a-5729f89510de": {
+          "type": "Product",
+          "settings": {
+            "product": "100-linen-sky-blue-chambray-bedsheet-set"
+          }
+        },
+        "dd81d6c2-b03a-4387-9f4e-85e9163ea1d5": {
+          "type": "Product",
+          "settings": {
+            "product": "100-linen-chrome-striped-bedsheet-set"
+          }
+        },
+        "9edbd3e8-003d-45f7-88ab-4fcec7c532a3": {
+          "type": "Product",
+          "settings": {
+            "product": "thread-connect-linen-bedsheet-with-pillow-covers-sage-green-tc043-130323"
+          }
+        },
+        "4f2943db-8575-4b2f-a77b-be35cd5b2974": {
+          "type": "Product",
+          "settings": {
+            "product": "sanctuary-living-linen-king-size-bedsheet-sage-green-b112-01-003-10423"
+          }
+        }
+      },
+      "block_order": [
+        "faa1f530-a28e-4eb8-8189-0c3ca401d56f",
+        "53a0122f-376d-440e-92b6-8d797cb6f8bd",
+        "056f647c-c1d7-437e-8233-11c3955d3f53",
+        "d9316e50-997c-4f71-b34f-f532012be4d3",
+        "3d2810cb-434f-4ca9-8841-628f6fd11487",
+        "80820f18-87a0-4a91-af2a-5729f89510de",
+        "dd81d6c2-b03a-4387-9f4e-85e9163ea1d5",
+        "9edbd3e8-003d-45f7-88ab-4fcec7c532a3",
+        "4f2943db-8575-4b2f-a77b-be35cd5b2974"
+      ],
+      "settings": {
+        "title1": "All-natural",
+        "title2": "linens",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/bedding-cushions-and-throws?s=-isActive%2Cdiscounted_price%2C-_rank&f_Type=Bedsheets%20and%20Bedcovers&f_Material=Linen",
+        "button_position": "top"
+      }
+    },
+    "773c3db5-d894-4b94-98a6-a9b7708d3a3f": {
+      "type": "amala-earth-curation",
+      "blocks": {
+        "5e241a63-e7e6-4a6e-9464-b798d395d5c0": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/scroll_banner_website_soya_wax_op_2.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/scroll_banner_mobile_soya_wax_candle.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/soy-wax-candles-for-a-better-tomorrow"
+          }
+        }
+      },
+      "block_order": [
+        "5e241a63-e7e6-4a6e-9464-b798d395d5c0"
+      ],
+      "settings": {
+        "curation_heading1": "",
+        "curation_sub_heading2": ""
+      }
+    },
+    "7148a954-d95c-483a-9aed-5f0f443b2075": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "7c8ce166-5ed6-43fd-9c5e-4438e69b6580": {
+          "type": "Product",
+          "settings": {
+            "product": "purecult-eco-friendly-handwash-with-refill-sweet-orange-lemon-set-of-2-hw-2-250-750-230123"
+          }
+        },
+        "dd758219-94bb-4980-9332-96c6b72222c2": {
+          "type": "Product",
+          "settings": {
+            "product": "born-good-dish-washer-gel-plant-based-bottle-500-ml-dwg_500ml_bottle100423"
+          }
+        },
+        "8eb9e142-ada2-445b-a6d6-076ac597cd49": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-disinfectant-toilet-bathroom-cleaner-5-litres"
+          }
+        },
+        "a536670b-d426-4311-995d-9d624a4cfec5": {
+          "type": "Product",
+          "settings": {
+            "product": "koparo-floor-cleaner-lime-lemon-grass-500-ml-fc-lime-130922"
+          }
+        },
+        "0c1ce103-270f-4968-a3c8-3f8d26183f53": {
+          "type": "Product",
+          "settings": {
+            "product": "born-good-fabric-wrinkle-remover-plant-based-zero-toxin-500-ml-fabric_wrinkle_remover_500ml100423"
+          }
+        },
+        "9159a88a-8176-4edc-bf3c-b8016c820ee2": {
+          "type": "Product",
+          "settings": {
+            "product": "100-recycled-unbleached-toilet-roll-single"
+          }
+        },
+        "6e0e5c61-1147-4b3f-ba76-5f9e71cfcb50": {
+          "type": "Product",
+          "settings": {
+            "product": "koparo-new-mum-home-care-gift-box-500-ml-each-pack-of-5-nmhcb-130922"
+          }
+        },
+        "3f6f2e98-82f3-4c34-9a74-44c9755b7e88": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-geranium-lavender-laundry-detergent-500-ml"
+          }
+        },
+        "1da2dab9-c48a-4ca5-ac9e-bcd761f54fff": {
+          "type": "Product",
+          "settings": {
+            "product": "born-good-fabric-conditioner-plant-based-cypress-fragrance-refill-1-l-fab_1l_refill100423"
+          }
+        },
+        "059dc22d-bbed-4073-bf89-9afa1c2550f0": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-dishwash-liquid-refill-500-750-ml-pack-of-2"
+          }
+        },
+        "f8d58b91-b19b-4f92-bd6c-240d4a5a162b": {
+          "type": "Product",
+          "settings": {
+            "product": "genie-in-a-bottle-neem-and-lemon-surface-cleaner-220ml"
+          }
+        },
+        "b987b0d4-488d-4aca-b210-012bd665435c": {
+          "type": "Product",
+          "settings": {
+            "product": "neem-lemongrass-multipurpose-cleaner-250-g"
+          }
+        },
+        "2a001bf8-0c0a-4e23-b0b9-30d2c6834f96": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-ylang-ylang-lavender-tap-shower-cleaner-500-ml"
+          }
+        }
+      },
+      "block_order": [
+        "7c8ce166-5ed6-43fd-9c5e-4438e69b6580",
+        "dd758219-94bb-4980-9332-96c6b72222c2",
+        "8eb9e142-ada2-445b-a6d6-076ac597cd49",
+        "a536670b-d426-4311-995d-9d624a4cfec5",
+        "0c1ce103-270f-4968-a3c8-3f8d26183f53",
+        "9159a88a-8176-4edc-bf3c-b8016c820ee2",
+        "6e0e5c61-1147-4b3f-ba76-5f9e71cfcb50",
+        "3f6f2e98-82f3-4c34-9a74-44c9755b7e88",
+        "1da2dab9-c48a-4ca5-ac9e-bcd761f54fff",
+        "059dc22d-bbed-4073-bf89-9afa1c2550f0",
+        "f8d58b91-b19b-4f92-bd6c-240d4a5a162b",
+        "b987b0d4-488d-4aca-b210-012bd665435c",
+        "2a001bf8-0c0a-4e23-b0b9-30d2c6834f96"
+      ],
+      "settings": {
+        "title1": "Easy Switches",
+        "title2": "non-toxic  cleaners ",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/household-cleaning-and-essentials",
+        "button_position": "top"
+      }
+    },
+    "e3c7b75a-c2ab-41a5-a864-f854f3785000": {
+      "type": "consious-journey",
+      "blocks": {
+        "48ae49ff-5af9-4131-9ef8-3d74e33e0e4d": {
+          "type": "Consious",
+          "settings": {
+            "consious_banner_desktop": "shopify:\/\/shop_images\/2_6.jpg",
+            "consious_banner_mobile": "shopify:\/\/shop_images\/2_7.jpg",
+            "title": "TRADITIONAL",
+            "url_link": "https:\/\/amala.earth\/collections\/traditional-home"
+          }
+        },
+        "a02b53b9-2ffb-40ae-a4ca-a27b7ceac51d": {
+          "type": "Consious",
+          "settings": {
+            "consious_banner_desktop": "shopify:\/\/shop_images\/3_1_6a5d510d-9b2b-4615-82b7-1285d58098a6.jpg",
+            "consious_banner_mobile": "shopify:\/\/shop_images\/Image_20230307_170120_603.jpg",
+            "title": "MINIMAL",
+            "url_link": "https:\/\/amala.earth\/collections\/minimal-home"
+          }
+        },
+        "99859a5f-6e97-4e3a-99c4-f1d07f77f4a1": {
+          "type": "Consious",
+          "settings": {
+            "consious_banner_desktop": "shopify:\/\/shop_images\/Final_f59d76ce-fe57-40ef-a3a9-444d59e719b9.jpg",
+            "consious_banner_mobile": "shopify:\/\/shop_images\/7_1.jpg",
+            "title": "CONTEMPORARY",
+            "url_link": "https:\/\/amala.earth\/collections\/contemporary-home"
+          }
+        },
+        "b11bf359-f911-4d33-94ee-57a9cf959719": {
+          "type": "Consious",
+          "settings": {
+            "consious_banner_desktop": "shopify:\/\/shop_images\/3_3.jpg",
+            "consious_banner_mobile": "shopify:\/\/shop_images\/3_4.jpg",
+            "title": "BOHO",
+            "url_link": "https:\/\/amala.earth\/collections\/boho-home"
+          }
+        }
+      },
+      "block_order": [
+        "48ae49ff-5af9-4131-9ef8-3d74e33e0e4d",
+        "a02b53b9-2ffb-40ae-a4ca-a27b7ceac51d",
+        "99859a5f-6e97-4e3a-99c4-f1d07f77f4a1",
+        "b11bf359-f911-4d33-94ee-57a9cf959719"
+      ],
+      "settings": {
+        "consious_heading1": "Your style of",
+        "consious_sub_heading2": "joyful home"
+      }
+    },
+    "5197c485-96a4-4d12-a1d7-a756d4b39fe6": {
+      "type": "highlighted-brands",
+      "settings": {
+        "select_your_heading1": "Highlighted",
+        "select_your_heading2": "brand",
+        "highlighted_brands_desktop": "shopify:\/\/shop_images\/highlighted_brand_-_desktop-_wishing_chair_d4c271a9-ce4f-46b1-b426-ff593f70d885.png",
+        "highlighted_brands": "shopify:\/\/shop_images\/highlighted_brand-mobile-the_wishing_chair_acee6fd3-2b00-4209-9981-b9549cd31bca.png",
+        "title": "The Wishing Chair",
+        "anchor_text": "Explore the brand",
+        "url_link": "https:\/\/amala.earth\/collections\/The-Wishing-Chair"
+      }
+    },
+    "c0308d8b-0365-4681-af50-ffdc0d63c61f": {
+      "type": "brands-we-love",
+      "blocks": {
+        "38234968-9399-4c2a-8f06-53fecc26273e": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_682.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_675_1.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/green-heirloom"
+          }
+        },
+        "e54f33f8-ccee-4ced-a94d-5c20d751f656": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_628_1_0445ecf0-9ef8-410f-a31c-0175d5da7081.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_672_1.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/tula"
+          }
+        },
+        "8491926f-84ac-42be-af37-ad2adf1deff1": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_631-1.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_679_1.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/mianzi"
+          }
+        },
+        "318abb6b-bcc3-459f-9b9a-bb4c3073b889": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_632_454b6644-1c42-413d-bf0f-57e9da92de78.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_669_1.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/rad-living"
+          }
+        },
+        "075c9c70-fab8-4cd0-98a8-7c382ae22770": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_681_ccb08ab1-7e55-48eb-a2af-d25af5327a5b.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_677_1.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/p-tal"
+          }
+        },
+        "c86d9ee4-a443-4369-987f-17c8856e99ad": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_631_bf847ecb-67b9-49b8-89c5-b5f962c566f6.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_678_1.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/nakshikathaa"
+          }
+        },
+        "3bcd13ce-366a-4263-8e53-b0d47815bf1a": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_680_1.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_676_1.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/saphed"
+          }
+        },
+        "16891b45-c1cc-4ea3-8a15-0e45471fd314": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_634_1_166ab528-fe1f-4781-ba49-89ab561e1f62.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Koparo_1_1.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/koparo"
+          }
+        },
+        "7fb470c1-d504-4423-ab2b-72f354eb4a0b": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_633_9f973913-4fdd-431a-a7e4-730847355f28.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_670_1.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/indus-people"
+          }
+        },
+        "de9e2fc9-e677-44bc-8769-843d2d77d09b": {
+          "type": "brands",
+          "settings": {
+            "brands_image_desktop": "shopify:\/\/shop_images\/Group_629_16ae8bf8-1f63-4428-b2a4-e6ae766f686a.png",
+            "brands_image_mobile": "shopify:\/\/shop_images\/Group_668_1.png",
+            "brands_link": "https:\/\/amala.earth\/collections\/sirohi-by-skilled-samaritan-foundation"
+          }
+        }
+      },
+      "block_order": [
+        "38234968-9399-4c2a-8f06-53fecc26273e",
+        "e54f33f8-ccee-4ced-a94d-5c20d751f656",
+        "8491926f-84ac-42be-af37-ad2adf1deff1",
+        "318abb6b-bcc3-459f-9b9a-bb4c3073b889",
+        "075c9c70-fab8-4cd0-98a8-7c382ae22770",
+        "c86d9ee4-a443-4369-987f-17c8856e99ad",
+        "3bcd13ce-366a-4263-8e53-b0d47815bf1a",
+        "16891b45-c1cc-4ea3-8a15-0e45471fd314",
+        "7fb470c1-d504-4423-ab2b-72f354eb4a0b",
+        "de9e2fc9-e677-44bc-8769-843d2d77d09b"
+      ],
+      "settings": {
+        "heading_one": "Brands",
+        "heading_two": "we love",
+        "btn_text": "",
+        "url_link": ""
+      }
+    },
+    "a1604e37-d042-44e6-9b55-11075920a20e": {
+      "type": "amala-earth-curation",
+      "blocks": {
+        "d29be58d-9a18-4d9c-802c-ce5223ad72f2": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/BEDROOM_WEB.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/BEDROOM_MOBILE.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/bedroom"
+          }
+        },
+        "b5063a29-7aa8-4e07-bc10-0d7af36b505d": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/living_room_web_2.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/living_room_mobile.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/living-room"
+          }
+        },
+        "21dd7f79-1fa1-4a22-9659-917723e4de27": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/KITCHEN_WEB.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/KITCHEN_MOBILE.jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/kitchen"
+          }
+        },
+        "41f6e6e5-7bef-4b43-9c80-9cf32f494d5c": {
+          "type": "Banner",
+          "settings": {
+            "curation_banner_desktop": "shopify:\/\/shop_images\/bathroom_web.jpg",
+            "curation_banner_mobile": "shopify:\/\/shop_images\/bathroom_mobile_..jpg",
+            "title": "",
+            "color_heading1": "",
+            "curation_sub_heading": "",
+            "color_heading2": "",
+            "btn_text": "",
+            "color_heading3": "",
+            "button_background": "",
+            "url_link": "https:\/\/amala.earth\/collections\/bathroom"
+          }
+        }
+      },
+      "block_order": [
+        "d29be58d-9a18-4d9c-802c-ce5223ad72f2",
+        "b5063a29-7aa8-4e07-bc10-0d7af36b505d",
+        "21dd7f79-1fa1-4a22-9659-917723e4de27",
+        "41f6e6e5-7bef-4b43-9c80-9cf32f494d5c"
+      ],
+      "settings": {
+        "curation_heading1": "Shop by",
+        "curation_sub_heading2": "living spaces"
+      }
+    },
+    "3fcc5b87-8663-4677-a183-f5cf621c5c87": {
+      "type": "landing-page-recommendation",
+      "blocks": {
+        "4e5f842e-1537-4527-84b0-0310867a1ebd": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-sweet-orange-and-lemon-dishwash-liquid-750-ml-pack-of-2"
+          }
+        },
+        "5d961bad-0971-4965-b1bf-84256bdeb93f": {
+          "type": "Product",
+          "settings": {
+            "product": "bio-garbage-bags-compostable-small-17-x-19-15-pieces"
+          }
+        },
+        "6e45da22-48d5-454e-a27c-39a24c9ae53c": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-geranium-lavender-floor-cleaner-5-l"
+          }
+        },
+        "989dc1e0-c6bb-4a58-a991-1a98782a9031": {
+          "type": "Product",
+          "settings": {
+            "product": "herbal-room-disinfectant-and-lemon-freshener-250ml"
+          }
+        },
+        "30cb7e87-6443-47e2-9f41-7c9f34cb75fb": {
+          "type": "Product",
+          "settings": {
+            "product": "koparo-vegetable-fruit-wash-apple-cider-vinegar-turmeric-500-ml-pack-of-3-vfw-1500-130922"
+          }
+        },
+        "75d38457-b908-4d12-bb71-54c0ed44a889": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-green-apple-disinfectant-floor-cleaner-5-litres"
+          }
+        },
+        "efbdcb7f-2584-47b6-9d15-bcabf4c28551": {
+          "type": "Product",
+          "settings": {
+            "product": "eco-friendly-ylang-ylang-lavender-tap-shower-cleaner-500-ml"
+          }
+        },
+        "8684c5bc-2027-4d91-99b9-91b1e9c133d8": {
+          "type": "Product",
+          "settings": {
+            "product": "herbal-toilet-cleaner-500ml-pack-of-2"
+          }
+        },
+        "faab9710-5999-48ac-8a27-d829d258a727": {
+          "type": "Product",
+          "settings": {
+            "product": "organic-bio-liquid-laundry-1100-ml"
+          }
+        },
+        "e88e595f-1832-4e8f-9b46-63ef46d5195c": {
+          "type": "Product",
+          "settings": {
+            "product": "reusable-kitchen-towel-roll-20-sheets"
+          }
+        },
+        "f1442070-0aab-4b89-90cc-592931f900f1": {
+          "type": "Product",
+          "settings": {
+            "product": "purecult-eco-friendly-handwash-with-refill-sweet-orange-lemon-set-of-2-hw-2-250-750-230123"
+          }
+        }
+      },
+      "block_order": [
+        "4e5f842e-1537-4527-84b0-0310867a1ebd",
+        "5d961bad-0971-4965-b1bf-84256bdeb93f",
+        "6e45da22-48d5-454e-a27c-39a24c9ae53c",
+        "989dc1e0-c6bb-4a58-a991-1a98782a9031",
+        "30cb7e87-6443-47e2-9f41-7c9f34cb75fb",
+        "75d38457-b908-4d12-bb71-54c0ed44a889",
+        "efbdcb7f-2584-47b6-9d15-bcabf4c28551",
+        "8684c5bc-2027-4d91-99b9-91b1e9c133d8",
+        "faab9710-5999-48ac-8a27-d829d258a727",
+        "e88e595f-1832-4e8f-9b46-63ef46d5195c",
+        "f1442070-0aab-4b89-90cc-592931f900f1"
+      ],
+      "settings": {
+        "title1": "Monthly ",
+        "title2": "refills ",
+        "logged_in": false,
+        "products_count": 3,
+        "layout": "vertical",
+        "stack_products": false,
+        "show_sold_out": false,
+        "show_quick_buy": true,
+        "link_title": "View all",
+        "link_url": "https:\/\/amala.earth\/collections\/household-cleaning-and-essentials",
+        "button_position": "top"
+      }
+    },
+    "a7ea0487-7e3a-4b47-a708-8bb88a506e59": {
+      "type": "blog-posts-carousel",
+      "blocks": {
+        "d755903b-8620-4fbd-a113-8404281f35f1": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Rectangle_215.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/soy-wax-candles-for-a-better-tomorrow",
+            "title": "Soy Wax Candles for a Better Tomorrow"
+          }
+        },
+        "3b23f68d-ed2d-4c18-b6fe-ee3770867840": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Home_Aesthetics_for_Minimal.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/home-aesthetics-for-minimal-traditional-boho-or-contemporary-looks",
+            "title": "Home Aesthetics for Minimal, Traditional, Boho, or Contemporary Looks"
+          }
+        },
+        "65e95868-1bc7-487d-8a13-5f0a900079f6": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Party-ready_Barware.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/party-ready-barware",
+            "title": "Party-ready Barware"
+          }
+        },
+        "41c9b160-f686-4eba-9cd4-fe27b188fd0b": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Organic_Cotton_Bedding.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/organic-cotton-bedding-the-best-option-for-a-restful-nights-sleep-1",
+            "title": "Organic Cotton Bedding - The Best Option For A Restful Night's Sleep"
+          }
+        },
+        "4602b4b2-6630-43ca-8a87-0502e4a5202b": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/700x461.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/non-toxic-cookware-kitchen-utensils-guide-1",
+            "title": "Non-Toxic Cookware & Kitchen Utensils Guide"
+          }
+        },
+        "e3bbb9f0-8c3b-4247-9abe-80373ac4a94c": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Rectangle_66.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/organic-cotton-bedding-the-best-option-for-a-restful-nights-sleep",
+            "title": "Organic Cotton Bedding - The Best Option For A Restful Night's Sleep"
+          }
+        },
+        "f7883cfd-14da-4a4b-80f6-5418ecdf8110": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Rectangle_217.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/copper-clay-and-stoneware-the-ayurvedic-approach-to-a-sustainable-future",
+            "title": "Copper, Clay And Stoneware: The Ayurvedic Approach To A Sustainable Future"
+          }
+        },
+        "2e4f2e1f-0b41-4e0a-81c4-87c6000e864a": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Rectangle_219.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/non-toxic-cookware-types-and-brands",
+            "title": "Non-toxic cookware: Types and brands"
+          }
+        },
+        "ec3acf2a-e379-47b0-921d-20be1a59fde9": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/blog_banner_one_size.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/how-to-take-care-of-natural-cookware",
+            "title": "How To Take Care Of Natural Cookware"
+          }
+        },
+        "e030cd63-9da3-4563-864d-74b6b6e62a30": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Rectangle_218.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/sustainable-home-decor-10-brands-for-a-mindful-home",
+            "title": "Sustainable Home Decor: 10 Brands For A Mindful Home"
+          }
+        },
+        "49bc4d51-8a54-4fa6-9506-b04db4416416": {
+          "type": "blog",
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Rectangle_219_1.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/healthy-reasons-to-cook-and-eat-in-kansa-utensils",
+            "title": "Healthy Reasons to Cook and Eat in Kansa Utensils"
+          }
+        },
+        "f97b7cdf-bff0-48a9-8c92-f5f16852b186": {
+          "type": "blog",
+          "disabled": true,
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/Why_Should_You_Choose_Sustainable_Ethical_Sleepwear.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/why-should-you-choose-sustainable-ethical-sleepwear",
+            "title": "Why Should You Choose Sustainable, Ethical Sleepwear?"
+          }
+        },
+        "49516805-9e1a-42ad-9b61-decac6393814": {
+          "type": "blog",
+          "disabled": true,
+          "settings": {
+            "recent_blog_post_image": "shopify:\/\/shop_images\/A_Modern_Man_s_Guide_To_Sustainable_Fashion.png",
+            "recent_blog_post_link": "https:\/\/amala.earth\/blogs\/amala-earth-blog\/a-modern-mans-guide-to-sustainable-fashion",
+            "title": "A Modern Man's Guide To Sustainable Fashion"
+          }
+        }
+      },
+      "block_order": [
+        "d755903b-8620-4fbd-a113-8404281f35f1",
+        "3b23f68d-ed2d-4c18-b6fe-ee3770867840",
+        "65e95868-1bc7-487d-8a13-5f0a900079f6",
+        "41c9b160-f686-4eba-9cd4-fe27b188fd0b",
+        "4602b4b2-6630-43ca-8a87-0502e4a5202b",
+        "e3bbb9f0-8c3b-4247-9abe-80373ac4a94c",
+        "f7883cfd-14da-4a4b-80f6-5418ecdf8110",
+        "2e4f2e1f-0b41-4e0a-81c4-87c6000e864a",
+        "ec3acf2a-e379-47b0-921d-20be1a59fde9",
+        "e030cd63-9da3-4563-864d-74b6b6e62a30",
+        "49bc4d51-8a54-4fa6-9506-b04db4416416",
+        "f97b7cdf-bff0-48a9-8c92-f5f16852b186",
+        "49516805-9e1a-42ad-9b61-decac6393814"
+      ],
+      "settings": {
+        "heading_one": "Recent",
+        "heading_two": "blogposts",
+        "view_text": "",
+        "url_link": ""
+      }
+    },
+    "41014bac-ea4d-4b27-8c03-52bef9fe55fe": {
+      "type": "landing-page-video",
+      "blocks": {
+        "9770c9aa-57b2-42fb-89ed-b39443515912": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/4HRW7ms1gCI",
+            "image": "shopify:\/\/shop_images\/100_Soy_Wax_Candles_For_Christmas___Amala_Earth.png",
+            "title": "100% Soy Wax Candles For Christmas | Amala Earth",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "8ca15421-ba45-427c-8190-b359be131cbc": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/MqYSgJVXA70",
+            "image": "shopify:\/\/shop_images\/A_Conversation_on_Sustainable_Kitchenware_with_Co_founder_Head_Designer_of_P-tal_Ms._Kirti_Goel.png",
+            "title": "Why Drinking Charged Water from Copper Utensils is Beneficial for Health?",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "84bb1ceb-f46d-41d6-b337-d61f90609772": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/Bmlg3MxcsHM",
+            "image": "shopify:\/\/shop_images\/Learn_to_compost_and_grow_your_own_edible_plants_at_home_with_Vani_Murthy_wormrani_d27231ec-177c-49e8-81d3-f17d4f345228.png",
+            "title": "Learn to compost and grow your own edible plants at home with Vani Murthy @wormrani",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "5f1064ed-195f-4b18-a177-6f541dc17ce1": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/1Q5RJqGxzyo",
+            "image": "shopify:\/\/shop_images\/Zero_Waste_Festive_Decorations_for_Sustainable_Living___Amala_Earth_4b7ff266-866e-49de-8b3c-a7b5ae091f00.png",
+            "title": "Zero Waste Festive Decorations for Sustainable Living | Amala Earth",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "880899d6-ad8c-49e9-933e-aada13519725": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/1kSFAadikCE",
+            "image": "shopify:\/\/shop_images\/Minimising_Waste_at_Home_-_Live_Session_with_Vani_Murthy_and_Jia_Singh_6d337a1b-32f8-45cb-a99a-5bd47ac78934.png",
+            "title": "Minimising Waste at Home - Live Session with Vani Murthy and Jia Singh",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "d268173e-ca11-4947-ae9b-86b41bdc16fe": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/youtube.com\/watch?v=fYCTdaYSUHE",
+            "image": "shopify:\/\/shop_images\/Table_Set_up_with_Ceramics____Amala_Earth_7f715d24-8fc2-486c-949b-ed8a50514957.png",
+            "title": "Table Set up with Ceramics \/\/ Amala Earth",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        },
+        "c52f85ba-2571-42d6-9870-78e1d05413a4": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "video_url": "https:\/\/youtu.be\/hhhRgHsamAE",
+            "title": "Shop Organic, Chemical-free Men's Grooming Products Range - Amala Earth.",
+            "expert_speak": "",
+            "expspeaks": false
+          }
+        }
+      },
+      "block_order": [
+        "9770c9aa-57b2-42fb-89ed-b39443515912",
+        "8ca15421-ba45-427c-8190-b359be131cbc",
+        "84bb1ceb-f46d-41d6-b337-d61f90609772",
+        "5f1064ed-195f-4b18-a177-6f541dc17ce1",
+        "880899d6-ad8c-49e9-933e-aada13519725",
+        "d268173e-ca11-4947-ae9b-86b41bdc16fe",
+        "c52f85ba-2571-42d6-9870-78e1d05413a4"
+      ],
+      "settings": {
+        "video_title1": "Video",
+        "video_title2": "blogs",
+        "btn_text": "",
+        "url_link": ""
+      }
+    },
+    "0100e566-4a5b-4474-a448-25fa80755f32": {
+      "type": "subscription-widget",
+      "settings": {
+        "hide_widget": false,
+        "title": "Get 10% OFF",
+        "content": "<p>on your first purchase. Subscribe now and start your earth-friendly journey today!<\/p>",
+        "button_text": "Get 10% OFF",
+        "thank_you_title": "Thank You!",
+        "thank_you_content": "<p>Use coupon code <strong>WELCOME10<\/strong> and get <strong>10% discount<\/strong>.<\/p>"
+      }
+    }
+  },
+  "order": [
+    "f5741734-9fa3-49d3-a8f5-49165d1bf3cb",
+    "0f1e1f06-d309-4d56-9c23-11024e8c76a2",
+    "0cd79f78-7ec3-466f-a59b-6833f75a540a",
+    "3ce8650f-ee5d-4ec2-8c3e-43b4fde36a2f",
+    "00ba892f-b43a-450f-a1a8-94b6f228aa58",
+    "7e727bcc-acea-4a68-bf80-27371ae6d902",
+    "cafcba3a-6e9f-4dc1-b8d9-8abff3c264ca",
+    "a6bc6a73-d308-4dd1-9bcf-87d3c94f23b6",
+    "68c33a46-c30e-4b8a-84b9-d80dacac4a04",
+    "1ded6b38-fa96-4ac2-87e3-67bc1224ddf3",
+    "d6647946-fc06-4f6f-9e3f-ec55360acf47",
+    "599fb9d5-a3b4-4dd1-a141-eef20c6845ef",
+    "975f2eaf-c0d9-48f8-8bee-4bf58bd72a8f",
+    "a3b7f103-6f2c-4405-b731-221e2062101e",
+    "2bd14898-d935-4349-9e83-f4372de58bf7",
+    "773c3db5-d894-4b94-98a6-a9b7708d3a3f",
+    "7148a954-d95c-483a-9aed-5f0f443b2075",
+    "e3c7b75a-c2ab-41a5-a864-f854f3785000",
+    "5197c485-96a4-4d12-a1d7-a756d4b39fe6",
+    "c0308d8b-0365-4681-af50-ffdc0d63c61f",
+    "a1604e37-d042-44e6-9b55-11075920a20e",
+    "3fcc5b87-8663-4677-a183-f5cf621c5c87",
+    "a7ea0487-7e3a-4b47-a708-8bb88a506e59",
+    "41014bac-ea4d-4b27-8c03-52bef9fe55fe",
+    "0100e566-4a5b-4474-a448-25fa80755f32"
+  ]
+}

@@ -1,0 +1,299 @@
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<section class="container brands-section-container">
+  <div class="brands_text">
+      {% if section.settings.heading_one != blank or section.settings.heading_two != blank %}
+        <header class="landing_section_header">
+          {% if section.settings.heading_one != blank %}
+              <h3 class="landing_subheading">{{ section.settings.heading_one }}</h3>
+          {% endif %}
+          {% if section.settings.heading_two != blank %}
+              <h2 class="landing_heading">{{ section.settings.heading_two }}</h2>
+          {% endif %}
+        </header>
+      {% endif %} 
+      <div class="blog-post-link">
+          {% if section.settings.btn_text != blank %}
+              <a href="{{ section.settings.url_link }}">{{ section.settings.btn_text }}<svg focusable="false" class="icon icon--tail-right" viewBox="0 0 24 24" role="presentation">
+                      <path fill="currentColor" d="M22.707 11.293L15 3.586 13.586 5l6 6H2c-.553 0-1 .448-1 1s.447 1 1 1h17.586l-6 6L15 20.414l7.707-7.707c.391-.391.391-1.023 0-1.414z"></path>
+                  </svg>
+              </a>
+          {% endif %}
+      </div>
+  </div>
+  <div class="brands-containers">
+      {% for block in section.blocks %}
+          {% if block.type == 'brands' %}
+              <div class="brands-carousal-boxs">
+                  <div class="brands-slider-box">
+                      <a href="{{ block.settings.brands_link }}">
+                          {% if block.settings.brands_image_desktop != blank %}
+                              <div class="brands-img-desktop">
+                                  <img src="{{ block.settings.brands_image_desktop | img_url: 'master' }}"></div>
+                              {% endif %}
+                              {% if block.settings.brands_image_mobile != blank %}
+                                  <div class="brands-img-mobile">
+                                      <img src="{{ block.settings.brands_image_mobile | img_url: 'master' }}"></div>
+                                  {% endif %}
+                              </a>
+                          </div>
+                      </div>
+                  {% endif %}
+              {% endfor %}
+          </div>
+      </section>
+
+  <script>
+    $(document).ready(function(){
+        $('.brands-containers').slick({
+            slidesToShow:3.5,
+            slidesToScroll:3.5,
+            arrows:true,
+            dots:false,
+            infinite:false,
+            responsive: [
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 5,
+              slidesToScroll: 5
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 4
+            }
+          },
+          {
+            breakpoint: 592,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3
+            }
+          }
+        ]
+          });
+    });
+</script>
+
+<style>
+  #shopify-section-{{ section.id }} .brands-section-container{
+  background-image: url('{{ section.settings.background_image_desktop | img_url: 'master' }}');
+  background-position: 64% 0;
+  background-repeat: no-repeat;
+}
+    .brands_text{
+        display: flex;
+        align-items:end;
+        justify-content: space-between;
+    }
+    .brands-img-mobile{
+        display:none;
+      }
+      .brands-section-container{
+        margin-top: 50px;
+      }
+      .brands-containers{
+        text-align: -webkit-center;
+      }
+      .brands-carousal-boxs:nth-child(even) {
+        margin-top: 0px;
+      }
+      .blog-post-link a{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight:500;
+        font-size:15px;
+        line-height: 27px;
+        letter-spacing: 0.03em;
+        color: #946C56;
+        text-decoration: underline;
+      }
+      
+
+.blog-post-link svg{
+  opacity: 0;
+}
+.blog-post-link a:hover svg{
+  opacity: 1;
+  color: var(--brand-color);
+}
+.blog-post-link:hover{
+  transform: translate(-16px);
+    transition: transform .35s cubic-bezier(.645,.045,.355,1);
+}
+.brands-img-desktop img:hover{
+      transform: translate3D(0,-1px,0) scale(1.02); /* move up slightly and zoom in */
+      transition: all .4s ease; /* zoom in */
+}
+
+
+
+   .brands-containers  .slick-arrow,.explore-collection-section .slick-arrow{opacity:0;color:transparent; position:absolute;top:50%; transform:translateY(-50%);z-index:99;transition:all 0.3s ease;}
+  .brands-containers:hover  .slick-arrow,.explore-collection-section:hover  .slick-arrow{
+  	opacity:1;
+  }
+  .brands-containers  .slick-arrow:before,.explore-collection-section .slick-arrow:before{
+  	content:'';
+    position:absolute;
+    width:32px;
+    height:32px;
+    border-radius: 6.88689px;
+  }
+  .brands-containers  .slick-arrow:after,.explore-collection-section .slick-arrow:after{
+  	content:'';
+    position:absolute;
+    width:8px;
+    height:8px;
+    border-left:3px solid #fff;
+    border-bottom:3px solid #fff;
+    top:50%;
+    transform:rotate(45deg) translateY(-50%);
+  }
+  .brands-containers  .slick-arrow.slick-prev,.explore-collection-section  .slick-arrow.slick-prev{
+  	left:0;
+  }
+  .brands-containers  .slick-arrow.slick-prev:after,.explore-collection-section  .slick-arrow.slick-prev:after{
+  	left:10px;
+  }
+  .brands-containers  .slick-arrow.slick-next,.explore-collection-section  .slick-arrow.slick-next{
+  	right:5px;
+  }
+  .brands-containers  .slick-arrow.slick-next:after,.explore-collection-section  .slick-arrow.slick-next:after{
+  	right:15px;
+    top:12px;
+    transform:rotate(225deg) translateY(0%);
+  }
+  .brands-slider-box{
+    margin:15px;
+    overflow:hidden;
+    border-radius:10px;
+    position:relative;
+  }
+  .slick-dots{list-style:none;text-align:center;}
+  .slick-dots  button{display:none;}
+  .slick-dots li{display:inline-block;margin:5px;width:8px;height:8px;border-radius:50%;border:1px solid #b89c7d;}
+
+
+  @media only screen and (max-width:768px) {
+    .brands-img-mobile{
+      display:block;
+    }
+    .brands-img-desktop{
+      display:none;
+    }
+    .brands_text{
+      padding: 0 20px;
+    }
+  }
+  @media only screen and (max-width:592px) {
+
+    #shopify-section-{{ section.id }} .brands-section-container{
+      background-image: url('{{ section.settings.background_image_mobile | img_url: 'master' }}');
+      background-position: -50px 0px;
+    }
+    .brands-containers{
+      gap: 0;
+    }
+    .brands-section-container{
+      padding: 0px;
+      margin-top: 35px;
+    }
+    /* .brands_text_title_subtitle{
+      padding-left:10px;
+    } */
+    .brands-containers  .slick-arrow:after,.explore-collection-section .slick-arrow:after{
+      content:'';
+      position:absolute;
+      width:8px;
+      height:8px;
+      border-left:3px solid #fff;
+      border-bottom:3px solid #fff;
+      top:55%;
+      transform:rotate(45deg) translateY(-50%);
+    }
+    .brands-slider-box{
+      width: 105px;
+    }
+    #shopify-section-template--16597685534964__0328bf56-ac57-4d6f-a10b-36b52c3dd879 .festive-video-container {
+      background-position:130% 0;
+      background-repeat: no-repeat;
+  }
+    
+  }
+
+</style>
+
+
+
+
+
+  {% schema %}
+  {
+    "name": "Offer BGI Carousel",
+    "settings": [
+      {
+        "type":"image_picker",
+        "id":"background_image_desktop",
+        "label":"Background Image Desktop"
+      },
+      {
+        "type":"image_picker",
+        "id":"background_image_mobile",
+        "label":"Background Image Mobile"
+      },
+      {
+        "type":"text",
+        "id":"heading_one",
+        "label":"Heading"
+      },
+      {
+        "type":"text",
+        "id":"heading_two",
+        "label":"Sub Heading"
+      },
+      {
+        "type":"text",
+        "id":"btn_text",
+        "label":"View Text"
+      },
+      {
+        "type":"url",
+        "id":"url_link",
+        "label":"Link"
+      }
+    ],
+    "name": "Offer Carousel",
+    "blocks":[
+        {
+        "type": "brands",
+        "name": "product brands",
+        "settings": [
+          {
+        "type":"image_picker",
+        "id":"brands_image_desktop",
+        "label":"Desktop Image"
+          },
+          {
+        "type":"image_picker",
+        "id":"brands_image_mobile",
+        "label":"Mobile Image"
+          },
+      {
+        "type":"url",
+        "id":"brands_link",
+        "label":"Link"
+      }
+        ]
+      }
+    ],
+    "presets": [
+{
+"name": "Offer BGI Carousel",
+"category": "Custom"
+}
+]
+  }
+{% endschema %}

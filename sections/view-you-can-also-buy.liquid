@@ -1,0 +1,155 @@
+{%- unless product.available -%}
+
+  {%- include 'auto-related-product-code' -%}
+
+  {%- if section.settings.enabled and product_items.size >= minimum_limit -%}
+    <span class="ycab-overlay"></span>
+    <div class="you-can-also-buy-product-wrapper position-relative" id="you-can-also-buy-product-wrapper">
+      <span class="close-ycab">&#10006;</span>
+      <div class="">
+        {% if product_items.size > 0 %}
+          <div class="vs-header">
+            <h3>{{section.settings.title}}</h3>
+          </div>
+          <div class="product-list scrollable" id="you-can-also-buy-products">
+            {% assign products_count = 0 %}
+            {%- for item in product_items -%}
+              {% if products_count == section.settings.products_count %}
+                {% break %}
+              {% endif %}
+              {% assign item_handle = item | strip %}
+              {%- assign related_product = all_products[item_handle] -%}
+              {% if related_product.available %}
+                {%- unless related_product.empty? -%}
+                  {% assign products_count = products_count | plus: 1 %}
+                  {%- render 'product-item-similar', product: related_product, show_add_to_cart:true -%}
+                  {% assign related_product = '' %}
+                {%- endunless -%}
+              {% endif %}
+            {%- endfor -%}
+          </div>
+        {% else %}
+          <div class="vs-header">
+            <h3 style="text-align: center;margin: 0 auto;">Sorry, no similar product available</h3>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+    <style>
+      .ycab-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 9;
+      }
+      .ycab-overlay.show {
+        display: block;
+      }
+      .you-can-also-buy-product-wrapper {
+        position: fixed;
+        bottom: calc(-80vh - 100px);
+        height: 80vh;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-radius: 15px 15px 0 0;
+        z-index: 99;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 15px;
+        box-shadow: 0 0 5px #ccc;
+        transition: all 0.3s ease;
+      }
+      .you-can-also-buy-product-wrapper.show {
+        bottom: 0;
+      }
+      .you-can-also-buy-product-wrapper .product-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        border: 0;
+        overflow-y: auto;
+        height: calc(80vh - 50px);
+      }
+      .you-can-also-buy-product-wrapper .product-list .product-item {
+        width: 49%;
+        padding: 8px;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        margin: 15px 0;
+      }
+      .close-ycab {
+        position: absolute;
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        line-height: 35px;
+        border-radius: 50%;
+        box-shadow: 0 0 5px #ccc;
+        background: #fff;
+        top: -45px;
+        left: calc(50% - 17px);
+        font-size: 22px;
+      }
+      .overflow-hidden {
+        overflow: hidden;
+        height: 100vh;
+      }
+    </style>
+    <script>
+      $(document).ready(function() {
+        var openViewYoumayAlsoPopup = function() {
+          $(".you-can-also-buy-product-wrapper").addClass("show");
+          $("body").addClass('overflow-hidden');
+          $(".ycab-overlay").addClass("show");
+        }
+        openViewYoumayAlsoPopup();
+        $(document.body).on('click', '.close-ycab', function(e) {
+          $(".you-can-also-buy-product-wrapper").removeClass("show");
+          $("body").removeClass('overflow-hidden');
+          $(".ycab-overlay").removeClass("show");
+        })
+      })
+    </script>
+  {% endif %}
+{%- endunless -%}
+{% schema %}
+  {
+    "name": "You can also buy products",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "You can also buy"
+      }, {
+        "type": "checkbox",
+        "id": "enabled",
+        "label": "Enable product recommendations",
+        "default": true
+      }, {
+        "type": "range",
+        "id": "products_count",
+        "label": "Products to show",
+        "min": 2,
+        "max": 50,
+        "step": 1,
+        "default": 10
+      }, {
+        "type": "range",
+        "id": "min_products",
+        "label": "Minimum products to show",
+        "min": 2,
+        "max": 10,
+        "step": 1,
+        "default": 5,
+        "info": "If the products for this section have less than this count, then this section will not be displayed."
+      }
+    ]
+  }
+{% endschema %}

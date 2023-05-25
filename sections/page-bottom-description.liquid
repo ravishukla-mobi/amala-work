@@ -1,0 +1,55 @@
+{%- if page.metafields.custom.seo_content != blank -%}
+
+  <section class="collection-bottom-description">
+    <div class="container">
+      <div class="content-wrapper">
+  {{ page.metafields.custom.seo_content }}
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+  <style>
+    .collection-bottom-description .content-wrapper{
+    	background:#FAF5F0;
+      border-radius:15px;
+      padding:36px;
+    }
+    .collection-bottom-description .content-wrapper{
+    	color:#000;
+    }
+    .collection-bottom-description h4{
+    	font-size:20px;
+      color:rgba(0, 0, 0, 1);
+      margin-bottom: 15px;
+    }
+    .collection-bottom-description .content,
+    .collection-bottom-description p{
+      margin-bottom:30px;
+      line-height:26px;
+
+    }
+    .collection-bottom-description .margin-bottom-0{
+    	margin-bottom:0;
+    }
+  </style>
+{% schema %}
+{
+  "name": "Rich text",
+  "settings": [
+
+    {
+      "type": "html",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Rich Text",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}

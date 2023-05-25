@@ -1,0 +1,169 @@
+<section class="container highlighted_container">
+  {% if section.settings.select_your_heading1 != blank or section.settings.select_your_heading2 != blank %}
+  <header class="landing_section_header">
+  {% if section.settings.select_your_heading1 != blank %}
+      <h3 class="landing_subheading">{{ section.settings.select_your_heading1 }}</h3>
+  {% endif %}
+  {% if section.settings.select_your_heading2 != blank %}
+      <h2 class="landing_heading">{{ section.settings.select_your_heading2 }}</h2>
+  {% endif %}
+  </header>
+  {% endif %}
+  <div class="highlighted-section">
+      <div class="highlighted-section-desktop">
+          {% if section.settings.highlighted_brands_desktop != blank %}
+              <img src="{{ section.settings.highlighted_brands_desktop | img_url:'master' }}">
+              {% endif %}
+          </div>
+          <div class="highlighted-section-mobile">
+              {% if section.settings.highlighted_brands != blank %}
+                  <img src="{{ section.settings.highlighted_brands | img_url:'master' }}">
+                  {% endif %}
+              </div>
+              {% if section.settings.title != blank %}
+                  <h3>{{ section.settings.title }}</h3>
+              {% endif %}
+              {% if section.settings.anchor_text != blank %}
+                  <div class="explore_button_container">
+                      <a href="{{ section.settings.url_link }}">{{ section.settings.anchor_text }}</a>
+                  </div>
+              {% endif %}
+          </div>
+      </section>
+
+  <style>
+    {%- comment -%} highlighted brands css starts here {%- endcomment -%}
+
+    .highlighted-section-desktop{
+      max-width: 90%;
+      margin: auto;
+    }
+    .highlighted_container{
+      margin-top:100px;
+    }
+    .highlighted-section{
+      position: relative;
+      margin: auto;
+    }
+    .highlighted-section img{
+      width:100%;
+    }
+    .highlighted-section h3{
+      position: absolute;
+      top: 50%;
+      text-align: center;
+      background: rgba(254, 253, 253, 0.8);
+      width: 100%;
+      padding-top: 12px;
+      padding-bottom: 13px;
+    }
+    .explore_button_container{
+        background: linear-gradient(180deg, #9A6F57 0%, #7B523B 100%);
+        box-shadow: 0px 4px 25px rgb(0 0 0 / 25%);
+        border-radius: 8px;
+        max-width: 210px;
+        margin: auto;
+        text-align: center;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        margin-top:66px;
+    }
+    .explore_button_container a{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+    .highlighted-section-mobile{
+        display:none;
+    }
+    .highlighted-section .explore_button_container:hover{
+        transform: translate3D(0,-1px,0) scale(1.03); /* move up slightly and zoom in */
+        box-shadow: 8px 28px 50px rgba(39,44,49,.07), 1px 6px 12px rgba(39,44,49,.04);
+        transition: all .4s ease; /* zoom in */
+        cursor: pointer;
+    }
+    .highlighted-section-desktop{
+      border-radius: 34.7029px;
+    }
+    
+    
+    {%- comment -%} highlighted brands css ends here {%- endcomment -%}
+    @media only screen and (max-width:768px) {
+        .highlighted-section-mobile{
+            display:block;
+            width: 80%;
+            margin: auto;
+        }
+        .highlighted-section-desktop{
+            display:none;
+        }
+    }
+
+    @media only screen and (max-width:592px) {
+      
+      .highlighted_container{
+        margin-top:30px;
+      }
+      .explore_button_container{
+        margin-top:35px;
+    }
+
+    }
+    
+  </style>
+
+
+
+
+
+  {% schema %}
+  {
+    "name": "Highlighted Banner",
+    "settings": [
+        {
+        "type":"text",
+        "id":"select_your_heading1",
+        "label":"Heading 1"
+      },
+      {
+        "type":"text",
+        "id":"select_your_heading2",
+        "label":"Heading 2"
+      },
+        {
+        "type":"image_picker",
+        "id":"highlighted_brands_desktop",
+        "label":"Desktop image"
+      },
+        {
+        "type":"image_picker",
+        "id":"highlighted_brands",
+        "label":"Mobile image"
+      },
+      {
+        "type":"text",
+        "id":"title",
+        "label":"Title"
+      },
+      {
+        "type":"text",
+        "id":"anchor_text",
+        "label":"Button Text"
+      },
+      {
+        "type":"url",
+        "id":"url_link",
+        "label":"Link"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Highlighted Banner",
+        "category": "Custom"
+      }
+    ]
+  }
+{% endschema %}

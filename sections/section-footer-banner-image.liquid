@@ -1,0 +1,63 @@
+{% if section.settings.enable %}
+
+  <div class="{{- section.id -}}">
+     <div class="footer--banner__continer">
+       <span class="footer--icon__left"><img src="{{ section.settings.image1 | img_url: 'master' }}"></span>
+    <div class="container">
+        {%comment%}
+        <div class="footer--banner__left">
+          <img src="{{ section.settings.logo }}">
+        </div>
+        {%endcomment%}
+        <div class="footer--banner__right">
+          {%- if section.settings.title != blank -%}
+          <h2 class="heading h3">{{ section.settings.title | escape }}</h2>
+          {%- endif -%}
+        </div>
+      </div>
+       <span class="footer--icon__right"><img src="{{ section.settings.image2 | img_url: 'master' }}"></span>
+    </div>
+  </div>
+{% endif %}
+{% schema %}
+  {
+    "name": "Footer Banner Image",
+    "settings": [
+    	{
+          "type": "checkbox",
+          "id": "enable",
+          "label": "Show this Section",
+          "default": true
+        },
+		{
+          "type": "url",
+          "id": "logo",
+          "label": "Footer Logo",
+          "info": "Upload the svg file in settings->files and paste the url here"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Your title"
+        },
+		{
+          "type": "image_picker",
+          "id": "image1",
+          "label": "Banner Icon Left"
+        },
+		{
+          "type": "image_picker",
+          "id": "image2",
+          "label": "Banner Icon Right"
+        }
+
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
