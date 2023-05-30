@@ -1463,20 +1463,18 @@ $(function(){
             breakpoint: 768,
             settings: {
               arrows: true,
-              centerMode: true,
               centerPadding: '10px',
-              slidesToShow: 6,
-              slidesToScroll: 6
+              slidesToShow: 8,
+              slidesToScroll: 8
             }
           },
           {
             breakpoint: 480,
             settings: {
               arrows: false,
-              centerMode: false,
               centerPadding: '10px',
-              slidesToShow: 6.5,
-              slidesToScroll: 6.5
+              slidesToShow: 3,
+              slidesToScroll: 3
             }
           }
         ]
@@ -1487,3 +1485,103 @@ $(function(){
   });
   }
 });
+var Shopify = Shopify || {};
+// ---------------------------------------------------------------------------
+// Money format handler
+// ---------------------------------------------------------------------------
+
+Shopify.money_format = "${{amount}}";
+Shopify.formatMoney = function(cents, format) {
+  if (typeof cents == 'string') { cents = cents.replace('.',''); }
+  var value = '';
+  var placeholderRegex = /\{\{\s*(\w+)\s*\}\}/;
+  var formatString = (format || this.money_format);
+
+  function defaultOption(opt, def) {
+     return (typeof opt == 'undefined' ? def : opt);
+  }
+
+  function formatWithDelimiters(number, precision, thousands, decimal) {
+    precision = defaultOption(precision, 2);
+    thousands = defaultOption(thousands, ',');
+    decimal   = defaultOption(decimal, '.');
+
+    if (isNaN(number) || number == null) { return 0; }
+
+    number = (number/100.0).toFixed(precision);
+
+    var parts   = number.split('.'),
+        dollars = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1' + thousands),
+        cents   = parts[1] ? (decimal + parts[1]) : '';
+
+    return dollars + cents;
+  }
+
+  switch(formatString.match(placeholderRegex)[1]) {
+    case 'amount':
+      value = formatWithDelimiters(cents, 2);
+      break;
+    case 'amount_no_decimals':
+      value = formatWithDelimiters(cents, 0);
+      break;
+    case 'amount_with_comma_separator':
+      value = formatWithDelimiters(cents, 2, '.', ',');
+      break;
+    case 'amount_no_decimals_with_comma_separator':
+      value = formatWithDelimiters(cents, 0, '.', ',');
+      break;
+  }
+
+  return formatString.replace(placeholderRegex, value);
+};
+
+let rrPrice = document.querySelector(".rupee-symbol").innerText;
+function optimizeCode() {
+  function updatePrice(element) {
+    var cusPrice = element.parentElement.nextElementSibling.dataset.customPrice;
+    var customQuantity = element.value;
+    var ttPrice = cusPrice * customQuantity;
+    var res = rrPrice + Shopify.formatMoney(ttPrice, "{{amount}}");
+    var mainRes = res.replace(/\.00/g, '');
+    element.parentElement.nextElementSibling.nextElementSibling.innerText = mainRes;
+  }
+
+  document.querySelector('#plus-button').addEventListener('click', function() {
+    setTimeout(() => {
+      updatePrice(this.previousElementSibling);
+    }, 500);
+  });
+
+  document.querySelector('.minus-button').addEventListener('click', function() {
+    setTimeout(() => {
+      updatePrice(this.nextElementSibling);
+    }, 500);
+  });
+}
+
+optimizeCode(); 
+// document.querySelector('#plus-button').addEventListener('click',function(){
+//   setTimeout(() => {
+    
+//     var cusPrice = this.parentElement.nextElementSibling.dataset.customPrice;
+//     var customQuantity = this.previousElementSibling.value;
+//     var ttPrice = cusPrice * customQuantity
+//     var res= rrPrice +  Shopify.formatMoney(ttPrice,"{{amount}}");
+//     var mainRes=res.replace(/\.00/g, '');
+//     this.parentElement.nextElementSibling.nextElementSibling.innerText=  mainRes;
+//   }, 500)  
+// });
+// document.querySelector('.minus-button').addEventListener('click',function(){
+    
+//   setTimeout(() => {
+//     var cusPrice = this.parentElement.nextElementSibling.dataset.customPrice;
+//     var customQuantity = this.nextElementSibling.value;
+//     var ttPrice = cusPrice * customQuantity
+//     var res= rrPrice +  Shopify.formatMoney(ttPrice,"{{amount}}");
+//     var mainRes=res.replace(/\.00/g, '');
+//     this.parentElement.nextElementSibling.nextElementSibling.innerText=  mainRes;
+
+//   }, 500) 
+  
+  
+// });

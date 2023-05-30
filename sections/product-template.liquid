@@ -304,11 +304,13 @@
           -%}
 
           <div class="additional_widget_headings only_desktop_view">
+          <div class="awd-inner">
             
             {%- if sub_category_coll != false -%}<h3 class="hdng-t" data-title="next-category">{{section.settings.shop_by_sub_category}}</h3>{%- endif -%}
             {%- if product.metafields.custom_filters.material -%}<h3 class="hdng-t{% if material_show %} active{% endif %}" data-title="material">{{section.settings.additional_widget_title_1}}</h3>{%- endif -%}
             <h3 class="hdng-t{% if brand_show %} active{% endif %}" data-title="brand">{{section.settings.additional_widget_title_2}} {{product.vendor | downcase}}</h3>
             <h3 class="hdng-t" data-title="type">{{section.settings.additional_widget_title_3}}</h3>
+          </div>
           </div>
 
           
